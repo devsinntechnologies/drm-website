@@ -4,19 +4,18 @@ const LoyaltyAndInsights = () => {
   return (
     <section className="py-24 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4">
-        
+
         {/* Hassle-Free Customer Loyalty & Promotions */}
         <div className="flex flex-col lg:flex-row items-center gap-16 mb-24">
           <div className="flex-1 order-2 lg:order-1 relative">
-            <div className="aspect-square max-w-md mx-auto relative">
+            <div className="max-w-md mx-auto relative">
               <div className="absolute inset-0 bg-primary/20 blur-[100px] rounded-full" />
-              <div className="relative w-full h-full glass-card rounded-2xl flex items-center justify-center p-8">
-                <img src="/home/loyalty-mockup.png" alt="Loyalty App" className="w-full h-auto object-cover opacity-80" />
-                <p className="absolute text-muted text-xs bottom-4">Replace at public/home/loyalty-mockup.png</p>
+              <div className="relative w-full glass-card rounded-2xl flex items-center justify-center overflow-hidden">
+                <img src="/home/loyalty-mockup.png" alt="Loyalty App" className="w-full h-auto" />
               </div>
             </div>
           </div>
-          
+
           <div className="flex-1 order-1 lg:order-2">
             <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               Hassle-Free <span className="text-primary">Customer Loyalty</span> & Promotions
@@ -24,7 +23,7 @@ const LoyaltyAndInsights = () => {
             <p className="text-muted text-lg mb-8">
               Drive customer loyalty with our DRM. Get your own loyalty app, save money, and improve the customer experience. Delight your guests with categorised point-based rewards and special customer offerings.
             </p>
-            
+
             <ul className="space-y-4">
               {[
                 "Get your own loyalty app",
@@ -51,7 +50,7 @@ const LoyaltyAndInsights = () => {
             <p className="text-muted text-lg mb-8">
               Stay updated while on the go. Monitor daily operations remotely. Compare outlets, filter by time & menu, and make perfectly informed decisions.
             </p>
-            
+
             <ul className="space-y-4">
               {[
                 "Monitor daily operations remotely",
@@ -67,13 +66,12 @@ const LoyaltyAndInsights = () => {
               ))}
             </ul>
           </div>
-          
+
           <div className="flex-1 relative">
-            <div className="aspect-square max-w-md mx-auto relative">
+            <div className="max-w-md mx-auto relative">
               <div className="absolute inset-0 bg-secondary/20 blur-[100px] rounded-full" />
-              <div className="relative w-full h-full glass-card rounded-2xl flex items-center justify-center p-8">
-                <img src="/home/insights-mockup.png" alt="Insights Dashboard" className="w-full h-auto object-cover opacity-80" />
-                <p className="absolute text-muted text-xs bottom-4">Replace at public/home/insights-mockup.png</p>
+              <div className="relative w-full glass-card rounded-2xl flex items-center justify-center overflow-hidden">
+                <img src="/home/insights-mockup.png" alt="Insights Dashboard" className="w-full h-auto" />
               </div>
             </div>
           </div>

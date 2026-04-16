@@ -9,7 +9,7 @@ export default function DemoPage() {
     <main className="min-h-screen bg-background">
       <DemoHero />
       <DemoForm />
-      
+
       {/* Reusing existing components as requested */}
       <section className="bg-surface/30">
         <div className="container mx-auto px-4 pt-16 -mb-16 text-center">
@@ -23,9 +23,9 @@ export default function DemoPage() {
         <PricingPlans />
       </section>
 
-      <PricingBenefits 
-        title="Benefits" 
-        highlight="of Point of Sale" 
+      <PricingBenefits
+        title="Benefits"
+        highlight="of Point of Sale"
         subtitle="Guaranteed to save you time, increase the accuracy of your inventory, and help you make informed decisions for your business"
       />
     </main>
