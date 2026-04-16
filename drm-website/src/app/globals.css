@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  /* Light Theme */
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  
+  --surface: #ffffff;
+  --surface-border: #e2e8f0;
+
+  /* Red/Orange Logo Theme */
+  --primary: #dc2626; /* Red-600 */
+  --primary-hover: #b91c1c; /* Red-700 */
+  --primary-foreground: #ffffff;
+  
+  /* Orange Secondary */
+  --secondary: #f97316; /* Orange-500 */
+  --secondary-foreground: #ffffff;
+  
+  --accent: #facc15; /* Yellow-400 */
+  --muted: #64748b;
+}
+
+.dark {
+  /* Premium Dark Theme */
+  --background: #090a0f; /* Very deep blue-black */
+  --foreground: #f8fafc; /* Crisp anti-flash white */
+  
+  --surface: #12141d; /* Slightly lighter surface for cards */
+  --surface-border: #232736; /* Subtle borders */
+
+  /* Vibrant versions for dark mode */
+  --primary: #ef4444; /* Red-500 */
+  --primary-hover: #dc2626; /* Red-600 */
+  --primary-foreground: #ffffff;
+  
+  --secondary: #fb923c; /* Orange-400 */
+  --secondary-foreground: #090a0f;
+  
+  --accent: #fbbf24; /* Amber-400 */
+  --muted: #94a3b8;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  --color-surface: var(--surface);
+  --color-surface-border: var(--surface-border);
+  
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-foreground);
+  
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Base custom utilities */
+@layer utilities {
+  .glass-card {
+    background: color-mix(in srgb, var(--surface) 70%, transparent);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--surface-border);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+}
