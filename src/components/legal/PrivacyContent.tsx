@@ -1,43 +1,53 @@
+"use client";
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const PrivacyContent = () => {
   return (
-    <section className="pt-32 pb-16 bg-background relative overflow-hidden">
-      <div className="container mx-auto px-4 max-w-4xl">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-foreground mb-10 text-center">Privacy <span className="text-secondary">Policy</span></h1>
-        
-        <div className="glass-card p-8 md:p-12 rounded-3xl space-y-8 text-muted leading-relaxed">
-          <div>
-            <h3 className="text-2xl font-bold text-foreground mb-4">Information Collection</h3>
-            <p>
-              We collect information from you when you register on our site, place an order, subscribe to our newsletter, respond to a survey, or fill out a form using our DRM systems.
+    <section className="py-32 bg-background">
+      <div className="container mx-auto px-4 md:px-8 max-w-4xl">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-20"
+        >
+          <span className="section-label mx-auto mb-6">Security First</span>
+          <h1 className="text-5xl md:text-7xl font-extrabold text-foreground mb-8">
+            Privacy <span className="gradient-text">Policy</span>
+          </h1>
+        </motion.div>
+
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.3 }}
+          className="space-y-12"
+        >
+          <div className="glass-card p-10 rounded-[32px] border border-surface-border/50">
+            <h3 className="text-2xl font-black text-foreground mb-6">Data Collection</h3>
+            <p className="text-muted font-bold leading-relaxed">
+              We collect information necessary to provide and improve our restaurant management services. 
+              This includes restaurant details, transaction data, and staff operational logs.
             </p>
-          </div>
-          
-          <div>
-            <h3 className="text-2xl font-bold text-foreground mb-4">How Do We Use Your Information?</h3>
-            <ul className="list-disc pl-6 space-y-2 mt-2">
-              <li>To personalize your experience and better respond to your individual needs.</li>
-              <li>To improve our DRM website and terminal services.</li>
-              <li>To improve customer service and support needs.</li>
-              <li>To process transactions securely.</li>
-            </ul>
           </div>
 
-          <div>
-            <h3 className="text-2xl font-bold text-foreground mb-4">How Do We Protect Your Information?</h3>
-            <p>
-              We implement a variety of high-level security measures to maintain the safety of your personal information when you place an order or enter, submit, or access your personal information on our cloud servers.
+          <div className="glass-card p-10 rounded-[32px] border border-surface-border/50">
+            <h3 className="text-2xl font-black text-foreground mb-6">Data Usage</h3>
+            <p className="text-muted font-bold leading-relaxed">
+              Your data is used strictly for operational purposes, generating insights for your 
+              business growth, and providing technical support. We never sell your data to third parties.
             </p>
           </div>
 
-          <div>
-            <h3 className="text-2xl font-bold text-foreground mb-4">Information Sharing</h3>
-            <p>
-              We do not sell, trade, or otherwise transfer to outside parties your personally identifiable information. This does not include trusted third parties who assist us in operating our website and DRM infrastructure.
+          <div className="glass-card p-10 rounded-[32px] border border-surface-border/50">
+            <h3 className="text-2xl font-black text-foreground mb-6">Cloud Security</h3>
+            <p className="text-muted font-bold leading-relaxed">
+              All data is encrypted in transit and at rest using enterprise-grade AES-256 encryption. 
+              Our cloud servers are hosted in secure data centers with 24/7 monitoring.
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

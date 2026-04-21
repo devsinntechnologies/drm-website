@@ -1,62 +1,64 @@
+"use client";
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const FeaturesSalient = () => {
-  const salientFeatures = [
-    { title: "Quick Setup Custom Menu", icon: "path" },
-    { title: "Infinite Modifiers", icon: "path" },
-    { title: "Loyalty Programs", icon: "path" },
-    { title: "Kitchen Management", icon: "path" },
-    { title: "Product Management", icon: "path" },
-    { title: "Inventory Management", icon: "path" },
-    { title: "Ingredient Level Control", icon: "path" },
-    { title: "Table Management", icon: "path" },
-    { title: "Mobile Order Takers", icon: "path" },
-    { title: "Self Service Kiosk", icon: "path" },
-    { title: "Payment Flexibility", icon: "path" },
-    { title: "Customer Feedback", icon: "path" },
-    { title: "Multi User", icon: "path" },
-    { title: "Branch / Franchise Management", icon: "path" },
-    { title: "Wait-queue Management", icon: "path" },
-    { title: "Secure & Reliable System", icon: "path" },
-    { title: "Touch Screen Enabled", icon: "path" },
-    { title: "Order Booking via Tab or iPad", icon: "path" },
-    { title: "Analytical Reports", icon: "path" },
-    { title: "Tax / Discount Options", icon: "path" }
+  const points = [
+    { t: "Multi-Language Support", d: "Interface available in 5+ global languages for diverse staff.", i: "🌍" },
+    { t: "Table Layout", d: "Visual table management with split-billing and floor plans.", i: "🪑" },
+    { t: "Role-Based Access", d: "Secure permissions for waiters, cashiers, and managers.", i: "🔒" },
+    { t: "Offline Sync", d: "Keep selling even when your internet connection goes down.", i: "📴" },
+    { t: "Kitchen Routing", d: "Sort items automatically by kitchen category and station.", i: "🚚" },
+    { t: "Tax Integration", d: "Automated FBR/tax calculation as per local regulations.", i: "⚖️" },
   ];
 
   return (
-    <section className="py-24 bg-background border-t border-surface-border/50">
-      <div className="container mx-auto px-4 max-w-7xl text-center">
-        
-        <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
-          <span className="text-[#1a2b4b] dark:text-gray-100">Salient</span> <span className="text-[#e26b48]">Features</span>
-        </h2>
-        <p className="text-muted font-medium text-sm md:text-base mb-16 uppercase tracking-wider">
-          One-Stop Restaurant Management Solution
-        </p>
+    <section className="py-24 bg-surface/10 relative overflow-hidden">
+      <div className="container mx-auto px-4 md:px-8">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="glass-card rounded-[48px] p-12 md:p-20 relative overflow-hidden border border-surface-border/50"
+        >
+          {/* Background Glow */}
+          <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 blur-[100px] rounded-full -translate-y-1/2 translate-x-1/2" />
+          
+          <div className="relative z-10">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-black text-foreground mb-6">Salient <span className="gradient-text">Advantages</span></h2>
+              <p className="text-lg text-muted max-w-2xl mx-auto font-medium">
+                The small details that make a huge difference in your daily operations.
+              </p>
+            </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {salientFeatures.map((feat, i) => (
-            <div key={i} className="bg-surface glass-card p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-surface-border flex items-center justify-start gap-4">
-              <div className="w-14 h-14 bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center shrink-0">
-                {/* Placeholder Icon */}
-                <svg className="w-8 h-8 text-primary opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                </svg>
-              </div>
-              <h4 className="text-[#1a2b4b] dark:text-gray-100 font-bold text-[15px] leading-tight text-left">
-                {feat.title.split(' ').map((word, index) => (
-                   <React.Fragment key={index}>
-                     {word}
-                     {index === 1 && <br />}
-                     {index !== 1 && ' '}
-                   </React.Fragment>
-                ))}
-              </h4>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-10">
+              {points.map((p, i) => (
+                <motion.div 
+                  key={i} 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  whileHover={{ x: 5 }}
+                  className="flex gap-4 group"
+                >
+                  <span className="text-3xl group-hover:scale-125 transition-transform">{p.i}</span>
+                  <div>
+                    <h4 className="font-extrabold text-foreground mb-1 group-hover:text-primary transition-colors">{p.t}</h4>
+                    <p className="text-sm text-muted leading-relaxed font-bold">{p.d}</p>
+                  </div>
+                </motion.div>
+              ))}
             </div>
-          ))}
-        </div>
-
+          </div>
+        </motion.div>
       </div>
     </section>
   );

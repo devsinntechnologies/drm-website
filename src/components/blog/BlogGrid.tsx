@@ -1,71 +1,147 @@
-import React from 'react';
+"use client";
+import React, { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+
+const posts = [
+  {
+    title: 'How to increase your restaurant sales by 20% in 30 days',
+    category: 'Marketing',
+    date: 'Oct 24, 2023',
+    image: '/blog/blog1.jpg',
+    author: 'Sarah Rahman',
+    role: 'CEO, Cafe owner',
+    time: '5 min read'
+  },
+  {
+    title: 'The future of restaurant technology: What to expect in 2024',
+    category: 'Technology',
+    date: 'Oct 15, 2023',
+    image: '/blog/blog2.jpg',
+    author: 'Ahmed Malik',
+    role: 'Product Head',
+    time: '8 min read'
+  },
+  {
+    title: '10 best practices for food inventory management',
+    category: 'Inventory',
+    date: 'Oct 08, 2023',
+    image: '/blog/blog3.jpg',
+    author: 'Zeba Khan',
+    role: 'Operations Expert',
+    time: '4 min read'
+  },
+  {
+    title: 'The impact of cloud POS on fast food business scale',
+    category: 'Technology',
+    date: 'Sep 28, 2023',
+    image: '/blog/blog4.jpg',
+    author: 'John Doe',
+    role: 'Solution Architect',
+    time: '7 min read'
+  },
+  {
+    title: 'Why table-side ordering is a game changer for diners',
+    category: 'User Experience',
+    date: 'Sep 15, 2023',
+    image: '/blog/blog5.jpg',
+    author: 'Ayesha Sid',
+    role: 'Service Manager',
+    time: '6 min read'
+  },
+  {
+    title: 'Digital loyalty programs: Building repeat customers',
+    category: 'Marketing',
+    date: 'Sep 05, 2023',
+    image: '/blog/blog6.jpg',
+    author: 'Omar Farooq',
+    role: 'Growth Hacker',
+    time: '10 min read'
+  }
+];
 
 const BlogGrid = () => {
-  const posts = [
-    {
-      title: "The Future of Restaurant Ordering with QR Codes",
-      date: "Oct 24, 2025",
-      category: "Technology",
-      desc: "Discover how QR code ordering is changing the dynamics of the restaurant industry."
-    },
-    {
-      title: "DRM Integration with Revenue Authorities",
-      date: "Sep 15, 2025",
-      category: "Compliance",
-      desc: "A complete guide to integrating your DRM with tax and revenue boards smoothly."
-    },
-    {
-      title: "Top 10 Features to Look For in a Retail DRM",
-      date: "Aug 02, 2025",
-      category: "Retail",
-      desc: "Not all DRM systems are created equal. Make sure yours has these 10 core features."
-    },
-    {
-      title: "How to Boost Customer Loyalty",
-      date: "Jul 18, 2025",
-      category: "Marketing",
-      desc: "Proven strategies and reward programs that keep your customers coming back."
-    },
-    {
-      title: "Managing Multiple Franchises efficiently",
-      date: "Jun 05, 2025",
-      category: "Management",
-      desc: "Scaling your business is hard. Here is how a cloud DRM makes franchise tracking easy."
-    },
-    {
-      title: "The Ultimate Guide to Kitchen Display Systems",
-      date: "May 22, 2025",
-      category: "Efficiency",
-      desc: "Eliminate paper trail and empower your chefs with an automated digital system."
-    }
-  ];
+  const [selectedCategory, setSelectedCategory] = useState('All');
 
   return (
-    <section className="py-16 bg-background">
-      <div className="container mx-auto px-4 max-w-6xl">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {posts.map((post, i) => (
-            <div key={i} className="glass-card rounded-2xl overflow-hidden hover:border-primary/50 transition-colors group cursor-pointer flex flex-col">
-              <div className="h-48 bg-surface-border/50 relative overflow-hidden flex items-center justify-center">
-                <svg className="w-16 h-16 text-muted opacity-30 group-hover:scale-110 transition-transform duration-500" fill="currentColor" viewBox="0 0 24 24"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-              </div>
-              <div className="p-6 flex-1 flex flex-col">
-                <div className="flex justify-between items-center mb-3">
-                  <span className="text-xs font-bold px-2 py-1 bg-surface-border rounded-md text-foreground">{post.category}</span>
-                  <span className="text-xs text-primary font-mono">{post.date}</span>
-                </div>
-                <h4 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">{post.title}</h4>
-                <p className="text-muted text-sm mb-6">{post.desc}</p>
-                <div className="mt-auto">
-                  <span className="text-secondary text-sm font-semibold flex items-center">
-                    Read Article 
-                    <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-                  </span>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+    <section className="py-24 bg-background">
+      <div className="container mx-auto px-4 md:px-8">
+        <motion.div 
+          layout
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          <AnimatePresence mode="popLayout">
+            {posts.map((post, idx) => (
+              <motion.div 
+                key={post.title}
+                layout
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+              >
+                <Link href={`/blog/${idx}`} className="glass-card card-hover rounded-[40px] overflow-hidden group h-full flex flex-col border border-surface-border/50">
+                  {/* Image Section */}
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
+                    <div className="absolute top-6 left-6">
+                      <span className="tag-pill bg-primary/20 text-primary border-primary/30 backdrop-blur-md">
+                        {post.category}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Content Section */}
+                  <div className="p-8 flex flex-col flex-1">
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="text-xs font-black text-muted uppercase tracking-widest flex items-center gap-2">
+                         <svg className="w-3.5 h-3.5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                         </svg>
+                         {post.date}
+                      </div>
+                      <div className="text-xs font-black text-muted uppercase tracking-widest flex items-center gap-2">
+                         <svg className="w-3.5 h-3.5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                         </svg>
+                         {post.time}
+                      </div>
+                    </div>
+
+                    <h3 className="text-2xl font-black text-foreground mb-10 group-hover:text-primary transition-colors leading-tight">
+                      {post.title}
+                    </h3>
+
+                    {/* Meta Section */}
+                    <div className="mt-auto pt-6 border-t border-surface-border/50 flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center font-black text-primary text-sm border border-primary/20">
+                          {post.author[0]}
+                        </div>
+                        <div>
+                          <div className="text-sm font-black text-foreground">{post.author}</div>
+                          <div className="text-[10px] uppercase font-bold text-muted tracking-tighter">{post.role}</div>
+                        </div>
+                      </div>
+                      <div className="p-2 rounded-full bg-surface group-hover:bg-primary group-hover:text-white transition-all transform group-hover:translate-x-1">
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </motion.div>
       </div>
     </section>
   );

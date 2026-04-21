@@ -1,13 +1,25 @@
+"use client";
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const PricingHero = () => {
   return (
-    <section className="pt-32 pb-16 bg-surface/30 text-center px-4 relative overflow-hidden">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/10 blur-[120px] rounded-full pointer-events-none" />
-      <h1 className="text-5xl font-extrabold text-foreground mb-6">Simple, transparent <span className="text-primary">Pricing</span></h1>
-      <p className="text-xl text-muted max-w-2xl mx-auto">
-        Choose the perfectly tailored plan for your DRM system. No hidden fees. No surprises.
-      </p>
+    <section className="relative pt-32 pb-16 overflow-hidden">
+      <div className="container mx-auto px-4 md:px-8 relative z-10 text-center">
+        <motion.div
+           initial={{ opacity: 0, scale: 0.9 }}
+           animate={{ opacity: 1, scale: 1 }}
+           transition={{ duration: 0.8 }}
+        >
+          <span className="section-label mx-auto mb-6">Simple Pricing</span>
+          <h1 className="text-5xl md:text-7xl font-extrabold text-foreground mb-8 tracking-tight">
+            Plans for every <span className="gradient-text">scale</span>
+          </h1>
+          <p className="text-xl text-muted max-w-2xl mx-auto leading-relaxed font-bold">
+            Choose the perfect plan for your business. No hidden fees, just pure growth.
+          </p>
+        </motion.div>
+      </div>
     </section>
   );
 };

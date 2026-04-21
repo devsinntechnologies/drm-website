@@ -1,63 +1,89 @@
 "use client";
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+const faqs = [
+  {
+    q: "How long does the installation take?",
+    a: "Standard installation for a single outlet usually takes 2-4 hours. For multi-unit franchises, we plan a phased rollout over 2-3 days."
+  },
+  {
+    q: "Is training provided for my staff?",
+    a: "Yes, we providing unlimited free training for your team members. We also have a comprehensive library of video guides."
+  },
+  {
+    q: "Can I use DRM on my existing hardware?",
+    a: "Our software is built to be hardware-agnostic. However, for the best performance and stability, we recommend our enterprise-grade terminals."
+  },
+  {
+    q: "What happens if my internet goes down?",
+    a: "DRM features a robust offline mode. You can keep selling and managing your kitchen; all data will sync automatically once internet is restored."
+  }
+];
 
 const SupportFAQ = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
-
-  const faqs = [
-    { q: "Does DRM Provide 24/7 Support to Its Clients?" },
-    { q: "Does DRM Offer Live Support Services?" },
-    { q: "Does DRM Offer Ticketing System Services?" },
-    { q: "How Can I Contact the DRM Support Team?" },
-    { q: "Is There AI-Based Customer Assistance in DRM?" },
-    { q: "How Do I Learn To Get My DRM Running?" },
-    { q: "What Training Service Do You Get At DRM?" },
-    { q: "Does DRM Offer Different Packages?" },
-    { q: "What Do You Mean By DRM Training?" },
-    { q: "What Are The DRM Related Common Issues?" }
-  ];
-
-  const handleToggle = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
+  const [activeIdx, setActiveIdx] = useState<number | null>(0);
 
   return (
-    <section className="py-24 bg-surface/20">
-      <div className="container mx-auto px-4 max-w-4xl text-center">
-        
-        <h2 className="text-4xl md:text-5xl font-bold mb-4">
-          <span className="text-[#1a2b4b] dark:text-gray-100">Frequently Asked Questions</span> <span className="text-[#e26b48]">FAQ</span>
-        </h2>
-        <p className="text-muted mb-12">
-          Our support team will get assistance from AI-powered suggestions, making it quicker than ever
-        </p>
+    <section className="py-24 bg-surface/10 relative overflow-hidden">
+      <div className="container mx-auto px-4 md:px-8">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <span className="section-label">Common Questions</span>
+          <h2 className="text-4xl font-extrabold text-foreground mt-4">Frequently Asked <span className="gradient-text">Questions</span></h2>
+        </motion.div>
 
-        <div className="flex flex-col gap-3">
+        <div className="max-w-3xl mx-auto space-y-4">
           {faqs.map((faq, i) => (
-            <div 
-              key={i} 
-              className="bg-surface glass-card border border-surface-border text-left hover:border-primary/50 transition-colors cursor-pointer"
-              onClick={() => handleToggle(i)}
+            <motion.div 
+              key={i}
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+              className={`rounded-2xl border transition-all duration-300 overflow-hidden ${activeIdx === i ? 'bg-surface border-primary/30 shadow-xl' : 'bg-surface/30 border-surface-border/50'}`}
             >
-              <div className="flex items-center justify-between p-5">
-                <div className="flex items-center gap-4">
-                  <span className="text-muted text-xl font-light w-4 text-center">
-                    {openIndex === i ? '-' : '+'}
-                  </span>
-                  <span className="font-semibold text-foreground/80">{faq.q}</span>
-                </div>
-              </div>
-              {openIndex === i && (
-                <div className="px-5 pb-5 pl-12 text-muted text-sm border-t border-surface-border/50 pt-4">
-                  Yes! We provide robust solutions and support for this query. You can find out more by reaching out to our dedicated support channels or reading the extended documentation on our portal.
-                </div>
-              )}
-            </div>
+              <button 
+                onClick={() => setActiveIdx(activeIdx === i ? null : i)}
+                className="w-full py-6 px-8 flex items-center justify-between text-left group"
+              >
+                <span className={`text-lg font-bold transition-colors ${activeIdx === i ? 'text-primary' : 'text-foreground group-hover:text-primary'}`}>
+                  {faq.q}
+                </span>
+                <motion.div 
+                  animate={{ rotate: activeIdx === i ? 180 : 0 }}
+                  className={`w-6 h-6 rounded-full flex items-center justify-center transition-colors ${activeIdx === i ? 'bg-primary text-white' : 'bg-surface-border/30 text-muted'}`}
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </motion.div>
+              </button>
+              
+              <AnimatePresence>
+                {activeIdx === i && (
+                  <motion.div 
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                  >
+                    <div className="px-8 pb-8 text-muted font-medium leading-relaxed">
+                      {faq.a}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
           ))}
         </div>
-
       </div>
     </section>
   );
 };
+
 export default SupportFAQ;

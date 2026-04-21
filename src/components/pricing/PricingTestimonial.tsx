@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Image from 'next/image';
+
 const PricingTestimonial = () => {
   return (
     <section className="py-24 bg-surface/30 relative overflow-hidden">
@@ -11,18 +13,20 @@ const PricingTestimonial = () => {
         <div className="relative flex flex-col md:flex-row items-center justify-center mt-12 py-12">
           
           {/* Abstract dark shape background with logo */}
-          <div className="w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] rounded-[40%_60%_70%_30%/40%_50%_60%_50%] bg-[#1a202c] relative flex items-center justify-center -mr-16 z-0 shadow-2xl">
-             {/* Map background placeholder (light blue map effect) */}
-             <div className="absolute inset-0 bg-blue-100/5 rounded-full pointer-events-none" />
+          <div className="w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] rounded-[40%_60%_70%_30%/40%_50%_60%_50%] bg-[#1a202c] relative flex items-center justify-center -mr-16 z-0 shadow-2xl overflow-hidden">
+             {/* Map background image */}
+             <div className="absolute inset-0 opacity-20">
+               <Image src="/pricing/map_bg.jpg" alt="Map Background" fill className="object-cover" />
+             </div>
              
              {/* The Logo Circle */}
-             <div className="w-32 h-32 rounded-full bg-primary border-4 border-white flex items-center justify-center shadow-lg -translate-x-12">
-               <span className="text-xl font-bold text-white tracking-widest uppercase">LOGO</span>
+             <div className="w-32 h-32 rounded-full bg-surface-border border-4 border-white flex items-center justify-center shadow-lg -translate-x-12 overflow-hidden relative z-10">
+               <Image src="/pricing/wasabi_logo.jpg" alt="Wasabi Logo" fill className="object-cover" />
              </div>
              
              {/* Little floating decorative circles */}
-             <div className="absolute top-1/2 -left-8 w-4 h-4 rounded-full bg-secondary" />
-             <div className="absolute top-[60%] -left-12 w-10 h-10 rounded-full bg-accent/40" />
+             <div className="absolute top-1/2 -left-8 w-4 h-4 rounded-full bg-secondary z-20" />
+             <div className="absolute top-[60%] -left-12 w-10 h-10 rounded-full bg-accent/40 z-20" />
           </div>
 
           {/* The white quote card */}

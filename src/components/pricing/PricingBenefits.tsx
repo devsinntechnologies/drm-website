@@ -1,4 +1,6 @@
+"use client";
 import React from 'react';
+import { motion } from 'framer-motion';
 
 interface PricingBenefitsProps {
   title?: string;
@@ -6,56 +8,56 @@ interface PricingBenefitsProps {
   subtitle?: string;
 }
 
-const PricingBenefits: React.FC<PricingBenefitsProps> = ({
-  title = "Benefits",
-  highlight = "of Point of Sale",
-  subtitle = "Guaranteed to save you time, increase the accuracy of your inventory, and help to you make informed decisions for your business"
-}) => {
+const PricingBenefits = ({ title, highlight, subtitle }: PricingBenefitsProps) => {
   const benefits = [
-    {
-      title: "Connected Platform",
-      desc: "Accessible from cloud, wherever you are.",
-      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-    },
-    {
-      title: "24/7 Support",
-      desc: "Real people with real solutions, here when you need them",
-      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-    },
-    {
-      title: "Reliable offline Mode",
-      desc: "Keeps your business running when the wifi isn't",
-      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243-4.243a5 5 0 000 7.072M2.5 12a9.5 9.5 0 0019 0" />
-    },
-    {
-      title: "Seamless Integrations",
-      desc: "Synced with partners you trust",
-      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
-    }
+    { t: "No Hidden Costs", d: "What you see is what you pay. No setup fees or maintenance charges.", i: "💎" },
+    { t: "Cancel Anytime", d: "Billed monthly. You have the flexibility to scale up or down risk-free.", i: "🔄" },
+    { t: "Free Daily Backups", d: "Your data is backed up every 24 hours on our secure cloud servers.", i: "🛡️" },
+    { t: "Priority Onboarding", d: "Get up and running with 1-on-1 support and data migration.", i: "🚀" }
   ];
 
   return (
-    <section className="py-24 bg-background border-t border-surface-border">
-      <div className="container mx-auto px-4 text-center">
-        <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-4">
-          {title} <span className="text-primary">of DRM</span>
-        </h2>
-        
-        <p className="text-muted max-w-2xl mx-auto mb-16 text-lg">
-          {subtitle}
-        </p>
+    <section className="py-24 bg-surface/10 relative overflow-hidden">
+      <div className="container mx-auto px-4 md:px-8">
+        {(title || highlight || subtitle) && (
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-black text-foreground mb-6">
+              {title} <span className="gradient-text">{highlight}</span>
+            </h2>
+            {subtitle && (
+              <p className="text-lg text-muted max-w-3xl mx-auto font-medium">
+                {subtitle}
+              </p>
+            )}
+            <div className="section-divider mx-auto mt-8" />
+          </motion.div>
+        )}
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {benefits.map((benefit, i) => (
-            <div key={i} className="flex flex-col items-center group cursor-pointer">
-              <div className="w-20 h-20 rounded-full border border-surface-border bg-surface flex items-center justify-center mb-6 text-secondary group-hover:scale-110 transition-transform shadow-sm">
-                <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  {benefit.icon}
-                </svg>
-              </div>
-              <h3 className="text-lg font-bold text-foreground mb-3">{benefit.title}</h3>
-              <p className="text-sm text-muted max-w-[200px] leading-relaxed">{benefit.desc}</p>
-            </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {benefits.map((b, i) => (
+            <motion.div 
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1, duration: 0.8 }}
+              whileHover={{ y: -5 }}
+              className="text-center group"
+            >
+              <motion.div 
+                whileHover={{ scale: 1.1 }}
+                className="text-4xl mb-6 inline-block"
+              >
+                {b.i}
+              </motion.div>
+              <h4 className="text-xl font-extrabold text-foreground mb-3 group-hover:text-primary transition-colors">{b.t}</h4>
+              <p className="text-sm text-muted font-bold leading-relaxed">{b.d}</p>
+            </motion.div>
           ))}
         </div>
       </div>

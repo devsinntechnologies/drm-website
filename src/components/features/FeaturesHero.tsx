@@ -1,13 +1,17 @@
+"use client";
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const FeaturesHero = () => {
   return (
-    <section className="pt-32 pb-16 bg-surface/30 text-center px-4 relative overflow-hidden">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-secondary/10 blur-[150px] rounded-full pointer-events-none" />
-      <h1 className="text-5xl font-extrabold text-foreground mb-6">Powerful <span className="text-secondary">Features</span> to run your business</h1>
-      <p className="text-xl text-muted max-w-3xl mx-auto">
-        Everything you need to manage your restaurant or retail store efficiently. Built to scale with your ambitions.
-      </p>
+    <section className="relative h-20 overflow-hidden bg-background">
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-secondary/5" 
+      />
+      <div className="absolute top-0 inset-x-0 h-px bg-surface-border" />
     </section>
   );
 };

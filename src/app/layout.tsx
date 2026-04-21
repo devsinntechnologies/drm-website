@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DRM",
-  description: "Complete DRM solution for businesses",
+  title: "DRM — Restaurant Point of Sale System | Cloud POS Software",
+  description: "DRM is a comprehensive cloud-based Restaurant Point of Sale system. Manage orders, inventory, KDS, loyalty programs and more — all in one place.",
 };
 
 import Navbar from "@/components/Navbar";
@@ -32,6 +32,11 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+      </head>
       <body className="min-h-full flex flex-col pt-20">
         <Navbar />
         <main className="flex-1">{children}</main>
