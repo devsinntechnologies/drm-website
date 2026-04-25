@@ -26,7 +26,7 @@ const AboutTeam = () => {
         >
           <span className="section-label">The Experts</span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-6">
-            Meet the <span className="gradient-text text-glow">Team</span>
+            Meet the <span className="text-primary text-glow">Team</span>
           </h2>
           <p className="text-lg text-muted max-w-2xl mx-auto font-medium">
             The minds behind the software. We're a team of innovators, engineers, and creatives building the future.

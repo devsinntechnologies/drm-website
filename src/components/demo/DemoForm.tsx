@@ -22,7 +22,7 @@ const DemoForm = () => {
             viewport={{ once: true }}
             className="flex-1"
           >
-            <h3 className="text-3xl font-black text-foreground mb-8">What to expect in your <span className="gradient-text">Free Walkthrough</span></h3>
+            <h3 className="text-3xl font-black text-foreground mb-8">What to expect in your <span className="text-primary">Free Walkthrough</span></h3>
             <div className="space-y-6">
               {perks.map((perk, idx) => (
                 <motion.div 

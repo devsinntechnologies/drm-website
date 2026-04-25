@@ -34,7 +34,7 @@ const SupportFAQ = () => {
           className="text-center mb-16"
         >
           <span className="section-label">Common Questions</span>
-          <h2 className="text-4xl font-extrabold text-foreground mt-4">Frequently Asked <span className="gradient-text">Questions</span></h2>
+          <h2 className="text-4xl font-extrabold text-foreground mt-4">Frequently Asked <span className="text-primary">Questions</span></h2>
         </motion.div>
 
         <div className="max-w-3xl mx-auto space-y-4">

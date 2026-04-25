@@ -119,7 +119,7 @@ const HowItWorks = () => {
         >
           <span className="section-label">Quick Start</span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-4">
-            How It <span className="gradient-text text-glow">Works</span>
+            How It <span className="text-primary">Works</span>
           </h2>
           <p className="text-muted text-lg max-w-lg mx-auto">
             From zero to fully operational in hours — not weeks.

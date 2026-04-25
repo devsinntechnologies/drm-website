@@ -136,7 +136,7 @@ const LatestPosts = () => {
           >
             <span className="section-label">Our Blog</span>
             <h2 className="text-4xl md:text-5xl font-extrabold text-foreground tracking-tight">
-              Latest <span className="gradient-text text-glow">Insights</span>
+              Latest <span className="text-primary">Insights</span>
             </h2>
           </motion.div>
           <motion.div

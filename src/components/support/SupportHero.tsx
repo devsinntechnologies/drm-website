@@ -28,7 +28,7 @@ const SupportHero = () => {
         >
           <span className="section-label mx-auto mb-6">Support Center</span>
           <h1 className="text-5xl md:text-7xl font-extrabold text-foreground mb-8 tracking-tight">
-            How can we <span className="gradient-text">help</span> you?
+            How can we <span className="text-primary">help</span> you?
           </h1>
           <p className="text-xl text-muted max-w-2xl mx-auto mb-12 leading-relaxed font-medium">
             Our dedicated support team is available 24/7 to ensure your restaurant runs smoothly. 

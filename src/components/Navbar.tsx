@@ -2,8 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
-import ThemeToggle from './ThemeToggle';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -36,21 +34,21 @@ export default function Navbar() {
   ];
 
   return (
-    <motion.nav 
+    <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled 
-        ? 'py-2 bg-background/60 backdrop-blur-3xl border-b border-surface-border/50 shadow-[0_10px_30px_rgba(0,0,0,0.5)]' 
-        : 'py-4 bg-transparent'
+        scrolled
+          ? 'py-2 bg-background/84 backdrop-blur-xl border-b border-surface-border/60'
+          : 'py-4 bg-transparent'
       }`}
     >
       <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
 
         {/* Brand */}
         <Link href="/" onClick={closeMenu} className="flex items-center cursor-pointer z-50">
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="flex items-center gap-3">
+          <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="flex items-center gap-3">
             <div className="relative h-10 w-auto md:h-12">
               <img
                 src={`/logo.png?v=${Date.now()}`}
@@ -58,7 +56,7 @@ export default function Navbar() {
                 className="h-full w-auto object-contain object-left"
               />
             </div>
-            <span className="text-2xl md:text-3xl font-black tracking-tighter gradient-text text-glow">
+            <span className="text-2xl md:text-3xl font-black tracking-tighter text-primary">
               DRM
             </span>
           </motion.div>
@@ -74,7 +72,7 @@ export default function Navbar() {
                 href={link.href}
                 className={`relative px-4 py-2 text-sm font-bold tracking-wide rounded-lg transition-all duration-300 ${
                   isActive
-                    ? 'text-primary text-glow outline-none'
+                    ? 'text-primary outline-none'
                     : 'text-foreground/80 hover:text-foreground'
                 }`}
               >
@@ -86,11 +84,10 @@ export default function Navbar() {
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   />
                 )}
-                {/* Underline for active */}
                 {isActive && (
                   <motion.span 
                     layoutId="nav-underline"
-                    className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/5 h-0.5 bg-primary rounded-full shadow-[0_0_8px_rgba(var(--primary-rgb),0.5)]"
+                    className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/5 h-0.5 bg-primary rounded-full"
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   />
                 )}
@@ -101,13 +98,11 @@ export default function Navbar() {
 
         {/* Action area */}
         <div className="flex items-center gap-3 z-50">
-          <ThemeToggle />
-
           <Link href="/demo" onClick={closeMenu} className="hidden sm:block">
-            <motion.button 
-              whileHover={{ scale: 1.05, y: -1 }}
+            <motion.button
+              whileHover={{ scale: 1.03, y: -1 }}
               whileTap={{ scale: 0.95 }}
-              className="shimmer-btn px-6 py-2.5 bg-primary text-primary-foreground text-sm font-black tracking-wide rounded-xl shadow-[0_0_20px_rgba(var(--primary-rgb),0.4)] hover:shadow-[0_0_30px_rgba(var(--primary-rgb),0.6)] transition-shadow duration-300 relative overflow-hidden group"
+              className="shimmer-btn px-6 py-2.5 bg-primary text-primary-foreground text-sm font-black tracking-wide rounded-xl transition-shadow duration-300 relative overflow-hidden group glow-primary"
             >
               <span className="relative z-10">Get Started</span>
             </motion.button>
@@ -140,12 +135,12 @@ export default function Navbar() {
       {/* Mobile Navigation Overlay */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: "100%" }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="lg:hidden fixed inset-0 top-[65px] bg-background/98 backdrop-blur-xl z-40"
+            className="lg:hidden fixed inset-0 top-16.25 bg-background/96 backdrop-blur-xl z-40"
           >
             <div className="flex flex-col h-full p-6 space-y-8 overflow-y-auto">
               <div className="flex flex-col space-y-2">
@@ -162,7 +157,7 @@ export default function Navbar() {
                       <Link
                         href={link.href}
                         onClick={closeMenu}
-                        className={`text-3xl font-bold transition-colors py-2 flex items-center justify-between group ${isActive ? 'text-primary' : 'text-foreground'}`}
+                        className={`text-3xl font-bold transition-colors py-2 flex items-center justify-between ${isActive ? 'text-primary' : 'text-foreground'}`}
                       >
                         {link.name}
                         <motion.span 
@@ -180,7 +175,7 @@ export default function Navbar() {
                   transition={{ delay: 0.5 }}
                 >
                   <Link href="/demo" onClick={closeMenu} className="sm:hidden mt-6 block">
-                    <button className="w-full py-4 bg-primary text-primary-foreground font-bold rounded-2xl glow-primary text-lg">
+                    <button className="w-full py-4 bg-primary text-primary-foreground font-bold rounded-2xl text-lg glow-primary">
                       Get Started
                     </button>
                   </Link>

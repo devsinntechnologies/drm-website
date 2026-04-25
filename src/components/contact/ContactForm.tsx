@@ -27,7 +27,7 @@ const ContactForm = () => {
             className="flex-1 space-y-12"
           >
             <div>
-              <h3 className="text-3xl font-black text-foreground mb-6">Connect with <span className="gradient-text">Experts</span></h3>
+              <h3 className="text-3xl font-black text-foreground mb-6">Connect with <span className="text-primary">Experts</span></h3>
               <p className="text-lg text-muted font-bold leading-relaxed max-w-lg">
                 Whether you're starting a new cafe or managing a global franchise, 
                 our specialists are here to guide you.

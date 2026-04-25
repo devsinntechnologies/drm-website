@@ -19,7 +19,7 @@ const FeaturesChef = () => {
           >
             <span className="section-label mb-6">Staff Management</span>
             <h2 className="text-5xl md:text-7xl font-extrabold text-foreground mb-4 leading-tight">
-              Chef <span className="gradient-text">Performance</span> <br />
+              Chef <span className="text-primary">Performance</span> <br />
               Monitoring
             </h2>
             <p className="text-xl text-muted mb-12 leading-relaxed max-w-xl font-medium">

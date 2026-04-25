@@ -31,7 +31,7 @@ const BlogHero = () => {
           >
             <span className="section-label mx-auto mb-8">Resources & News</span>
             <h1 className="text-5xl md:text-7xl font-extrabold text-foreground mb-8 tracking-tight leading-tight">
-              Latest <span className="gradient-text">Insights</span> & Updates
+              Latest <span className="text-primary">Insights</span> & Updates
             </h1>
             <p className="text-xl text-muted max-w-2xl mx-auto leading-relaxed font-medium">
               Master the art of restaurant management. Stay ahead with deep dives into 

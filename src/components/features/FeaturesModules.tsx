@@ -22,7 +22,7 @@ const FeaturesModules = () => {
           className="text-center mb-12"
         >
           <span className="section-label">All Access</span>
-          <h3 className="text-3xl font-extrabold text-foreground mt-4">Extended <span className="gradient-text">Modules</span></h3>
+          <h3 className="text-3xl font-extrabold text-foreground mt-4">Extended <span className="text-primary">Modules</span></h3>
         </motion.div>
 
         <div className="flex flex-wrap justify-center gap-4">

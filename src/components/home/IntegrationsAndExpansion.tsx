@@ -36,7 +36,7 @@ const IntegrationsAndExpansion = () => {
           <span className="section-label">Compliance & Scale</span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-foreground">
             Built for{' '}
-            <span className="gradient-text text-glow">Growth & Compliance</span>
+            <span className="text-primary">Growth & Compliance</span>
           </h2>
           <p className="text-muted text-lg max-w-lg mx-auto mt-4">
             Scale confidently. Stay compliant. Grow without limits.

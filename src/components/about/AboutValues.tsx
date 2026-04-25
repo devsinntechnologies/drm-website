@@ -40,7 +40,7 @@ const AboutValues = () => {
         >
           <span className="section-label">Our Philosophy</span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-6">
-            Our Core <span className="gradient-text text-glow">Values</span>
+            Our Core <span className="text-primary text-glow">Values</span>
           </h2>
           <p className="text-lg text-muted max-w-2xl mx-auto font-medium">
             The principles that guide our product, our team, and our relationship with you.

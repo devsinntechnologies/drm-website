@@ -54,7 +54,7 @@ const FeaturesPowerful = () => {
         >
           <span className="section-label">All-in-One POS</span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-4 leading-tight">
-            <span className="gradient-text">Powerful Features</span> <br />
+            <span className="text-primary">Powerful Features</span> <br />
             For Modern Restaurants
           </h2>
           <div className="section-divider" />

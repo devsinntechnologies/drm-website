@@ -14,7 +14,7 @@ const PrivacyContent = () => {
         >
           <span className="section-label mx-auto mb-6">Security First</span>
           <h1 className="text-5xl md:text-7xl font-extrabold text-foreground mb-8">
-            Privacy <span className="gradient-text">Policy</span>
+            Privacy <span className="text-primary">Policy</span>
           </h1>
         </motion.div>
 

@@ -139,7 +139,7 @@ const Testimonials = () => {
         >
           <span className="section-label">Wall of Love</span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-4 leading-tight tracking-tight">
-            Trusted by <span className="gradient-text text-glow">Restaurateurs</span>
+            Trusted by <span className="text-primary">Restaurateurs</span>
           </h2>
           <p className="text-muted text-lg max-w-xl mx-auto">
             Join 1000+ restaurants that run smoother, smarter, and more profitably with DRM.

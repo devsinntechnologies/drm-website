@@ -32,7 +32,7 @@ const FeaturesSalient = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl md:text-5xl font-black text-foreground mb-6">Salient <span className="gradient-text">Advantages</span></h2>
+              <h2 className="text-4xl md:text-5xl font-black text-foreground mb-6">Salient <span className="text-primary">Advantages</span></h2>
               <p className="text-lg text-muted max-w-2xl mx-auto font-medium">
                 The small details that make a huge difference in your daily operations.
               </p>

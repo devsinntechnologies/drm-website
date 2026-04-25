@@ -161,7 +161,7 @@ function FeatureBlock({ feature, idx }: { feature: typeof features[0]; idx: numb
         >
           {feature.title.split(' ').map((word, i) =>
             i === 0
-              ? <span key={i} className="gradient-text text-glow">{word} </span>
+              ? <span key={i} className="text-primary ">{word} </span>
               : word + ' '
           )}
         </motion.h2>

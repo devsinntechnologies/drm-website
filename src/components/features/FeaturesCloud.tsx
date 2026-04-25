@@ -30,7 +30,7 @@ const FeaturesCloud = () => {
             </svg>
           </motion.div>
 
-          <h2 className="text-4xl md:text-5xl font-black text-foreground mb-8">Seamless <span className="gradient-text">Hybrid-Cloud</span> Architecture</h2>
+          <h2 className="text-4xl md:text-5xl font-black text-foreground mb-8">Seamless <span className="text-primary">Hybrid-Cloud</span> Architecture</h2>
           <p className="text-xl text-muted leading-relaxed font-bold mb-12">
             The power of the cloud meets the reliability of local storage. Sell anywhere, anytime, with or without an active internet connection.
           </p>

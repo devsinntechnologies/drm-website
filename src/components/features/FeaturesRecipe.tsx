@@ -19,7 +19,7 @@ const FeaturesRecipe = () => {
           >
             <span className="section-label mb-6">Kitchen Control</span>
             <h2 className="text-5xl md:text-7xl font-extrabold text-foreground mb-4 leading-tight">
-              Precise <span className="gradient-text">Recipe</span> <br />
+              Precise <span className="text-primary">Recipe</span> <br />
               Management
             </h2>
             <p className="text-xl text-muted mb-12 leading-relaxed max-w-xl font-medium">

@@ -21,7 +21,7 @@ const DemoHero = () => {
         >
           <span className="section-label mx-auto mb-6">Expert Tour</span>
           <h1 className="text-5xl md:text-7xl font-extrabold text-foreground mb-8 tracking-tight">
-            See DRM in <span className="gradient-text">Action</span>
+            See DRM in <span className="text-primary">Action</span>
           </h1>
           <p className="text-xl text-muted max-w-2xl mx-auto leading-relaxed font-bold">
             Experience the workflow that powers thousands of kitchens. 

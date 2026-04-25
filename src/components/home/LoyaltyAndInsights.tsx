@@ -67,7 +67,7 @@ const LoyaltyAndInsights = () => {
                 transition={{ duration: 4, ease: 'easeInOut', repeat: Infinity }}
                 className="absolute -top-4 -right-4 glass-card px-4 py-3 rounded-2xl border-gradient shadow-xl backdrop-blur-xl z-20"
               >
-                <div className="text-xs font-black gradient-text">🎁 +850 pts</div>
+                <div className="text-xs font-black text-primary">🎁 +850 pts</div>
                 <div className="text-[9px] text-muted font-bold uppercase tracking-widest">Earned Today</div>
               </motion.div>
             </motion.div>
@@ -86,7 +86,7 @@ const LoyaltyAndInsights = () => {
             </span>
             <h3 className="text-4xl md:text-5xl font-extrabold text-foreground mb-6 leading-tight tracking-tight">
               Hassle-Free{' '}
-              <span className="gradient-text text-glow block mt-1">Customer Loyalty</span>{' '}
+              <span className="text-primary block mt-1">Customer Loyalty</span>{' '}
               & Promotions
             </h3>
             <p className="text-muted text-lg mb-8 leading-relaxed">
@@ -137,7 +137,7 @@ const LoyaltyAndInsights = () => {
               Business Analytics
             </span>
             <h3 className="text-4xl md:text-5xl font-extrabold text-foreground mb-6 leading-tight tracking-tight">
-              <span className="gradient-text text-glow block mb-1">Insights</span> on the Go
+              <span className="text-primary block mb-1">Insights</span> on the Go
             </h3>
             <p className="text-muted text-lg mb-8 leading-relaxed">
               Stay updated while on the go. Monitor daily operations remotely. Compare outlets, filter by time & menu, and make perfectly informed decisions.
@@ -153,7 +153,7 @@ const LoyaltyAndInsights = () => {
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 + 0.3, duration: 0.7, ease: 'easeOut' }}
                   className="flex-1 rounded-t-sm"
-                  style={{ background: `linear-gradient(to top, var(--secondary), color-mix(in srgb, var(--secondary) 40%, transparent))` }}
+                  style={{ background: `linear-gradient(to top, var(--primary), color-mix(in srgb, var(--primary) 40%, transparent))` }}
                 />
               ))}
               <span className="text-xs text-muted font-bold ml-2 self-center">Sales / Week</span>

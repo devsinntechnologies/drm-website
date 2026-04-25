@@ -14,7 +14,7 @@ const TermsContent = () => {
         >
           <span className="section-label mx-auto mb-6">Last Updated: Oct 2023</span>
           <h1 className="text-5xl md:text-7xl font-extrabold text-foreground mb-8">
-            Terms & <span className="gradient-text">Conditions</span>
+            Terms & <span className="text-primary">Conditions</span>
           </h1>
         </motion.div>
 

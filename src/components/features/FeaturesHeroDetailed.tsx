@@ -29,11 +29,11 @@ const FeaturesHeroDetailed = () => {
           >
             <span className="section-label mx-auto mb-6">Core Technology</span>
             <h1 className="text-5xl md:text-7xl font-extrabold text-foreground mb-8 tracking-tight leading-tight">
-              Restaurant <span className="gradient-text">Point of Sale</span> System
+              Restaurant <span className="text-primary">Point of Sale</span> System
             </h1>
             <p className="text-xl text-muted max-w-3xl mx-auto mb-16 leading-relaxed">
               DRM is a <span className="text-foreground font-bold">comprehensive ecosystem</span> designed to be
-              <span className="gradient-text font-bold ml-1">Simple, Quick & Scalable</span>.
+              <span className="text-primary font-bold ml-1">Simple, Quick & Scalable</span>.
               Empowering modern restaurateurs with enterprise-grade tools.
             </p>
           </motion.div>

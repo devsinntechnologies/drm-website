@@ -13,7 +13,7 @@ const PricingHero = () => {
         >
           <span className="section-label mx-auto mb-6">Simple Pricing</span>
           <h1 className="text-5xl md:text-7xl font-extrabold text-foreground mb-8 tracking-tight">
-            Plans for every <span className="gradient-text">scale</span>
+            Plans for every <span className="text-primary">scale</span>
           </h1>
           <p className="text-xl text-muted max-w-2xl mx-auto leading-relaxed font-bold">
             Choose the perfect plan for your business. No hidden fees, just pure growth.

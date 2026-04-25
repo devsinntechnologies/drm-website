@@ -56,7 +56,7 @@ const SupportWhy = () => {
             <span className="section-label mb-6">Why Our Support?</span>
             <h2 className="text-4xl md:text-5xl font-black text-foreground mb-8 leading-tight">
               Customer Success is <br />
-              <span className="gradient-text">Our Top Priority</span>
+              <span className="text-primary">Our Top Priority</span>
             </h2>
             <p className="text-xl text-muted leading-relaxed font-bold mb-10">
               We don't just sell software; we become your partners in growth. Our support 

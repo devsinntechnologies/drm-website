@@ -70,7 +70,7 @@ const FeaturesKDS = () => {
           >
             <span className="section-label mb-6">Kitchen Display</span>
             <h2 className="text-4xl lg:text-5xl font-extrabold text-foreground leading-[1.1] mb-6">
-              Modern <span className="gradient-text">KDS</span> Terminals
+              Modern <span className="text-primary">KDS</span> Terminals
             </h2>
             <p className="text-lg text-muted leading-relaxed font-medium">
               The kitchen display terminal is the beating heart of your kitchen operation, 

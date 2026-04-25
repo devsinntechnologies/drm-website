@@ -29,7 +29,7 @@ const AboutMission = () => {
           >
             <span className="section-label">What We Do</span>
             <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-6 tracking-tight">
-              Empowering <span className="gradient-text text-glow">Growth</span>
+              Empowering <span className="text-primary text-glow">Growth</span>
             </h2>
             <p className="text-lg text-muted font-medium leading-relaxed mb-12">
               DRM delivers a complete restaurant and retail management system designed to simplify operations, 

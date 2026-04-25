@@ -22,7 +22,7 @@ const SupportContact = () => {
               viewport={{ once: true }}
               className="text-4xl md:text-5xl font-black text-foreground mb-8"
             >
-              Ready to <span className="gradient-text">scale</span> your business?
+              Ready to <span className="text-primary">scale</span> your business?
             </motion.h2>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}

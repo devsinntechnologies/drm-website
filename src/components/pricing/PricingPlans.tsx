@@ -63,7 +63,7 @@ const PricingPlans = () => {
         >
           <span className="section-label">Transparent Pricing</span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-foreground tracking-tight">
-            Plans that <span className="gradient-text text-glow">Scale</span> With You
+            Plans that <span className="text-primary text-glow">Scale</span> With You
           </h2>
         </motion.div>
 

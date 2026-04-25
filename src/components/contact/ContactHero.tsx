@@ -21,7 +21,7 @@ const ContactHero = () => {
         >
           <span className="section-label mx-auto mb-6">Let's Connect</span>
           <h1 className="text-5xl md:text-7xl font-extrabold text-foreground mb-8 tracking-tight">
-            Get in <span className="gradient-text">Touch</span>
+            Get in <span className="text-primary">Touch</span>
           </h1>
           <p className="text-xl text-muted max-w-2xl mx-auto leading-relaxed font-bold">
             Have questions about how DRM can help your restaurant? Our team is 

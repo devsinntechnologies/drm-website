@@ -28,7 +28,7 @@ const CoreFeaturesList = () => {
           className="text-center mb-16"
         >
           <span className="section-label">Enterprise-Grade</span>
-          <h2 className="text-4xl font-extrabold text-foreground mt-4">Core <span className="gradient-text">Functionalities</span></h2>
+          <h2 className="text-4xl font-extrabold text-foreground mt-4">Core <span className="text-primary">Functionalities</span></h2>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">

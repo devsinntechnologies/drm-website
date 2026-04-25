@@ -27,7 +27,7 @@ const PricingBenefits = ({ title, highlight, subtitle }: PricingBenefitsProps) =
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-black text-foreground mb-6">
-              {title} <span className="gradient-text">{highlight}</span>
+              {title} <span className="text-primary">{highlight}</span>
             </h2>
             {subtitle && (
               <p className="text-lg text-muted max-w-3xl mx-auto font-medium">

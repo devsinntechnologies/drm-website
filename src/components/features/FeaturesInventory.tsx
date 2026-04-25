@@ -65,7 +65,7 @@ const FeaturesInventory = () => {
           >
             <span className="section-label mb-6">Inventory Control</span>
             <h2 className="text-5xl md:text-7xl font-extrabold text-foreground mb-4 leading-tight">
-              Dynamic <span className="gradient-text">Stock</span> <br />
+              Dynamic <span className="text-primary">Stock</span> <br />
               Management
             </h2>
             <p className="text-xl text-muted mb-12 leading-relaxed max-w-xl font-medium">

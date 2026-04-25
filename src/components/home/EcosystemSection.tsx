@@ -46,7 +46,7 @@ const EcosystemSection = () => {
         >
           <span className="section-label">Full Stack Ecosystem</span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-4 leading-tight tracking-tight">
-            One <span className="gradient-text text-glow">Complete System</span> <br />
+            One <span className="text-primary">Complete System</span> <br />
             For All Your Units
           </h2>
           <p className="text-muted text-lg max-w-lg mx-auto">

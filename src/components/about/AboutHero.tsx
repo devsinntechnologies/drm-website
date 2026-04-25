@@ -53,7 +53,7 @@ const AboutHero = () => {
             </motion.div>
             
             <h1 className="text-5xl md:text-7xl font-extrabold text-foreground mb-8 leading-[1.1] tracking-tight">
-              Revolutionizing <span className="gradient-text text-glow">Restaurant</span> Success
+              Revolutionizing <span className="text-primary text-glow">Restaurant</span> Success
             </h1>
             <p className="text-lg md:text-xl text-muted font-medium leading-relaxed max-w-2xl mx-auto lg:mx-0">
               Our mission is simple: we strive to make it easier for entrepreneurs around the world to do business, 
