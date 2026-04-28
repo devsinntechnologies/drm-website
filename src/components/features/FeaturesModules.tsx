@@ -13,19 +13,19 @@ const FeaturesModules = () => {
   ];
 
   return (
-    <section className="py-20 bg-background relative overflow-hidden">
+    <section className="py-6 md:py-8 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-6 md:mb-8"
         >
           <span className="section-label">All Access</span>
-          <h3 className="text-3xl font-extrabold text-foreground mt-4">Extended <span className="text-primary">Modules</span></h3>
+          <h3 className="text-2xl md:text-3xl font-extrabold text-foreground mt-3">Extended <span className="text-primary">Modules</span></h3>
         </motion.div>
 
-        <div className="flex flex-wrap justify-center gap-4">
+        <div className="flex flex-wrap justify-center gap-3">
           {modules.map((m, i) => (
             <motion.div
               key={i}
@@ -35,7 +35,7 @@ const FeaturesModules = () => {
               transition={{ delay: i * 0.05 }}
               whileHover={{ scale: 1.1, y: -5 }}
               whileTap={{ scale: 0.95 }}
-              className={`px-8 py-4 rounded-2xl font-bold border border-surface-border/50 text-base shadow-sm backdrop-blur-sm cursor-pointer hover:border-primary/40 transition-all ${m.c}`}
+              className={`px-5 md:px-7 py-3 rounded-2xl font-bold border border-surface-border/50 text-sm md:text-base shadow-sm backdrop-blur-sm cursor-pointer hover:border-primary/40 transition-all ${m.c}`}
             >
               {m.t}
             </motion.div>

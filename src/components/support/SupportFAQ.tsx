@@ -25,16 +25,16 @@ const SupportFAQ = () => {
   const [activeIdx, setActiveIdx] = useState<number | null>(0);
 
   return (
-    <section className="py-24 bg-surface/10 relative overflow-hidden">
+    <section className="py-12 md:py-16 lg:py-20 bg-surface/10 relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
           <span className="section-label">Common Questions</span>
-          <h2 className="text-4xl font-extrabold text-foreground mt-4">Frequently Asked <span className="text-primary">Questions</span></h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-foreground mt-2\">Frequently Asked <span className="text-primary\">Questions</span></h2>
         </motion.div>
 
         <div className="max-w-3xl mx-auto space-y-4">

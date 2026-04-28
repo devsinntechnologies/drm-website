@@ -3,7 +3,7 @@ import ContactForm from "@/components/contact/ContactForm";
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="bg-background">
       <ContactHero />
       
       <ContactForm />

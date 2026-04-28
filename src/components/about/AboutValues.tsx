@@ -15,7 +15,7 @@ const AboutValues = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-32 bg-background relative overflow-hidden">
+    <section className="py-8 md:py-10 bg-background relative overflow-hidden">
       <div className="noise-overlay opacity-5" />
       
       {/* Dynamic Background Glow based on hover */}
@@ -36,10 +36,10 @@ const AboutValues = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-20"
+          className="text-center mb-8 md:mb-10"
         >
           <span className="section-label">Our Philosophy</span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-6">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-4">
             Our Core <span className="text-primary text-glow">Values</span>
           </h2>
           <p className="text-lg text-muted max-w-2xl mx-auto font-medium">

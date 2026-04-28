@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const FeaturesHeroDetailed = () => {
   return (
-    <section className="relative pt-32 pb-24 overflow-hidden border-b border-surface-border">
+    <section className="relative pt-24 pb-10 md:pt-28 md:pb-14 overflow-hidden border-b border-surface-border">
       {/* Background Glows */}
       <motion.div 
         initial={{ opacity: 0, scale: 0.8 }}
@@ -27,11 +27,11 @@ const FeaturesHeroDetailed = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="section-label mx-auto mb-6">Core Technology</span>
-            <h1 className="text-5xl md:text-7xl font-extrabold text-foreground mb-8 tracking-tight leading-tight">
+            <span className="section-label mx-auto mb-4 md:mb-6">Core Technology</span>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-foreground mb-5 md:mb-8 tracking-tight leading-tight">
               Restaurant <span className="text-primary">Point of Sale</span> System
             </h1>
-            <p className="text-xl text-muted max-w-3xl mx-auto mb-16 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-muted max-w-3xl mx-auto mb-8 md:mb-12 leading-relaxed">
               DRM is a <span className="text-foreground font-bold">comprehensive ecosystem</span> designed to be
               <span className="text-primary font-bold ml-1">Simple, Quick & Scalable</span>.
               Empowering modern restaurateurs with enterprise-grade tools.
@@ -43,14 +43,14 @@ const FeaturesHeroDetailed = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="relative group"
+            className="relative group mx-auto max-w-5xl"
           >
             <div className="absolute -inset-4 bg-gradient-to-tr from-primary/10 via-transparent to-secondary/10 rounded-[40px] blur-2xl opacity-50" />
-            <div className="glass-card rounded-[32px] p-2 md:p-3 overflow-hidden shadow-2xl relative">
+            <div className="glass-card rounded-[28px] md:rounded-[32px] p-2 md:p-3 overflow-hidden shadow-2xl relative">
               <motion.div 
                 whileHover={{ scale: 1.01 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                className="aspect-[16/9] relative rounded-[24px] overflow-hidden bg-surface/50"
+                className="aspect-[16/9] relative rounded-[20px] md:rounded-[24px] overflow-hidden bg-surface/50"
               >
                 <Image
                   src="/features/feature-hero-v2.png"

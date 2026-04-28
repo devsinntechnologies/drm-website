@@ -14,9 +14,9 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="py-24 bg-background relative overflow-hidden">
+    <section className="py-12 md:py-16 lg:py-20 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="flex flex-col lg:flex-row gap-16">
+        <div className="flex flex-col lg:flex-row gap-6 md:gap-8 lg:gap-12">
           
           {/* Contact Info */}
           <motion.div 
@@ -24,17 +24,17 @@ const ContactForm = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="flex-1 space-y-12"
+            className="flex-1 space-y-6 md:space-y-8"
           >
             <div>
-              <h3 className="text-3xl font-black text-foreground mb-6">Connect with <span className="text-primary">Experts</span></h3>
-              <p className="text-lg text-muted font-bold leading-relaxed max-w-lg">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-foreground mb-4 md:mb-6">Connect with <span className="text-primary">Experts</span></h3>
+              <p className="text-base sm:text-lg text-muted font-bold leading-relaxed max-w-lg\">
                 Whether you're starting a new cafe or managing a global franchise, 
                 our specialists are here to guide you.
               </p>
             </div>
 
-            <div className="space-y-8">
+            <div className="space-y-6">
               {[
                 { t: "Headquarters", d: "123 Business Avenue, Tech City, Pakistan", i: "📍" },
                 { t: "Phone Support", d: "+92 (300) 123-4567", i: "📞" },
@@ -47,7 +47,7 @@ const ContactForm = () => {
                   viewport={{ once: true }}
                   transition={{ delay: 0.4 + (idx * 0.1) }}
                   whileHover={{ x: 10 }}
-                  className="flex gap-6 items-start group cursor-default"
+                  className="flex gap-4 items-start group cursor-default"
                 >
                   <div className="w-14 h-14 rounded-2xl bg-surface border border-surface-border flex items-center justify-center text-2xl group-hover:bg-primary group-hover:text-white transition-all shadow-inner group-hover:scale-110">
                     {item.i}
@@ -74,12 +74,12 @@ const ContactForm = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="glass-card p-10 md:p-14 rounded-[48px] border border-surface-border/50 shadow-2xl relative overflow-hidden"
+              className="glass-card p-8 md:p-10 rounded-[48px] border border-surface-border/50 shadow-2xl relative overflow-hidden"
             >
               <div className="absolute top-0 left-0 w-64 h-64 bg-primary/5 blur-[80px] rounded-full pointer-events-none" />
               
-              <div className="space-y-8 relative z-10">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+              <div className="space-y-5 md:space-y-6 relative z-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <motion.div variants={itemVariants} className="space-y-3">
                     <label className="text-sm font-black text-foreground/70 uppercase tracking-widest ml-1">Your Name</label>
                     <input type="text" className="w-full bg-surface/50 border border-surface-border rounded-2xl px-6 py-4 focus:border-primary focus:outline-none transition-all placeholder:text-muted/40 font-bold" placeholder="John Doe" />

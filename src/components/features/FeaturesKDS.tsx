@@ -20,18 +20,18 @@ const FeaturesKDS = () => {
   ];
 
   return (
-    <section className="py-32 bg-background relative overflow-hidden border-t border-surface-border">
+    <section className="py-8 md:py-10 bg-background relative overflow-hidden border-t border-surface-border">
       <div className="container mx-auto px-4 md:px-8 max-w-7xl relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-10 lg:gap-12">
           
           {/* Sidebar Tabs */}
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="lg:col-span-3 flex flex-col gap-3"
+            className="lg:col-span-3 flex flex-col gap-2"
           >
-            <span className="text-[10px] font-bold text-primary uppercase tracking-[0.2em] mb-4">DRM Ecosystem</span>
+            <span className="text-[10px] font-bold text-primary uppercase tracking-[0.2em] mb-3">DRM Ecosystem</span>
             {tabs.map((tab, i) => (
               <motion.div 
                 key={i} 
@@ -39,7 +39,7 @@ const FeaturesKDS = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.1 }}
                 whileHover={{ x: 5 }}
-                className={`group py-4 px-6 rounded-2xl border font-bold text-sm transition-all duration-300 cursor-pointer ${
+                className={`group py-3 px-4 md:px-5 rounded-2xl border font-bold text-sm transition-all duration-300 cursor-pointer ${
                   tab.active 
                   ? 'bg-primary border-primary text-white shadow-lg shadow-primary/20 -translate-y-0.5' 
                   : 'bg-surface/50 border-surface-border text-muted hover:border-primary/50 hover:bg-primary/5'
@@ -68,8 +68,8 @@ const FeaturesKDS = () => {
             viewport={{ once: true }}
             className="lg:col-span-3 flex flex-col justify-center"
           >
-            <span className="section-label mb-6">Kitchen Display</span>
-            <h2 className="text-4xl lg:text-5xl font-extrabold text-foreground leading-[1.1] mb-6">
+            <span className="section-label mb-4 md:mb-6">Kitchen Display</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground leading-[1.1] mb-4 md:mb-6">
               Modern <span className="text-primary">KDS</span> Terminals
             </h2>
             <p className="text-lg text-muted leading-relaxed font-medium">
@@ -84,7 +84,7 @@ const FeaturesKDS = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-3 relative group"
+            className="lg:col-span-3 relative group max-w-xl mx-auto w-full"
           >
             <div className="absolute -inset-1 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-3xl blur opacity-30 group-hover:opacity-50 transition duration-700" />
             <motion.div 
@@ -110,7 +110,7 @@ const FeaturesKDS = () => {
             viewport={{ once: true }}
             className="lg:col-span-3 flex flex-col justify-center"
           >
-            <ul className="space-y-8">
+            <ul className="space-y-5 md:space-y-6">
               {points.map((point, i) => (
                 <motion.li 
                   key={i} 

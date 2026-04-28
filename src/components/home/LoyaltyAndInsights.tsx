@@ -1,40 +1,34 @@
 "use client";
 import React from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const LoyaltyAndInsights = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.2 } }
+    visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
   };
 
   return (
-    <section className="py-32 bg-background relative overflow-hidden">
-      {/* Noise Texture */}
+    <section className="py-8 md:py-10 bg-background relative overflow-hidden">
       <div className="noise-overlay opacity-10" />
 
-      {/* Background aurora */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] pointer-events-none">
         <div className="absolute inset-0 aurora-bg opacity-25" />
       </div>
 
-      <div className="container mx-auto px-4 md:px-8 space-y-36 relative z-10">
-
-        {/* Section 1: Loyalty */}
+      <div className="container mx-auto px-4 md:px-8 space-y-8 md:space-y-10 relative z-10">
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
           variants={containerVariants}
-          className="flex flex-col lg:flex-row items-center gap-16"
+          className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16"
         >
-          {/* Image */}
           <motion.div
             variants={{ hidden: { opacity: 0, x: -50 }, visible: { opacity: 1, x: 0, transition: { duration: 0.9 } } }}
-            className="flex-1 order-2 lg:order-1 relative max-w-lg mx-auto w-full group"
+            className="flex-1 order-2 lg:order-1 relative max-w-lg mx-auto w-full group pb-12 pr-8 md:pb-16 md:pr-12"
             style={{ perspective: '1000px' }}
           >
-            {/* Rotating ring */}
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 30, ease: 'linear', repeat: Infinity }}
@@ -60,20 +54,18 @@ const LoyaltyAndInsights = () => {
                 className="w-full object-cover aspect-[4/3] transform transition-transform duration-1000 group-hover:scale-108"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-40 group-hover:opacity-20 transition-opacity duration-500" />
+            </motion.div>
 
-              {/* Floating loyalty badge */}
-              <motion.div
-                animate={{ y: [-6, 6, -6] }}
-                transition={{ duration: 4, ease: 'easeInOut', repeat: Infinity }}
-                className="absolute -top-4 -right-4 glass-card px-4 py-3 rounded-2xl border-gradient shadow-xl backdrop-blur-xl z-20"
-              >
-                <div className="text-xs font-black text-primary">🎁 +850 pts</div>
-                <div className="text-[9px] text-muted font-bold uppercase tracking-widest">Earned Today</div>
-              </motion.div>
+            <motion.div
+              animate={{ y: [-6, 6, -6] }}
+              transition={{ duration: 4, ease: 'easeInOut', repeat: Infinity }}
+              className="absolute right-2 bottom-8 md:right-4 md:bottom-10 glass-card px-4 py-3 rounded-2xl border-gradient shadow-xl backdrop-blur-xl z-20"
+            >
+              <div className="text-xs font-black text-primary">+850 pts</div>
+              <div className="text-[9px] text-muted font-bold uppercase tracking-widest">Earned Today</div>
             </motion.div>
           </motion.div>
 
-          {/* Text */}
           <motion.div
             variants={{ hidden: { opacity: 0, x: 50 }, visible: { opacity: 1, x: 0, transition: { duration: 0.9 } } }}
             className="flex-1 order-1 lg:order-2"
@@ -117,15 +109,13 @@ const LoyaltyAndInsights = () => {
           </motion.div>
         </motion.div>
 
-        {/* Section 2: Insights */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
           variants={containerVariants}
-          className="flex flex-col lg:flex-row items-center gap-16"
+          className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16"
         >
-          {/* Text */}
           <motion.div
             variants={{ hidden: { opacity: 0, x: -50 }, visible: { opacity: 1, x: 0, transition: { duration: 0.9 } } }}
             className="flex-1"
@@ -143,7 +133,6 @@ const LoyaltyAndInsights = () => {
               Stay updated while on the go. Monitor daily operations remotely. Compare outlets, filter by time & menu, and make perfectly informed decisions.
             </p>
 
-            {/* Animated bar chart mini-visual */}
             <div className="flex items-end gap-2 mb-8 h-16">
               {[40, 65, 50, 80, 70, 90, 75].map((h, i) => (
                 <motion.div
@@ -183,10 +172,9 @@ const LoyaltyAndInsights = () => {
             </ul>
           </motion.div>
 
-          {/* Image */}
           <motion.div
             variants={{ hidden: { opacity: 0, x: 50 }, visible: { opacity: 1, x: 0, transition: { duration: 0.9 } } }}
-            className="flex-1 relative max-w-lg mx-auto w-full group"
+            className="flex-1 relative max-w-lg mx-auto w-full group pb-12 pr-8 md:pb-16 md:pr-12"
             style={{ perspective: '1000px' }}
           >
             <motion.div
@@ -209,20 +197,18 @@ const LoyaltyAndInsights = () => {
                 className="w-full object-cover aspect-[4/3] transform transition-transform duration-1000 group-hover:scale-108"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-40 group-hover:opacity-20 transition-opacity duration-500" />
+            </motion.div>
 
-              {/* Floating revenue badge */}
-              <motion.div
-                animate={{ y: [6, -6, 6] }}
-                transition={{ duration: 5, ease: 'easeInOut', repeat: Infinity }}
-                className="absolute -bottom-4 -left-4 glass-card px-4 py-3 rounded-2xl border-gradient shadow-xl backdrop-blur-xl z-20"
-              >
-                <div className="text-xs font-black" style={{ color: 'var(--secondary)' }}>📈 +31% Revenue</div>
-                <div className="text-[9px] text-muted font-bold uppercase tracking-widest">This Month</div>
-              </motion.div>
+            <motion.div
+              animate={{ y: [6, -6, 6] }}
+              transition={{ duration: 5, ease: 'easeInOut', repeat: Infinity }}
+              className="absolute left-2 bottom-8 md:left-4 md:bottom-8 glass-card px-4 py-3 rounded-2xl border-gradient shadow-xl backdrop-blur-xl z-20"
+            >
+              <div className="text-xs font-black" style={{ color: 'var(--secondary)' }}>+31% Revenue</div>
+              <div className="text-[9px] text-muted font-bold uppercase tracking-widest">This Month</div>
             </motion.div>
           </motion.div>
         </motion.div>
-
       </div>
     </section>
   );

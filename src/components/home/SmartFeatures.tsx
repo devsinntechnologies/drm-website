@@ -224,7 +224,7 @@ function FeatureBlock({ feature, idx }: { feature: typeof features[0]; idx: numb
 
 const SmartFeatures = () => {
   return (
-    <section className="py-32 bg-surface/20 relative overflow-hidden">
+    <section className="py-8 md:py-10 bg-surface/20 relative overflow-hidden">
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-surface-border to-transparent" />
       <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-surface-border to-transparent" />
 
@@ -232,7 +232,7 @@ const SmartFeatures = () => {
       <div className="absolute top-1/4 -left-32 w-96 h-96 rounded-full bg-primary/5 blur-[120px] pointer-events-none" />
       <div className="absolute bottom-1/4 -right-32 w-96 h-96 rounded-full bg-secondary/5 blur-[120px] pointer-events-none" />
 
-      <div className="container mx-auto px-4 md:px-8 space-y-40">
+      <div className="container mx-auto px-4 md:px-8 space-y-8 md:space-y-10">
         {features.map((feature, idx) => (
           <FeatureBlock key={idx} feature={feature} idx={idx} />
         ))}

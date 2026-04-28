@@ -17,7 +17,7 @@ const IntegrationsAndExpansion = () => {
   const rules = ["Franchise Order Management", "Set credit or other rules", "Monitor ROI securely"];
 
   return (
-    <section className="py-32 bg-surface/20 relative overflow-hidden">
+    <section className="py-8 md:py-10 bg-surface/20 relative overflow-hidden">
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
       <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-secondary/30 to-transparent" />
 
@@ -31,7 +31,7 @@ const IntegrationsAndExpansion = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-5 md:mb-6"
         >
           <span className="section-label">Compliance & Scale</span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-foreground">

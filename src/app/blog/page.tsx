@@ -3,7 +3,7 @@ import BlogGrid from "@/components/blog/BlogGrid";
 
 export default function BlogPage() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="bg-background">
       <BlogHero />
       <BlogGrid />
     </main>

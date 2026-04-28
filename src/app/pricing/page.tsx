@@ -5,7 +5,7 @@ import PricingTestimonial from "@/components/pricing/PricingTestimonial";
 
 export default function PricingPage() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="bg-background">
       <PricingHero />
       <PricingPlans />
       <PricingBenefits />

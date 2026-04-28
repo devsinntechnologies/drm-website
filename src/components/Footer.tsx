@@ -52,7 +52,7 @@ const Footer = () => {
             <Link href="/" className="inline-block mb-8 group relative">
               <div className="flex items-center gap-3">
                 <div className="relative h-10 w-auto md:h-12">
-                  <img src={`/logo.png?v=${Date.now()}`} alt="DRM Logo" className="h-full w-auto object-contain object-left" />
+                  <img src="/logo.png" alt="DRM Logo" className="h-full w-auto object-contain object-left" />
                 </div>
                 <span className="text-2xl md:text-3xl font-black tracking-tighter text-primary">
                   DRM

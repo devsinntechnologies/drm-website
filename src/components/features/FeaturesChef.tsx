@@ -5,9 +5,9 @@ import { motion } from 'framer-motion';
 
 const FeaturesChef = () => {
   return (
-    <section className="py-32 bg-background relative overflow-hidden">
+    <section className="py-8 md:py-10 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="flex flex-col lg:flex-row-reverse items-center gap-20">
+        <div className="flex flex-col lg:flex-row-reverse items-center gap-8 md:gap-10 lg:gap-12">
           
           {/* Content Side */}
           <motion.div 
@@ -17,12 +17,12 @@ const FeaturesChef = () => {
             transition={{ duration: 0.8 }}
             className="flex-1"
           >
-            <span className="section-label mb-6">Staff Management</span>
-            <h2 className="text-5xl md:text-7xl font-extrabold text-foreground mb-4 leading-tight">
+            <span className="section-label mb-4 md:mb-6">Staff Management</span>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-foreground mb-4 leading-tight">
               Chef <span className="text-primary">Performance</span> <br />
               Monitoring
             </h2>
-            <p className="text-xl text-muted mb-12 leading-relaxed max-w-xl font-medium">
+            <p className="text-base sm:text-lg md:text-xl text-muted mb-6 md:mb-8 leading-relaxed max-w-xl font-medium">
               Track cook times and efficiency per station. Keep your kitchen running 
               at peak performance with data-driven insights on staff productivity.
             </p>
@@ -32,9 +32,9 @@ const FeaturesChef = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
-              className="p-8 rounded-[40px] glass-card border border-primary/20 bg-primary/5"
+              className="p-5 md:p-8 rounded-[28px] md:rounded-[40px] glass-card border border-primary/20 bg-primary/5"
             >
-              <h4 className="text-2xl font-bold text-primary mb-4 flex items-center gap-3">
+              <h4 className="text-xl md:text-2xl font-bold text-primary mb-3 md:mb-4 flex items-center gap-3">
                  <span className="w-2 h-2 rounded-full bg-primary animate-ping" />
                  Real-time Efficiency
               </h4>
@@ -51,7 +51,7 @@ const FeaturesChef = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1 }}
-            className="flex-1 relative group"
+            className="flex-1 relative group w-full max-w-2xl"
           >
             <div className="absolute inset-0 bg-primary/10 blur-[100px] rounded-full opacity-50 transition-opacity group-hover:opacity-100" />
             <motion.div 

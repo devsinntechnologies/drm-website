@@ -17,16 +17,16 @@ const PricingBenefits = ({ title, highlight, subtitle }: PricingBenefitsProps) =
   ];
 
   return (
-    <section className="py-24 bg-surface/10 relative overflow-hidden">
+    <section className="py-8 md:py-10 bg-surface/10 relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
         {(title || highlight || subtitle) && (
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-8 md:mb-10"
           >
-            <h2 className="text-4xl md:text-5xl font-black text-foreground mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground mb-4 md:mb-6">
               {title} <span className="text-primary">{highlight}</span>
             </h2>
             {subtitle && (
@@ -34,11 +34,11 @@ const PricingBenefits = ({ title, highlight, subtitle }: PricingBenefitsProps) =
                 {subtitle}
               </p>
             )}
-            <div className="section-divider mx-auto mt-8" />
+            <div className="section-divider mx-auto mt-6" />
           </motion.div>
         )}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
           {benefits.map((b, i) => (
             <motion.div 
               key={i}
@@ -51,7 +51,7 @@ const PricingBenefits = ({ title, highlight, subtitle }: PricingBenefitsProps) =
             >
               <motion.div 
                 whileHover={{ scale: 1.1 }}
-                className="text-4xl mb-6 inline-block"
+                className="text-4xl mb-4 inline-block"
               >
                 {b.i}
               </motion.div>

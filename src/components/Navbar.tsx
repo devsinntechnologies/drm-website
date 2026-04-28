@@ -51,7 +51,7 @@ export default function Navbar() {
           <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="flex items-center gap-3">
             <div className="relative h-10 w-auto md:h-12">
               <img
-                src={`/logo.png?v=${Date.now()}`}
+                src="/logo.png"
                 alt="DRM Logo"
                 className="h-full w-auto object-contain object-left"
               />

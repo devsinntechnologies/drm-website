@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const ContactHero = () => {
   return (
-    <section className="relative pt-32 pb-16 overflow-hidden">
+    <section className="relative pt-16 md:pt-24 pb-12 md:pb-16 overflow-hidden">
       {/* Background Decor */}
       <motion.div 
         initial={{ opacity: 0, scale: 0.8 }}
@@ -19,11 +19,11 @@ const ContactHero = () => {
            animate={{ opacity: 1, y: 0 }}
            transition={{ duration: 0.8 }}
         >
-          <span className="section-label mx-auto mb-6">Let's Connect</span>
-          <h1 className="text-5xl md:text-7xl font-extrabold text-foreground mb-8 tracking-tight">
+          <span className="section-label mx-auto mb-3">Let's Connect</span>
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold text-foreground mb-4 md:mb-6 tracking-tight">
             Get in <span className="text-primary">Touch</span>
           </h1>
-          <p className="text-xl text-muted max-w-2xl mx-auto leading-relaxed font-bold">
+          <p className="text-base sm:text-lg md:text-xl text-muted max-w-2xl mx-auto leading-relaxed font-bold\">
             Have questions about how DRM can help your restaurant? Our team is 
             standing by to provide experts answers.
           </p>

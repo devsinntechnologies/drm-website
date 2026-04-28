@@ -117,7 +117,7 @@ function TiltCard({ review }: { review: typeof reviews[0] }) {
 
 const Testimonials = () => {
   return (
-    <section className="py-32 bg-surface/20 relative overflow-hidden">
+    <section className="py-8 md:py-10 bg-surface/20 relative overflow-hidden">
       {/* Heavy Noise Overlay */}
       <div className="noise-overlay opacity-10" />
 
@@ -129,7 +129,7 @@ const Testimonials = () => {
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
       <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-secondary/30 to-transparent" />
 
-      <div className="container mx-auto px-4 md:px-8 mb-16">
+      <div className="container mx-auto px-4 md:px-8 mb-5 md:mb-6">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}

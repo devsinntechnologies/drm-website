@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const SupportContact = () => {
   return (
-    <section className="py-24 bg-background relative overflow-hidden">
+    <section className="py-12 md:py-16 lg:py-20 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
@@ -20,7 +20,7 @@ const SupportContact = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-5xl font-black text-foreground mb-8"
+              className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground mb-4 md:mb-6"
             >
               Ready to <span className="text-primary">scale</span> your business?
             </motion.h2>
@@ -29,7 +29,7 @@ const SupportContact = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="text-xl text-muted leading-relaxed font-bold mb-12"
+              className="text-base sm:text-lg md:text-xl text-muted leading-relaxed font-bold mb-6 md:mb-8"
             >
               Join thousands of successful restaurant owners who trust DRM for their daily operations. 
               Get your free demo setup in less than 24 hours.

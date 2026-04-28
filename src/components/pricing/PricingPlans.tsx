@@ -39,7 +39,7 @@ const PricingPlans = () => {
   ];
 
   return (
-    <section className="py-32 bg-background relative overflow-hidden">
+    <section className="py-8 md:py-10 bg-background relative overflow-hidden">
       {/* Dynamic Background Glow based on hover */}
       <AnimatePresence>
         {hoveredIndex !== null && (
@@ -59,15 +59,15 @@ const PricingPlans = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-24"
+          className="text-center mb-8 md:mb-10"
         >
           <span className="section-label">Transparent Pricing</span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-foreground tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-foreground tracking-tight">
             Plans that <span className="text-primary text-glow">Scale</span> With You
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 lg:gap-8 max-w-6xl mx-auto items-stretch">
           {plans.map((plan, i) => {
             const isHovered = hoveredIndex === i;
             const colorVar = `var(--${plan.color})`;
@@ -81,8 +81,8 @@ const PricingPlans = () => {
                 transition={{ delay: i * 0.15, duration: 0.7, type: 'spring', stiffness: 100 }}
                 onMouseEnter={() => setHoveredIndex(i)}
                 onMouseLeave={() => setHoveredIndex(null)}
-                whileHover={{ y: -15, scale: 1.02 }}
-                className={`glass-card p-10 rounded-[40px] flex flex-col h-full relative overflow-hidden transition-all duration-500 backdrop-blur-2xl ${plan.popular ? 'bg-surface/60 lg:scale-[1.05] z-10' : 'bg-surface/30'}`}
+                whileHover={{ y: -10, scale: 1.02 }}
+                className={`glass-card p-6 md:p-8 rounded-[28px] md:rounded-[40px] flex flex-col h-full relative overflow-hidden transition-all duration-500 backdrop-blur-2xl ${plan.popular ? 'bg-surface/60 md:scale-[1.02] lg:scale-[1.05] z-10' : 'bg-surface/30'}`}
                 style={{
                   boxShadow: isHovered 
                     ? `0 40px 80px rgba(var(--${plan.color}-rgb), 0.2), inset 0 2px 20px rgba(var(--${plan.color}-rgb), 0.1)` 
@@ -102,28 +102,29 @@ const PricingPlans = () => {
                   <div className="absolute top-0 inset-x-0 h-1.5 bg-primary animate-pulse" />
                 )}
 
-                {plan.popular && (
-                  <motion.div 
-                    initial={{ y: -20, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ delay: 1 }}
-                    className="absolute top-6 right-8"
-                  >
-                     <span className="px-4 py-2 bg-primary/20 border border-primary/30 text-primary text-[10px] font-black uppercase tracking-[0.2em] rounded-full shadow-[0_0_20px_rgba(var(--primary-rgb),0.3)]">Most Popular</span>
-                  </motion.div>
-                )}
-
-                <div className="mb-10 relative z-10">
-                  <h3 className="text-xl font-black mb-4 uppercase tracking-[0.2em]" style={{ color: isHovered ? colorVar : 'var(--foreground)' }}>{plan.name}</h3>
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-5xl font-black text-foreground tracking-tighter">{plan.price}</span>
-                    <span className="text-sm font-bold text-muted uppercase tracking-widest">{plan.period}</span>
+                <div className="mb-6 md:mb-8 relative z-10">
+                  <div className="flex flex-wrap items-center gap-3 md:gap-4 mb-4">
+                    <h3 className="text-lg sm:text-xl font-black uppercase tracking-[0.2em]" style={{ color: isHovered ? colorVar : 'var(--foreground)' }}>{plan.name}</h3>
+                    {plan.popular && (
+                      <motion.div 
+                        initial={{ y: -20, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ delay: 1 }}
+                        className="shrink-0"
+                      >
+                        <span className="px-3 py-1.5 md:px-4 md:py-2 bg-primary/20 border border-primary/30 text-primary text-[10px] font-black uppercase tracking-[0.2em] rounded-full shadow-[0_0_20px_rgba(var(--primary-rgb),0.3)]">Most Popular</span>
+                      </motion.div>
+                    )}
+                  </div>
+                  <div className="flex flex-wrap items-baseline gap-2">
+                    <span className="text-4xl sm:text-5xl font-black text-foreground tracking-tighter">{plan.price}</span>
+                    <span className="text-xs sm:text-sm font-bold text-muted uppercase tracking-widest">{plan.period}</span>
                   </div>
                 </div>
 
-                <p className="text-muted font-medium mb-10 leading-relaxed relative z-10">{plan.desc}</p>
+                <p className="text-muted font-medium mb-6 md:mb-8 leading-relaxed relative z-10">{plan.desc}</p>
 
-                <ul className="space-y-5 mb-12 flex-1 relative z-10">
+                <ul className="space-y-4 md:space-y-5 mb-8 md:mb-10 flex-1 relative z-10">
                   {plan.features.map((f, j) => (
                     <motion.li 
                       key={j} 
@@ -142,7 +143,7 @@ const PricingPlans = () => {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                         </svg>
                       </motion.span>
-                      <span className="group-hover/item:text-white transition-colors">{f}</span>
+                      <span>{f}</span>
                     </motion.li>
                   ))}
                 </ul>
@@ -150,7 +151,7 @@ const PricingPlans = () => {
                 <motion.button 
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className={`w-full py-5 rounded-2xl font-black text-base shadow-xl transition-all relative z-10 overflow-hidden group`}
+                  className={`w-full py-4 md:py-5 rounded-2xl font-black text-sm md:text-base shadow-xl transition-all relative z-10 overflow-hidden group`}
                   style={{
                     backgroundColor: plan.popular ? 'var(--primary)' : 'var(--surface)',
                     color: plan.popular ? 'white' : 'var(--foreground)',

@@ -116,7 +116,7 @@ function PostCard({ post, idx }: { post: typeof posts[0]; idx: number }) {
 
 const LatestPosts = () => {
   return (
-    <section className="py-32 bg-background relative overflow-hidden">
+    <section className="py-8 md:py-10 bg-background relative overflow-hidden">
       {/* Noise */}
       <div className="noise-overlay opacity-5" />
 
@@ -127,7 +127,7 @@ const LatestPosts = () => {
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent shadow-[0_0_15px_rgba(var(--primary-rgb),0.5)]" />
 
       <div className="container mx-auto px-4 md:px-8 relative z-10">
-        <div className="flex justify-between items-end mb-16">
+        <div className="flex justify-between items-end mb-5 md:mb-6">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}

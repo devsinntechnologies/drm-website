@@ -5,9 +5,9 @@ import { motion } from 'framer-motion';
 
 const FeaturesRecipe = () => {
   return (
-    <section className="py-32 bg-background relative overflow-hidden">
+    <section className="py-8 md:py-10 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="flex flex-col lg:flex-row items-center gap-20">
+        <div className="flex flex-col lg:flex-row items-center gap-8 md:gap-10 lg:gap-12">
           
           {/* Content Side */}
           <motion.div 
@@ -17,17 +17,17 @@ const FeaturesRecipe = () => {
             transition={{ duration: 0.8 }}
             className="flex-1"
           >
-            <span className="section-label mb-6">Kitchen Control</span>
-            <h2 className="text-5xl md:text-7xl font-extrabold text-foreground mb-4 leading-tight">
+            <span className="section-label mb-4 md:mb-6">Kitchen Control</span>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-foreground mb-4 leading-tight">
               Precise <span className="text-primary">Recipe</span> <br />
               Management
             </h2>
-            <p className="text-xl text-muted mb-12 leading-relaxed max-w-xl font-medium">
+            <p className="text-base sm:text-lg md:text-xl text-muted mb-6 md:mb-8 leading-relaxed max-w-xl font-medium">
               Maintain consistent taste and margins. Our system tracks raw ingredients 
               and calculates food cost for every dish you serve.
             </p>
 
-            <div className="space-y-6">
+            <div className="space-y-4 md:space-y-5">
               {[
                 { t: "Ingredient Deduction", d: "Raw materials are automatically deducted from stock upon order fulfillment." },
                 { t: "Menu Costing", d: "Real-time calculation of food costs based on ingredient price fluctuations." },
@@ -38,15 +38,15 @@ const FeaturesRecipe = () => {
                   initial={{ opacity: 0, scale: 0.95 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ delay: i * 0.2 }}
-                  className="flex gap-5 p-6 rounded-3xl bg-surface/30 border border-surface-border/50 group hover:border-primary/30 transition-all"
+                  className="flex gap-4 p-4 md:p-6 rounded-3xl bg-surface/30 border border-surface-border/50 group hover:border-primary/30 transition-all"
                 >
-                  <div className="w-12 h-12 rounded-2xl bg-secondary/10 border border-secondary/20 flex items-center justify-center shrink-0 text-secondary group-hover:bg-secondary group-hover:text-background transition-all">
+                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-2xl bg-secondary/10 border border-secondary/20 flex items-center justify-center shrink-0 text-secondary group-hover:bg-secondary group-hover:text-background transition-all">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012-2" />
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-lg font-bold text-foreground mb-1">{item.t}</h4>
+                    <h4 className="text-base md:text-lg font-bold text-foreground mb-1">{item.t}</h4>
                     <p className="text-sm text-muted leading-relaxed font-medium">{item.d}</p>
                   </div>
                 </motion.div>
@@ -60,7 +60,7 @@ const FeaturesRecipe = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="flex-1 relative group"
+            className="flex-1 relative group w-full max-w-2xl"
           >
             <div className="absolute -inset-4 bg-gradient-to-tr from-secondary/15 to-primary/15 rounded-[40px] blur-2xl opacity-50 transition-opacity group-hover:opacity-100" />
             <motion.div 

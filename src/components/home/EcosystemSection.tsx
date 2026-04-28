@@ -22,7 +22,7 @@ const EcosystemSection = () => {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
-    <section ref={sectionRef} className="py-32 bg-background relative overflow-hidden">
+    <section ref={sectionRef} className="py-8 md:py-10 bg-background relative overflow-hidden">
       {/* Noise Texture */}
       <div className="noise-overlay opacity-5" />
 
@@ -42,7 +42,7 @@ const EcosystemSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-24"
+          className="text-center mb-5 md:mb-6"
         >
           <span className="section-label">Full Stack Ecosystem</span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-4 leading-tight tracking-tight">
@@ -124,7 +124,7 @@ const EcosystemSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.8, duration: 0.8 }}
-          className="text-center mt-16"
+          className="text-center mt-3 md:mt-4"
         >
           <div className="inline-flex items-center gap-3 glass-card px-6 py-3 rounded-full border-gradient">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />

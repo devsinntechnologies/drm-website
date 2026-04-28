@@ -32,7 +32,7 @@ const HeroSection = () => {
       {/* Noise texture */}
       <div className="noise-overlay" />
 
-      <div className="container mx-auto px-4 md:px-8 z-10 flex flex-col items-center pt-28 pb-16 relative">
+      <div className="container mx-auto px-4 md:px-8 z-10 flex flex-col items-center pt-20 pb-4 md:pb-6 relative">
 
         {/* Text Content */}
         <div className="w-full text-center max-w-4xl mx-auto">
@@ -41,14 +41,14 @@ const HeroSection = () => {
             Built for Modern Restaurants
           </span>
 
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-foreground mb-6 leading-[1.05]">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-foreground mb-6 leading-[1.05]">
             Run your restaurant
             <span className="text-primary block mt-2">
               faster and smarter
             </span>
           </h1>
 
-          <p className="text-lg md:text-xl text-muted mb-10 leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-muted mb-8 md:mb-10 leading-relaxed">
             Take orders, manage inventory, track kitchen performance, and grow loyalty from one clean cloud platform.
           </p>
 

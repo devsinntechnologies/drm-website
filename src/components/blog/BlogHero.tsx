@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const BlogHero = () => {
   return (
-    <section className="relative pt-32 pb-24 overflow-hidden border-b border-surface-border">
+    <section className="relative pt-16 md:pt-24 pb-12 md:pb-16 overflow-hidden border-b border-surface-border">
       {/* Background Decor */}
       <div className="absolute top-0 inset-0 pointer-events-none overflow-hidden">
         <motion.div 
@@ -19,7 +19,7 @@ const BlogHero = () => {
           transition={{ duration: 1.5, delay: 0.2 }}
           className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-secondary/10 blur-[120px] rounded-full translate-y-1/2 -translate-x-1/4" 
         />
-        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-150 contrast-150 mix-blend-overlay" />
+        <div className="noise-overlay opacity-10" />
       </div>
 
       <div className="container mx-auto px-4 md:px-8 relative z-10 text-center">
@@ -29,11 +29,11 @@ const BlogHero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="section-label mx-auto mb-8">Resources & News</span>
-            <h1 className="text-5xl md:text-7xl font-extrabold text-foreground mb-8 tracking-tight leading-tight">
+            <span className="section-label mx-auto mb-3">Resources & News</span>
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold text-foreground mb-4 md:mb-6 tracking-tight leading-tight">
               Latest <span className="text-primary">Insights</span> & Updates
             </h1>
-            <p className="text-xl text-muted max-w-2xl mx-auto leading-relaxed font-medium">
+            <p className="text-base sm:text-lg md:text-xl text-muted max-w-2xl mx-auto leading-relaxed font-medium">
               Master the art of restaurant management. Stay ahead with deep dives into 
               industry trends, technical guides, and operational strategies.
             </p>
@@ -43,7 +43,7 @@ const BlogHero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="mt-12 flex flex-wrap justify-center gap-3"
+            className="mt-8 md:mt-10 flex flex-wrap justify-center gap-2 md:gap-3"
           >
              {['All Posts', 'Restaurant Management', 'POS Strategy', 'Marketing', 'Industry News'].map((cat, i) => (
                <motion.button 

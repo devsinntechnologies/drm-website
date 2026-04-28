@@ -43,9 +43,9 @@ const reasons = [
 
 const SupportWhy = () => {
   return (
-    <section className="py-24 bg-surface/10 relative overflow-hidden">
+    <section className="py-12 md:py-16 lg:py-20 bg-surface/10 relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="flex flex-col lg:flex-row items-center gap-20">
+        <div className="flex flex-col lg:flex-row items-center gap-6 md:gap-8 lg:gap-12">
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -53,12 +53,12 @@ const SupportWhy = () => {
             transition={{ duration: 0.8 }}
             className="flex-1"
           >
-            <span className="section-label mb-6">Why Our Support?</span>
-            <h2 className="text-4xl md:text-5xl font-black text-foreground mb-8 leading-tight">
+            <span className="section-label mb-4">Why Our Support?</span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground mb-4 md:mb-6 leading-tight">
               Customer Success is <br />
               <span className="text-primary">Our Top Priority</span>
             </h2>
-            <p className="text-xl text-muted leading-relaxed font-bold mb-10">
+            <p className="text-base sm:text-lg md:text-xl text-muted leading-relaxed font-bold mb-6 md:mb-8">
               We don't just sell software; we become your partners in growth. Our support 
               infrastructure is built to handle mission-critical restaurant operations.
             </p>
@@ -71,7 +71,7 @@ const SupportWhy = () => {
             </motion.button>
           </motion.div>
 
-          <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-4">
             {reasons.map((reason, i) => (
               <motion.div 
                 key={i} 

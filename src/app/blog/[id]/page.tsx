@@ -55,18 +55,18 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
   const post = posts.find(p => p.id === postId) || fallbackPost;
 
   return (
-    <main className="min-h-screen bg-background pt-32 pb-24">
+    <main className="min-h-screen bg-background pt-16 md:pt-24 pb-12 md:pb-16">
       {/* Article Header */}
       <article className="container mx-auto px-4 md:px-8 max-w-4xl">
-        <div className="mb-12">
-          <Link href="/blog" className="inline-flex items-center gap-2 text-primary font-bold hover:text-white transition-colors mb-8">
+        <div className="mb-8 md:mb-10">
+            <Link href="/blog" className="inline-flex items-center gap-2 text-primary font-bold hover:text-white transition-colors mb-5 md:mb-6">
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
             Back to all posts
           </Link>
           
-          <div className="flex items-center gap-4 mb-6">
+          <div className="flex items-center gap-4 mb-4 md:mb-5">
             <span className="tag-pill bg-primary/20 text-primary border-primary/30">
               {post.category}
             </span>
@@ -76,11 +76,11 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
             </span>
           </div>
           
-          <h1 className="text-4xl md:text-6xl font-extrabold text-foreground leading-[1.15] mb-8 tracking-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-foreground leading-[1.15] mb-6 md:mb-8 tracking-tight">
             {post.title}
           </h1>
 
-          <div className="flex items-center justify-between py-6 border-y border-surface-border/50">
+          <div className="flex items-center justify-between py-4 md:py-5 border-y border-surface-border/50">
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-full flex items-center justify-center font-black text-white text-lg bg-gradient-to-br from-primary to-secondary shadow-lg">
                 {post.author[0]}
@@ -98,7 +98,7 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
         </div>
 
         {/* Featured Image */}
-        <div className="relative w-full aspect-[21/9] rounded-[40px] overflow-hidden mb-16 shadow-2xl glass-card p-2 group">
+        <div className="relative w-full aspect-[21/9] rounded-[40px] overflow-hidden mb-10 md:mb-12 shadow-2xl glass-card p-2 group">
            <div className="absolute inset-0 bg-primary/10 blur-[80px] rounded-full opacity-50 group-hover:opacity-100 transition-opacity" />
            <div className="relative w-full h-full rounded-[32px] overflow-hidden">
               <img 
@@ -110,7 +110,7 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
         </div>
 
         {/* Content */}
-        <div className="blog-content mt-16 max-w-3xl mx-auto">
+        <div className="blog-content mt-10 md:mt-12 max-w-3xl mx-auto">
           <style dangerouslySetInnerHTML={{__html: `
             .blog-content h2 { font-size: 2.25rem; line-height: 2.5rem; font-weight: 800; color: var(--foreground); margin-top: 3rem; margin-bottom: 1.5rem; letter-spacing: -0.025em; }
             .blog-content h3 { font-size: 1.5rem; line-height: 2rem; font-weight: 800; color: color-mix(in srgb, var(--primary) 90%, white); margin-top: 2.5rem; margin-bottom: 1rem; }
@@ -121,7 +121,7 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
         </div>
 
         {/* Footer actions */}
-        <div className="mt-20 pt-10 border-t border-surface-border/50 flex items-center justify-between">
+        <div className="mt-12 md:mt-16 pt-6 md:pt-8 border-t border-surface-border/50 flex items-center justify-between">
           <div className="flex gap-4">
             <span className="text-muted font-bold self-center">Share:</span>
             {['Twitter', 'LinkedIn', 'Facebook'].map(net => (

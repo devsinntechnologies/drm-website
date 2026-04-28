@@ -11,14 +11,14 @@ const AboutMission = () => {
   ];
 
   return (
-    <section className="py-32 bg-surface/20 relative overflow-hidden">
+    <section className="py-8 md:py-10 bg-surface/20 relative overflow-hidden">
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-surface-border to-transparent" />
       
       {/* Glows */}
       <div className="absolute -left-40 top-20 w-[600px] h-[600px] bg-secondary/5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="container mx-auto px-4 md:px-8 relative z-10">
-        <div className="flex flex-col lg:flex-row-reverse items-center gap-20">
+        <div className="flex flex-col lg:flex-row-reverse items-center gap-8 md:gap-10 lg:gap-12">
           
           <motion.div 
             initial={{ opacity: 0, x: 50 }}
@@ -28,15 +28,15 @@ const AboutMission = () => {
             className="flex-1"
           >
             <span className="section-label">What We Do</span>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-6 tracking-tight">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-4 tracking-tight">
               Empowering <span className="text-primary text-glow">Growth</span>
             </h2>
-            <p className="text-lg text-muted font-medium leading-relaxed mb-12">
+            <p className="text-lg text-muted font-medium leading-relaxed mb-6">
               DRM delivers a complete restaurant and retail management system designed to simplify operations, 
               enhance customer service, and grow your business with actionable insights.
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
               {points.map((point, i) => (
                 <motion.div 
                   key={i}

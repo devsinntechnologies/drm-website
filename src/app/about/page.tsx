@@ -7,7 +7,7 @@ import AboutTeam from '@/components/about/AboutTeam';
 
 export default function AboutPage() {
   return (
-    <div className="pt-10">
+    <div className="pt-2 md:pt-4">
       <AboutHero />
       <AboutMission />
       <AboutValues />

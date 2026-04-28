@@ -105,7 +105,7 @@ function DrawingLine() {
 
 const HowItWorks = () => {
   return (
-    <section className="py-32 bg-background relative overflow-hidden">
+    <section className="py-8 md:py-10 bg-background relative overflow-hidden">
       {/* Background pulses */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/5 blur-[100px] pointer-events-none" />
 
@@ -115,7 +115,7 @@ const HowItWorks = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-24"
+          className="text-center mb-5 md:mb-6"
         >
           <span className="section-label">Quick Start</span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-4">

@@ -18,7 +18,7 @@ const AboutHero = () => {
   };
 
   return (
-    <section ref={ref} className="relative py-32 md:py-48 overflow-hidden bg-background">
+    <section ref={ref} className="relative py-10 md:py-14 overflow-hidden bg-background">
       {/* Noise Texture */}
       <div className="noise-overlay opacity-10" />
 
@@ -33,7 +33,7 @@ const AboutHero = () => {
       </div>
       
       <div className="container mx-auto px-4 md:px-8 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+        <div className="flex flex-col lg:flex-row items-center gap-8 md:gap-10 lg:gap-14">
           
           <motion.div 
             style={{ y: yText }}
@@ -46,16 +46,16 @@ const AboutHero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border-gradient mb-8"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border-gradient mb-5"
             >
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
               <span className="text-xs font-bold uppercase tracking-widest text-primary">Our Mission</span>
             </motion.div>
             
-            <h1 className="text-5xl md:text-7xl font-extrabold text-foreground mb-8 leading-[1.1] tracking-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-foreground mb-5 leading-[1.1] tracking-tight">
               Revolutionizing <span className="text-primary text-glow">Restaurant</span> Success
             </h1>
-            <p className="text-lg md:text-xl text-muted font-medium leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            <p className="text-base sm:text-lg md:text-xl text-muted font-medium leading-relaxed max-w-2xl mx-auto lg:mx-0">
               Our mission is simple: we strive to make it easier for entrepreneurs around the world to do business, 
               and help them take their restaurants, cafes, and bars to the next level with DRM.
             </p>
@@ -66,7 +66,7 @@ const AboutHero = () => {
             initial={{ opacity: 0, scale: 0.8, rotateX: 20 }}
             animate={{ opacity: 1, scale: 1, rotateX: 0 }}
             transition={{ duration: 1.2, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="flex-1 w-full max-w-2xl"
+            className="flex-1 w-full max-w-2xl pb-12 pl-6 md:pb-14 md:pl-8"
           >
             <div 
               className="relative group"
@@ -105,15 +105,15 @@ const AboutHero = () => {
                   <div key={i} className={`absolute ${pos} w-8 h-8 ${borders} border-primary/50 pointer-events-none z-10 transition-transform duration-500 rounded-sm group-hover:scale-110`} />
                 ))}
 
-                {/* Floating Element */}
-                <motion.div
-                  animate={{ y: [-10, 10, -10] }}
-                  transition={{ duration: 5, ease: 'easeInOut', repeat: Infinity }}
-                  className="absolute -bottom-6 -left-6 z-30 glass-card px-5 py-4 rounded-2xl border-gradient shadow-2xl backdrop-blur-2xl"
-                >
-                  <div className="w-2 h-2 rounded-full bg-emerald-400 mb-2 animate-pulse" />
-                  <div className="text-sm font-black text-foreground">Next-Gen Tech</div>
-                </motion.div>
+              </motion.div>
+
+              <motion.div
+                animate={{ y: [-10, 10, -10] }}
+                transition={{ duration: 5, ease: 'easeInOut', repeat: Infinity }}
+                className="absolute -left-6 bottom-0 md:-left-12 md:bottom-2 z-30 glass-card px-5 py-4 rounded-2xl border-gradient shadow-2xl backdrop-blur-2xl"
+              >
+                <div className="w-2 h-2 rounded-full bg-emerald-400 mb-2 animate-pulse" />
+                <div className="text-sm font-black text-foreground">Next-Gen Tech</div>
               </motion.div>
             </div>
           </motion.div>

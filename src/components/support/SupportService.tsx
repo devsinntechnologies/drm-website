@@ -47,27 +47,27 @@ const services = [
 
 const SupportService = () => {
   return (
-    <section className="py-32 bg-background relative overflow-hidden">
+    <section className="py-12 md:py-16 lg:py-20 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-24"
+          className="text-center mb-12 md:mb-16"
         >
           <span className="section-label">Professional Services</span>
-          <h2 className="text-5xl md:text-7xl font-black text-foreground mb-8">
+          <h2 className="text-4xl sm:text-5xl md:text-7xl font-black text-foreground mb-4 md:mb-6">
             Tailored <span className="text-primary">Assistance</span> <br />
             For Every Outlet
           </h2>
-          <p className="text-xl text-muted max-w-3xl mx-auto leading-relaxed font-bold">
+          <p className="text-base sm:text-lg md:text-xl text-muted max-w-3xl mx-auto leading-relaxed font-bold\">
             We provide comprehensive services to ensure your restaurant 
             DRM is always running at its absolute best.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {services.map((service, i) => (
             <motion.div 
               key={i}
@@ -84,13 +84,13 @@ const SupportService = () => {
               <div className="relative z-10">
                 <motion.div 
                   whileHover={{ rotate: 5, scale: 1.1 }}
-                  className="w-16 h-16 rounded-2xl bg-surface border border-surface-border flex items-center justify-center text-primary mb-8 shadow-inner"
+                  className="w-14 h-14 rounded-2xl bg-surface border border-surface-border flex items-center justify-center text-primary mb-5 shadow-inner"
                 >
                   {service.icon}
                 </motion.div>
                 
-                <h3 className="text-3xl font-extrabold text-foreground mb-6 group-hover:text-primary transition-colors">{service.title}</h3>
-                <p className="text-lg text-muted leading-relaxed font-bold mb-8">{service.desc}</p>
+                <h3 className="text-2xl font-extrabold text-foreground mb-4 group-hover:text-primary transition-colors">{service.title}</h3>
+                <p className="text-base text-muted leading-relaxed font-bold mb-6">{service.desc}</p>
                 
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {service.points.map((p, j) => (

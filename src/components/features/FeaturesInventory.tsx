@@ -14,11 +14,11 @@ const FeaturesInventory = () => {
   ];
 
   return (
-    <section className="py-32 bg-background relative overflow-hidden">
+    <section className="py-8 md:py-10 bg-background relative overflow-hidden">
       <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full pointer-events-none translate-x-1/2" />
       
       <div className="container mx-auto px-4 md:px-8 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-20">
+        <div className="flex flex-col lg:flex-row items-center gap-8 md:gap-10 lg:gap-12">
           
           {/* Left Side Tablet Image */}
           <motion.div 
@@ -26,7 +26,7 @@ const FeaturesInventory = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="flex-1 w-full relative group"
+            className="flex-1 w-full relative group max-w-2xl"
           >
             <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-[40px] blur opacity-30 group-hover:opacity-50 transition duration-1000" />
             <motion.div 
@@ -49,7 +49,7 @@ const FeaturesInventory = () => {
               initial={{ scale: 0, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.8, type: "spring" }}
-              className="absolute top-10 right-10 tag-pill bg-emerald-500/20 text-emerald-500 border-emerald-500/40"
+              className="absolute top-4 right-4 md:top-10 md:right-10 tag-pill bg-emerald-500/20 text-emerald-500 border-emerald-500/40"
             >
               Real-time Sync
             </motion.div>
@@ -63,17 +63,17 @@ const FeaturesInventory = () => {
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="flex-1 lg:pl-4"
           >
-            <span className="section-label mb-6">Inventory Control</span>
-            <h2 className="text-5xl md:text-7xl font-extrabold text-foreground mb-4 leading-tight">
+            <span className="section-label mb-4 md:mb-6">Inventory Control</span>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-foreground mb-4 leading-tight">
               Dynamic <span className="text-primary">Stock</span> <br />
               Management
             </h2>
-            <p className="text-xl text-muted mb-12 leading-relaxed max-w-xl font-medium">
+            <p className="text-base sm:text-lg md:text-xl text-muted mb-6 md:mb-8 leading-relaxed max-w-xl font-medium">
               Eliminate guesswork with our advanced cloud-based inventory. 
               Gain absolute clarity on every item, location, and transaction.
             </p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 md:gap-x-10 gap-y-5 md:gap-y-6">
               {points.map((point, i) => (
                 <motion.div 
                   key={i} 

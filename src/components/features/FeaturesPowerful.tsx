@@ -43,24 +43,24 @@ const features = [
 
 const FeaturesPowerful = () => {
   return (
-    <section className="py-32 bg-surface/10 relative overflow-hidden">
+    <section className="py-8 md:py-10 bg-surface/10 relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          className="text-center mb-8 md:mb-10"
         >
           <span className="section-label">All-in-One POS</span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-4 leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-foreground mb-4 leading-tight">
             <span className="text-primary">Powerful Features</span> <br />
             For Modern Restaurants
           </h2>
           <div className="section-divider" />
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
           {features.map((f, i) => (
             <motion.div 
               key={i}
@@ -69,16 +69,16 @@ const FeaturesPowerful = () => {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.6 }}
               whileHover={{ y: -8, scale: 1.02 }}
-              className="glass-card p-10 rounded-[40px] border border-surface-border/50 group relative overflow-hidden"
+              className="glass-card p-6 md:p-8 rounded-[28px] md:rounded-[40px] border border-surface-border/50 group relative overflow-hidden"
             >
               <motion.div 
                 animate={{ rotate: [0, 5, -5, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${f.color} flex items-center justify-center text-3xl mb-8 group-hover:scale-110 transition-transform`}
+                className={`w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-gradient-to-br ${f.color} flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform`}
               >
                 {f.icon}
               </motion.div>
-              <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors">{f.title}</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">{f.title}</h3>
               <p className="text-muted leading-relaxed font-medium">{f.desc}</p>
             </motion.div>
           ))}

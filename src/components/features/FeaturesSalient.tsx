@@ -13,14 +13,14 @@ const FeaturesSalient = () => {
   ];
 
   return (
-    <section className="py-24 bg-surface/10 relative overflow-hidden">
+    <section className="py-8 md:py-10 bg-surface/10 relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="glass-card rounded-[48px] p-12 md:p-20 relative overflow-hidden border border-surface-border/50"
+          className="glass-card rounded-[32px] md:rounded-[48px] p-6 md:p-12 relative overflow-hidden border border-surface-border/50"
         >
           {/* Background Glow */}
           <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 blur-[100px] rounded-full -translate-y-1/2 translate-x-1/2" />
@@ -30,15 +30,15 @@ const FeaturesSalient = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className="text-center mb-8 md:mb-10"
             >
-              <h2 className="text-4xl md:text-5xl font-black text-foreground mb-6">Salient <span className="text-primary">Advantages</span></h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground mb-4 md:mb-6">Salient <span className="text-primary">Advantages</span></h2>
               <p className="text-lg text-muted max-w-2xl mx-auto font-medium">
                 The small details that make a huge difference in your daily operations.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 md:gap-x-8 gap-y-5 md:gap-y-6">
               {points.map((p, i) => (
                 <motion.div 
                   key={i} 
