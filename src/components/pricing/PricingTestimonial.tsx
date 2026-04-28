@@ -1,7 +1,10 @@
 "use client";
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, type Variants } from 'framer-motion';
+
+const easeStandard: [number, number, number, number] = [0.22, 1, 0.36, 1];
+const easeExit: [number, number, number, number] = [0.4, 0, 0.2, 1];
 
 const testimonials = [
   {
@@ -27,7 +30,7 @@ const testimonials = [
   },
 ];
 
-const slideVariants = {
+const slideVariants: Variants = {
   enter: (direction: number) => ({
     opacity: 0,
     x: direction > 0 ? 90 : -90,
@@ -41,7 +44,7 @@ const slideVariants = {
     filter: 'blur(0px)',
     transition: {
       duration: 0.6,
-      ease: [0.22, 1, 0.36, 1],
+      ease: easeStandard,
       when: 'beforeChildren',
       staggerChildren: 0.08,
     },
@@ -53,12 +56,12 @@ const slideVariants = {
     filter: 'blur(4px)',
     transition: {
       duration: 0.45,
-      ease: [0.4, 0, 0.2, 1],
+      ease: easeExit,
     },
   }),
 };
 
-const childVariants = {
+const childVariants: Variants = {
   enter: (direction: number) => ({
     opacity: 0,
     x: direction > 0 ? 40 : -40,
@@ -70,7 +73,7 @@ const childVariants = {
     y: 0,
     transition: {
       duration: 0.6,
-      ease: [0.22, 1, 0.36, 1],
+      ease: easeStandard,
     },
   },
   exit: (direction: number) => ({
@@ -79,7 +82,7 @@ const childVariants = {
     y: -12,
     transition: {
       duration: 0.4,
-      ease: [0.4, 0, 0.2, 1],
+      ease: easeExit,
     },
   }),
 };
