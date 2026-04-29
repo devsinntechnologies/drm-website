@@ -294,6 +294,11 @@ body {
 
   .text-glow {
     text-shadow: 0 0 24px color-mix(in srgb, var(--primary) 22%, transparent);
+    transition: text-shadow 0.3s ease, color 0.3s ease;
+  }
+
+  .interactive-heading:hover .text-glow {
+    text-shadow: 0 0 24px color-mix(in srgb, var(--secondary) 22%, transparent);
   }
 
   .border-gradient {
