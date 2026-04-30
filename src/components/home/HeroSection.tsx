@@ -36,21 +36,17 @@ const HeroSection = () => {
 
         {/* Text Content */}
         <div className="w-full text-center max-w-4xl mx-auto">
-          <span className="section-label">
-            <span className="w-1.5 h-1.5 rounded-full bg-primary inline-block" />
-            Built for Modern Restaurants
-          </span>
+          
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-foreground mb-6 leading-[1.05]">
-            Run your restaurant
+            Automate your
             <span className="text-primary block mt-2">
-              faster and smarter
+              resturant
             </span>
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-muted mb-8 md:mb-10 leading-relaxed">
-            Take orders, manage inventory, track kitchen performance, and grow loyalty from one clean cloud platform.
-          </p>
+            Manage orders, inventory, kitchen performance, and customer loyalty—all in one cloud platform.          </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-14">
             <Link href="/demo">

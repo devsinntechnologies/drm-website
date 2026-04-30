@@ -20,17 +20,10 @@ export default function Navbar() {
   const closeMenu = () => setIsOpen(false);
 
   const navLinks = [
+    { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
-    { name: 'Features', href: '/features' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Support', href: '/support' },
-    { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
-  ];
-
-  const legalLinks = [
-    { name: 'Terms & Conditions', href: '/terms' },
-    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Privacy & Policy', href: '/privacy' },
   ];
 
   return (
@@ -39,10 +32,8 @@ export default function Navbar() {
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? 'py-2 bg-background/84 backdrop-blur-xl border-b border-surface-border/60'
-          : 'py-4 bg-transparent'
-      }`}
+        scrolled ? 'py-2 backdrop-blur-xl border-b border-surface-border/60' : 'py-4'
+      } bg-white/30`}
     >
       <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
 
@@ -98,16 +89,6 @@ export default function Navbar() {
 
         {/* Action area */}
         <div className="flex items-center gap-3 z-50">
-          <Link href="/demo" onClick={closeMenu} className="hidden sm:block">
-            <motion.button
-              whileHover={{ scale: 1.03, y: -1 }}
-              whileTap={{ scale: 0.95 }}
-              className="shimmer-btn px-6 py-2.5 bg-primary text-primary-foreground text-sm font-black tracking-wide rounded-xl transition-shadow duration-300 relative overflow-hidden group glow-primary"
-            >
-              <span className="relative z-10">Get Started</span>
-            </motion.button>
-          </Link>
-
           {/* Hamburger Menu Button */}
           <button
             className="lg:hidden p-2 text-foreground focus:outline-none"
@@ -169,35 +150,6 @@ export default function Navbar() {
                     </motion.div>
                   );
                 })}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.5 }}
-                >
-                  <Link href="/demo" onClick={closeMenu} className="sm:hidden mt-6 block">
-                    <button className="w-full py-4 bg-primary text-primary-foreground font-bold rounded-2xl text-lg glow-primary">
-                      Get Started
-                    </button>
-                  </Link>
-                </motion.div>
-              </div>
-
-              <div className="h-px bg-surface-border w-full opacity-50" />
-
-              <div className="flex flex-col space-y-4 pb-12">
-                <p className="text-xs font-bold text-primary uppercase tracking-widest">Legal</p>
-                {legalLinks.map((link, i) => (
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.6 + (i * 0.1) }}
-                    key={link.href}
-                  >
-                    <Link href={link.href} onClick={closeMenu} className="text-lg font-semibold text-muted hover:text-foreground transition-colors">
-                      {link.name}
-                    </Link>
-                  </motion.div>
-                ))}
               </div>
             </div>
           </motion.div>

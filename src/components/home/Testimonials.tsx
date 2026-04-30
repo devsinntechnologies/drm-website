@@ -6,48 +6,54 @@ const reviews = [
   {
     name: 'Sarah Rahman',
     role: 'Cafe Owner',
-    text: 'DRM transformed our kitchen operations. The speed of order processing and the accuracy of our inventory is now on another level.',
+    text: 'DRM transformed our kitchen operations. The speed of order processing and inventory accuracy is now on another level.',
     rating: 5,
     emoji: '☕',
+    color: 'bg-red-500',
   },
   {
     name: 'Ahmed Malik',
     role: 'Restaurant Manager',
-    text: 'The best investment we made this year. The insights dashboard helps me monitor sales across all three branches from my phone.',
+    text: 'The best investment we made this year. I can monitor all branches directly from my phone.',
     rating: 5,
     emoji: '🍽️',
+    color: 'bg-orange-500',
   },
   {
     name: 'Zeba Khan',
     role: 'Founder, Foodie Hub',
-    text: 'Scaling our franchise was a breeze with DRM integration. Their support team is literally available whenever we need them.',
+    text: 'Scaling our franchise became super easy. Their support team is always there.',
     rating: 5,
     emoji: '🚀',
+    color: 'bg-red-500',
   },
   {
     name: 'Omar Siddiqui',
     role: 'Chain Restaurant Owner',
-    text: 'The KDS alone saved us 30% on kitchen errors. Our cook times are faster and customers leave happier than ever before.',
+    text: 'The KDS reduced kitchen errors and improved our speed significantly.',
     rating: 5,
     emoji: '🏆',
+    color: 'bg-yellow-500',
   },
   {
     name: 'Fatima Noor',
     role: 'F&B Director',
-    text: 'FBR integration was seamless. We went from dreading tax season to having it fully automated. No stress at all!',
+    text: 'FBR integration is now effortless. Everything is automated and stress-free.',
     rating: 5,
     emoji: '📊',
+    color: 'bg-red-500',
   },
   {
     name: 'Bilal Chaudhry',
     role: 'Franchise Manager',
-    text: 'Managing 7 outlets used to feel impossible. With DRM we have everything visible and controlled from one place.',
+    text: 'Managing multiple outlets is now simple and fully controlled from one dashboard.',
     rating: 5,
     emoji: '🌟',
+    color: 'bg-orange-500',
   },
 ];
 
-const doubled = [...reviews, ...reviews];
+const doubled = reviews;
 
 function TiltCard({ review }: { review: typeof reviews[0] }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -71,14 +77,11 @@ function TiltCard({ review }: { review: typeof reviews[0] }) {
       <motion.div
         animate={{ rotateX: rotate.x, rotateY: rotate.y }}
         transition={{ type: 'spring', stiffness: 350, damping: 30 }}
-        className="glass-card p-8 rounded-[28px] border-gradient relative group overflow-hidden backdrop-blur-2xl bg-surface/40 shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:shadow-[0_20px_50px_rgba(var(--primary-rgb),0.3)] transition-shadow duration-500"
+        className={`p-8 rounded-[28px] relative group overflow-hidden shadow-lg transition-all duration-500 h-[260px] flex flex-col justify-between ${review.color}`}
         style={{ transformStyle: 'preserve-3d' }}
       >
-        {/* Inner glow */}
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-
         {/* Big quote mark */}
-        <div className="absolute top-4 right-6 text-8xl font-black leading-none text-primary/5 group-hover:text-primary/10 transition-colors select-none pointer-events-none">
+        <div className="absolute top-4 right-6 text-8xl font-black leading-none text-white/10 select-none pointer-events-none">
           "
         </div>
 
@@ -90,7 +93,7 @@ function TiltCard({ review }: { review: typeof reviews[0] }) {
               initial={{ scale: 0, rotate: -30 }}
               whileInView={{ scale: 1, rotate: 0 }}
               transition={{ delay: j * 0.08, type: 'spring', stiffness: 500 }}
-              className="w-4 h-4 text-primary"
+              className="w-4 h-4 text-white"
               fill="currentColor"
               viewBox="0 0 20 20"
             >
@@ -99,15 +102,19 @@ function TiltCard({ review }: { review: typeof reviews[0] }) {
           ))}
         </div>
 
-        <p className="text-base text-muted italic mb-6 leading-relaxed">"{review.text}"</p>
+        {/* Review text */}
+        <p className="text-base text-white italic mb-6 leading-relaxed">
+          "{review.text}"
+        </p>
 
+        {/* User info */}
         <div className="flex items-center gap-3 mt-auto">
-          <div className="w-11 h-11 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-xl shadow-lg animate-energy-pulse">
+          <div className="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center text-xl shadow-md">
             {review.emoji}
           </div>
           <div>
-            <h4 className="font-bold text-foreground text-sm">{review.name}</h4>
-            <p className="text-xs text-muted">{review.role}</p>
+            <h4 className="font-bold text-white text-sm">{review.name}</h4>
+            <p className="text-xs text-white/80">{review.role}</p>
           </div>
         </div>
       </motion.div>
@@ -118,58 +125,27 @@ function TiltCard({ review }: { review: typeof reviews[0] }) {
 const Testimonials = () => {
   return (
     <section className="py-8 md:py-10 bg-surface/20 relative overflow-hidden">
-      {/* Heavy Noise Overlay */}
-      <div className="noise-overlay opacity-10" />
-
-      {/* Aurora backdrops */}
+      {/* Background effects */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/10 blur-[150px] rounded-full pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/10 blur-[150px] rounded-full pointer-events-none" />
 
-      {/* Top fade */}
-      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
-      <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-secondary/30 to-transparent" />
-
-      <div className="container mx-auto px-4 md:px-8 mb-5 md:mb-6">
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center"
-        >
-          <span className="section-label">Wall of Love</span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-4 leading-tight tracking-tight">
-            Trusted by <span className="text-primary">Restaurateurs</span>
-          </h2>
-          <p className="text-muted text-lg max-w-xl mx-auto">
-            Join 1000+ restaurants that run smoother, smarter, and more profitably with DRM.
-          </p>
-        </motion.div>
+      <div className="container mx-auto px-4 md:px-8 mb-5 md:mb-6 text-center">
+        <span className="section-label">Wall of Love</span>
+        <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-4">
+          Trusted by <span className="text-primary">Restaurateurs</span>
+        </h2>
+        <p className="text-muted text-lg max-w-xl mx-auto">
+          Join 1000+ restaurants running smarter and faster with DRM.
+        </p>
       </div>
 
-      {/* Marquee row 1 */}
-      <div className="relative overflow-hidden mb-6" style={{ maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' }}>
-        <div className="animate-marquee gap-0 flex">
-          {doubled.map((review, i) => (
-            <TiltCard key={i} review={review} />
-          ))}
-        </div>
-      </div>
-
-      {/* Marquee row 2 reversed */}
-      <div className="relative overflow-hidden" style={{ maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' }}>
-        <div
-          className="flex gap-0"
-          style={{
-            animation: 'marquee 50s linear infinite reverse',
-            width: 'max-content',
-          }}
-        >
-          {[...doubled].reverse().map((review, i) => (
-            <TiltCard key={i} review={review} />
-          ))}
-        </div>
-      </div>
+      <div className="container mx-auto px-4 md:px-8">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-18 gap-x-3">
+    {reviews.map((review, i) => (
+      <TiltCard key={i} review={review} />
+    ))}
+  </div>
+</div>
     </section>
   );
 };

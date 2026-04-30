@@ -4,211 +4,178 @@ import { motion } from 'framer-motion';
 
 const LoyaltyAndInsights = () => {
   const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.15 } },
   };
 
+  const glowStyles = [
+    'from-yellow-300/40 via-transparent to-transparent',
+    'from-orange-300/40 via-transparent to-transparent',
+    'from-red-300/40 via-transparent to-transparent',
+  ];
+
+  const borderColors = [
+    'border-yellow-400',
+    'border-orange-400',
+    'border-red-400',
+  ];
+
   return (
-    <section className="py-8 md:py-10 bg-background relative overflow-hidden">
-      <div className="noise-overlay opacity-10" />
+    <section className="relative overflow-hidden py-24 bg-linear-to-br from-red-50 via-orange-50 to-amber-100">
+      <div className="absolute inset-x-0 top-0 h-80 bg-linear-to-b from-primary/15 to-transparent pointer-events-none" />
+      <div className="absolute left-0 top-24 h-72 w-72 rounded-full bg-primary/10 blur-3xl pointer-events-none" />
+      <div className="absolute right-0 top-40 h-72 w-72 rounded-full bg-secondary/10 blur-3xl pointer-events-none" />
+      <div className="absolute inset-x-0 top-[42%] h-px bg-linear-to-r from-transparent via-slate-200 to-transparent" />
 
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] pointer-events-none">
-        <div className="absolute inset-0 aurora-bg opacity-25" />
-      </div>
-
-      <div className="container mx-auto px-4 md:px-8 space-y-8 md:space-y-10 relative z-10">
+      <div className="relative container mx-auto px-4 md:px-8">
         <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
-          variants={containerVariants}
-          className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16"
+          initial={{ opacity: 0, y: 28 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="grid gap-12 xl:grid-cols-[1.1fr_0.9fr] items-center"
         >
-          <motion.div
-            variants={{ hidden: { opacity: 0, x: -50 }, visible: { opacity: 1, x: 0, transition: { duration: 0.9 } } }}
-            className="flex-1 order-2 lg:order-1 relative max-w-lg mx-auto w-full group pb-12 pr-8 md:pb-16 md:pr-12"
-            style={{ perspective: '1000px' }}
-          >
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 30, ease: 'linear', repeat: Infinity }}
-              className="absolute inset-[-40px] rounded-full border border-dashed border-primary/15 pointer-events-none"
-            />
-            <motion.div
-              animate={{ rotate: -360 }}
-              transition={{ duration: 20, ease: 'linear', repeat: Infinity }}
-              className="absolute inset-[-20px] rounded-full border border-dotted border-secondary/10 pointer-events-none"
-            />
+          <div className="space-y-8">
+            <span className="inline-flex items-center gap-3 rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold uppercase tracking-[0.3em] text-primary ring-1 ring-primary/20">
+              Loyalty & Insights
+            </span>
 
-            <div className="absolute inset-0 bg-primary/20 blur-[80px] rounded-full opacity-50 group-hover:opacity-90 transition-opacity duration-1000 pointer-events-none animate-morph-blob" />
+            <h1 className="max-w-3xl text-5xl md:text-6xl font-black tracking-tight text-slate-900 leading-tight">
+              Make loyalty irresistible and analytics instantly clear.
+            </h1>
 
+            <p className="max-w-2xl text-lg leading-8 text-slate-600">
+              Deliver a standout loyalty experience with smart insights that help managers act faster, reward customers better, and grow revenue effortlessly.
+            </p>
+
+            <div className="grid gap-4 sm:grid-cols-3">
+              {[
+                { number: '+85%', label: 'Repeat Visits' },
+                { number: '+31%', label: 'Revenue Growth' },
+                { number: '2x', label: 'Faster Decisions' },
+              ].map((stat, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 18 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  whileHover={{ y: -5, scale: 1.02 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.1, type: 'spring', stiffness: 220 }}
+                    className={`group relative overflow-hidden rounded-[28px] border ${borderColors[idx % borderColors.length]} bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-[0_30px_90px_rgba(249,115,22,0.18)]`}
+                >
+                  <div className={`pointer-events-none absolute inset-0 bg-linear-to-br ${glowStyles[idx % glowStyles.length]} opacity-0 transition duration-500 group-hover:opacity-80 blur-3xl`} />
+                  <div className="relative z-10">
+                    <div className="text-3xl font-extrabold text-slate-900">{stat.number}</div>
+                    <p className="mt-2 text-sm text-slate-500">{stat.label}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          <div className="grid gap-6">
             <motion.div
-              whileHover={{ scale: 1.04, rotateY: 8, rotateX: 4 }}
-              transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-              className="relative w-full rounded-[40px] overflow-hidden shadow-[0_40px_100px_rgba(var(--primary-rgb),0.35)] border-2 border-surface-border/60 bg-surface/50 backdrop-blur-3xl"
-              style={{ transformStyle: 'preserve-3d' }}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -8, scale: 1.01 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, type: 'spring', stiffness: 220 }}
+              className="group relative overflow-hidden rounded-[36px] border border-yellow-400 bg-white shadow-[0_35px_80px_rgba(15,23,42,0.08)] transition-shadow duration-300 hover:shadow-[0_40px_120px_rgba(249,115,22,0.18)]"
             >
+              <div className="pointer-events-none absolute inset-0 bg-linear-to-br from-yellow-300/0 via-transparent to-transparent opacity-0 transition duration-500 group-hover:opacity-80 blur-3xl" />
               <img
                 src="/home/loyalty-mockup.png"
                 alt="Loyalty App"
-                className="w-full object-cover aspect-[4/3] transform transition-transform duration-1000 group-hover:scale-108"
+                className="w-full h-full object-cover aspect-4/3 transition duration-700 hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-40 group-hover:opacity-20 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-linear-to-t from-white/70 via-transparent to-transparent" />
+              <div className="absolute left-5 bottom-5 rounded-3xl bg-white/90 px-4 py-3 text-sm font-semibold text-slate-900 ring-1 ring-slate-200/70 backdrop-blur-xl">
+                Real-time loyalty tracking
+              </div>
             </motion.div>
 
             <motion.div
-              animate={{ y: [-6, 6, -6] }}
-              transition={{ duration: 4, ease: 'easeInOut', repeat: Infinity }}
-              className="absolute right-2 bottom-8 md:right-4 md:bottom-10 glass-card px-4 py-3 rounded-2xl border-gradient shadow-xl backdrop-blur-xl z-20"
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -8, scale: 1.01 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.1, type: 'spring', stiffness: 220 }}
+              className="group relative overflow-hidden rounded-[36px] border border-red-400 bg-linear-to-br from-primary/20 via-white to-secondary/10 p-6 shadow-[0_35px_80px_rgba(148,163,184,0.15)] transition-shadow duration-300 hover:shadow-[0_40px_120px_rgba(249,115,22,0.16)]"
             >
-              <div className="text-xs font-black text-primary">+850 pts</div>
-              <div className="text-[9px] text-muted font-bold uppercase tracking-widest">Earned Today</div>
+              <div className="pointer-events-none absolute inset-0 bg-linear-to-br from-red-300/0 via-transparent to-transparent opacity-0 transition duration-500 group-hover:opacity-80 blur-3xl" />
+              <div className="absolute inset-x-0 top-0 h-24 bg-white/80 blur-3xl" />
+              <div className="relative space-y-4">
+                <span className="text-sm uppercase tracking-[0.3em] text-primary">Insights Dashboard</span>
+                <h2 className="text-3xl font-bold text-slate-900">Fast decisions, clear results</h2>
+                <p className="text-slate-600 leading-7">
+                  Designed for managers who need smart visuals, outlet comparisons, and quick signals without the clutter.
+                </p>
+                <div className="grid gap-3 sm:grid-cols-2">
+                  {['Live sales', 'Outlet comparisons', 'Menu performance', 'Shift summary'].map((item, i) => (
+                    <div key={i} className="rounded-3xl bg-white/90 px-4 py-3 text-sm text-slate-700 shadow-sm">
+                      {item}
+                    </div>
+                  ))}
+                </div>
+              </div>
             </motion.div>
-          </motion.div>
-
-          <motion.div
-            variants={{ hidden: { opacity: 0, x: 50 }, visible: { opacity: 1, x: 0, transition: { duration: 0.9 } } }}
-            className="flex-1 order-1 lg:order-2"
-          >
-            <span className="section-label group cursor-default">
-              <svg className="w-4 h-4 transition-transform group-hover:scale-125" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-              </svg>
-              Loyalty Program
-            </span>
-            <h3 className="text-4xl md:text-5xl font-extrabold text-foreground mb-6 leading-tight tracking-tight">
-              Hassle-Free{' '}
-              <span className="text-primary block mt-1">Customer Loyalty</span>{' '}
-              & Promotions
-            </h3>
-            <p className="text-muted text-lg mb-8 leading-relaxed">
-              Drive customer loyalty with our DRM. Get your own loyalty app, save money, and improve the customer experience. Delight your guests with categorised point-based rewards and special customer offerings.
-            </p>
-            <ul className="space-y-4">
-              {["Get your own loyalty app", "Categorize Point-based rewards", "Customer offerings (Birthday / VIPs)"].map((item, i) => (
-                <motion.li
-                  key={i}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.12 }}
-                  className="flex items-center gap-4 group/item"
-                >
-                  <motion.span
-                    whileHover={{ scale: 1.3, rotate: 12 }}
-                    className="w-6 h-6 shrink-0 rounded-full bg-primary/15 border border-primary/40 flex items-center justify-center transition-colors group-hover/item:bg-primary/30"
-                  >
-                    <svg className="w-3 h-3 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </motion.span>
-                  <span className="text-foreground font-medium group-hover/item:text-primary transition-colors">{item}</span>
-                </motion.li>
-              ))}
-            </ul>
-          </motion.div>
+          </div>
         </motion.div>
 
         <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
-          variants={containerVariants}
-          className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-4"
         >
-          <motion.div
-            variants={{ hidden: { opacity: 0, x: -50 }, visible: { opacity: 1, x: 0, transition: { duration: 0.9 } } }}
-            className="flex-1"
-          >
-            <span className="section-label group cursor-default">
-              <svg className="w-4 h-4 transition-transform group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-              </svg>
-              Business Analytics
-            </span>
-            <h3 className="text-4xl md:text-5xl font-extrabold text-foreground mb-6 leading-tight tracking-tight">
-              <span className="text-primary block mb-1">Insights</span> on the Go
-            </h3>
-            <p className="text-muted text-lg mb-8 leading-relaxed">
-              Stay updated while on the go. Monitor daily operations remotely. Compare outlets, filter by time & menu, and make perfectly informed decisions.
-            </p>
-
-            <div className="flex items-end gap-2 mb-8 h-16">
-              {[40, 65, 50, 80, 70, 90, 75].map((h, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ height: 0 }}
-                  whileInView={{ height: `${h}%` }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 + 0.3, duration: 0.7, ease: 'easeOut' }}
-                  className="flex-1 rounded-t-sm"
-                  style={{ background: `linear-gradient(to top, var(--primary), color-mix(in srgb, var(--primary) 40%, transparent))` }}
-                />
-              ))}
-              <span className="text-xs text-muted font-bold ml-2 self-center">Sales / Week</span>
-            </div>
-
-            <ul className="space-y-4">
-              {["Monitor daily operations remotely", "Comparison outlet, time & menu wise", "Do informed decisions"].map((item, i) => (
-                <motion.li
-                  key={i}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.12 }}
-                  className="flex items-center gap-4 group/item"
-                >
-                  <motion.span
-                    whileHover={{ scale: 1.3, rotate: -12 }}
-                    className="w-6 h-6 shrink-0 rounded-full bg-secondary/15 border border-secondary/40 flex items-center justify-center transition-colors group-hover/item:bg-secondary/30"
-                  >
-                    <svg className="w-3 h-3 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </motion.span>
-                  <span className="text-foreground font-medium group-hover/item:text-secondary transition-colors">{item}</span>
-                </motion.li>
-              ))}
-            </ul>
-          </motion.div>
-
-          <motion.div
-            variants={{ hidden: { opacity: 0, x: 50 }, visible: { opacity: 1, x: 0, transition: { duration: 0.9 } } }}
-            className="flex-1 relative max-w-lg mx-auto w-full group pb-12 pr-8 md:pb-16 md:pr-12"
-            style={{ perspective: '1000px' }}
-          >
+          {[
+            { title: 'Compliance first', desc: 'Stay aligned with revenue authorities.' },
+            { title: 'Scale faster', desc: 'Prepare your business for franchise growth.' },
+            { title: 'Clear rules', desc: 'Apply credit, payout, and ROI controls easily.' },
+            { title: 'Secure by design', desc: 'Built with audit-ready workflows.' },
+          ].map((item, idx) => (
             <motion.div
-              animate={{ rotate: -360 }}
-              transition={{ duration: 35, ease: 'linear', repeat: Infinity }}
-              className="absolute inset-[-40px] rounded-full border border-dashed border-secondary/15 pointer-events-none"
-            />
-
-            <div className="absolute inset-0 bg-secondary/20 blur-[80px] rounded-full opacity-50 group-hover:opacity-90 transition-opacity duration-1000 pointer-events-none animate-morph-blob" style={{ animationDelay: '4s' }} />
-
-            <motion.div
-              whileHover={{ scale: 1.04, rotateY: -8, rotateX: 4 }}
-              transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-              className="relative w-full rounded-[40px] overflow-hidden shadow-[0_40px_100px_rgba(var(--secondary-rgb),0.35)] border-2 border-surface-border/60 bg-surface/50 backdrop-blur-3xl"
-              style={{ transformStyle: 'preserve-3d' }}
+              key={idx}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -5, scale: 1.01 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.1, type: 'spring', stiffness: 220 }}
+              className={`group relative overflow-hidden rounded-4xl border ${borderColors[idx % borderColors.length]} bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-[0_35px_110px_rgba(249,115,22,0.16)]`}
             >
-              <img
-                src="/home/insights-mockup.png"
-                alt="Insights Dashboard"
-                className="w-full object-cover aspect-[4/3] transform transition-transform duration-1000 group-hover:scale-108"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-40 group-hover:opacity-20 transition-opacity duration-500" />
+              <div className={`pointer-events-none absolute inset-0 bg-linear-to-br ${glowStyles[idx % glowStyles.length]} opacity-0 transition duration-500 group-hover:opacity-90 blur-3xl`} />
+              <div className="relative z-10">
+                <div className="text-sm uppercase tracking-[0.3em] text-primary">{item.title}</div>
+                <p className="mt-4 text-sm text-slate-600 leading-6">{item.desc}</p>
+              </div>
             </motion.div>
-
-            <motion.div
-              animate={{ y: [6, -6, 6] }}
-              transition={{ duration: 5, ease: 'easeInOut', repeat: Infinity }}
-              className="absolute left-2 bottom-8 md:left-4 md:bottom-8 glass-card px-4 py-3 rounded-2xl border-gradient shadow-xl backdrop-blur-xl z-20"
-            >
-              <div className="text-xs font-black" style={{ color: 'var(--secondary)' }}>+31% Revenue</div>
-              <div className="text-[9px] text-muted font-bold uppercase tracking-widest">This Month</div>
-            </motion.div>
-          </motion.div>
+          ))}
         </motion.div>
+
+        <div className="mt-16 grid gap-4 sm:grid-cols-3">
+          {[
+            { metric: '+850', label: 'FBR authorizations' },
+            { metric: '3x', label: 'Faster setup' },
+            { metric: '+120', label: 'Franchise partners' },
+          ].map((stat, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -5, scale: 1.01 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.1, type: 'spring', stiffness: 220 }}
+              className={`group relative overflow-hidden rounded-4xl border ${borderColors[idx % borderColors.length]} bg-white p-8 text-center shadow-sm transition-shadow duration-300 hover:shadow-[0_35px_90px_rgba(249,115,22,0.16)]`}
+            >
+              <div className={`pointer-events-none absolute inset-0 bg-linear-to-br ${glowStyles[idx % glowStyles.length]} opacity-0 transition duration-500 group-hover:opacity-90 blur-3xl`} />
+              <div className="relative z-10">
+                <div className="text-4xl font-black text-slate-900">{stat.metric}</div>
+                <p className="mt-3 text-sm text-slate-600">{stat.label}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

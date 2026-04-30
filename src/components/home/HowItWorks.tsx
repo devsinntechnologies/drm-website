@@ -105,7 +105,7 @@ function DrawingLine() {
 
 const HowItWorks = () => {
   return (
-    <section className="py-8 md:py-10 bg-background relative overflow-hidden">
+    <section className="py-8 md:py-10 bg-linear-to-tr from-red-50 via-orange-50 to-amber-50 relative overflow-hidden">
       {/* Background pulses */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/5 blur-[100px] pointer-events-none" />
 

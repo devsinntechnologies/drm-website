@@ -70,10 +70,7 @@ const EcosystemSection = () => {
                 boxShadow: hovered === i
                   ? '0 20px 50px rgba(var(--primary-rgb), 0.25), inset 0 1px 0 rgba(255,255,255,0.05)'
                   : '0 8px 32px rgba(0,0,0,0.2)',
-                borderColor: hovered === i
-                  ? 'color-mix(in srgb, var(--primary) 50%, transparent)'
-                  : undefined,
-                transition: 'box-shadow 0.4s ease, border-color 0.4s ease',
+                transition: 'box-shadow 0.4s ease',
               }}
             >
               {/* Animated bg gradient on hover */}
