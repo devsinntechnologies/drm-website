@@ -121,7 +121,7 @@ const PricingTestimonial = () => {
   }, [isPaused]);
 
   return (
-    <section className="py-8 md:py-10 bg-surface/30 relative overflow-hidden">
+    <section className="py-8 md:py-10 bg-gradient-to-tr from-red-200 via-orange-100 to-orange-100 relative overflow-hidden">
       <div className="container mx-auto px-4 max-w-5xl">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground text-center mb-8 md:mb-10">
           What Our <span className="text-primary">Clients Say?</span>

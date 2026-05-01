@@ -11,7 +11,7 @@ const stats = [
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-background">
+    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden ">
       <video
         className="absolute inset-0 h-full w-full object-cover opacity-900"
         autoPlay
@@ -20,10 +20,10 @@ const HeroSection = () => {
         playsInline
         preload="metadata"
       >
-        <source src="/hero.mp4" type="video/mp4" />
+        <source src="/resturant.mp4" type="video/mp4" />
       </video>
 
-      <div className="absolute inset-0 bg-linear-to-b from-background/50 via-background/70 to-background/70" />
+      <div className="absolute inset-0 bg-linear-to-b from-orange-100 via-background/20 to-red-100" />
       {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(239,68,68,0.18),transparent_45%),radial-gradient(circle_at_80%_70%,rgba(249,115,22,0.15),transparent_45%)]" /> */}
 
       {/* Grid pattern */}
@@ -39,18 +39,18 @@ const HeroSection = () => {
           
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-foreground mb-6 leading-[1.05]">
-            Automate your
+            Auto'mate your
             <span className="text-primary block mt-2">
-              resturant
+              Resturant
             </span>
           </h1>
 
-          <p className="text-base sm:text-lg md:text-xl text-muted mb-8 md:mb-10 leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-black/85 mb-8 md:mb-10 leading-relaxed">
             Manage orders, inventory, kitchen performance, and customer loyalty—all in one cloud platform.          </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-14">
             <Link href="/demo">
-              <button className="shimmer-btn relative overflow-hidden px-8 py-4 bg-primary text-primary-foreground font-bold text-base rounded-xl glow-primary transition-all duration-300 group">
+              <button className="shimmer-btn border-2 border-primary relative overflow-hidden px-8 py-4 bg-primary text-primary-foreground font-bold text-base rounded-xl glow-primary transition-all duration-300 group">
                 <span className="absolute inset-0 w-1/3 h-full bg-white/10 skew-x-[-20deg] -translate-x-full group-hover:animate-spotlight-scan pointer-events-none" />
                 Book a Free Demo →
               </button>

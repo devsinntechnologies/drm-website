@@ -16,7 +16,7 @@ export default function Home() {
       <IntegrationsAndExpansion />
       <EcosystemSection />
       <HowItWorks />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <LatestPosts />
     </main>
   );

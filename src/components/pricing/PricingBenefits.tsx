@@ -17,7 +17,7 @@ const PricingBenefits = ({ title, highlight, subtitle }: PricingBenefitsProps) =
   ];
 
   return (
-    <section className="py-8 md:py-10 bg-surface/10 relative overflow-hidden">
+    <section className="py-8 md:py-10 bg-gradient-to-tr from-red-200 via-orange-100 to-orange-100 relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
         {(title || highlight || subtitle) && (
           <motion.div 

@@ -39,7 +39,7 @@ const PricingPlans = () => {
   ];
 
   return (
-    <section className="py-8 md:py-10 bg-background relative overflow-hidden">
+    <section className="py-8 md:py-10 bg-gradient-to-tr from-red-200 via-orange-100 to-orange-100 relative overflow-hidden">
       {/* Dynamic Background Glow based on hover */}
       <AnimatePresence>
         {hoveredIndex !== null && (

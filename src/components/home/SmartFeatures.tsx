@@ -90,7 +90,7 @@ function FeatureBlock({ feature, idx }: { feature: typeof features[0]; idx: numb
       whileHover={{ y: -10, scale: 1.01 }}
       whileTap={{ scale: 0.995 }}
       transition={{ type: 'spring', stiffness: 260, damping: 24 }}
-      className={`w-full rounded-[40px] border border-surface-border/50 bg-white/80 backdrop-blur-3xl shadow-[0_20px_80px_rgba(15,23,42,0.08)] transition-all duration-500 hover:shadow-[0_35px_120px_rgba(15,23,42,0.14)] ${hoverBorder} group`}
+      className={`w-full rounded-[40px] border border-surface-border/50 bg-mist-200 backdrop-blur-3xl shadow-[0_20px_80px_rgba(15,23,42,0.08)] transition-all duration-500 hover:shadow-[0_35px_120px_rgba(15,23,42,0.14)] ${hoverBorder} group`}
     >
       <div className="relative overflow-hidden rounded-t-[40px]" style={{ perspective: '1000px' }} onMouseMove={handleMouseMove} onMouseLeave={() => setTilt({ x: 0, y: 0 })}>
         <motion.div
@@ -187,7 +187,7 @@ function FeatureBlock({ feature, idx }: { feature: typeof features[0]; idx: numb
 
 const SmartFeatures = () => {
   return (
-    <section className="py-8 md:py-10 bg-linear-to-br from-red-50 via-yellow-50 to-orange-50 relative overflow-hidden">
+    <section className="py-8 md:py-10 bg-gradient-to-tr from-red-200 via-orange-100 to-orange-100 relative overflow-hidden">
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-surface-border to-transparent" />
       <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-surface-border to-transparent" />
 

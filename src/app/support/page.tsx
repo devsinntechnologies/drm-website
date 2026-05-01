@@ -6,7 +6,7 @@ import SupportContact from "@/components/support/SupportContact";
 
 export default function SupportPage() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-gradient-to-tr from-red-200 via-orange-100 to-orange-100">
       <SupportService />
       <SupportWhy />
       <PricingBenefits 

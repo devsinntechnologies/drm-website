@@ -57,7 +57,7 @@ function PostCard({ post, idx }: { post: typeof posts[0]; idx: number }) {
         initial={{ opacity: 0, scale: 0 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ delay: idx * 0.15 + 0.3 }}
-        className="absolute top-5 right-5 w-5 h-5 border-t-2 border-r-2 rounded-sm pointer-events-none z-20"
+        className="absolute top-5 right-5 w-5 h-5 border-t-2 border-r-2 rounded-sm pointer-events-none z-20 "
         style={{ borderColor: `color-mix(in srgb, ${accentVar} 60%, transparent)` }}
       />
 
@@ -116,7 +116,7 @@ function PostCard({ post, idx }: { post: typeof posts[0]; idx: number }) {
 
 const LatestPosts = () => {
   return (
-    <section className="py-8 md:py-10 bg-background relative overflow-hidden">
+    <section className="py-8 md:py-10 bg-gradient-to-tr from-red-200 via-orange-100 to-orange-100 relative overflow-hidden">
       {/* Noise */}
       <div className="noise-overlay opacity-5" />
 
@@ -158,7 +158,7 @@ const LatestPosts = () => {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
           {posts.map((post, idx) => (
             <PostCard key={idx} post={post} idx={idx} />
           ))}

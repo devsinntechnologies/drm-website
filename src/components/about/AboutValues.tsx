@@ -15,7 +15,7 @@ const AboutValues = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-8 md:py-10 bg-background relative overflow-hidden">
+    <section className="py-8 md:py-10 bg-gradient-to-tr from-red-200 via-orange-100 to-orange-100 relative overflow-hidden">
       <div className="noise-overlay opacity-5" />
       
       {/* Dynamic Background Glow based on hover */}
@@ -39,9 +39,9 @@ const AboutValues = () => {
           className="text-center mb-8 md:mb-10"
         >
           <span className="section-label">Our Philosophy</span>
-          <h2 className="interactive-heading text-4xl md:text-5xl font-extrabold text-foreground mb-4 group cursor-pointer transition-colors duration-300">
-            <span className="text-secondary transition-colors duration-300 group-hover:text-primary">Our Core</span>{' '}
-            <span className="text-primary text-glow transition-colors duration-300 group-hover:text-secondary">Values</span>
+          <h2 className="interactive-heading text-4xl md:text-5xl font-extrabold mb-4 group cursor-pointer transition-colors duration-300">
+            <span className="text-foreground">Our Core </span>
+            <span className="text-primary">Values</span>
           </h2>
           <p className="text-lg text-muted max-w-2xl mx-auto font-medium">
             The principles that guide our product, our team, and our relationship with you.

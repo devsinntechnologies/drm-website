@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const ContactHero = () => {
   return (
-    <section className="relative pt-16 md:pt-24 pb-12 md:pb-16 overflow-hidden">
+    <section className="relative pt-16 md:pt-24 pb-12 md:pb-16 bg-gradient-to-tr from-red-200 via-orange-100 to-orange-100 overflow-hidden">
       {/* Background Decor */}
       <motion.div 
         initial={{ opacity: 0, scale: 0.8 }}

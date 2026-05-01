@@ -23,9 +23,9 @@ const IntegrationsAndExpansion = () => {
 
   return (
     <section 
-      className="relative overflow-hidden py-24"
+      className="relative overflow-hidden py-24 bg-gradient-to-tr from-red-200 via-orange-100 to-orange-100"
       style={{
-        background: 'linear-gradient(-45deg, #ffd0b3, #ffe6cc, #fff0d9, #ffd0b3)',
+        background: '',
         backgroundSize: '400% 400%',
         animation: 'gradientShift 15s ease infinite'
       }}

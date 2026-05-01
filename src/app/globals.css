@@ -97,6 +97,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   transition: background-color 0.3s ease, color 0.3s ease;
   scroll-behavior: smooth;
+  
 }
 
 /* Base custom utilities */
@@ -297,9 +298,9 @@ body {
     transition: text-shadow 0.3s ease, color 0.3s ease;
   }
 
-  .interactive-heading:hover .text-glow {
+  /* .interactive-heading:hover .text-glow {
     text-shadow: 0 0 24px color-mix(in srgb, var(--secondary) 22%, transparent);
-  }
+  } */
 
   .border-gradient {
     border: 1px solid transparent;

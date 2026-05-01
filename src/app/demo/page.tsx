@@ -6,12 +6,12 @@ import PricingBenefits from "@/components/pricing/PricingBenefits";
 
 export default function DemoPage() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-gradient-to-tr from-red-200 via-orange-100 to-orange-100">
       <DemoHero />
       <DemoForm />
 
       {/* Reusing existing components as requested */}
-      <section className="bg-surface/30">
+      <section className="bg-gradient-to-tr from-red-200 via-orange-100 to-orange-100">
         <div className="container mx-auto px-4 pt-16 -mb-16 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground">
             Best and flexible <span className="text-primary">plans</span> that suit your business!

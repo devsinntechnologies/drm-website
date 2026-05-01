@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const TermsContent = () => {
   return (
-    <section className="py-32 bg-background">
+    <section className="py-32 bg-gradient-to-tr from-red-200 via-orange-100 to-orange-100">
       <div className="container mx-auto px-4 md:px-8 max-w-4xl">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
