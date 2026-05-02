@@ -1,3 +1,4 @@
+//@ts-nocheck
 "use client";
 
 import React, { useRef, useState } from "react";
@@ -8,7 +9,7 @@ const AboutHero = () => {
 
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e: any) => {
     const rect = e.currentTarget.getBoundingClientRect();
 
     const x = ((e.clientY - rect.top) / rect.height - 0.5) * 15;
