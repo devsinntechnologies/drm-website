@@ -55,7 +55,7 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
   const post = posts.find(p => p.id === postId) || fallbackPost;
 
   return (
-    <main className="min-h-screen bg-background pt-16 md:pt-24 pb-12 md:pb-16">
+    <main className="min-h-screen bg-gradient-to-tr from-red-200 via-orange-100 to-orange-100 pt-16 md:pt-24 pb-12 md:pb-16">
       {/* Article Header */}
       <article className="container mx-auto px-4 md:px-8 max-w-4xl">
         <div className="mb-8 md:mb-10">
