@@ -60,6 +60,7 @@ const features = [
     imageAlt: 'Restaurant Table-Side Ordering',
     reverse: false,
     color: 'primary',
+    storeButtons: true,
   },
 ];
 
