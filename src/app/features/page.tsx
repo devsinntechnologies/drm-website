@@ -1,3 +1,4 @@
+"use client"
 import FeaturesHeroDetailed from "@/components/features/FeaturesHeroDetailed";
 import FeaturesPowerful from "@/components/features/FeaturesPowerful";
 import FeaturesRecipe from "@/components/features/FeaturesRecipe";
