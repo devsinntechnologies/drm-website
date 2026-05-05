@@ -43,7 +43,7 @@ const sections = [
 
 const PrivacyContent = () => {
   return (
-    <section className="relative overflow-hidden py-32 bg-gradient-to-tr from-red-200 via-orange-100 to-orange-100">
+    <section className="relative overflow-hidden py-32 bg-gradient-to-tr from-red-300 via-orange-200 to-orange-200">
       
       {/* Background Blur Effects */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-red-300/30 blur-3xl rounded-full" />

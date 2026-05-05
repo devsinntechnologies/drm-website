@@ -279,7 +279,7 @@ const solutionsData = [
 
 export default function Products() {
   return (
-    <div className="bg-gradient-to-tr from-red-200 via-orange-100 to-orange-100 min-h-screen py-12 px-6 scroll-smooth transition scale-50">
+    <div className="bg-gradient-to-tr from-red-300 via-orange-200 to-orange-200 min-h-screen py-12 px-6 scroll-smooth transition">
       <div className="max-w-6xl mx-auto">
         {solutionsData.map((group) => (
           <div key={group.category} className="mb-16">
@@ -292,7 +292,7 @@ export default function Products() {
                 <section
                   key={item.id}
                   id={item.id}
-                  className="bg-gradient-to-tr from-red-200 via-orange-100 to-orange-100 rounded-2xl shadow-orange-200 border-2 border-orange-200 shadow-xl hover:shadow-xl transition-shadow duration-300"
+                  className="bg-olive-300/25 rounded-2xl border-2 border-red-400/60 duration-300 hover:-translate-2.5 transition hover:shadow-black/50 hover:shadow-2xl"
                 >
                   <div className="p-8">
                     <h3 className="text-2xl font-bold text-slate-900 mb-4">
@@ -307,9 +307,9 @@ export default function Products() {
                       {item.features.map((feature, index) => (
                         <div
                           key={index}
-                          className="flex items-center space-x-3 p-4 bg-slate-50 rounded-xl border-2 border-red-200 hover:bg-orange-400 transition-colors"
+                          className="flex items-center space-x-3 p-4 bg-slate-50 rounded-xl border-2 border-red-200 hover:bg-gray-200 hover:shadow-black/50 hover:shadow-lg transition hover:-translate-1.5 duration-150"
                         >
-                          <span className="text-sm font-semibold text-slate-700 hover:text-white">
+                          <span className="text-sm font-semibold text-slate-700 ">
                             {feature}
                           </span>
                         </div>

@@ -10,7 +10,7 @@ import SupplyChainPage from "@/components/Products/SupplyChainPage";
 
 export default function ProductsPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-tr from-red-200 via-orange-100 to-orange-100">
+    <main className="min-h-screen bg-gradient-to-tr from-red-300 via-orange-200 to-orange-200">
       <Products />
     </main>
   );

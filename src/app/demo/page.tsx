@@ -6,7 +6,7 @@ import PricingBenefits from "@/components/pricing/PricingBenefits";
 
 export default function DemoPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-tr from-red-200 via-orange-100 to-orange-100">
+    <main className="min-h-screen bg-gradient-to-tr from-red-300 via-orange-200 to-orange-200">
       <DemoHero />
       <DemoForm />
 

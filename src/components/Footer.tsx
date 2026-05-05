@@ -51,7 +51,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="pt-20 flex justify-between pb-10 bg-gradient-to-tr from-red-200 via-orange-100 to-orange-100 relative overflow-hidden">
+    <footer className="pt-20 flex justify-between pb-10 bg-gradient-to-tr from-red-300 via-orange-200 to-orange-200 relative overflow-hidden">
       <div className="absolute top-0 inset-x-0 h-px bg-linear-to-r from-transparent via-surface-border to-transparent" />
 
       <div className="absolute inset-0 aurora-bg opacity-25" />

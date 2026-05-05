@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const PricingHero = () => {
   return (
-    <section className="relative pt-24 pb-8 md:pt-28 md:pb-10 overflow-hidden bg-gradient-to-tr from-red-200 via-orange-100 to-orange-100">
+    <section className="relative pt-24 pb-8 md:pt-28 md:pb-10 overflow-hidden bg-gradient-to-tr from-red-300 via-orange-200 to-orange-200">
       <div className="container mx-auto px-4 md:px-8 relative z-10 text-center">
         <motion.div
            initial={{ opacity: 0, scale: 0.9 }}

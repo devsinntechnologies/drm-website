@@ -65,7 +65,7 @@ const Industries = () => {
   ];
 
   return (
-    <section className="min-h-screen bg-gradient-to-tr from-red-200 via-orange-100 to-orange-100 text-foreground py-24 px-4 md:px-8">
+    <section className="min-h-screen bg-gradient-to-tr from-red-300 via-orange-200 to-orange-200 text-foreground py-24 px-4 md:px-8">
 
       {/* HERO */}
       <div className="max-w-6xl mx-auto text-center">
@@ -108,7 +108,7 @@ const Industries = () => {
         {features.map((feature, index) => (
           <div
             key={index}
-            className="relative group rounded-3xl p-8 bg-white/10 backdrop-blur-2xl border border-white/20 shadow-lg transition-all duration-500 hover:-translate-y-3 hover:border-primary/40 overflow-hidden"
+            className="relative group rounded-3xl p-8 bg-gray-300/25 backdrop-blur-2xl border border-black/20 shadow-lg transition-all duration-500 hover:-translate-y-3 hover:border-primary/40 overflow-hidden"
           >
 
             {/* Glow background */}

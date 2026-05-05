@@ -22,7 +22,7 @@ const EcosystemSection = () => {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
-    <section ref={sectionRef} className="py-8 md:py-10 bg-gradient-to-tr from-red-200 via-orange-100 to-orange-100 relative overflow-hidden">
+    <section ref={sectionRef} className="py-8 md:py-10 bg-gradient-to-tr from-red-300 via-orange-200 to-orange-200 relative overflow-hidden">
       {/* Noise Texture */}
       <div className="noise-overlay opacity-5" />
 

@@ -14,7 +14,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-tr from-red-200 via-orange-100 to-orange-100 relative overflow-hidden">
+    <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-tr from-red-300 via-orange-200 to-orange-200 relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex flex-col lg:flex-row gap-6 md:gap-8 lg:gap-12">
           
@@ -74,24 +74,24 @@ const ContactForm = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="glass-card p-8 md:p-10 rounded-[48px] border border-surface-border/50 shadow-2xl relative overflow-hidden"
+              className="glass-card p-8 md:p-10 rounded-[48px] border border-black/50 shadow-2xl relative overflow-hidden"
             >
               <div className="absolute top-0 left-0 w-64 h-64 bg-primary/5 blur-[80px] rounded-full pointer-events-none" />
               
-              <div className="space-y-5 md:space-y-6 relative z-10">
+              <div className="space-y-5 md:space-y-6 relative z-10 ">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <motion.div variants={itemVariants} className="space-y-3">
                     <label className="text-sm font-black text-foreground/70 uppercase tracking-widest ml-1">Your Name</label>
-                    <input type="text" className="w-full bg-surface/50 border border-surface-border rounded-2xl px-6 py-4 focus:border-primary focus:outline-none transition-all placeholder:text-muted/40 font-bold" placeholder="John Doe" />
+                    <input type="text" className="w-full bg-surface/50 border border-black/40 rounded-2xl px-6 py-4 focus:border-primary focus:outline-none transition-all placeholder:text-muted/40 font-bold" placeholder="John Doe" />
                   </motion.div>
                   <motion.div variants={itemVariants} className="space-y-3">
                     <label className="text-sm font-black text-foreground/70 uppercase tracking-widest ml-1">Email Address</label>
-                    <input type="email" className="w-full bg-surface/50 border border-surface-border rounded-2xl px-6 py-4 focus:border-primary focus:outline-none transition-all placeholder:text-muted/40 font-bold" placeholder="john@example.com" />
+                    <input type="email" className="w-full bg-surface/50 border border-black/40 rounded-2xl px-6 py-4 focus:border-primary focus:outline-none transition-all placeholder:text-muted/40 font-bold" placeholder="john@example.com" />
                   </motion.div>
                 </div>
                 <motion.div variants={itemVariants} className="space-y-3">
                   <label className="text-sm font-black text-foreground/70 uppercase tracking-widest ml-1">Subject</label>
-                  <select className="w-full bg-surface/50 border border-surface-border rounded-2xl px-6 py-4 focus:border-primary focus:outline-none transition-all font-bold appearance-none cursor-pointer">
+                  <select className="w-full bg-surface/50 border border-black/40 rounded-2xl px-6 py-4 focus:border-primary focus:outline-none transition-all font-bold appearance-none cursor-pointer">
                     <option>Product Inquiry</option>
                     <option>Technical Support</option>
                     <option>Partnership</option>
@@ -100,7 +100,7 @@ const ContactForm = () => {
                 </motion.div>
                 <motion.div variants={itemVariants} className="space-y-3">
                   <label className="text-sm font-black text-foreground/70 uppercase tracking-widest ml-1">Message</label>
-                  <textarea rows={5} className="w-full bg-surface/50 border border-surface-border rounded-2xl px-6 py-4 focus:border-primary focus:outline-none transition-all placeholder:text-muted/40 font-bold" placeholder="Tell us about your restaurant..." />
+                  <textarea rows={5} className="w-full bg-surface/50 border border-black/40 rounded-2xl px-6 py-4 focus:border-primary focus:outline-none transition-all placeholder:text-muted/40 font-bold" placeholder="Tell us about your restaurant..." />
                 </motion.div>
                 <motion.button 
                   variants={itemVariants}
