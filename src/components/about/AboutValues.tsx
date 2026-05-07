@@ -15,7 +15,7 @@ const AboutValues = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-8 md:py-10 bg-gradient-to-tr from-red-200 via-orange-100 to-orange-100 relative overflow-hidden">
+    <section className="py-8 md:py-10 bg-gradient-to-tr from-red-300 via-orange-200 to-orange-200 relative overflow-hidden">
       <div className="noise-overlay opacity-5" />
       
       {/* Dynamic Background Glow based on hover */}
@@ -63,7 +63,7 @@ const AboutValues = () => {
                 onMouseEnter={() => setHoveredIndex(i)}
                 onMouseLeave={() => setHoveredIndex(null)}
                 whileHover={{ y: -10, scale: 1.02 }}
-                className="glass-card p-10 rounded-[40px] border-2 border-surface-border/40 relative overflow-hidden group bg-surface/30 backdrop-blur-2xl"
+                className=" p-10 rounded-[40px] border-2 border-surface-border/40 relative overflow-hidden group bg-taupe-100 backdrop-blur-2xl"
                 style={{
                   boxShadow: isHovered ? `0 30px 60px rgba(var(--${v.c}-rgb), 0.15)` : '0 10px 30px rgba(0,0,0,0.2)',
                   borderColor: isHovered ? `color-mix(in srgb, ${colorVar} 50%, transparent)` : undefined,
@@ -97,9 +97,9 @@ const AboutValues = () => {
                 </p>
 
                 {/* Background number outline */}
-                <div className="absolute -bottom-4 -right-2 text-[120px] font-black opacity-5 pointer-events-none select-none transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-4">
+                {/* <div className="absolute -bottom-4 -right-2 text-[120px] font-black opacity-5 pointer-events-none select-none transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-4">
                   0{i + 1}
-                </div>
+                </div> */}
               </motion.div>
             );
           })}

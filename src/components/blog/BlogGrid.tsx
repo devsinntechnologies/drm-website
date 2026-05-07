@@ -65,7 +65,7 @@ const BlogGrid = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-tr from-red-200 via-orange-100 to-orange-100">
+    <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-tr from-red-300 via-orange-200 to-orange-200">
       <div className="container mx-auto px-4 md:px-8">
         <motion.div 
           layout

@@ -124,7 +124,7 @@ function TiltCard({ review }: { review: typeof reviews[0] }) {
 
 const Testimonials = () => {
   return (
-    <section className="py-8 md:py-10 bg-gradient-to-tr from-red-200 via-orange-100 to-orange-100 relative overflow-hidden">
+    <section className="py-8 md:py-10 bg-gradient-to-tr from-red-300 via-orange-200 to-orange-200 relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/10 blur-[150px] rounded-full pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/10 blur-[150px] rounded-full pointer-events-none" />

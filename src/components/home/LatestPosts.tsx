@@ -116,7 +116,7 @@ function PostCard({ post, idx }: { post: typeof posts[0]; idx: number }) {
 
 const LatestPosts = () => {
   return (
-    <section className="py-8 md:py-10 bg-gradient-to-tr from-red-200 via-orange-100 to-orange-100 relative overflow-hidden">
+    <section className="py-8 md:py-10 bg-gradient-to-tr from-red-300 via-orange-200 to-orange-200 relative overflow-hidden">
       {/* Noise */}
       <div className="noise-overlay opacity-5" />
 

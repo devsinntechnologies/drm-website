@@ -21,7 +21,7 @@ const LoyaltyAndInsights = () => {
   ];
 
   return (
-    <section className="relative overflow-hidden py-24 bg-gradient-to-tr from-red-200 via-orange-100 to-orange-100">
+    <section className="relative overflow-hidden py-24 bg-gradient-to-tr from-red-300 via-orange-200 to-orange-200">
       <div className="absolute inset-x-0 top-0 h-80 bg-linear-to-b from-primary/15 to-transparent pointer-events-none" />
       <div className="absolute left-0 top-24 h-72 w-72 rounded-full bg-primary/10 blur-3xl pointer-events-none" />
       <div className="absolute right-0 top-40 h-72 w-72 rounded-full bg-secondary/10 blur-3xl pointer-events-none" />

@@ -9,7 +9,7 @@ const AboutHero = () => {
 
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
 
-  const handleMouseMove = (e: any) => {
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
 
     const x = ((e.clientY - rect.top) / rect.height - 0.5) * 15;
@@ -21,7 +21,7 @@ const AboutHero = () => {
   return (
     <section
       ref={ref}
-      className="relative pt-0 md:pt-0 pb-10 md:pb-14 overflow-hidden bg-gradient-to-tr from-red-200 via-orange-100 to-orange-100"
+      className="relative pt-0 md:pt-0 pb-10 md:pb-14 overflow-hidden bg-gradient-to-tr from-red-300 via-orange-200 to-orange-200"
     >
       {/* Noise Texture */}
       <div className="noise-overlay opacity-10" />

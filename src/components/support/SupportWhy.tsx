@@ -43,7 +43,7 @@ const reasons = [
 
 const SupportWhy = () => {
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-tr from-red-200 via-orange-100 to-orange-100 relative overflow-hidden">
+    <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-tr from-red-300 via-orange-200 to-orange-200 relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex flex-col lg:flex-row items-center gap-6 md:gap-8 lg:gap-12">
           <motion.div 

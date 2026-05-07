@@ -20,10 +20,10 @@ const HeroSection = () => {
         playsInline
         preload="metadata"
       >
-        <source src="/resturant.mp4" type="video/mp4" />
+        <source src="/restaurant1.mp4" type="video/mp4" />
       </video>
 
-      <div className="absolute inset-0 bg-linear-to-b from-orange-100 via-background/20 to-red-100" />
+      <div className="absolute inset-0 bg-linear-to-b from-orange-200 via-background/20 to-red-200" />
       {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(239,68,68,0.18),transparent_45%),radial-gradient(circle_at_80%_70%,rgba(249,115,22,0.15),transparent_45%)]" /> */}
 
       {/* Grid pattern */}

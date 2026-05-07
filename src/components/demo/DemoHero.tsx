@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const DemoHero = () => {
   return (
-    <section className="relative pt-32 pb-16 overflow-hidden bg-gradient-to-tr from-red-200 via-orange-100 to-orange-100">
+    <section className="relative pt-32 pb-16 overflow-hidden bg-gradient-to-tr from-red-300 via-orange-200 to-orange-200">
       {/* Animated Glow */}
       <motion.div 
         animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}

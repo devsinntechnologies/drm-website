@@ -2,7 +2,19 @@
 import React, { useRef, useState } from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 
-const features = [
+type Feature = {
+  icon: React.ReactNode;
+  title: string;
+  subtitle: string;
+  points: string[];
+  image: string;
+  imageAlt: string;
+  reverse: boolean;
+  color: string;
+  storeButtons?: boolean;
+};
+
+const features: Feature[] = [
   {
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -188,7 +200,7 @@ function FeatureBlock({ feature, idx }: { feature: typeof features[0]; idx: numb
 
 const SmartFeatures = () => {
   return (
-    <section className="py-8 md:py-10 bg-gradient-to-tr from-red-200 via-orange-100 to-orange-100 relative overflow-hidden">
+    <section className="py-8 md:py-10 bg-gradient-to-tr from-red-300 via-orange-200 to-orange-200 relative overflow-hidden">
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-surface-border to-transparent" />
       <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-surface-border to-transparent" />
 

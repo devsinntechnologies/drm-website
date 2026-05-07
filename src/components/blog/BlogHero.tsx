@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const BlogHero = () => {
   return (
-    <section className="relative pt-16 md:pt-24 pb-12 md:pb-16 overflow-hidden border-b border-surface-border bg-gradient-to-b from-red-300 via-orange-100 to-orange-200">
+    <section className="relative pt-16 md:pt-24 pb-12 md:pb-16 overflow-hidden border-b border-surface-border bg-gradient-to-tr from-red-300 via-orange-200 to-orange-200">
       
       {/* Background Decor */}
       <div className="absolute top-0 inset-0 pointer-events-none overflow-hidden">
