@@ -2,7 +2,19 @@
 import React, { useRef, useState } from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 
-const features = [
+type Feature = {
+  icon: React.ReactNode;
+  title: string;
+  subtitle: string;
+  points: string[];
+  image: string;
+  imageAlt: string;
+  reverse: boolean;
+  color: string;
+  storeButtons?: boolean;
+};
+
+const features: Feature[] = [
   {
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
