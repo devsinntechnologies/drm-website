@@ -4,12 +4,12 @@ import { motion } from 'framer-motion';
 
 const PricingHero = () => {
   return (
-    <section className="relative pt-24 pb-8 md:pt-28 md:pb-10 overflow-hidden bg-gradient-to-tr from-red-300 via-orange-200 to-orange-200">
+    <section className="relative pt-24 pb-8 md:pt-28 md:pb-10 overflow-hidden bg-background">
       <div className="container mx-auto px-4 md:px-8 relative z-10 text-center">
         <motion.div
-           initial={{ opacity: 0, scale: 0.9 }}
-           animate={{ opacity: 1, scale: 1 }}
-           transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
         >
           <span className="section-label mx-auto mb-4 md:mb-6">Simple Pricing</span>
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-foreground mb-5 md:mb-8 tracking-tight">

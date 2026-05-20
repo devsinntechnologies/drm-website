@@ -21,11 +21,11 @@ const LoyaltyAndInsights = () => {
   ];
 
   return (
-    <section className="relative overflow-hidden py-24 bg-gradient-to-tr from-red-300 via-orange-200 to-orange-200">
-      <div className="absolute inset-x-0 top-0 h-80 bg-linear-to-b from-primary/15 to-transparent pointer-events-none" />
+    <section className="relative overflow-hidden py-24 bg-background">
+      {/* <div className="absolute inset-x-0 top-0 h-80 bg-linear-to-b from-primary/15 to-transparent pointer-events-none" />
       <div className="absolute left-0 top-24 h-72 w-72 rounded-full bg-primary/10 blur-3xl pointer-events-none" />
       <div className="absolute right-0 top-40 h-72 w-72 rounded-full bg-secondary/10 blur-3xl pointer-events-none" />
-      <div className="absolute inset-x-0 top-[42%] h-px bg-linear-to-r from-transparent via-slate-200 to-transparent" />
+      <div className="absolute inset-x-0 top-[42%] h-px bg-linear-to-r from-transparent via-slate-200 to-transparent" /> */}
 
       <div className="relative container mx-auto px-4 md:px-8">
         <motion.div
@@ -67,10 +67,10 @@ const LoyaltyAndInsights = () => {
                     type: "spring",
                     stiffness: 220,
                   }}
-                  className={`group relative overflow-hidden rounded-[28px] border ${borderColors[idx % borderColors.length]} bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-[0_30px_90px_rgba(249,115,22,0.18)]`}
+                  className={`group relative overflow-hidden rounded-[28px] border border-primary-hover bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-[0_30px_90px_rgba(249,115,22,0.18)]`}
                 >
                   <div
-                    className={`pointer-events-none absolute inset-0 bg-linear-to-br ${glowStyles[idx % glowStyles.length]} opacity-0 transition duration-500 group-hover:opacity-80 blur-3xl`}
+                    className={`pointer-events-none absolute inset-0 bg-linear-to-br border-primary-hover opacity-0 transition duration-500 group-hover:opacity-80 blur-3xl`}
                   />
                   <div className="relative z-10">
                     <div className="text-3xl font-extrabold bgt text-slate-900">
@@ -90,7 +90,7 @@ const LoyaltyAndInsights = () => {
               whileHover={{ y: -8, scale: 1.01 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, type: "spring", stiffness: 220 }}
-              className="group relative overflow-hidden rounded-[36px] border border-yellow-400 bg-white shadow-[0_35px_80px_rgba(15,23,42,0.08)] transition-shadow duration-300 hover:shadow-[0_40px_120px_rgba(249,115,22,0.18)]"
+              className="group relative overflow-hidden rounded-[36px] border border-primary-hover bg-white shadow-primary transition-shadow duration-300 hover:shadow-primary"
             >
               <div className="pointer-events-none absolute inset-0 bg-linear-to-br from-yellow-300/0 via-transparent to-transparent opacity-0 transition duration-500 group-hover:opacity-80 blur-3xl" />
               <img
@@ -115,9 +115,9 @@ const LoyaltyAndInsights = () => {
                 type: "spring",
                 stiffness: 220,
               }}
-              className="group relative overflow-hidden rounded-[36px] border border-red-400 bg-linear-to-br from-primary/20 via-white to-secondary/10 p-6 shadow-[0_35px_80px_rgba(148,163,184,0.15)] transition-shadow duration-300 hover:shadow-[0_40px_120px_rgba(249,115,22,0.16)]"
+              className="group relative overflow-hidden rounded-[36px] border border-primary bg-linear-to-br from-primary/20 via-white to-secondary/10 p-6 shadow-primary transition-shadow duration-300 hover:shadow-primary"
             >
-              <div className="pointer-events-none absolute inset-0 bg-linear-to-br from-red-300/0 via-transparent to-transparent opacity-0 transition duration-500 group-hover:opacity-80 blur-3xl" />
+              <div className="pointer-events-none absolute inset-0 bg-linear-to-br from-primary-hover/0 via-primary/20 to-primary/10 opacity-0 transition duration-500 group-hover:opacity-80 blur-3xl" />
               <div className="absolute inset-x-0 top-0 h-24 bg-white/80 blur-3xl" />
               <div className="relative space-y-4">
                 <span className="text-sm uppercase tracking-[0.3em] text-primary">
@@ -182,10 +182,10 @@ const LoyaltyAndInsights = () => {
               whileHover={{ y: -5, scale: 1.01 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1, type: "spring", stiffness: 220 }}
-              className={`group relative overflow-hidden rounded-4xl border ${borderColors[idx % borderColors.length]} bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-[0_35px_110px_rgba(249,115,22,0.16)]`}
+              className={`group relative overflow-hidden rounded-4xl border border-primary-hover bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-primary`}
             >
               <div
-                className={`pointer-events-none absolute inset-0 bg-linear-to-br ${glowStyles[idx % glowStyles.length]} opacity-0 transition duration-500 group-hover:opacity-90 blur-3xl`}
+                className={`pointer-events-none absolute inset-0 bg-linear-to-br border-primary-hover opacity-0 transition duration-500 group-hover:opacity-90 blur-3xl`}
               />
               <div className="relative z-10">
                 <div className="text-sm uppercase tracking-[0.3em] text-primary">
@@ -212,10 +212,10 @@ const LoyaltyAndInsights = () => {
               whileHover={{ y: -5, scale: 1.01 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1, type: "spring", stiffness: 220 }}
-              className={`group relative overflow-hidden rounded-4xl border ${borderColors[idx % borderColors.length]} bg-white p-8 text-center shadow-sm transition-shadow duration-300 hover:shadow-[0_35px_90px_rgba(249,115,22,0.16)]`}
+              className={`group relative overflow-hidden rounded-4xl border border-primary-hover bg-white p-8 text-center shadow-sm transition-shadow duration-300 hover:shadow-primary`}
             >
               <div
-                className={`pointer-events-none absolute inset-0 bg-linear-to-br ${glowStyles[idx % glowStyles.length]} opacity-0 transition duration-500 group-hover:opacity-90 blur-3xl`}
+                className={`pointer-events-none absolute inset-0 bg-linear-to-br border-primary-hover opacity-0 transition duration-500 group-hover:opacity-90 blur-3xl`}
               />
               <div className="relative z-10">
                 <div className="text-4xl font-black text-slate-900">

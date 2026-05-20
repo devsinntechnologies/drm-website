@@ -11,16 +11,16 @@ const AboutMission = () => {
   ];
 
   return (
-    <section className="py-8 md:py-10 bg-gradient-to-tr from-red-300 via-orange-200 to-orange-200 relative overflow-hidden">
+    <section className="py-8 md:py-10 bg-background relative overflow-hidden">
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-surface-border to-transparent" />
-      
+
       {/* Glows */}
       <div className="absolute -left-40 top-20 w-[600px] h-[600px] bg-secondary/5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="container mx-auto px-4 md:px-8 relative z-10">
         <div className="flex flex-col lg:flex-row-reverse items-center gap-8 md:gap-10 lg:gap-12">
-          
-          <motion.div 
+
+          <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -32,13 +32,13 @@ const AboutMission = () => {
               Empowering <span className="text-primary text-glow">Growth</span>
             </h2>
             <p className="text-lg text-muted font-medium leading-relaxed mb-6">
-              DRM delivers a complete restaurant and retail management system designed to simplify operations, 
+              DRM delivers a complete restaurant and retail management system designed to simplify operations,
               enhance customer service, and grow your business with actionable insights.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
               {points.map((point, i) => (
-                <motion.div 
+                <motion.div
                   key={i}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -46,7 +46,7 @@ const AboutMission = () => {
                   transition={{ delay: i * 0.15, duration: 0.6 }}
                   className="flex gap-5 group"
                 >
-                  <motion.div 
+                  <motion.div
                     whileHover={{ scale: 1.2, rotate: 15 }}
                     className="w-12 h-12 shrink-0 rounded-2xl bg-secondary/10 border border-secondary/20 flex items-center justify-center text-secondary relative overflow-hidden"
                   >
@@ -64,7 +64,7 @@ const AboutMission = () => {
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.9, rotateY: -20 }}
             whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
             viewport={{ once: true }}
@@ -73,8 +73,8 @@ const AboutMission = () => {
             style={{ perspective: '1000px' }}
           >
             <div className="absolute inset-0 bg-secondary/20 blur-[100px] rounded-full opacity-40 group-hover:opacity-80 transition-opacity duration-1000" />
-            
-            <motion.div 
+
+            <motion.div
               whileHover={{ rotateY: 10, rotateX: 5, scale: 1.02 }}
               transition={{ type: 'spring', stiffness: 300, damping: 20 }}
               className="glass-card rounded-[40px] p-4 relative overflow-hidden shadow-[0_30px_60px_rgba(var(--secondary-rgb),0.2)] border-2 border-surface-border/60 bg-surface/30 backdrop-blur-2xl"
@@ -82,12 +82,12 @@ const AboutMission = () => {
               {/* Shimmer effect */}
               <div className="absolute top-0 -inset-full h-full w-1/2 z-10 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-10 group-hover:animate-shimmer" />
 
-              <img 
-                src="/home/hero-mockup.png" 
-                alt="DRM Platform" 
-                className="w-full aspect-[4/3] object-cover rounded-[32px] transform transition-transform duration-1000 group-hover:scale-105" 
+              <img
+                src="/home/hero-mockup.png"
+                alt="DRM Platform"
+                className="w-full aspect-[4/3] object-cover rounded-[32px] transform transition-transform duration-1000 group-hover:scale-105"
               />
-              
+
               <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent opacity-60 rounded-[32px]" />
             </motion.div>
           </motion.div>

@@ -21,7 +21,7 @@ const AboutHero = () => {
   return (
     <section
       ref={ref}
-      className="relative pt-0 md:pt-0 pb-10 md:pb-14 overflow-hidden bg-gradient-to-tr from-red-300 via-orange-200 to-orange-200"
+      className="relative pt-0 md:pt-0 pb-10 md:pb-14 overflow-hidden bg-background"
     >
       {/* Noise Texture */}
       <div className="noise-overlay opacity-10" />

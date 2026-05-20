@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 
 const SupportContact = () => {
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-tr from-red-300 via-orange-200 to-orange-200 relative overflow-hidden">
+    <section className="py-12 md:py-16 lg:py-20 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -14,9 +14,9 @@ const SupportContact = () => {
           className="glass-card rounded-[48px] p-12 md:p-20 border border-primary/20 bg-primary/5 relative overflow-hidden"
         >
           <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 blur-[100px] rounded-full -translate-y-1/2 translate-x-1/2" />
-          
+
           <div className="relative z-10 text-center max-w-3xl mx-auto">
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -24,31 +24,31 @@ const SupportContact = () => {
             >
               Ready to <span className="text-primary">scale</span> your business?
             </motion.h2>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
               className="text-base sm:text-lg md:text-xl text-muted leading-relaxed font-bold mb-6 md:mb-8"
             >
-              Join thousands of successful restaurant owners who trust DRM for their daily operations. 
+              Join thousands of successful restaurant owners who trust DRM for their daily operations.
               Get your free demo setup in less than 24 hours.
             </motion.p>
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
               className="flex flex-wrap justify-center gap-6"
             >
-              <motion.button 
+              <motion.button
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-10 py-5 bg-primary text-white font-black rounded-2xl shadow-2xl glow-primary text-lg"
               >
                 Contact Sales
               </motion.button>
-              <motion.button 
+              <motion.button
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-10 py-5 glass-card border border-primary/30 text-primary font-black rounded-2xl text-lg hover:bg-primary/5 transition-all"

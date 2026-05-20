@@ -11,7 +11,7 @@ const team = [
 
 const AboutTeam = () => {
   return (
-    <section className="py-8 md:py-10 bg-gradient-to-tr from-red-300 via-orange-200 to-orange-200 relative overflow-hidden">
+    <section className="py-8 md:py-10 bg-background relative overflow-hidden">
       <div className="absolute top-0 right-0 w-full h-full bg-grid-pattern opacity-30 pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
 

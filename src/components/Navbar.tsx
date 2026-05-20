@@ -4,16 +4,17 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 type NavLink =
   | { name: string; href: string }
   | {
-      name: string;
-      megaMenu: {
-        modules: { name: string; href: string }[];
-        products: { name: string; href: string }[];
-      };
+    name: string;
+    megaMenu: {
+      modules: { name: string; href: string }[];
+      products: { name: string; href: string }[];
     };
+  };
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -93,20 +94,19 @@ export default function Navbar() {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-[999] transition-all duration-300 ${
-        scrolled || isOpen
-          ? "bg-black/80 backdrop-blur-xl border-b border-white/10 py-2 text-white "
-          : "bg-transparent py-4"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-[999] transition-all duration-300 ${scrolled || isOpen
+        ? "bg-background  border-b border-white/10 py-2 text-black "
+        : "bg-transperant py-4"
+        }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-auto">
         <div className="flex items-center justify-between">
           {/* LOGO */}
-          <Link href="/" onClick={closeMenu} className="flex items-center gap-2 z-[1001]">
-            <img src="/logo.png" alt="Logo" className="h-10 object-contain" />
-            <span className={`text-2xl font-black  ${scrolled || isOpen ? "text-primary" : "text-primary/80"}`}>
-              DRM
-            </span>
+          <Link href="/" onClick={closeMenu} className="flex items-center gap-2 ">
+            <Image src="/logo.png" alt="Logo"
+              width={150}
+              height={150}
+              className="h-16 object-contain" />
           </Link>
 
           {/* DESKTOP NAV */}
@@ -120,7 +120,7 @@ export default function Navbar() {
                     onMouseEnter={() => setMegaMenuOpen(link.name)}
                     onMouseLeave={() => setMegaMenuOpen(null)}
                   >
-                    <button className={`px-4 py-2 text-sm font-bold ${scrolled || isOpen ? "text-white hover:text-primary" : "text-black hover:text-primary"}`}>
+                    <button className={`px-4 py-2 text-sm font-bold ${scrolled || isOpen ? "text-black hover:text-primary" : "text-black hover:text-primary"}`}>
                       {link.name}
                     </button>
                     <AnimatePresence>
@@ -129,13 +129,13 @@ export default function Navbar() {
                           initial={{ opacity: 0, y: 10 }}
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: 10 }}
-                          className="absolute top-full mt-2 left-1/2 -translate-x-1/2 w-[600px] bg-neutral-900 border border-white/10 rounded-2xl p-6"
+                          className="absolute top-full mt-2 left-1/2 -translate-x-1/2 w-[600px] bg-white border border-white/10 rounded-2xl p-6"
                         >
                           <div className="grid grid-cols-2 gap-8">
                             <div>
                               <h3 className="text-primary font-bold mb-3">Modules</h3>
                               {link.megaMenu.modules.map((item) => (
-                                <Link key={item.href} href={item.href} className="block text-white/70 hover:text-white text-sm mb-2">
+                                <Link key={item.href} href={item.href} className="block text-black/70 hover:text-primary text-sm mb-2">
                                   {item.name}
                                 </Link>
                               ))}
@@ -143,7 +143,7 @@ export default function Navbar() {
                             <div>
                               <h3 className="text-primary font-bold mb-3">Products</h3>
                               {link.megaMenu.products.map((item) => (
-                                <Link key={item.href} href={item.href} className="block text-white/70 hover:text-white text-sm mb-2">
+                                <Link key={item.href} href={item.href} className="block text-black/70 hover:text-primary text-sm mb-2">
                                   {item.name}
                                 </Link>
                               ))}
@@ -159,9 +159,8 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-4 py-2 text-sm  font-bold ${ 
-                    pathname === link.href ? "text-primary" : "text-black hover:text-primary"
-                  } ${scrolled || isOpen ? "text-white hover:text-primary" : "text-black hover:text-primary"}`}
+                  className={`px-4 py-2 text-sm  font-bold ${pathname === link.href ? "text-primary" : "text-black hover:text-primary"
+                    } ${scrolled || isOpen ? "text-black hover:text-primary" : "text-black hover:text-primary"}`}
                 >
                   {link.name}
                 </Link>

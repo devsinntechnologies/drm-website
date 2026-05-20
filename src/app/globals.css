@@ -9,12 +9,12 @@
   --surface: #ffffff;
   --surface-border: #dfe5f0;
 
-  --primary: #c12f2f;
+  --primary: #3EA348;
   --primary-rgb: 193, 47, 47;
-  --primary-hover: #a82727;
+  --primary-hover: #77d380;
   --primary-foreground: #ffffff;
 
-  --secondary: #ff9f43;
+  --secondary: #4C4C4C;
   --secondary-rgb: 255, 159, 67;
   --secondary-foreground: #141822;
 
@@ -29,14 +29,14 @@
   --surface: #111723;
   --surface-border: #242e40;
 
-  --primary: #ef5757;
+  --primary: #3EA348;
   --primary-rgb: 239, 87, 87;
-  --primary-hover: #f86a6a;
+  --primary-hover: #77d380;
   --primary-foreground: #ffffff;
 
-  --secondary: #ffae5d;
-  --secondary-rgb: 255, 174, 93;
-  --secondary-foreground: #111723;
+  --secondary: #4C4C4C;
+  --secondary-rgb: 76, 76, 76;
+  --secondary-foreground: #ffffff;
 
   --accent: var(--secondary);
   --muted: #95a1b6;
@@ -97,7 +97,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   transition: background-color 0.3s ease, color 0.3s ease;
   scroll-behavior: smooth;
-  
+
 }
 
 /* Base custom utilities */
@@ -269,7 +269,7 @@ body {
 
   /* --- Premium Enhancements --- */
   .aurora-bg {
-    background: 
+    background:
       radial-gradient(ellipse at 100% 0%, color-mix(in srgb, var(--primary) 16%, transparent) 0%, transparent 60%),
       radial-gradient(ellipse at 0% 100%, color-mix(in srgb, var(--secondary) 16%, transparent) 0%, transparent 60%);
     filter: blur(70px);
@@ -279,9 +279,17 @@ body {
   }
 
   @keyframes aurora-shift {
-    0% { transform: scale(1) translate(0, 0); }
-    50% { transform: scale(1.2) translate(5%, 5%); }
-    100% { transform: scale(1) translate(-5%, -5%); }
+    0% {
+      transform: scale(1) translate(0, 0);
+    }
+
+    50% {
+      transform: scale(1.2) translate(5%, 5%);
+    }
+
+    100% {
+      transform: scale(1) translate(-5%, -5%);
+    }
   }
 
   .noise-overlay {
@@ -314,8 +322,15 @@ body {
   }
 
   @keyframes pulse-slow {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; }
+
+    0%,
+    100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0.5;
+    }
   }
 
   .text-reveal {
@@ -329,17 +344,24 @@ body {
   }
 
   @keyframes reveal {
-    from { transform: translateY(100%); }
-    to { transform: translateY(0); }
+    from {
+      transform: translateY(100%);
+    }
+
+    to {
+      transform: translateY(0);
+    }
   }
 
   @keyframes gradientShift {
     0% {
       background-position: 0% 50%;
     }
+
     50% {
       background-position: 100% 50%;
     }
+
     100% {
       background-position: 0% 50%;
     }

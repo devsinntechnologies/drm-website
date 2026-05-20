@@ -4,22 +4,22 @@ import { motion } from 'framer-motion';
 
 const BlogHero = () => {
   return (
-    <section className="relative pt-16 md:pt-24 pb-12 md:pb-16 overflow-hidden border-b border-surface-border bg-gradient-to-tr from-red-300 via-orange-200 to-orange-200">
-      
+    <section className="relative pt-16 md:pt-24 pb-12 md:pb-16 overflow-hidden border-b border-surface-border bg-background">
+
       {/* Background Decor */}
       <div className="absolute top-0 inset-0 pointer-events-none overflow-hidden">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.5 }}
-          className="absolute top-0 right-0 w-[500px] h-[500px] bg-orange-300/20 blur-[150px] rounded-full -translate-y-1/2 translate-x-1/4" 
+          className="absolute top-0 right-0 w-[500px] h-[500px] bg-orange-300/20 blur-[150px] rounded-full -translate-y-1/2 translate-x-1/4"
         />
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.5, delay: 0.2 }}
-          className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-yellow-300/20 blur-[120px] rounded-full translate-y-1/2 -translate-x-1/4" 
+          className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-yellow-300/20 blur-[120px] rounded-full translate-y-1/2 -translate-x-1/4"
         />
 
         <div className="noise-overlay opacity-10" />
@@ -27,7 +27,7 @@ const BlogHero = () => {
 
       <div className="container mx-auto px-4 md:px-8 relative z-10 text-center">
         <div className="max-w-4xl mx-auto">
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -40,12 +40,12 @@ const BlogHero = () => {
             </h1>
 
             <p className="text-base sm:text-lg md:text-xl text-muted max-w-2xl mx-auto leading-relaxed font-medium">
-              Master the art of restaurant management. Stay ahead with deep dives into 
+              Master the art of restaurant management. Stay ahead with deep dives into
               industry trends, technical guides, and operational strategies.
             </p>
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
@@ -58,8 +58,8 @@ const BlogHero = () => {
               'Marketing',
               'Industry News'
             ].map((cat, i) => (
-              <motion.button 
-                key={cat} 
+              <motion.button
+                key={cat}
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.5 + (i * 0.1) }}

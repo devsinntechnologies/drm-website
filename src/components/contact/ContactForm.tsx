@@ -45,12 +45,12 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-tr from-red-300 via-orange-200 to-orange-200 relative overflow-hidden">
+    <section className="py-12 md:py-16 lg:py-20 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex flex-col lg:flex-row gap-6 md:gap-8 lg:gap-12">
 
           {/* Contact Info */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -63,7 +63,7 @@ const ContactForm = () => {
               </h3>
 
               <p className="text-base sm:text-lg text-muted font-bold leading-relaxed max-w-lg">
-                Whether you're starting a new cafe or managing a global franchise, 
+                Whether you're starting a new cafe or managing a global franchise,
                 our specialists are here to guide you.
               </p>
             </div>
@@ -74,7 +74,7 @@ const ContactForm = () => {
                 { t: "Phone Support", d: "+92 (300) 123-4567", i: "📞" },
                 { t: "Mail Us", d: "hello@devsinn.com", i: "✉️" }
               ].map((item, idx) => (
-                <motion.div 
+                <motion.div
                   key={idx}
                   initial={{ opacity: 0, y: 15 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -135,7 +135,7 @@ const ContactForm = () => {
 
                 <motion.div variants={itemVariants}>
                   <select
-                    name="subject"   
+                    name="subject"
                     className="w-full bg-surface/50 border border-black/40 rounded-2xl px-6 py-4 font-bold"
                   >
                     <option>Product Inquiry</option>

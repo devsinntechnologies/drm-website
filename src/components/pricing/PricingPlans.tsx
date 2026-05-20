@@ -39,7 +39,7 @@ const PricingPlans = () => {
   ];
 
   return (
-    <section className="py-8 md:py-10 bg-gradient-to-tr from-red-300 via-orange-200 to-orange-200 relative overflow-hidden">
+    <section className="py-8 md:py-10 bg-background relative overflow-hidden">
       {/* Dynamic Background Glow based on hover */}
       <AnimatePresence>
         {hoveredIndex !== null && (
@@ -54,8 +54,8 @@ const PricingPlans = () => {
       </AnimatePresence>
 
       <div className="container mx-auto px-4 md:px-8 relative z-10">
-        
-        <motion.div 
+
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -71,7 +71,7 @@ const PricingPlans = () => {
           {plans.map((plan, i) => {
             const isHovered = hoveredIndex === i;
             const colorVar = `var(--${plan.color})`;
-            
+
             return (
               <motion.div
                 key={i}
@@ -84,17 +84,17 @@ const PricingPlans = () => {
                 whileHover={{ y: -10, scale: 1.02 }}
                 className={`glass-card p-6 md:p-8 rounded-[28px] md:rounded-[40px] flex flex-col h-full relative overflow-hidden transition-all duration-500 backdrop-blur-2xl ${plan.popular ? 'bg-surface/60 md:scale-[1.02] lg:scale-[1.05] z-10' : 'bg-surface/30'}`}
                 style={{
-                  boxShadow: isHovered 
-                    ? `0 40px 80px rgba(var(--${plan.color}-rgb), 0.2), inset 0 2px 20px rgba(var(--${plan.color}-rgb), 0.1)` 
+                  boxShadow: isHovered
+                    ? `0 40px 80px rgba(var(--${plan.color}-rgb), 0.2), inset 0 2px 20px rgba(var(--${plan.color}-rgb), 0.1)`
                     : plan.popular ? '0 20px 40px rgba(0,0,0,0.3)' : '0 10px 30px rgba(0,0,0,0.1)',
                   borderColor: isHovered ? `color-mix(in srgb, ${colorVar} 50%, transparent)` : plan.popular ? 'var(--primary)' : 'var(--surface-border)',
                 }}
               >
                 {/* Highlight Sweep */}
                 <div className="absolute inset-0 opacity-0 transition-opacity duration-700 pointer-events-none"
-                  style={{ 
+                  style={{
                     opacity: isHovered ? 1 : 0,
-                    background: `radial-gradient(circle at top right, color-mix(in srgb, ${colorVar} 15%, transparent), transparent 70%)` 
+                    background: `radial-gradient(circle at top right, color-mix(in srgb, ${colorVar} 15%, transparent), transparent 70%)`
                   }}
                 />
 
@@ -106,7 +106,7 @@ const PricingPlans = () => {
                   <div className="flex flex-wrap items-center gap-3 md:gap-4 mb-4">
                     <h3 className="text-lg sm:text-xl font-black uppercase tracking-[0.2em]" style={{ color: isHovered ? colorVar : 'var(--foreground)' }}>{plan.name}</h3>
                     {plan.popular && (
-                      <motion.div 
+                      <motion.div
                         initial={{ y: -20, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 1 }}
@@ -126,17 +126,17 @@ const PricingPlans = () => {
 
                 <ul className="space-y-4 md:space-y-5 mb-8 md:mb-10 flex-1 relative z-10">
                   {plan.features.map((f, j) => (
-                    <motion.li 
-                      key={j} 
+                    <motion.li
+                      key={j}
                       className="flex items-center gap-4 text-sm font-bold text-foreground/90 group/item"
                     >
-                      <motion.span 
+                      <motion.span
                         whileHover={{ scale: 1.2, rotate: 10 }}
                         className="w-6 h-6 rounded-full flex items-center justify-center transition-colors shrink-0"
-                        style={{ 
-                          background: `color-mix(in srgb, ${colorVar} 15%, transparent)`, 
+                        style={{
+                          background: `color-mix(in srgb, ${colorVar} 15%, transparent)`,
                           border: `1px solid color-mix(in srgb, ${colorVar} 30%, transparent)`,
-                          color: colorVar 
+                          color: colorVar
                         }}
                       >
                         <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -148,7 +148,7 @@ const PricingPlans = () => {
                   ))}
                 </ul>
 
-                <motion.button 
+                <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className={`w-full py-4 md:py-5 rounded-2xl font-black text-sm md:text-base shadow-xl transition-all relative z-10 overflow-hidden group`}

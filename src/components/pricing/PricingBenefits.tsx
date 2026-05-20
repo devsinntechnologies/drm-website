@@ -17,10 +17,10 @@ const PricingBenefits = ({ title, highlight, subtitle }: PricingBenefitsProps) =
   ];
 
   return (
-    <section className="py-8 md:py-10 bg-gradient-to-tr from-red-300 via-orange-200 to-orange-200 relative overflow-hidden">
+    <section className="py-8 md:py-10 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
         {(title || highlight || subtitle) && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -40,7 +40,7 @@ const PricingBenefits = ({ title, highlight, subtitle }: PricingBenefitsProps) =
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
           {benefits.map((b, i) => (
-            <motion.div 
+            <motion.div
               key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -49,7 +49,7 @@ const PricingBenefits = ({ title, highlight, subtitle }: PricingBenefitsProps) =
               whileHover={{ y: -5 }}
               className="text-center group"
             >
-              <motion.div 
+              <motion.div
                 whileHover={{ scale: 1.1 }}
                 className="text-4xl mb-4 inline-block"
               >

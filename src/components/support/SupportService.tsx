@@ -47,9 +47,9 @@ const services = [
 
 const SupportService = () => {
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-tr from-red-300 via-orange-200 to-orange-200 relative overflow-hidden">
+    <section className="py-12 md:py-16 lg:py-20 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -62,14 +62,14 @@ const SupportService = () => {
             For Every Outlet
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted max-w-3xl mx-auto leading-relaxed font-bold\">
-            We provide comprehensive services to ensure your restaurant 
+            We provide comprehensive services to ensure your restaurant
             DRM is always running at its absolute best.
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {services.map((service, i) => (
-            <motion.div 
+            <motion.div
               key={i}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -80,22 +80,22 @@ const SupportService = () => {
             >
               {/* Background Glow */}
               <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 blur-[80px] rounded-full group-hover:bg-primary/10 transition-all opacity-0 group-hover:opacity-100" />
-              
+
               <div className="relative z-10">
-                <motion.div 
+                <motion.div
                   whileHover={{ rotate: 5, scale: 1.1 }}
                   className="w-14 h-14 rounded-2xl bg-surface border border-surface-border flex items-center justify-center text-primary mb-5 shadow-inner"
                 >
                   {service.icon}
                 </motion.div>
-                
+
                 <h3 className="text-2xl font-extrabold text-foreground mb-4 group-hover:text-primary transition-colors">{service.title}</h3>
                 <p className="text-base text-muted leading-relaxed font-bold mb-6">{service.desc}</p>
-                
+
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {service.points.map((p, j) => (
-                    <motion.li 
-                      key={j} 
+                    <motion.li
+                      key={j}
                       initial={{ opacity: 0, x: 20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.4 + (j * 0.1) }}

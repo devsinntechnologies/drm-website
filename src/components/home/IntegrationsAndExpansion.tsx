@@ -22,13 +22,8 @@ const IntegrationsAndExpansion = () => {
   ];
 
   return (
-    <section 
-      className="relative overflow-hidden py-24 bg-gradient-to-tr from-red-300 via-orange-200 to-orange-200"
-      style={{
-        background: '',
-        backgroundSize: '400% 400%',
-        animation: 'gradientShift 15s ease infinite'
-      }}
+    <section
+      className="relative overflow-hidden py-24 bg-[#F4F5F7]"
     >
       <div className="absolute inset-x-0 top-0 h-80 bg-linear-to-b from-primary/15 to-transparent pointer-events-none" />
       <div className="absolute left-1/2 top-24 h-72 w-72 -translate-x-1/2 rounded-full bg-secondary/10 blur-3xl pointer-events-none" />
@@ -88,13 +83,13 @@ const IntegrationsAndExpansion = () => {
             whileHover={{ y: -8, scale: 1.01 }}
             viewport={{ once: true }}
             transition={{ duration: 0.9, type: 'spring', stiffness: 220 }}
-            className="group relative overflow-hidden rounded-[40px] border border-slate-200 bg-white p-6 shadow-[0_35px_90px_rgba(15,23,42,0.08)] transition-all duration-500 hover:shadow-[0_45px_130px_rgba(249,115,22,0.16)] sm:p-8 lg:p-10"
+            className="group relative overflow-hidden rounded-[40px] border border-slate-200 bg-white p-6 shadow-primary-hover transition-all duration-500 sm:p-8 lg:p-10"
           >
             <div className="pointer-events-none absolute inset-0 rounded-[40px] bg-linear-to-br from-orange-200/0 via-transparent to-transparent opacity-0 transition duration-500 group-hover:opacity-80 blur-3xl" />
             <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-primary/10 blur-3xl" />
             <div className="absolute -left-10 bottom-10 h-44 w-44 rounded-full bg-secondary/10 blur-3xl" />
             <div className="relative z-10 grid gap-6">
-              <motion.div className="group rounded-4xl border border-slate-200 bg-slate-50 p-5 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_90px_rgba(249,115,22,0.14)]">
+              <motion.div className="group rounded-4xl border border-slate-200 bg-slate-50 p-5 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-primary-hover">
                 <div className="pointer-events-none absolute inset-0 rounded-4xl bg-linear-to-br from-red-200/0 via-transparent to-transparent opacity-0 transition duration-500 group-hover:opacity-90 blur-3xl" />
                 <div className="relative z-10 flex items-center justify-between gap-4">
                   <div>
@@ -113,7 +108,7 @@ const IntegrationsAndExpansion = () => {
                 </div>
               </motion.div>
 
-              <motion.div className="group rounded-4xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_90px_rgba(249,115,22,0.14)]">
+              <motion.div className="group rounded-4xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-primary-hover">
                 <div className="pointer-events-none absolute inset-0 rounded-4xl bg-linear-to-br from-orange-200/0 via-transparent to-transparent opacity-0 transition duration-500 group-hover:opacity-80 blur-3xl" />
                 <div className="relative z-10 flex items-center justify-between gap-4">
                   <div>

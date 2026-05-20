@@ -43,10 +43,10 @@ const reasons = [
 
 const SupportWhy = () => {
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-tr from-red-300 via-orange-200 to-orange-200 relative overflow-hidden">
+    <section className="py-12 md:py-16 lg:py-20 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex flex-col lg:flex-row items-center gap-6 md:gap-8 lg:gap-12">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -59,10 +59,10 @@ const SupportWhy = () => {
               <span className="text-primary">Our Top Priority</span>
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-muted leading-relaxed font-bold mb-6 md:mb-8">
-              We don't just sell software; we become your partners in growth. Our support 
+              We don't just sell software; we become your partners in growth. Our support
               infrastructure is built to handle mission-critical restaurant operations.
             </p>
-            <motion.button 
+            <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 bg-primary text-white font-bold rounded-2xl shadow-xl glow-primary"
@@ -73,8 +73,8 @@ const SupportWhy = () => {
 
           <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-4">
             {reasons.map((reason, i) => (
-              <motion.div 
-                key={i} 
+              <motion.div
+                key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -82,7 +82,7 @@ const SupportWhy = () => {
                 whileHover={{ y: -5, scale: 1.02 }}
                 className="p-8 rounded-[32px] glass-card border border-surface-border/50 group hover:border-primary/40 transition-all"
               >
-                <motion.div 
+                <motion.div
                   whileHover={{ rotate: 360, transition: { duration: 0.5 } }}
                   className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6"
                 >

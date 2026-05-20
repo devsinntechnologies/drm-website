@@ -65,7 +65,7 @@ const Industries = () => {
   ];
 
   return (
-    <section className="min-h-screen bg-gradient-to-tr from-red-300 via-orange-200 to-orange-200 text-foreground py-24 px-4 md:px-8">
+    <section className="min-h-screen bg-background text-foreground py-24 px-4 md:px-8">
 
       {/* HERO */}
       <div className="max-w-6xl mx-auto text-center">

@@ -124,7 +124,7 @@ function TiltCard({ review }: { review: typeof reviews[0] }) {
 
 const Testimonials = () => {
   return (
-    <section className="py-8 md:py-10 bg-gradient-to-tr from-red-300 via-orange-200 to-orange-200 relative overflow-hidden">
+    <section className="py-8 md:py-10 bg-background relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/10 blur-[150px] rounded-full pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/10 blur-[150px] rounded-full pointer-events-none" />
@@ -140,12 +140,12 @@ const Testimonials = () => {
       </div>
 
       <div className="container mx-auto px-4 md:px-8">
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-18 gap-x-3">
-    {reviews.map((review, i) => (
-      <TiltCard key={i} review={review} />
-    ))}
-  </div>
-</div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-18 gap-x-3">
+          {reviews.map((review, i) => (
+            <TiltCard key={i} review={review} />
+          ))}
+        </div>
+      </div>
     </section>
   );
 };

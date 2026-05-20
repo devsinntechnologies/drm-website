@@ -15,9 +15,9 @@ const AboutValues = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-8 md:py-10 bg-gradient-to-tr from-red-300 via-orange-200 to-orange-200 relative overflow-hidden">
+    <section className="py-8 md:py-10 bg-background relative overflow-hidden">
       <div className="noise-overlay opacity-5" />
-      
+
       {/* Dynamic Background Glow based on hover */}
       <AnimatePresence>
         {hoveredIndex !== null && (
@@ -32,7 +32,7 @@ const AboutValues = () => {
       </AnimatePresence>
 
       <div className="container mx-auto px-4 md:px-8 relative z-10">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -52,9 +52,9 @@ const AboutValues = () => {
           {values.map((v, i) => {
             const colorVar = `var(--${v.c})`;
             const isHovered = hoveredIndex === i;
-            
+
             return (
-              <motion.div 
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -76,11 +76,11 @@ const AboutValues = () => {
                 />
 
                 {/* Floating Icon */}
-                <motion.div 
+                <motion.div
                   animate={isHovered ? { y: [-5, 5, -5], rotate: [0, 10, -10, 0] } : { y: 0, rotate: 0 }}
                   transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
                   className="w-16 h-16 rounded-3xl flex items-center justify-center text-3xl mb-8 relative z-10"
-                  style={{ 
+                  style={{
                     background: `color-mix(in srgb, ${colorVar} 15%, transparent)`,
                     border: `1px solid color-mix(in srgb, ${colorVar} 30%, transparent)`,
                     color: colorVar
@@ -88,7 +88,7 @@ const AboutValues = () => {
                 >
                   {v.i}
                 </motion.div>
-                
+
                 <h3 className="text-2xl font-extrabold text-foreground mb-4 relative z-10 transition-colors" style={{ color: isHovered ? colorVar : undefined }}>
                   {v.t}
                 </h3>
