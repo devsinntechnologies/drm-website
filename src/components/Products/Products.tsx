@@ -1,6 +1,33 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { 
+  FiMonitor, FiBox, FiSettings, FiCreditCard, FiUsers, 
+  FiSliders, FiTruck, FiMenu, FiMessageSquare, FiCalendar, 
+  FiZap, FiLayers, FiTv, FiBriefcase, FiGrid, 
+  FiSmartphone, FiSearch, FiCheck 
+} from "react-icons/fi";
+
+const iconMap: Record<string, React.ReactNode> = {
+  pos: <FiMonitor />,
+  scm: <FiBox />,
+  production: <FiSettings />,
+  finance: <FiCreditCard />,
+  hris: <FiUsers />,
+  crm: <FiSliders />,
+  "sales-order": <FiTruck />,
+  recipe: <FiMenu />,
+  sms: <FiMessageSquare />,
+  reservation: <FiCalendar />,
+  queue: <FiZap />,
+  erp: <FiLayers />,
+  feedo: <FiTv />,
+  cando: <FiBriefcase />,
+  "cloud-dashboard": <FiGrid />,
+  "order-app": <FiSmartphone />,
+  "price-checker": <FiSearch />,
+};
 
 // Data mapping
 const solutionsData = [
@@ -98,8 +125,6 @@ const solutionsData = [
           "Task Automation",
         ],
       },
-
-      // ✅ NEW MODULES
       {
         id: "sales-order",
         title: "Sales Order & Delivery",
@@ -177,7 +202,6 @@ const solutionsData = [
       },
     ],
   },
-
   {
     category: "Products",
     items: [
@@ -226,8 +250,6 @@ const solutionsData = [
           "Resource Loading",
         ],
       },
-
-      // ✅ NEW PRODUCTS
       {
         id: "cloud-dashboard",
         title: "Cloud Based Dashboard",
@@ -278,46 +300,93 @@ const solutionsData = [
 ];
 
 export default function Products() {
+  const [hoveredId, setHoveredId] = useState<string | null>(null);
+
   return (
-    <div className="bg-background min-h-screen py-12 px-6 scroll-smooth transition">
-      <div className="max-w-6xl mx-auto">
+    <div className="bg-background min-h-screen py-24 px-6 md:px-8 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-1/4 left-0 w-80 h-80 bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-secondary/5 rounded-full blur-[120px] pointer-events-none" />
+
+      <div className="max-w-6xl mx-auto relative z-10">
+        
+        {/* Intro */}
+        <div className="text-center mb-20">
+          <span className="section-label">RMS Capabilities</span>
+          <h1 className="text-5xl md:text-6xl font-black text-foreground mt-4 leading-tight tracking-tight">
+            Our Modules & <span className="text-primary">Products</span>
+          </h1>
+          <p className="text-muted text-lg max-w-3xl mx-auto leading-relaxed mt-4 font-semibold">
+            Explore the comprehensive suite of tools built to optimize order flows, kitchen routes, fleet dispatch, dynamic pricing, and brand finances.
+          </p>
+        </div>
+
         {solutionsData.map((group) => (
-          <div key={group.category} className="mb-16">
-            <h2 className="text-3xl font-extrabold mb-10 text-primary ">
-              {group.category}
-            </h2>
+          <div key={group.category} className="mb-20">
+            {/* Category header */}
+            <div className="flex items-center gap-4 mb-10">
+              <span className="w-8 h-px bg-primary" />
+              <h2 className="text-3xl font-black text-primary uppercase tracking-widest">
+                {group.category}
+              </h2>
+            </div>
 
-            <div className="grid grid-cols-1 gap-12">
-              {group.items.map((item) => (
-                <section
-                  key={item.id}
-                  id={item.id}
-                  className="glass-card rounded-2xl duration-300 hover:-translate-2.5 transition hover:shadow-black/50 hover:shadow-2xl"
-                >
-                  <div className="p-8">
-                    <h3 className="text-2xl font-bold text-foreground mb-4">
-                      {item.title}
-                    </h3>
+            <div className="grid grid-cols-1 gap-8">
+              {group.items.map((item) => {
+                const isHovered = hoveredId === item.id;
+                
+                return (
+                  <motion.section
+                    key={item.id}
+                    id={item.id}
+                    onMouseEnter={() => setHoveredId(item.id)}
+                    onMouseLeave={() => setHoveredId(null)}
+                    whileHover={{ y: -4 }}
+                    className="glass-card bg-surface/50 border-surface-border rounded-3xl transition-all duration-300 hover:bg-white hover:border-primary/25 shadow-lg relative overflow-hidden"
+                  >
+                    {/* Background glow sweep */}
+                    {isHovered && (
+                      <div className="absolute inset-0 opacity-100 bg-gradient-to-br from-primary/5 via-transparent to-transparent blur-xl pointer-events-none" />
+                    )}
 
-                    <p className="text-gray-600 mb-8 text-lg leading-relaxed">
-                      {item.desc}
-                    </p>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                      {item.features.map((feature, index) => (
-                        <div
-                          key={index}
-                          className="flex items-center space-x-3 p-4 bg-background border border-primary-hover rounded-xl hover:bg-background transition hover:-translate-1.5 duration-150"
-                        >
-                          <span className="text-sm font-semibold text-primary ">
-                            {feature}
+                    <div className="p-8">
+                      <div className="flex items-start gap-4 mb-4">
+                        <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center text-2xl shrink-0 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                          {iconMap[item.id] || <FiLayers />}
+                        </div>
+                        <div>
+                          <h3 className="text-2xl font-bold text-foreground mb-1">
+                            {item.title}
+                          </h3>
+                          <span className="text-[9px] font-black uppercase tracking-wider text-primary">
+                            RMS {group.category.slice(0, -1)} Option
                           </span>
                         </div>
-                      ))}
+                      </div>
+
+                      <p className="text-muted mb-8 text-base leading-relaxed font-semibold">
+                        {item.desc}
+                      </p>
+
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        {item.features.map((feature, index) => (
+                          <div
+                            key={index}
+                            className="flex items-center space-x-3 p-4 bg-background border border-surface-border hover:border-primary/20 rounded-xl hover:bg-white transition duration-150 group"
+                          >
+                            <span className="w-5 h-5 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                              <FiCheck className="text-xs" />
+                            </span>
+                            <span className="text-xs font-bold text-foreground/90 group-hover:text-primary transition-colors">
+                              {feature}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                </section>
-              ))}
+                  </motion.section>
+                );
+              })}
             </div>
           </div>
         ))}

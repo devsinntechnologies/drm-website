@@ -53,12 +53,14 @@ const Footer = () => {
 
   return (
     <>
-      <Image src="/footer-bg.png" alt="Footer" width={1920} height={1080} />
+      {/* <Image src="/footer-bg.png" alt="Footer" width={1920} height={1080} /> */}
 
-      <footer className="pt-20 flex justify-between pb-10 bg-black relative overflow-hidden">
-        <div className="absolute top-0 inset-x-0 h-px bg-linear-to-r from-transparent via-surface-border to-transparent" />
+      <footer className="pt-20 flex justify-between pb-10 bg-background relative overflow-hidden">
+        {/* <div className="absolute top-0 inset-x-0 h-px bg-linear-to-r from-transparent via-surface-border to-transparent" /> */}
 
-        <div className="absolute inset-0 aurora-bg opacity-25" />
+        {/* <div className="absolute inset-0 aurora-bg opacity-25" /> */}
+        <div className="absolute inset-0 bg-[#090b12] z-0" />
+        <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
         <div className="container mx-auto px-4 md:px-8 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-16 mb-16">
@@ -68,7 +70,7 @@ const Footer = () => {
                 <div className="flex items-center gap-3">
                   <div className="relative h-10 w-auto md:h-12">
                     <img
-                      src="/logo.png"
+                      src="/logo2.png"
                       alt="DRM Logo"
                       className="h-full w-auto object-contain object-left"
                     />

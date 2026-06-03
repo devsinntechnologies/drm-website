@@ -18,7 +18,7 @@ const PricingPlans = () => {
     },
     {
       name: 'Professional',
-      price: '$49',
+      price: '49',
       period: 'per month',
       desc: 'Advanced tools for growing restaurants with multiple staff.',
       features: ['Unlimited orders', 'Advanced Inventory', '3 Terminals', '24/7 Support', 'Custom Reports'],

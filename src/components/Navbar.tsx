@@ -103,7 +103,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           {/* LOGO */}
           <Link href="/" onClick={closeMenu} className="flex items-center gap-2 ">
-            <Image src="/logo.png" alt="Logo"
+            <Image src="/logo2.png" alt="Logo"
               width={150}
               height={150}
               className="h-16 object-contain" />

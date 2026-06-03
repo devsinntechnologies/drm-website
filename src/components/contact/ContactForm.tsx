@@ -70,9 +70,9 @@ const ContactForm = () => {
 
             <div className="space-y-6">
               {[
-                { t: "Headquarters", d: "123 Business Avenue, Tech City, Pakistan", i: "📍" },
-                { t: "Phone Support", d: "+92 (300) 123-4567", i: "📞" },
-                { t: "Mail Us", d: "hello@devsinn.com", i: "✉️" }
+                { t: "Headquarters", d: "Lahore, Pakistan", i: "📍" },
+                { t: "Phone Support", d: "+92 (315) 4031364", i: "📞" },
+                { t: "Mail Us", d: "hello@devsinntechnologies.com", i: "✉️" }
               ].map((item, idx) => (
                 <motion.div
                   key={idx}
