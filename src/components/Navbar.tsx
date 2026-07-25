@@ -9,12 +9,12 @@ import Image from "next/image";
 type NavLink =
   | { name: string; href: string }
   | {
-    name: string;
-    megaMenu: {
-      modules: { name: string; href: string }[];
-      products: { name: string; href: string }[];
+      name: string;
+      megaMenu: {
+        modules: { name: string; href: string }[];
+        products: { name: string; href: string }[];
+      };
     };
-  };
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,9 +51,16 @@ export default function Navbar() {
     setMobileDropdown(null);
   };
 
+  // Strict link order: Home, Industries, Products, About, Contact
   const navLinks: NavLink[] = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
+    {
+      name: "Industries",
+      megaMenu: {
+        modules: [{ name: "Restaurant", href: "/industries" }],
+        products: [],
+      },
+    },
     {
       name: "Products",
       megaMenu: {
@@ -80,13 +87,7 @@ export default function Navbar() {
         ],
       },
     },
-    {
-      name: "Industries",
-      megaMenu: {
-        modules: [{ name: "Restaurant", href: "/industries" }],
-        products: [],
-      },
-    },
+    { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];
 
@@ -94,23 +95,28 @@ export default function Navbar() {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-[999] transition-all duration-300 ${scrolled || isOpen
-        ? "bg-background  border-b border-white/10 py-2 text-black "
-        : "bg-transperant py-4"
-        }`}
+      className={`fixed top-0 left-0 right-0 z-[999] transition-all duration-300 ${
+        scrolled || isOpen
+          ? "bg-[#08162D]/20 backdrop-blur-md shadow-sm border-b border-[#08162D]/10 py-2 text-[#08162D]"
+          : "bg-transparent py-4"
+      }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-auto">
         <div className="flex items-center justify-between">
           {/* LOGO */}
-          <Link href="/" onClick={closeMenu} className="flex items-center gap-2 ">
-            <Image src="/logo2.png" alt="Logo"
+          <Link href="/" onClick={closeMenu} className="flex items-center gap-2">
+            <Image
+              src="/Group 11.png"
+              alt="Logo"
               width={150}
               height={150}
-              className="h-16 object-contain" />
+              className="h-14 w-auto object-contain bg-transparent mix-blend-normal"
+              priority
+            />
           </Link>
 
           {/* DESKTOP NAV */}
-          <div className="hidden lg:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-2">
             {navLinks.map((link) => {
               if ("megaMenu" in link) {
                 return (
@@ -120,7 +126,7 @@ export default function Navbar() {
                     onMouseEnter={() => setMegaMenuOpen(link.name)}
                     onMouseLeave={() => setMegaMenuOpen(null)}
                   >
-                    <button className={`px-4 py-2 text-sm font-bold ${scrolled || isOpen ? "text-black hover:text-primary" : "text-black hover:text-primary"}`}>
+                    <button className="px-4 py-2 text-sm font-bold text-[#08162D] hover:text-[#0055FF] transition-colors rounded-xl">
                       {link.name}
                     </button>
                     <AnimatePresence>
@@ -129,21 +135,29 @@ export default function Navbar() {
                           initial={{ opacity: 0, y: 10 }}
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: 10 }}
-                          className="absolute top-full mt-2 left-1/2 -translate-x-1/2 w-[600px] bg-white border border-white/10 rounded-2xl p-6"
+                          className="absolute top-full mt-2 left-1/2 -translate-x-1/2 w-[600px] bg-[#FFFFFF] border border-[#08162D]/10 shadow-xl rounded-xl p-6"
                         >
                           <div className="grid grid-cols-2 gap-8">
                             <div>
-                              <h3 className="text-primary font-bold mb-3">Modules</h3>
+                              <h3 className="text-[#0055FF] font-bold mb-3 text-base">Modules</h3>
                               {link.megaMenu.modules.map((item) => (
-                                <Link key={item.href} href={item.href} className="block text-black/70 hover:text-primary text-sm mb-2">
+                                <Link
+                                  key={item.href}
+                                  href={item.href}
+                                  className="block text-[#08162D]/70 hover:text-[#0055FF] text-sm mb-2 transition-colors"
+                                >
                                   {item.name}
                                 </Link>
                               ))}
                             </div>
                             <div>
-                              <h3 className="text-primary font-bold mb-3">Products</h3>
+                              <h3 className="text-[#0055FF] font-bold mb-3 text-base">Products</h3>
                               {link.megaMenu.products.map((item) => (
-                                <Link key={item.href} href={item.href} className="block text-black/70 hover:text-primary text-sm mb-2">
+                                <Link
+                                  key={item.href}
+                                  href={item.href}
+                                  className="block text-[#08162D]/70 hover:text-[#0055FF] text-sm mb-2 transition-colors"
+                                >
                                   {item.name}
                                 </Link>
                               ))}
@@ -159,8 +173,11 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-4 py-2 text-sm  font-bold ${pathname === link.href ? "text-primary" : "text-black hover:text-primary"
-                    } ${scrolled || isOpen ? "text-black hover:text-primary" : "text-black hover:text-primary"}`}
+                  className={`px-4 py-2 text-sm font-bold rounded-xl transition-colors ${
+                    pathname === link.href
+                      ? "text-[#0055FF]"
+                      : "text-[#08162D] hover:text-[#0055FF]"
+                  }`}
                 >
                   {link.name}
                 </Link>
@@ -171,7 +188,7 @@ export default function Navbar() {
           {/* MOBILE TOGGLE */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden z-[1001] relative p-2 text-primary"
+            className="lg:hidden z-[1001] relative p-2 text-[#0055FF] rounded-xl"
             aria-label="Toggle menu"
           >
             <div className="w-6 h-5 flex flex-col justify-between">
@@ -200,18 +217,24 @@ export default function Navbar() {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "tween", duration: 0.3 }}
-            className="fixed inset-0 z-[1000] bg-black flex flex-col p-8 pt-24 overflow-y-auto h-screen"
+            className="fixed inset-0 z-[1000] bg-[#08162D] flex flex-col p-8 pt-24 overflow-y-auto h-screen"
           >
             {navLinks.map((link) => (
               <div key={link.name} className="border-b border-white/10 py-4">
                 {"megaMenu" in link ? (
                   <>
                     <button
-                      onClick={() => setMobileDropdown(mobileDropdown === link.name ? null : link.name)}
-                      className="text-2xl font-bold text-white w-full text-left flex justify-between items-center"
+                      onClick={() =>
+                        setMobileDropdown(mobileDropdown === link.name ? null : link.name)
+                      }
+                      className="text-2xl font-bold text-[#FFFFFF] w-full text-left flex justify-between items-center rounded-xl py-1"
                     >
                       {link.name}
-                      <span className={`transition-transform ${mobileDropdown === link.name ? "rotate-180" : ""}`}>
+                      <span
+                        className={`transition-transform ${
+                          mobileDropdown === link.name ? "rotate-180" : ""
+                        }`}
+                      >
                         ▾
                       </span>
                     </button>
@@ -223,13 +246,13 @@ export default function Navbar() {
                           exit={{ height: 0, opacity: 0 }}
                           className="overflow-hidden"
                         >
-                          <div className="grid grid-cols-1 gap-2 mt-4 pl-4 border-l border-primary/30">
+                          <div className="grid grid-cols-1 gap-2 mt-4 pl-4 border-l border-[#0055FF]/40">
                             {[...link.megaMenu.modules, ...link.megaMenu.products].map((item) => (
                               <Link
                                 key={item.name}
                                 href={item.href}
                                 onClick={closeMenu}
-                                className="text-white/60 py-2"
+                                className="text-[#FFFFFF]/70 hover:text-[#00B4FF] py-2 text-sm transition-colors"
                               >
                                 {item.name}
                               </Link>
@@ -243,7 +266,7 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     onClick={closeMenu}
-                    className="text-2xl font-bold text-white block"
+                    className="text-2xl font-bold text-[#FFFFFF] hover:text-[#00B4FF] block rounded-xl py-1"
                   >
                     {link.name}
                   </Link>
