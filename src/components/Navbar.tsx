@@ -1,271 +1,287 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-
-type NavLink = 
-  | { name: string; href: string } 
-  | { 
-      name: string; 
-      megaMenu: { 
-        modules: { name: string; href: string }[]; 
-        products: { name: string; href: string }[]; 
-      }; 
-    };
-
-const navLinks: NavLink[] = [
-  { name: "Home", href: "/" },
-  { name: "Industries", href: "/industries" },
-  { 
-    name: "Products", 
-    megaMenu: {
-      modules: [
-        { name: "Module One", href: "/products/module-one" },
-        { name: "Module Two", href: "/products/module-two" },
-      ],
-      products: [
-        { name: "Product Alpha", href: "/products/alpha" },
-        { name: "Product Beta", href: "/products/beta" },
-      ]
-    }
-  },
-  { name: "About", href: "/about" },
-  { name: "Contact", href: "/contact" },
-];
+import { FiPhoneCall, FiChevronDown, FiMenu, FiX } from "react-icons/fi";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [megaMenuOpen, setMegaMenuOpen] = useState<string | null>(null);
-  const [mobileDropdown, setMobileDropdown] = useState<string | null>(null);
-  const [scrolled, setScrolled] = useState(false);
-  const pathname = usePathname();
-
-  // Scroll detection for navbar background transition & glow effects
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const [isProductsOpen, setIsProductsOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isContactOpen, setIsContactOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled 
-        ? "bg-[#08162D]/90 backdrop-blur-md border-b border-[#0055FF]/20 shadow-lg shadow-[#0055FF]/5" 
-        : "bg-[#08162D] border-b border-[#0055FF]/10"
-    }`}>
-      {/* Subtle top light-blue / green glow bar matching footer aesthetic */}
-      <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#00B4FF] to-transparent opacity-60 pointer-events-none" />
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          
-          {/* Logo Section */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-36 h-10 flex items-center">
-              <Image 
-                src="/Group 11.png" 
-                alt="Brand Logo" 
-                fill 
-                className="object-contain transition-transform duration-300 group-hover:scale-105"
-                priority
-              />
-            </div>
+    <header className="w-full bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm m-0 p-0">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 py-3 flex items-center justify-between relative">
+        
+        {/* Logo */}
+        <div className="flex items-center">
+          <Link href="/" className="relative h-10 w-32 block">
+            <Image 
+              src="/Group_11-removebg-preview.png" 
+              alt="N&S Software Solutions Logo" 
+              fill 
+              className="object-contain object-left"
+              priority
+            />
           </Link>
-
-          {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center space-x-1 lg:space-x-2">
-            {navLinks.map((link) => {
-              const isActive = pathname === link.href;
-
-              return (
-                <div 
-                  key={link.name}
-                  className="relative"
-                  onMouseEnter={() => "megaMenu" in link && setMegaMenuOpen(link.name)}
-                  onMouseLeave={() => "megaMenu" in link && setMegaMenuOpen(null)}
-                >
-                  {"megaMenu" in link ? (
-                    <button 
-                      className={`px-4 py-2 text-sm font-medium transition-colors rounded-[8px] flex items-center gap-1.5 ${
-                        megaMenuOpen === link.name 
-                          ? "text-[#00B4FF] bg-[#0055FF]/10" 
-                          : "text-white/90 hover:text-[#00B4FF] hover:bg-[#0055FF]/5"
-                      }`}
-                    >
-                      {link.name}
-                      <svg className="w-4 h-4 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                      </svg>
-                    </button>
-                  ) : (
-                    <Link 
-                      href={link.href}
-                      className={`px-4 py-2 text-sm font-medium transition-colors rounded-[8px] relative ${
-                        isActive 
-                          ? "text-[#00B4FF] bg-[#0055FF]/15" 
-                          : "text-white/90 hover:text-[#00B4FF] hover:bg-[#0055FF]/5"
-                      }`}
-                    >
-                      {link.name}
-                      {isActive && (
-                        <span className="absolute bottom-0 left-3 right-3 h-[2px] bg-[#00B4FF] rounded-full" />
-                      )}
-                    </Link>
-                  )}
-
-                  {/* Mega Menu Dropdown */}
-                  {"megaMenu" in link && (
-                    <AnimatePresence>
-                      {megaMenuOpen === link.name && (
-                        <motion.div 
-                          initial={{ opacity: 0, y: 10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: 8 }}
-                          transition={{ duration: 0.2 }}
-                          className="absolute top-full left-1/2 -translate-x-1/2 w-[500px] bg-[#08162D] border border-[#0055FF]/30 rounded-[12px] shadow-2xl p-6 grid grid-cols-2 gap-6 mt-2 overflow-hidden"
-                        >
-                          {/* Absolute glowing accent background element */}
-                          <div className="absolute inset-0 bg-gradient-to-br from-[#0055FF]/10 via-transparent to-[#00B4FF]/5 pointer-events-none" />
-                          
-                          <div>
-                            <h4 className="text-xs font-semibold uppercase tracking-wider text-[#00B4FF] mb-3">Modules</h4>
-                            <div className="flex flex-col space-y-2">
-                              {link.megaMenu.modules.map((mod) => (
-                                <Link 
-                                  key={mod.name} 
-                                  href={mod.href}
-                                  className="text-sm text-white/80 hover:text-[#00B4FF] hover:translate-x-1 transition-all duration-150 py-1"
-                                >
-                                  {mod.name}
-                                </Link>
-                              ))}
-                            </div>
-                          </div>
-
-                          <div>
-                            <h4 className="text-xs font-semibold uppercase tracking-wider text-[#00B4FF] mb-3">Products</h4>
-                            <div className="flex flex-col space-y-2">
-                              {link.megaMenu.products.map((prod) => (
-                                <Link 
-                                  key={prod.name} 
-                                  href={prod.href}
-                                  className="text-sm text-white/80 hover:text-[#00B4FF] hover:translate-x-1 transition-all duration-150 py-1"
-                                >
-                                  {prod.name}
-                                </Link>
-                              ))}
-                            </div>
-                          </div>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  )}
-                </div>
-              );
-            })}
-          </nav>
-
-          {/* Action / Contact Button */}
-          <div className="hidden md:flex items-center">
-            <Link 
-              href="/contact"
-              className="px-5 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-[#0055FF] to-[#00B4FF] hover:opacity-95 shadow-md shadow-[#0055FF]/20 transition-all duration-200 rounded-[8px]"
-            >
-              Get Started
-            </Link>
-          </div>
-
-          {/* Mobile Menu Toggle Button */}
-          <div className="md:hidden flex items-center">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="p-2 text-white/80 hover:text-[#00B4FF] focus:outline-none rounded-[8px] bg-[#0055FF]/10"
-              aria-label="Toggle Menu"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                {isOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-                )}
-              </svg>
-            </button>
-          </div>
-
         </div>
+
+        {/* Desktop Navigation Links */}
+        <nav className="hidden lg:flex items-center space-x-8 font-bold text-sm text-[#08162D]">
+          <Link href="/" className="text-[#0055FF] transition-colors">Home</Link>
+          <Link href="/about" className="hover:text-[#0055FF] transition-colors">About</Link>
+          
+          {/* Products Mega Menu */}
+          <div 
+            className="relative"
+            onMouseEnter={() => setIsProductsOpen(true)}
+            onMouseLeave={() => setIsProductsOpen(false)}
+          >
+            <button className="flex items-center gap-1 hover:text-[#0055FF] transition-colors py-2 font-bold cursor-pointer">
+              Products <FiChevronDown size={14} className={`transition-transform duration-200 ${isProductsOpen ? 'rotate-180' : ''}`} />
+            </button>
+
+            {isProductsOpen && (
+              <div className="absolute top-full left-1/2 -translate-x-1/2 w-[900px] bg-white border border-gray-200 shadow-2xl rounded-2xl p-8 grid grid-cols-3 gap-8 mt-1 z-50 text-left">
+                <div>
+                  <h4 className="text-[#0055FF] font-black text-xs uppercase tracking-wider mb-4 border-b border-gray-100 pb-2">
+                    GEN SOFT (RETAIL)
+                  </h4>
+                  <ul className="space-y-2.5 text-xs text-gray-600 font-bold">
+                    <li>
+                      <Link 
+                        href="/products/restaurant" 
+                        onClick={() => setIsProductsOpen(false)}
+                        className="hover:text-[#0055FF] transition-colors block"
+                      >
+                        Restaurant Solution
+                      </Link>
+                    </li>
+                    <li><Link href="/products/supermarket" className="hover:text-[#0055FF] transition-colors block">Supermarket Solution</Link></li>
+                    <li><Link href="/products/pharmacy" className="hover:text-[#0055FF] transition-colors block">Medical & Pharmacy Solution</Link></li>
+                    <li><Link href="/products/books" className="hover:text-[#0055FF] transition-colors block">Books & Publishers Solution</Link></li>
+                    <li><Link href="/products/bakery" className="hover:text-[#0055FF] transition-colors block">Sweets & Bakery Solution</Link></li>
+                    <li><Link href="/products/distribution" className="hover:text-[#0055FF] transition-colors block">Distribution Solution</Link></li>
+                    <li><Link href="/products/automobile" className="hover:text-[#0055FF] transition-colors block">Automobile Solution</Link></li>
+                    <li><Link href="/products/apparel" className="hover:text-[#0055FF] transition-colors block">Apparel & Garments Solution</Link></li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 className="text-[#0055FF] font-black text-xs uppercase tracking-wider mb-4 border-b border-gray-100 pb-2">
+                    MORE SOLUTIONS
+                  </h4>
+                  <ul className="space-y-2.5 text-xs text-gray-600 font-bold mb-6">
+                    <li><Link href="/products/shoes" className="hover:text-[#0055FF] transition-colors block">Shoes & Bags Solution</Link></li>
+                    <li><Link href="/products/crockery" className="hover:text-[#0055FF] transition-colors block">Crockery & Cutlery Solution</Link></li>
+                    <li><Link href="/products/furniture" className="hover:text-[#0055FF] transition-colors block">Furniture Solution</Link></li>
+                    <li><Link href="/products/vape" className="hover:text-[#0055FF] transition-colors block">Vape Shops</Link></li>
+                    <li><Link href="/products/beauty" className="hover:text-[#0055FF] transition-colors block">Beauty & Cosmetics</Link></li>
+                  </ul>
+
+                  <h4 className="text-[#0055FF] font-black text-xs uppercase tracking-wider mb-3 border-b border-gray-100 pb-2">
+                    GEN SOFT (INDUSTRIES)
+                  </h4>
+                  <ul className="space-y-2 text-xs text-gray-600 font-bold">
+                    <li><Link href="/products/rice" className="hover:text-[#0055FF] transition-colors block">Rice ERP</Link></li>
+                    <li><Link href="/products/flour" className="hover:text-[#0055FF] transition-colors block">Flour ERP</Link></li>
+                    <li><Link href="/products/sugar" className="hover:text-[#0055FF] transition-colors block">Sugar ERP</Link></li>
+                    <li><Link href="/products/textile" className="hover:text-[#0055FF] transition-colors block">Textile ERP</Link></li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 className="text-[#0055FF] font-black text-xs uppercase tracking-wider mb-3 border-b border-gray-100 pb-2">
+                    CRM (FIELD FORCE)
+                  </h4>
+                  <ul className="space-y-2 text-xs text-gray-600 font-bold mb-4">
+                    <li><Link href="/products/complaint" className="hover:text-[#0055FF] transition-colors block">Complaint Management System</Link></li>
+                    <li><Link href="/products/sales-mgmt" className="hover:text-[#0055FF] transition-colors block">Sales Management System</Link></li>
+                    <li><Link href="/products/tracking" className="hover:text-[#0055FF] transition-colors block">User Tracking Management</Link></li>
+                  </ul>
+
+                  <h4 className="text-[#0055FF] font-black text-xs uppercase tracking-wider mb-3 border-b border-gray-100 pb-2">
+                    GEN CLOUD & TRAC
+                  </h4>
+                  <ul className="space-y-2 text-xs text-gray-600 font-bold">
+                    <li><Link href="/products/vps" className="hover:text-[#0055FF] transition-colors block">VPS Server & Dedicated Server</Link></li>
+                    <li><Link href="/products/fbr" className="hover:text-[#0055FF] transition-colors block">FBR Digital Invoicing & Fiscalization</Link></li>
+                    <li><Link href="/products/genprice" className="hover:text-[#0055FF] transition-colors block">GEN PRICE & GEN FINANCIAL</Link></li>
+                  </ul>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Services Dropdown */}
+          <div 
+            className="relative"
+            onMouseEnter={() => setIsServicesOpen(true)}
+            onMouseLeave={() => setIsServicesOpen(false)}
+          >
+            <button className="flex items-center gap-1 hover:text-[#0055FF] transition-colors py-2 font-bold cursor-pointer">
+              Services <FiChevronDown size={14} className={`transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} />
+            </button>
+
+            {isServicesOpen && (
+              <div className="absolute top-full left-1/2 -translate-x-1/2 w-[650px] bg-white border border-gray-200 shadow-2xl rounded-2xl p-6 grid grid-cols-2 gap-4 mt-1 z-50 text-left">
+                <Link href="/services/software-solution" className="p-3 rounded-xl border border-gray-100 hover:border-[#0055FF] hover:bg-[#0055FF]/5 transition-all group">
+                  <h5 className="text-xs font-bold text-[#08162D] group-hover:text-[#0055FF] mb-1">Software Solution</h5>
+                  <p className="text-[10px] text-gray-500 font-medium">Contemporary software solutions</p>
+                </Link>
+
+                <Link href="/services/hardware-support" className="p-3 rounded-xl border border-gray-100 hover:border-[#0055FF] hover:bg-[#0055FF]/5 transition-all group">
+                  <h5 className="text-xs font-bold text-[#08162D] group-hover:text-[#0055FF] mb-1">Hardware Support</h5>
+                  <p className="text-[10px] text-gray-500 font-medium">Data recovery & diagnostics</p>
+                </Link>
+
+                <Link href="/services/mis-audit" className="p-3 rounded-xl border border-gray-100 hover:border-[#0055FF] hover:bg-[#0055FF]/5 transition-all group">
+                  <h5 className="text-xs font-bold text-[#08162D] group-hover:text-[#0055FF] mb-1">MIS Audit</h5>
+                  <p className="text-[10px] text-gray-500 font-medium">Analyzing business activities</p>
+                </Link>
+
+                <Link href="/services/training" className="p-3 rounded-xl border border-gray-100 hover:border-[#0055FF] hover:bg-[#0055FF]/5 transition-all group">
+                  <h5 className="text-xs font-bold text-[#08162D] group-hover:text-[#0055FF] mb-1">Training</h5>
+                  <p className="text-[10px] text-gray-500 font-medium">Technical & helpdesk support</p>
+                </Link>
+
+                <Link href="/services/web-development" className="p-3 rounded-xl border border-gray-100 hover:border-[#0055FF] hover:bg-[#0055FF]/5 transition-all group">
+                  <h5 className="text-xs font-bold text-[#08162D] group-hover:text-[#0055FF] mb-1">Web Development</h5>
+                  <p className="text-[10px] text-gray-500 font-medium">Ecommerce & Web Apps</p>
+                </Link>
+
+                <Link href="/services/digital-marketing" className="p-3 rounded-xl border border-gray-100 hover:border-[#0055FF] hover:bg-[#0055FF]/5 transition-all group">
+                  <h5 className="text-xs font-bold text-[#08162D] group-hover:text-[#0055FF] mb-1">Digital Marketing</h5>
+                  <p className="text-[10px] text-gray-500 font-medium">Market Audit, SEO, SEM, SMM</p>
+                </Link>
+
+                <Link href="/services/system-support" className="p-3 rounded-xl border border-gray-100 hover:border-[#0055FF] hover:bg-[#0055FF]/5 transition-all group">
+                  <h5 className="text-xs font-bold text-[#08162D] group-hover:text-[#0055FF] mb-1">System Support</h5>
+                  <p className="text-[10px] text-gray-500 font-medium">Technical support & maintenance</p>
+                </Link>
+
+                <Link href="/services/hr-digitalization" className="p-3 rounded-xl border border-gray-100 hover:border-[#0055FF] hover:bg-[#0055FF]/5 transition-all group">
+                  <h5 className="text-xs font-bold text-[#08162D] group-hover:text-[#0055FF] mb-1">HR Digitalization</h5>
+                  <p className="text-[10px] text-gray-500 font-medium">Exploring New Digital Territories</p>
+                </Link>
+              </div>
+            )}
+          </div>
+
+          <Link href="/clientele" className="hover:text-[#0055FF] transition-colors">Clientele</Link>
+          
+          {/* Contact Dropdown Menu */}
+          <div 
+            className="relative"
+            onMouseEnter={() => setIsContactOpen(true)}
+            onMouseLeave={() => setIsContactOpen(false)}
+          >
+            <button className="flex items-center gap-1 hover:text-[#0055FF] transition-colors py-2 font-bold cursor-pointer">
+              Contact <FiChevronDown size={14} className={`transition-transform duration-200 ${isContactOpen ? 'rotate-180' : ''}`} />
+            </button>
+
+            {isContactOpen && (
+              <div className="absolute top-full left-0 w-56 bg-white border border-gray-200 shadow-2xl rounded-2xl py-3 mt-1 z-50 text-left">
+                <ul className="space-y-1 text-xs font-bold text-gray-700">
+                  <li><Link href="/contact" className="px-4 py-2 hover:bg-[#0055FF]/5 hover:text-[#0055FF] transition-colors block">Contact Us</Link></li>
+                  <li><Link href="/demo" className="px-4 py-2 hover:bg-[#0055FF]/5 hover:text-[#0055FF] transition-colors block">Get a Free Demo</Link></li>
+                  <li><Link href="/partner" className="px-4 py-2 hover:bg-[#0055FF]/5 hover:text-[#0055FF] transition-colors block">Become a Partner</Link></li>
+                  <li><Link href="/hiring" className="px-4 py-2 hover:bg-[#0055FF]/5 hover:text-[#0055FF] transition-colors block">We are hiring</Link></li>
+                  <li><Link href="/privacy" className="px-4 py-2 hover:bg-[#0055FF]/5 hover:text-[#0055FF] transition-colors block">Privacy policy</Link></li>
+                  <li><Link href="/blog" className="px-4 py-2 hover:bg-[#0055FF]/5 hover:text-[#0055FF] transition-colors block">Blog</Link></li>
+                </ul>
+              </div>
+            )}
+          </div>
+
+        </nav>
+
+        {/* Call Button (Desktop) */}
+        <div className="hidden lg:flex items-center">
+          <a 
+            href="tel:021111436832" 
+            className="border border-gray-200 hover:border-[#0055FF] px-4 py-2 rounded-xl flex items-center gap-3 transition-all bg-gray-50 hover:bg-white shadow-sm"
+          >
+            <div className="w-9 h-9 rounded-xl bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center">
+              <FiPhoneCall size={18} />
+            </div>
+            <div className="text-left">
+              <span className="block text-[10px] uppercase font-bold text-gray-400 tracking-wider">Call Anytime</span>
+              <span className="block text-xs font-black text-[#08162D]">03-000000000</span>
+            </div>
+          </a>
+        </div>
+
+        {/* Mobile Menu Toggle Button */}
+        <div className="flex lg:hidden items-center">
+          <button 
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="p-2 text-[#08162D] focus:outline-none"
+            aria-label="Toggle Menu"
+          >
+            {isMobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+          </button>
+        </div>
+
       </div>
 
       {/* Mobile Drawer Navigation */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-[#08162D] border-t border-[#0055FF]/20 px-4 pt-4 pb-6 space-y-3"
+      {isMobileMenuOpen && (
+        <div className="lg:hidden bg-white border-b border-gray-200 px-6 py-6 space-y-4 shadow-xl">
+          <Link 
+            href="/" 
+            onClick={() => setIsMobileMenuOpen(false)} 
+            className="block font-bold text-sm text-[#0055FF]"
           >
-            {navLinks.map((link) => (
-              <div key={link.name} className="flex flex-col">
-                {"megaMenu" in link ? (
-                  <>
-                    <button
-                      onClick={() => setMobileDropdown(mobileDropdown === link.name ? null : link.name)}
-                      className="flex items-center justify-between w-full px-4 py-2.5 text-sm font-medium text-white/90 hover:text-[#00B4FF] hover:bg-[#0055FF]/5 rounded-[8px]"
-                    >
-                      <span>{link.name}</span>
-                      <svg className={`w-4 h-4 transition-transform ${mobileDropdown === link.name ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                      </svg>
-                    </button>
-                    {mobileDropdown === link.name && (
-                      <div className="pl-6 py-2 space-y-2 border-l border-[#0055FF]/20 ml-4 my-1">
-                        <p className="text-xs font-semibold text-[#00B4FF] uppercase tracking-wider">Modules</p>
-                        {link.megaMenu.modules.map((m) => (
-                          <Link key={m.name} href={m.href} onClick={() => setIsOpen(false)} className="block py-1 text-sm text-white/70 hover:text-[#00B4FF]">
-                            {m.name}
-                          </Link>
-                        ))}
-                        <p className="text-xs font-semibold text-[#00B4FF] uppercase tracking-wider pt-2">Products</p>
-                        {link.megaMenu.products.map((p) => (
-                          <Link key={p.name} href={p.href} onClick={() => setIsOpen(false)} className="block py-1 text-sm text-white/70 hover:text-[#00B4FF]">
-                            {p.name}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </>
-                ) : (
-                  <Link
-                    href={link.href}
-                    onClick={() => setIsOpen(false)}
-                    className="block px-4 py-2.5 text-sm font-medium text-white/90 hover:text-[#00B4FF] hover:bg-[#0055FF]/5 rounded-[8px]"
-                  >
-                    {link.name}
-                  </Link>
-                )}
-              </div>
-            ))}
-            <div className="pt-2">
-              <Link
-                href="/contact"
-                onClick={() => setIsOpen(false)}
-                className="block w-full text-center py-3 text-sm font-semibold text-white bg-gradient-to-r from-[#0055FF] to-[#00B4FF] rounded-[8px] shadow-md shadow-[#0055FF]/20"
-              >
-                Get Started
-              </Link>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            Home
+          </Link>
+          <Link 
+            href="/about" 
+            onClick={() => setIsMobileMenuOpen(false)} 
+            className="block font-bold text-sm text-[#08162D] hover:text-[#0055FF]"
+          >
+            About
+          </Link>
+          <Link 
+            href="/products/restaurant" 
+            onClick={() => setIsMobileMenuOpen(false)} 
+            className="block font-bold text-sm text-[#08162D] hover:text-[#0055FF]"
+          >
+            Products & Solutions
+          </Link>
+          <Link 
+            href="/services/software-solution" 
+            onClick={() => setIsMobileMenuOpen(false)} 
+            className="block font-bold text-sm text-[#08162D] hover:text-[#0055FF]"
+          >
+            Services
+          </Link>
+          <Link 
+            href="/clientele" 
+            onClick={() => setIsMobileMenuOpen(false)} 
+            className="block font-bold text-sm text-[#08162D] hover:text-[#0055FF]"
+          >
+            Clientele
+          </Link>
+          <Link 
+            href="/contact" 
+            onClick={() => setIsMobileMenuOpen(false)} 
+            className="block font-bold text-sm text-[#08162D] hover:text-[#0055FF]"
+          >
+            Contact Us
+          </Link>
+          <div className="pt-4 border-t border-gray-100 flex items-center justify-between">
+            <a 
+              href="tel:021111436832" 
+              className="w-full py-3 bg-[#0055FF] text-white font-black text-xs uppercase tracking-widest text-center rounded-xl shadow-md"
+            >
+              Call 03-000000000
+            </a>
+          </div>
+        </div>
+      )}
     </header>
   );
 }
