@@ -1,78 +1,54 @@
 "use client";
-import React from 'react';
-import { motion } from 'framer-motion';
+
+import React from "react";
+import { motion } from "framer-motion";
 
 const team = [
-  { name: 'Ahmed Khan', role: 'Founder & CEO', image: '/blog/blog1.jpg' },
-  { name: 'Sarah Malik', role: 'Head of Operations', image: '/blog/blog2.jpg' },
-  { name: 'Zeeshan Ahmed', role: 'Lead Architect', image: '/blog/blog3.jpg' },
-  { name: 'Maria Siddiqui', role: 'Support Director', image: '/blog/blog4.jpg' },
+  { name: "Ahmed Khan", role: "Founder & CEO" },
+  { name: "Sarah Malik", role: "Head of Operations" },
+  { name: "Zeeshan Ahmed", role: "Lead Architect" },
+  { name: "Maria Siddiqui", role: "Support Director" },
 ];
 
-const AboutTeam = () => {
+export default function AboutTeam() {
   return (
-    <section className="py-8 md:py-10 bg-background relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-full h-full bg-grid-pattern opacity-30 pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
+    <section className="py-20 md:py-28 bg-white border-b border-gray-200 relative overflow-hidden">
+      
+      {/* Background Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-[#0055FF]/5 blur-[160px] rounded-full pointer-events-none" />
 
-      <div className="container mx-auto px-4 md:px-8 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-8 md:mb-10"
-        >
-          <span className="section-label">The Experts</span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-4">
-            Meet the <span className="text-primary text-glow">Team</span>
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-4 py-2 rounded-xl mb-4 border border-[#0055FF]/20">
+            OUR TEAM
+          </span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#08162D] tracking-tight">
+            Who <span className="text-[#0055FF]">drives</span> our success
           </h2>
-          <p className="text-lg text-muted max-w-2xl mx-auto font-medium">
-            The minds behind the software. We're a team of innovators, engineers, and creatives building the future.
+          <p className="text-gray-600 text-sm sm:text-base font-normal mt-4 leading-relaxed">
+            A dedicated group of professionals committed to delivering excellence in every project.
           </p>
-        </motion.div>
+        </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {team.map((m, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, scale: 0.8, y: 40 }}
-              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {team.map((m, idx) => (
+            <motion.div 
+              key={idx}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.15, duration: 0.7, type: 'spring', stiffness: 100 }}
-              className="group cursor-pointer"
-              style={{ perspective: '1000px' }}
+              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              className="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm hover:border-[#0055FF] hover:shadow-xl transition-all text-center group flex flex-col items-center"
             >
-              <motion.div
-                whileHover={{ rotateY: 10, rotateX: 5, y: -10 }}
-                transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-                className="relative overflow-hidden rounded-[40px] shadow-[0_20px_40px_rgba(0,0,0,0.4)] mb-6 aspect-[3/4] border-2 border-surface-border/40 bg-surface/50 backdrop-blur-md"
-              >
-                <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-[50px] z-0" />
-
-                <img
-                  src={m.image}
-                  alt={m.name}
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 relative z-10"
-                />
-
-                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500 z-20" />
-
-                <div className="absolute top-4 right-4 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400 absolute right-0 top-0 animate-pulse" />
-                </div>
-              </motion.div>
-
-              <div className="text-center">
-                <h4 className="text-xl font-extrabold text-foreground mb-1 group-hover:text-primary transition-colors">{m.name}</h4>
-                <p className="text-muted font-black text-xs tracking-widest uppercase">{m.role}</p>
+              <div className="w-20 h-20 rounded-2xl bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center mx-auto mb-6 group-hover:bg-[#0055FF] group-hover:text-white transition-all shadow-sm">
+                <span className="text-2xl font-black">{m.name.charAt(0)}</span>
               </div>
+              <h4 className="text-lg font-black text-[#08162D] mb-1 group-hover:text-[#0055FF] transition-colors">{m.name}</h4>
+              <p className="text-xs text-gray-500 font-medium">{m.role}</p>
             </motion.div>
           ))}
         </div>
       </div>
     </section>
   );
-};
-
-export default AboutTeam;
+}

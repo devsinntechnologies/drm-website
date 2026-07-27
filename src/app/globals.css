@@ -3,43 +3,39 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #f4f6fb;
-  --foreground: #10131c;
+  --background: #FFFFFF;
+  --foreground: #08162D;
 
-  --surface: #ffffff;
-  --surface-border: #dfe5f0;
+  --surface: #FFFFFF;
+  --surface-border: color-mix(in srgb, #08162D 10%, transparent);
 
-  --primary: #3EA348;
-  --primary-rgb: 193, 47, 47;
-  --primary-hover: #77d380;
-  --primary-foreground: #ffffff;
+  --primary: #0055FF;
+  --primary-hover: color-mix(in srgb, #0055FF 90%, black);
+  --primary-foreground: #FFFFFF;
 
-  --secondary: #4C4C4C;
-  --secondary-rgb: 255, 159, 67;
-  --secondary-foreground: #141822;
+  --secondary: #00B4FF;
+  --secondary-foreground: #08162D;
 
   --accent: var(--secondary);
-  --muted: #5f6d86;
+  --muted: color-mix(in srgb, #08162D 60%, transparent);
 }
 
 .dark {
-  --background: #090b12;
-  --foreground: #f5f7fb;
+  --background: #08162D;
+  --foreground: #FFFFFF;
 
-  --surface: #111723;
-  --surface-border: #242e40;
+  --surface: #08162D;
+  --surface-border: color-mix(in srgb, #FFFFFF 10%, transparent);
 
-  --primary: #3EA348;
-  --primary-rgb: 239, 87, 87;
-  --primary-hover: #77d380;
-  --primary-foreground: #ffffff;
+  --primary: #0055FF;
+  --primary-hover: color-mix(in srgb, #0055FF 90%, black);
+  --primary-foreground: #FFFFFF;
 
-  --secondary: #4C4C4C;
-  --secondary-rgb: 76, 76, 76;
-  --secondary-foreground: #ffffff;
+  --secondary: #00B4FF;
+  --secondary-foreground: #FFFFFF;
 
   --accent: var(--secondary);
-  --muted: #95a1b6;
+  --muted: color-mix(in srgb, #FFFFFF 60%, transparent);
 }
 
 @theme {

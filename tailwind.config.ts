@@ -10,10 +10,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: '#35A000', // green
-        secondary: '#4C4C4C', // dark gray
-        background: '#ffffff', // white
-        "section-bg": '#f9fafb', // light gray
+        navy: '#08162D',
+        royal: '#0055FF',
+        bright: '#00B4FF',
+        white: '#FFFFFF',
       },
     },
   },
