@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DRM — Restaurant Point of Sale System | Cloud POS Software",
-  description: "DRM is a comprehensive cloud-based Restaurant Point of Sale system. Manage orders, inventory, KDS, loyalty programs and more — all in one place.",
+  title: "N&S Software Solutions — Complete ERP & POS System",
+  description: "N&S Software Solutions is a comprehensive cloud-based Point of Sale and ERP system. Manage orders, inventory, KDS, and more — all in one place.",
 };
 
 import Navbar from "@/components/Navbar";
@@ -33,7 +33,7 @@ export default function RootLayout({
       lang="en"
       className={`${poppins.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-screen flex flex-col pt-20 ">
+      <body className="min-h-screen flex flex-col m-0 p-0 overflow-x-hidden bg-white text-[#08162D]">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

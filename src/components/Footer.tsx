@@ -2,169 +2,116 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaLinkedinIn,
-  FaInstagram,
-} from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn, FaYoutube, FaApple } from "react-icons/fa";
 
-const Footer = () => {
-  const socials = [
-    {
-      icon: <FaFacebookF />,
-      link: "https://facebook.com",
-    },
-    {
-      icon: <FaTwitter />,
-      link: "https://twitter.com",
-    },
-    {
-      icon: <FaLinkedinIn />,
-      link: "https://linkedin.com",
-    },
-    {
-      icon: <FaInstagram />,
-      link: "https://instagram.com",
-    },
-  ];
-
+export default function Footer() {
   const currentYear = new Date().getFullYear();
 
-  const footerLinks = [
-    {
-      title: "Company",
-      links: [
-        { name: "About Us", href: "/about" },
-        { name: "Our Blog", href: "/blog" },
-        { name: "Contact Us", href: "/contact" },
-      ],
-    },
-    {
-      title: "Support",
-      links: [
-        { name: "Help Center", href: "/support" },
-        { name: "Legal Terms", href: "/terms" },
-        { name: "Privacy Policy", href: "/privacy" },
-        { name: "FAQ", href: "/support#faq" },
-      ],
-    },
-  ];
-
   return (
-    <>
-      {/* <Image src="/footer-bg.png" alt="Footer" width={1920} height={1080} /> */}
+    <footer className="bg-white text-[#08162D] pt-16 pb-12 border-t border-gray-200 relative overflow-hidden">
+      
+      {/* Background Glow */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-[#0055FF]/5 blur-[160px] rounded-full pointer-events-none" />
 
-      <footer className="pt-20 flex justify-between pb-10 bg-background relative overflow-hidden">
-        {/* <div className="absolute top-0 inset-x-0 h-px bg-linear-to-r from-transparent via-surface-border to-transparent" /> */}
-
-        {/* <div className="absolute inset-0 aurora-bg opacity-25" /> */}
-        <div className="absolute inset-0 bg-[#090b12] z-0" />
-        <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-
-        <div className="container mx-auto px-4 md:px-8 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-16 mb-16">
-            {/* Brand Column */}
-            <div className="lg:col-span-4 ">
-              <Link href="/" className="inline-block mb-8 group relative">
-                <div className="flex items-center gap-3">
-                  <div className="relative h-10 w-auto md:h-12">
-                    <img
-                      src="/logo2.png"
-                      alt="DRM Logo"
-                      className="h-full w-auto object-contain object-left"
-                    />
-                  </div>
-
-                </div>
-              </Link>
-
-              <p className="text-background text-base leading-relaxed mb-8 max-w-sm font-medium">
-                We are revolutionizing restaurant operations with the most
-                powerful cloud-based DRM and Point of Sale ecosystem.
-              </p>
-
-              <div className="flex gap-4">
-                {socials.map((social, idx) => (
-                  <a
-                    key={idx}
-                    href={social.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="
-         w-10 h-10 rounded-xl glass-card
-        flex items-center justify-center
-        text-lg text-primary
-        hover:text-primary
-        hover:border-primary/40
-        transition-all duration-300
-      "
-                  >
-                    {social.icon}
-                  </a>
-                ))}
-              </div>
-            </div>
-
-            {/* Links Columns */}
-            <div className="lg:col-span-8 grid grid-cols-2 lg:grid-cols-3 gap-8">
-              {footerLinks.map((group, i) => (
-                <div key={group.title}>
-                  <div className="flex items-center gap-3 mb-8">
-                    <span className="w-2 h-2 rounded-full bg-primary/70" />
-                    <h4 className="text-primary font-semibold text-xs uppercase tracking-[0.2em]">
-                      {group.title}
-                    </h4>
-                  </div>
-
-                  <ul className="space-y-4">
-                    {group.links.map((link) => (
-                      <li key={link.name}>
-                        <Link
-                          href={link.href}
-                          className="text-white hover:text-primary font-semibold text-sm  transition-colors flex items-center group relative"
-                        >
-                          <span className="h-0.5 w-0 text-white hover:text-primary mr-0 rounded-full group-hover:w-3 group-hover:mr-3 transition-all duration-300" />
-                          <span className="group-hover:translate-x-0.5 transition-transform duration-300">
-                            {link.name}
-                          </span>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12 relative z-10">
+        
+        {/* Column 1: Brand Logo & Description */}
+        <div className="lg:col-span-2">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="relative h-16 w-52 bg-white px-2 py-1 flex items-center">
+              <Image 
+                src="/Group_11-removebg-preview.png" 
+                alt="Brand Logo" 
+                fill 
+                className="object-contain object-left"
+                priority
+              />
             </div>
           </div>
-
-          {/* Footer Bottom */}
-          <div className="pt-8 border-t border-surface-border/50 flex flex-col  items-center justify-self-center-safe gap-6">
-            <div className="text-background font-bold text-xs uppercase tracking-widest">
-              © {currentYear} devsinn technologies. All rights reserved.
-            </div>
-
-            <div className="flex flex-wrap items-center justify-start gap-6 text-xs font-black text-background tracking-widest">
-              {["Terms", "Privacy"].map((item) => (
-                <Link
-                  key={item}
-                  href={`/${item.toLowerCase()}`}
-                  className="uppercase hover:text-primary transition-colors relative group"
-                >
-                  {item}
-                  <span className="absolute -bottom-2 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
-                </Link>
-              ))}
-
-              {/* <Link href="/status" className="hover:text-primary transition-colors flex items-center gap-2 px-3 py-1.5 rounded-full glass-card border border-surface-border text-[11px]">
-              <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
-              SYSTEM STATUS
-            </Link> */}
-            </div>
+          <p className="text-sm text-gray-600 leading-relaxed mb-6 max-w-sm font-normal">
+            We believe in team work and together we all can achieve more. We always focus on excellence by connecting with our clients as business partners, executing your thoughts and delivering your needs so you can focus on your core activities.
+          </p>
+          <div className="flex items-center space-x-4">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-[8px] bg-gray-50 border border-gray-200 flex items-center justify-center text-gray-600 hover:text-white hover:bg-[#0055FF] hover:border-[#0055FF] transition-all">
+              <FaFacebookF size={16} />
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-[8px] bg-gray-50 border border-gray-200 flex items-center justify-center text-gray-600 hover:text-white hover:bg-[#0055FF] hover:border-[#0055FF] transition-all">
+              <FaInstagram size={16} />
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-[8px] bg-gray-50 border border-gray-200 flex items-center justify-center text-gray-600 hover:text-white hover:bg-[#0055FF] hover:border-[#0055FF] transition-all">
+              <FaTwitter size={16} />
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-[8px] bg-gray-50 border border-gray-200 flex items-center justify-center text-gray-600 hover:text-white hover:bg-[#0055FF] hover:border-[#0055FF] transition-all">
+              <FaLinkedinIn size={16} />
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-[8px] bg-gray-50 border border-gray-200 flex items-center justify-center text-gray-600 hover:text-white hover:bg-[#0055FF] hover:border-[#0055FF] transition-all">
+              <FaYoutube size={16} />
+            </a>
           </div>
         </div>
-      </footer>
-    </>
-  );
-};
 
-export default Footer;
+        {/* Column 2: Quick Links */}
+        <div>
+          <h3 className="text-[#08162D] text-base font-bold uppercase tracking-wider mb-6 border-l-4 border-[#0055FF] pl-3">
+            Quick Links
+          </h3>
+          <ul className="space-y-3 text-sm text-gray-600 font-medium">
+            <li><Link href="/products/ecommerce" className="hover:text-[#0055FF] transition-colors">ECommerce Solutions</Link></li>
+            <li><Link href="/products/field-force" className="hover:text-[#0055FF] transition-colors">CRM (FIELD FORCE)</Link></li>
+            <li><Link href="/services/hr-digitalization" className="hover:text-[#0055FF] transition-colors">HR DIGITALIZATION</Link></li>
+            <li><Link href="/demo" className="hover:text-[#0055FF] transition-colors">Get a Free Demo</Link></li>
+            <li><Link href="/products/financial" className="hover:text-[#0055FF] transition-colors">Financial</Link></li>
+            <li><Link href="/privacy" className="hover:text-[#0055FF] transition-colors">Privacy Policy</Link></li>
+          </ul>
+        </div>
+
+        {/* Column 3: Services */}
+        <div>
+          <h3 className="text-[#08162D] text-base font-bold uppercase tracking-wider mb-6 border-l-4 border-[#0055FF] pl-3">
+            Services
+          </h3>
+          <ul className="space-y-3 text-sm text-gray-600 font-medium">
+            <li><Link href="/services/dedicated-server" className="hover:text-[#0055FF] transition-colors">Dedicated Server</Link></li>
+            <li><Link href="/services/web-development" className="hover:text-[#0055FF] transition-colors">WEB DEVELOPMENT</Link></li>
+            <li><Link href="/services/sms-branding" className="hover:text-[#0055FF] transition-colors">SMS Branding Solution</Link></li>
+            <li><Link href="/services/app-development" className="hover:text-[#0055FF] transition-colors">Applications Development</Link></li>
+            <li><Link href="/services/digital-marketing" className="hover:text-[#0055FF] transition-colors">DIGITAL MARKETING</Link></li>
+            <li><Link href="/services/system-support" className="hover:text-[#0055FF] transition-colors">SYSTEM SUPPORT</Link></li>
+            <li><Link href="/services/gen-price" className="hover:text-[#0055FF] transition-colors">GEN PRICE</Link></li>
+          </ul>
+        </div>
+
+        {/* Column 4: Technology Partners & App Download */}
+        <div>
+          <h3 className="text-[#08162D] text-base font-bold uppercase tracking-wider mb-6 border-l-4 border-[#0055FF] pl-3">
+            Technology Partners
+          </h3>
+          <div className="space-y-3 mb-6">
+            <div className="bg-[#0055FF] hover:bg-[#0044cc] transition-all p-3 rounded-[8px] text-center text-xs font-bold text-white shadow-md">
+              PECS PARTNER
+            </div>
+            <div className="bg-[#0055FF] hover:bg-[#0044cc] transition-all p-3 rounded-[8px] text-center text-xs font-bold text-white shadow-md">
+              BIN JAFFER ENTERPRISES
+            </div>
+            <div className="bg-[#0055FF] hover:bg-[#0044cc] transition-all p-3 rounded-[8px] text-center text-xs font-bold text-white shadow-md">
+              CREATIVE SOLUTIONS
+            </div>
+          </div>
+
+          <h4 className="text-[#08162D] text-xs font-bold uppercase tracking-wider mb-3">Download Our App</h4>
+          <div className="flex items-center gap-2">
+            <a href="#" className="bg-[#0055FF] hover:bg-[#0044cc] px-4 py-2.5 rounded-[8px] flex items-center justify-center gap-2 text-white transition-all text-xs font-bold uppercase shadow-md w-full">
+              <FaApple size={18} /> App Store
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      {/* Copyright Bar */}
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 border-t border-gray-200 pt-6 text-center text-xs text-gray-500 font-medium relative z-10">
+        &copy; {currentYear} All Rights Reserved.
+      </div>
+    </footer>
+  );
+}

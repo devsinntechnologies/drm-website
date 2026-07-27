@@ -1,112 +1,79 @@
 "use client";
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 
-const values = [
-  { t: "People First", d: "Our team is packed with people who help develop the company and are continuously growing.", i: "👥", c: "primary" },
-  { t: "Simplicity", d: "DRM is the link between the complex world of business and the people who run it smoothly.", i: "✨", c: "secondary" },
-  { t: "Empathy", d: "We create software that works for everyone. We never stop listening to our clients.", i: "❤️", c: "accent" },
-  { t: "Innovation", d: "Never stop looking for new ideas. We believe great companies always rise to challenges.", i: "🚀", c: "primary" },
-  { t: "Transparency", d: "Our pricing and practices are clear, honest, and built for long-term relationships.", i: "🛡️", c: "secondary" },
-  { t: "Legacy", d: "Built on years of expertise across Pakistan, empowering local businesses to go global.", i: "🏛️", c: "accent" }
-];
+import React from "react";
+import { FiShield, FiZap, FiHeart, FiStar } from "react-icons/fi";
+import { motion } from "framer-motion";
 
-const AboutValues = () => {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+export default function AboutValues() {
+  const values = [
+    {
+      icon: <FiShield size={24} />,
+      title: "Integrity & Trust",
+      description: "We build long-term relationships through absolute transparency, honesty, and ethical business practices.",
+    },
+    {
+      icon: <FiZap size={24} />,
+      title: "Continuous Innovation",
+      description: "Constantly upgrading our tech stack and solutions to stay ahead of industry trends and deliver future-proof systems.",
+    },
+    {
+      icon: <FiHeart size={24} />,
+      title: "Client Commitment",
+      description: "Your business growth is our ultimate priority. We provide dedicated support and tailor-made digital strategies.",
+    },
+    {
+      icon: <FiStar size={24} />,
+      title: "Quality Excellence",
+      description: "Rigorous standards in coding, security, and UI/UX design to ensure robust and high-performance applications.",
+    },
+  ];
 
   return (
-    <section className="py-8 md:py-10 bg-background relative overflow-hidden">
-      <div className="noise-overlay opacity-5" />
+    <section className="bg-white py-20 md:py-28 relative overflow-hidden border-b border-gray-200">
+      
+      {/* Background Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-[#0055FF]/5 blur-[160px] rounded-full pointer-events-none" />
 
-      {/* Dynamic Background Glow based on hover */}
-      <AnimatePresence>
-        {hoveredIndex !== null && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.8 }}
-            transition={{ duration: 0.5 }}
-            className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full blur-[150px] pointer-events-none bg-${values[hoveredIndex].c}/10`}
-          />
-        )}
-      </AnimatePresence>
-
-      <div className="container mx-auto px-4 md:px-8 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-8 md:mb-10"
-        >
-          <span className="section-label">Our Philosophy</span>
-          <h2 className="interactive-heading text-4xl md:text-5xl font-extrabold mb-4 group cursor-pointer transition-colors duration-300">
-            <span className="text-foreground">Our Core </span>
-            <span className="text-primary">Values</span>
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+        
+        {/* Section Header */}
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-4 py-2 rounded-xl mb-4 border border-[#0055FF]/20">
+            WHAT WE STAND FOR
+          </span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#08162D] mb-4 tracking-tight">
+            Our Core <span className="text-[#0055FF]">Values</span>
           </h2>
-          <p className="text-lg text-muted max-w-2xl mx-auto font-medium">
-            The principles that guide our product, our team, and our relationship with you.
+          <p className="text-gray-600 font-normal text-sm sm:text-base leading-relaxed">
+            The foundational principles that guide every line of code we write and every client relationship we build.
           </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative">
-          {values.map((v, i) => {
-            const colorVar = `var(--${v.c})`;
-            const isHovered = hoveredIndex === i;
-
-            return (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-                onMouseEnter={() => setHoveredIndex(i)}
-                onMouseLeave={() => setHoveredIndex(null)}
-                whileHover={{ y: -10, scale: 1.02 }}
-                className=" p-10 rounded-[40px] border-2 border-surface-border/40 relative overflow-hidden group bg-taupe-100 backdrop-blur-2xl"
-                style={{
-                  boxShadow: isHovered ? `0 30px 60px rgba(var(--${v.c}-rgb), 0.15)` : '0 10px 30px rgba(0,0,0,0.2)',
-                  borderColor: isHovered ? `color-mix(in srgb, ${colorVar} 50%, transparent)` : undefined,
-                  transition: 'box-shadow 0.4s ease, border-color 0.4s ease'
-                }}
-              >
-                {/* Highlight Sweep */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-700"
-                  style={{ background: `radial-gradient(circle at top right, color-mix(in srgb, ${colorVar} 15%, transparent), transparent 70%)` }}
-                />
-
-                {/* Floating Icon */}
-                <motion.div
-                  animate={isHovered ? { y: [-5, 5, -5], rotate: [0, 10, -10, 0] } : { y: 0, rotate: 0 }}
-                  transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-                  className="w-16 h-16 rounded-3xl flex items-center justify-center text-3xl mb-8 relative z-10"
-                  style={{
-                    background: `color-mix(in srgb, ${colorVar} 15%, transparent)`,
-                    border: `1px solid color-mix(in srgb, ${colorVar} 30%, transparent)`,
-                    color: colorVar
-                  }}
-                >
-                  {v.i}
-                </motion.div>
-
-                <h3 className="text-2xl font-extrabold text-foreground mb-4 relative z-10 transition-colors" style={{ color: isHovered ? colorVar : undefined }}>
-                  {v.t}
-                </h3>
-                <p className="text-muted font-medium leading-relaxed relative z-10 tracking-wide">
-                  {v.d}
-                </p>
-
-                {/* Background number outline */}
-                {/* <div className="absolute -bottom-4 -right-2 text-[120px] font-black opacity-5 pointer-events-none select-none transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-4">
-                  0{i + 1}
-                </div> */}
-              </motion.div>
-            );
-          })}
         </div>
+
+        {/* Values Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {values.map((item, index) => (
+            <motion.div 
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="bg-white p-8 rounded-2xl border border-gray-200 hover:border-[#0055FF] shadow-sm hover:shadow-xl transition-all group text-left flex flex-col justify-between"
+            >
+              <div>
+                <div className="w-12 h-12 rounded-xl bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center mb-6 group-hover:bg-[#0055FF] group-hover:text-white transition-all">
+                  {item.icon}
+                </div>
+                <h3 className="text-base font-black text-[#08162D] mb-3 group-hover:text-[#0055FF] transition-colors">{item.title}</h3>
+                <p className="text-gray-600 text-xs sm:text-sm leading-relaxed font-normal">
+                  {item.description}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
       </div>
     </section>
   );
-};
-
-export default AboutValues;
+}

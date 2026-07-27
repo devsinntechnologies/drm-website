@@ -1,11 +1,11 @@
 "use client";
-import React from 'react';
-import { motion } from 'framer-motion';
+
+import React, { useRef, useState } from "react";
+import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import { useRef, useState } from "react";
+import { FiMapPin, FiPhone, FiMail, FiSend } from "react-icons/fi";
 
 const ContactForm = () => {
-
   const form = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
 
@@ -45,11 +45,14 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-background relative overflow-hidden">
-      <div className="container mx-auto px-4 md:px-8">
-        <div className="flex flex-col lg:flex-row gap-6 md:gap-8 lg:gap-12">
+    <section className="py-12 md:py-16 lg:py-20 bg-white text-[#08162D] relative overflow-hidden border-t border-gray-200">
+      {/* Background Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[500px] bg-[#0055FF]/5 blur-[180px] rounded-full pointer-events-none" />
 
-          {/* Contact Info */}
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+        <div className="flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-16 items-center">
+
+          {/* Contact Info Side */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -58,21 +61,24 @@ const ContactForm = () => {
             className="flex-1 space-y-6 md:space-y-8"
           >
             <div>
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-foreground mb-4 md:mb-6">
-                Connect with <span className="text-primary">Experts</span>
+              <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-4 py-2 rounded-xl mb-4 border border-[#0055FF]/20">
+                GET IN TOUCH
+              </span>
+              <h3 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#08162D] mb-4 md:mb-6 tracking-tight">
+                Connect with <span className="text-[#0055FF]">Experts</span>
               </h3>
 
-              <p className="text-base sm:text-lg text-muted font-bold leading-relaxed max-w-lg">
-                Whether you're starting a new cafe or managing a global franchise,
-                our specialists are here to guide you.
+              <p className="text-sm md:text-base text-gray-600 font-normal leading-relaxed max-w-lg">
+                Whether you're starting a new venture or scaling your enterprise operations,
+                our specialists are here to guide you with tailored software solutions.
               </p>
             </div>
 
             <div className="space-y-6">
               {[
-                { t: "Headquarters", d: "Lahore, Pakistan", i: "📍" },
-                { t: "Phone Support", d: "+92 (315) 4031364", i: "📞" },
-                { t: "Mail Us", d: "hello@devsinntechnologies.com", i: "✉️" }
+                { t: "Headquarters", d: "Lahore, Pakistan", icon: <FiMapPin size={22} /> },
+                { t: "Phone Support", d: "021-111 N&S", icon: <FiPhone size={22} /> },
+                { t: "Mail Us", d: "hello@nandstech.com", icon: <FiMail size={22} /> }
               ].map((item, idx) => (
                 <motion.div
                   key={idx}
@@ -80,14 +86,14 @@ const ContactForm = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.4 + (idx * 0.1) }}
-                  className="flex gap-4 items-start"
+                  className="flex gap-4 items-center group"
                 >
-                  <div className="w-14 h-14 flex items-center justify-center text-2xl">
-                    {item.i}
+                  <div className="w-12 h-12 rounded-xl bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center shrink-0 group-hover:bg-[#0055FF] group-hover:text-white transition-all">
+                    {item.icon}
                   </div>
                   <div>
-                    <h4 className="font-black">{item.t}</h4>
-                    <p className="text-muted">{item.d}</p>
+                    <h4 className="font-black text-[#08162D] text-sm sm:text-base">{item.t}</h4>
+                    <p className="text-xs sm:text-sm text-gray-600 font-medium">{item.d}</p>
                   </div>
                 </motion.div>
               ))}
@@ -95,48 +101,50 @@ const ContactForm = () => {
           </motion.div>
 
           {/* Form Side */}
-          <motion.div className="flex-1">
+          <motion.div className="flex-1 w-full">
 
             <motion.form
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="glass-card p-8 md:p-10 rounded-[48px] border border-black/50 shadow-2xl relative overflow-hidden"
+              className="bg-white p-8 md:p-10 rounded-2xl border border-gray-200 shadow-sm relative overflow-hidden"
               ref={form}
               onSubmit={sendEmail}
             >
-
-              <div className="absolute top-0 left-0 w-64 h-64 bg-primary/5 blur-[80px] rounded-full pointer-events-none" />
-
               <div className="space-y-5 md:space-y-6 relative z-10">
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
 
                   <motion.div variants={itemVariants}>
+                    <label className="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2">Name</label>
                     <input
                       type="text"
                       name="user_name"
                       placeholder="John Doe"
-                      className="w-full bg-surface/50 border border-black/40 rounded-2xl px-6 py-4 font-bold"
+                      required
+                      className="w-full bg-white border border-gray-200 focus:border-[#0055FF] focus:ring-1 focus:ring-[#0055FF] outline-none rounded-xl px-5 py-3.5 text-sm font-semibold text-[#08162D] transition-all"
                     />
                   </motion.div>
 
                   <motion.div variants={itemVariants}>
+                    <label className="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2">Email</label>
                     <input
                       type="email"
                       name="user_email"
                       placeholder="john@example.com"
-                      className="w-full bg-surface/50 border border-black/40 rounded-2xl px-6 py-4 font-bold"
+                      required
+                      className="w-full bg-white border border-gray-200 focus:border-[#0055FF] focus:ring-1 focus:ring-[#0055FF] outline-none rounded-xl px-5 py-3.5 text-sm font-semibold text-[#08162D] transition-all"
                     />
                   </motion.div>
 
                 </div>
 
                 <motion.div variants={itemVariants}>
+                  <label className="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2">Subject</label>
                   <select
                     name="subject"
-                    className="w-full bg-surface/50 border border-black/40 rounded-2xl px-6 py-4 font-bold"
+                    className="w-full bg-white border border-gray-200 focus:border-[#0055FF] focus:ring-1 focus:ring-[#0055FF] outline-none rounded-xl px-5 py-3.5 text-sm font-semibold text-[#08162D] transition-all"
                   >
                     <option>Product Inquiry</option>
                     <option>Technical Support</option>
@@ -146,11 +154,13 @@ const ContactForm = () => {
                 </motion.div>
 
                 <motion.div variants={itemVariants}>
+                  <label className="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2">Message</label>
                   <textarea
                     name="message"
-                    rows={5}
-                    placeholder="Tell us about your restaurant..."
-                    className="w-full bg-surface/50 border border-black/40 rounded-2xl px-6 py-4 font-bold"
+                    rows={4}
+                    placeholder="Tell us about your requirements..."
+                    required
+                    className="w-full bg-white border border-gray-200 focus:border-[#0055FF] focus:ring-1 focus:ring-[#0055FF] outline-none rounded-xl px-5 py-3.5 text-sm font-semibold text-[#08162D] transition-all resize-none"
                   />
                 </motion.div>
 
@@ -158,8 +168,9 @@ const ContactForm = () => {
                   variants={itemVariants}
                   type="submit"
                   disabled={loading}
-                  className="w-full py-5 bg-primary text-white font-black text-lg rounded-2xl shadow-xl"
+                  className="w-full py-4 bg-[#0055FF] hover:bg-[#0044cc] text-white font-black text-xs uppercase tracking-widest rounded-xl transition-all shadow-lg flex items-center justify-center gap-2 cursor-pointer"
                 >
+                  <FiSend size={16} />
                   {loading ? "Sending..." : "Send Message"}
                 </motion.button>
 
