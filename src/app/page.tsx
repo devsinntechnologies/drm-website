@@ -10,7 +10,6 @@ import GoesEverywhereSection from "@/components/home/GoesEverywhereSection";
 import SmartFeaturesGridSection from "@/components/home/SmartFeaturesGridSection";
 import SecondaryFeaturesGridSection from "@/components/home/SecondaryFeaturesGridSection";
 import Testimonials from "@/components/home/Testimonials"
-
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-white">
