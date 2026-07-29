@@ -4,12 +4,13 @@ import React from "react";
 import HeroSection from "@/components/home/HeroSection";
 import AwardBannerSection from "@/components/home/AwardBannerSection";
 import AllIndustriesSection from "@/components/home/AllIndustriesSection";
+import BoostSalesSection from "@/components/home/BoostSales";
 import WhatWeDoSection from "@/components/home/Whatwedo";
 import WhoWeAreSection from "@/components/home/Whoweare";
-import GoesEverywhereSection from "@/components/home/GoesEverywhereSection";
 import SmartFeaturesGridSection from "@/components/home/SmartFeaturesGridSection";
 import SecondaryFeaturesGridSection from "@/components/home/SecondaryFeaturesGridSection";
 import Testimonials from "@/components/home/Testimonials"
+
 export default function HomePage() {
   
   return (
@@ -28,11 +29,14 @@ export default function HomePage() {
       {/* 4. What We Do */}
       <WhatWeDoSection />
 
+      <BoostSalesSection/>
+
+      
+
       {/* 5. Who We Are */}
       <WhoWeAreSection />
 
-      {/* 6. Gentec Goes Where You Go */}
-      <GoesEverywhereSection />
+
 
       {/* Additional Sections */}
       <SmartFeaturesGridSection />

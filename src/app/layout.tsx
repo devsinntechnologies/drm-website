@@ -15,8 +15,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "N&S Software Solutions — Complete ERP & POS System",
-  description: "N&S Software Solutions is a comprehensive cloud-based Point of Sale and ERP system. Manage orders, inventory, KDS, and more — all in one place.",
+  title: "DigiNizamN — Complete ERP & POS System",
+  description: "DigiNizam is a comprehensive cloud-based Point of Sale and ERP system. Manage orders, inventory, KDS, and more — all in one place.",
+  icons: {
+    icon: "/logo.png", // Apni logo file ko public folder mein is naam se rakhain (e.g., public/logo.png)
+  },
 };
 
 import Navbar from "@/components/Navbar";

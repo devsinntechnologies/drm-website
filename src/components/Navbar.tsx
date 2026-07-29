@@ -15,16 +15,21 @@ export default function Navbar() {
     <header className="w-full bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm m-0 p-0">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-3 flex items-center justify-between relative">
         
-        {/* Logo */}
+        {/* Logo & Brand Name */}
         <div className="flex items-center">
-          <Link href="/" className="relative h-10 w-32 block">
-            <Image 
-              src="/Group_11-removebg-preview.png" 
-              alt="N&S Software Solutions Logo" 
-              fill 
-              className="object-contain object-left"
-              priority
-            />
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="relative w-11 h-11 sm:w-12 sm:h-12">
+              <Image 
+                src="/logo.png" 
+                alt="DEVSINN Logo" 
+                fill 
+                className="object-contain group-hover:scale-105 transition-transform duration-300"
+                priority
+              />
+            </div>
+            <span className="text-lg sm:text-xl font-black text-[#08162D] tracking-tight">
+              DigiNizam
+            </span>
           </Link>
         </div>
 
@@ -195,7 +200,6 @@ export default function Navbar() {
               </div>
             )}
           </div>
-
         </nav>
 
         {/* Call Button (Desktop) */}

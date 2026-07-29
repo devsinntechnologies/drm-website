@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const DemoHero = () => {
   return (
-    <section className="relative pt-32 pb-16 overflow-hidden bg-white text-[#08162D] border-b border-gray-200">
+    <section className="relative pt-24 pb-12 overflow-hidden bg-white text-[#08162D] border-b border-gray-200">
       {/* Animated Glow */}
       <motion.div
         animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
@@ -19,11 +19,11 @@ const DemoHero = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-4xl mx-auto"
         >
-          <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 border border-[#0055FF]/20 px-4 py-2 rounded-xl mb-6 shadow-sm">
+          <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 border border-[#0055FF]/20 px-4 py-2 rounded-xl mb-4 shadow-sm">
             Expert Tour
           </span>
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-[#08162D] mb-6 tracking-tight">
-            See N&amp;S in <span className="text-[#0055FF]">Action</span>
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-[#08162D] mb-4 tracking-tight">
+            See DigiNizam in <span className="text-[#0055FF]">Action</span>
           </h1>
           <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed font-normal">
             Experience the workflow that powers thousands of businesses.
