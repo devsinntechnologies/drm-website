@@ -9,7 +9,7 @@ export default function SecondaryFeaturesGridSection() {
     {
       icon: <FiCreditCard className="w-6 h-6 text-[#0055FF]" />,
       title: "Multi-Payment Options",
-      desc: "N&S Software Solutions POS system supports different payment options like credit or debit cards to give your customers utmost freedom of choice."
+      desc: "DigiNizam POS system supports different payment options like credit or debit cards to give your customers utmost freedom of choice."
     },
     {
       icon: <FiBarChart2 className="w-6 h-6 text-[#0055FF]" />,

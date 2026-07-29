@@ -32,7 +32,7 @@ export default function ServicesPage() {
 
         <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 w-full text-center">
           <span className="inline-block text-xs font-bold uppercase tracking-widest text-white bg-royal px-4 py-2 rounded-xl mb-6 shadow-md">
-            N&S ENTERPRISE SERVICES
+            DigiNizam ENTERPRISE SERVICES
           </span>
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-black leading-tight mb-6 text-white">
             Our <span className="text-bright">Services</span>
