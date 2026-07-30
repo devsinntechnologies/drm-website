@@ -24,9 +24,9 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section className="py-20 bg-white border-b border-navy/10">
+    <section className="py-8 bg-white border-b border-navy/10">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="text-center mb-16">
+        <div className="text-center mb-6">
           <span className="inline-block text-xs font-bold uppercase tracking-widest text-royal bg-royal/10 px-4 py-2 rounded-xl mb-4 border border-royal/20">
             Quick Start
           </span>

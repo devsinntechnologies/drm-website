@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 
 export default function BoostSalesSection() {
   return (
-    <section className="py-16 md:py-20 bg-white border-b border-gray-200 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+    <section className="py-6 md:py-8 bg-white border-b border-gray-200 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
         
         <motion.div
           initial={{ opacity: 0, x: -30 }}

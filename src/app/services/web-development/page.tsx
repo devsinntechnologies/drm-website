@@ -142,7 +142,7 @@ export default function WebDevelopmentPage() {
             className="max-w-3xl mx-auto"
           >
             <span className="inline-block text-[11px] font-bold uppercase tracking-widest text-white bg-black/60 border border-white/20 px-3 py-1 rounded-xl mb-3 shadow-lg backdrop-blur-md">
-              DigiNizam WEB DEVELOPMENT SOLUTIONS
+              <span className="inline-flex items-center gap-1.5 align-middle">The DigiNizam <Image src="/logo.png" alt="Logo" width={14} height={14} className="object-contain inline-block" /></span> WEB DEVELOPMENT SOLUTIONS
             </span>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-black leading-tight mb-3 text-white tracking-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
               Engineering <span className="text-[#3b82f6] drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">Digital Excellence</span>
@@ -201,7 +201,7 @@ export default function WebDevelopmentPage() {
 
       {/* 3. Image Showcase Section (webdev.png) */}
       <section className="py-6 md:py-8 bg-white border-b border-gray-200 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 items-center relative z-10">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-4 items-center relative z-10">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}

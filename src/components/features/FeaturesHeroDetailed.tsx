@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const FeaturesHeroDetailed = () => {
   return (
-    <section className="relative pt-24 pb-10 md:pt-28 md:pb-14 overflow-hidden border-b border-surface-border">
+    <section className="relative pt-10 pb-6 md:pt-12 md:pb-8 overflow-hidden border-b border-surface-border">
       {/* Background Glows */}
       <motion.div 
         initial={{ opacity: 0, scale: 0.8 }}

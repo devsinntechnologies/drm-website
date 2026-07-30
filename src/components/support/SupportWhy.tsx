@@ -43,9 +43,9 @@ const reasons = [
 
 const SupportWhy = () => {
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-background relative overflow-hidden">
+    <section className="py-6 md:py-8 lg:py-8 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="flex flex-col lg:flex-row items-center gap-6 md:gap-8 lg:gap-12">
+        <div className="flex flex-col lg:flex-row items-center gap-6 md:gap-8 lg:gap-6">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}

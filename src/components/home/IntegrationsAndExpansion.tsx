@@ -7,14 +7,14 @@ const IntegrationsAndExpansion = () => {
   const rules = ["Franchise Order Management", "Set credit or other rules", "Monitor ROI securely"];
 
   return (
-    <section className="relative overflow-hidden py-24 bg-white">
+    <section className="relative overflow-hidden py-10 bg-white">
       <div className="absolute inset-x-0 top-0 h-80 bg-gradient-to-b from-royal/10 to-transparent pointer-events-none" />
       <div className="absolute left-1/2 top-24 h-72 w-72 -translate-x-1/2 rounded-full bg-bright/[0.06] blur-[120px] pointer-events-none" />
       <div className="absolute right-0 top-32 h-72 w-72 rounded-full bg-royal/5 blur-[120px] pointer-events-none" />
       <div className="absolute left-0 bottom-0 h-72 w-72 rounded-full bg-navy/5 blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-6 items-center">
           <div className="space-y-8">
             <span className="inline-flex items-center gap-3 rounded-full bg-royal/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.3em] text-royal border border-royal/20">
               Compliance & Expansion
@@ -86,7 +86,7 @@ const IntegrationsAndExpansion = () => {
           </div>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-6">
           {[
             { title: "Connected everywhere", desc: "One platform that ties regulatory integrations with franchise operations in a seamless workflow.", icon: <FiShield size={20} /> },
             { title: "Beautiful dashboards", desc: "Crystal clear insights and compliance status across every outlet, updated in real time.", icon: <FiBarChart2 size={20} /> },

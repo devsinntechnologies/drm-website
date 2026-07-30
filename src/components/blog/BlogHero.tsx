@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const BlogHero = () => {
   return (
-    <section className="relative py-8 md:py-12 bg-white text-[#08162D] overflow-hidden border-b border-gray-200">
+    <section className="relative py-6 md:py-8 bg-white text-[#08162D] overflow-hidden border-b border-gray-200">
       
       {/* Background Decor */}
       <div className="absolute top-0 inset-0 pointer-events-none overflow-hidden">

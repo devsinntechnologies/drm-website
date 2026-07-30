@@ -8,12 +8,12 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-white text-[#08162D] pt-16 pb-12 border-t border-gray-200 relative overflow-hidden">
+    <footer className="bg-white text-[#08162D] pt-8 pb-6 border-t border-gray-200 relative overflow-hidden">
       
       {/* Background Glow */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-[#0055FF]/5 blur-[160px] rounded-full pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-6 relative z-10">
         
         {/* Column 1: Brand Logo & Description */}
         <div className="lg:col-span-2">
@@ -111,9 +111,20 @@ export default function Footer() {
 
       </div>
 
-      {/* Copyright Bar */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 border-t border-gray-200 pt-6 text-center text-xs text-gray-500 font-medium relative z-10">
-        &copy; {currentYear} All Rights Reserved.
+      {/* Copyright Bar & Powered By */}
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 border-t border-gray-200 pt-6 text-sm text-gray-500 font-medium relative z-10 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div>&copy; {currentYear} All Rights Reserved.</div>
+        <div className="flex items-center gap-2">
+          <span className="font-semibold text-[#08162D]">Powered By Devsinn</span>
+          <Image 
+            src="/devsinnlogo0.svg" 
+            alt="Devsinn Logo" 
+            width={90} 
+            height={30} 
+            className="object-contain"
+            priority
+          />
+        </div>
       </div>
     </footer>
   );

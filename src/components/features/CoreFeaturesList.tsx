@@ -19,13 +19,13 @@ const CoreFeaturesList = () => {
   ];
 
   return (
-    <section className="py-24 bg-surface/10 relative overflow-hidden">
+    <section className="py-10 bg-surface/10 relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-6"
         >
           <span className="section-label">Enterprise-Grade</span>
           <h2 className="text-4xl font-extrabold text-foreground mt-4">Core <span className="text-primary">Functionalities</span></h2>

@@ -24,7 +24,7 @@ export default function SecondaryFeaturesGridSection() {
   ];
 
   return (
-    <section className="py-20 md:py-28 bg-white border-b border-gray-200 relative overflow-hidden">
+    <section className="py-8 md:py-28 bg-white border-b border-gray-200 relative overflow-hidden">
       
       {/* Background Glow with 20% Opacity */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#0055FF]/20 blur-[150px] rounded-full pointer-events-none" />

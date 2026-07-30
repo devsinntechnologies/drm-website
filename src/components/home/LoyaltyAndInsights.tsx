@@ -4,13 +4,13 @@ import { FiTrendingUp, FiAward, FiZap } from "react-icons/fi";
 
 const LoyaltyAndInsights = () => {
   return (
-    <section className="relative overflow-hidden py-24 bg-navy/5">
+    <section className="relative overflow-hidden py-10 bg-navy/5">
       <div className="absolute inset-x-0 top-0 h-80 bg-gradient-to-b from-royal/10 to-transparent pointer-events-none" />
       <div className="absolute left-0 top-24 h-72 w-72 rounded-full bg-royal/5 blur-[120px] pointer-events-none" />
       <div className="absolute right-0 top-40 h-72 w-72 rounded-full bg-navy/5 blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-6 items-center">
           <div className="space-y-8">
             <span className="inline-flex items-center gap-3 rounded-full bg-royal/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.3em] text-royal border border-royal/20">
               Loyalty & Insights
@@ -80,7 +80,7 @@ const LoyaltyAndInsights = () => {
           </div>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-6">
           {[
             { metric: "+850", label: "FBR authorizations" },
             { metric: "3x", label: "Faster setup" },

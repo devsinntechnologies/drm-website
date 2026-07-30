@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const SupportContact = () => {
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-background relative overflow-hidden">
+    <section className="py-6 md:py-8 lg:py-8 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}

@@ -33,12 +33,12 @@ export default function DistributionSolutionPage() {
             className="max-w-3xl mx-auto"
           >
             <span className="inline-block text-[11px] font-bold uppercase tracking-widest text-white bg-black/60 border border-white/20 px-3 py-1 rounded-xl mb-3 shadow-lg backdrop-blur-md">
-              DigiNizam RETAIL SOLUTIONS • DISTRIBUTION & WHOLESALE SUITE
+              <span className="inline-flex items-center gap-1.5 align-middle">The DigiNizam <Image src="/logo.png" alt="Logo" width={14} height={14} className="object-contain inline-block" /></span> RETAIL SOLUTIONS • DISTRIBUTION & WHOLESALE SUITE
             </span>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-black leading-tight mb-3 text-white tracking-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
-              Advanced <span className="text-[#3b82f6] drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">Distribution & Wholesale</span> POS System
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-black leading-tight mb-3 text-[#08162D] tracking-tight">
+              Advanced <span className="text-[#0055FF]">Distribution & Wholesale</span> POS System
             </h1>
-            <p className="text-xs md:text-sm text-gray-100 font-medium leading-relaxed mb-4 drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+            <p className="text-xs md:text-sm text-gray-200 font-medium leading-relaxed mb-4">
               Comprehensive management system for wholesale distributors, supply chains, and warehouse operations. Streamline inventory tracking, order fulfillment, and logistics effortlessly with absolute reliability.
             </p>
  
@@ -55,9 +55,9 @@ export default function DistributionSolutionPage() {
       </section>
 
       {/* 2. POS Section with POSDistribution.png Image Showcase & Extra Description */}
-      <section className="py-8 md:py-12 bg-white border-b border-gray-200 relative overflow-hidden">
+      <section className="py-4 md:py-6 bg-white border-b border-gray-200 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-6 items-center mb-8">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -151,8 +151,8 @@ export default function DistributionSolutionPage() {
       </section>
 
       {/* 3. Staff Section with staffdistribution.jpg Image Showcase & Extra Description */}
-      <section className="py-8 md:py-12 bg-white border-b border-gray-200 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10">
+      <section className="py-4 md:py-6 bg-white border-b border-gray-200 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-6 items-center relative z-10">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -198,7 +198,7 @@ export default function DistributionSolutionPage() {
       </section>
 
       {/* 4. Our Modules Section */}
-      <section className="py-8 md:py-12 bg-gray-50 border-b border-gray-200 relative overflow-hidden">
+      <section className="py-4 md:py-6 bg-gray-50 border-b border-gray-200 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
           <div className="text-center max-w-2xl mx-auto mb-8">
             <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-xl mb-2.5 border border-[#0055FF]/20">

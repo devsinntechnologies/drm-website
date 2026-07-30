@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 export default function AboutHero() {
   return (
-    <section className="bg-white text-[#08162D] py-10 md:py-14 relative overflow-hidden border-b border-gray-200">
+    <section className="bg-white text-[#08162D] py-6 md:py-8 relative overflow-hidden border-b border-gray-200">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-[#0055FF]/5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center relative z-10">
@@ -27,7 +27,7 @@ export default function AboutHero() {
             <span className="text-[#0055FF]">company history.</span>
           </h1>
           <p className="text-xs md:text-sm text-gray-600 font-normal leading-relaxed mb-5 max-w-xl">
-            Come let&apos;s join hands with N&S Software Solutions and unlock the ultimate potential of your business through cutting-edge ERP, POS, and digital web applications.
+            Come let&apos;s join hands with DigiNizam Software Solutions and unlock the ultimate potential of your business through cutting-edge ERP, POS, and digital web applications.
           </p>
           
           <div className="space-y-2">

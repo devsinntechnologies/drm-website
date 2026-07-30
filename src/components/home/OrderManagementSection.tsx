@@ -39,13 +39,13 @@ const OrderManagementSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 bg-background relative overflow-hidden">
+    <section className="py-10 bg-background relative overflow-hidden">
       <div className="absolute top-1/2 left-0 w-80 h-80 bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
         
         {/* Title */}
-        <div className="text-center mb-16 max-w-3xl mx-auto">
+        <div className="text-center mb-6 max-w-3xl mx-auto">
           <span className="section-label">Order Operations</span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-4">
             Advanced <span className="text-primary">Order Management</span>
@@ -56,7 +56,7 @@ const OrderManagementSection: React.FC = () => {
         </div>
 
         {/* Order Sources Grid */}
-        <div className="mb-20">
+        <div className="mb-8">
           <h3 className="text-xl font-black text-foreground mb-8 text-center uppercase tracking-widest text-muted/80">
             Omnichannel Order Sources
           </h3>
@@ -87,7 +87,7 @@ const OrderManagementSection: React.FC = () => {
         </div>
 
         {/* Workflow Diagram */}
-        <div className="mb-20 max-w-6xl mx-auto">
+        <div className="mb-8 max-w-6xl mx-auto">
           <h3 className="text-xl font-black text-foreground mb-8 text-center uppercase tracking-widest text-muted/80">
             Visual Order Lifecycle Workflow
           </h3>

@@ -39,7 +39,7 @@ const termsSections = [
 
 const TermsContent = () => {
   return (
-    <section className="py-8 md:py-12 bg-white text-[#08162D] relative overflow-hidden border-b border-gray-200">
+    <section className="py-4 md:py-6 bg-white text-[#08162D] relative overflow-hidden border-b border-gray-200">
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-[#0055FF]/5 blur-[160px] rounded-full pointer-events-none" />
 

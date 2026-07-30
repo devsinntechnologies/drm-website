@@ -51,8 +51,8 @@ export default function Navbar() {
             {isProductsOpen && (
               <div className="absolute top-full left-1/2 -translate-x-1/2 w-[900px] bg-white border border-gray-200 shadow-2xl rounded-2xl p-8 grid grid-cols-3 gap-8 mt-1 z-50 text-left">
                 <div>
-                  <h4 className="text-[#0055FF] font-black text-xs uppercase tracking-wider mb-4 border-b border-gray-100 pb-2">
-                    GEN SOFT (RETAIL)
+                  <h4 className="text-[#0055FF] text-xs  mb-4 border-b border-gray-100 pb-2">
+                    DIGI SOFT (RETAIL)
                   </h4>
                   <ul className="space-y-2.5 text-xs text-gray-600 font-bold">
                     <li>
@@ -87,7 +87,7 @@ export default function Navbar() {
                   </ul>
 
                   <h4 className="text-[#0055FF] font-black text-xs uppercase tracking-wider mb-3 border-b border-gray-100 pb-2">
-                    GEN SOFT (INDUSTRIES)
+                    DIGI SOFT (INDUSTRIES)
                   </h4>
                   <ul className="space-y-2 text-xs text-gray-600 font-bold">
                     <li><Link href="/products/rice" className="hover:text-[#0055FF] transition-colors block">Rice ERP</Link></li>
@@ -108,7 +108,7 @@ export default function Navbar() {
                   </ul>
 
                   <h4 className="text-[#0055FF] font-black text-xs uppercase tracking-wider mb-3 border-b border-gray-100 pb-2">
-                    GEN CLOUD & TRAC
+                    DIGI CLOUD & TRAC
                   </h4>
                   <ul className="space-y-2 text-xs text-gray-600 font-bold">
                     <li><Link href="/products/vps" className="hover:text-[#0055FF] transition-colors block">VPS Server & Dedicated Server</Link></li>
@@ -279,7 +279,7 @@ export default function Navbar() {
           <div className="pt-4 border-t border-gray-100 flex items-center justify-between">
             <a 
               href="tel:021111436832" 
-              className="w-full py-3 bg-[#0055FF] text-white font-black text-xs uppercase tracking-widest text-center rounded-xl shadow-md"
+              className="w-full bg-[#0055FF] hover:bg-[#0044cc] text-white font-black text-xs uppercase tracking-widest px-7 py-3.5 rounded-xl shadow-lg shadow-[#0055FF]/25 transition-all text-center"
             >
               Call 03-000000000
             </a>

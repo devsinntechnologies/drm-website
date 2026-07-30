@@ -11,7 +11,7 @@ const DemoForm = () => {
   ];
 
   return (
-    <section className="py-24 bg-white text-[#08162D] relative overflow-hidden border-t border-gray-200">
+    <section className="py-10 bg-white text-[#08162D] relative overflow-hidden border-t border-gray-200">
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[500px] bg-[#0055FF]/5 blur-[180px] rounded-full pointer-events-none" />
 

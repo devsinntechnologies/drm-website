@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DigiNizamN — Complete ERP & POS System",
+  title: "DigiNizam — Complete ERP & POS System",
   description: "DigiNizam is a comprehensive cloud-based Point of Sale and ERP system. Manage orders, inventory, KDS, and more — all in one place.",
   icons: {
     icon: "/logo.png", // Apni logo file ko public folder mein is naam se rakhain (e.g., public/logo.png)
@@ -24,7 +24,6 @@ export const metadata: Metadata = {
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import FloatingWidgets from "@/components/FloatingWidgets";
 
 export default function RootLayout({
   children,
@@ -40,7 +39,6 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
-        <FloatingWidgets />
       </body>
     </html>
   );

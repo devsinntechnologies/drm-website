@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <section className={styles.heroSection}>
       <div className={styles.container}>
-        <h1 className={styles.title}>Empower Your Business with Cutting‑Edge Solutions</h1>
+        <h1 className={styles.title} >Empower Your Business with Cutting‑Edge Solutions</h1>
         <p className={styles.subtitle}>
           We build intelligent, scalable, and secure digital products that drive growth and innovation.
         </p>

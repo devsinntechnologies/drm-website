@@ -59,6 +59,33 @@
   --font-mono: var(--font-geist-mono);
 }
 
+@layer base {
+  *, *::before, *::after {
+    font-family: var(--font-poppins), sans-serif;
+  }
+
+  body {
+    font-family: var(--font-poppins), sans-serif;
+  }
+
+  /* 
+    Only set non-size properties here.
+    font-size is intentionally excluded so Tailwind utility classes
+    (text-xs, text-sm, text-lg, text-2xl, etc.) work freely on ALL heading tags.
+  */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.375rem;
+  }
+}
+
+@layer utilities {
+  /* Remove any old conflicting section padding overrides */
+}
+
+
 * {
   scrollbar-width: thin;
   scrollbar-color: var(--surface-border) transparent;
