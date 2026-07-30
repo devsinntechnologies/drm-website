@@ -4,57 +4,51 @@ import { motion } from 'framer-motion';
 
 const BlogHero = () => {
   return (
-    <section className="relative pt-16 md:pt-24 pb-12 md:pb-16 overflow-hidden border-b border-surface-border bg-background">
-
+    <section className="relative py-8 md:py-12 bg-white text-[#08162D] overflow-hidden border-b border-gray-200">
+      
       {/* Background Decor */}
       <div className="absolute top-0 inset-0 pointer-events-none overflow-hidden">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.5 }}
-          className="absolute top-0 right-0 w-[500px] h-[500px] bg-orange-300/20 blur-[150px] rounded-full -translate-y-1/2 translate-x-1/4"
+          className="absolute top-0 right-0 w-[500px] h-[350px] bg-[#0055FF]/10 blur-[160px] rounded-full -translate-y-1/2 translate-x-1/4"
         />
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.5, delay: 0.2 }}
-          className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-yellow-300/20 blur-[120px] rounded-full translate-y-1/2 -translate-x-1/4"
-        />
-
-        <div className="noise-overlay opacity-10" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-[#0055FF]/5 blur-[160px] rounded-full pointer-events-none" />
       </div>
 
-      <div className="container mx-auto px-4 md:px-8 relative z-10 text-center">
-        <div className="max-w-4xl mx-auto">
+      <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10 text-center">
+        <div className="max-w-3xl mx-auto">
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
           >
-            <span className="section-label mx-auto mb-3">Resources & News</span>
+            <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-xl mb-2 border border-[#0055FF]/20 shadow-sm">
+              Resources & News
+            </span>
 
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold text-foreground mb-4 md:mb-6 tracking-tight leading-tight">
-              Latest <span className="text-orange-500">Insights</span> & Updates
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#08162D] mb-2 md:mb-3 tracking-tight">
+              Latest <span className="text-[#0055FF]">Insights</span> & Updates
             </h1>
 
-            <p className="text-base sm:text-lg md:text-xl text-muted max-w-2xl mx-auto leading-relaxed font-medium">
-              Master the art of restaurant management. Stay ahead with deep dives into
-              industry trends, technical guides, and operational strategies.
+            <p className="text-xs sm:text-sm text-gray-600 max-w-2xl mx-auto leading-relaxed font-normal">
+              Master the art of enterprise management with DigiNizam. Stay ahead with deep dives into industry trends, technical guides, and operational strategies.
             </p>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.3 }}
-            className="mt-8 md:mt-10 flex flex-wrap justify-center gap-2 md:gap-3"
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mt-5 flex flex-wrap justify-center gap-2"
           >
             {[
               'All Posts',
-              'Restaurant Management',
-              'POS Strategy',
+              'Enterprise Management',
+              'Platform Strategy',
               'Marketing',
               'Industry News'
             ].map((cat, i) => (
@@ -62,10 +56,10 @@ const BlogHero = () => {
                 key={cat}
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.5 + (i * 0.1) }}
+                transition={{ delay: 0.3 + (i * 0.05) }}
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-6 py-2.5 rounded-xl border border-orange-200 bg-white/40 backdrop-blur-md text-sm font-bold text-orange-700 hover:border-orange-400 hover:text-orange-600 transition-all cursor-pointer"
+                className="px-4 py-1.5 rounded-xl border border-gray-200 bg-white text-xs font-bold text-[#08162D] hover:border-[#0055FF] hover:text-[#0055FF] transition-all cursor-pointer shadow-sm"
               >
                 {cat}
               </motion.button>

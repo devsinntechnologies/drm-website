@@ -2,128 +2,330 @@
 
 import React from "react";
 import Link from "next/link";
-import { FiClock, FiShield, FiSmartphone, FiAward, FiCheckCircle, FiTrendingUp, FiServer, FiArrowRight } from "react-icons/fi";
+import Image from "next/image";
+import { 
+  FiMonitor, 
+  FiZap, 
+  FiCode, 
+  FiSmartphone, 
+  FiSearch, 
+  FiShield, 
+  FiLayers, 
+  FiCpu, 
+  FiCheckCircle, 
+  FiArrowRight 
+} from "react-icons/fi";
 import { motion } from "framer-motion";
+
+const elevateCards = [
+  {
+    title: "Custom Web Applications",
+    desc: "Tailor-made web solutions designed to scale smoothly with your growing business operations and high traffic.",
+    icon: <FiCode className="w-6 h-6 text-[#0055FF]" />
+  },
+  {
+    title: "Responsive Mobile-First UI/UX",
+    desc: "Flawless rendering and seamless experiences across smartphones, tablets, and large desktop viewports.",
+    icon: <FiSmartphone className="w-6 h-6 text-[#0055FF]" />
+  },
+  {
+    title: "Lightning-Fast Speed",
+    desc: "Optimized codebases and modern architecture ensuring sub-second loading times and peak performance.",
+    icon: <FiZap className="w-6 h-6 text-[#0055FF]" />
+  },
+  {
+    title: "SEO & Search Ranking Ready",
+    desc: "Built following strict search engine optimization guidelines to push your website to the top of Google results.",
+    icon: <FiSearch className="w-6 h-6 text-[#0055FF]" />
+  },
+  {
+    title: "Enterprise-Grade Security",
+    desc: "Advanced data encryption, secure authentication pipelines, and robust defense mechanisms against threats.",
+    icon: <FiShield className="w-6 h-6 text-[#0055FF]" />
+  },
+  {
+    title: "Seamless API Integrations",
+    desc: "Connect your web platform effortlessly with third-party software, payment gateways, and CRM systems.",
+    icon: <FiLayers className="w-6 h-6 text-[#0055FF]" />
+  },
+];
+
+const whatWeDoCards = [
+  {
+    title: "Full-Stack Development",
+    desc: "End-to-end front-end and back-end web engineering using next-generation frameworks and tools.",
+    icon: <FiCpu className="w-6 h-6 text-[#0055FF]" />
+  },
+  {
+    title: "E-Commerce Portals",
+    desc: "High-converting online storefronts equipped with secure checkout flows and inventory control.",
+    icon: <FiMonitor className="w-6 h-6 text-[#0055FF]" />
+  },
+  {
+    title: "CMS & Admin Dashboards",
+    desc: "Intuitive content management systems and custom administrative control panels built for efficiency.",
+    icon: <FiLayers className="w-6 h-6 text-[#0055FF]" />
+  },
+  {
+    title: "Cloud & Hosting Architecture",
+    desc: "Reliable, scalable cloud server deployments ensuring 99.9% uptime for your digital assets.",
+    icon: <FiZap className="w-6 h-6 text-[#0055FF]" />
+  },
+  {
+    title: "Legacy System Modernization",
+    desc: "Transform outdated web platforms into modern, high-speed, secure web applications.",
+    icon: <FiCode className="w-6 h-6 text-[#0055FF]" />
+  },
+  {
+    title: "Ongoing Maintenance & Support",
+    desc: "24/7 technical monitoring, regular security patches, and instant feature updates.",
+    icon: <FiCheckCircle className="w-6 h-6 text-[#0055FF]" />
+  },
+];
+
+const performanceCards = [
+  {
+    title: "Core Web Vitals Optimization",
+    desc: "Achieve top-tier scores in Google's core web metrics for superior UX and ranking.",
+    icon: <FiZap className="w-6 h-6 text-[#0055FF]" />
+  },
+  {
+    title: "Advanced Caching Strategies",
+    desc: "Implement edge caching and optimized content delivery networks for instant page loads.",
+    icon: <FiCpu className="w-6 h-6 text-[#0055FF]" />
+  },
+  {
+    title: "Clean, Scalable Code Architecture",
+    desc: "Modular component design that minimizes technical debt and makes future expansion easy.",
+    icon: <FiCode className="w-6 h-6 text-[#0055FF]" />
+  },
+  {
+    title: "Cross-Browser Compatibility",
+    desc: "Rigorously tested across Chrome, Safari, Firefox, and Edge for uniform performance.",
+    icon: <FiMonitor className="w-6 h-6 text-[#0055FF]" />
+  },
+  {
+    title: "Image & Asset Optimization",
+    desc: "Automatic next-gen format conversion and compression to keep payload sizes minimal.",
+    icon: <FiLayers className="w-6 h-6 text-[#0055FF]" />
+  },
+  {
+    title: "Scalable Traffic Handling",
+    desc: "Architected to absorb massive traffic spikes smoothly without performance degradation.",
+    icon: <FiShield className="w-6 h-6 text-[#0055FF]" />
+  },
+];
 
 export default function WebDevelopmentPage() {
   return (
-    <main className="min-h-screen bg-white text-[#08162D]">
+    <main className="min-h-screen bg-white text-[#08162D] font-sans">
       
-      {/* Hero Section */}
-      <section className="relative py-28 md:py-40 overflow-hidden border-b border-gray-200 flex items-center bg-[#08162D]">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#0055FF]/20 via-[#08162D] to-[#08162D] opacity-80"></div>
-        {/* Background Glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[450px] bg-[#0055FF]/20 blur-[180px] rounded-full pointer-events-none" />
+      {/* 1. Hero Section with Video Background (Strictly No Bluish Overlay) */}
+      <section className="relative min-h-[calc(100vh-70px)] md:min-h-[calc(100vh-80px)] flex items-center justify-center overflow-hidden border-b border-gray-200 bg-[#08162D]">
+        <div className="absolute inset-0 z-0">
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline 
+            className="w-full h-full object-cover"
+          >
+            <source src="/webdevhero.mp4" type="video/mp4" />
+          </video>
+        </div>
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 w-full grid grid-cols-1 gap-12 items-center text-center">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10 w-full py-10 text-center">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="max-w-3xl mx-auto"
           >
-            <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/20 border border-[#0055FF]/40 px-4 py-2 rounded-xl mb-6 shadow-md">
-              N&S ENTERPRISE SERVICES
+            <span className="inline-block text-[11px] font-bold uppercase tracking-widest text-white bg-black/60 border border-white/20 px-3 py-1 rounded-xl mb-3 shadow-lg backdrop-blur-md">
+              DigiNizam WEB DEVELOPMENT SOLUTIONS
             </span>
-            <h1 className="text-3xl sm:text-4xl md:text-6xl font-black leading-tight mb-6 text-white tracking-tight">
-              Professional <span className="text-[#0055FF]">Web Development</span>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-black leading-tight mb-3 text-white tracking-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
+              Engineering <span className="text-[#3b82f6] drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">Digital Excellence</span>
             </h1>
-            <p className="text-sm md:text-base text-gray-300 font-normal leading-relaxed mb-8">
-              We build lightning-fast, fully responsive, and highly interactive web applications that captivate users and drive conversions.
+            <p className="text-xs md:text-sm text-gray-100 font-medium leading-relaxed mb-4 drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+              Transform your brand's online presence with high-performance, custom-built web applications designed to engage users and maximize conversions.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
+
+            <div className="flex flex-wrap gap-3 justify-center">
               <Link 
                 href="/contact" 
-                className="inline-flex items-center gap-2 px-8 py-4 bg-[#0055FF] hover:bg-[#0044cc] text-white font-black text-xs uppercase tracking-widest rounded-xl transition-all shadow-lg group"
+                className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#0055FF] hover:bg-[#0044cc] text-white font-black text-xs uppercase tracking-widest rounded-xl transition-all shadow-xl group"
               >
-                Start Your Project <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
+                Get a Free Demo <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Content Section below Hero */}
-      <section className="py-20 md:py-24 bg-white border-b border-gray-200 relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-[#0055FF]/5 blur-[160px] rounded-full pointer-events-none" />
-
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center max-w-4xl relative z-10">
-           <h2 className="text-2xl sm:text-4xl font-black text-[#08162D] mb-6 tracking-tight">Elevate your digital presence</h2>
-           <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-8 font-normal">
-             From corporate landing pages to complex e-commerce platforms, our web development team uses cutting-edge technologies to ensure your brand stands out globally.
-           </p>
-           <div className="inline-flex items-center gap-2 text-xs font-bold text-[#0055FF] bg-[#0055FF]/10 border border-[#0055FF]/20 px-6 py-3 rounded-xl">
-             <FiServer size={18} /> Global Cloud Deployment
-           </div>
-        </div>
-      </section>
-
-      {/* Section 1: Core Capabilities Grid */}
-      <section className="py-20 md:py-28 bg-white border-b border-gray-200 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-4 py-2 rounded-xl mb-4 border border-[#0055FF]/20">
-              KEY CAPABILITIES
+      {/* 2. Elevate Your Digital Presence Section (6 Boxes) */}
+      <section className="py-6 md:py-10 bg-white border-b border-gray-200 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
+          <div className="text-center max-w-2xl mx-auto mb-6">
+            <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-xl mb-2 border border-[#0055FF]/20">
+              CAPABILITIES
             </span>
-            <h2 className="text-3xl sm:text-4xl font-black text-[#08162D] mb-4 tracking-tight">
-              Built for <span className="text-[#0055FF]">Performance</span>
+            <h2 className="text-2xl sm:text-3xl font-black text-[#08162D] mb-2 tracking-tight">
+              Elevate Your <span className="text-[#0055FF]">Digital Presence</span>
             </h2>
-            <p className="text-gray-600 text-sm sm:text-base font-normal">
-              Everything you need for a robust and engaging digital storefront.
+            <p className="text-gray-600 text-xs sm:text-sm font-normal">
+              Cutting-edge tools and frameworks tailored to give your business an unfair competitive advantage.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm hover:border-[#0055FF] hover:shadow-xl transition-all group"
-            >
-              <div className="w-12 h-12 rounded-xl bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center mb-6 group-hover:bg-[#0055FF] group-hover:text-white transition-all">
-                <FiSmartphone size={24} />
-              </div>
-              <h3 className="text-lg font-black text-[#08162D] mb-3 group-hover:text-[#0055FF] transition-colors">Responsive Design</h3>
-              <p className="text-gray-600 text-xs sm:text-sm leading-relaxed font-normal">
-                Flawless user experiences across all devices—desktops, tablets, and smartphones alike.
-              </p>
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm hover:border-[#0055FF] hover:shadow-xl transition-all group"
-            >
-              <div className="w-12 h-12 rounded-xl bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center mb-6 group-hover:bg-[#0055FF] group-hover:text-white transition-all">
-                <FiTrendingUp size={24} />
-              </div>
-              <h3 className="text-lg font-black text-[#08162D] mb-3 group-hover:text-[#0055FF] transition-colors">SEO Optimization</h3>
-              <p className="text-gray-600 text-xs sm:text-sm leading-relaxed font-normal">
-                Structured content and optimized performance metrics to ensure higher visibility on search engines.
-              </p>
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm hover:border-[#0055FF] hover:shadow-xl transition-all group"
-            >
-              <div className="w-12 h-12 rounded-xl bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center mb-6 group-hover:bg-[#0055FF] group-hover:text-white transition-all">
-                <FiShield size={24} />
-              </div>
-              <h3 className="text-lg font-black text-[#08162D] mb-3 group-hover:text-[#0055FF] transition-colors">E-Commerce & Portals</h3>
-              <p className="text-gray-600 text-xs sm:text-sm leading-relaxed font-normal">
-                Secure checkout gateways, dynamic content management, and tailored user portals.
-              </p>
-            </motion.div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {elevateCards.map((card, idx) => (
+              <motion.div 
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: idx * 0.05 }}
+                className="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm hover:border-[#0055FF] hover:shadow-xl transition-all group"
+              >
+                <div className="w-10 h-10 rounded-xl bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center mb-3 group-hover:bg-[#0055FF] group-hover:text-white transition-all">
+                  {card.icon}
+                </div>
+                <h3 className="text-base font-black text-[#08162D] mb-1.5 group-hover:text-[#0055FF] transition-colors">{card.title}</h3>
+                <p className="text-gray-600 text-xs leading-relaxed font-normal">{card.desc}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
+
+      {/* 3. Image Showcase Section (webdev.png) */}
+      <section className="py-6 md:py-8 bg-white border-b border-gray-200 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 items-center relative z-10">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-xl mb-2 border border-[#0055FF]/20">
+              NEXT-GEN DEVELOPMENT
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-black text-[#08162D] mb-2 tracking-tight">
+              Built for Modern Enterprises & <span className="text-[#0055FF]">Scalable Growth</span>
+            </h2>
+            <p className="text-gray-600 text-xs sm:text-sm leading-relaxed mb-2 font-normal">
+              Our web engineering methodology combines striking design layouts with rock-solid backend infrastructure. We build products that engage visitors instantly and retain them as loyal customers.
+            </p>
+            <ul className="space-y-2 mb-4">
+              <li className="flex items-center gap-2 font-bold text-xs text-[#08162D]">
+                <FiCheckCircle className="text-[#0055FF] w-4 h-4 flex-shrink-0" /> Custom Architecture tailored to your specific workflows
+              </li>
+              <li className="flex items-center gap-2 font-bold text-xs text-[#08162D]">
+                <FiCheckCircle className="text-[#0055FF] w-4 h-4 flex-shrink-0" /> Rigorous automated testing before production release
+              </li>
+              <li className="flex items-center gap-2 font-bold text-xs text-[#08162D]">
+                <FiCheckCircle className="text-[#0055FF] w-4 h-4 flex-shrink-0" /> Dedicated post-launch optimization & support teams
+              </li>
+            </ul>
+            <Link 
+              href="/contact" 
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[#0055FF] text-white font-black text-xs uppercase tracking-widest rounded-xl shadow-md hover:bg-[#0044cc] transition-all"
+            >
+              Start Your Project <FiArrowRight />
+            </Link>
+          </motion.div>
+
+          <motion.div 
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="flex justify-center"
+          >
+            <Image 
+              src="/webdev.png" 
+              alt="Web Development Showcase" 
+              width={420} 
+              height={280} 
+              className="w-auto max-h-[280px] object-contain rounded-xl shadow-lg"
+            />
+          </motion.div>
+        </div>
+      </section>
+
+      {/* 4. What We Do Section (6 Boxes) */}
+      <section className="py-6 md:py-10 bg-white border-b border-gray-200 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
+          <div className="text-center max-w-2xl mx-auto mb-6">
+            <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-xl mb-2 border border-[#0055FF]/20">
+              OUR EXPERTISE
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-black text-[#08162D] mb-2 tracking-tight">
+              What <span className="text-[#0055FF]">We Do</span>
+            </h2>
+            <p className="text-gray-600 text-xs sm:text-sm font-normal">
+              Comprehensive web development services designed to take your digital products from concept to market leadership.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {whatWeDoCards.map((card, idx) => (
+              <motion.div 
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: idx * 0.05 }}
+                className="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm hover:border-[#0055FF] hover:shadow-xl transition-all group"
+              >
+                <div className="w-10 h-10 rounded-xl bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center mb-3 group-hover:bg-[#0055FF] group-hover:text-white transition-all">
+                  {card.icon}
+                </div>
+                <h3 className="text-base font-black text-[#08162D] mb-1.5 group-hover:text-[#0055FF] transition-colors">{card.title}</h3>
+                <p className="text-gray-600 text-xs leading-relaxed font-normal">{card.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. Built for Performance Section (6 Boxes) */}
+      <section className="py-6 md:py-10 bg-gray-50 border-b border-gray-200 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
+          <div className="text-center max-w-2xl mx-auto mb-6">
+            <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-xl mb-2 border border-[#0055FF]/20">
+              OPTIMIZATION
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-black text-[#08162D] mb-2 tracking-tight">
+              Built for <span className="text-[#0055FF]">Performance</span>
+            </h2>
+            <p className="text-gray-600 text-xs sm:text-sm font-normal">
+              Uncompromising standards in speed, responsiveness, and architectural efficiency.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {performanceCards.map((card, idx) => (
+              <motion.div 
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: idx * 0.05 }}
+                className="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm hover:border-[#0055FF] hover:shadow-xl transition-all group"
+              >
+                <div className="w-10 h-10 rounded-xl bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center mb-3 group-hover:bg-[#0055FF] group-hover:text-white transition-all">
+                  {card.icon}
+                </div>
+                <h3 className="text-base font-black text-[#08162D] mb-1.5 group-hover:text-[#0055FF] transition-colors">{card.title}</h3>
+                <p className="text-gray-600 text-xs leading-relaxed font-normal">{card.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
     </main>
   );
 }

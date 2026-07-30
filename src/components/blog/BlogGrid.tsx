@@ -6,16 +6,16 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const posts = [
   {
-    title: 'How to increase your restaurant sales by 20% in 30 days',
+    title: 'How to increase your enterprise sales by 20% in 30 days',
     category: 'Marketing',
     date: 'Oct 24, 2023',
     image: '/blog/blog1.jpg',
     author: 'Sarah Rahman',
-    role: 'CEO, Cafe owner',
+    role: 'CEO, DigiNizam Partner',
     time: '5 min read'
   },
   {
-    title: 'The future of restaurant technology: What to expect in 2024',
+    title: 'The future of enterprise technology: What to expect in 2026',
     category: 'Technology',
     date: 'Oct 15, 2023',
     image: '/blog/blog2.jpg',
@@ -24,7 +24,7 @@ const posts = [
     time: '8 min read'
   },
   {
-    title: '10 best practices for food inventory management',
+    title: '10 best practices for digital inventory and asset management',
     category: 'Inventory',
     date: 'Oct 08, 2023',
     image: '/blog/blog3.jpg',
@@ -33,7 +33,7 @@ const posts = [
     time: '4 min read'
   },
   {
-    title: 'The impact of cloud POS on fast food business scale',
+    title: 'The impact of cloud platforms on modern business scale',
     category: 'Technology',
     date: 'Sep 28, 2023',
     image: '/blog/blog4.jpg',
@@ -42,7 +42,7 @@ const posts = [
     time: '7 min read'
   },
   {
-    title: 'Why table-side ordering is a game changer for diners',
+    title: 'Why automated workflow solutions are a game changer',
     category: 'User Experience',
     date: 'Sep 15, 2023',
     image: '/blog/blog5.jpg',
@@ -51,7 +51,7 @@ const posts = [
     time: '6 min read'
   },
   {
-    title: 'Digital loyalty programs: Building repeat customers',
+    title: 'Digital loyalty programs: Building repeat corporate customers',
     category: 'Marketing',
     date: 'Sep 05, 2023',
     image: '/blog/blog6.jpg',
@@ -65,73 +65,76 @@ const BlogGrid = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-background">
-      <div className="container mx-auto px-4 md:px-8">
+    <section className="py-8 md:py-12 bg-white text-[#08162D] relative overflow-hidden border-b border-gray-200">
+      {/* Background Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-[#0055FF]/5 blur-[160px] rounded-full pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
         <motion.div
           layout
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
         >
           <AnimatePresence mode="popLayout">
             {posts.map((post, idx) => (
               <motion.div
                 key={post.title}
                 layout
-                initial={{ opacity: 0, scale: 0.9 }}
+                initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.4, delay: idx * 0.05 }}
               >
-                <Link href={`/blog/${idx}`} className="glass-card card-hover rounded-[40px] overflow-hidden group h-full flex flex-col border border-surface-border/50">
+                <Link href={`/blog/${idx}`} className="bg-white rounded-2xl overflow-hidden group h-full flex flex-col border border-gray-200 shadow-sm hover:border-[#0055FF] hover:shadow-xl transition-all">
                   {/* Image Section */}
-                  <div className="relative aspect-[4/3] overflow-hidden">
+                  <div className="relative aspect-[16/9] overflow-hidden">
                     <Image
                       src={post.image}
                       alt={post.title}
                       fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
-                    <div className="absolute top-6 left-6">
-                      <span className="tag-pill bg-primary/20 text-primary border-primary/30 backdrop-blur-md">
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#08162D]/60 to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
+                    <div className="absolute top-3 left-3">
+                      <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-[#0055FF] bg-white/90 border border-[#0055FF]/20 px-2.5 py-1 rounded-xl backdrop-blur-md">
                         {post.category}
                       </span>
                     </div>
                   </div>
 
                   {/* Content Section */}
-                  <div className="p-6 md:p-8 flex flex-col flex-1">
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="text-xs font-black text-muted uppercase tracking-widest flex items-center gap-2">
-                        <svg className="w-3.5 h-3.5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="p-4 md:p-5 flex flex-col flex-1">
+                    <div className="flex items-center gap-3 mb-2.5">
+                      <div className="text-[10px] font-black text-gray-500 uppercase tracking-wider flex items-center gap-1.5">
+                        <svg className="w-3 h-3 text-[#0055FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                         </svg>
                         {post.date}
                       </div>
-                      <div className="text-xs font-black text-muted uppercase tracking-widest flex items-center gap-2">
-                        <svg className="w-3.5 h-3.5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <div className="text-[10px] font-black text-gray-500 uppercase tracking-wider flex items-center gap-1.5">
+                        <svg className="w-3 h-3 text-[#0055FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                         {post.time}
                       </div>
                     </div>
 
-                    <h3 className="text-xl md:text-2xl font-black text-foreground mb-6 group-hover:text-primary transition-colors leading-tight">
+                    <h3 className="text-sm md:text-base font-black text-[#08162D] mb-4 group-hover:text-[#0055FF] transition-colors leading-snug">
                       {post.title}
                     </h3>
 
                     {/* Meta Section */}
-                    <div className="mt-auto pt-4 border-t border-surface-border/50 flex items-center justify-between">
-                      <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center font-black text-primary text-sm border border-primary/20">
+                    <div className="mt-auto pt-3 border-t border-gray-100 flex items-center justify-between">
+                      <div className="flex items-center gap-2.5">
+                        <div className="w-8 h-8 rounded-full bg-[#0055FF]/10 flex items-center justify-center font-black text-[#0055FF] text-xs border border-[#0055FF]/20">
                           {post.author[0]}
                         </div>
                         <div>
-                          <div className="text-sm font-black text-foreground">{post.author}</div>
-                          <div className="text-[10px] uppercase font-bold text-muted tracking-tighter">{post.role}</div>
+                          <div className="text-xs font-black text-[#08162D]">{post.author}</div>
+                          <div className="text-[9px] uppercase font-bold text-gray-500 tracking-tighter">DigiNizam Platform</div>
                         </div>
                       </div>
-                      <div className="p-2 rounded-full bg-surface group-hover:bg-primary group-hover:text-white transition-all transform group-hover:translate-x-1">
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <div className="p-1.5 rounded-xl bg-gray-50 group-hover:bg-[#0055FF] group-hover:text-white transition-all transform group-hover:translate-x-1">
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>
                       </div>

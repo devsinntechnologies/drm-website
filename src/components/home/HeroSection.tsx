@@ -47,7 +47,7 @@ export default function HeroSection() {
               className="border border-gray-700 hover:border-[#0055FF] text-white font-bold text-sm px-5 py-3 rounded-xl transition-all flex items-center gap-3 bg-[#08162D]/60 shadow-sm"
             >
               <span className="w-2.5 h-2.5 rounded-full bg-[#00B4FF] animate-pulse"></span>
-              UAN: 03-0000000 N&S
+              UAN: 03-0000000 
             </a>
           </div>
         </motion.div>
