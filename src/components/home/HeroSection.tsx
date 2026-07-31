@@ -28,8 +28,8 @@ export default function HeroSection() {
             </span> - Complete ERP & POS System
           </span>
 
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold leading-tight text-white mb-3 tracking-tight">
-            Complete ERP & POS System in Pakistan <br />
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-medium leading-tight text-white mb-3 tracking-tight">
+            Complete ERP &amp; POS System in Pakistan <br />
             <span className="text-white">Complete Solutions</span>
           </h1>
 

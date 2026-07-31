@@ -8,10 +8,10 @@ import { motion } from "framer-motion";
 
 export default function AboutHero() {
   return (
-    <section className="bg-white text-[#08162D] py-6 md:py-8 relative overflow-hidden border-b border-gray-200">
+    <section className="bg-white text-[#08162D] min-h-[calc(100dvh-60px)] flex items-center justify-center relative overflow-hidden border-b border-gray-200 py-4 px-4 sm:px-6">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-[#0055FF]/5 blur-[120px] rounded-full pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center relative z-10">
+      <div className="max-w-7xl mx-auto px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-6 items-center relative z-10 w-full">
         
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -22,15 +22,15 @@ export default function AboutHero() {
           <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3.5 py-1.5 rounded-xl mb-3 border border-[#0055FF]/20">
             ABOUT DEVSINN
           </span>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight text-[#08162D] mb-3 tracking-tight">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-medium leading-tight text-[#08162D] mb-3 tracking-tight">
             Our success and <br />
             <span className="text-[#0055FF]">company history.</span>
           </h1>
-          <p className="text-xs md:text-sm text-gray-600 font-normal leading-relaxed mb-5 max-w-xl">
+          <p className="text-xs md:text-sm text-gray-600 font-normal leading-relaxed mb-4 max-w-xl">
             Come let&apos;s join hands with DigiNizam Software Solutions and unlock the ultimate potential of your business through cutting-edge ERP, POS, and digital web applications.
           </p>
           
-          <div className="space-y-2">
+          <div className="space-y-1.5">
             <span className="block text-[11px] font-bold uppercase tracking-wider text-gray-400">Ready to transform?</span>
             <div>
               <Link 
@@ -50,7 +50,7 @@ export default function AboutHero() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="relative flex justify-center items-center"
         >
-          <div className="relative w-full max-w-[420px] h-[320px] sm:h-[370px] rounded-xl overflow-hidden border border-gray-200 shadow-sm group">
+          <div className="relative w-full max-w-[400px] h-[260px] sm:h-[300px] lg:h-[340px] rounded-xl overflow-hidden border border-gray-200 shadow-sm group">
             <Image 
               src="/wecare.jpg" 
               alt="DigiNizam & History" 
@@ -58,7 +58,7 @@ export default function AboutHero() {
               className="object-cover group-hover:scale-105 transition-transform duration-500"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#08162D]/60 via-transparent to-transparent flex items-end p-5">
+            <div className="absolute inset-0 bg-gradient-to-t from-[#08162D]/60 via-transparent to-transparent flex items-end p-4">
               <span className="text-white text-[11px] font-bold uppercase tracking-widest bg-[#0055FF] px-2.5 py-1 rounded-lg shadow-sm">
                 Our Legacy
               </span>

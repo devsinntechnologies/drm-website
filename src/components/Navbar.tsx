@@ -13,13 +13,20 @@ export default function Navbar() {
   const [openMobileSection, setOpenMobileSection] = useState<"products" | "services" | "contact" | null>(null);
 
   return (
-    <header className="w-full bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm m-0 p-0">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 py-3 flex items-center justify-between relative">
+    <header className="w-full bg-white border-b border-[#0055FF]/10 sticky top-0 z-50 shadow-sm m-0 p-0 relative">
+      
+      {/* Light Blue Left & Right Side Effects */}
+      <div className="absolute inset-y-0 left-0 w-20 sm:w-32 bg-gradient-to-r from-[#0055FF]/10 to-transparent pointer-events-none z-0"></div>
+      <div className="absolute inset-y-0 right-0 w-20 sm:w-32 bg-gradient-to-l from-[#0055FF]/10 to-transparent pointer-events-none z-0"></div>
+
+      {/* Main Container */}
+      <div className="max-w-7xl mx-auto px-4 lg:px-8 py-1.5 flex items-center justify-between relative z-10">
         
         {/* Logo & Brand Name */}
         <div className="flex items-center">
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-11 h-11 sm:w-12 sm:h-12">
+          {/* Spacing reduced further with gap-0.5 */}
+          <Link href="/" className="flex items-center gap-0.5 group">
+            <div className="relative w-10 h-10 sm:w-11 sm:h-11">
               <Image 
                 src="/logo.png" 
                 alt="DEVSINN Logo" 
@@ -28,14 +35,16 @@ export default function Navbar() {
                 priority
               />
             </div>
-            <span className="text-lg sm:text-xl font-black text-[#08162D] tracking-tight">
-              DigiNizam
+            {/* Digi in Black, Nizam in Light Blue, Single Word */}
+            <span className="text-lg sm:text-xl font-black tracking-tight flex items-center">
+              <span className="text-black">Digi</span>
+              <span className="text-[#0055FF]">Nizam</span>
             </span>
           </Link>
         </div>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden lg:flex items-center space-x-8 font-bold text-sm text-[#08162D]">
+        <nav className="hidden lg:flex items-center space-x-6 font-bold text-sm text-[#08162D]">
           <Link href="/" className="text-[#0055FF] transition-colors">Home</Link>
           <Link href="/about" className="hover:text-[#0055FF] transition-colors">About</Link>
           
@@ -52,7 +61,7 @@ export default function Navbar() {
             {isProductsOpen && (
               <div className="absolute top-full left-1/2 -translate-x-1/2 w-[900px] bg-white border border-gray-200 shadow-2xl rounded-2xl p-8 grid grid-cols-3 gap-8 mt-1 z-50 text-left">
                 <div>
-                  <h4 className="text-[#0055FF] text-xs  mb-4 border-b border-gray-100 pb-2">
+                  <h4 className="text-[#0055FF] text-xs mb-4 border-b border-gray-100 pb-2">
                     DIGI SOFT (RETAIL)
                   </h4>
                   <ul className="space-y-2.5 text-xs text-gray-600 font-bold">
@@ -207,13 +216,13 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center">
           <a 
             href="tel:021111436832" 
-            className="border border-gray-200 hover:border-[#0055FF] px-4 py-2 rounded-xl flex items-center gap-3 transition-all bg-gray-50 hover:bg-white shadow-sm"
+            className="border border-[#0055FF]/20 hover:border-[#0055FF] px-4 py-1.5 rounded-xl flex items-center gap-2.5 transition-all bg-white shadow-[0_2px_10px_-2px_rgba(0,85,255,0.1)] hover:shadow-md"
           >
-            <div className="w-9 h-9 rounded-xl bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center">
-              <FiPhoneCall size={18} />
+            <div className="w-8 h-8 rounded-lg bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center">
+              <FiPhoneCall size={16} />
             </div>
             <div className="text-left">
-              <span className="block text-[10px] uppercase font-bold text-gray-400 tracking-wider">Call Anytime</span>
+              <span className="block text-[9px] uppercase font-bold text-gray-400 tracking-wider">Call Anytime</span>
               <span className="block text-xs font-black text-[#08162D]">03-000000000</span>
             </div>
           </a>
@@ -223,7 +232,7 @@ export default function Navbar() {
         <div className="flex lg:hidden items-center">
           <button 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="p-2 text-[#08162D] focus:outline-none"
+            className="p-1.5 text-[#08162D] focus:outline-none"
             aria-label="Toggle Menu"
           >
             {isMobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
@@ -234,7 +243,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer Navigation */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-white border-b border-gray-200 px-4 py-3 space-y-1.5 shadow-xl max-h-[70vh] overflow-y-auto">
+        <div className="lg:hidden bg-white border-b border-gray-200 px-4 py-3 space-y-1.5 shadow-xl max-h-[70vh] overflow-y-auto relative z-20">
           <Link 
             href="/" 
             onClick={() => setIsMobileMenuOpen(false)} 

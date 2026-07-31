@@ -52,10 +52,10 @@ export default function Footer() {
 
         {/* Column 2: Quick Links */}
         <div>
-          <h3 className="text-[#08162D] text-sm font-black uppercase tracking-wider mb-5 border-l-4 border-[#0055FF] pl-3">
+          <h3 className="text-[#08162D] text-base font-medium uppercase tracking-wider mb-4 pl-3">
             Quick Links
           </h3>
-          <ul className="space-y-2.5 text-sm text-gray-600 font-medium">
+          <ul className="space-y-2 text-sm text-gray-600 font-medium">
             <li><Link href="/products/ecommerce" className="hover:text-[#0055FF] transition-colors">ECommerce Solutions</Link></li>
             <li><Link href="/products/field-force" className="hover:text-[#0055FF] transition-colors">CRM (FIELD FORCE)</Link></li>
             <li><Link href="/services/hr-digitalization" className="hover:text-[#0055FF] transition-colors">HR DIGITALIZATION</Link></li>
@@ -67,10 +67,10 @@ export default function Footer() {
 
         {/* Column 3: Services */}
         <div>
-          <h3 className="text-[#08162D] text-sm font-black uppercase tracking-wider mb-5 border-l-4 border-[#0055FF] pl-3">
+          <h3 className="text-[#08162D] text-base font-medium uppercase tracking-wider mb-4 pl-3">
             Services
           </h3>
-          <ul className="space-y-2.5 text-sm text-gray-600 font-medium">
+          <ul className="space-y-2 text-sm text-gray-600 font-medium">
             <li><Link href="/services/dedicated-server" className="hover:text-[#0055FF] transition-colors">Dedicated Server</Link></li>
             <li><Link href="/services/web-development" className="hover:text-[#0055FF] transition-colors">WEB DEVELOPMENT</Link></li>
             <li><Link href="/services/sms-branding" className="hover:text-[#0055FF] transition-colors">SMS Branding Solution</Link></li>
@@ -83,26 +83,26 @@ export default function Footer() {
 
         {/* Column 4: Technology Partners & App Download */}
         <div>
-          <h3 className="text-[#08162D] text-sm font-black uppercase tracking-wider mb-5 border-l-4 border-[#0055FF] pl-3">
+          <h3 className="text-[#08162D] text-base font-medium uppercase tracking-wider mb-4 pl-3">
             Technology Partners
           </h3>
-          <div className="space-y-2.5 mb-6">
-            <div className="bg-[#0055FF]/10 hover:bg-[#0055FF]/20 border border-[#0055FF]/20 transition-all p-2.5 rounded-xl text-center text-xs font-bold text-[#08162D]">
+          <div className="space-y-2 mb-5">
+            <div className="bg-[#0055FF]/10 hover:bg-[#0055FF]/20 border border-[#0055FF]/20 transition-all p-2 rounded-xl text-center text-xs font-medium text-[#08162D]">
               PECS PARTNER
             </div>
-            <div className="bg-[#0055FF]/10 hover:bg-[#0055FF]/20 border border-[#0055FF]/20 transition-all p-2.5 rounded-xl text-center text-xs font-bold text-[#08162D]">
+            <div className="bg-[#0055FF]/10 hover:bg-[#0055FF]/20 border border-[#0055FF]/20 transition-all p-2 rounded-xl text-center text-xs font-medium text-[#08162D]">
               BIN JAFFER ENTERPRISES
             </div>
-            <div className="bg-[#0055FF]/10 hover:bg-[#0055FF]/20 border border-[#0055FF]/20 transition-all p-2.5 rounded-xl text-center text-xs font-bold text-[#08162D]">
+            <div className="bg-[#0055FF]/10 hover:bg-[#0055FF]/20 border border-[#0055FF]/20 transition-all p-2 rounded-xl text-center text-xs font-medium text-[#08162D]">
               CREATIVE SOLUTIONS
             </div>
           </div>
 
-          <h4 className="text-[#08162D] text-xs font-black uppercase tracking-wider mb-2.5">Download Our App</h4>
+          <h4 className="text-[#08162D] text-base font-medium uppercase tracking-wider mb-2">Download Our App</h4>
           <div className="flex items-center gap-2">
             <a 
               href="#" 
-              className="bg-[#0055FF] hover:bg-[#0044cc] px-5 py-3 rounded-xl flex items-center justify-center gap-2 text-white transition-all text-xs font-black uppercase tracking-widest shadow-lg shadow-[#0055FF]/20 w-full text-center"
+              className="bg-[#0055FF] hover:bg-[#0044cc] px-4 py-2.5 rounded-xl flex items-center justify-center gap-2 text-white transition-all text-xs font-medium uppercase tracking-widest shadow-lg shadow-[#0055FF]/20 w-full text-center"
             >
               <FaApple size={16} /> App Store
             </a>
@@ -115,7 +115,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 border-t border-gray-200 pt-6 text-sm text-gray-500 font-medium relative z-10 flex flex-col md:flex-row justify-between items-center gap-4">
         <div>&copy; {currentYear} All Rights Reserved.</div>
         <div className="flex items-center gap-2">
-          <span className="font-semibold text-[#08162D]">Powered By Devsinn</span>
+          <span className="font-medium text-[#08162D]">Powered By Devsinn</span>
           <Image 
             src="/devsinnlogo0.svg" 
             alt="Devsinn Logo" 

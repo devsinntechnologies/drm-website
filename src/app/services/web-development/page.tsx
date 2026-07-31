@@ -142,12 +142,12 @@ export default function WebDevelopmentPage() {
             className="max-w-3xl mx-auto"
           >
             <span className="inline-block text-[11px] font-bold uppercase tracking-widest text-white bg-black/60 border border-white/20 px-3 py-1 rounded-xl mb-3 shadow-lg backdrop-blur-md">
-              <span className="inline-flex items-center gap-1.5 align-middle">The DigiNizam <Image src="/logo.png" alt="Logo" width={14} height={14} className="object-contain inline-block" /></span> WEB DEVELOPMENT SOLUTIONS
+              <span className="inline-flex items-center gap-1.5 align-middle">The <span className="text-white">Digi</span><span className="text-[#00B4FF]">Nizam</span> <Image src="/logo.png" alt="Logo" width={14} height={14} className="object-contain inline-block" /></span> WEB DEVELOPMENT SOLUTIONS
             </span>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-black leading-tight mb-3 text-white tracking-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
-              Engineering <span className="text-[#3b82f6] drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">Digital Excellence</span>
+            <h1 className="text-2xl sm:text-3xl font-black leading-tight text-white tracking-tight drop-shadow-[0_4px_18px_rgba(0,0,0,0.95)]" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.9), 0 0px 4px rgba(0,0,0,0.8)' }}>
+              Engineering <span className="text-[#00B4FF]" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.9)' }}>Digital Excellence</span>
             </h1>
-            <p className="text-xs md:text-sm text-gray-100 font-medium leading-relaxed mb-4 drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+            <p className="text-xs md:text-sm text-gray-100 font-medium leading-relaxed mt-3 mb-4 drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
               Transform your brand's online presence with high-performance, custom-built web applications designed to engage users and maximize conversions.
             </p>
 
@@ -170,7 +170,7 @@ export default function WebDevelopmentPage() {
             <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-xl mb-2 border border-[#0055FF]/20">
               CAPABILITIES
             </span>
-            <h2 className="text-2xl sm:text-3xl font-black text-[#08162D] mb-2 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-black text-[#08162D] tracking-tight">
               Elevate Your <span className="text-[#0055FF]">Digital Presence</span>
             </h2>
             <p className="text-gray-600 text-xs sm:text-sm font-normal">
@@ -211,8 +211,8 @@ export default function WebDevelopmentPage() {
             <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-xl mb-2 border border-[#0055FF]/20">
               NEXT-GEN DEVELOPMENT
             </span>
-            <h2 className="text-2xl sm:text-3xl font-black text-[#08162D] mb-2 tracking-tight">
-              Built for Modern Enterprises & <span className="text-[#0055FF]">Scalable Growth</span>
+            <h2 className="text-2xl sm:text-3xl font-black text-[#08162D] tracking-tight">
+              Built for Modern Enterprises &amp; <span className="text-[#0055FF]">Scalable Growth</span>
             </h2>
             <p className="text-gray-600 text-xs sm:text-sm leading-relaxed mb-2 font-normal">
               Our web engineering methodology combines striking design layouts with rock-solid backend infrastructure. We build products that engage visitors instantly and retain them as loyal customers.
@@ -261,7 +261,7 @@ export default function WebDevelopmentPage() {
             <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-xl mb-2 border border-[#0055FF]/20">
               OUR EXPERTISE
             </span>
-            <h2 className="text-2xl sm:text-3xl font-black text-[#08162D] mb-2 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-black text-[#08162D] tracking-tight">
               What <span className="text-[#0055FF]">We Do</span>
             </h2>
             <p className="text-gray-600 text-xs sm:text-sm font-normal">
@@ -297,7 +297,7 @@ export default function WebDevelopmentPage() {
             <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-xl mb-2 border border-[#0055FF]/20">
               OPTIMIZATION
             </span>
-            <h2 className="text-2xl sm:text-3xl font-black text-[#08162D] mb-2 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-black text-[#08162D] tracking-tight">
               Built for <span className="text-[#0055FF]">Performance</span>
             </h2>
             <p className="text-gray-600 text-xs sm:text-sm font-normal">

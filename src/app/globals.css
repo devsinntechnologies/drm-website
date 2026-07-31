@@ -69,43 +69,92 @@
   }
 
   /* 
-    Only set non-size properties here.
-    font-size is intentionally excluded so Tailwind utility classes
-    (text-xs, text-sm, text-lg, text-2xl, etc.) work freely on ALL heading tags.
+    1. Main Section Headings (h1, h2): font-weight 500 (Medium), text-2xl sm:text-3xl lg:text-4xl.
   */
-  h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
-    line-height: 1.2;
+  h1, h2 {
+    font-weight: 500 !important;
+    font-size: 1.5rem !important; /* 24px mobile (text-2xl) */
+    line-height: 1.25 !important;
     letter-spacing: -0.01em;
     margin-top: 0 !important;
-    margin-bottom: 0.2rem !important;
+    margin-bottom: 0.15rem !important;
     padding: 0 !important;
   }
 
-  @media (max-width: 767px) {
-    h1, h2, h3, h4, h5, h6 {
-      font-size: clamp(1rem, 0.95rem + 0.8vw, 1.25rem) !important;
-      margin-bottom: 0.15rem !important;
-      line-height: 1.15;
+  @media (min-width: 640px) {
+    h1, h2 {
+      font-size: 1.875rem !important; /* 30px tablet (sm:text-3xl) */
     }
   }
 
-  nav h1,
-  nav h2,
-  nav h3,
-  nav h4,
-  nav h5,
-  nav h6 {
+  @media (min-width: 1024px) {
+    h1, h2 {
+      font-size: 2.25rem !important; /* 36px desktop (lg:text-4xl) */
+    }
+  }
+
+  /*
+    2. Footer & Card/Box Headings (h3, h4, h5, h6): medium size (text-base / 1rem) and font-medium (500).
+  */
+  h3, h4, h5, h6,
+  footer h3, footer h4, footer h5, footer h6 {
+    font-weight: 500 !important;
+    font-size: 1rem !important; /* text-base / 16px */
+    line-height: 1.35 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0.25rem !important;
+    padding: 0 !important;
+  }
+
+  /* STRICT EXCEPTION: Preserve Navbar headings completely without alteration */
+  header h1, header h2, header h3, header h4, header h5, header h6,
+  nav h1, nav h2, nav h3, nav h4, nav h5, nav h6 {
     font-size: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
     margin: inherit !important;
     padding: inherit !important;
+  }
+
+  /* 
+    Fix Hero Section Scroll Issue: Adjust hero min-height & padding so it fits 
+    perfectly in the viewport with the reduced navbar height without unwanted vertical scrollbars.
+  */
+  main > section:first-of-type,
+  section[class*="min-h-"] {
+    min-height: calc(100dvh - 60px) !important;
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+    margin-top: 0 !important;
+    box-sizing: border-box;
+  }
+
+  @media (max-width: 767px) {
+    main > section:first-of-type,
+    section[class*="min-h-"] {
+      min-height: calc(100dvh - 56px) !important;
+      padding-top: 1rem !important;
+      padding-bottom: 1rem !important;
+    }
+  }
+
+  /* Global Spacing Reduction: Tighter, cleaner layout across all sections */
+  section {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+
+  @media (max-width: 767px) {
+    section {
+      padding-top: 1rem !important;
+      padding-bottom: 1rem !important;
+    }
   }
 }
 
 @layer utilities {
-  /* Remove any old conflicting section padding overrides */
+  /* Utility overrides */
 }
-
 
 * {
   scrollbar-width: thin;
@@ -141,7 +190,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   transition: background-color 0.3s ease, color 0.3s ease;
   scroll-behavior: smooth;
-
 }
 
 /* Base custom utilities */
@@ -187,7 +235,7 @@ body {
     border-radius: 9999px;
     background: color-mix(in srgb, var(--primary) 8%, transparent);
     border: 1px solid color-mix(in srgb, var(--primary) 20%, transparent);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
   }
 
   .card-hover {
@@ -254,12 +302,9 @@ body {
   }
 
   @keyframes float {
-
-    0%,
-    100% {
+    0%, 100% {
       transform: translateY(0px);
     }
-
     50% {
       transform: translateY(-15px);
     }
@@ -311,7 +356,6 @@ body {
     z-index: 10;
   }
 
-  /* --- Premium Enhancements --- */
   .aurora-bg {
     background:
       radial-gradient(ellipse at 100% 0%, color-mix(in srgb, var(--primary) 16%, transparent) 0%, transparent 60%),
@@ -350,10 +394,6 @@ body {
     transition: text-shadow 0.3s ease, color 0.3s ease;
   }
 
-  /* .interactive-heading:hover .text-glow {
-    text-shadow: 0 0 24px color-mix(in srgb, var(--secondary) 22%, transparent);
-  } */
-
   .border-gradient {
     border: 1px solid transparent;
     background-image: linear-gradient(var(--surface), var(--surface)), linear-gradient(to right, color-mix(in srgb, var(--primary) 70%, white), color-mix(in srgb, var(--secondary) 70%, white));
@@ -366,12 +406,9 @@ body {
   }
 
   @keyframes pulse-slow {
-
-    0%,
-    100% {
+    0%, 100% {
       opacity: 1;
     }
-
     50% {
       opacity: 0.5;
     }
@@ -391,7 +428,6 @@ body {
     from {
       transform: translateY(100%);
     }
-
     to {
       transform: translateY(0);
     }
@@ -401,11 +437,9 @@ body {
     0% {
       background-position: 0% 50%;
     }
-
     50% {
       background-position: 100% 50%;
     }
-
     100% {
       background-position: 0% 50%;
     }

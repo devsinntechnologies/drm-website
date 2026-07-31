@@ -35,13 +35,13 @@ export default function RestaurantSolutionPage() {
             className="max-w-3xl mx-auto"
           >
             <span className="inline-block text-[11px] font-bold uppercase tracking-widest text-white bg-black/60 border border-white/20 px-3.5 py-1.5 rounded-xl mb-4 shadow-lg backdrop-blur-md">
-              <span className="inline-flex items-center gap-1.5 align-middle">DigiNizam <Image src="/logo.png" alt="Logo" width={14} height={14} className="object-contain inline-block" /></span> RETAIL SOLUTIONS • RESTAURANT SUITE
+              <span className="inline-flex items-center gap-1.5 align-middle"><span className="text-white">Digi</span><span className="text-[#00B4FF]">Nizam</span> <Image src="/logo.png" alt="Logo" width={14} height={14} className="object-contain inline-block" /></span> RETAIL SOLUTIONS • RESTAURANT SUITE
             </span>
-            <h1 className="text-3xl sm:text-4xl md:text-6xl font-black leading-tight mb-4 text-white tracking-tight">
-              Advanced <span className="text-[#00B4FF]">Restaurant</span> POS System
+            <h1 className="text-2xl sm:text-3xl font-black leading-tight text-white tracking-tight drop-shadow-[0_4px_18px_rgba(0,0,0,0.95)]" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.9), 0 0px 4px rgba(0,0,0,0.8)' }}>
+              Advanced <span className="text-[#00B4FF]" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.9)' }}>Restaurant</span> POS System
             </h1>
-            <p className="text-sm md:text-base text-gray-200 font-medium leading-relaxed mb-4">
-              Streamline your dine-in, takeaway, delivery, kitchen display orders, and table management seamlessly with Pakistan's leading smart restaurant software, engineered for speed and absolute reliability.
+            <p className="text-sm md:text-base text-gray-200 font-medium leading-relaxed mt-3 mb-4 drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+              Streamline your dine-in, takeaway, delivery, kitchen display orders, and table management seamlessly with Pakistan&apos;s leading smart restaurant software, engineered for speed and absolute reliability.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link 
@@ -69,10 +69,10 @@ export default function RestaurantSolutionPage() {
             <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3.5 py-1.5 rounded-xl mb-3 border border-[#0055FF]/20">
               STAFF EFFICIENCY
             </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#08162D] mb-3 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-black text-[#08162D] tracking-tight">
               Empower your <span className="text-[#0055FF]">restaurant staff</span>
             </h2>
-            <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-4 font-normal">
+            <p className="text-gray-600 text-sm sm:text-base leading-relaxed mt-2 mb-4 font-normal">
               High-speed receipt printing, seamless counter billing, and real-time sales reporting all in one place. Built on a complete POS infrastructure that supports both local operations and cloud synchronization.
             </p>
             {/* Extra Description Added */}
@@ -80,7 +80,7 @@ export default function RestaurantSolutionPage() {
               Empower cashiers and floor managers with intuitive touch interfaces, multi-terminal connectivity, offline backup support, and instantaneous kitchen dispatching to prevent order bottlenecks during peak hours.
             </p>
             <div className="inline-flex items-center gap-2 text-xs font-bold text-[#0055FF] bg-[#0055FF]/10 border border-[#0055FF]/20 px-5 py-3 rounded-xl">
-              <FiServer size={18} /> Cloud & Local Sync Enabled
+              <FiServer size={18} /> Cloud &amp; Local Sync Enabled
             </div>
           </motion.div>
 
@@ -116,10 +116,10 @@ export default function RestaurantSolutionPage() {
               <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3.5 py-1.5 rounded-xl mb-3 border border-[#0055FF]/20">
                 KEY CAPABILITIES
               </span>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#08162D] mb-3 tracking-tight">
+              <h2 className="text-2xl sm:text-3xl font-black text-[#08162D] tracking-tight">
                 Designed for Modern <span className="text-[#0055FF]">Food Businesses</span>
               </h2>
-              <p className="text-gray-600 text-sm sm:text-base font-normal leading-relaxed mb-3">
+              <p className="text-gray-600 text-sm sm:text-base font-normal leading-relaxed mt-2 mb-3">
                 Everything you need to run cafes, fine dining, fast food chains, and bakeries efficiently.
               </p>
               {/* Extra Description Added */}
@@ -157,7 +157,7 @@ export default function RestaurantSolutionPage() {
               <div className="w-12 h-12 rounded-xl bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center mb-6 group-hover:bg-[#0055FF] group-hover:text-white transition-all">
                 <FiSmartphone size={24} />
               </div>
-              <h3 className="text-lg font-black text-[#08162D] mb-3 group-hover:text-[#0055FF] transition-colors">Table & Order Management</h3>
+              <h3 className="text-base font-black text-[#08162D] mb-3 group-hover:text-[#0055FF] transition-colors">Table &amp; Order Management</h3>
               <p className="text-gray-600 text-xs sm:text-sm leading-relaxed font-normal">
                 Real-time tracking of dine-in tables, split bills, merging orders, and fast counter billing.
               </p>
@@ -173,7 +173,7 @@ export default function RestaurantSolutionPage() {
               <div className="w-12 h-12 rounded-xl bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center mb-6 group-hover:bg-[#0055FF] group-hover:text-white transition-all">
                 <FiShield size={24} />
               </div>
-              <h3 className="text-lg font-black text-[#08162D] mb-3 group-hover:text-[#0055FF] transition-colors">Kitchen Display System (KDS)</h3>
+              <h3 className="text-base font-black text-[#08162D] mb-3 group-hover:text-[#0055FF] transition-colors">Kitchen Display System (KDS)</h3>
               <p className="text-gray-600 text-xs sm:text-sm leading-relaxed font-normal">
                 Send orders directly from cash counters to kitchen screens instantly, eliminating paper slips.
               </p>
@@ -189,7 +189,7 @@ export default function RestaurantSolutionPage() {
               <div className="w-12 h-12 rounded-xl bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center mb-6 group-hover:bg-[#0055FF] group-hover:text-white transition-all">
                 <FiAward size={24} />
               </div>
-              <h3 className="text-lg font-black text-[#08162D] mb-3 group-hover:text-[#0055FF] transition-colors">FBR Fiscal Integration</h3>
+              <h3 className="text-base font-black text-[#08162D] mb-3 group-hover:text-[#0055FF] transition-colors">FBR Fiscal Integration</h3>
               <p className="text-gray-600 text-xs sm:text-sm leading-relaxed font-normal">
                 Automatic tax calculation and real-time digital invoice reporting compliant with FBR standards.
               </p>
@@ -210,10 +210,10 @@ export default function RestaurantSolutionPage() {
             <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3.5 py-1.5 rounded-xl mb-3 border border-[#0055FF]/20">
               SMART AUTOMATION
             </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#08162D] mb-4 tracking-tight">
-              Optimized Inventory & <span className="text-[#0055FF]">Recipe Control</span>
+            <h2 className="text-2xl sm:text-3xl font-black text-[#08162D] tracking-tight">
+              Optimized Inventory &amp; <span className="text-[#0055FF]">Recipe Control</span>
             </h2>
-            <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-4 font-normal">
+            <p className="text-gray-600 text-sm sm:text-base leading-relaxed mt-2 mb-4 font-normal">
               Take complete control of your stock levels. Our integrated platform automatically deducts ingredients with every order placed, minimizing food wastage and streamlining kitchen purchasing.
             </p>
             {/* Extra Description Added */}
@@ -222,13 +222,13 @@ export default function RestaurantSolutionPage() {
             </p>
             <ul className="space-y-3 text-xs sm:text-sm text-gray-700 font-bold">
               <li className="flex items-center gap-3">
-                <FiCheckCircle className="text-[#0055FF]" size={18} /> Automated Recipe & Stock Deduction
+                <FiCheckCircle className="text-[#0055FF]" size={18} /> Automated Recipe &amp; Stock Deduction
               </li>
               <li className="flex items-center gap-3">
                 <FiCheckCircle className="text-[#0055FF]" size={18} /> Multi-Branch Centralized Cloud Dashboard
               </li>
               <li className="flex items-center gap-3">
-                <FiCheckCircle className="text-[#0055FF]" size={18} /> Customer Loyalty & Discount Management
+                <FiCheckCircle className="text-[#0055FF]" size={18} /> Customer Loyalty &amp; Discount Management
               </li>
             </ul>
           </motion.div>
@@ -245,15 +245,15 @@ export default function RestaurantSolutionPage() {
                 <FiTrendingUp size={28} />
               </div>
               <div>
-                <h4 className="text-lg font-black text-[#08162D]">Real-Time Analytics</h4>
-                <p className="text-xs text-gray-500 font-medium">Comprehensive daily sales & expense reports</p>
+                <h4 className="text-base font-black text-[#08162D]">Real-Time Analytics</h4>
+                <p className="text-xs text-gray-500 font-medium">Comprehensive daily sales &amp; expense reports</p>
               </div>
             </div>
             <p className="text-xs sm:text-sm text-gray-600 leading-relaxed mb-6 italic font-normal">
-              "Monitor hourly sales performance, top-selling menu items, and peak dining hours directly from your mobile phone or desktop dashboard."
+              &quot;Monitor hourly sales performance, top-selling menu items, and peak dining hours directly from your mobile phone or desktop dashboard.&quot;
             </p>
             <div className="p-4 rounded-xl bg-[#0055FF]/10 border border-[#0055FF]/20 flex items-center justify-between text-xs font-bold text-[#08162D]">
-              <span>Reporting Status: Live & Active</span>
+              <span>Reporting Status: Live &amp; Active</span>
               <span className="text-[#0055FF]">v2.4</span>
             </div>
           </motion.div>

@@ -33,13 +33,13 @@ export default function PharmacySolutionPage() {
             className="max-w-3xl mx-auto"
           >
             <span className="inline-block text-[11px] font-bold uppercase tracking-widest text-white bg-black/60 border border-white/20 px-3 py-1 rounded-xl mb-3 shadow-lg backdrop-blur-md">
-              <span className="inline-flex items-center gap-1.5 align-middle">The DigiNizam <Image src="/logo.png" alt="Logo" width={14} height={14} className="object-contain inline-block" /></span> RETAIL SOLUTIONS • PHARMACY SUITE
+              <span className="inline-flex items-center gap-1.5 align-middle">The <span className="text-white">Digi</span><span className="text-[#00B4FF]">Nizam</span> <Image src="/logo.png" alt="Logo" width={14} height={14} className="object-contain inline-block" /></span> RETAIL SOLUTIONS • PHARMACY SUITE
             </span>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-black leading-tight mb-3 text-[#08162D] tracking-tight">
-              Advanced <span className="text-[#00B4FF]">Pharmacy</span> POS System
+            <h1 className="text-2xl sm:text-3xl font-black leading-tight text-white tracking-tight drop-shadow-[0_4px_18px_rgba(0,0,0,0.95)]" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.9), 0 0px 4px rgba(0,0,0,0.8)' }}>
+              Advanced <span className="text-[#00B4FF]" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.9)' }}>Pharmacy</span> POS System
             </h1>
-            <p className="text-xs md:text-sm text-gray-200 font-medium leading-relaxed mb-4">
-              Streamline your prescription billing, expiry tracking, batch management, and retail operations seamlessly with Pakistan's leading smart pharmacy software, engineered for speed and absolute reliability.
+            <p className="text-xs md:text-sm text-gray-200 font-medium leading-relaxed mt-3 mb-4 drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+              Streamline your prescription billing, expiry tracking, batch management, and retail operations seamlessly with Pakistan&apos;s leading smart pharmacy software, engineered for speed and absolute reliability.
             </p>
  
             <div className="flex flex-wrap gap-4 justify-center">
@@ -68,17 +68,17 @@ export default function PharmacySolutionPage() {
             <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-xl mb-2.5 border border-[#0055FF]/20">
               STAFF EFFICIENCY
             </span>
-            <h2 className="text-2xl sm:text-3xl font-black text-[#08162D] mb-2.5 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-black text-[#08162D] tracking-tight">
               Empower your <span className="text-[#0055FF]">pharmacy staff</span>
             </h2>
-            <p className="text-gray-600 text-xs sm:text-sm leading-relaxed mb-3 font-normal">
+            <p className="text-gray-600 text-xs sm:text-sm leading-relaxed mt-2 mb-3 font-normal">
               High-speed receipt printing, seamless counter billing, and real-time sales reporting all in one place. Built on a complete POS infrastructure that supports both local operations and cloud synchronization.
             </p>
             <p className="text-gray-500 text-xs sm:text-sm leading-relaxed mb-4 font-normal">
               Empower pharmacists and counter staff with instant medicine lookup, salt name mapping, multi-terminal connectivity, and fast prescription dispensing during rush hours.
             </p>
             <div className="inline-flex items-center gap-2 text-xs font-bold text-[#0055FF] bg-[#0055FF]/10 border border-[#0055FF]/20 px-4 py-2.5 rounded-xl">
-              <FiServer size={16} /> Cloud & Local Sync Enabled
+              <FiServer size={16} /> Cloud &amp; Local Sync Enabled
             </div>
           </motion.div>
 
@@ -114,10 +114,10 @@ export default function PharmacySolutionPage() {
               <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-xl mb-2.5 border border-[#0055FF]/20">
                 MEDICAL ERP INTEGRATION
               </span>
-              <h2 className="text-2xl sm:text-3xl font-black text-[#08162D] mb-2.5 tracking-tight">
-                Designed for Modern <span className="text-[#0055FF]">Medical Stores & ERP</span>
+              <h2 className="text-2xl sm:text-3xl font-black text-[#08162D] tracking-tight">
+                Designed for Modern <span className="text-[#0055FF]">Medical Stores &amp; ERP</span>
               </h2>
-              <p className="text-gray-600 text-xs sm:text-sm font-normal leading-relaxed mb-2.5">
+              <p className="text-gray-600 text-xs sm:text-sm font-normal leading-relaxed mt-2 mb-2.5">
                 Everything you need to run pharmacies, medical stores, and healthcare inventory efficiently.
               </p>
               <p className="text-gray-500 text-xs sm:text-sm font-normal leading-relaxed">
@@ -170,7 +170,7 @@ export default function PharmacySolutionPage() {
               <div className="w-10 h-10 rounded-xl bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center mb-4 group-hover:bg-[#0055FF] group-hover:text-white transition-all">
                 <FiShield size={20} />
               </div>
-              <h3 className="text-base font-black text-[#08162D] mb-2 group-hover:text-[#0055FF] transition-colors">Expiry & Batch Tracking</h3>
+              <h3 className="text-base font-black text-[#08162D] mb-2 group-hover:text-[#0055FF] transition-colors">Expiry &amp; Batch Tracking</h3>
               <p className="text-gray-600 text-xs leading-relaxed font-normal">
                 Automatic alerts for near-expiry medicines and precise batch management to ensure safety and compliance.
               </p>
@@ -202,10 +202,10 @@ export default function PharmacySolutionPage() {
             <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-xl mb-2.5 border border-[#0055FF]/20">
               CORE SYSTEM MODULES
             </span>
-            <h2 className="text-2xl sm:text-3xl font-black text-[#08162D] mb-2.5 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-black text-[#08162D] tracking-tight">
               Explore Our Powerful <span className="text-[#0055FF]">Pharmacy Modules</span>
             </h2>
-            <p className="text-gray-600 text-xs sm:text-sm font-normal">
+            <p className="text-gray-600 text-xs sm:text-sm font-normal mt-2">
               Designed to handle medicine inventory, salt matching, and clinical billing under one roof.
             </p>
           </div>
@@ -221,7 +221,7 @@ export default function PharmacySolutionPage() {
               <div className="w-10 h-10 rounded-xl bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center mb-4 group-hover:bg-[#0055FF] group-hover:text-white transition-all">
                 <FiBox size={20} />
               </div>
-              <h3 className="text-base font-black text-[#08162D] mb-2 group-hover:text-[#0055FF] transition-colors">Batch & Expiry Control</h3>
+              <h3 className="text-base font-black text-[#08162D] mb-2 group-hover:text-[#0055FF] transition-colors">Batch &amp; Expiry Control</h3>
               <p className="text-gray-600 text-xs leading-relaxed font-normal">
                 Track medicine batches, manufacturing dates, and strict expiry alerts to prevent expired stock sales.
               </p>
@@ -253,7 +253,7 @@ export default function PharmacySolutionPage() {
               <div className="w-10 h-10 rounded-xl bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center mb-4 group-hover:bg-[#0055FF] group-hover:text-white transition-all">
                 <FiPrinter size={20} />
               </div>
-              <h3 className="text-base font-black text-[#08162D] mb-2 group-hover:text-[#0055FF] transition-colors">Barcode & Strip Scanning</h3>
+              <h3 className="text-base font-black text-[#08162D] mb-2 group-hover:text-[#0055FF] transition-colors">Barcode &amp; Strip Scanning</h3>
               <p className="text-gray-600 text-xs leading-relaxed font-normal">
                 Scan medicine boxes, strips, or individual units quickly with high-speed barcode readers.
               </p>
@@ -269,7 +269,7 @@ export default function PharmacySolutionPage() {
               <div className="w-10 h-10 rounded-xl bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center mb-4 group-hover:bg-[#0055FF] group-hover:text-white transition-all">
                 <FiTruck size={20} />
               </div>
-              <h3 className="text-base font-black text-[#08162D] mb-2 group-hover:text-[#0055FF] transition-colors">Distributor & Supplier Ledger</h3>
+              <h3 className="text-base font-black text-[#08162D] mb-2 group-hover:text-[#0055FF] transition-colors">Distributor &amp; Supplier Ledger</h3>
               <p className="text-gray-600 text-xs leading-relaxed font-normal">
                 Track pharmaceutical distributor orders, returns, claims, and running credit ledger accounts.
               </p>
@@ -285,9 +285,9 @@ export default function PharmacySolutionPage() {
               <div className="w-10 h-10 rounded-xl bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center mb-4 group-hover:bg-[#0055FF] group-hover:text-white transition-all">
                 <FiBarChart2 size={20} />
               </div>
-              <h3 className="text-base font-black text-[#08162D] mb-2 group-hover:text-[#0055FF] transition-colors">Financial & Tax Reports</h3>
+              <h3 className="text-base font-black text-[#08162D] mb-2 group-hover:text-[#0055FF] transition-colors">Financial &amp; Tax Reports</h3>
               <p className="text-gray-600 text-xs leading-relaxed font-normal">
-                Accurate profit & loss calculations, daily closing cash registers, and automated tax compliance logs.
+                Accurate profit &amp; loss calculations, daily closing cash registers, and automated tax compliance logs.
               </p>
             </motion.div>
 

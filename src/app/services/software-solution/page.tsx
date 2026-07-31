@@ -29,10 +29,6 @@ export default function SoftwareSolutionPage() {
           </video>
         </div>
 
-        {/* Warm Orange Glow & Radial Accent */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[450px] bg-[#ff6b00]/15 blur-[180px] rounded-full pointer-events-none z-0" />
-        <div className="absolute inset-0 bg-gradient-to-tr from-[#ff6b00]/10 via-transparent to-[#0055FF]/10 pointer-events-none z-0" />
-
         <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10 w-full py-6 text-center">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -43,10 +39,10 @@ export default function SoftwareSolutionPage() {
             <span className="inline-block text-[11px] font-bold uppercase tracking-widest text-white bg-black/60 border border-white/20 px-3 py-1 rounded-xl mb-2.5 shadow-lg backdrop-blur-md">
               ENTERPRISE SERVICES • DEVSINN SOLUTIONS
             </span>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-black leading-tight mb-2.5 text-white tracking-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
-              Bespoke <span className="text-[#3b82f6] drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">Software Solutions</span>
+            <h1 className="text-2xl sm:text-3xl font-black leading-tight text-white tracking-tight drop-shadow-[0_4px_18px_rgba(0,0,0,0.95)]" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.9), 0 0px 4px rgba(0,0,0,0.8)' }}>
+              Bespoke <span className="text-[#00B4FF]" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.9)' }}>Software Solutions</span>
             </h1>
-            <p className="text-xs md:text-sm text-gray-100 font-medium leading-relaxed mb-4 drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+            <p className="text-xs md:text-sm text-gray-100 font-medium leading-relaxed mt-3 mb-4 drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
               We design, develop, and deploy scalable enterprise software tailored specifically for your operational workflows by Devsinn with absolute reliability.
             </p>
 
@@ -69,7 +65,7 @@ export default function SoftwareSolutionPage() {
             <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-xl mb-1.5 border border-[#0055FF]/20">
               OUR EXPERTISE
             </span>
-            <h2 className="text-xl sm:text-2xl font-black text-[#08162D] mb-1.5 tracking-tight">
+            <h2 className="text-xl sm:text-2xl font-black text-[#08162D] tracking-tight">
               What <span className="text-[#0055FF]">We Do</span>
             </h2>
             <p className="text-gray-600 text-xs sm:text-[13px] font-normal">
@@ -191,7 +187,7 @@ export default function SoftwareSolutionPage() {
             <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-xl mb-1.5 border border-[#0055FF]/20">
               WORKFORCE EFFICIENCY
             </span>
-            <h2 className="text-xl sm:text-2xl font-black text-[#08162D] mb-2 tracking-tight">
+            <h2 className="text-xl sm:text-2xl font-black text-[#08162D] tracking-tight">
               Empower your <span className="text-[#0055FF]">entire workforce</span>
             </h2>
             <p className="text-gray-600 text-xs sm:text-[13px] leading-relaxed mb-2 font-normal">
@@ -230,7 +226,7 @@ export default function SoftwareSolutionPage() {
             <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-xl mb-1.5 border border-[#0055FF]/20">
               KEY CAPABILITIES
             </span>
-            <h2 className="text-xl sm:text-2xl font-black text-[#08162D] mb-1.5 tracking-tight">
+            <h2 className="text-xl sm:text-2xl font-black text-[#08162D] tracking-tight">
               Engineered for <span className="text-[#0055FF]">Modern Businesses</span>
             </h2>
             <p className="text-gray-600 text-xs sm:text-[13px] font-normal">

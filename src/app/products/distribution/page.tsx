@@ -33,12 +33,12 @@ export default function DistributionSolutionPage() {
             className="max-w-3xl mx-auto"
           >
             <span className="inline-block text-[11px] font-bold uppercase tracking-widest text-white bg-black/60 border border-white/20 px-3 py-1 rounded-xl mb-3 shadow-lg backdrop-blur-md">
-              <span className="inline-flex items-center gap-1.5 align-middle">The DigiNizam <Image src="/logo.png" alt="Logo" width={14} height={14} className="object-contain inline-block" /></span> RETAIL SOLUTIONS • DISTRIBUTION & WHOLESALE SUITE
+              <span className="inline-flex items-center gap-1.5 align-middle">The <span className="text-white">Digi</span><span className="text-[#00B4FF]">Nizam</span> <Image src="/logo.png" alt="Logo" width={14} height={14} className="object-contain inline-block" /></span> RETAIL SOLUTIONS • DISTRIBUTION &amp; WHOLESALE SUITE
             </span>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-black leading-tight mb-3 text-[#08162D] tracking-tight">
-              Advanced <span className="text-[#0055FF]">Distribution & Wholesale</span> POS System
+            <h1 className="text-2xl sm:text-3xl font-black leading-tight text-white tracking-tight drop-shadow-[0_4px_18px_rgba(0,0,0,0.95)]" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.9), 0 0px 4px rgba(0,0,0,0.8)' }}>
+              Advanced <span className="text-[#00B4FF]" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.9)' }}>Distribution &amp; Wholesale</span> POS System
             </h1>
-            <p className="text-xs md:text-sm text-gray-200 font-medium leading-relaxed mb-4">
+            <p className="text-xs md:text-sm text-gray-200 font-medium leading-relaxed mt-3 mb-4 drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
               Comprehensive management system for wholesale distributors, supply chains, and warehouse operations. Streamline inventory tracking, order fulfillment, and logistics effortlessly with absolute reliability.
             </p>
  
@@ -67,7 +67,7 @@ export default function DistributionSolutionPage() {
               <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-xl mb-2.5 border border-[#0055FF]/20">
                 POINT OF SALE & CAPABILITIES
               </span>
-              <h2 className="text-2xl sm:text-3xl font-black text-[#08162D] mb-2.5 tracking-tight">
+              <h2 className="text-2xl sm:text-3xl font-black text-[#08162D] tracking-tight">
                 Designed for Modern <span className="text-[#0055FF]">Distribution Networks</span>
               </h2>
               <p className="text-gray-600 text-xs sm:text-sm font-normal leading-relaxed mb-2.5">
@@ -162,8 +162,8 @@ export default function DistributionSolutionPage() {
             <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-xl mb-2.5 border border-[#0055FF]/20">
               STAFF EFFICIENCY
             </span>
-            <h2 className="text-2xl sm:text-3xl font-black text-[#08162D] mb-2.5 tracking-tight">
-              Empower your <span className="text-[#0055FF]">warehouse & sales team</span>
+            <h2 className="text-2xl sm:text-3xl font-black text-[#08162D] tracking-tight">
+              Empower your <span className="text-[#0055FF]">warehouse &amp; sales team</span>
             </h2>
             <p className="text-gray-600 text-xs sm:text-sm leading-relaxed mb-3 font-normal">
               High-speed order processing, digital dispatch notes, and real-time ledger tracking to maintain absolute synchronization between field sales agents and warehouse fulfillment teams.
@@ -204,7 +204,7 @@ export default function DistributionSolutionPage() {
             <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-xl mb-2.5 border border-[#0055FF]/20">
               CORE SYSTEM MODULES
             </span>
-            <h2 className="text-2xl sm:text-3xl font-black text-[#08162D] mb-2.5 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-black text-[#08162D] tracking-tight">
               Explore Our Powerful <span className="text-[#0055FF]">Distribution Modules</span>
             </h2>
             <p className="text-gray-600 text-xs sm:text-sm font-normal">
