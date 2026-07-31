@@ -41,13 +41,13 @@ const FaqSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 bg-background relative overflow-hidden">
+    <section className="py-10 bg-background relative overflow-hidden">
       <div className="absolute top-1/2 left-0 w-80 h-80 bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-4xl mx-auto px-6 lg:px-8 relative z-10">
         
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-6">
           <span className="section-label">Common Queries</span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-4">
             Frequently Asked <span className="text-primary">Questions</span>

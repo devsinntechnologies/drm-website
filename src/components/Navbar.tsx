@@ -10,6 +10,7 @@ export default function Navbar() {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [openMobileSection, setOpenMobileSection] = useState<"products" | "services" | "contact" | null>(null);
 
   return (
     <header className="w-full bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm m-0 p-0">
@@ -51,8 +52,8 @@ export default function Navbar() {
             {isProductsOpen && (
               <div className="absolute top-full left-1/2 -translate-x-1/2 w-[900px] bg-white border border-gray-200 shadow-2xl rounded-2xl p-8 grid grid-cols-3 gap-8 mt-1 z-50 text-left">
                 <div>
-                  <h4 className="text-[#0055FF] font-black text-xs uppercase tracking-wider mb-4 border-b border-gray-100 pb-2">
-                    GEN SOFT (RETAIL)
+                  <h4 className="text-[#0055FF] text-xs  mb-4 border-b border-gray-100 pb-2">
+                    DIGI SOFT (RETAIL)
                   </h4>
                   <ul className="space-y-2.5 text-xs text-gray-600 font-bold">
                     <li>
@@ -87,7 +88,7 @@ export default function Navbar() {
                   </ul>
 
                   <h4 className="text-[#0055FF] font-black text-xs uppercase tracking-wider mb-3 border-b border-gray-100 pb-2">
-                    GEN SOFT (INDUSTRIES)
+                    DIGI SOFT (INDUSTRIES)
                   </h4>
                   <ul className="space-y-2 text-xs text-gray-600 font-bold">
                     <li><Link href="/products/rice" className="hover:text-[#0055FF] transition-colors block">Rice ERP</Link></li>
@@ -108,7 +109,7 @@ export default function Navbar() {
                   </ul>
 
                   <h4 className="text-[#0055FF] font-black text-xs uppercase tracking-wider mb-3 border-b border-gray-100 pb-2">
-                    GEN CLOUD & TRAC
+                    DIGI CLOUD & TRAC
                   </h4>
                   <ul className="space-y-2 text-xs text-gray-600 font-bold">
                     <li><Link href="/products/vps" className="hover:text-[#0055FF] transition-colors block">VPS Server & Dedicated Server</Link></li>
@@ -233,53 +234,112 @@ export default function Navbar() {
 
       {/* Mobile Drawer Navigation */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-white border-b border-gray-200 px-6 py-6 space-y-4 shadow-xl">
+        <div className="lg:hidden bg-white border-b border-gray-200 px-4 py-3 space-y-1.5 shadow-xl max-h-[70vh] overflow-y-auto">
           <Link 
             href="/" 
             onClick={() => setIsMobileMenuOpen(false)} 
-            className="block font-bold text-sm text-[#0055FF]"
+            className="block font-bold text-xs text-[#0055FF] py-1.5"
           >
             Home
           </Link>
           <Link 
             href="/about" 
             onClick={() => setIsMobileMenuOpen(false)} 
-            className="block font-bold text-sm text-[#08162D] hover:text-[#0055FF]"
+            className="block font-bold text-xs text-[#08162D] hover:text-[#0055FF] py-1.5"
           >
             About
           </Link>
-          <Link 
-            href="/products/restaurant" 
-            onClick={() => setIsMobileMenuOpen(false)} 
-            className="block font-bold text-sm text-[#08162D] hover:text-[#0055FF]"
-          >
-            Products & Solutions
-          </Link>
-          <Link 
-            href="/services/software-solution" 
-            onClick={() => setIsMobileMenuOpen(false)} 
-            className="block font-bold text-sm text-[#08162D] hover:text-[#0055FF]"
-          >
-            Services
-          </Link>
+
+          <div className="border-t border-gray-100 pt-1">
+            <button
+              onClick={() => setOpenMobileSection(openMobileSection === "products" ? null : "products")}
+              className="flex items-center justify-between w-full font-bold text-xs text-[#08162D] hover:text-[#0055FF] py-1.5"
+            >
+              <span>Products & Solutions</span>
+              <FiChevronDown size={12} className={`transition-transform duration-200 ${openMobileSection === "products" ? "rotate-180" : ""}`} />
+            </button>
+            {openMobileSection === "products" && (
+              <div className="pl-3 pt-1 pb-0.5 space-y-1">
+                <Link href="/products/restaurant" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs text-gray-600 hover:text-[#0055FF] py-0.5">Restaurant</Link>
+                <Link href="/products/supermarket" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs text-gray-600 hover:text-[#0055FF] py-0.5">Supermarket</Link>
+                <Link href="/products/pharmacy" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs text-gray-600 hover:text-[#0055FF] py-0.5">Pharmacy</Link>
+                <Link href="/products/books" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs text-gray-600 hover:text-[#0055FF] py-0.5">Books</Link>
+                <Link href="/products/bakery" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs text-gray-600 hover:text-[#0055FF] py-0.5">Bakery</Link>
+                <Link href="/products/distribution" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs text-gray-600 hover:text-[#0055FF] py-0.5">Distribution</Link>
+                <Link href="/products/automobile" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs text-gray-600 hover:text-[#0055FF] py-0.5">Automobile</Link>
+                <Link href="/products/apparel" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs text-gray-600 hover:text-[#0055FF] py-0.5">Apparel</Link>
+                <Link href="/products/shoes" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs text-gray-600 hover:text-[#0055FF] py-0.5">Shoes & Bags</Link>
+                <Link href="/products/crockery" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs text-gray-600 hover:text-[#0055FF] py-0.5">Crockery</Link>
+                <Link href="/products/furniture" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs text-gray-600 hover:text-[#0055FF] py-0.5">Furniture</Link>
+                <Link href="/products/vape" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs text-gray-600 hover:text-[#0055FF] py-0.5">Vape Shops</Link>
+                <Link href="/products/beauty" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs text-gray-600 hover:text-[#0055FF] py-0.5">Beauty & Cosmetics</Link>
+                <Link href="/products/rice" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs text-gray-600 hover:text-[#0055FF] py-0.5">Rice ERP</Link>
+                <Link href="/products/flour" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs text-gray-600 hover:text-[#0055FF] py-0.5">Flour ERP</Link>
+                <Link href="/products/sugar" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs text-gray-600 hover:text-[#0055FF] py-0.5">Sugar ERP</Link>
+                <Link href="/products/textile" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs text-gray-600 hover:text-[#0055FF] py-0.5">Textile ERP</Link>
+                <Link href="/products/complaint" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs text-gray-600 hover:text-[#0055FF] py-0.5">Complaint Management</Link>
+                <Link href="/products/sales-mgmt" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs text-gray-600 hover:text-[#0055FF] py-0.5">Sales Management</Link>
+                <Link href="/products/tracking" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs text-gray-600 hover:text-[#0055FF] py-0.5">User Tracking</Link>
+                <Link href="/products/vps" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs text-gray-600 hover:text-[#0055FF] py-0.5">VPS & Dedicated</Link>
+                <Link href="/products/fbr" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs text-gray-600 hover:text-[#0055FF] py-0.5">FBR Digital</Link>
+                <Link href="/products/genprice" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs text-gray-600 hover:text-[#0055FF] py-0.5">GEN Price & Financial</Link>
+              </div>
+            )}
+          </div>
+
+          <div className="border-t border-gray-100 pt-1">
+            <button
+              onClick={() => setOpenMobileSection(openMobileSection === "services" ? null : "services")}
+              className="flex items-center justify-between w-full font-bold text-xs text-[#08162D] hover:text-[#0055FF] py-1.5"
+            >
+              <span>Services</span>
+              <FiChevronDown size={12} className={`transition-transform duration-200 ${openMobileSection === "services" ? "rotate-180" : ""}`} />
+            </button>
+            {openMobileSection === "services" && (
+              <div className="pl-3 pt-1 pb-0.5 space-y-1">
+                <Link href="/services/software-solution" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs text-gray-600 hover:text-[#0055FF] py-0.5">Software Solution</Link>
+                <Link href="/services/hardware-support" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs text-gray-600 hover:text-[#0055FF] py-0.5">Hardware Support</Link>
+                <Link href="/services/mis-audit" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs text-gray-600 hover:text-[#0055FF] py-0.5">MIS Audit</Link>
+                <Link href="/services/training" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs text-gray-600 hover:text-[#0055FF] py-0.5">Training</Link>
+                <Link href="/services/web-development" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs text-gray-600 hover:text-[#0055FF] py-0.5">Web Development</Link>
+                <Link href="/services/digital-marketing" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs text-gray-600 hover:text-[#0055FF] py-0.5">Digital Marketing</Link>
+                <Link href="/services/system-support" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs text-gray-600 hover:text-[#0055FF] py-0.5">System Support</Link>
+                <Link href="/services/hr-digitalization" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs text-gray-600 hover:text-[#0055FF] py-0.5">HR Digitalization</Link>
+              </div>
+            )}
+          </div>
+
           <Link 
             href="/clientele" 
             onClick={() => setIsMobileMenuOpen(false)} 
-            className="block font-bold text-sm text-[#08162D] hover:text-[#0055FF]"
+            className="block font-bold text-xs text-[#08162D] hover:text-[#0055FF] py-1.5"
           >
             Clientele
           </Link>
-          <Link 
-            href="/contact" 
-            onClick={() => setIsMobileMenuOpen(false)} 
-            className="block font-bold text-sm text-[#08162D] hover:text-[#0055FF]"
-          >
-            Contact Us
-          </Link>
-          <div className="pt-4 border-t border-gray-100 flex items-center justify-between">
+
+          <div className="border-t border-gray-100 pt-1">
+            <button
+              onClick={() => setOpenMobileSection(openMobileSection === "contact" ? null : "contact")}
+              className="flex items-center justify-between w-full font-bold text-xs text-[#08162D] hover:text-[#0055FF] py-1.5"
+            >
+              <span>Contact</span>
+              <FiChevronDown size={12} className={`transition-transform duration-200 ${openMobileSection === "contact" ? "rotate-180" : ""}`} />
+            </button>
+            {openMobileSection === "contact" && (
+              <div className="pl-3 pt-1 pb-0.5 space-y-1">
+                <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs text-gray-600 hover:text-[#0055FF] py-0.5">Contact Us</Link>
+                <Link href="/demo" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs text-gray-600 hover:text-[#0055FF] py-0.5">Get a Free Demo</Link>
+                <Link href="/partner" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs text-gray-600 hover:text-[#0055FF] py-0.5">Become a Partner</Link>
+                <Link href="/hiring" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs text-gray-600 hover:text-[#0055FF] py-0.5">We are hiring</Link>
+                <Link href="/privacy" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs text-gray-600 hover:text-[#0055FF] py-0.5">Privacy Policy</Link>
+                <Link href="/blog" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs text-gray-600 hover:text-[#0055FF] py-0.5">Blog</Link>
+              </div>
+            )}
+          </div>
+          <div className="pt-2 border-t border-gray-100">
             <a 
               href="tel:021111436832" 
-              className="w-full py-3 bg-[#0055FF] text-white font-black text-xs uppercase tracking-widest text-center rounded-xl shadow-md"
+              className="w-full bg-[#0055FF] hover:bg-[#0044cc] text-white font-black text-xs uppercase tracking-widest px-4 py-2.5 rounded-xl shadow-lg shadow-[#0055FF]/25 transition-all text-center block"
             >
               Call 03-000000000
             </a>

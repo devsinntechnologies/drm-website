@@ -7,7 +7,7 @@ const FeaturesChef = () => {
   return (
     <section className="py-8 md:py-10 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="flex flex-col lg:flex-row-reverse items-center gap-8 md:gap-10 lg:gap-12">
+        <div className="flex flex-col lg:flex-row-reverse items-center gap-8 md:gap-4 lg:gap-6">
           
           {/* Content Side */}
           <motion.div 

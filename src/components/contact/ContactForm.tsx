@@ -45,12 +45,12 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="py-8 md:py-12 bg-white text-[#08162D] relative overflow-hidden border-t border-gray-200">
+    <section className="py-4 md:py-6 bg-white text-[#08162D] relative overflow-hidden border-t border-gray-200">
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-[#0055FF]/5 blur-[160px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-6 md:gap-10 lg:gap-12 items-center">
+        <div className="flex flex-col lg:flex-row gap-6 md:gap-4 lg:gap-6 items-center">
 
           {/* Contact Info Side */}
           <motion.div

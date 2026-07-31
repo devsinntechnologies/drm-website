@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const ContactHero = () => {
   return (
-    <section className="relative py-8 md:py-12 bg-white text-[#08162D] overflow-hidden border-b border-gray-200">
+    <section className="relative py-6 md:py-8 bg-white text-[#08162D] overflow-hidden border-b border-gray-200">
       {/* Background Glow */}
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}

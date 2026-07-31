@@ -39,7 +39,7 @@ export default function SmartFeaturesGridSection() {
   ];
 
   return (
-    <section className="py-16 md:py-20 bg-gray-50 border-b border-gray-200 relative overflow-hidden">
+    <section className="py-6 md:py-8 bg-gray-50 border-b border-gray-200 relative overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-[#0055FF]/10 blur-[140px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">

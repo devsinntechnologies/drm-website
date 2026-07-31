@@ -6,7 +6,7 @@ import { FiCalendar, FiPlay, FiMail } from "react-icons/fi";
 
 const FinalCtaSection: React.FC = () => {
   return (
-    <section className="py-24 bg-navy relative overflow-hidden">
+    <section className="py-10 bg-navy relative overflow-hidden">
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-royal/5 rounded-full blur-[140px] pointer-events-none" />
 
@@ -21,7 +21,7 @@ const FinalCtaSection: React.FC = () => {
         </h2>
 
         <p className="text-sm md:text-base text-white/70 font-medium max-w-xl mx-auto mb-10 leading-relaxed">
-          Join thousands of restaurants running on N&S POS. Automate inventory, speed up checkouts, and boost your margins.
+          Join thousands of restaurants running on DigiNizam POS. Automate inventory, speed up checkouts, and boost your margins.
         </p>
 
         <div className="flex flex-wrap justify-center gap-4 w-full">

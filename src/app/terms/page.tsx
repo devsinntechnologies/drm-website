@@ -1,9 +1,6 @@
-import TermsContent from "@/components/legal/TermsContent";
+import React from "react";
+import ComingSoon from "@/components/ComingSoon";
 
 export default function TermsPage() {
-  return (
-    <main className="min-h-screen bg-background">
-      <TermsContent />
-    </main>
-  );
+  return <ComingSoon pageName="Terms" />;
 }

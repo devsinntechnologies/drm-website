@@ -25,13 +25,13 @@ const UniqueFeaturesSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 bg-background relative overflow-hidden">
+    <section className="py-10 bg-background relative overflow-hidden">
       <div className="absolute top-1/4 right-0 w-80 h-80 bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
         
         {/* Header */}
-        <div className="text-center mb-16 max-w-3xl mx-auto">
+        <div className="text-center mb-6 max-w-3xl mx-auto">
           <span className="section-label">Competitive Differentiators</span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-6 leading-tight tracking-tight">
             Advanced Features <span className="text-primary">Not Found Elsewhere</span>

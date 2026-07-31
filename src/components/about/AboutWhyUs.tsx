@@ -55,7 +55,7 @@ export default function AboutWhyUs() {
           <div className="relative w-full max-w-[450px] h-[320px] sm:h-[380px] rounded-xl overflow-hidden border border-gray-200 shadow-sm group">
             <Image 
               src="/success.jpg" 
-              alt="N&S Success and Growth" 
+              alt="DigiNizam Success and Growth" 
               fill 
               className="object-cover group-hover:scale-105 transition-transform duration-500"
             />

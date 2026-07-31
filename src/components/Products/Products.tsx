@@ -303,7 +303,7 @@ export default function Products() {
   const [hoveredId, setHoveredId] = useState<string | null>(null);
 
   return (
-    <div className="bg-background min-h-screen py-24 px-6 md:px-8 relative overflow-hidden">
+    <div className="bg-background min-h-screen py-10 px-6 md:px-8 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-1/4 left-0 w-80 h-80 bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-secondary/5 rounded-full blur-[120px] pointer-events-none" />
@@ -311,7 +311,7 @@ export default function Products() {
       <div className="max-w-6xl mx-auto relative z-10">
         
         {/* Intro */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-8">
           <span className="section-label">RMS Capabilities</span>
           <h1 className="text-5xl md:text-6xl font-black text-foreground mt-4 leading-tight tracking-tight">
             Our Modules & <span className="text-primary">Products</span>
@@ -322,7 +322,7 @@ export default function Products() {
         </div>
 
         {solutionsData.map((group) => (
-          <div key={group.category} className="mb-20">
+          <div key={group.category} className="mb-8">
             {/* Category header */}
             <div className="flex items-center gap-4 mb-10">
               <span className="w-8 h-px bg-primary" />

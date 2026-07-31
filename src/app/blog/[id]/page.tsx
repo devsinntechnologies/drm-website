@@ -54,7 +54,7 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
   const post = posts.find(p => p.id === postId) || fallbackPost;
 
   return (
-    <main className="min-h-screen bg-white text-[#08162D] py-8 md:py-12 relative overflow-hidden">
+    <main className="min-h-screen bg-white text-[#08162D] py-4 md:py-6 relative overflow-hidden">
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-[#0055FF]/5 blur-[160px] rounded-full pointer-events-none" />
 

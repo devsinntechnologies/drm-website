@@ -36,7 +36,7 @@ export default function HRDigitalizationPage() {
             className="max-w-3xl mx-auto"
           >
             <span className="inline-block text-[11px] font-bold uppercase tracking-widest text-white bg-black/60 border border-white/20 px-3 py-1 rounded-xl mb-2.5 shadow-lg backdrop-blur-md">
-              DigiNizam ENTERPRISE SERVICES • DEVSINN SOLUTIONS
+              <span className="inline-flex items-center gap-1.5 align-middle">The DigiNizam <Image src="/logo.png" alt="Logo" width={14} height={14} className="object-contain inline-block" /></span> ENTERPRISE SERVICES • DEVSINN SOLUTIONS
             </span>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-black leading-tight mb-2.5 text-white tracking-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
               Intelligent <span className="text-[#3b82f6] drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">HR Solutions</span>

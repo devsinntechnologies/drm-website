@@ -23,7 +23,7 @@ export default function RestaurantSolutionPage() {
           >
             <source src="/restaurant-hero.mp4" type="video/mp4" />
           </video>
-          {/* Dark Overlay for better text readability */}
+          {/* Dark Overlay */}
           <div className="absolute inset-0 bg-[#08162D]/60 backdrop-blur-[2px]" />
         </div>
 
@@ -35,16 +35,14 @@ export default function RestaurantSolutionPage() {
             className="max-w-3xl mx-auto"
           >
             <span className="inline-block text-[11px] font-bold uppercase tracking-widest text-white bg-black/60 border border-white/20 px-3.5 py-1.5 rounded-xl mb-4 shadow-lg backdrop-blur-md">
-              DigiNizam RETAIL SOLUTIONS • RESTAURANT SUITE
+              <span className="inline-flex items-center gap-1.5 align-middle">DigiNizam <Image src="/logo.png" alt="Logo" width={14} height={14} className="object-contain inline-block" /></span> RETAIL SOLUTIONS • RESTAURANT SUITE
             </span>
-            <h1 className="text-3xl sm:text-4xl md:text-6xl font-black leading-tight mb-4 text-white tracking-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
-              Advanced <span className="text-[#3b82f6] drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">Restaurant</span> POS System
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-black leading-tight mb-4 text-white tracking-tight">
+              Advanced <span className="text-[#00B4FF]">Restaurant</span> POS System
             </h1>
-            <p className="text-sm md:text-base text-gray-100 font-medium leading-relaxed mb-4 drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+            <p className="text-sm md:text-base text-gray-200 font-medium leading-relaxed mb-4">
               Streamline your dine-in, takeaway, delivery, kitchen display orders, and table management seamlessly with Pakistan's leading smart restaurant software, engineered for speed and absolute reliability.
             </p>
-            {/* Extra Description Added */}
-           
             <div className="flex flex-wrap gap-4 justify-center">
               <Link 
                 href="/contact" 
@@ -58,10 +56,10 @@ export default function RestaurantSolutionPage() {
       </section>
 
       {/* Content Section with Staff & Receipt Printing Image Showcase */}
-      <section className="py-16 md:py-20 bg-white border-b border-gray-200 relative overflow-hidden">
+      <section className="py-6 md:py-8 bg-white border-b border-gray-200 relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-[#0055FF]/5 blur-[160px] rounded-full pointer-events-none" />
         
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-6 items-center relative z-10">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -106,9 +104,9 @@ export default function RestaurantSolutionPage() {
       </section>
 
       {/* Section 1: Core Capabilities Grid with foodbusiness.jpg Showcase */}
-      <section className="py-16 md:py-20 bg-white border-b border-gray-200 relative overflow-hidden">
+      <section className="py-6 md:py-8 bg-white border-b border-gray-200 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center mb-12">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -201,8 +199,8 @@ export default function RestaurantSolutionPage() {
       </section>
 
       {/* Section 2: Smart Operations & Inventory Spotlight */}
-      <section className="py-16 md:py-20 bg-white border-b border-gray-200 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+      <section className="py-6 md:py-8 bg-white border-b border-gray-200 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-6 items-center relative z-10">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}

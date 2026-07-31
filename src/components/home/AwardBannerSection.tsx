@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function AwardBannerSection() {
   return (
-    <section className="py-12 md:py-16 bg-white border-b border-gray-200 text-center relative overflow-hidden">
+    <section className="py-6 md:py-8 bg-white border-b border-gray-200 text-center relative overflow-hidden">
       
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-[#0055FF]/5 blur-[140px] rounded-full pointer-events-none" />

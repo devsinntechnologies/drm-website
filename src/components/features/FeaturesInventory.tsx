@@ -18,7 +18,7 @@ const FeaturesInventory = () => {
       <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full pointer-events-none translate-x-1/2" />
       
       <div className="container mx-auto px-4 md:px-8 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-8 md:gap-10 lg:gap-12">
+        <div className="flex flex-col lg:flex-row items-center gap-8 md:gap-4 lg:gap-6">
           
           {/* Left Side Tablet Image */}
           <motion.div 

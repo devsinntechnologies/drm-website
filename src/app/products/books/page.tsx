@@ -33,12 +33,12 @@ export default function BookShopSolutionPage() {
             className="max-w-3xl mx-auto"
           >
             <span className="inline-block text-[11px] font-bold uppercase tracking-widest text-white bg-black/60 border border-white/20 px-3 py-1 rounded-xl mb-3 shadow-lg backdrop-blur-md">
-              DigiNizam RETAIL SOLUTIONS • BOOKSHOP & PUBLISHERS SUITE
+              <span className="inline-flex items-center gap-1.5 align-middle">The DigiNizam <Image src="/logo.png" alt="Logo" width={14} height={14} className="object-contain inline-block" /></span> RETAIL SOLUTIONS • BOOKSHOP & PUBLISHERS SUITE
             </span>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-black leading-tight mb-3 text-white tracking-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
-              Advanced <span className="text-[#3b82f6] drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">Bookshop & Publishers</span> POS System
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-black leading-tight mb-3 text-[#08162D] tracking-tight">
+              Advanced <span className="text-[#0055FF]">Bookshop & Publishers</span> POS System
             </h1>
-            <p className="text-xs md:text-sm text-gray-100 font-medium leading-relaxed mb-4 drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+            <p className="text-xs md:text-sm text-gray-200 font-medium leading-relaxed mb-4">
               Streamline your bookstore inventory, ISBN barcode scanning, publishing distribution, and retail operations seamlessly with Pakistan's leading smart bookshop software, engineered for speed and absolute reliability.
             </p>
  
@@ -55,9 +55,9 @@ export default function BookShopSolutionPage() {
       </section>
 
       {/* 2. POS Section with posbook3.jpg Image Showcase (Card Background Removed) */}
-      <section className="py-8 md:py-12 bg-white border-b border-gray-200 relative overflow-hidden">
+      <section className="py-4 md:py-6 bg-white border-b border-gray-200 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-6 items-center mb-8">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -148,10 +148,10 @@ export default function BookShopSolutionPage() {
       </section>
 
       {/* 3. Staff Section with POSbook2.jpg Image Showcase (Card Background Removed) */}
-      <section className="py-8 md:py-12 bg-white border-b border-gray-200 relative overflow-hidden">
+      <section className="py-4 md:py-6 bg-white border-b border-gray-200 relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#0055FF]/5 blur-[140px] rounded-full pointer-events-none" />
         
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-6 items-center relative z-10">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -194,7 +194,7 @@ export default function BookShopSolutionPage() {
       </section>
 
       {/* 4. Our Modules Section */}
-      <section className="py-8 md:py-12 bg-gray-50 border-b border-gray-200 relative overflow-hidden">
+      <section className="py-4 md:py-6 bg-gray-50 border-b border-gray-200 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
           <div className="text-center max-w-2xl mx-auto mb-8">
             <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-xl mb-2.5 border border-[#0055FF]/20">

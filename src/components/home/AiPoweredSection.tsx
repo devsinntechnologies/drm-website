@@ -25,7 +25,7 @@ const AiPoweredSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 bg-[#090b12] text-[#f5f7fb] relative overflow-hidden">
+    <section className="py-10 bg-[#090b12] text-[#f5f7fb] relative overflow-hidden">
       {/* Background futuristic overlays */}
       <div className="absolute inset-0 noise-overlay" />
       <div className="absolute top-1/4 left-1/10 w-96 h-96 rounded-full bg-primary/10 blur-[130px] pointer-events-none" />
@@ -34,7 +34,7 @@ const AiPoweredSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
         
         {/* Title */}
-        <div className="text-center mb-20 max-w-3xl mx-auto">
+        <div className="text-center mb-8 max-w-3xl mx-auto">
           <span className="inline-flex items-center gap-2 bg-primary/20 border border-primary/30 px-4 py-2 rounded-full mb-4">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             <span className="text-xs font-extrabold uppercase tracking-widest text-primary">Autonomous Operations</span>
@@ -85,7 +85,7 @@ const AiPoweredSection: React.FC = () => {
         </div>
 
         {/* Simulated Intelligence Output */}
-        <div className="mt-20 max-w-4xl mx-auto p-6 rounded-3xl border border-white/10 bg-white/[0.02] backdrop-blur-md">
+        <div className="mt-8 max-w-4xl mx-auto p-6 rounded-3xl border border-white/10 bg-white/[0.02] backdrop-blur-md">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-4 pb-4 border-b border-white/5">
             <div className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-primary animate-pulse" />

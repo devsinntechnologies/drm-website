@@ -79,7 +79,7 @@ const Industries = () => {
   ];
 
   return (
-    <section className="min-h-screen bg-background text-foreground py-24 px-4 md:px-8 relative overflow-hidden">
+    <section className="min-h-screen bg-background text-foreground py-10 px-4 md:px-8 relative overflow-hidden">
       {/* Background gradients */}
       <div className="absolute top-1/4 left-0 w-80 h-80 bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-[120px] pointer-events-none" />
@@ -122,7 +122,7 @@ const Industries = () => {
       </div>
 
       {/* 🚀 PREMIUM FEATURE CARDS */}
-      <div className="max-w-7xl mx-auto mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
+      <div className="max-w-7xl mx-auto mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
         {features.map((feature, index) => (
           <motion.div
             key={index}

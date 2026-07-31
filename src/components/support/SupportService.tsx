@@ -47,14 +47,14 @@ const services = [
 
 const SupportService = () => {
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-background relative overflow-hidden">
+    <section className="py-6 md:py-8 lg:py-8 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-12 md:mb-16"
+          className="text-center mb-12 md:mb-6"
         >
           <span className="section-label">Professional Services</span>
           <h2 className="text-4xl sm:text-5xl md:text-7xl font-black text-foreground mb-4 md:mb-6">

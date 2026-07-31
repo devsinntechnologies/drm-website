@@ -40,7 +40,7 @@ const EcosystemSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 bg-background relative overflow-hidden">
+    <section className="py-10 bg-background relative overflow-hidden">
       {/* Background gradients */}
       <div className="absolute top-1/4 right-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute bottom-1/4 left-0 w-[400px] h-[400px] bg-secondary/5 rounded-full blur-[100px] pointer-events-none" />
@@ -48,7 +48,7 @@ const EcosystemSection: React.FC = () => {
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         
         {/* Header Section */}
-        <div className="text-center mb-16 max-w-3xl mx-auto">
+        <div className="text-center mb-6 max-w-3xl mx-auto">
           <span className="section-label">Complete Restaurant Ecosystem</span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-6 leading-tight tracking-tight">
             One Unified Operating System for <span className="text-primary">All Modules</span>
@@ -125,7 +125,7 @@ const EcosystemSection: React.FC = () => {
         </div>
 
         {/* Bottom Stat banner */}
-        <div className="mt-16 text-center">
+        <div className="mt-6 text-center">
           <div className="inline-flex items-center flex-wrap justify-center gap-4 bg-white/70 backdrop-blur-md px-8 py-4 rounded-full border border-surface-border shadow-md">
             <span className="flex h-3.5 w-3.5 relative">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>

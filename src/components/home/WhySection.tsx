@@ -23,12 +23,12 @@ const WhySection: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 bg-background relative overflow-hidden">
+    <section className="py-8 bg-background relative overflow-hidden">
       {/* Background gradients */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-        <div className="text-center mb-16">
+        <div className="text-center mb-6">
           <span className="section-label">Competitive Advantage</span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-4">
             Why <span className="text-primary">RMS by Devsinn</span>?
@@ -100,7 +100,7 @@ const WhySection: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-black text-primary">RMS by Devsinn</h3>
-                    <p className="text-xs text-primary/80 font-semibold tracking-wider uppercase">Next-Gen Operating System</p>
+                    <p className="text-xs text-primary/80 font-semibold tracking-wider uppercase">Next-Dig Operating System</p>
                   </div>
                 </div>
                 <span className="bg-primary/20 text-primary text-[10px] font-black uppercase tracking-widest px-3 py-1.5 rounded-full">

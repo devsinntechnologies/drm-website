@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const SupportHero = () => {
   return (
-    <section className="relative pt-16 md:pt-24 pb-12 md:pb-16 lg:pb-20 overflow-hidden">
+    <section className="relative pt-8 md:pt-10 pb-8 md:pb-10 lg:pb-12 overflow-hidden">
       {/* Background Orbs */}
       <motion.div 
         initial={{ opacity: 0, scale: 0.8 }}
