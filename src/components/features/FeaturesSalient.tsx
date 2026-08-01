@@ -20,7 +20,7 @@ const FeaturesSalient = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="glass-card rounded-[32px] md:rounded-[48px] p-6 md:p-12 relative overflow-hidden border border-surface-border/50"
+          className="glass-card rounded-[32px] md:rounded-[48px] p-6 md:p-6 relative overflow-hidden border border-surface-border/50"
         >
           {/* Background Glow */}
           <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 blur-[100px] rounded-full -translate-y-1/2 translate-x-1/2" />
@@ -30,9 +30,9 @@ const FeaturesSalient = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-center mb-8 md:mb-10"
+              className="text-center mb-4 md:mb-5"
             >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground mb-4 md:mb-6">Salient <span className="text-primary">Advantages</span></h2>
+              <h2 className="text-lg sm:text-xl md:text-base font-black text-foreground mb-4 md:mb-4">Salient <span className="text-primary">Advantages</span></h2>
               <p className="text-lg text-muted max-w-2xl mx-auto font-medium">
                 The small details that make a huge difference in your daily operations.
               </p>
@@ -49,7 +49,7 @@ const FeaturesSalient = () => {
                   whileHover={{ x: 5 }}
                   className="flex gap-4 group"
                 >
-                  <span className="text-3xl group-hover:scale-125 transition-transform">{p.i}</span>
+                  <span className="text-lg group-hover:scale-125 transition-transform">{p.i}</span>
                   <div>
                     <h4 className="font-extrabold text-foreground mb-1 group-hover:text-primary transition-colors">{p.t}</h4>
                     <p className="text-sm text-muted leading-relaxed font-bold">{p.d}</p>

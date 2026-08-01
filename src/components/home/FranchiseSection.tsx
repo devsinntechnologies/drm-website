@@ -21,19 +21,19 @@ const FranchiseSection: React.FC = () => {
       <div className="absolute bottom-1/3 left-0 w-80 h-80 bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-        <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-16 items-center">
+        <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-4 items-center">
           
           {/* Details - Left Side */}
           <div>
             <span className="section-label">Enterprise Ready</span>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-6 leading-tight tracking-tight">
+            <h2 className="text-xl md:text-base font-extrabold text-foreground mb-4 leading-tight tracking-tight">
               Enterprise-Grade <span className="text-primary">Franchise Management</span>
             </h2>
-            <p className="text-muted text-lg mb-8 font-medium">
+            <p className="text-muted text-lg mb-4 font-medium">
               Scale your restaurant brand with confidence. Maintain 100% brand consistency, track compliance, consolidate revenues, and coordinate operations across all franchise owners from a central command center.
             </p>
 
-            <div className="grid sm:grid-cols-2 gap-6">
+            <div className="grid sm:grid-cols-2 gap-4">
               {features.map((feat) => (
                 <div key={feat.title} className="flex gap-4">
                   <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center text-xl shrink-0">

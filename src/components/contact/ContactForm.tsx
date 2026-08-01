@@ -50,7 +50,7 @@ const ContactForm = () => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-[#0055FF]/5 blur-[160px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-6 md:gap-4 lg:gap-6 items-center">
+        <div className="flex flex-col lg:flex-row gap-4 md:gap-4 lg:gap-4 items-center">
 
           {/* Contact Info Side */}
           <motion.div
@@ -64,20 +64,20 @@ const ContactForm = () => {
               <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-xl mb-2 border border-[#0055FF]/20">
                 GET IN TOUCH
               </span>
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#08162D] mb-2 md:mb-3 tracking-tight">
+              <h3 className="text-base sm:text-lg md:text-xl font-black text-[#08162D] mb-2 md:mb-3 tracking-tight">
                 Connect with <span className="text-[#0055FF]">Experts</span>
               </h3>
 
               <p className="text-xs sm:text-sm text-gray-600 font-normal leading-relaxed max-w-lg">
                 Whether you're starting a new venture or scaling your enterprise operations,
-                our specialists at DEVSINN and DigiNizam are here to guide you with tailored software solutions.
+                our specialists at DEVSINN and <span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span> are here to guide you with tailored software solutions.
               </p>
             </div>
 
             <div className="space-y-4">
               {[
                 { t: "Headquarters", d: "Lahore, Pakistan", icon: <FiMapPin size={18} /> },
-                { t: "Phone Support", d: "021-111 DigiNizam", icon: <FiPhone size={18} /> },
+                { t: "Phone Support", d: <>021-111 <span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span></>, icon: <FiPhone size={18} /> },
                 { t: "Mail Us", d: "hello@diginizam.com", icon: <FiMail size={18} /> }
               ].map((item, idx) => (
                 <motion.div
@@ -108,7 +108,7 @@ const ContactForm = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="bg-white p-6 md:p-8 rounded-2xl border border-gray-200 shadow-sm relative overflow-hidden"
+              className="bg-white p-6 md:p-4 rounded-2xl border border-gray-200 shadow-sm relative overflow-hidden"
               ref={form}
               onSubmit={sendEmail}
             >

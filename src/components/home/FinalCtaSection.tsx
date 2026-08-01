@@ -11,17 +11,17 @@ const FinalCtaSection: React.FC = () => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-royal/5 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-5xl mx-auto px-6 lg:px-8 relative z-10 text-center text-white">
-        <span className="inline-flex items-center gap-2 bg-royal/20 border border-royal/30 px-4 py-2 rounded-full mb-6">
+        <span className="inline-flex items-center gap-2 bg-royal/20 border border-royal/30 px-4 py-2 rounded-full mb-4">
           <span className="w-2 h-2 rounded-full bg-royal" />
           <span className="text-xs font-bold uppercase tracking-widest text-royal">Get Started Today</span>
         </span>
 
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-6 leading-tight tracking-tight max-w-3xl">
+        <h2 className="text-lg sm:text-xl md:text-base font-black text-white mb-4 leading-tight tracking-tight max-w-3xl">
           Ready to Transform Your <span className="text-bright">Restaurant Operations</span>?
         </h2>
 
-        <p className="text-sm md:text-base text-white/70 font-medium max-w-xl mx-auto mb-10 leading-relaxed">
-          Join thousands of restaurants running on DigiNizam POS. Automate inventory, speed up checkouts, and boost your margins.
+        <p className="text-sm md:text-base text-white/70 font-medium max-w-xl mx-auto mb-5 leading-relaxed">
+          Join thousands of restaurants running on <span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span> POS. Automate inventory, speed up checkouts, and boost your margins.
         </p>
 
         <div className="flex flex-wrap justify-center gap-4 w-full">
@@ -50,7 +50,7 @@ const FinalCtaSection: React.FC = () => {
           </Link>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 mt-12 text-xs font-bold text-white/50 uppercase tracking-wider">
+        <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 mt-6 text-xs font-bold text-white/50 uppercase tracking-wider">
           <span>✓ No credit card required to start</span>
           <span>✓ Set up in under 2 hours</span>
           <span>✓ Cancel or upgrade at any time</span>

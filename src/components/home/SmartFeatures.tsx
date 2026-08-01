@@ -142,7 +142,7 @@ function FeatureBlock({ feature, idx }: { feature: typeof features[0]; idx: numb
           {feature.subtitle}
         </span>
 
-        <h3 className="mt-6 text-3xl font-extrabold text-foreground leading-tight tracking-tight">
+        <h3 className="mt-6 text-lg font-extrabold text-foreground leading-tight tracking-tight">
           {feature.title.split(' ').map((word, i) =>
             i === 0
               ? <span key={i} className="text-primary">{word} </span>
@@ -172,7 +172,7 @@ function FeatureBlock({ feature, idx }: { feature: typeof features[0]; idx: numb
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
-            className="mt-8 flex flex-wrap gap-4"
+            className="mt-4 flex flex-wrap gap-4"
           >
             {[
               { label: 'Download on the', store: 'App Store', icon: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.07-.46-2.06-.48-3.13 0-1.01.45-2.03.62-2.96-.28-3.17-3.08-4.88-8.23-1.63-11.45C7.54 7.6 8.92 6.95 10.15 7c1.1.05 2.14.65 2.7 1.15.2.18.39.38.56.59.18-.21.37-.41.57-.6 1.05-.98 2.5-1.5 3.86-1.5 1.7.07 3.09.84 3.96 2 .05.07.1.15.15.22-1.92 1.02-2.6 3.01-1.35 4.67 1.05 1.39 2.58 1.94 3.23 2-2.28 3.51-4.74 5.75-6.78 4.75zM12.03 6.64c-.16-1.6 1.05-3.23 2.57-3.48 1.15-.19 2.22.44 2.8 1.48.51.92.57 2.05.08 2.92-1.28 2.27-3.8 2.37-4.99 1.48-.37-.28-.51-.38-.46-2.4z" /></svg> },
@@ -209,7 +209,7 @@ const SmartFeatures = () => {
       <div className="absolute bottom-1/4 -right-32 w-96 h-96 rounded-full bg-secondary/5 blur-[120px] pointer-events-none" />
 
       <div className="container mx-auto px-4 md:px-8">
-        <div className="grid gap-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 items-stretch pb-6">
+        <div className="grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 items-stretch pb-6">
           {features.map((feature, idx) => (
             <FeatureBlock key={idx} feature={feature} idx={idx} />
           ))}

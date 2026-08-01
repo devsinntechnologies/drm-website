@@ -48,9 +48,9 @@ const EcosystemSection: React.FC = () => {
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         
         {/* Header Section */}
-        <div className="text-center mb-6 max-w-3xl mx-auto">
+        <div className="text-center mb-4 max-w-3xl mx-auto">
           <span className="section-label">Complete Restaurant Ecosystem</span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-6 leading-tight tracking-tight">
+          <h2 className="text-xl md:text-base font-extrabold text-foreground mb-4 leading-tight tracking-tight">
             One Unified Operating System for <span className="text-primary">All Modules</span>
           </h2>
           <p className="text-muted text-lg font-medium">
@@ -59,7 +59,7 @@ const EcosystemSection: React.FC = () => {
         </div>
 
         {/* Feature Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {modules.map((mod, index) => (
             <motion.div
               key={mod.title}
@@ -87,8 +87,8 @@ const EcosystemSection: React.FC = () => {
 
               <div>
                 {/* Icon and status badge */}
-                <div className="flex justify-between items-start mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center text-2xl group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                <div className="flex justify-between items-start mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center text-base group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                     {mod.icon}
                   </div>
                   <span className={`text-[9px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full ${
@@ -106,7 +106,7 @@ const EcosystemSection: React.FC = () => {
                 </h3>
 
                 {/* Description */}
-                <p className="text-sm text-muted leading-relaxed mb-6 font-medium">
+                <p className="text-sm text-muted leading-relaxed mb-4 font-medium">
                   {mod.desc}
                 </p>
               </div>

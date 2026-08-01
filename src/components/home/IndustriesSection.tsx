@@ -23,20 +23,20 @@ const IndustriesSection: React.FC = () => {
       <div className="absolute bottom-1/3 right-0 w-80 h-80 bg-bright/5 blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-        <div className="text-center mb-6 max-w-3xl mx-auto">
+        <div className="text-center mb-4 max-w-3xl mx-auto">
           <span className="inline-flex items-center gap-2 bg-royal/20 border border-royal/30 px-4 py-2 rounded-full mb-4">
             <span className="w-2 h-2 rounded-full bg-bright" />
             <span className="text-xs font-bold uppercase tracking-widest text-bright">Industries We Serve</span>
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-6 leading-tight tracking-tight">
+          <h2 className="text-lg sm:text-xl md:text-base font-black text-white mb-4 leading-tight tracking-tight">
             Built for Every <span className="text-bright">Restaurant Segment</span>
           </h2>
           <p className="text-sm md:text-base text-white/70 font-medium">
-            Whether you run a single neighborhood food truck or coordinate a nationwide franchise network, DigiNizam POS has the tools configured for your operations.
+            Whether you run a single neighborhood food truck or coordinate a nationwide franchise network, <span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span> POS has the tools configured for your operations.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
           {industries.map((item, idx) => (
             <div
               key={item.title}
@@ -45,7 +45,7 @@ const IndustriesSection: React.FC = () => {
               className="relative p-6 rounded-xl border border-navy/20 bg-white/[0.03] backdrop-blur-sm transition-all duration-300 hover:border-royal/30 hover:bg-white/[0.05] flex flex-col justify-between"
             >
               <div>
-                <div className="w-12 h-12 rounded-xl bg-royal/10 text-royal flex items-center justify-center text-2xl mb-4 group-hover:bg-royal group-hover:text-white transition-colors duration-300">
+                <div className="w-12 h-12 rounded-xl bg-royal/10 text-royal flex items-center justify-center text-base mb-4 group-hover:bg-royal group-hover:text-white transition-colors duration-300">
                   {item.icon}
                 </div>
                 <h3 className="text-lg font-black text-white mb-2 group-hover:text-bright transition-colors">

@@ -18,7 +18,7 @@ const FeaturesInventory = () => {
       <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full pointer-events-none translate-x-1/2" />
       
       <div className="container mx-auto px-4 md:px-8 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-8 md:gap-4 lg:gap-6">
+        <div className="flex flex-col lg:flex-row items-center gap-4 md:gap-4 lg:gap-4">
           
           {/* Left Side Tablet Image */}
           <motion.div 
@@ -63,12 +63,12 @@ const FeaturesInventory = () => {
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="flex-1 lg:pl-4"
           >
-            <span className="section-label mb-4 md:mb-6">Inventory Control</span>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-foreground mb-4 leading-tight">
+            <span className="section-label mb-4 md:mb-4">Inventory Control</span>
+            <h2 className="text-xl sm:text-base md:text-lg lg:text-xl font-extrabold text-foreground mb-4 leading-tight">
               Dynamic <span className="text-primary">Stock</span> <br />
               Management
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-muted mb-6 md:mb-8 leading-relaxed max-w-xl font-medium">
+            <p className="text-base sm:text-lg md:text-xl text-muted mb-4 md:mb-4 leading-relaxed max-w-xl font-medium">
               Eliminate guesswork with our advanced cloud-based inventory. 
               Gain absolute clarity on every item, location, and transaction.
             </p>

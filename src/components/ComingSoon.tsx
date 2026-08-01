@@ -21,17 +21,17 @@ export default function ComingSoon({ pageName = "Page" }: { pageName?: string })
       </span>
 
       {/* Heading */}
-      <h1 className="text-[#08162D] text-2xl md:text-3xl font-black mb-2 tracking-tight">
+      <h1 className="text-[#08162D] text-base md:text-lg font-black mb-2 tracking-tight">
         {pageName}
       </h1>
 
       {/* Description */}
-      <p className="text-gray-500 mb-6 max-w-sm font-medium text-xs md:text-sm">
+      <p className="text-gray-500 mb-4 max-w-sm font-medium text-xs md:text-sm">
         We are engineering a masterpiece for this space. Check back shortly for the grand reveal.
       </p>
 
       {/* Special Minimalist Progress Indicator */}
-      <div className="flex items-center gap-3 mb-6 bg-white border border-gray-200 px-4 py-2.5 rounded-xl shadow-sm">
+      <div className="flex items-center gap-3 mb-4 bg-white border border-gray-200 px-4 py-2.5 rounded-xl shadow-sm">
         <div className="flex items-center gap-1.5">
           <span className="w-2 h-2 rounded-full bg-[#0055FF]"></span>
           <span className="text-xs font-bold text-[#08162D]">Concept</span>

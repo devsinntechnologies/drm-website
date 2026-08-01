@@ -66,7 +66,7 @@ const KdsSection: React.FC = () => {
       <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-        <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-16 items-center">
+        <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-4 items-center">
           
           {/* Active Queue Mockup - Left Side */}
           <motion.div
@@ -159,14 +159,14 @@ const KdsSection: React.FC = () => {
           {/* Right Details */}
           <div>
             <span className="section-label">Back-Of-House Sync</span>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-6 leading-tight tracking-tight">
+            <h2 className="text-xl md:text-base font-extrabold text-foreground mb-4 leading-tight tracking-tight">
               Streamline Operations with <span className="text-primary">Kitchen Display Terminals</span>
             </h2>
-            <p className="text-muted text-lg mb-8 font-medium">
+            <p className="text-muted text-lg mb-4 font-medium">
               Say goodbye to messy paper tickets. Route orders automatically to specific prep stations, monitor cooking timers, and log cook performance metrics to increase output and food quality.
             </p>
 
-            <div className="grid sm:grid-cols-2 gap-6">
+            <div className="grid sm:grid-cols-2 gap-4">
               {features.map((feat) => (
                 <div key={feat.title} className="flex gap-3">
                   <span className="w-5 h-5 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
@@ -180,7 +180,7 @@ const KdsSection: React.FC = () => {
               ))}
             </div>
 
-            <div className="mt-8 pt-8 border-t border-surface-border flex gap-4">
+            <div className="mt-4 pt-8 border-t border-surface-border flex gap-4">
               <span className="inline-flex items-center gap-1 bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold">
                 ✓ Multi-screen Routing
               </span>

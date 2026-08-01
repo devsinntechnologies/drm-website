@@ -42,19 +42,19 @@ const RolesPermissionsSection: React.FC = () => {
       <div className="absolute top-1/3 left-0 w-80 h-80 bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-        <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-16 items-center">
+        <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-4 items-center">
           
           {/* Left Side: Roles Grid */}
           <div>
             <span className="section-label">Access Control</span>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-6 leading-tight tracking-tight">
+            <h2 className="text-xl md:text-base font-extrabold text-foreground mb-4 leading-tight tracking-tight">
               Granular Role & <span className="text-primary">Permission Control</span>
             </h2>
-            <p className="text-muted text-lg mb-8 font-medium">
+            <p className="text-muted text-lg mb-4 font-medium">
               Protect your operations. Define exactly what cashiers, waiters, chefs, and managers can see and modify. Enable feature access on a per-restaurant basis.
             </p>
 
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
               {roles.map((r) => (
                 <div key={r.title} className="p-5 bg-surface/30 border border-surface-border rounded-2xl flex flex-col justify-between hover:bg-white hover:border-primary/25 transition-all duration-300">
                   <div>
@@ -93,7 +93,7 @@ const RolesPermissionsSection: React.FC = () => {
                 </span>
               </div>
 
-              <p className="text-muted text-xs leading-relaxed font-semibold mb-6">
+              <p className="text-muted text-xs leading-relaxed font-semibold mb-4">
                 Super Admins can activate or deactivate specific features for any branch instantly, enabling customized billing options.
               </p>
 

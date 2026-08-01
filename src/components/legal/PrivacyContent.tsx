@@ -50,18 +50,18 @@ const PrivacyContent = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-8"
+          className="text-center max-w-3xl mx-auto mb-4"
         >
           <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-xl mb-2 border border-[#0055FF]/20 shadow-sm">
             Security & Transparency
           </span>
 
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#08162D] mb-2 md:mb-3 tracking-tight">
+          <h1 className="text-base sm:text-lg md:text-xl font-black text-[#08162D] mb-2 md:mb-3 tracking-tight">
             Privacy <span className="text-[#0055FF]">Policy</span>
           </h1>
 
           <p className="text-xs sm:text-sm text-gray-600 max-w-2xl mx-auto leading-relaxed font-normal">
-            Your trust matters to us. This Privacy Policy explains how DigiNizam collects, uses, protects, and manages your information while delivering a secure and reliable experience.
+            Your trust matters to us. This Privacy Policy explains how <span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span> collects, uses, protects, and manages your information while delivering a secure and reliable experience.
           </p>
         </motion.div>
 

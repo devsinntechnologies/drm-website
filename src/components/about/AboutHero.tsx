@@ -11,7 +11,7 @@ export default function AboutHero() {
     <section className="bg-white text-[#08162D] min-h-[calc(100dvh-60px)] flex items-center justify-center relative overflow-hidden border-b border-gray-200 py-4 px-4 sm:px-6">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-[#0055FF]/5 blur-[120px] rounded-full pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-6 items-center relative z-10 w-full">
+      <div className="max-w-7xl mx-auto px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-4 items-center relative z-10 w-full">
         
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -22,12 +22,12 @@ export default function AboutHero() {
           <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3.5 py-1.5 rounded-xl mb-3 border border-[#0055FF]/20">
             ABOUT DEVSINN
           </span>
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-medium leading-tight text-[#08162D] mb-3 tracking-tight">
+          <h1 className="text-base sm:text-lg lg:text-xl font-medium leading-tight text-[#08162D] mb-3 tracking-tight">
             Our success and <br />
             <span className="text-[#0055FF]">company history.</span>
           </h1>
           <p className="text-xs md:text-sm text-gray-600 font-normal leading-relaxed mb-4 max-w-xl">
-            Come let&apos;s join hands with DigiNizam Software Solutions and unlock the ultimate potential of your business through cutting-edge ERP, POS, and digital web applications.
+            Come let&apos;s join hands with <span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span> Software Solutions and unlock the ultimate potential of your business through cutting-edge ERP, POS, and digital web applications.
           </p>
           
           <div className="space-y-1.5">

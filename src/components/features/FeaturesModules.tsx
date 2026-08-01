@@ -19,10 +19,10 @@ const FeaturesModules = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-6 md:mb-8"
+          className="text-center mb-4 md:mb-4"
         >
           <span className="section-label">All Access</span>
-          <h3 className="text-2xl md:text-3xl font-extrabold text-foreground mt-3">Extended <span className="text-primary">Modules</span></h3>
+          <h3 className="text-base md:text-lg font-extrabold text-foreground mt-3">Extended <span className="text-primary">Modules</span></h3>
         </motion.div>
 
         <div className="flex flex-wrap justify-center gap-3">

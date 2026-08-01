@@ -35,7 +35,7 @@ export default function BusinessBannerSection() {
             <span className="inline-block text-xs font-bold uppercase tracking-widest text-white bg-[#0055FF] px-4 py-2 rounded-xl mb-3 shadow-md shadow-[#0055FF]/30">
               POWERING ENTERPRISES
             </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black mb-3 tracking-tight text-white">
+            <h2 className="text-base sm:text-lg lg:text-xl font-black mb-3 tracking-tight text-white">
               Empowering Businesses Across Pakistan
             </h2>
             <p className="text-xs md:text-sm text-gray-200 font-normal leading-relaxed">

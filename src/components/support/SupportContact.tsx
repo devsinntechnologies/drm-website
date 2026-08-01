@@ -11,7 +11,7 @@ const SupportContact = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
-          className="glass-card rounded-[48px] p-12 md:p-20 border border-primary/20 bg-primary/5 relative overflow-hidden"
+          className="glass-card rounded-[48px] p-6 md:p-20 border border-primary/20 bg-primary/5 relative overflow-hidden"
         >
           <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 blur-[100px] rounded-full -translate-y-1/2 translate-x-1/2" />
 
@@ -20,7 +20,7 @@ const SupportContact = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground mb-4 md:mb-6"
+              className="text-lg sm:text-xl md:text-base font-black text-foreground mb-4 md:mb-4"
             >
               Ready to <span className="text-primary">scale</span> your business?
             </motion.h2>
@@ -29,7 +29,7 @@ const SupportContact = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="text-base sm:text-lg md:text-xl text-muted leading-relaxed font-bold mb-6 md:mb-8"
+              className="text-base sm:text-lg md:text-xl text-muted leading-relaxed font-bold mb-4 md:mb-4"
             >
               Join thousands of successful restaurant owners who trust DRM for their daily operations.
               Get your free demo setup in less than 24 hours.
@@ -39,7 +39,7 @@ const SupportContact = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
-              className="flex flex-wrap justify-center gap-6"
+              className="flex flex-wrap justify-center gap-4"
             >
               <motion.button
                 whileHover={{ scale: 1.05, y: -2 }}

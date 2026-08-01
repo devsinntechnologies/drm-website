@@ -25,13 +25,13 @@ const CoreFeaturesList = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-6"
+          className="text-center mb-4"
         >
           <span className="section-label">Enterprise-Grade</span>
-          <h2 className="text-4xl font-extrabold text-foreground mt-4">Core <span className="text-primary">Functionalities</span></h2>
+          <h2 className="text-xl font-extrabold text-foreground mt-4">Core <span className="text-primary">Functionalities</span></h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
           {coreFeatures.map((feature, i) => (
             <motion.div
               key={i}

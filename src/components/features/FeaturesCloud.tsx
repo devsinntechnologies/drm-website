@@ -17,25 +17,25 @@ const FeaturesCloud = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="max-w-4xl mx-auto text-center glass-card p-6 md:p-12 rounded-[32px] md:rounded-[48px] border border-surface-border/50 shadow-2xl"
+          className="max-w-4xl mx-auto text-center glass-card p-6 md:p-6 rounded-[32px] md:rounded-[48px] border border-surface-border/50 shadow-2xl"
         >
           <motion.div 
              initial={{ scale: 0 }}
              whileInView={{ scale: 1 }}
              transition={{ type: "spring", stiffness: 200, delay: 0.2 }}
-             className="w-16 h-16 md:w-20 md:h-20 bg-primary/20 rounded-3xl flex items-center justify-center mx-auto mb-6 md:mb-10 text-primary"
+             className="w-16 h-16 md:w-20 md:h-20 bg-primary/20 rounded-3xl flex items-center justify-center mx-auto mb-4 md:mb-5 text-primary"
           >
             <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
             </svg>
           </motion.div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground mb-5 md:mb-8">Seamless <span className="text-primary">Hybrid-Cloud</span> Architecture</h2>
-          <p className="text-base sm:text-lg md:text-xl text-muted leading-relaxed font-bold mb-6 md:mb-10">
+          <h2 className="text-lg sm:text-xl md:text-base font-black text-foreground mb-5 md:mb-4">Seamless <span className="text-primary">Hybrid-Cloud</span> Architecture</h2>
+          <p className="text-base sm:text-lg md:text-xl text-muted leading-relaxed font-bold mb-4 md:mb-5">
             The power of the cloud meets the reliability of local storage. Sell anywhere, anytime, with or without an active internet connection.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 text-left">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-4 text-left">
             <motion.div 
               whileHover={{ x: 5 }}
               className="p-4 md:p-6 rounded-2xl bg-surface/50 border border-surface-border/50"

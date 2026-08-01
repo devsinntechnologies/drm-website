@@ -42,7 +42,7 @@ const SupportOptions = () => {
   return (
     <section className="py-10 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {options.map((option, i) => (
             <motion.div
               key={i}
@@ -51,16 +51,16 @@ const SupportOptions = () => {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               whileHover={{ y: -10 }}
-              className="glass-card p-10 rounded-[40px] border border-surface-border/50 group flex flex-col h-full bg-surface/30 backdrop-blur-xl shadow-xl hover:border-primary/30 transition-all"
+              className="glass-card p-5 rounded-[40px] border border-surface-border/50 group flex flex-col h-full bg-surface/30 backdrop-blur-xl shadow-xl hover:border-primary/30 transition-all"
             >
               <motion.div 
                 whileHover={{ scale: 1.1, rotate: 5 }}
-                className={`w-16 h-16 rounded-3xl ${option.color} border flex items-center justify-center mb-8 shadow-inner`}
+                className={`w-16 h-16 rounded-3xl ${option.color} border flex items-center justify-center mb-4 shadow-inner`}
               >
                 {option.icon}
               </motion.div>
-              <h3 className="text-2xl font-extrabold text-foreground mb-4 group-hover:text-primary transition-colors">{option.title}</h3>
-              <p className="text-muted leading-relaxed font-bold mb-10 flex-1">{option.desc}</p>
+              <h3 className="text-base font-extrabold text-foreground mb-4 group-hover:text-primary transition-colors">{option.title}</h3>
+              <p className="text-muted leading-relaxed font-bold mb-5 flex-1">{option.desc}</p>
               <motion.a 
                 href={option.link} 
                 whileHover={{ x: 5 }}

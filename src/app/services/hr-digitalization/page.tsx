@@ -34,7 +34,7 @@ export default function HRDigitalizationPage() {
             <span className="inline-block text-[11px] font-bold uppercase tracking-widest text-white bg-black/60 border border-white/20 px-3 py-1 rounded-xl mb-2.5 shadow-lg backdrop-blur-md">
               <span className="inline-flex items-center gap-1.5 align-middle">The <span className="text-white">Digi</span><span className="text-[#00B4FF]">Nizam</span> <Image src="/logo.png" alt="Logo" width={14} height={14} className="object-contain inline-block" /></span> ENTERPRISE SERVICES • DEVSINN SOLUTIONS
             </span>
-            <h1 className="text-2xl sm:text-3xl font-black leading-tight text-white tracking-tight drop-shadow-[0_4px_18px_rgba(0,0,0,0.95)]" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.9), 0 0px 4px rgba(0,0,0,0.8)' }}>
+            <h1 className="text-base sm:text-lg font-black leading-tight text-white tracking-tight drop-shadow-[0_4px_18px_rgba(0,0,0,0.95)]" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.9), 0 0px 4px rgba(0,0,0,0.8)' }}>
               Intelligent <span className="text-[#00B4FF]" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.9)' }}>HR Solutions</span>
             </h1>
             <p className="text-xs md:text-sm text-gray-100 font-medium leading-relaxed mt-3 mb-4 drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
@@ -55,7 +55,7 @@ export default function HRDigitalizationPage() {
       {/* 2. Content Section below Hero */}
       <section className="py-5 md:py-8 bg-white border-b border-gray-200 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center max-w-4xl relative z-10">
-           <h2 className="text-xl sm:text-2xl font-black text-[#08162D] tracking-tight">Empower your HR department</h2>
+           <h2 className="text-xl sm:text-base font-black text-[#08162D] tracking-tight">Empower your HR department</h2>
            <p className="text-gray-600 text-xs sm:text-[13px] leading-relaxed mb-3 font-normal">
              Reduce administrative overhead and foster a happier workplace. Our digital tools securely manage personnel records and ensure full regulatory compliance.
            </p>
@@ -67,7 +67,7 @@ export default function HRDigitalizationPage() {
 
       {/* 3. Section: DigiNizam HRIS Service (genhrisservice.jpg) */}
       <section className="py-5 md:py-8 bg-white border-b border-gray-200 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8 items-center relative z-10">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-4 items-center relative z-10">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -77,14 +77,14 @@ export default function HRDigitalizationPage() {
             <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-xl mb-1.5 border border-[#0055FF]/20">
               HRIS PLATFORM
             </span>
-            <h2 className="text-xl sm:text-2xl font-black text-[#08162D] tracking-tight">
+            <h2 className="text-xl sm:text-base font-black text-[#08162D] tracking-tight">
               <span className="text-black">Digi</span><span className="text-[#00B4FF]">Nizam</span> <span className="text-[#0055FF]">HRIS Service</span>
             </h2>
             <p className="text-gray-600 text-xs sm:text-[13px] leading-relaxed mb-2 font-normal">
-              DigiNizam has evolved an advanced HR software known as the Human Resource Information System (HRIS). This powerful device integrates important systems and methods to make sure green management of human assets, commercial enterprise workflows, and statistics.
+              <span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span> has evolved an advanced HR software known as the Human Resource Information System (HRIS). This powerful device integrates important systems and methods to make sure green management of human assets, commercial enterprise workflows, and statistics.
             </p>
             <p className="text-gray-500 text-[11px] sm:text-xs leading-relaxed mb-3 font-normal">
-              HR software in Pakistan like DigiNizam is broadly followed by way of several corporations to streamline essential HR functions, serving as the imperative hub for operations across numerous organizational contexts.
+              HR software in Pakistan like <span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span> is broadly followed by way of several corporations to streamline essential HR functions, serving as the imperative hub for operations across numerous organizational contexts.
             </p>
             <div className="inline-flex items-center gap-2 text-[11px] font-bold text-[#0055FF] bg-[#0055FF]/10 border border-[#0055FF]/20 px-3 py-1.5 rounded-xl">
               <FiShield size={14} /> Secure Database Management
@@ -111,7 +111,7 @@ export default function HRDigitalizationPage() {
 
       {/* 4. Section: Payroll (payrollhr.jpg) */}
       <section className="py-5 md:py-8 bg-white border-b border-gray-200 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8 items-center relative z-10">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-4 items-center relative z-10">
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -138,7 +138,7 @@ export default function HRDigitalizationPage() {
             <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-xl mb-1.5 border border-[#0055FF]/20">
               AUTOMATED PAYROLL
             </span>
-            <h2 className="text-xl sm:text-2xl font-black text-[#08162D] tracking-tight">
+            <h2 className="text-xl sm:text-base font-black text-[#08162D] tracking-tight">
               Streamlined <span className="text-[#0055FF]">Payroll Management</span>
             </h2>
             <p className="text-gray-600 text-xs sm:text-[13px] leading-relaxed mb-2 font-normal">
@@ -156,7 +156,7 @@ export default function HRDigitalizationPage() {
 
       {/* 5. Section: Time & Attendance (timeattendencehr.png) */}
       <section className="py-5 md:py-8 bg-white border-b border-gray-200 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8 items-center relative z-10">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-4 items-center relative z-10">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -166,7 +166,7 @@ export default function HRDigitalizationPage() {
             <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-xl mb-1.5 border border-[#0055FF]/20">
               TIME TRACKING
             </span>
-            <h2 className="text-xl sm:text-2xl font-black text-[#08162D] tracking-tight">
+            <h2 className="text-xl sm:text-base font-black text-[#08162D] tracking-tight">
               Time &amp; <span className="text-[#0055FF]">Attendance</span>
             </h2>
             <p className="text-gray-600 text-xs sm:text-[13px] leading-relaxed mb-2 font-normal">
@@ -205,11 +205,11 @@ export default function HRDigitalizationPage() {
             <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-xl mb-1.5 border border-[#0055FF]/20">
               KEY CAPABILITIES
             </span>
-            <h2 className="text-xl sm:text-2xl font-black text-[#08162D] tracking-tight">
+            <h2 className="text-xl sm:text-base font-black text-[#08162D] tracking-tight">
               Modernize your <span className="text-[#0055FF]">Workforce</span>
             </h2>
             <p className="text-gray-600 text-xs sm:text-[13px] font-normal">
-              Everything you need to attract, retain, and manage top talent efficiently with DigiNizam.
+              Everything you need to attract, retain, and manage top talent efficiently with <span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span>.
             </p>
           </div>
 

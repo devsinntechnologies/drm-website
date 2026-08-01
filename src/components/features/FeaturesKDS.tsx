@@ -22,7 +22,7 @@ const FeaturesKDS = () => {
   return (
     <section className="py-8 md:py-10 bg-background relative overflow-hidden border-t border-surface-border">
       <div className="container mx-auto px-4 md:px-8 max-w-7xl relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-4 lg:gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-4 lg:gap-4">
           
           {/* Sidebar Tabs */}
           <motion.div 
@@ -68,8 +68,8 @@ const FeaturesKDS = () => {
             viewport={{ once: true }}
             className="lg:col-span-3 flex flex-col justify-center"
           >
-            <span className="section-label mb-4 md:mb-6">Kitchen Display</span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground leading-[1.1] mb-4 md:mb-6">
+            <span className="section-label mb-4 md:mb-4">Kitchen Display</span>
+            <h2 className="text-lg sm:text-xl lg:text-base font-extrabold text-foreground leading-[1.1] mb-4 md:mb-4">
               Modern <span className="text-primary">KDS</span> Terminals
             </h2>
             <p className="text-lg text-muted leading-relaxed font-medium">

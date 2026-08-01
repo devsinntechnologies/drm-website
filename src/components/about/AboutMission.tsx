@@ -11,16 +11,16 @@ export default function AboutMission() {
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
         
-        <div className="text-center max-w-2xl mx-auto mb-8">
+        <div className="text-center max-w-2xl mx-auto mb-4">
           <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3.5 py-1.5 rounded-xl mb-2.5 border border-[#0055FF]/20">
             OUR PURPOSE & DIRECTION
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#08162D] tracking-tight">
+          <h2 className="text-lg sm:text-xl lg:text-base font-black text-[#08162D] tracking-tight">
             Driven by Innovation, <span className="text-[#0055FF]">Defined by Excellence</span>
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-stretch">
           
           <motion.div 
             initial={{ opacity: 0, y: 15 }}

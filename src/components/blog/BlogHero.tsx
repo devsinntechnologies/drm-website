@@ -30,12 +30,12 @@ const BlogHero = () => {
               Resources & News
             </span>
 
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#08162D] mb-2 md:mb-3 tracking-tight">
+            <h1 className="text-base sm:text-lg md:text-xl font-black text-[#08162D] mb-2 md:mb-3 tracking-tight">
               Latest <span className="text-[#0055FF]">Insights</span> & Updates
             </h1>
 
             <p className="text-xs sm:text-sm text-gray-600 max-w-2xl mx-auto leading-relaxed font-normal">
-              Master the art of enterprise management with DigiNizam. Stay ahead with deep dives into industry trends, technical guides, and operational strategies.
+              Master the art of enterprise management with <span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span>. Stay ahead with deep dives into industry trends, technical guides, and operational strategies.
             </p>
           </motion.div>
 

@@ -13,7 +13,7 @@ export default function HeroSection() {
       <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#0055FF]/15 blur-[120px] rounded-full pointer-events-none -translate-y-1/2 translate-x-1/4" />
       <div className="absolute bottom-0 left-0 w-[350px] h-[350px] bg-[#00B4FF]/15 blur-[100px] rounded-full pointer-events-none translate-y-1/2 -translate-x-1/4" />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-4 items-center relative z-10 w-full">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-4 items-center relative z-10 w-full">
         
         {/* Left Content */}
         <motion.div
@@ -23,12 +23,12 @@ export default function HeroSection() {
         >
           <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#00B4FF] bg-[#0055FF]/20 px-3.5 py-1.5 rounded-xl mb-3 border border-[#0055FF]/40">
             <span className="inline-flex items-center gap-1.5 align-middle">
-              The DigiNizam
+              The <span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span>
               <Image src="/logo.png" alt="DigiNizam Logo" width={14} height={14} className="object-contain inline-block" />
             </span> - Complete ERP & POS System
           </span>
 
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-medium leading-tight text-white mb-3 tracking-tight">
+          <h1 className="text-base sm:text-lg lg:text-xl font-medium leading-tight text-white mb-3 tracking-tight">
             Complete ERP &amp; POS System in Pakistan <br />
             <span className="text-white">Complete Solutions</span>
           </h1>

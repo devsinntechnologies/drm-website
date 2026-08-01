@@ -54,10 +54,10 @@ const SupportService = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-12 md:mb-6"
+          className="text-center mb-4 md:mb-4"
         >
           <span className="section-label">Professional Services</span>
-          <h2 className="text-4xl sm:text-5xl md:text-7xl font-black text-foreground mb-4 md:mb-6">
+          <h2 className="text-xl sm:text-base md:text-xl font-black text-foreground mb-4 md:mb-4">
             Tailored <span className="text-primary">Assistance</span> <br />
             For Every Outlet
           </h2>
@@ -67,7 +67,7 @@ const SupportService = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {services.map((service, i) => (
             <motion.div
               key={i}
@@ -76,7 +76,7 @@ const SupportService = () => {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.8 }}
               whileHover={{ scale: 1.02 }}
-              className="glass-card rounded-[40px] p-10 border border-surface-border/50 group relative overflow-hidden"
+              className="glass-card rounded-[40px] p-5 border border-surface-border/50 group relative overflow-hidden"
             >
               {/* Background Glow */}
               <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 blur-[80px] rounded-full group-hover:bg-primary/10 transition-all opacity-0 group-hover:opacity-100" />
@@ -89,8 +89,8 @@ const SupportService = () => {
                   {service.icon}
                 </motion.div>
 
-                <h3 className="text-2xl font-extrabold text-foreground mb-4 group-hover:text-primary transition-colors">{service.title}</h3>
-                <p className="text-base text-muted leading-relaxed font-bold mb-6">{service.desc}</p>
+                <h3 className="text-base font-extrabold text-foreground mb-4 group-hover:text-primary transition-colors">{service.title}</h3>
+                <p className="text-base text-muted leading-relaxed font-bold mb-4">{service.desc}</p>
 
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {service.points.map((p, j) => (

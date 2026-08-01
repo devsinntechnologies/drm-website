@@ -29,7 +29,7 @@ const DeliverySection: React.FC = () => {
       <div className="absolute top-1/3 right-0 w-80 h-80 bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-        <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-16 items-center">
+        <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-4 items-center">
           
           {/* Map & Rider Mockup - Left Side */}
           <motion.div
@@ -138,14 +138,14 @@ const DeliverySection: React.FC = () => {
           {/* Right Details */}
           <div className="order-1 lg:order-2">
             <span className="section-label">Fleet Dispatch</span>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-6 leading-tight tracking-tight">
+            <h2 className="text-xl md:text-base font-extrabold text-foreground mb-4 leading-tight tracking-tight">
               Efficient <span className="text-primary">Delivery Management</span> & Rider Tracking
             </h2>
-            <p className="text-muted text-lg mb-8 font-medium">
+            <p className="text-muted text-lg mb-4 font-medium">
               Eliminate third-party delivery commission margins. Manage your own internal rider fleet, auto-assign orders, map optimal routes, and update guests with live SMS tracking logs.
             </p>
 
-            <div className="grid sm:grid-cols-2 gap-6">
+            <div className="grid sm:grid-cols-2 gap-4">
               {features.map((feat) => (
                 <div key={feat.title} className="flex gap-3">
                   <span className="w-5 h-5 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">

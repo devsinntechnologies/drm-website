@@ -14,7 +14,7 @@ const posts = [
     time: '5 min read',
     content: `
       <h2>The New Age of Enterprise Operations</h2>
-      <p>In today's fast-paced world, running a successful enterprise requires more than just standard management. It demands a holistic approach to customer experience, efficient digital workflows, and smart marketing. Increasing your sales by 20% in just a month sounds ambitious, but with the right DigiNizam strategies, it is entirely possible.</p>
+      <p>In today's fast-paced world, running a successful enterprise requires more than just standard management. It demands a holistic approach to customer experience, efficient digital workflows, and smart marketing. Increasing your sales by 20% in just a month sounds ambitious, but with the right <span class="text-black">Digi</span><span class="text-[#00B4FF]">Nizam</span> strategies, it is entirely possible.</p>
       
       <h3>1. Leverage Automated Workflows</h3>
       <p>One of the easiest ways to boost revenue is by decreasing response time and manual errors. When teams use integrated software suites, operations are streamlined directly. This cuts down delays, reduces errors, and allows personnel to focus on high-value client interactions instead of routine admin tasks.</p>
@@ -43,7 +43,7 @@ const fallbackPost = {
     <h2>Embracing the Digital Shift</h2>
     <p>The business industry is undergoing a massive transformation. From automated workflows to AI-driven resource management, technology is reshaping the way we operate and scale enterprises.</p>
     <h3>Cloud-Native Platforms</h3>
-    <p>The days of bulky, on-premise servers are over. Cloud-native systems built with DigiNizam guarantee that your data is accessible anywhere, anytime, ensuring critical decision-making on the go.</p>
+    <p>The days of bulky, on-premise servers are over. Cloud-native systems built with <span class="text-black">Digi</span><span class="text-[#00B4FF]">Nizam</span> guarantee that your data is accessible anywhere, anytime, ensuring critical decision-making on the go.</p>
     <h3>Data is the New Oil</h3>
     <p>Leaders now have access to unprecedented amounts of data. Understanding metrics, peak operational hours, and efficiency trends enables a proactive management style.</p>
   `,
@@ -60,7 +60,7 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
 
       {/* Article Header */}
       <article className="max-w-4xl mx-auto px-4 lg:px-8 relative z-10">
-        <div className="mb-6 md:mb-8">
+        <div className="mb-4 md:mb-4">
           <Link href="/blog" className="inline-flex items-center gap-2 text-[#0055FF] font-bold text-xs uppercase tracking-wider hover:text-[#0044cc] transition-colors mb-4">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
@@ -78,7 +78,7 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
             </span>
           </div>
 
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#08162D] leading-tight mb-4 tracking-tight">
+          <h1 className="text-base sm:text-lg md:text-xl font-black text-[#08162D] leading-tight mb-4 tracking-tight">
             {post.title}
           </h1>
 
@@ -89,7 +89,7 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
               </div>
               <div>
                 <div className="text-xs font-black text-[#08162D]">{post.author}</div>
-                <div className="text-[9px] uppercase font-bold text-gray-500 tracking-wider">DigiNizam Platform</div>
+                <div className="text-[9px] uppercase font-bold text-gray-500 tracking-wider"><span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span> Platform</div>
               </div>
             </div>
             <div className="text-right">
@@ -100,7 +100,7 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
         </div>
 
         {/* Featured Image */}
-        <div className="relative w-full aspect-[21/9] rounded-2xl overflow-hidden mb-6 md:mb-8 shadow-lg border border-gray-200 bg-white p-1">
+        <div className="relative w-full aspect-[21/9] rounded-2xl overflow-hidden mb-4 md:mb-4 shadow-lg border border-gray-200 bg-white p-1">
           <div className="relative w-full h-full rounded-xl overflow-hidden">
             <img
               src={post.image}
@@ -123,7 +123,7 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
         </div>
 
         {/* Footer actions */}
-        <div className="mt-8 pt-6 border-t border-gray-200 flex items-center justify-between">
+        <div className="mt-4 pt-6 border-t border-gray-200 flex items-center justify-between">
           <div className="flex gap-3 items-center">
             <span className="text-gray-500 font-bold text-xs">Share this insight:</span>
             {['Twitter', 'LinkedIn', 'Facebook'].map(net => (

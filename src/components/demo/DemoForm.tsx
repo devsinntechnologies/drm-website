@@ -16,7 +16,7 @@ const DemoForm = () => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[500px] bg-[#0055FF]/5 blur-[180px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-16 items-center">
+        <div className="flex flex-col lg:flex-row gap-4 items-center">
 
           {/* PERKS SIDE */}
           <motion.div
@@ -28,7 +28,7 @@ const DemoForm = () => {
             <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 border border-[#0055FF]/20 px-4 py-2 rounded-xl mb-4">
               FREE WALKTHROUGH
             </span>
-            <h3 className="text-3xl sm:text-4xl font-black text-[#08162D] mb-8 tracking-tight">
+            <h3 className="text-lg sm:text-xl font-black text-[#08162D] mb-4 tracking-tight">
               What to expect in your{" "}
               <span className="text-[#0055FF]">Free Walkthrough</span>
             </h3>
@@ -66,7 +66,7 @@ const DemoForm = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="mt-12 p-8 bg-white border border-gray-200 shadow-sm rounded-2xl relative overflow-hidden group hover:border-[#0055FF] transition-all"
+              className="mt-6 p-4 bg-white border border-gray-200 shadow-sm rounded-2xl relative overflow-hidden group hover:border-[#0055FF] transition-all"
             >
               <p className="text-gray-600 leading-relaxed font-normal italic">
                 "Scheduling a demo was the best decision for our cafe. The expert showed us exactly
@@ -91,7 +91,7 @@ const DemoForm = () => {
             transition={{ duration: 0.8 }}
             className="flex-1 w-full max-w-xl"
           >
-            <form className="bg-white p-8 md:p-12 rounded-2xl border border-gray-200 shadow-sm relative overflow-hidden">
+            <form className="bg-white p-4 md:p-6 rounded-2xl border border-gray-200 shadow-sm relative overflow-hidden">
 
               <div className="space-y-6 relative z-10">
 
@@ -109,7 +109,7 @@ const DemoForm = () => {
                 </div>
 
                 {/* City + Phone */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
                   <div className="space-y-2">
                     <label className="block text-xs font-bold uppercase tracking-wider text-gray-700 ml-1">

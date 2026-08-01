@@ -28,9 +28,9 @@ const IntegrationsSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
         
         {/* Header */}
-        <div className="text-center mb-6 max-w-3xl mx-auto">
+        <div className="text-center mb-4 max-w-3xl mx-auto">
           <span className="section-label">Connected Ecosystem</span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-6 leading-tight tracking-tight">
+          <h2 className="text-xl md:text-base font-extrabold text-foreground mb-4 leading-tight tracking-tight">
             Integrated with Your <span className="text-primary">Favorite Tools</span>
           </h2>
           <p className="text-muted text-lg font-medium">
@@ -39,7 +39,7 @@ const IntegrationsSection: React.FC = () => {
         </div>
 
         {/* Integrations Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
           {integrations.map((item, idx) => (
             <motion.div
               key={item.name}

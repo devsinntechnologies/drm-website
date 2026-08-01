@@ -19,13 +19,13 @@ export default function BoostSalesSection() {
             SALES OPTIMIZATION
           </span>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#08162D] leading-tight mb-4 tracking-tight">
+          <h2 className="text-lg sm:text-xl lg:text-base font-black text-[#08162D] leading-tight mb-4 tracking-tight">
             Boost Your Sales with <br />
-            <span className="text-[#0055FF]">DigiNizam POS Solution</span>
+            <span className="text-[#0055FF]"><span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span> POS Solution</span>
           </h2>
 
           <p className="text-xs md:text-sm text-gray-600 font-normal leading-relaxed mb-4">
-            Increase your sales by up to 200% with DigiNizam's powerful and easy-to-use sales features. Make shopping effortless for your customers with a seamless one-click checkout that speeds up transactions. Offer flexible payment options, including split payments, to enhance convenience.
+            Increase your sales by up to 200% with <span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span>'s powerful and easy-to-use sales features. Make shopping effortless for your customers with a seamless one-click checkout that speeds up transactions. Offer flexible payment options, including split payments, to enhance convenience.
           </p>
 
           <p className="text-xs md:text-sm text-gray-600 font-normal leading-relaxed">

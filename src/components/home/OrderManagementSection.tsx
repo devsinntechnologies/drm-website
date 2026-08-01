@@ -45,9 +45,9 @@ const OrderManagementSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
         
         {/* Title */}
-        <div className="text-center mb-6 max-w-3xl mx-auto">
+        <div className="text-center mb-4 max-w-3xl mx-auto">
           <span className="section-label">Order Operations</span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-4">
+          <h2 className="text-xl md:text-base font-extrabold text-foreground mb-4">
             Advanced <span className="text-primary">Order Management</span>
           </h2>
           <p className="text-muted text-lg font-medium">
@@ -56,11 +56,11 @@ const OrderManagementSection: React.FC = () => {
         </div>
 
         {/* Order Sources Grid */}
-        <div className="mb-8">
-          <h3 className="text-xl font-black text-foreground mb-8 text-center uppercase tracking-widest text-muted/80">
+        <div className="mb-4">
+          <h3 className="text-xl font-black text-foreground mb-4 text-center uppercase tracking-widest text-muted/80">
             Omnichannel Order Sources
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
             {sources.map((src, idx) => (
               <motion.div
                 key={src.name}
@@ -87,8 +87,8 @@ const OrderManagementSection: React.FC = () => {
         </div>
 
         {/* Workflow Diagram */}
-        <div className="mb-8 max-w-6xl mx-auto">
-          <h3 className="text-xl font-black text-foreground mb-8 text-center uppercase tracking-widest text-muted/80">
+        <div className="mb-4 max-w-6xl mx-auto">
+          <h3 className="text-xl font-black text-foreground mb-4 text-center uppercase tracking-widest text-muted/80">
             Visual Order Lifecycle Workflow
           </h3>
 
@@ -96,7 +96,7 @@ const OrderManagementSection: React.FC = () => {
             {/* Horizontal line for desktop */}
             <div className="hidden lg:block absolute top-[44px] left-[10%] right-[10%] h-0.5 bg-surface-border z-0" />
 
-            <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 relative z-10">
               {workflowSteps.map((step, idx) => (
                 <motion.div
                   key={step.title}
@@ -139,8 +139,8 @@ const OrderManagementSection: React.FC = () => {
         </div>
 
         {/* Feature Highlights List */}
-        <div className="max-w-4xl mx-auto bg-surface/30 border border-surface-border rounded-3xl p-8 shadow-xs">
-          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="max-w-4xl mx-auto bg-surface/30 border border-surface-border rounded-3xl p-4 shadow-xs">
+          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
             {features.map((feat) => (
               <div key={feat} className="flex items-center gap-3">
                 <FiCheckCircle className="text-primary text-lg shrink-0" />

@@ -34,12 +34,12 @@ const AiPoweredSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
         
         {/* Title */}
-        <div className="text-center mb-8 max-w-3xl mx-auto">
+        <div className="text-center mb-4 max-w-3xl mx-auto">
           <span className="inline-flex items-center gap-2 bg-primary/20 border border-primary/30 px-4 py-2 rounded-full mb-4">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             <span className="text-xs font-extrabold uppercase tracking-widest text-primary">Autonomous Operations</span>
           </span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight tracking-tight">
+          <h2 className="text-xl md:text-base lg:text-lg font-black text-white mb-4 leading-tight tracking-tight">
             Artificial Intelligence Built Into <span className="text-primary text-glow">Every Operation</span>
           </h2>
           <p className="text-[#95a1b6] text-lg font-medium">
@@ -48,7 +48,7 @@ const AiPoweredSection: React.FC = () => {
         </div>
 
         {/* AI Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
           {aiFeatures.map((feat, idx) => (
             <motion.div
               key={feat.title}
@@ -59,7 +59,7 @@ const AiPoweredSection: React.FC = () => {
               onMouseEnter={() => setHoveredIdx(idx)}
               onMouseLeave={() => setHoveredIdx(null)}
               whileHover={{ y: -6, scale: 1.01 }}
-              className="relative p-8 rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-xl transition-all duration-300 hover:border-primary/40 hover:bg-white/[0.05]"
+              className="relative p-4 rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-xl transition-all duration-300 hover:border-primary/40 hover:bg-white/[0.05]"
             >
               {/* Border glow wrapper */}
               {hoveredIdx === idx && (
@@ -67,7 +67,7 @@ const AiPoweredSection: React.FC = () => {
               )}
 
               {/* Icon */}
-              <div className="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center text-2xl mb-6 border border-primary/20 shadow-[0_0_15px_rgba(62,163,72,0.1)]">
+              <div className="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center text-base mb-4 border border-primary/20 shadow-[0_0_15px_rgba(62,163,72,0.1)]">
                 {feat.icon}
               </div>
 
@@ -85,7 +85,7 @@ const AiPoweredSection: React.FC = () => {
         </div>
 
         {/* Simulated Intelligence Output */}
-        <div className="mt-8 max-w-4xl mx-auto p-6 rounded-3xl border border-white/10 bg-white/[0.02] backdrop-blur-md">
+        <div className="mt-4 max-w-4xl mx-auto p-6 rounded-3xl border border-white/10 bg-white/[0.02] backdrop-blur-md">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-4 pb-4 border-b border-white/5">
             <div className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-primary animate-pulse" />
@@ -94,7 +94,7 @@ const AiPoweredSection: React.FC = () => {
             <span className="text-[9px] text-[#95a1b6] font-bold">Updated: Just Now</span>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 text-sm text-[#95a1b6]">
+          <div className="grid md:grid-cols-3 gap-4 text-sm text-[#95a1b6]">
             <div>
               <p className="text-[10px] text-white font-black uppercase tracking-wider mb-1.5">Pricing Insight</p>
               <p className="text-white font-bold leading-normal">Suggest <span className="text-primary">+$1.50 dynamic markup</span> on Truffle Burger during Airport food court peak hours (6 PM - 8 PM).</p>

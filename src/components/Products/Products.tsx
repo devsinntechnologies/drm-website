@@ -311,9 +311,9 @@ export default function Products() {
       <div className="max-w-6xl mx-auto relative z-10">
         
         {/* Intro */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-4">
           <span className="section-label">RMS Capabilities</span>
-          <h1 className="text-5xl md:text-6xl font-black text-foreground mt-4 leading-tight tracking-tight">
+          <h1 className="text-base md:text-lg font-black text-foreground mt-4 leading-tight tracking-tight">
             Our Modules & <span className="text-primary">Products</span>
           </h1>
           <p className="text-muted text-lg max-w-3xl mx-auto leading-relaxed mt-4 font-semibold">
@@ -322,16 +322,16 @@ export default function Products() {
         </div>
 
         {solutionsData.map((group) => (
-          <div key={group.category} className="mb-8">
+          <div key={group.category} className="mb-4">
             {/* Category header */}
-            <div className="flex items-center gap-4 mb-10">
+            <div className="flex items-center gap-4 mb-5">
               <span className="w-8 h-px bg-primary" />
-              <h2 className="text-3xl font-black text-primary uppercase tracking-widest">
+              <h2 className="text-lg font-black text-primary uppercase tracking-widest">
                 {group.category}
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 gap-8">
+            <div className="grid grid-cols-1 gap-4">
               {group.items.map((item) => {
                 const isHovered = hoveredId === item.id;
                 
@@ -349,13 +349,13 @@ export default function Products() {
                       <div className="absolute inset-0 opacity-100 bg-gradient-to-br from-primary/5 via-transparent to-transparent blur-xl pointer-events-none" />
                     )}
 
-                    <div className="p-8">
+                    <div className="p-4">
                       <div className="flex items-start gap-4 mb-4">
-                        <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center text-2xl shrink-0 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                        <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center text-base shrink-0 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                           {iconMap[item.id] || <FiLayers />}
                         </div>
                         <div>
-                          <h3 className="text-2xl font-bold text-foreground mb-1">
+                          <h3 className="text-base font-bold text-foreground mb-1">
                             {item.title}
                           </h3>
                           <span className="text-[9px] font-black uppercase tracking-wider text-primary">
@@ -364,7 +364,7 @@ export default function Products() {
                         </div>
                       </div>
 
-                      <p className="text-muted mb-8 text-base leading-relaxed font-semibold">
+                      <p className="text-muted mb-4 text-base leading-relaxed font-semibold">
                         {item.desc}
                       </p>
 

@@ -24,19 +24,19 @@ const AnalyticsSection: React.FC = () => {
       <div className="absolute top-1/2 left-0 w-80 h-80 bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-        <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-16 items-center">
+        <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-4 items-center">
           
           {/* Details - Left Side */}
           <div>
             <span className="section-label">Data Intelligence</span>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-6 leading-tight tracking-tight">
+            <h2 className="text-xl md:text-base font-extrabold text-foreground mb-4 leading-tight tracking-tight">
               Enterprise-Grade <span className="text-primary">Analytics & Reporting</span>
             </h2>
-            <p className="text-muted text-lg mb-8 font-medium">
+            <p className="text-muted text-lg mb-4 font-medium">
               Know your numbers. RMS synthesizes all transactional data from POS terminals, kitchen stations, and delivery riders to generate real-time visual insights.
             </p>
 
-            <div className="grid sm:grid-cols-2 gap-6">
+            <div className="grid sm:grid-cols-2 gap-4">
               {features.map((feat) => (
                 <div 
                   key={feat.name} 
@@ -75,7 +75,7 @@ const AnalyticsSection: React.FC = () => {
             <div className="relative glass-card rounded-[32px] border border-surface-border/95 bg-white p-6 shadow-2xl">
               
               {/* Header */}
-              <div className="flex justify-between items-center border-b border-surface-border pb-4 mb-6">
+              <div className="flex justify-between items-center border-b border-surface-border pb-4 mb-4">
                 <div>
                   <h4 className="font-black text-foreground text-sm">{activeReport} Reporting Insights</h4>
                   <p className="text-[10px] text-muted font-bold uppercase tracking-wider">Live data feed</p>
@@ -86,7 +86,7 @@ const AnalyticsSection: React.FC = () => {
               </div>
 
               {/* Chart Mockup (SVG Sales Curve) */}
-              <div className="w-full h-[180px] bg-background/50 border border-surface-border rounded-2xl p-4 relative overflow-hidden mb-6 flex flex-col justify-between">
+              <div className="w-full h-[180px] bg-background/50 border border-surface-border rounded-2xl p-4 relative overflow-hidden mb-4 flex flex-col justify-between">
                 
                 {/* Y Axis Guides */}
                 <div className="absolute inset-x-0 top-1/4 border-t border-surface-border/40" />

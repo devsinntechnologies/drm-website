@@ -13,7 +13,7 @@ export default function Footer() {
       {/* Background Glow */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-[#0055FF]/5 blur-[160px] rounded-full pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-4 relative z-10">
         
         {/* Column 1: Brand Logo & Description */}
         <div className="lg:col-span-2">
@@ -28,7 +28,7 @@ export default function Footer() {
               />
             </div>
           </div>
-          <p className="text-sm text-gray-600 leading-relaxed mb-6 max-w-sm font-normal">
+          <p className="text-sm text-gray-600 leading-relaxed mb-4 max-w-sm font-normal">
             We believe in teamwork and together we all can achieve more. We always focus on excellence by connecting with our clients as business partners, executing your thoughts and delivering your needs so you can focus on your core activities.
           </p>
           <div className="flex items-center space-x-3">
@@ -77,7 +77,7 @@ export default function Footer() {
             <li><Link href="/services/app-development" className="hover:text-[#0055FF] transition-colors">Applications Development</Link></li>
             <li><Link href="/services/digital-marketing" className="hover:text-[#0055FF] transition-colors">DIGITAL MARKETING</Link></li>
             <li><Link href="/services/system-support" className="hover:text-[#0055FF] transition-colors">SYSTEM SUPPORT</Link></li>
-            <li><Link href="/services/gen-price" className="hover:text-[#0055FF] transition-colors">GEN PRICE</Link></li>
+            <li><Link href="/services/gen-price" className="hover:text-[#0055FF] transition-colors">PRICE</Link></li>
           </ul>
         </div>
 

@@ -30,7 +30,7 @@ const MultiBranchSection: React.FC = () => {
       <div className="absolute top-1/3 left-0 w-80 h-80 bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-        <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-16 items-center">
+        <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-4 items-center">
           
           {/* Dashboard Mockup - Left Side */}
           <motion.div
@@ -73,7 +73,7 @@ const MultiBranchSection: React.FC = () => {
                 <span className="text-[10px] text-muted font-black uppercase tracking-wider block mb-1">
                   {selectedBranch === "All Branches" ? "Consolidated Daily Sales" : `${selectedBranch} Sales`}
                 </span>
-                <p className="text-3xl font-black text-foreground">
+                <p className="text-lg font-black text-foreground">
                   {selectedBranch === "All Branches" ? "35,470.00" : selectedBranch === "Downtown" ? "12,450.00" : "14,100.00"}
                 </p>
                 <span className="text-[10px] font-bold text-emerald-500 mt-1 inline-block">
@@ -118,14 +118,14 @@ const MultiBranchSection: React.FC = () => {
           {/* Right Details */}
           <div className="order-1 lg:order-2">
             <span className="section-label">Central Controls</span>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-6 leading-tight tracking-tight">
+            <h2 className="text-xl md:text-base font-extrabold text-foreground mb-4 leading-tight tracking-tight">
               Centralized <span className="text-primary">Multi-Branch Command</span> & Sync
             </h2>
-            <p className="text-muted text-lg mb-8 font-medium">
+            <p className="text-muted text-lg mb-4 font-medium">
               Oversee your entire restaurant chain from a single consolidated screen. Update recipes, modify pricing strategies, run chain-wide inventory transfers, and view consolidated reports instantly.
             </p>
 
-            <div className="grid sm:grid-cols-2 gap-6">
+            <div className="grid sm:grid-cols-2 gap-4">
               {features.map((feat) => (
                 <div key={feat.title} className="flex gap-3">
                   <span className="w-5 h-5 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">

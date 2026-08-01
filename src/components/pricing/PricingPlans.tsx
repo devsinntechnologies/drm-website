@@ -59,15 +59,15 @@ const PricingPlans = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-8 md:mb-10"
+          className="text-center mb-4 md:mb-5"
         >
           <span className="section-label">Transparent Pricing</span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-foreground tracking-tight">
+          <h2 className="text-lg sm:text-xl md:text-base font-extrabold text-foreground tracking-tight">
             Plans that <span className="text-primary text-glow">Scale</span> With You
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 lg:gap-8 max-w-6xl mx-auto items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-4 lg:gap-4 max-w-6xl mx-auto items-stretch">
           {plans.map((plan, i) => {
             const isHovered = hoveredIndex === i;
             const colorVar = `var(--${plan.color})`;
@@ -82,7 +82,7 @@ const PricingPlans = () => {
                 onMouseEnter={() => setHoveredIndex(i)}
                 onMouseLeave={() => setHoveredIndex(null)}
                 whileHover={{ y: -10, scale: 1.02 }}
-                className={`glass-card p-6 md:p-8 rounded-[28px] md:rounded-[40px] flex flex-col h-full relative overflow-hidden transition-all duration-500 backdrop-blur-2xl ${plan.popular ? 'bg-surface/60 md:scale-[1.02] lg:scale-[1.05] z-10' : 'bg-surface/30'}`}
+                className={`glass-card p-6 md:p-4 rounded-[28px] md:rounded-[40px] flex flex-col h-full relative overflow-hidden transition-all duration-500 backdrop-blur-2xl ${plan.popular ? 'bg-surface/60 md:scale-[1.02] lg:scale-[1.05] z-10' : 'bg-surface/30'}`}
                 style={{
                   boxShadow: isHovered
                     ? `0 40px 80px rgba(var(--${plan.color}-rgb), 0.2), inset 0 2px 20px rgba(var(--${plan.color}-rgb), 0.1)`
@@ -102,7 +102,7 @@ const PricingPlans = () => {
                   <div className="absolute top-0 inset-x-0 h-1.5 bg-primary animate-pulse" />
                 )}
 
-                <div className="mb-6 md:mb-8 relative z-10">
+                <div className="mb-4 md:mb-4 relative z-10">
                   <div className="flex flex-wrap items-center gap-3 md:gap-4 mb-4">
                     <h3 className="text-lg sm:text-xl font-black uppercase tracking-[0.2em]" style={{ color: isHovered ? colorVar : 'var(--foreground)' }}>{plan.name}</h3>
                     {plan.popular && (
@@ -117,14 +117,14 @@ const PricingPlans = () => {
                     )}
                   </div>
                   <div className="flex flex-wrap items-baseline gap-2">
-                    <span className="text-4xl sm:text-5xl font-black text-foreground tracking-tighter">{plan.price}</span>
+                    <span className="text-xl sm:text-base font-black text-foreground tracking-tighter">{plan.price}</span>
                     <span className="text-xs sm:text-sm font-bold text-muted uppercase tracking-widest">{plan.period}</span>
                   </div>
                 </div>
 
-                <p className="text-muted font-medium mb-6 md:mb-8 leading-relaxed relative z-10">{plan.desc}</p>
+                <p className="text-muted font-medium mb-4 md:mb-4 leading-relaxed relative z-10">{plan.desc}</p>
 
-                <ul className="space-y-4 md:space-y-5 mb-8 md:mb-10 flex-1 relative z-10">
+                <ul className="space-y-4 md:space-y-5 mb-4 md:mb-5 flex-1 relative z-10">
                   {plan.features.map((f, j) => (
                     <motion.li
                       key={j}

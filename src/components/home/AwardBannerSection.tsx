@@ -22,12 +22,12 @@ export default function AwardBannerSection() {
           INDUSTRY RECOGNITION
         </span>
 
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#08162D] mb-4 leading-tight tracking-tight">
+        <h2 className="text-lg sm:text-xl lg:text-base font-black text-[#08162D] mb-4 leading-tight tracking-tight">
           Awarded as the Best Multi-Outlet ERP & POS System Solution Provider in Pakistan
         </h2>
 
-        <p className="text-xs md:text-sm text-gray-600 font-normal leading-relaxed mb-6 max-w-3xl mx-auto">
-          No more handling with papers manually when you can get everything done by the <strong className="text-[#08162D] font-bold">DigiNizam</strong> Smart Retail and Inventory Management System in Karachi, Lahore, Islamabad and all over Pakistan that handles all the basic necessary work for your company. From inventory, sales, purchase, expenses, customer ledger, supplier ledger, daily profit, our POS is there to help. When Business Management Suite is running at the background of your business, you are freer to attend to the business at hand.
+        <p className="text-xs md:text-sm text-gray-600 font-normal leading-relaxed mb-4 max-w-3xl mx-auto">
+          No more handling with papers manually when you can get everything done by the <strong className="text-[#08162D] font-bold"><span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span></strong> Smart Retail and Inventory Management System in Karachi, Lahore, Islamabad and all over Pakistan that handles all the basic necessary work for your company. From inventory, sales, purchase, expenses, customer ledger, supplier ledger, daily profit, our POS is there to help. When Business Management Suite is running at the background of your business, you are freer to attend to the business at hand.
         </p>
 
         <div>

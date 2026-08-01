@@ -31,19 +31,19 @@ const StaffSection: React.FC = () => {
       <div className="absolute top-1/2 left-0 w-85 h-85 bg-primary/5 rounded-full blur-[130px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-        <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-16 items-center">
+        <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-4 items-center">
           
           {/* Details - Left Side */}
           <div>
             <span className="section-label">Human Capital</span>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-6 leading-tight tracking-tight">
+            <h2 className="text-xl md:text-base font-extrabold text-foreground mb-4 leading-tight tracking-tight">
               Staff, HR & <span className="text-primary">Shift Scheduling</span>
             </h2>
-            <p className="text-muted text-lg mb-8 font-medium">
+            <p className="text-muted text-lg mb-4 font-medium">
               Take care of the team that takes care of your guests. Coordinate shifts, track attendance clock-ins, monitor waiter performance metrics, and automate monthly payroll calculations.
             </p>
 
-            <div className="grid sm:grid-cols-2 gap-6">
+            <div className="grid sm:grid-cols-2 gap-4">
               {features.map((feat) => (
                 <div key={feat.title} className="flex gap-4">
                   <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center text-xl shrink-0">

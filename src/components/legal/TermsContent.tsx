@@ -7,7 +7,7 @@ import { FiFileText, FiShield, FiServer, FiLock, FiCheckCircle, FiAlertCircle } 
 const termsSections = [
   {
     title: "1. Agreement to Terms",
-    content: "By accessing or using the DigiNizam platform, you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you may not use our services.",
+    content: <>By accessing or using the <span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span> platform, you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you may not use our services.</>,
     icon: <FiFileText size={18} />
   },
   {
@@ -27,12 +27,12 @@ const termsSections = [
   },
   {
     title: "5. Intellectual Property",
-    content: "All content, features, and functionality of the DigiNizam platform—developed in partnership with Devsinn—are owned by us and protected by international copyright and trademark laws.",
+    content: <>All content, features, and functionality of the <span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span> platform—developed in partnership with Devsinn—are owned by us and protected by international copyright and trademark laws.</>,
     icon: <FiCheckCircle size={18} />
   },
   {
     title: "6. Limitation of Liability",
-    content: "DigiNizam and its partners shall not be liable for any indirect, incidental, special, or consequential damages resulting from your use or inability to use our platform services.",
+    content: <><span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span> and its partners shall not be liable for any indirect, incidental, special, or consequential damages resulting from your use or inability to use our platform services.</>,
     icon: <FiAlertCircle size={18} />
   },
 ];
@@ -50,18 +50,18 @@ const TermsContent = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-8"
+          className="text-center max-w-3xl mx-auto mb-4"
         >
           <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-xl mb-2 border border-[#0055FF]/20 shadow-sm">
             Last Updated: Oct 2026
           </span>
 
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#08162D] mb-2 md:mb-3 tracking-tight">
+          <h1 className="text-base sm:text-lg md:text-xl font-black text-[#08162D] mb-2 md:mb-3 tracking-tight">
             Terms & <span className="text-[#0055FF]">Conditions</span>
           </h1>
 
           <p className="text-xs sm:text-sm text-gray-600 max-w-2xl mx-auto leading-relaxed font-normal">
-            Please read these terms and conditions carefully before using the DigiNizam platform powered by Devsinn.
+            Please read these terms and conditions carefully before using the <span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span> platform powered by Devsinn.
           </p>
         </motion.div>
 

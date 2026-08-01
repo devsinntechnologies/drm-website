@@ -130,7 +130,7 @@ const BlogGrid = () => {
                         </div>
                         <div>
                           <div className="text-xs font-black text-[#08162D]">{post.author}</div>
-                          <div className="text-[9px] uppercase font-bold text-gray-500 tracking-tighter">DigiNizam Platform</div>
+                          <div className="text-[9px] uppercase font-bold text-gray-500 tracking-tighter"><span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span> Platform</div>
                         </div>
                       </div>
                       <div className="p-1.5 rounded-xl bg-gray-50 group-hover:bg-[#0055FF] group-hover:text-white transition-all transform group-hover:translate-x-1">

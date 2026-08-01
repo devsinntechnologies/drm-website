@@ -85,9 +85,9 @@ function PostCard({ post, idx }: { post: typeof posts[0]; idx: number }) {
       </div>
 
       {/* Content */}
-      <div className="p-8 flex-1 flex flex-col relative z-10">
+      <div className="p-4 flex-1 flex flex-col relative z-10">
         <span className="text-xs mb-3 font-black tracking-widest uppercase" style={{ color: accentVar }}>{post.date}</span>
-        <h4 className="text-xl font-extrabold text-foreground mb-6 group-hover:text-primary transition-colors leading-tight flex-1">
+        <h4 className="text-xl font-extrabold text-foreground mb-4 group-hover:text-primary transition-colors leading-tight flex-1">
           {post.title}
         </h4>
         <div className="mt-auto pt-5 border-t border-surface-border/40">
@@ -127,7 +127,7 @@ const LatestPosts = () => {
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent shadow-[0_0_15px_rgba(var(--primary-rgb),0.5)]" />
 
       <div className="container mx-auto px-4 md:px-8 relative z-10">
-        <div className="flex justify-between items-end mb-5 md:mb-6">
+        <div className="flex justify-between items-end mb-5 md:mb-4">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -135,7 +135,7 @@ const LatestPosts = () => {
             transition={{ duration: 0.7 }}
           >
             <span className="section-label">Our Blog</span>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-foreground tracking-tight">
+            <h2 className="text-xl md:text-base font-extrabold text-foreground tracking-tight">
               Latest <span className="text-primary">Insights</span>
             </h2>
           </motion.div>
@@ -158,14 +158,14 @@ const LatestPosts = () => {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 ">
           {posts.map((post, idx) => (
             <PostCard key={idx} post={post} idx={idx} />
           ))}
         </div>
 
         <Link href="/blog" className="block sm:hidden">
-          <button className="w-full mt-8 px-6 py-4 glass-card rounded-xl text-foreground font-semibold hover:border-primary/50 transition-all">
+          <button className="w-full mt-4 px-6 py-4 glass-card rounded-xl text-foreground font-semibold hover:border-primary/50 transition-all">
             View All Posts →
           </button>
         </Link>

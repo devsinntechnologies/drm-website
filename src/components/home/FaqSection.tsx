@@ -47,9 +47,9 @@ const FaqSection: React.FC = () => {
       <div className="max-w-4xl mx-auto px-6 lg:px-8 relative z-10">
         
         {/* Header */}
-        <div className="text-center mb-6">
+        <div className="text-center mb-4">
           <span className="section-label">Common Queries</span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-4">
+          <h2 className="text-xl md:text-base font-extrabold text-foreground mb-4">
             Frequently Asked <span className="text-primary">Questions</span>
           </h2>
           <p className="text-muted text-lg font-medium">

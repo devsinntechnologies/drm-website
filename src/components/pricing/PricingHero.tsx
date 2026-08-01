@@ -11,8 +11,8 @@ const PricingHero = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
         >
-          <span className="section-label mx-auto mb-4 md:mb-6">Simple Pricing</span>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-foreground mb-5 md:mb-8 tracking-tight">
+          <span className="section-label mx-auto mb-4 md:mb-4">Simple Pricing</span>
+          <h1 className="text-xl sm:text-base md:text-lg lg:text-xl font-extrabold text-foreground mb-5 md:mb-4 tracking-tight">
             Plans for every <span className="text-primary">scale</span>
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-muted max-w-2xl mx-auto leading-relaxed font-bold">

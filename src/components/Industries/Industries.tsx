@@ -87,7 +87,7 @@ const Industries = () => {
       {/* HERO */}
       <div className="max-w-6xl mx-auto text-center relative z-10">
         <span className="section-label">Tailored Solutions</span>
-        <h1 className="text-5xl md:text-6xl font-black tracking-tight text-primary mt-4">
+        <h1 className="text-base md:text-lg font-black tracking-tight text-primary mt-4">
           Smart Restaurant ERP
         </h1>
 
@@ -109,10 +109,10 @@ const Industries = () => {
 
       {/* TITLE */}
       <div className="max-w-7xl mx-auto mt-28 text-center relative z-10">
-        <h2 className="text-4xl md:text-5xl font-black leading-tight text-foreground">
+        <h2 className="text-xl md:text-base font-black leading-tight text-foreground">
           Our All-in-One
         </h2>
-        <h2 className="text-4xl md:text-5xl font-black text-primary leading-tight">
+        <h2 className="text-xl md:text-base font-black text-primary leading-tight">
           Restaurant ERP Solution
         </h2>
         <p className="mt-5 text-muted max-w-2xl mx-auto font-semibold">
@@ -122,7 +122,7 @@ const Industries = () => {
       </div>
 
       {/* 🚀 PREMIUM FEATURE CARDS */}
-      <div className="max-w-7xl mx-auto mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
+      <div className="max-w-7xl mx-auto mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 relative z-10">
         {features.map((feature, index) => (
           <motion.div
             key={index}
@@ -131,7 +131,7 @@ const Industries = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.05 }}
             whileHover={{ y: -8, scale: 1.01 }}
-            className="relative group rounded-3xl p-8 bg-white/70 border border-surface-border/80 shadow-lg transition-all duration-300 backdrop-blur-md overflow-hidden"
+            className="relative group rounded-3xl p-4 bg-white/70 border border-surface-border/80 shadow-lg transition-all duration-300 backdrop-blur-md overflow-hidden"
           >
             {/* Glow background */}
             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 bg-gradient-to-br from-primary/10 via-transparent to-transparent blur-2xl pointer-events-none" />
@@ -139,7 +139,7 @@ const Industries = () => {
             <div className="relative z-10 flex flex-col justify-between h-full">
               <div>
                 {/* ICON */}
-                <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center text-2xl mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center text-base mb-4 group-hover:bg-primary group-hover:text-white transition-all duration-300">
                   {feature.icon}
                 </div>
 
@@ -163,8 +163,8 @@ const Industries = () => {
 
       {/* CTA */}
       <div className="max-w-5xl mx-auto mt-32 relative z-10">
-        <div className="rounded-3xl border border-primary/20 bg-primary/10 p-10 md:p-16 text-center shadow-lg">
-          <h2 className="text-4xl md:text-5xl font-black text-foreground">
+        <div className="rounded-3xl border border-primary/20 bg-primary/10 p-5 md:p-4 text-center shadow-lg">
+          <h2 className="text-xl md:text-base font-black text-foreground">
             Transform Your Restaurant Business
           </h2>
 
@@ -173,7 +173,7 @@ const Industries = () => {
             and provide a seamless experience to your customers.
           </p>
 
-          <button className="mt-10 px-8 py-4 rounded-2xl bg-primary text-white font-bold hover:scale-105 transition-all duration-300 shadow-lg glow-primary shimmer-btn">
+          <button className="mt-5 px-8 py-4 rounded-2xl bg-primary text-white font-bold hover:scale-105 transition-all duration-300 shadow-lg glow-primary shimmer-btn">
             Book Free Demo
           </button>
         </div>

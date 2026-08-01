@@ -22,8 +22,8 @@ const DemoHero = () => {
           <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 border border-[#0055FF]/20 px-4 py-2 rounded-xl mb-4 shadow-sm">
             Expert Tour
           </span>
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-[#08162D] mb-4 tracking-tight">
-            See DigiNizam in <span className="text-[#0055FF]">Action</span>
+          <h1 className="text-xl sm:text-base md:text-xl font-black text-[#08162D] mb-4 tracking-tight">
+            See <span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span> in <span className="text-[#0055FF]">Action</span>
           </h1>
           <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed font-normal">
             Experience the workflow that powers thousands of businesses.

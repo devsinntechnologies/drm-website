@@ -94,9 +94,9 @@ const PricingSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
         
         {/* Header */}
-        <div className="text-center mb-12 max-w-3xl mx-auto">
+        <div className="text-center mb-4 max-w-3xl mx-auto">
           <span className="section-label">Transparent Plans</span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-6 leading-tight tracking-tight">
+          <h2 className="text-xl md:text-base font-extrabold text-foreground mb-4 leading-tight tracking-tight">
             Flexible Plans that <span className="text-primary text-glow">Scale</span> With You
           </h2>
           <p className="text-muted text-lg font-medium">
@@ -104,7 +104,7 @@ const PricingSection: React.FC = () => {
           </p>
 
           {/* Billing Cycle Switch */}
-          <div className="flex items-center justify-center gap-3 mt-8">
+          <div className="flex items-center justify-center gap-3 mt-4">
             <span className={`text-sm font-bold ${billingCycle === "monthly" ? "text-primary" : "text-muted"}`}>Monthly</span>
             <button
               onClick={() => setBillingCycle(prev => prev === "monthly" ? "annually" : "monthly")}
@@ -124,7 +124,7 @@ const PricingSection: React.FC = () => {
         </div>
 
         {/* Pricing Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-stretch max-w-7xl mx-auto">
           {plans.map((plan, idx) => {
             const isHovered = hoveredIdx === idx;
             const price = billingCycle === "monthly" ? plan.priceMonthly : plan.priceAnnually;
@@ -140,7 +140,7 @@ const PricingSection: React.FC = () => {
                 onMouseEnter={() => setHoveredIdx(idx)}
                 onMouseLeave={() => setHoveredIdx(null)}
                 whileHover={{ y: -8, scale: 1.01 }}
-                className={`glass-card p-8 rounded-[32px] border flex flex-col justify-between h-full transition-all duration-500 backdrop-blur-2xl relative overflow-hidden ${plan.color}`}
+                className={`glass-card p-4 rounded-[32px] border flex flex-col justify-between h-full transition-all duration-500 backdrop-blur-2xl relative overflow-hidden ${plan.color}`}
                 style={{
                   boxShadow: isHovered 
                     ? "0 30px 60px rgba(62, 163, 72, 0.08), inset 0 0 0 1px rgba(62, 163, 72, 0.1)" 
@@ -159,16 +159,16 @@ const PricingSection: React.FC = () => {
 
                 <div>
                   <h3 className="text-xl font-black text-foreground mb-2">{plan.name}</h3>
-                  <p className="text-muted text-xs leading-relaxed font-semibold mb-6">{plan.desc}</p>
+                  <p className="text-muted text-xs leading-relaxed font-semibold mb-4">{plan.desc}</p>
                   
                   {/* Price */}
-                  <div className="flex items-baseline gap-1 mb-8">
-                    <span className="text-4xl font-black text-foreground tracking-tighter">{price}</span>
+                  <div className="flex items-baseline gap-1 mb-4">
+                    <span className="text-xl font-black text-foreground tracking-tighter">{price}</span>
                     <span className="text-xs font-bold text-muted uppercase tracking-widest">{period}</span>
                   </div>
 
                   {/* Features List */}
-                  <ul className="space-y-4 mb-8">
+                  <ul className="space-y-4 mb-4">
                     {plan.features.map((feat, fidx) => (
                       <li key={fidx} className="flex items-start gap-3 text-xs font-bold text-foreground/90">
                         {feat.included ? (

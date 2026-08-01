@@ -14,7 +14,7 @@ export default function SmartFeaturesGridSection() {
     {
       icon: <FiGrid className="w-5 h-5 text-[#0055FF]" />,
       title: "Multi-Store Control",
-      desc: "DigiNizam POS software gives you the ultimate flexibility to manage multiple stores seamlessly from a single dashboard."
+      desc: <><span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span> POS software gives you the ultimate flexibility to manage multiple stores seamlessly from a single dashboard.</>
     },
     {
       icon: <FiBox className="w-5 h-5 text-[#0055FF]" />,
@@ -29,7 +29,7 @@ export default function SmartFeaturesGridSection() {
     {
       icon: <FiZap className="w-5 h-5 text-[#0055FF]" />,
       title: "Fast Sales Processing",
-      desc: "Enjoy speedy check-out processing for maximum customer satisfaction, making DigiNizam a top-tier POS choice."
+      desc: <>Enjoy speedy check-out processing for maximum customer satisfaction, making <span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span> a top-tier POS choice.</>
     },
     {
       icon: <FiAlertTriangle className="w-5 h-5 text-[#0055FF]" />,
@@ -43,11 +43,11 @@ export default function SmartFeaturesGridSection() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-[#0055FF]/10 blur-[140px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-12">
+        <div className="text-center max-w-3xl mx-auto mb-4">
           <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-4 py-2 rounded-xl border border-[#0055FF]/20">
             Smart Suite
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#08162D] mt-3 tracking-tight">
+          <h2 className="text-lg sm:text-xl lg:text-base font-black text-[#08162D] mt-3 tracking-tight">
             SMART SUITE OF FEATURES
           </h2>
           <p className="text-xs md:text-sm text-gray-600 mt-3 font-normal leading-relaxed">
@@ -55,7 +55,7 @@ export default function SmartFeaturesGridSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {features.map((item, idx) => (
             <motion.div 
               key={idx}

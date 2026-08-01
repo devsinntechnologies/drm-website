@@ -41,11 +41,11 @@ export default function AboutTechStack() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-10">
+        <div className="text-center max-w-2xl mx-auto mb-5">
           <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3.5 py-1.5 rounded-xl mb-2.5 border border-[#0055FF]/20">
             OUR CAPABILITIES
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-3 tracking-tight text-[#08162D]">
+          <h2 className="text-lg sm:text-xl lg:text-base font-black mb-3 tracking-tight text-[#08162D]">
             Powered by modern <span className="text-[#0055FF]">technology stack</span>
           </h2>
           <p className="text-xs md:text-sm text-gray-600 font-normal leading-relaxed">

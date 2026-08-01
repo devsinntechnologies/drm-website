@@ -15,12 +15,12 @@ export default function DemoPage() {
         <DemoForm />
 
         {/* Pricing Section */}
-        <section className="py-8 md:py-28 bg-white border-t border-gray-200">
-          <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center mb-6">
+        <section className="py-8 md:py-6 bg-white border-t border-gray-200">
+          <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center mb-4">
             <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 border border-[#0055FF]/20 px-4 py-2 rounded-xl mb-4">
               FLEXIBLE PRICING
             </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#08162D] tracking-tight">
+            <h2 className="text-lg sm:text-xl md:text-base font-black text-[#08162D] tracking-tight">
               Best and flexible <span className="text-[#0055FF]">plans</span> that suit your business!
             </h2>
             <p className="mt-4 text-gray-600 text-sm sm:text-base max-w-2xl mx-auto font-normal">

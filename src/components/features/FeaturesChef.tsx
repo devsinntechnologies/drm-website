@@ -7,7 +7,7 @@ const FeaturesChef = () => {
   return (
     <section className="py-8 md:py-10 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="flex flex-col lg:flex-row-reverse items-center gap-8 md:gap-4 lg:gap-6">
+        <div className="flex flex-col lg:flex-row-reverse items-center gap-4 md:gap-4 lg:gap-4">
           
           {/* Content Side */}
           <motion.div 
@@ -17,12 +17,12 @@ const FeaturesChef = () => {
             transition={{ duration: 0.8 }}
             className="flex-1"
           >
-            <span className="section-label mb-4 md:mb-6">Staff Management</span>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-foreground mb-4 leading-tight">
+            <span className="section-label mb-4 md:mb-4">Staff Management</span>
+            <h2 className="text-xl sm:text-base md:text-lg lg:text-xl font-extrabold text-foreground mb-4 leading-tight">
               Chef <span className="text-primary">Performance</span> <br />
               Monitoring
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-muted mb-6 md:mb-8 leading-relaxed max-w-xl font-medium">
+            <p className="text-base sm:text-lg md:text-xl text-muted mb-4 md:mb-4 leading-relaxed max-w-xl font-medium">
               Track cook times and efficiency per station. Keep your kitchen running 
               at peak performance with data-driven insights on staff productivity.
             </p>
@@ -32,9 +32,9 @@ const FeaturesChef = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
-              className="p-5 md:p-8 rounded-[28px] md:rounded-[40px] glass-card border border-primary/20 bg-primary/5"
+              className="p-5 md:p-4 rounded-[28px] md:rounded-[40px] glass-card border border-primary/20 bg-primary/5"
             >
-              <h4 className="text-xl md:text-2xl font-bold text-primary mb-3 md:mb-4 flex items-center gap-3">
+              <h4 className="text-xl md:text-base font-bold text-primary mb-3 md:mb-4 flex items-center gap-3">
                  <span className="w-2 h-2 rounded-full bg-primary animate-ping" />
                  Real-time Efficiency
               </h4>

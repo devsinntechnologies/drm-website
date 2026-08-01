@@ -24,12 +24,12 @@ const ContactHero = () => {
             LET'S CONNECT
           </span>
           
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#08162D] mb-2 md:mb-3 tracking-tight">
+          <h1 className="text-lg sm:text-xl md:text-base font-black text-[#08162D] mb-2 md:mb-3 tracking-tight">
             Get in <span className="text-[#0055FF]">Touch</span>
           </h1>
 
           <p className="text-xs sm:text-sm text-gray-600 max-w-2xl mx-auto leading-relaxed font-normal">
-            Have questions about how DigiNizam Software Solutions can transform your business? Our team is standing by to provide expert guidance and answer all your inquiries.
+            Have questions about how <span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span> Software Solutions can transform your business? Our team is standing by to provide expert guidance and answer all your inquiries.
           </p>
         </motion.div>
       </div>

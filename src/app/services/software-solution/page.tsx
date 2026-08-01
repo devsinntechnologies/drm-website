@@ -39,7 +39,7 @@ export default function SoftwareSolutionPage() {
             <span className="inline-block text-[11px] font-bold uppercase tracking-widest text-white bg-black/60 border border-white/20 px-3 py-1 rounded-xl mb-2.5 shadow-lg backdrop-blur-md">
               ENTERPRISE SERVICES • DEVSINN SOLUTIONS
             </span>
-            <h1 className="text-2xl sm:text-3xl font-black leading-tight text-white tracking-tight drop-shadow-[0_4px_18px_rgba(0,0,0,0.95)]" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.9), 0 0px 4px rgba(0,0,0,0.8)' }}>
+            <h1 className="text-base sm:text-lg font-black leading-tight text-white tracking-tight drop-shadow-[0_4px_18px_rgba(0,0,0,0.95)]" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.9), 0 0px 4px rgba(0,0,0,0.8)' }}>
               Bespoke <span className="text-[#00B4FF]" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.9)' }}>Software Solutions</span>
             </h1>
             <p className="text-xs md:text-sm text-gray-100 font-medium leading-relaxed mt-3 mb-4 drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
@@ -65,7 +65,7 @@ export default function SoftwareSolutionPage() {
             <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-xl mb-1.5 border border-[#0055FF]/20">
               OUR EXPERTISE
             </span>
-            <h2 className="text-xl sm:text-2xl font-black text-[#08162D] tracking-tight">
+            <h2 className="text-xl sm:text-base font-black text-[#08162D] tracking-tight">
               What <span className="text-[#0055FF]">We Do</span>
             </h2>
             <p className="text-gray-600 text-xs sm:text-[13px] font-normal">
@@ -175,7 +175,7 @@ export default function SoftwareSolutionPage() {
 
       {/* 4. Empower Your Entire Workforce Section - Layout Alternated & Spacing Reduced */}
       <section className="py-5 md:py-8 bg-white border-b border-gray-200 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8 items-center relative z-10">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-4 items-center relative z-10">
           
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -187,7 +187,7 @@ export default function SoftwareSolutionPage() {
             <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-xl mb-1.5 border border-[#0055FF]/20">
               WORKFORCE EFFICIENCY
             </span>
-            <h2 className="text-xl sm:text-2xl font-black text-[#08162D] tracking-tight">
+            <h2 className="text-xl sm:text-base font-black text-[#08162D] tracking-tight">
               Empower your <span className="text-[#0055FF]">entire workforce</span>
             </h2>
             <p className="text-gray-600 text-xs sm:text-[13px] leading-relaxed mb-2 font-normal">
@@ -226,7 +226,7 @@ export default function SoftwareSolutionPage() {
             <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-xl mb-1.5 border border-[#0055FF]/20">
               KEY CAPABILITIES
             </span>
-            <h2 className="text-xl sm:text-2xl font-black text-[#08162D] tracking-tight">
+            <h2 className="text-xl sm:text-base font-black text-[#08162D] tracking-tight">
               Engineered for <span className="text-[#0055FF]">Modern Businesses</span>
             </h2>
             <p className="text-gray-600 text-xs sm:text-[13px] font-normal">

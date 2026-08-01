@@ -31,10 +31,10 @@ const SupportFAQ = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-4"
         >
           <span className="section-label">Common Questions</span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-foreground mt-2\">Frequently Asked <span className="text-primary\">Questions</span></h2>
+          <h2 className="text-lg sm:text-xl md:text-base font-extrabold text-foreground mt-2\">Frequently Asked <span className="text-primary\">Questions</span></h2>
         </motion.div>
 
         <div className="max-w-3xl mx-auto space-y-4">

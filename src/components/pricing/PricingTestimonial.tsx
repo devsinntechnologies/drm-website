@@ -123,7 +123,7 @@ const PricingTestimonial = () => {
   return (
     <section className="py-8 md:py-10 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 max-w-5xl">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground text-center mb-8 md:mb-10">
+        <h2 className="text-lg sm:text-xl md:text-base font-bold text-foreground text-center mb-4 md:mb-5">
           What Our <span className="text-primary">Clients Say?</span>
         </h2>
 
@@ -174,13 +174,13 @@ const PricingTestimonial = () => {
                   <motion.div
                     custom={direction}
                     variants={childVariants}
-                    className="relative z-10 w-[calc(100%-1rem)] max-w-lg -mt-10 sm:-mt-8 md:mt-0 md:-ml-12 p-6 md:p-10 glass-card bg-surface rounded-xl border border-surface-border shadow-[-10px_0_30px_rgba(0,0,0,0.05)] text-center md:text-left"
+                    className="relative z-10 w-[calc(100%-1rem)] max-w-lg -mt-5 sm:-mt-4 md:mt-0 md:-ml-12 p-6 md:p-5 glass-card bg-surface rounded-xl border border-surface-border shadow-[-10px_0_30px_rgba(0,0,0,0.05)] text-center md:text-left"
                   >
-                    <span className="text-primary text-4xl leading-none absolute top-6 left-6 font-serif">"</span>
-                    <p className="text-muted leading-relaxed relative z-10 mb-6 italic pl-8 pr-4">
+                    <span className="text-primary text-xl leading-none absolute top-6 left-6 font-serif">"</span>
+                    <p className="text-muted leading-relaxed relative z-10 mb-4 italic pl-8 pr-4">
                       {active.quote}
                     </p>
-                    <span className="text-primary text-4xl leading-none absolute bottom-12 right-6 font-serif">"</span>
+                    <span className="text-primary text-xl leading-none absolute bottom-12 right-6 font-serif">"</span>
                     <p className="text-sm font-semibold text-foreground/50 uppercase tracking-widest text-center mt-4">
                       {active.name}
                     </p>

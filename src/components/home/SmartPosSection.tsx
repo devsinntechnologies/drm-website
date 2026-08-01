@@ -51,19 +51,19 @@ const SmartPosSection: React.FC = () => {
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-        <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-16 items-center">
+        <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-4 items-center">
           
           {/* Left Details */}
           <div>
             <span className="section-label">Billing Speed</span>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-6 leading-tight tracking-tight">
+            <h2 className="text-xl md:text-base font-extrabold text-foreground mb-4 leading-tight tracking-tight">
               Smart & Intuitive <span className="text-primary">Touch POS System</span>
             </h2>
-            <p className="text-muted text-lg mb-8 font-medium">
+            <p className="text-muted text-lg mb-4 font-medium">
               Eliminate order bottlenecks. Our fast billing interface works across tablets, computers, and mobile terminals to process orders and settle payments in seconds.
             </p>
 
-            <div className="grid sm:grid-cols-2 gap-6">
+            <div className="grid sm:grid-cols-2 gap-4">
               {features.map((feat) => (
                 <div key={feat.title} className="flex gap-4">
                   <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center text-xl shrink-0">
@@ -77,7 +77,7 @@ const SmartPosSection: React.FC = () => {
               ))}
             </div>
 
-            <div className="mt-8 pt-8 border-t border-surface-border flex gap-4">
+            <div className="mt-4 pt-8 border-t border-surface-border flex gap-4">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#3EA348]/10 text-[#3EA348] text-xs font-black uppercase tracking-widest rounded-full">
                 <FiCheckCircle /> Cash & Card Support
               </span>

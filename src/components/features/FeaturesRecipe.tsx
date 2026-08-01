@@ -7,7 +7,7 @@ const FeaturesRecipe = () => {
   return (
     <section className="py-8 md:py-10 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="flex flex-col lg:flex-row items-center gap-8 md:gap-4 lg:gap-6">
+        <div className="flex flex-col lg:flex-row items-center gap-4 md:gap-4 lg:gap-4">
           
           {/* Content Side */}
           <motion.div 
@@ -17,12 +17,12 @@ const FeaturesRecipe = () => {
             transition={{ duration: 0.8 }}
             className="flex-1"
           >
-            <span className="section-label mb-4 md:mb-6">Kitchen Control</span>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-foreground mb-4 leading-tight">
+            <span className="section-label mb-4 md:mb-4">Kitchen Control</span>
+            <h2 className="text-xl sm:text-base md:text-lg lg:text-xl font-extrabold text-foreground mb-4 leading-tight">
               Precise <span className="text-primary">Recipe</span> <br />
               Management
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-muted mb-6 md:mb-8 leading-relaxed max-w-xl font-medium">
+            <p className="text-base sm:text-lg md:text-xl text-muted mb-4 md:mb-4 leading-relaxed max-w-xl font-medium">
               Maintain consistent taste and margins. Our system tracks raw ingredients 
               and calculates food cost for every dish you serve.
             </p>

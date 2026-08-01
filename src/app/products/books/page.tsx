@@ -35,7 +35,7 @@ export default function BookShopSolutionPage() {
             <span className="inline-block text-[11px] font-bold uppercase tracking-widest text-white bg-black/60 border border-white/20 px-3 py-1 rounded-xl mb-3 shadow-lg backdrop-blur-md">
               <span className="inline-flex items-center gap-1.5 align-middle">The <span className="text-white">Digi</span><span className="text-[#00B4FF]">Nizam</span> <Image src="/logo.png" alt="Logo" width={14} height={14} className="object-contain inline-block" /></span> RETAIL SOLUTIONS • BOOKSHOP &amp; PUBLISHERS SUITE
             </span>
-            <h1 className="text-2xl sm:text-3xl font-black leading-tight text-white tracking-tight drop-shadow-[0_4px_18px_rgba(0,0,0,0.95)]" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.9), 0 0px 4px rgba(0,0,0,0.8)' }}>
+            <h1 className="text-base sm:text-lg font-black leading-tight text-white tracking-tight drop-shadow-[0_4px_18px_rgba(0,0,0,0.95)]" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.9), 0 0px 4px rgba(0,0,0,0.8)' }}>
               Advanced <span className="text-[#00B4FF]" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.9)' }}>Bookshop &amp; Publishers</span> POS System
             </h1>
             <p className="text-xs md:text-sm text-gray-200 font-medium leading-relaxed mt-3 mb-4 drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
@@ -57,7 +57,7 @@ export default function BookShopSolutionPage() {
       {/* 2. POS Section with posbook3.jpg Image Showcase (Card Background Removed) */}
       <section className="py-4 md:py-6 bg-white border-b border-gray-200 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-6 items-center mb-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-4 items-center mb-4">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -67,7 +67,7 @@ export default function BookShopSolutionPage() {
               <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-xl mb-2.5 border border-[#0055FF]/20">
                 POINT OF SALE & CAPABILITIES
               </span>
-              <h2 className="text-2xl sm:text-3xl font-black text-[#08162D] tracking-tight">
+              <h2 className="text-base sm:text-lg font-black text-[#08162D] tracking-tight">
                 Designed for Modern <span className="text-[#0055FF]">Bookshops &amp; Publishers</span>
               </h2>
               <p className="text-gray-600 text-xs sm:text-sm font-normal leading-relaxed mb-2.5">
@@ -95,7 +95,7 @@ export default function BookShopSolutionPage() {
             </motion.div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -151,7 +151,7 @@ export default function BookShopSolutionPage() {
       <section className="py-4 md:py-6 bg-white border-b border-gray-200 relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#0055FF]/5 blur-[140px] rounded-full pointer-events-none" />
         
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-6 items-center relative z-10">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-4 items-center relative z-10">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -161,7 +161,7 @@ export default function BookShopSolutionPage() {
             <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-xl mb-2.5 border border-[#0055FF]/20">
               STAFF EFFICIENCY
             </span>
-            <h2 className="text-2xl sm:text-3xl font-black text-[#08162D] tracking-tight">
+            <h2 className="text-base sm:text-lg font-black text-[#08162D] tracking-tight">
               Empower your <span className="text-[#0055FF]">bookstore staff</span>
             </h2>
             <p className="text-gray-600 text-xs sm:text-sm leading-relaxed mb-3 font-normal">
@@ -196,11 +196,11 @@ export default function BookShopSolutionPage() {
       {/* 4. Our Modules Section */}
       <section className="py-4 md:py-6 bg-gray-50 border-b border-gray-200 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-          <div className="text-center max-w-2xl mx-auto mb-8">
+          <div className="text-center max-w-2xl mx-auto mb-4">
             <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-xl mb-2.5 border border-[#0055FF]/20">
               CORE SYSTEM MODULES
             </span>
-            <h2 className="text-2xl sm:text-3xl font-black text-[#08162D] tracking-tight">
+            <h2 className="text-base sm:text-lg font-black text-[#08162D] tracking-tight">
               Explore Our Powerful <span className="text-[#0055FF]">Bookshop Modules</span>
             </h2>
             <p className="text-gray-600 text-xs sm:text-sm font-normal">
@@ -208,7 +208,7 @@ export default function BookShopSolutionPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
