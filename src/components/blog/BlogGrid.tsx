@@ -65,14 +65,14 @@ const BlogGrid = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   return (
-    <section className="py-4 md:py-6 bg-white text-[#08162D] relative overflow-hidden border-b border-gray-200">
+    <section className="py-3 md:py-4 bg-white text-[#08162D] relative overflow-hidden border-b border-gray-200">
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-[#0055FF]/5 blur-[160px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
         <motion.div
           layout
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3"
         >
           <AnimatePresence mode="popLayout">
             {posts.map((post, idx) => (

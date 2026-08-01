@@ -28,6 +28,7 @@ export default function AboutHero() {
           </h1>
           <p className="text-xs md:text-sm text-gray-600 font-normal leading-relaxed mb-4 max-w-xl">
             Come let&apos;s join hands with <span className="text-black font-black">Digi</span><span className="text-[#0055FF] font-black">Nizam</span> Software Solutions and unlock the ultimate potential of your business through cutting-edge ERP, POS, and digital web applications.
+            We deliver expert guidance, tailored strategies, and reliable support to help your enterprise grow stronger and operate smarter.
           </p>
           
           <div className="space-y-1.5">
