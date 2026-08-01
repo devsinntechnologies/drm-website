@@ -9,7 +9,7 @@ export default function SecondaryFeaturesGridSection() {
     {
       icon: <FiCreditCard className="w-6 h-6 text-[#0055FF]" />,
       title: "Multi-Payment Options",
-      desc: <><span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span> POS system supports different payment options like credit or debit cards to give your customers utmost freedom of choice.</>
+      desc: <><span className="text-black font-black">Digi</span><span className="text-[#0055FF] font-black">Nizam</span> POS system supports different payment options like credit or debit cards to give your customers utmost freedom of choice.</>
     },
     {
       icon: <FiBarChart2 className="w-6 h-6 text-[#0055FF]" />,

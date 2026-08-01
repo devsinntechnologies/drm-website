@@ -23,7 +23,7 @@ const DemoHero = () => {
             Expert Tour
           </span>
           <h1 className="text-xl sm:text-base md:text-xl font-black text-[#08162D] mb-4 tracking-tight">
-            See <span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span> in <span className="text-[#0055FF]">Action</span>
+            See <span className="text-black font-black">Digi</span><span className="text-[#0055FF] font-black">Nizam</span> in <span className="text-[#0055FF]">Action</span>
           </h1>
           <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed font-normal">
             Experience the workflow that powers thousands of businesses.

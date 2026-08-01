@@ -27,7 +27,7 @@ export default function AwardBannerSection() {
         </h2>
 
         <p className="text-xs md:text-sm text-gray-600 font-normal leading-relaxed mb-4 max-w-3xl mx-auto">
-          No more handling with papers manually when you can get everything done by the <strong className="text-[#08162D] font-bold"><span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span></strong> Smart Retail and Inventory Management System in Karachi, Lahore, Islamabad and all over Pakistan that handles all the basic necessary work for your company. From inventory, sales, purchase, expenses, customer ledger, supplier ledger, daily profit, our POS is there to help. When Business Management Suite is running at the background of your business, you are freer to attend to the business at hand.
+          No more handling with papers manually when you can get everything done by the <strong className="text-[#08162D] font-bold"><span className="text-black font-black">Digi</span><span className="text-[#0055FF] font-black">Nizam</span></strong> Smart Retail and Inventory Management System in Karachi, Lahore, Islamabad and all over Pakistan that handles all the basic necessary work for your company. From inventory, sales, purchase, expenses, customer ledger, supplier ledger, daily profit, our POS is there to help. When Business Management Suite is running at the background of your business, you are freer to attend to the business at hand.
         </p>
 
         <div>

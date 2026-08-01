@@ -70,14 +70,14 @@ const ContactForm = () => {
 
               <p className="text-xs sm:text-sm text-gray-600 font-normal leading-relaxed max-w-lg">
                 Whether you're starting a new venture or scaling your enterprise operations,
-                our specialists at DEVSINN and <span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span> are here to guide you with tailored software solutions.
+                our specialists at DEVSINN and <span className="text-black font-black">Digi</span><span className="text-[#0055FF] font-black">Nizam</span> are here to guide you with tailored software solutions.
               </p>
             </div>
 
             <div className="space-y-4">
               {[
                 { t: "Headquarters", d: "Lahore, Pakistan", icon: <FiMapPin size={18} /> },
-                { t: "Phone Support", d: <>021-111 <span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span></>, icon: <FiPhone size={18} /> },
+                { t: "Phone Support", d: <>021-111 <span className="text-black font-black">Digi</span><span className="text-[#0055FF] font-black">Nizam</span></>, icon: <FiPhone size={18} /> },
                 { t: "Mail Us", d: "hello@diginizam.com", icon: <FiMail size={18} /> }
               ].map((item, idx) => (
                 <motion.div

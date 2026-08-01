@@ -14,7 +14,7 @@ const posts = [
     time: '5 min read',
     content: `
       <h2>The New Age of Enterprise Operations</h2>
-      <p>In today's fast-paced world, running a successful enterprise requires more than just standard management. It demands a holistic approach to customer experience, efficient digital workflows, and smart marketing. Increasing your sales by 20% in just a month sounds ambitious, but with the right <span class="text-black">Digi</span><span class="text-[#00B4FF]">Nizam</span> strategies, it is entirely possible.</p>
+      <p>In today's fast-paced world, running a successful enterprise requires more than just standard management. It demands a holistic approach to customer experience, efficient digital workflows, and smart marketing. Increasing your sales by 20% in just a month sounds ambitious, but with the right <span class="text-black">Digi</span><span class="text-[#0055FF]">Nizam</span> strategies, it is entirely possible.</p>
       
       <h3>1. Leverage Automated Workflows</h3>
       <p>One of the easiest ways to boost revenue is by decreasing response time and manual errors. When teams use integrated software suites, operations are streamlined directly. This cuts down delays, reduces errors, and allows personnel to focus on high-value client interactions instead of routine admin tasks.</p>
@@ -43,7 +43,7 @@ const fallbackPost = {
     <h2>Embracing the Digital Shift</h2>
     <p>The business industry is undergoing a massive transformation. From automated workflows to AI-driven resource management, technology is reshaping the way we operate and scale enterprises.</p>
     <h3>Cloud-Native Platforms</h3>
-    <p>The days of bulky, on-premise servers are over. Cloud-native systems built with <span class="text-black">Digi</span><span class="text-[#00B4FF]">Nizam</span> guarantee that your data is accessible anywhere, anytime, ensuring critical decision-making on the go.</p>
+    <p>The days of bulky, on-premise servers are over. Cloud-native systems built with <span class="text-black">Digi</span><span class="text-[#0055FF]">Nizam</span> guarantee that your data is accessible anywhere, anytime, ensuring critical decision-making on the go.</p>
     <h3>Data is the New Oil</h3>
     <p>Leaders now have access to unprecedented amounts of data. Understanding metrics, peak operational hours, and efficiency trends enables a proactive management style.</p>
   `,
@@ -89,7 +89,7 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
               </div>
               <div>
                 <div className="text-xs font-black text-[#08162D]">{post.author}</div>
-                <div className="text-[9px] uppercase font-bold text-gray-500 tracking-wider"><span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span> Platform</div>
+                <div className="text-[9px] uppercase font-bold text-gray-500 tracking-wider"><span className="text-black font-black">Digi</span><span className="text-[#0055FF] font-black">Nizam</span> Platform</div>
               </div>
             </div>
             <div className="text-right">

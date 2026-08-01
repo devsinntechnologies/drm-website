@@ -17,16 +17,20 @@ export default function Footer() {
         
         {/* Column 1: Brand Logo & Description */}
         <div className="lg:col-span-2">
-          <div className="flex items-center gap-3 mb-5">
-            <div className="relative h-14 w-48 bg-white flex items-center">
+          <div className="flex items-center gap-1 mb-5">
+            <div className="relative w-12 h-12">
               <Image 
-                src="/Group_11-removebg-preview.png" 
+                src="/logo.png" 
                 alt="Brand Logo" 
                 fill 
-                className="object-contain object-left"
+                className="object-contain"
                 priority
               />
             </div>
+            <span className="text-3xl font-black tracking-tight">
+              <span className="text-black">Digi</span>
+              <span className="text-[#0055FF]">Nizam</span>
+            </span>
           </div>
           <p className="text-sm text-gray-600 leading-relaxed mb-4 max-w-sm font-normal">
             We believe in teamwork and together we all can achieve more. We always focus on excellence by connecting with our clients as business partners, executing your thoughts and delivering your needs so you can focus on your core activities.

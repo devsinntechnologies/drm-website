@@ -21,7 +21,7 @@ const FinalCtaSection: React.FC = () => {
         </h2>
 
         <p className="text-sm md:text-base text-white/70 font-medium max-w-xl mx-auto mb-5 leading-relaxed">
-          Join thousands of restaurants running on <span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span> POS. Automate inventory, speed up checkouts, and boost your margins.
+          Join thousands of restaurants running on <span className="text-black font-black">Digi</span><span className="text-[#0055FF] font-black">Nizam</span> POS. Automate inventory, speed up checkouts, and boost your margins.
         </p>
 
         <div className="flex flex-wrap justify-center gap-4 w-full">

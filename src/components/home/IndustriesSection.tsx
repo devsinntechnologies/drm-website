@@ -32,7 +32,7 @@ const IndustriesSection: React.FC = () => {
             Built for Every <span className="text-bright">Restaurant Segment</span>
           </h2>
           <p className="text-sm md:text-base text-white/70 font-medium">
-            Whether you run a single neighborhood food truck or coordinate a nationwide franchise network, <span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span> POS has the tools configured for your operations.
+            Whether you run a single neighborhood food truck or coordinate a nationwide franchise network, <span className="text-black font-black">Digi</span><span className="text-[#0055FF] font-black">Nizam</span> POS has the tools configured for your operations.
           </p>
         </div>
 

@@ -7,7 +7,7 @@ import { FiFileText, FiShield, FiServer, FiLock, FiCheckCircle, FiAlertCircle } 
 const termsSections = [
   {
     title: "1. Agreement to Terms",
-    content: <>By accessing or using the <span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span> platform, you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you may not use our services.</>,
+    content: <>By accessing or using the <span className="text-black font-black">Digi</span><span className="text-[#0055FF] font-black">Nizam</span> platform, you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you may not use our services.</>,
     icon: <FiFileText size={18} />
   },
   {
@@ -27,12 +27,12 @@ const termsSections = [
   },
   {
     title: "5. Intellectual Property",
-    content: <>All content, features, and functionality of the <span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span> platform—developed in partnership with Devsinn—are owned by us and protected by international copyright and trademark laws.</>,
+    content: <>All content, features, and functionality of the <span className="text-black font-black">Digi</span><span className="text-[#0055FF] font-black">Nizam</span> platform—developed in partnership with Devsinn—are owned by us and protected by international copyright and trademark laws.</>,
     icon: <FiCheckCircle size={18} />
   },
   {
     title: "6. Limitation of Liability",
-    content: <><span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span> and its partners shall not be liable for any indirect, incidental, special, or consequential damages resulting from your use or inability to use our platform services.</>,
+    content: <><span className="text-black font-black">Digi</span><span className="text-[#0055FF] font-black">Nizam</span> and its partners shall not be liable for any indirect, incidental, special, or consequential damages resulting from your use or inability to use our platform services.</>,
     icon: <FiAlertCircle size={18} />
   },
 ];
@@ -61,7 +61,7 @@ const TermsContent = () => {
           </h1>
 
           <p className="text-xs sm:text-sm text-gray-600 max-w-2xl mx-auto leading-relaxed font-normal">
-            Please read these terms and conditions carefully before using the <span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span> platform powered by Devsinn.
+            Please read these terms and conditions carefully before using the <span className="text-black font-black">Digi</span><span className="text-[#0055FF] font-black">Nizam</span> platform powered by Devsinn.
           </p>
         </motion.div>
 

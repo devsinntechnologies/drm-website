@@ -142,10 +142,10 @@ export default function WebDevelopmentPage() {
             className="max-w-3xl mx-auto"
           >
             <span className="inline-block text-[11px] font-bold uppercase tracking-widest text-white bg-black/60 border border-white/20 px-3 py-1 rounded-xl mb-3 shadow-lg backdrop-blur-md">
-              <span className="inline-flex items-center gap-1.5 align-middle">The <span className="text-white">Digi</span><span className="text-[#00B4FF]">Nizam</span> <Image src="/logo.png" alt="Logo" width={14} height={14} className="object-contain inline-block" /></span> WEB DEVELOPMENT SOLUTIONS
+              <span className="inline-flex items-center gap-1.5 align-middle">The <span className="text-white">Digi</span><span className="text-[#0055FF]">Nizam</span> <Image src="/logo.png" alt="Logo" width={14} height={14} className="object-contain inline-block" /></span> WEB DEVELOPMENT SOLUTIONS
             </span>
             <h1 className="text-base sm:text-lg font-black leading-tight text-white tracking-tight drop-shadow-[0_4px_18px_rgba(0,0,0,0.95)]" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.9), 0 0px 4px rgba(0,0,0,0.8)' }}>
-              Engineering <span className="text-[#00B4FF]" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.9)' }}>Digital Excellence</span>
+              Engineering <span className="text-[#0055FF]" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.9)' }}>Digital Excellence</span>
             </h1>
             <p className="text-xs md:text-sm text-gray-100 font-medium leading-relaxed mt-3 mb-4 drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
               Transform your brand's online presence with high-performance, custom-built web applications designed to engage users and maximize conversions.

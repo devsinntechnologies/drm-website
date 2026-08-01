@@ -29,7 +29,7 @@ const ContactHero = () => {
           </h1>
 
           <p className="text-xs sm:text-sm text-gray-600 max-w-2xl mx-auto leading-relaxed font-normal">
-            Have questions about how <span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span> Software Solutions can transform your business? Our team is standing by to provide expert guidance and answer all your inquiries.
+            Have questions about how <span className="text-black font-black">Digi</span><span className="text-[#0055FF] font-black">Nizam</span> Software Solutions can transform your business? Our team is standing by to provide expert guidance and answer all your inquiries.
           </p>
         </motion.div>
       </div>

@@ -14,7 +14,7 @@ export default function SmartFeaturesGridSection() {
     {
       icon: <FiGrid className="w-5 h-5 text-[#0055FF]" />,
       title: "Multi-Store Control",
-      desc: <><span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span> POS software gives you the ultimate flexibility to manage multiple stores seamlessly from a single dashboard.</>
+      desc: <><span className="text-black font-black">Digi</span><span className="text-[#0055FF] font-black">Nizam</span> POS software gives you the ultimate flexibility to manage multiple stores seamlessly from a single dashboard.</>
     },
     {
       icon: <FiBox className="w-5 h-5 text-[#0055FF]" />,
@@ -29,7 +29,7 @@ export default function SmartFeaturesGridSection() {
     {
       icon: <FiZap className="w-5 h-5 text-[#0055FF]" />,
       title: "Fast Sales Processing",
-      desc: <>Enjoy speedy check-out processing for maximum customer satisfaction, making <span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span> a top-tier POS choice.</>
+      desc: <>Enjoy speedy check-out processing for maximum customer satisfaction, making <span className="text-black font-black">Digi</span><span className="text-[#0055FF] font-black">Nizam</span> a top-tier POS choice.</>
     },
     {
       icon: <FiAlertTriangle className="w-5 h-5 text-[#0055FF]" />,

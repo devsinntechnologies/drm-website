@@ -26,7 +26,7 @@ export default function AboutWhyUs() {
           transition={{ duration: 0.5 }}
         >
           <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3.5 py-1.5 rounded-xl mb-3 border border-[#0055FF]/20">
-            The <span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span> Advantage
+            The <span className="text-black font-black">Digi</span><span className="text-[#0055FF] font-black">Nizam</span> Advantage
           </span>
           <h2 className="text-lg sm:text-xl lg:text-base font-black mb-3 tracking-tight text-[#08162D]">
             Why choose us as your technology partner?

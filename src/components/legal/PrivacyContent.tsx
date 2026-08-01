@@ -61,7 +61,7 @@ const PrivacyContent = () => {
           </h1>
 
           <p className="text-xs sm:text-sm text-gray-600 max-w-2xl mx-auto leading-relaxed font-normal">
-            Your trust matters to us. This Privacy Policy explains how <span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span> collects, uses, protects, and manages your information while delivering a secure and reliable experience.
+            Your trust matters to us. This Privacy Policy explains how <span className="text-black font-black">Digi</span><span className="text-[#0055FF] font-black">Nizam</span> collects, uses, protects, and manages your information while delivering a secure and reliable experience.
           </p>
         </motion.div>
 

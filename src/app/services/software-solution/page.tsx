@@ -40,7 +40,7 @@ export default function SoftwareSolutionPage() {
               ENTERPRISE SERVICES • DEVSINN SOLUTIONS
             </span>
             <h1 className="text-base sm:text-lg font-black leading-tight text-white tracking-tight drop-shadow-[0_4px_18px_rgba(0,0,0,0.95)]" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.9), 0 0px 4px rgba(0,0,0,0.8)' }}>
-              Bespoke <span className="text-[#00B4FF]" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.9)' }}>Software Solutions</span>
+              Bespoke <span className="text-[#0055FF]" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.9)' }}>Software Solutions</span>
             </h1>
             <p className="text-xs md:text-sm text-gray-100 font-medium leading-relaxed mt-3 mb-4 drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
               We design, develop, and deploy scalable enterprise software tailored specifically for your operational workflows by Devsinn with absolute reliability.

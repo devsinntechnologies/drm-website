@@ -35,7 +35,7 @@ const BlogHero = () => {
             </h1>
 
             <p className="text-xs sm:text-sm text-gray-600 max-w-2xl mx-auto leading-relaxed font-normal">
-              Master the art of enterprise management with <span className="text-black font-black">Digi</span><span className="text-[#00B4FF] font-black">Nizam</span>. Stay ahead with deep dives into industry trends, technical guides, and operational strategies.
+              Master the art of enterprise management with <span className="text-black font-black">Digi</span><span className="text-[#0055FF] font-black">Nizam</span>. Stay ahead with deep dives into industry trends, technical guides, and operational strategies.
             </p>
           </motion.div>
 

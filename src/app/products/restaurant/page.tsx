@@ -35,10 +35,10 @@ export default function RestaurantSolutionPage() {
             className="max-w-3xl mx-auto"
           >
             <span className="inline-block text-[11px] font-bold uppercase tracking-widest text-white bg-black/60 border border-white/20 px-3.5 py-1.5 rounded-xl mb-4 shadow-lg backdrop-blur-md">
-              <span className="inline-flex items-center gap-1.5 align-middle"><span className="text-white">Digi</span><span className="text-[#00B4FF]">Nizam</span> <Image src="/logo.png" alt="Logo" width={14} height={14} className="object-contain inline-block" /></span> RETAIL SOLUTIONS • RESTAURANT SUITE
+              <span className="inline-flex items-center gap-1.5 align-middle"><span className="text-white">Digi</span><span className="text-[#0055FF]">Nizam</span> <Image src="/logo.png" alt="Logo" width={14} height={14} className="object-contain inline-block" /></span> RETAIL SOLUTIONS • RESTAURANT SUITE
             </span>
             <h1 className="text-base sm:text-lg font-black leading-tight text-white tracking-tight drop-shadow-[0_4px_18px_rgba(0,0,0,0.95)]" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.9), 0 0px 4px rgba(0,0,0,0.8)' }}>
-              Advanced <span className="text-[#00B4FF]" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.9)' }}>Restaurant</span> POS System
+              Advanced <span className="text-[#0055FF]" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.9)' }}>Restaurant</span> POS System
             </h1>
             <p className="text-sm md:text-base text-gray-200 font-medium leading-relaxed mt-3 mb-4 drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
               Streamline your dine-in, takeaway, delivery, kitchen display orders, and table management seamlessly with Pakistan&apos;s leading smart restaurant software, engineered for speed and absolute reliability.
