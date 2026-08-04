@@ -21,16 +21,16 @@ const clienteleLogos = [
 
 export default function ProductClientele({ bgLight = true }: ProductClienteleProps) {
   return (
-    <section className={`py-4 md:py-6 ${bgLight ? "bg-gray-50" : "bg-white"} border-b border-gray-200 relative overflow-hidden`}>
+    <section className={`py-4 md:py-6 ${bgLight ? "bg-surface" : "bg-surface"} border-b border-surface-border relative overflow-hidden`}>
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-4">
-          <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3.5 py-1 rounded-xl mb-2 border border-[#0055FF]/20">
+          <span className="inline-block text-xs font-bold uppercase tracking-widest text-primary bg-primary/10 px-3.5 py-1 rounded-xl mb-2 border border-primary/20">
             OUR CLIENTELE
           </span>
-          <h2 className="text-base sm:text-lg font-black text-[#08162D] tracking-tight">
-            Trusted by Industry <span className="text-[#0055FF]">Leaders &amp; Brands</span>
+          <h2 className="text-base sm:text-lg font-black text-foreground tracking-tight">
+            Trusted by Industry <span className="text-primary">Leaders &amp; Brands</span>
           </h2>
-          <p className="text-gray-600 text-xs sm:text-sm font-normal mt-1">
+          <p className="text-muted text-xs sm:text-sm font-normal mt-1">
             Empowering hundreds of retail outlets, enterprise chains, and businesses across the country.
           </p>
         </div>
@@ -43,7 +43,7 @@ export default function ProductClientele({ bgLight = true }: ProductClientelePro
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.05 }}
-              className="bg-white border border-gray-200 rounded-xl p-3 flex flex-col items-center justify-center text-center shadow-sm hover:border-[#0055FF] hover:shadow-md transition-all group h-20"
+              className="bg-surface border border-surface-border rounded-xl p-3 flex flex-col items-center justify-center text-center shadow-sm hover:border-primary hover:shadow-md transition-all group h-20"
             >
               <div className="relative w-8 h-8 mb-1.5 grayscale group-hover:grayscale-0 transition-all">
                 <Image
@@ -53,7 +53,7 @@ export default function ProductClientele({ bgLight = true }: ProductClientelePro
                   className="object-contain"
                 />
               </div>
-              <span className="text-[10px] font-bold text-gray-700 group-hover:text-[#0055FF] transition-colors truncate w-full">
+              <span className="text-[10px] font-bold text-muted group-hover:text-primary transition-colors truncate w-full">
                 {client.name}
               </span>
             </motion.div>

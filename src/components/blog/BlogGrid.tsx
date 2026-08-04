@@ -8,7 +8,7 @@ const posts = [
   {
     title: 'How to increase your enterprise sales by 20% in 30 days',
     category: 'Marketing',
-    date: 'Oct 24, 2023',
+    date: 'Jul 24, 2026',
     image: '/blog/blog1.jpg',
     author: 'Sarah Rahman',
     role: 'CEO, DigiNizam Partner',
@@ -17,7 +17,7 @@ const posts = [
   {
     title: 'The future of enterprise technology: What to expect in 2026',
     category: 'Technology',
-    date: 'Oct 15, 2023',
+    date: 'Jul 15, 2026',
     image: '/blog/blog2.jpg',
     author: 'Ahmed Malik',
     role: 'Product Head',
@@ -26,7 +26,7 @@ const posts = [
   {
     title: '10 best practices for digital inventory and asset management',
     category: 'Inventory',
-    date: 'Oct 08, 2023',
+    date: 'Jun 08, 2026',
     image: '/blog/blog3.jpg',
     author: 'Zeba Khan',
     role: 'Operations Expert',
@@ -35,7 +35,7 @@ const posts = [
   {
     title: 'The impact of cloud platforms on modern business scale',
     category: 'Technology',
-    date: 'Sep 28, 2023',
+    date: 'May 28, 2026',
     image: '/blog/blog4.jpg',
     author: 'John Doe',
     role: 'Solution Architect',
@@ -44,7 +44,7 @@ const posts = [
   {
     title: 'Why automated workflow solutions are a game changer',
     category: 'User Experience',
-    date: 'Sep 15, 2023',
+    date: 'May 15, 2026',
     image: '/blog/blog5.jpg',
     author: 'Ayesha Sid',
     role: 'Service Manager',
@@ -53,7 +53,7 @@ const posts = [
   {
     title: 'Digital loyalty programs: Building repeat corporate customers',
     category: 'Marketing',
-    date: 'Sep 05, 2023',
+    date: 'May 05, 2026',
     image: '/blog/blog6.jpg',
     author: 'Omar Farooq',
     role: 'Growth Hacker',
@@ -65,9 +65,9 @@ const BlogGrid = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   return (
-    <section className="py-3 md:py-4 bg-white text-[#08162D] relative overflow-hidden border-b border-gray-200">
+    <section className="py-3 md:py-4 bg-surface text-foreground relative overflow-hidden border-b border-surface-border">
       {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-[#0055FF]/5 blur-[160px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-primary/5 blur-[160px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
         <motion.div
@@ -84,7 +84,7 @@ const BlogGrid = () => {
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.4, delay: idx * 0.05 }}
               >
-                <Link href={`/blog/${idx}`} className="bg-white rounded-2xl overflow-hidden group h-full flex flex-col border border-gray-200 shadow-sm hover:border-[#0055FF] hover:shadow-xl transition-all">
+                <Link href={`/blog/${idx}`} className="bg-surface rounded-2xl overflow-hidden group h-full flex flex-col border border-surface-border shadow-sm hover:border-primary hover:shadow-xl transition-all">
                   {/* Image Section */}
                   <div className="relative aspect-[16/9] overflow-hidden">
                     <Image
@@ -93,9 +93,9 @@ const BlogGrid = () => {
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#08162D]/60 to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[var(--foreground)]/60 to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
                     <div className="absolute top-3 left-3">
-                      <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-[#0055FF] bg-white/90 border border-[#0055FF]/20 px-2.5 py-1 rounded-xl backdrop-blur-md">
+                      <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-primary bg-surface/90 border border-primary/20 px-2.5 py-1 rounded-xl backdrop-blur-md">
                         {post.category}
                       </span>
                     </div>
@@ -104,36 +104,36 @@ const BlogGrid = () => {
                   {/* Content Section */}
                   <div className="p-4 md:p-5 flex flex-col flex-1">
                     <div className="flex items-center gap-3 mb-2.5">
-                      <div className="text-[10px] font-black text-gray-500 uppercase tracking-wider flex items-center gap-1.5">
-                        <svg className="w-3 h-3 text-[#0055FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <div className="text-[10px] font-black text-muted uppercase tracking-wider flex items-center gap-1.5">
+                        <svg className="w-3 h-3 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                         </svg>
                         {post.date}
                       </div>
-                      <div className="text-[10px] font-black text-gray-500 uppercase tracking-wider flex items-center gap-1.5">
-                        <svg className="w-3 h-3 text-[#0055FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <div className="text-[10px] font-black text-muted uppercase tracking-wider flex items-center gap-1.5">
+                        <svg className="w-3 h-3 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                         {post.time}
                       </div>
                     </div>
 
-                    <h3 className="text-sm md:text-base font-black text-[#08162D] mb-4 group-hover:text-[#0055FF] transition-colors leading-snug">
+                    <h3 className="text-sm md:text-base font-black text-foreground mb-4 group-hover:text-primary transition-colors leading-snug">
                       {post.title}
                     </h3>
 
                     {/* Meta Section */}
-                    <div className="mt-auto pt-3 border-t border-gray-100 flex items-center justify-between">
+                    <div className="mt-auto pt-3 border-t border-surface-border flex items-center justify-between">
                       <div className="flex items-center gap-2.5">
-                        <div className="w-8 h-8 rounded-full bg-[#0055FF]/10 flex items-center justify-center font-black text-[#0055FF] text-xs border border-[#0055FF]/20">
+                        <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center font-black text-primary text-xs border border-primary/20">
                           {post.author[0]}
                         </div>
                         <div>
-                          <div className="text-xs font-black text-[#08162D]">{post.author}</div>
-                          <div className="text-[9px] uppercase font-bold text-gray-500 tracking-tighter"><span className="text-black font-black">Digi</span><span className="text-[#0055FF] font-black">Nizam</span> Platform</div>
+                          <div className="text-xs font-black text-foreground">{post.author}</div>
+                          <div className="text-[9px] uppercase font-bold text-muted tracking-tighter"><span className="text-black font-black">Digi</span><span className="text-primary font-black">Nizam</span> Platform</div>
                         </div>
                       </div>
-                      <div className="p-1.5 rounded-xl bg-gray-50 group-hover:bg-[#0055FF] group-hover:text-white transition-all transform group-hover:translate-x-1">
+                      <div className="p-1.5 rounded-xl bg-surface group-hover:bg-primary group-hover:text-white transition-all transform group-hover:translate-x-1">
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>

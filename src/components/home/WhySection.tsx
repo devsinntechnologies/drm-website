@@ -30,7 +30,7 @@ const WhySection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
         <div className="text-center mb-4">
           <span className="section-label">Competitive Advantage</span>
-          <h2 className="text-xl md:text-base font-extrabold text-foreground mb-4">
+          <h2 className="text-xl md:text-2xl font-extrabold text-foreground mb-4">
             Why <span className="text-primary">RMS by Devsinn</span>?
           </h2>
           <p className="text-muted text-lg max-w-xl mx-auto">
@@ -84,7 +84,7 @@ const WhySection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="glass-card rounded-[32px] p-4 bg-white border-primary/30 shadow-xl relative overflow-hidden flex flex-col justify-between"
+            className="glass-card rounded-[32px] p-4 bg-surface border-primary/30 shadow-xl relative overflow-hidden flex flex-col justify-between"
             style={{
               boxShadow: "0 20px 40px rgba(62, 163, 72, 0.08), inset 0 0 0 1px rgba(62, 163, 72, 0.1)",
             }}

@@ -1,174 +1,151 @@
 "use client";
-import React from "react";
+
+import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
+import Button from "@/components/ui/Button";
+import { Input, Select, Label, FieldError, FieldSuccess } from "@/components/ui/Field";
 
 const DemoForm = () => {
+  const form = useRef<HTMLFormElement>(null);
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const [errorMsg, setErrorMsg] = useState("");
+
   const perks = [
     "Full system walkthrough",
     "Hardware compatibility check",
     "Custom menu strategy",
-    "ROI & Pricing analysis",
+    "ROI & pricing analysis",
   ];
 
+  const sendDemoRequest = (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    setStatus("idle");
+    setErrorMsg("");
+
+    emailjs
+      .sendForm("service_a9bjgoa", "template_2m58y9m", form.current!, "EEOfnkaZIXRveWeQP")
+      .then(
+        () => {
+          setStatus("success");
+          setLoading(false);
+          form.current?.reset();
+        },
+        (error) => {
+          console.error(error);
+          setStatus("error");
+          setErrorMsg("Could not schedule your walkthrough. Please try again or contact us.");
+          setLoading(false);
+        }
+      );
+  };
+
   return (
-    <section className="py-10 bg-white text-[#08162D] relative overflow-hidden border-t border-gray-200">
-      {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[500px] bg-[#0055FF]/5 blur-[180px] rounded-full pointer-events-none" />
+    <section className="py-10 bg-background text-foreground relative overflow-hidden border-t border-surface-border">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[360px] bg-primary/5 blur-[140px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-4 items-center">
-
-          {/* PERKS SIDE */}
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -32 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             className="flex-1"
           >
-            <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 border border-[#0055FF]/20 px-4 py-2 rounded-xl mb-4">
-              FREE WALKTHROUGH
-            </span>
-            <h3 className="text-lg sm:text-xl font-black text-[#08162D] mb-4 tracking-tight">
-              What to expect in your{" "}
-              <span className="text-[#0055FF]">Free Walkthrough</span>
-            </h3>
+            <span className="section-label">Free walkthrough</span>
+            <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-5 tracking-tight">
+              What to expect in your <span className="text-primary">free demo</span>
+            </h2>
 
-            <div className="space-y-6">
-              {perks.map((perk, idx) => (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: idx * 0.1 }}
-                  className="flex items-center gap-4 text-base font-bold text-gray-700 group"
-                >
-                  <div className="w-8 h-8 rounded-full bg-[#0055FF]/10 flex items-center justify-center text-[#0055FF] group-hover:bg-[#0055FF] group-hover:text-white transition-all shrink-0">
-                    <svg
-                      className="w-5 h-5"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={3}
-                        d="M5 13l4 4L19 7"
-                      />
+            <div className="space-y-4">
+              {perks.map((perk) => (
+                <div key={perk} className="flex items-center gap-3 text-sm sm:text-base font-medium text-muted group">
+                  <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all shrink-0">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
                   {perk}
-                </motion.div>
+                </div>
               ))}
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
-              className="mt-6 p-4 bg-white border border-gray-200 shadow-sm rounded-2xl relative overflow-hidden group hover:border-[#0055FF] transition-all"
-            >
-              <p className="text-gray-600 leading-relaxed font-normal italic">
-                "Scheduling a demo was the best decision for our cafe. The expert showed us exactly
-                how we could cut wastage by 15% using their inventory system."
+            <div className="mt-6 p-4 surface-card">
+              <p className="text-muted leading-relaxed text-sm italic">
+                &ldquo;The demo showed us exactly how we could cut wastage using DigiNizam inventory.&rdquo;
               </p>
-              <div className="mt-4 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center font-black text-xs">
+              <div className="mt-3 flex items-center gap-3">
+                <div className="w-9 h-9 rounded-xl bg-primary/10 text-primary flex items-center justify-center font-bold text-xs">
                   AP
                 </div>
-                <div className="text-sm font-black text-[#08162D]">
-                  Aiden Pearce, CEO @ CafeX
-                </div>
+                <div className="text-sm font-semibold text-foreground">Aiden Pearce, CafeX</div>
               </div>
-            </motion.div>
+            </div>
           </motion.div>
 
-          {/* FORM SIDE */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
             className="flex-1 w-full max-w-xl"
           >
-            <form className="bg-white p-4 md:p-6 rounded-2xl border border-gray-200 shadow-sm relative overflow-hidden">
+            <form
+              ref={form}
+              onSubmit={sendDemoRequest}
+              className="surface-card p-5 md:p-6 relative overflow-hidden"
+              noValidate
+            >
+              <div className="space-y-4 relative z-10">
+                <input type="hidden" name="subject" value="Demo Request" />
+                <input type="hidden" name="message" value="Requested a free DigiNizam walkthrough." />
 
-              <div className="space-y-6 relative z-10">
-
-                {/* Restaurant Name */}
-                <div className="space-y-2">
-                  <label className="block text-xs font-bold uppercase tracking-wider text-gray-700 ml-1">
-                    Restaurant Name
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="e.g. CafeX"
-                    required
-                    className="w-full bg-white border border-gray-200 rounded-xl px-5 py-3.5 focus:border-[#0055FF] focus:ring-1 focus:ring-[#0055FF] outline-none transition-all font-semibold text-[#08162D]"
-                  />
+                <div>
+                  <Label htmlFor="user_name">Business name</Label>
+                  <Input id="user_name" name="user_name" type="text" placeholder="e.g. CafeX" required />
                 </div>
 
-                {/* City + Phone */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-
-                  <div className="space-y-2">
-                    <label className="block text-xs font-bold uppercase tracking-wider text-gray-700 ml-1">
-                      Outlet City
-                    </label>
-                    <input
-                      type="text"
-                      placeholder="e.g. Lahore"
-                      required
-                      className="w-full bg-white border border-gray-200 rounded-xl px-5 py-3.5 focus:border-[#0055FF] focus:ring-1 focus:ring-[#0055FF] outline-none transition-all font-semibold text-[#08162D]"
-                    />
+                  <div>
+                    <Label htmlFor="city">Outlet city</Label>
+                    <Input id="city" name="city" type="text" placeholder="e.g. Lahore" required />
                   </div>
-
-                  <div className="space-y-2">
-                    <label className="block text-xs font-bold uppercase tracking-wider text-gray-700 ml-1">
-                      Phone Number
-                    </label>
-                    <input
-                      type="tel"
-                      placeholder="0300-1234567"
-                      required
-                      className="w-full bg-white border border-gray-200 rounded-xl px-5 py-3.5 focus:border-[#0055FF] focus:ring-1 focus:ring-[#0055FF] outline-none transition-all font-semibold text-[#08162D]"
-                    />
+                  <div>
+                    <Label htmlFor="user_email">Email</Label>
+                    <Input id="user_email" name="user_email" type="email" placeholder="you@business.com" required />
                   </div>
-
                 </div>
 
-                {/* Order Volume */}
-                <div className="space-y-2">
-                  <label className="block text-xs font-bold uppercase tracking-wider text-gray-700 ml-1">
-                    Daily Order Volume
-                  </label>
-                  <select
-                    className="w-full bg-white border border-gray-200 rounded-xl px-5 py-3.5 focus:border-[#0055FF] focus:ring-1 focus:ring-[#0055FF] outline-none transition-all font-semibold text-[#08162D] appearance-none cursor-pointer"
-                  >
+                <div>
+                  <Label htmlFor="phone">Phone number</Label>
+                  <Input id="phone" name="phone" type="tel" placeholder="0300-1234567" required />
+                </div>
+
+                <div>
+                  <Label htmlFor="volume">Daily order volume</Label>
+                  <Select id="volume" name="volume" defaultValue="0 - 50 Orders">
                     <option>0 - 50 Orders</option>
                     <option>50 - 200 Orders</option>
                     <option>200+ Orders</option>
-                  </select>
+                  </Select>
                 </div>
 
-                {/* Button */}
-                <motion.button
-                  whileHover={{ scale: 1.02, y: -2 }}
-                  whileTap={{ scale: 0.98 }}
-                  type="submit"
-                  className="w-full py-4 bg-[#0055FF] hover:bg-[#0044cc] text-white font-black text-xs uppercase tracking-widest rounded-xl shadow-lg transition-all cursor-pointer"
-                >
-                  Schedule Walkthrough
-                </motion.button>
+                {status === "success" && (
+                  <FieldSuccess>Walkthrough request sent. Our team will contact you soon.</FieldSuccess>
+                )}
+                {status === "error" && <FieldError>{errorMsg}</FieldError>}
 
-                <p className="text-center text-[11px] text-gray-500 font-bold uppercase tracking-widest">
+                <Button type="submit" variant="primary" fullWidth disabled={loading}>
+                  {loading ? "Scheduling..." : "Schedule Walkthrough"}
+                </Button>
+
+                <p className="text-center text-xs text-muted font-medium">
                   No credit card required. No commitment.
                 </p>
-
               </div>
             </form>
           </motion.div>
-
         </div>
       </div>
     </section>

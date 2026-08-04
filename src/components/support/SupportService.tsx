@@ -57,7 +57,7 @@ const SupportService = () => {
           className="text-center mb-4 md:mb-4"
         >
           <span className="section-label">Professional Services</span>
-          <h2 className="text-xl sm:text-base md:text-xl font-black text-foreground mb-4 md:mb-4">
+          <h2 className="text-xl sm:text-2xl md:text-xl font-black text-foreground mb-4 md:mb-4">
             Tailored <span className="text-primary">Assistance</span> <br />
             For Every Outlet
           </h2>

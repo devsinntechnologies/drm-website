@@ -18,7 +18,7 @@ const FeaturesChef = () => {
             className="flex-1"
           >
             <span className="section-label mb-4 md:mb-4">Staff Management</span>
-            <h2 className="text-xl sm:text-base md:text-lg lg:text-xl font-extrabold text-foreground mb-4 leading-tight">
+            <h2 className="text-xl sm:text-2xl md:text-lg lg:text-xl font-extrabold text-foreground mb-4 leading-tight">
               Chef <span className="text-primary">Performance</span> <br />
               Monitoring
             </h2>
@@ -34,7 +34,7 @@ const FeaturesChef = () => {
               transition={{ delay: 0.4 }}
               className="p-5 md:p-4 rounded-[28px] md:rounded-[40px] glass-card border border-primary/20 bg-primary/5"
             >
-              <h4 className="text-xl md:text-base font-bold text-primary mb-3 md:mb-4 flex items-center gap-3">
+              <h4 className="text-xl md:text-2xl font-bold text-primary mb-3 md:mb-4 flex items-center gap-3">
                  <span className="w-2 h-2 rounded-full bg-primary animate-ping" />
                  Real-time Efficiency
               </h4>

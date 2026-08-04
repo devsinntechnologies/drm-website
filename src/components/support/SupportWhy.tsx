@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
+import Button from '@/components/ui/Button';
 
 const reasons = [
   {
@@ -54,21 +55,17 @@ const SupportWhy = () => {
             className="flex-1"
           >
             <span className="section-label mb-4">Why Our Support?</span>
-            <h2 className="text-lg sm:text-xl md:text-base font-black text-foreground mb-4 md:mb-4 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 md:mb-4 leading-tight">
               Customer Success is <br />
               <span className="text-primary">Our Top Priority</span>
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-muted leading-relaxed font-bold mb-4 md:mb-4">
-              We don't just sell software; we become your partners in growth. Our support
+            <p className="text-base sm:text-lg text-muted leading-relaxed font-medium mb-4 md:mb-4">
+              We don&apos;t just sell software; we become your partners in growth. Our support
               infrastructure is built to handle mission-critical restaurant operations.
             </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-primary text-white font-bold rounded-2xl shadow-xl glow-primary"
-            >
+            <Button href="/contact" variant="primary" size="lg">
               Get Priority Support
-            </motion.button>
+            </Button>
           </motion.div>
 
           <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -88,8 +85,8 @@ const SupportWhy = () => {
                 >
                   {reason.icon}
                 </motion.div>
-                <h4 className="text-lg font-extrabold text-foreground mb-2 group-hover:text-primary transition-colors">{reason.title}</h4>
-                <p className="text-sm text-muted font-bold leading-relaxed">{reason.desc}</p>
+                <h4 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">{reason.title}</h4>
+                <p className="text-sm text-muted font-medium leading-relaxed">{reason.desc}</p>
               </motion.div>
             ))}
           </div>

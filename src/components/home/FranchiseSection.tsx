@@ -26,7 +26,7 @@ const FranchiseSection: React.FC = () => {
           {/* Details - Left Side */}
           <div>
             <span className="section-label">Enterprise Ready</span>
-            <h2 className="text-xl md:text-base font-extrabold text-foreground mb-4 leading-tight tracking-tight">
+            <h2 className="text-xl md:text-2xl font-extrabold text-foreground mb-4 leading-tight tracking-tight">
               Enterprise-Grade <span className="text-primary">Franchise Management</span>
             </h2>
             <p className="text-muted text-lg mb-4 font-medium">
@@ -59,7 +59,7 @@ const FranchiseSection: React.FC = () => {
             {/* Ambient Glow */}
             <div className="absolute inset-0 bg-primary/5 rounded-[32px] blur-xl" />
 
-            <div className="relative glass-card rounded-[32px] border border-surface-border/95 bg-white p-6 shadow-2xl">
+            <div className="relative glass-card rounded-[32px] border border-surface-border/95 bg-surface p-6 shadow-2xl">
               
               {/* Header */}
               <div className="flex justify-between items-center border-b border-surface-border pb-4 mb-4">
@@ -104,7 +104,7 @@ const FranchiseSection: React.FC = () => {
                   <span className="text-[9px] font-black text-primary uppercase tracking-widest block mb-1">Standardized Ops</span>
                   <span className="text-xs font-bold text-foreground">Base Menu & Pricing locked</span>
                 </div>
-                <span className="text-xs font-black text-primary uppercase tracking-widest bg-white border border-primary/20 px-3 py-1.5 rounded-lg">
+                <span className="text-xs font-black text-primary uppercase tracking-widest bg-surface border border-primary/20 px-3 py-1.5 rounded-lg">
                   Enforced
                 </span>
               </div>

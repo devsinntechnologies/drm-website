@@ -24,18 +24,22 @@ export default function AllIndustriesSection() {
   ];
 
   return (
-    <section className="py-6 md:py-8 bg-white border-b border-gray-200 relative overflow-hidden">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-[#0055FF]/5 blur-[140px] rounded-full pointer-events-none" />
+    <section className="py-12 md:py-16 bg-surface border-b border-surface-border relative overflow-hidden">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-primary/10 blur-[140px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-4 flex flex-col items-center">
-          <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-4 py-2 rounded-xl mb-3 border border-[#0055FF]/20">
-            INDUSTRIES WE SERVE
+        <div className="text-center max-w-3xl mx-auto mb-8 md:mb-10 flex flex-col items-center">
+          <span className="inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.14em] text-primary mb-3">
+            <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+            Industries we serve
           </span>
-          <h2 className="text-lg sm:text-xl lg:text-base font-black text-[#08162D] tracking-tight">
-            ALL IN ONE SOLUTION FOR ALL INDUSTRIES
+          <h2
+            className="font-semibold tracking-tight text-foreground"
+            style={{ fontSize: "clamp(30px, 4.2vw, 46px)", lineHeight: 1.12 }}
+          >
+            All-in-one solution for every industry
           </h2>
-          <p className="text-xs md:text-sm text-gray-600 mt-3 font-normal leading-relaxed">
+          <p className="text-sm md:text-base text-muted mt-3 leading-relaxed max-w-xl">
             Tailor-made software features customized specifically to run workflows efficiently across diverse business sectors.
           </p>
         </div>
@@ -55,8 +59,8 @@ export default function AllIndustriesSection() {
                   className="object-contain transition-transform duration-300 group-hover:scale-110"
                 />
               </div>
-              <div className="border border-gray-300 group-hover:border-[#0055FF] px-5 py-2 rounded-xl bg-white shadow-sm transition-all">
-                <span className="text-xs font-bold tracking-wider text-[#08162D] uppercase">
+              <div className="border border-gray-300 group-hover:border-primary px-5 py-2 rounded-xl bg-surface shadow-sm transition-all">
+                <span className="text-xs font-bold tracking-wider text-foreground uppercase">
                   {item.name}
                 </span>
               </div>

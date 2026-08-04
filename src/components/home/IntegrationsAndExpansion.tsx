@@ -7,16 +7,16 @@ const IntegrationsAndExpansion = () => {
   const rules = ["Franchise Order Management", "Set credit or other rules", "Monitor ROI securely"];
 
   return (
-    <section className="relative overflow-hidden py-10 bg-white">
+    <section className="relative overflow-hidden py-10 bg-surface">
       <div className="absolute inset-x-0 top-0 h-80 bg-gradient-to-b from-royal/10 to-transparent pointer-events-none" />
       <div className="absolute left-1/2 top-24 h-72 w-72 -translate-x-1/2 rounded-full bg-bright/[0.06] blur-[120px] pointer-events-none" />
-      <div className="absolute right-0 top-32 h-72 w-72 rounded-full bg-royal/5 blur-[120px] pointer-events-none" />
+      <div className="absolute right-0 top-32 h-72 w-72 rounded-full bg-primary/5 blur-[120px] pointer-events-none" />
       <div className="absolute left-0 bottom-0 h-72 w-72 rounded-full bg-navy/5 blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-4 items-center">
           <div className="space-y-8">
-            <span className="inline-flex items-center gap-3 rounded-full bg-royal/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.3em] text-royal border border-royal/20">
+            <span className="inline-flex items-center gap-3 rounded-full bg-primary/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.3em] text-royal border border-royal/20">
               Compliance & Expansion
             </span>
             <div className="space-y-4">
@@ -37,7 +37,7 @@ const IntegrationsAndExpansion = () => {
               ].map((item, idx) => (
                 <div
                   key={idx}
-                  className="relative overflow-hidden rounded-xl border border-navy/10 bg-white p-6 shadow-sm hover:border-royal transition-all"
+                  className="relative overflow-hidden rounded-xl border border-navy/10 bg-surface p-6 shadow-sm hover:border-royal transition-all"
                 >
                   <div className="relative z-10">
                     <div className="text-lg font-black text-navy">{item.value}</div>
@@ -49,31 +49,31 @@ const IntegrationsAndExpansion = () => {
           </div>
 
           <div className="grid grid-cols-1 gap-4">
-            <div className="relative overflow-hidden rounded-xl border border-navy/10 bg-white p-6 shadow-sm hover:border-royal transition-all">
+            <div className="relative overflow-hidden rounded-xl border border-navy/10 bg-surface p-6 shadow-sm hover:border-royal transition-all">
               <div className="relative z-10 flex items-center justify-between gap-4">
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-wider text-royal bg-royal/10 px-3 py-1 rounded-xl mb-3">Authority sync</p>
+                  <p className="text-xs font-bold uppercase tracking-wider text-royal bg-primary/10 px-3 py-1 rounded-xl mb-3">Authority sync</p>
                   <h3 className="text-xl font-black text-navy">FBR, SRB, PRA &amp; KPRA</h3>
                 </div>
-                <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-royal/10 text-royal shadow-sm">✓</span>
+                <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-royal shadow-sm">✓</span>
               </div>
               <div className="mt-6 grid gap-3">
                 {auths.map((auth, idx) => (
                   <div key={idx} className="flex items-center gap-3 rounded-xl bg-navy/5 p-4 shadow-sm border border-navy/5">
-                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-royal/10 text-royal font-bold text-xs">{auth}</div>
+                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-royal font-bold text-xs">{auth}</div>
                     <span className="text-sm font-medium text-navy/70">Instantly connected and monitored</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="relative overflow-hidden rounded-xl border border-navy/10 bg-white p-6 shadow-sm hover:border-royal transition-all">
+            <div className="relative overflow-hidden rounded-xl border border-navy/10 bg-surface p-6 shadow-sm hover:border-royal transition-all">
               <div className="relative z-10 flex items-center justify-between gap-4">
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-wider text-royal bg-royal/10 px-3 py-1 rounded-xl mb-3">Franchise rules</p>
+                  <p className="text-xs font-bold uppercase tracking-wider text-royal bg-primary/10 px-3 py-1 rounded-xl mb-3">Franchise rules</p>
                   <h3 className="text-xl font-black text-navy">Safe ROI controls</h3>
                 </div>
-                <div className="inline-flex rounded-xl bg-royal/10 px-3 py-2 text-xs font-bold text-royal">Smart</div>
+                <div className="inline-flex rounded-xl bg-primary/10 px-3 py-2 text-xs font-bold text-royal">Smart</div>
               </div>
               <div className="mt-6 space-y-3">
                 {rules.map((rule, idx) => (
@@ -94,10 +94,10 @@ const IntegrationsAndExpansion = () => {
           ].map((item, idx) => (
             <div
               key={idx}
-              className="relative overflow-hidden rounded-xl border border-navy/10 bg-white p-4 text-center shadow-sm hover:border-royal transition-all"
+              className="relative overflow-hidden rounded-xl border border-navy/10 bg-surface p-4 text-center shadow-sm hover:border-royal transition-all"
             >
               <div className="relative z-10">
-                <span className="inline-flex items-center gap-2 rounded-xl bg-royal/10 px-3 py-2 text-xs font-bold text-royal border border-royal/20">
+                <span className="inline-flex items-center gap-2 rounded-xl bg-primary/10 px-3 py-2 text-xs font-bold text-royal border border-royal/20">
                   {item.icon}
                   {item.title}
                 </span>

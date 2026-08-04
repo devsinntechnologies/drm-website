@@ -30,7 +30,7 @@ const IntegrationsSection: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-4 max-w-3xl mx-auto">
           <span className="section-label">Connected Ecosystem</span>
-          <h2 className="text-xl md:text-base font-extrabold text-foreground mb-4 leading-tight tracking-tight">
+          <h2 className="text-xl md:text-2xl font-extrabold text-foreground mb-4 leading-tight tracking-tight">
             Integrated with Your <span className="text-primary">Favorite Tools</span>
           </h2>
           <p className="text-muted text-lg font-medium">
@@ -50,7 +50,7 @@ const IntegrationsSection: React.FC = () => {
               onMouseEnter={() => setHoveredIdx(idx)}
               onMouseLeave={() => setHoveredIdx(null)}
               whileHover={{ y: -6, scale: 1.01 }}
-              className="glass-card bg-surface/40 border-surface-border p-6 rounded-2xl flex flex-col justify-between h-full hover:bg-white hover:border-primary/25 transition-all duration-300 group"
+              className="glass-card bg-surface/40 border-surface-border p-6 rounded-2xl flex flex-col justify-between h-full hover:bg-surface hover:border-primary/25 transition-all duration-300 group"
               style={{
                 boxShadow: hoveredIdx === idx ? "0 20px 40px rgba(62, 163, 72, 0.04)" : "none"
               }}

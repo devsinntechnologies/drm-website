@@ -47,7 +47,7 @@ const RolesPermissionsSection: React.FC = () => {
           {/* Left Side: Roles Grid */}
           <div>
             <span className="section-label">Access Control</span>
-            <h2 className="text-xl md:text-base font-extrabold text-foreground mb-4 leading-tight tracking-tight">
+            <h2 className="text-xl md:text-2xl font-extrabold text-foreground mb-4 leading-tight tracking-tight">
               Granular Role & <span className="text-primary">Permission Control</span>
             </h2>
             <p className="text-muted text-lg mb-4 font-medium">
@@ -56,7 +56,7 @@ const RolesPermissionsSection: React.FC = () => {
 
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
               {roles.map((r) => (
-                <div key={r.title} className="p-5 bg-surface/30 border border-surface-border rounded-2xl flex flex-col justify-between hover:bg-white hover:border-primary/25 transition-all duration-300">
+                <div key={r.title} className="p-5 bg-surface/30 border border-surface-border rounded-2xl flex flex-col justify-between hover:bg-surface hover:border-primary/25 transition-all duration-300">
                   <div>
                     <div className="w-9 h-9 rounded-lg bg-primary/10 text-primary flex items-center justify-center text-lg mb-3 shrink-0">
                       {r.icon}
@@ -80,7 +80,7 @@ const RolesPermissionsSection: React.FC = () => {
             {/* Ambient Glow */}
             <div className="absolute inset-0 bg-primary/5 rounded-[32px] blur-xl" />
 
-            <div className="relative glass-card rounded-[32px] border border-surface-border/95 bg-white p-6 shadow-2xl">
+            <div className="relative glass-card rounded-[32px] border border-surface-border/95 bg-surface p-6 shadow-2xl">
               
               {/* Header */}
               <div className="flex justify-between items-center border-b border-surface-border pb-4 mb-4">
@@ -115,7 +115,7 @@ const RolesPermissionsSection: React.FC = () => {
                     >
                       <motion.div 
                         layout 
-                        className="w-4 h-4 rounded-full bg-white shadow-xs" 
+                        className="w-4 h-4 rounded-full bg-surface shadow-xs" 
                         animate={{ x: mod.enabled ? 20 : 0 }}
                         transition={{ type: "spring", stiffness: 500, damping: 30 }}
                       />

@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
+import Button from '@/components/ui/Button';
 
 const SupportContact = () => {
   return (
@@ -20,7 +21,7 @@ const SupportContact = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-lg sm:text-xl md:text-base font-black text-foreground mb-4 md:mb-4"
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 md:mb-4"
             >
               Ready to <span className="text-primary">scale</span> your business?
             </motion.h2>
@@ -29,7 +30,7 @@ const SupportContact = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="text-base sm:text-lg md:text-xl text-muted leading-relaxed font-bold mb-4 md:mb-4"
+              className="text-base sm:text-lg text-muted leading-relaxed font-medium mb-4 md:mb-4"
             >
               Join thousands of successful restaurant owners who trust DRM for their daily operations.
               Get your free demo setup in less than 24 hours.
@@ -41,20 +42,12 @@ const SupportContact = () => {
               transition={{ delay: 0.4 }}
               className="flex flex-wrap justify-center gap-4"
             >
-              <motion.button
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-10 py-5 bg-primary text-white font-black rounded-2xl shadow-2xl glow-primary text-lg"
-              >
+              <Button href="/contact" variant="primary" size="lg">
                 Contact Sales
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-10 py-5 glass-card border border-primary/30 text-primary font-black rounded-2xl text-lg hover:bg-primary/5 transition-all"
-              >
+              </Button>
+              <Button href="/demo" variant="secondary" size="lg">
                 Request a Demo
-              </motion.button>
+              </Button>
             </motion.div>
           </div>
         </motion.div>

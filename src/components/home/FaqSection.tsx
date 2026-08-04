@@ -49,7 +49,7 @@ const FaqSection: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-4">
           <span className="section-label">Common Queries</span>
-          <h2 className="text-xl md:text-base font-extrabold text-foreground mb-4">
+          <h2 className="text-xl md:text-2xl font-extrabold text-foreground mb-4">
             Frequently Asked <span className="text-primary">Questions</span>
           </h2>
           <p className="text-muted text-lg font-medium">
@@ -65,7 +65,7 @@ const FaqSection: React.FC = () => {
             return (
               <div 
                 key={idx} 
-                className="border border-surface-border bg-white rounded-2xl overflow-hidden transition-all duration-300 shadow-xs"
+                className="border border-surface-border bg-surface rounded-2xl overflow-hidden transition-all duration-300 shadow-xs"
                 style={{
                   borderColor: isOpen ? "var(--primary)" : "var(--surface-border)"
                 }}

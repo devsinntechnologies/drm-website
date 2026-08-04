@@ -24,6 +24,7 @@ export const metadata: Metadata = {
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import FloatingWidgets from "@/components/FloatingWidgets";
 
 export default function RootLayout({
   children,
@@ -35,9 +36,10 @@ export default function RootLayout({
       lang="en"
       className={`${poppins.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-screen flex flex-col m-0 p-0 overflow-x-hidden bg-white text-[#08162D]">
+      <body className="min-h-screen flex flex-col m-0 p-0 overflow-x-hidden bg-background text-foreground">
         <Navbar />
         <main className="flex-1">{children}</main>
+        <FloatingWidgets />
         <Footer />
       </body>
     </html>

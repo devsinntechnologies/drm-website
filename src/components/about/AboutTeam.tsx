@@ -33,23 +33,21 @@ export default function AboutTechStack() {
   ];
 
   return (
-    <section className="bg-white text-[#08162D] py-10 md:py-14 border-b border-gray-200 relative overflow-hidden">
+    <section className="bg-surface text-foreground py-10 md:py-14 border-b border-surface-border relative overflow-hidden">
       
       {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-[#0055FF]/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-5">
-          <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3.5 py-1.5 rounded-xl mb-2.5 border border-[#0055FF]/20">
-            OUR CAPABILITIES
-          </span>
-          <h2 className="text-lg sm:text-xl lg:text-base font-black mb-3 tracking-tight text-[#08162D]">
-            Powered by modern <span className="text-[#0055FF]">technology stack</span>
+        <div className="text-center max-w-2xl mx-auto mb-6">
+          <span className="section-label">Our capabilities</span>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-3 tracking-tight text-foreground">
+            Powered by a modern <span className="text-primary">technology stack</span>
           </h2>
-          <p className="text-xs md:text-sm text-gray-600 font-normal leading-relaxed">
-            We leverage cutting-edge frameworks and tools to build lightning-fast, secure, and fully scalable digital solutions.
+          <p className="text-sm md:text-base text-muted leading-relaxed">
+            Cutting-edge frameworks and tools to build fast, secure, and fully scalable digital solutions.
           </p>
         </div>
 
@@ -62,26 +60,26 @@ export default function AboutTechStack() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.08 }}
-              className="bg-white p-5 rounded-xl border border-gray-200 shadow-sm hover:border-[#0055FF] hover:shadow-md transition-all group flex flex-col justify-between"
+              className="bg-surface p-5 rounded-xl border border-surface-border shadow-sm hover:border-primary hover:shadow-md transition-all group flex flex-col justify-between"
             >
               <div>
-                <div className="w-11 h-11 rounded-xl bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center mb-3.5 group-hover:bg-[#0055FF] group-hover:text-white transition-all shadow-sm">
+                <div className="w-11 h-11 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-3.5 group-hover:bg-primary group-hover:text-white transition-all shadow-sm">
                   {item.icon}
                 </div>
-                <h3 className="text-base font-black text-[#08162D] mb-2 group-hover:text-[#0055FF] transition-colors">
+                <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
                   {item.title}
                 </h3>
-                <p className="text-xs text-gray-600 leading-relaxed font-normal mb-4">
+                <p className="text-xs text-muted leading-relaxed font-normal mb-4">
                   {item.desc}
                 </p>
               </div>
               
               {/* Technology Tags with Interactive Hover */}
-              <div className="flex flex-wrap gap-1.5 pt-3 border-t border-gray-100">
+              <div className="flex flex-wrap gap-1.5 pt-3 border-t border-surface-border">
                 {item.tags.map((tag, tIdx) => (
                   <span 
                     key={tIdx} 
-                    className="text-[10px] font-bold bg-gray-50 text-gray-600 px-2 py-1 rounded-md border border-gray-200 hover:bg-[#0055FF] hover:text-white hover:border-[#0055FF] transition-all cursor-pointer shadow-2xs"
+                    className="text-[10px] font-bold bg-surface text-muted px-2 py-1 rounded-md border border-surface-border hover:bg-primary hover:text-white hover:border-primary transition-all cursor-pointer shadow-2xs"
                   >
                     {tag}
                   </span>

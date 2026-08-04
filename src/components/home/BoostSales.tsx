@@ -4,56 +4,82 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
+const easeOut = [0.16, 1, 0.3, 1] as const;
+
 export default function BoostSalesSection() {
   return (
-    <section className="py-6 md:py-8 bg-white border-b border-gray-200 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
-        
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-4 py-2 rounded-xl mb-3 border border-[#0055FF]/20">
-            SALES OPTIMIZATION
-          </span>
+    <section className="py-12 md:py-16 bg-background border-b border-surface-border relative overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-[-15%] right-0 w-[520px] h-[360px] bg-primary/8 blur-[130px] rounded-full" />
+      </div>
 
-          <h2 className="text-lg sm:text-xl lg:text-base font-black text-[#08162D] leading-tight mb-4 tracking-tight">
-            Boost Your Sales with <br />
-            <span className="text-[#0055FF]"><span className="text-black font-black">Digi</span><span className="text-[#0055FF] font-black">Nizam</span> POS Solution</span>
-          </h2>
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.35 }}
+            transition={{ duration: 0.55, ease: easeOut }}
+            className="lg:col-span-5"
+          >
+            <span className="inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.14em] text-primary mb-3">
+              <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+              Sales optimization
+            </span>
 
-          <p className="text-xs md:text-sm text-gray-600 font-normal leading-relaxed mb-4">
-            Increase your sales by up to 200% with <span className="text-black font-black">Digi</span><span className="text-[#0055FF] font-black">Nizam</span>'s powerful and easy-to-use sales features. Make shopping effortless for your customers with a seamless one-click checkout that speeds up transactions. Offer flexible payment options, including split payments, to enhance convenience.
-          </p>
+            <h2
+              className="font-semibold tracking-tight text-foreground mb-4"
+              style={{ fontSize: "clamp(30px, 4.2vw, 46px)", lineHeight: 1.12 }}
+            >
+              Boost your sales with{" "}
+              <span className="text-foreground">Digi</span>
+              <span className="text-primary">Nizam</span> POS
+            </h2>
 
-          <p className="text-xs md:text-sm text-gray-600 font-normal leading-relaxed">
-            Attract more buyers with custom discounts and promotions while building customer loyalty through an integrated reward system. Additionally, manage your sales team efficiently with a robust commission agent tracking system, ensuring smooth business operations and increased profitability.
-          </p>
-        </motion.div>
+            <p className="text-sm md:text-base text-muted leading-relaxed mb-4 max-w-md">
+              Faster checkout, flexible payments, and promotions that help you sell more—without slowing the counter.
+            </p>
 
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative grid grid-cols-2 gap-4 items-center"
-        >
-          <div className="space-y-4">
-            <div className="relative h-56 rounded-xl overflow-hidden shadow-sm border border-gray-100">
-              <Image src="/salesolution'.jpg" alt="DEVSINN POS Solution" fill className="object-cover" />
+            <p className="text-sm md:text-base text-muted leading-relaxed max-w-md">
+              Run discounts, loyalty rewards, and commission tracking from one place so every sale stays clear and profitable.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 16 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.55, ease: easeOut, delay: 0.08 }}
+            className="lg:col-span-7 grid grid-cols-2 gap-3 sm:gap-4"
+          >
+            <div className="space-y-3 sm:space-y-4">
+              <div className="relative h-44 sm:h-56 rounded-2xl overflow-hidden">
+                <Image
+                  src="/salesolution'.jpg"
+                  alt="DigiNizam POS sales solution"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative h-36 sm:h-44 rounded-2xl overflow-hidden">
+                <Image
+                  src="/receipt.jpg"
+                  alt="Receipt printing"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
-            <div className="relative h-40 rounded-xl overflow-hidden shadow-sm border border-gray-100">
-              <Image src="/receipt.jpg" alt="Receipt Printing" fill className="object-cover" />
+            <div className="relative h-full min-h-[320px] sm:min-h-[420px] rounded-2xl overflow-hidden mt-6 sm:mt-10">
+              <Image
+                src="/cashier.jpg"
+                alt="Cashier using DigiNizam POS"
+                fill
+                className="object-cover"
+              />
             </div>
-          </div>
-
-          <div className="relative h-[380px] rounded-xl overflow-hidden shadow-md border border-gray-100 mt-6">
-            <Image src="/cashier.jpg" alt="Cashier Management" fill className="object-cover" />
-          </div>
-        </motion.div>
-
+          </motion.div>
+        </div>
       </div>
     </section>
   );

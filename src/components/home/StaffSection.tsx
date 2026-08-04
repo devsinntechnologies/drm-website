@@ -36,7 +36,7 @@ const StaffSection: React.FC = () => {
           {/* Details - Left Side */}
           <div>
             <span className="section-label">Human Capital</span>
-            <h2 className="text-xl md:text-base font-extrabold text-foreground mb-4 leading-tight tracking-tight">
+            <h2 className="text-xl md:text-2xl font-extrabold text-foreground mb-4 leading-tight tracking-tight">
               Staff, HR & <span className="text-primary">Shift Scheduling</span>
             </h2>
             <p className="text-muted text-lg mb-4 font-medium">
@@ -69,7 +69,7 @@ const StaffSection: React.FC = () => {
             {/* Ambient Glow */}
             <div className="absolute inset-0 bg-primary/5 rounded-[32px] blur-xl" />
 
-            <div className="relative glass-card rounded-[32px] border border-surface-border/95 bg-white p-6 shadow-2xl">
+            <div className="relative glass-card rounded-[32px] border border-surface-border/95 bg-surface p-6 shadow-2xl">
               
               {/* Header */}
               <div className="flex justify-between items-center border-b border-surface-border pb-4 mb-4">

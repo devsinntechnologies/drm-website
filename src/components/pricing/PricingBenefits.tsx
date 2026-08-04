@@ -26,11 +26,11 @@ const PricingBenefits = ({ title, highlight, subtitle }: PricingBenefitsProps) =
             viewport={{ once: true }}
             className="text-center mb-4 md:mb-5"
           >
-            <h2 className="text-lg sm:text-xl md:text-base font-black text-foreground mb-4 md:mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 md:mb-4">
               {title} <span className="text-primary">{highlight}</span>
             </h2>
             {subtitle && (
-              <p className="text-lg text-muted max-w-3xl mx-auto font-medium">
+              <p className="text-base md:text-lg text-muted max-w-3xl mx-auto font-medium">
                 {subtitle}
               </p>
             )}

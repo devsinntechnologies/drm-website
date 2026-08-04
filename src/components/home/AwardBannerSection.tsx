@@ -1,44 +1,141 @@
 "use client";
 
-import React from "react";
-import Link from "next/link";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  useInView,
+  type MotionValue,
+} from "framer-motion";
+
+const HEADING = "Best Multi-Outlet ERP & POS in Pakistan";
+
+const BODY =
+  "Skip the paperwork. DigiNizam runs inventory, sales, purchases, expenses, and ledgers across Pakistan—so you can focus on growing the business.";
+
+const headingWords = HEADING.split(" ");
+const bodyWords = BODY.split(" ");
+
+const easeOut = [0.16, 1, 0.3, 1] as const;
+
+function ScrollWord({
+  word,
+  index,
+  total,
+  progress,
+}: {
+  word: string;
+  index: number;
+  total: number;
+  progress: MotionValue<number>;
+}) {
+  const start = index / total;
+  const end = (index + 1.2) / total;
+
+  const opacity = useTransform(progress, [start, end], [0.18, 1]);
+  const y = useTransform(progress, [start, end], [18, 0]);
+  const blur = useTransform(progress, [start, end], [4, 0]);
+  const filter = useTransform(blur, (v) => `blur(${v}px)`);
+
+  return (
+    <motion.span
+      style={{ opacity, y, filter }}
+      className="inline-block mr-[0.22em] mb-[0.08em] will-change-transform"
+    >
+      {word === "DigiNizam" ? (
+        <>
+          <span className="text-foreground">Digi</span>
+          <span className="text-primary">Nizam</span>
+        </>
+      ) : (
+        <span className="text-foreground">{word}</span>
+      )}
+    </motion.span>
+  );
+}
 
 export default function AwardBannerSection() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const headingRef = useRef<HTMLHeadingElement>(null);
+
+  const headingInView = useInView(headingRef, { once: true, amount: 0.5 });
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start 75%", "end 55%"],
+  });
+
   return (
-    <section className="py-6 md:py-8 bg-white border-b border-gray-200 text-center relative overflow-hidden">
-      
-      {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-[#0055FF]/5 blur-[140px] rounded-full pointer-events-none" />
-
-      <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className="max-w-4xl mx-auto px-6 relative z-10"
-      >
-        <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-4 py-2 rounded-xl mb-3 border border-[#0055FF]/20">
-          INDUSTRY RECOGNITION
-        </span>
-
-        <h2 className="text-lg sm:text-xl lg:text-base font-black text-[#08162D] mb-4 leading-tight tracking-tight">
-          Awarded as the Best Multi-Outlet ERP & POS System Solution Provider in Pakistan
-        </h2>
-
-        <p className="text-xs md:text-sm text-gray-600 font-normal leading-relaxed mb-4 max-w-3xl mx-auto">
-          No more handling with papers manually when you can get everything done by the <strong className="text-[#08162D] font-bold"><span className="text-black font-black">Digi</span><span className="text-[#0055FF] font-black">Nizam</span></strong> Smart Retail and Inventory Management System in Karachi, Lahore, Islamabad and all over Pakistan that handles all the basic necessary work for your company. From inventory, sales, purchase, expenses, customer ledger, supplier ledger, daily profit, our POS is there to help. When Business Management Suite is running at the background of your business, you are freer to attend to the business at hand.
-        </p>
-
-        <div>
-          <Link 
-            href="/demo" 
-            className="inline-block bg-[#0055FF] hover:bg-[#0044cc] text-white font-black text-xs uppercase tracking-widest px-6 py-3 rounded-xl transition-all shadow-md shadow-[#0055FF]/20"
+    <section
+      ref={sectionRef}
+      className="relative overflow-hidden px-5 py-14 sm:px-8 sm:py-20 lg:px-10 lg:py-24 xl:px-16 bg-surface border-b border-surface-border"
+    >
+      <div className="mx-auto w-full max-w-[1200px]">
+        <div className="mb-10 sm:mb-14 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.6 }}
+            transition={{ duration: 0.55, ease: easeOut }}
+            className="inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.14em] text-primary mb-3"
           >
-            GET FREE DEMO
-          </Link>
+            <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+            Industry recognition
+          </motion.div>
+
+          <motion.h2
+            ref={headingRef}
+            initial="hidden"
+            animate={headingInView ? "visible" : "hidden"}
+            variants={{
+              hidden: {},
+              visible: {
+                transition: { staggerChildren: 0.045, delayChildren: 0.08 },
+              },
+            }}
+            className="mt-3 max-w-[720px] mx-auto leading-tight tracking-tight text-foreground font-semibold"
+            style={{ fontSize: "clamp(32px, 4.5vw, 56px)", lineHeight: 1.15 }}
+          >
+            {headingWords.map((word, i) => (
+              <span
+                key={`${word}-${i}`}
+                className="inline-flex overflow-hidden align-bottom mr-[0.22em] -my-[0.15em] py-[0.15em]"
+              >
+                <motion.span
+                  className="inline-block will-change-transform"
+                  variants={{
+                    hidden: { opacity: 0, y: "110%" },
+                    visible: {
+                      opacity: 1,
+                      y: "0%",
+                      transition: { duration: 0.65, ease: easeOut },
+                    },
+                  }}
+                >
+                  {word}
+                </motion.span>
+              </span>
+            ))}
+          </motion.h2>
         </div>
-      </motion.div>
+
+        <div className="max-w-[920px] mx-auto text-center">
+          <p
+            className="font-semibold text-[1.5rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[2.85rem] leading-[1.28] tracking-tight flex flex-wrap justify-center"
+          >
+            {bodyWords.map((word, i) => (
+              <ScrollWord
+                key={`${word}-${i}`}
+                word={word}
+                index={i}
+                total={bodyWords.length}
+                progress={scrollYProgress}
+              />
+            ))}
+          </p>
+        </div>
+      </div>
     </section>
   );
 }

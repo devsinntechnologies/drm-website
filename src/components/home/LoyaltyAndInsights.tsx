@@ -6,17 +6,17 @@ const LoyaltyAndInsights = () => {
   return (
     <section className="relative overflow-hidden py-10 bg-navy/5">
       <div className="absolute inset-x-0 top-0 h-80 bg-gradient-to-b from-royal/10 to-transparent pointer-events-none" />
-      <div className="absolute left-0 top-24 h-72 w-72 rounded-full bg-royal/5 blur-[120px] pointer-events-none" />
+      <div className="absolute left-0 top-24 h-72 w-72 rounded-full bg-primary/5 blur-[120px] pointer-events-none" />
       <div className="absolute right-0 top-40 h-72 w-72 rounded-full bg-navy/5 blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-4 items-center">
           <div className="space-y-8">
-            <span className="inline-flex items-center gap-3 rounded-full bg-royal/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.3em] text-royal border border-royal/20">
+            <span className="inline-flex items-center gap-3 rounded-full bg-primary/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.3em] text-royal border border-royal/20">
               Loyalty & Insights
             </span>
 
-            <h1 className="max-w-3xl text-xl md:text-base font-black tracking-tight text-navy leading-tight">
+            <h1 className="max-w-3xl text-xl md:text-2xl font-black tracking-tight text-navy leading-tight">
               Make loyalty irresistible and analytics instantly clear.
             </h1>
 
@@ -34,7 +34,7 @@ const LoyaltyAndInsights = () => {
               ].map((stat, idx) => (
                 <div
                   key={idx}
-                  className="relative overflow-hidden rounded-xl border border-navy/10 bg-white p-6 shadow-sm hover:border-royal transition-all"
+                  className="relative overflow-hidden rounded-xl border border-navy/10 bg-surface p-6 shadow-sm hover:border-royal transition-all"
                 >
                   <div className="relative z-10">
                     <div className="text-lg font-black text-navy">
@@ -50,9 +50,9 @@ const LoyaltyAndInsights = () => {
           </div>
 
           <div className="grid grid-cols-1 gap-4">
-            <div className="relative overflow-hidden rounded-xl border border-navy/10 bg-white shadow-sm hover:border-royal transition-all p-6">
+            <div className="relative overflow-hidden rounded-xl border border-navy/10 bg-surface shadow-sm hover:border-royal transition-all p-6">
               <div className="relative z-10">
-                <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-royal bg-royal/10 px-3 py-1 rounded-xl mb-4">
+                <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-royal bg-primary/10 px-3 py-1 rounded-xl mb-4">
                   <FiTrendingUp size={14} /> Loyalty Tracking
                 </span>
                 <h3 className="text-xl font-black text-navy mb-2">
@@ -64,9 +64,9 @@ const LoyaltyAndInsights = () => {
               </div>
             </div>
 
-            <div className="relative overflow-hidden rounded-xl border border-navy/10 bg-white shadow-sm hover:border-royal transition-all p-6">
+            <div className="relative overflow-hidden rounded-xl border border-navy/10 bg-surface shadow-sm hover:border-royal transition-all p-6">
               <div className="relative z-10">
-                <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-royal bg-royal/10 px-3 py-1 rounded-xl mb-4">
+                <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-royal bg-primary/10 px-3 py-1 rounded-xl mb-4">
                   <FiAward size={14} /> Insights Dashboard
                 </span>
                 <h3 className="text-xl font-black text-navy mb-2">
@@ -88,7 +88,7 @@ const LoyaltyAndInsights = () => {
           ].map((stat, idx) => (
             <div
               key={idx}
-              className="relative overflow-hidden rounded-xl border border-navy/10 bg-white p-4 text-center shadow-sm hover:border-royal transition-all"
+              className="relative overflow-hidden rounded-xl border border-navy/10 bg-surface p-4 text-center shadow-sm hover:border-royal transition-all"
             >
               <div className="relative z-10">
                 <div className="text-xl font-black text-navy">

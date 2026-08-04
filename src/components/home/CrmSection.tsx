@@ -28,7 +28,7 @@ const CrmSection: React.FC = () => {
           {/* Details - Left Side */}
           <div>
             <span className="section-label">Guest Retention</span>
-            <h2 className="text-xl md:text-base font-extrabold text-foreground mb-4 leading-tight tracking-tight">
+            <h2 className="text-xl md:text-2xl font-extrabold text-foreground mb-4 leading-tight tracking-tight">
               Customer Relationship Management <span className="text-primary">& Loyalty</span>
             </h2>
             <p className="text-muted text-lg mb-4 font-medium">
@@ -61,7 +61,7 @@ const CrmSection: React.FC = () => {
             {/* Ambient Glow */}
             <div className="absolute inset-0 bg-primary/5 rounded-[32px] blur-xl" />
 
-            <div className="relative glass-card rounded-[32px] border border-surface-border/95 bg-white p-6 shadow-2xl">
+            <div className="relative glass-card rounded-[32px] border border-surface-border/95 bg-surface p-6 shadow-2xl">
               
               {/* Profile Card Header */}
               <div className="flex items-center gap-4 border-b border-surface-border pb-4 mb-4">
@@ -107,7 +107,7 @@ const CrmSection: React.FC = () => {
               <div className="space-y-3 mb-4">
                 <p className="text-[10px] text-muted font-black uppercase tracking-wider">Recent dining history</p>
                 
-                <div className="flex justify-between items-center p-3 border border-surface-border bg-white rounded-xl text-xs font-semibold">
+                <div className="flex justify-between items-center p-3 border border-surface-border bg-surface rounded-xl text-xs font-semibold">
                   <div>
                     <p className="text-foreground">1x Truffle Beef Burger, 1x Mojito</p>
                     <p className="text-[10px] text-muted font-medium mt-0.5">May 28 • Dine-in (Branch A)</p>
@@ -115,7 +115,7 @@ const CrmSection: React.FC = () => {
                   <span className="font-extrabold text-foreground">24.00</span>
                 </div>
 
-                <div className="flex justify-between items-center p-3 border border-surface-border bg-white rounded-xl text-xs font-semibold">
+                <div className="flex justify-between items-center p-3 border border-surface-border bg-surface rounded-xl text-xs font-semibold">
                   <div>
                     <p className="text-foreground">2x Gourmet Pizza, 1x Lava Cake</p>
                     <p className="text-[10px] text-muted font-medium mt-0.5">May 15 • Takeaway (Branch B)</p>

@@ -47,7 +47,7 @@ const OrderManagementSection: React.FC = () => {
         {/* Title */}
         <div className="text-center mb-4 max-w-3xl mx-auto">
           <span className="section-label">Order Operations</span>
-          <h2 className="text-xl md:text-base font-extrabold text-foreground mb-4">
+          <h2 className="text-xl md:text-2xl font-extrabold text-foreground mb-4">
             Advanced <span className="text-primary">Order Management</span>
           </h2>
           <p className="text-muted text-lg font-medium">
@@ -68,7 +68,7 @@ const OrderManagementSection: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.08 }}
-                className="glass-card bg-surface/30 border-surface-border p-6 rounded-2xl flex items-start gap-4 hover:bg-white hover:border-primary/20 transition-all duration-300 group"
+                className="glass-card bg-surface/30 border-surface-border p-6 rounded-2xl flex items-start gap-4 hover:bg-surface hover:border-primary/20 transition-all duration-300 group"
               >
                 <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center text-xl shrink-0 group-hover:bg-primary group-hover:text-white transition-all duration-300">
                   {src.icon}
@@ -107,7 +107,7 @@ const OrderManagementSection: React.FC = () => {
                   onMouseEnter={() => setActiveStep(idx)}
                   className={`glass-card p-6 rounded-3xl text-center cursor-default transition-all duration-300 border ${
                     activeStep === idx 
-                      ? "bg-white border-primary shadow-xl scale-[1.03]" 
+                      ? "bg-surface border-primary shadow-xl scale-[1.03]" 
                       : "bg-surface/50 border-surface-border"
                   }`}
                   style={{
@@ -117,7 +117,7 @@ const OrderManagementSection: React.FC = () => {
                   <div className={`w-14 h-14 mx-auto rounded-full flex items-center justify-center text-2.5xl mb-4 transition-all duration-300 border ${
                     activeStep === idx 
                       ? "bg-primary border-primary text-white" 
-                      : "bg-white border-surface-border"
+                      : "bg-surface border-surface-border"
                   }`}>
                     <span className="text-xl">{step.icon}</span>
                   </div>

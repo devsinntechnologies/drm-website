@@ -12,10 +12,10 @@ const PricingHero = () => {
           transition={{ duration: 0.8 }}
         >
           <span className="section-label mx-auto mb-4 md:mb-4">Simple Pricing</span>
-          <h1 className="text-xl sm:text-base md:text-lg lg:text-xl font-extrabold text-foreground mb-5 md:mb-4 tracking-tight">
+          <h1 className="hero-title text-3xl sm:text-4xl md:text-5xl text-foreground mb-5 md:mb-4 tracking-tight">
             Plans for every <span className="text-primary">scale</span>
           </h1>
-          <p className="text-base sm:text-lg md:text-xl text-muted max-w-2xl mx-auto leading-relaxed font-bold">
+          <p className="text-base sm:text-lg text-muted max-w-2xl mx-auto leading-relaxed font-medium">
             Choose the perfect plan for your business. No hidden fees, just pure growth.
           </p>
         </motion.div>

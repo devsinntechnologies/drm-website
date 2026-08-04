@@ -79,7 +79,7 @@ const KdsSection: React.FC = () => {
             {/* Glow */}
             <div className="absolute inset-0 bg-primary/5 rounded-[32px] blur-2xl" />
 
-            <div className="relative glass-card rounded-[32px] border border-surface-border/90 bg-white p-6 shadow-2xl">
+            <div className="relative glass-card rounded-[32px] border border-surface-border/90 bg-surface p-6 shadow-2xl">
               
               {/* KDS Header Controls */}
               <div className="flex justify-between items-center border-b border-surface-border pb-4 mb-4">
@@ -110,7 +110,7 @@ const KdsSection: React.FC = () => {
                 {tickets.map((t) => (
                   <div key={t.id} className="border border-surface-border rounded-2xl bg-background/50 flex flex-col justify-between overflow-hidden shadow-xs">
                     {/* Ticket Header */}
-                    <div className="p-3 bg-white border-b border-surface-border flex justify-between items-start">
+                    <div className="p-3 bg-surface border-b border-surface-border flex justify-between items-start">
                       <div>
                         <span className="text-xs font-black text-foreground">{t.id}</span>
                         <p className="text-[9px] text-muted font-semibold mt-0.5 truncate">{t.type}</p>
@@ -127,7 +127,7 @@ const KdsSection: React.FC = () => {
                           <span className={`w-3.5 h-3.5 rounded-md border flex items-center justify-center text-[8px] font-bold shrink-0 mt-0.5 ${
                             item.done 
                               ? "bg-primary/20 border-primary text-primary" 
-                              : "bg-white border-surface-border text-transparent"
+                              : "bg-surface border-surface-border text-transparent"
                           }`}>
                             ✓
                           </span>
@@ -139,7 +139,7 @@ const KdsSection: React.FC = () => {
                     </div>
 
                     {/* Ticket Footer */}
-                    <div className="p-3 bg-white border-t border-surface-border flex justify-between items-center text-[9px] font-black uppercase tracking-wider">
+                    <div className="p-3 bg-surface border-t border-surface-border flex justify-between items-center text-[9px] font-black uppercase tracking-wider">
                       <span className="text-muted">{t.station}</span>
                       <span className={`px-2 py-0.5 rounded-md ${t.statusColor}`}>{t.status}</span>
                     </div>
@@ -159,7 +159,7 @@ const KdsSection: React.FC = () => {
           {/* Right Details */}
           <div>
             <span className="section-label">Back-Of-House Sync</span>
-            <h2 className="text-xl md:text-base font-extrabold text-foreground mb-4 leading-tight tracking-tight">
+            <h2 className="text-xl md:text-2xl font-extrabold text-foreground mb-4 leading-tight tracking-tight">
               Streamline Operations with <span className="text-primary">Kitchen Display Terminals</span>
             </h2>
             <p className="text-muted text-lg mb-4 font-medium">

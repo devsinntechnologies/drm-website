@@ -123,7 +123,7 @@ const PricingTestimonial = () => {
   return (
     <section className="py-8 md:py-10 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 max-w-5xl">
-        <h2 className="text-lg sm:text-xl md:text-base font-bold text-foreground text-center mb-4 md:mb-5">
+        <h2 className="text-2xl sm:text-3xl font-bold text-foreground text-center mb-4 md:mb-5">
           What Our <span className="text-primary">Clients Say?</span>
         </h2>
 
@@ -157,7 +157,7 @@ const PricingTestimonial = () => {
                   <motion.div
                     custom={direction}
                     variants={childVariants}
-                    className="w-[260px] h-[260px] sm:w-[340px] sm:h-[340px] md:w-[400px] md:h-[400px] rounded-[40%_60%_70%_30%/40%_50%_60%_50%] bg-[#1a202c] relative flex items-center justify-center md:-mr-16 z-0 shadow-2xl overflow-hidden shrink-0"
+                    className="w-[260px] h-[260px] sm:w-[340px] sm:h-[340px] md:w-[400px] md:h-[400px] rounded-[40%_60%_70%_30%/40%_50%_60%_50%] bg-navy relative flex items-center justify-center md:-mr-16 z-0 shadow-2xl overflow-hidden shrink-0"
                   >
                     <div className="absolute inset-0 opacity-20">
                       <Image src={active.background} alt="Client Background" fill className="object-cover" />

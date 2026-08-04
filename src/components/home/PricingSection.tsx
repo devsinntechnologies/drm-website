@@ -45,7 +45,7 @@ const PricingSection: React.FC = () => {
       ],
       cta: "Start Free Trial",
       badge: "Popular",
-      color: "border-primary bg-white shadow-xl shadow-primary/5",
+      color: "border-primary bg-surface shadow-xl shadow-primary/5",
     },
     {
       name: "Pro",
@@ -96,8 +96,8 @@ const PricingSection: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-4 max-w-3xl mx-auto">
           <span className="section-label">Transparent Plans</span>
-          <h2 className="text-xl md:text-base font-extrabold text-foreground mb-4 leading-tight tracking-tight">
-            Flexible Plans that <span className="text-primary text-glow">Scale</span> With You
+          <h2 className="text-xl md:text-2xl font-extrabold text-foreground mb-4 leading-tight tracking-tight">
+            Flexible Plans that <span className="text-primary ">Scale</span> With You
           </h2>
           <p className="text-muted text-lg font-medium">
             Choose a plan that fits your restaurant scale. Easily add or remove modular subscription toggles as your business grows.

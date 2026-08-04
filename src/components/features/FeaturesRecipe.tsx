@@ -18,7 +18,7 @@ const FeaturesRecipe = () => {
             className="flex-1"
           >
             <span className="section-label mb-4 md:mb-4">Kitchen Control</span>
-            <h2 className="text-xl sm:text-base md:text-lg lg:text-xl font-extrabold text-foreground mb-4 leading-tight">
+            <h2 className="text-xl sm:text-2xl md:text-lg lg:text-xl font-extrabold text-foreground mb-4 leading-tight">
               Precise <span className="text-primary">Recipe</span> <br />
               Management
             </h2>

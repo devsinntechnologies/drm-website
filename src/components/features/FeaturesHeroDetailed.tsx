@@ -6,18 +6,12 @@ import { motion } from 'framer-motion';
 const FeaturesHeroDetailed = () => {
   return (
     <section className="relative pt-10 pb-6 md:pt-12 md:pb-8 overflow-hidden border-b border-surface-border">
-      {/* Background Glows */}
+      {/* Background Glow */}
       <motion.div 
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.5 }}
-        className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/10 blur-[150px] rounded-full pointer-events-none -translate-y-1/2" 
-      />
-      <motion.div 
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1.5, delay: 0.2 }}
-        className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/5 blur-[120px] rounded-full pointer-events-none translate-y-1/2" 
+        className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/8 blur-[140px] rounded-full pointer-events-none -translate-y-1/2" 
       />
       
       <div className="container mx-auto px-4 md:px-8 relative z-10 text-center">
@@ -28,7 +22,7 @@ const FeaturesHeroDetailed = () => {
             transition={{ duration: 0.8 }}
           >
             <span className="section-label mx-auto mb-4 md:mb-4">Core Technology</span>
-            <h1 className="text-xl sm:text-base md:text-lg lg:text-xl font-extrabold text-foreground mb-5 md:mb-4 tracking-tight leading-tight">
+            <h1 className="hero-title text-3xl sm:text-4xl md:text-5xl text-foreground mb-5 md:mb-4 tracking-tight">
               Restaurant <span className="text-primary">Point of Sale</span> System
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-muted max-w-3xl mx-auto mb-4 md:mb-4 leading-relaxed">

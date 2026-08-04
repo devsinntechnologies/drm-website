@@ -119,7 +119,7 @@ function FeatureBlock({ feature, idx }: { feature: typeof features[0]; idx: numb
             className="w-full h-64 object-cover rounded-t-[40px] transition-transform duration-1000 group-hover:scale-105"
           />
           <div
-            className="absolute left-5 top-5 rounded-full bg-white/90 p-3 shadow-xl"
+            className="absolute left-5 top-5 rounded-full bg-surface/90 p-3 shadow-xl"
             style={{ border: `1px solid color-mix(in srgb, ${accentColor} 20%, transparent)` }}
           >
             {feature.icon}
@@ -127,7 +127,7 @@ function FeatureBlock({ feature, idx }: { feature: typeof features[0]; idx: numb
           <motion.div
             animate={{ y: [-6, 6, -6] }}
             transition={{ duration: 4, ease: 'easeInOut', repeat: Infinity, delay: idx * 0.4 }}
-            className={`absolute ${feature.reverse ? 'left-5' : 'right-5'} -bottom-8 z-20 rounded-3xl bg-white/90 px-4 py-3 border border-surface-border/60 shadow-2xl backdrop-blur-2xl`}
+            className={`absolute ${feature.reverse ? 'left-5' : 'right-5'} -bottom-8 z-20 rounded-3xl bg-surface/90 px-4 py-3 border border-surface-border/60 shadow-2xl backdrop-blur-2xl`}
           >
             <div className="flex items-center gap-2">
               <span className="h-2.5 w-2.5 rounded-full bg-emerald-400 animate-pulse" />
@@ -182,7 +182,7 @@ function FeatureBlock({ feature, idx }: { feature: typeof features[0]; idx: numb
                 key={bi}
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.97 }}
-                className="flex items-center gap-3 rounded-3xl border border-surface-border/70 bg-surface/80 px-5 py-3 text-left text-sm font-semibold text-foreground shadow-sm transition-all duration-300 hover:border-primary/60 hover:bg-white"
+                className="flex items-center gap-3 rounded-3xl border border-surface-border/70 bg-surface/80 px-5 py-3 text-left text-sm font-semibold text-foreground shadow-sm transition-all duration-300 hover:border-primary/60 hover:bg-surface"
               >
                 {btn.icon}
                 <div>

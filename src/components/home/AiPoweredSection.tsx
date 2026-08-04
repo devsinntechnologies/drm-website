@@ -25,9 +25,9 @@ const AiPoweredSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-10 bg-[#090b12] text-[#f5f7fb] relative overflow-hidden">
+    <section className="py-10 bg-navy text-white relative overflow-hidden">
       {/* Background futuristic overlays */}
-      <div className="absolute inset-0 noise-overlay" />
+      <div className="absolute inset-0 " />
       <div className="absolute top-1/4 left-1/10 w-96 h-96 rounded-full bg-primary/10 blur-[130px] pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/10 w-96 h-96 rounded-full bg-secondary/10 blur-[130px] pointer-events-none" />
 
@@ -39,10 +39,10 @@ const AiPoweredSection: React.FC = () => {
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             <span className="text-xs font-extrabold uppercase tracking-widest text-primary">Autonomous Operations</span>
           </span>
-          <h2 className="text-xl md:text-base lg:text-lg font-black text-white mb-4 leading-tight tracking-tight">
-            Artificial Intelligence Built Into <span className="text-primary text-glow">Every Operation</span>
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-black text-white mb-4 leading-tight tracking-tight">
+            Artificial Intelligence Built Into <span className="text-primary ">Every Operation</span>
           </h2>
-          <p className="text-[#95a1b6] text-lg font-medium">
+          <p className="text-white/60 text-lg font-medium">
             Step into the future of restaurant management. Our built-in machine learning models act as your virtual COO, optimizing pricing, inventory, shifts, and revenue leaks.
           </p>
         </div>
@@ -59,7 +59,7 @@ const AiPoweredSection: React.FC = () => {
               onMouseEnter={() => setHoveredIdx(idx)}
               onMouseLeave={() => setHoveredIdx(null)}
               whileHover={{ y: -6, scale: 1.01 }}
-              className="relative p-4 rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-xl transition-all duration-300 hover:border-primary/40 hover:bg-white/[0.05]"
+              className="relative p-4 rounded-3xl border border-white/10 bg-surface/[0.03] backdrop-blur-xl transition-all duration-300 hover:border-primary/40 hover:bg-surface/[0.05]"
             >
               {/* Border glow wrapper */}
               {hoveredIdx === idx && (
@@ -77,7 +77,7 @@ const AiPoweredSection: React.FC = () => {
               </h3>
 
               {/* Desc */}
-              <p className="text-[#95a1b6] text-sm leading-relaxed font-semibold">
+              <p className="text-white/60 text-sm leading-relaxed font-semibold">
                 {feat.desc}
               </p>
             </motion.div>
@@ -85,16 +85,16 @@ const AiPoweredSection: React.FC = () => {
         </div>
 
         {/* Simulated Intelligence Output */}
-        <div className="mt-4 max-w-4xl mx-auto p-6 rounded-3xl border border-white/10 bg-white/[0.02] backdrop-blur-md">
+        <div className="mt-4 max-w-4xl mx-auto p-6 rounded-3xl border border-white/10 bg-surface/[0.02] backdrop-blur-md">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-4 pb-4 border-b border-white/5">
             <div className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-primary animate-pulse" />
               <span className="text-[10px] text-primary font-black uppercase tracking-wider">AI Copilot Recommendation Engine</span>
             </div>
-            <span className="text-[9px] text-[#95a1b6] font-bold">Updated: Just Now</span>
+            <span className="text-[9px] text-white/60 font-bold">Updated: Just Now</span>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-4 text-sm text-[#95a1b6]">
+          <div className="grid md:grid-cols-3 gap-4 text-sm text-white/60">
             <div>
               <p className="text-[10px] text-white font-black uppercase tracking-wider mb-1.5">Pricing Insight</p>
               <p className="text-white font-bold leading-normal">Suggest <span className="text-primary">+$1.50 dynamic markup</span> on Truffle Burger during Airport food court peak hours (6 PM - 8 PM).</p>

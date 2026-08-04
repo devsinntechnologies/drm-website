@@ -2,70 +2,63 @@
 
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "framer-motion";
+import Button from "@/components/ui/Button";
 
 export default function HeroSection() {
   return (
-    <section className="bg-[#08162D] text-white border-b border-gray-800 relative overflow-hidden min-h-screen flex items-center">
-      
-      {/* Background Decor with Subtle Opacity */}
-      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#0055FF]/15 blur-[120px] rounded-full pointer-events-none -translate-y-1/2 translate-x-1/4" />
-      <div className="absolute bottom-0 left-0 w-[350px] h-[350px] bg-[#00B4FF]/15 blur-[100px] rounded-full pointer-events-none translate-y-1/2 -translate-x-1/4" />
+    <section className="hero-section bg-navy text-white border-b border-white/10 relative overflow-hidden min-h-[min(100vh,820px)] flex items-center">
+      <div className="absolute top-0 right-0 w-[360px] h-[360px] bg-primary/10 blur-[120px] rounded-full pointer-events-none -translate-y-1/2 translate-x-1/4 animate-pulse-glow" />
+      <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-secondary/15 blur-[100px] rounded-full pointer-events-none translate-y-1/2 -translate-x-1/4" />
+      <div className="absolute inset-0 bg-grid-pattern opacity-[0.07] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center relative z-10 w-full py-6">
-        
-        {/* Left Content */}
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center relative z-10 w-full py-10 lg:py-14">
         <motion.div
-          initial={{ opacity: 0, x: -30 }}
+          initial={{ opacity: 0, x: -24 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.6 }}
         >
-          <h1 className="text-base sm:text-lg lg:text-xl font-medium leading-tight text-white mb-3 tracking-tight">
-            Complete ERP &amp; POS System in Pakistan <br />
-            <span className="text-white">Complete Solutions</span>
-          </h1>
-
-          <p className="text-sm md:text-base text-gray-300 font-normal leading-relaxed mb-4">
-            Optimize your Retail Store, Mart, Manufacturing, Restaurant, Bakery, Salon, Pharmacy, Boutique, Sales, Accounting, Inventory and FBR POS integration with Top POS System in Pakistan.
+          <p className="inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.14em] text-secondary mb-3">
+            <span className="h-1.5 w-1.5 rounded-full bg-secondary" />
+            DigiNizam
           </p>
-          
-          <div className="flex flex-wrap gap-3 items-center">
-            <Link 
-              href="/demo"
-              className="bg-[#0055FF] hover:bg-[#0044cc] text-white font-black text-xs uppercase tracking-widest px-7 py-3.5 rounded-xl shadow-lg shadow-[#0055FF]/25 transition-all text-center"
-            >
-              GET FREE DEMO
-            </Link>
+          <h1
+            className="font-semibold text-white mb-4 tracking-tight"
+            style={{ fontSize: "clamp(36px, 5vw, 56px)", lineHeight: 1.08 }}
+          >
+            Complete ERP &amp; POS for modern retail
+          </h1>
+          <p className="text-sm md:text-base text-white/75 leading-relaxed mb-7 max-w-xl">
+            Orders, inventory, accounting, and FBR-ready POS—one platform for restaurants, pharmacies, marts, and more.
+          </p>
 
-            <a 
-              href="tel:03000000000" 
-              className="border border-gray-700 hover:border-[#0055FF] text-white font-bold text-sm px-5 py-3 rounded-xl transition-all flex items-center gap-3 bg-[#08162D]/60 shadow-sm"
-            >
-              <span className="w-2.5 h-2.5 rounded-full bg-[#00B4FF] animate-pulse"></span>
+          <div className="flex flex-wrap gap-3 items-center">
+            <Button href="/demo" variant="primary" size="lg" className="animate-pulse-glow">
+              Get free demo
+            </Button>
+            <Button href="tel:03000000000" variant="secondary" size="lg" className="!bg-surface/5 !text-white !border-white/20 hover:!border-primary hover:!bg-primary/10">
+              <span className="w-2 h-2 rounded-full bg-secondary" aria-hidden />
               UAN: 03-000000000
-            </a>
+            </Button>
           </div>
         </motion.div>
 
-        {/* Right Local Image Showcase */}
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.95 }}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative flex justify-center items-center"
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="relative flex justify-center items-center animate-float"
         >
-          <div className="w-full max-w-2xl relative h-[320px] sm:h-[420px] lg:h-[500px] -mt-2 lg:-mt-4">
-            <Image 
-              src="/originalheroimage.png" 
-              alt="DigiNizam Software Solutions System in Pakistan" 
+          <div className="w-full max-w-2xl relative h-[280px] sm:h-[400px] lg:h-[480px] animate-scan">
+            <Image
+              src="/originalheroimage.png"
+              alt="DigiNizam software solutions"
               fill
-              className="object-contain drop-shadow-2xl scale-90 sm:scale-100 md:scale-110 origin-center"
+              className="object-contain drop-shadow-2xl"
               priority
             />
           </div>
         </motion.div>
-
       </div>
     </section>
   );

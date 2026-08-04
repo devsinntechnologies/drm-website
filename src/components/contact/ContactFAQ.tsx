@@ -31,20 +31,20 @@ const ContactFAQ = () => {
   const [openIdx, setOpenIdx] = useState<number | null>(null);
 
   return (
-    <div className="py-4 md:py-5 bg-white border-t border-gray-200 relative overflow-hidden">
+    <div className="py-4 md:py-5 bg-surface border-t border-surface-border relative overflow-hidden">
       {/* Background Glow */}
-      <div className="absolute bottom-0 right-0 w-[500px] h-[300px] bg-[#0055FF]/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-[500px] h-[300px] bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-4">
-          <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-xl mb-2 border border-[#0055FF]/20 shadow-sm">
+          <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-primary bg-primary/10 px-3 py-1 rounded-xl mb-2 border border-primary/20 shadow-sm">
             FAQ
           </span>
-          <h2 className="font-black text-[#08162D] tracking-tight">
-            Frequently Asked <span className="text-[#0055FF]">Questions</span>
+          <h2 className="font-black text-foreground tracking-tight">
+            Frequently Asked <span className="text-primary">Questions</span>
           </h2>
-          <p className="text-xs sm:text-sm text-gray-500 mt-1 max-w-xl mx-auto">
+          <p className="text-xs sm:text-sm text-muted mt-1 max-w-xl mx-auto">
             Quick answers to common questions about reaching our team.
           </p>
         </div>
@@ -60,22 +60,22 @@ const ContactFAQ = () => {
               transition={{ delay: idx * 0.08 }}
               className={`rounded-2xl border transition-all overflow-hidden ${
                 openIdx === idx
-                  ? "border-[#0055FF]/40 shadow-sm shadow-[#0055FF]/10"
-                  : "border-gray-200 hover:border-[#0055FF]/25"
+                  ? "border-primary/40 shadow-sm shadow-primary/10"
+                  : "border-surface-border hover:border-primary/25"
               }`}
             >
               <button
                 onClick={() => setOpenIdx(openIdx === idx ? null : idx)}
                 className="w-full flex items-center justify-between gap-3 px-5 py-3.5 text-left group"
               >
-                <span className="text-xs sm:text-sm font-semibold text-[#08162D] group-hover:text-[#0055FF] transition-colors">
+                <span className="text-xs sm:text-sm font-semibold text-foreground group-hover:text-primary transition-colors">
                   {faq.q}
                 </span>
                 <span
                   className={`shrink-0 w-7 h-7 rounded-lg flex items-center justify-center transition-all ${
                     openIdx === idx
-                      ? "bg-[#0055FF] text-white"
-                      : "bg-[#0055FF]/10 text-[#0055FF]"
+                      ? "bg-primary text-white"
+                      : "bg-primary/10 text-primary"
                   }`}
                 >
                   {openIdx === idx ? <FiMinus size={13} /> : <FiPlus size={13} />}
@@ -92,7 +92,7 @@ const ContactFAQ = () => {
                     transition={{ duration: 0.28, ease: "easeInOut" }}
                     className="overflow-hidden"
                   >
-                    <div className="px-5 pb-4 text-xs sm:text-sm text-gray-600 leading-relaxed border-t border-gray-100 pt-3">
+                    <div className="px-5 pb-4 text-xs sm:text-sm text-muted leading-relaxed border-t border-surface-border pt-3">
                       {faq.a}
                     </div>
                   </motion.div>

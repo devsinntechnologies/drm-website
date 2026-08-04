@@ -1,20 +1,35 @@
 "use client";
 
 import React from "react";
+import Button from "@/components/ui/Button";
 
 export const ReadyToGetStartedSection: React.FC = () => {
   return (
-    <section className="py-8 bg-[#08162D] text-[#FFFFFF] relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center relative z-10">
-        <h2 className="text-lg md:text-base font-black tracking-tight mb-4">
+    <section className="py-12 md:py-16 bg-navy text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-primary/10 pointer-events-none" />
+      <div className="max-w-3xl mx-auto px-6 lg:px-12 text-center relative z-10">
+        <h2
+          className="font-semibold tracking-tight mb-3 text-white"
+          style={{ fontSize: "clamp(30px, 4.2vw, 46px)", lineHeight: 1.12 }}
+        >
           Ready to get started?
         </h2>
-        <p className="text-sm md:text-base text-[#FFFFFF]/70 max-w-2xl mx-auto font-medium mb-4">
-          Contact our team today to deploy the ultimate restaurant and POS management framework.
+        <p className="text-sm md:text-base text-white/70 max-w-xl mx-auto mb-7 leading-relaxed">
+          Book a free demo and see how DigiNizam streamlines POS, inventory, and operations for your business.
         </p>
-        <button className="bg-[#0055FF] hover:bg-[#0040cc] text-[#FFFFFF] font-black text-xs uppercase tracking-widest px-10 py-4 rounded-xl shadow-xl transition-all">
-          GET FREE DEMO TODAY
-        </button>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <Button href="/demo" variant="primary" size="lg">
+            Get free demo
+          </Button>
+          <Button
+            href="/contact"
+            variant="secondary"
+            size="lg"
+            className="!bg-transparent !text-white !border-white/25 hover:!border-primary hover:!bg-primary/10"
+          >
+            Contact us
+          </Button>
+        </div>
       </div>
     </section>
   );

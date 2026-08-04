@@ -342,7 +342,7 @@ export default function Products() {
                     onMouseEnter={() => setHoveredId(item.id)}
                     onMouseLeave={() => setHoveredId(null)}
                     whileHover={{ y: -4 }}
-                    className="glass-card bg-surface/50 border-surface-border rounded-3xl transition-all duration-300 hover:bg-white hover:border-primary/25 shadow-lg relative overflow-hidden"
+                    className="glass-card bg-surface/50 border-surface-border rounded-3xl transition-all duration-300 hover:bg-surface hover:border-primary/25 shadow-lg relative overflow-hidden"
                   >
                     {/* Background glow sweep */}
                     {isHovered && (
@@ -372,7 +372,7 @@ export default function Products() {
                         {item.features.map((feature, index) => (
                           <div
                             key={index}
-                            className="flex items-center space-x-3 p-4 bg-background border border-surface-border hover:border-primary/20 rounded-xl hover:bg-white transition duration-150 group"
+                            className="flex items-center space-x-3 p-4 bg-background border border-surface-border hover:border-primary/20 rounded-xl hover:bg-surface transition duration-150 group"
                           >
                             <span className="w-5 h-5 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0">
                               <FiCheck className="text-xs" />

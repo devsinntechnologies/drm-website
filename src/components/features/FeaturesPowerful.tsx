@@ -53,11 +53,11 @@ const FeaturesPowerful = () => {
           className="text-center mb-4 md:mb-5"
         >
           <span className="section-label">All-in-One POS</span>
-          <h2 className="text-lg sm:text-xl md:text-base font-extrabold text-foreground mb-4 leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 leading-tight">
             <span className="text-primary">Powerful Features</span> <br />
             For Modern Restaurants
           </h2>
-          <div className="section-divider" />
+          <div className="section-divider mx-auto" />
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-4">
@@ -78,7 +78,7 @@ const FeaturesPowerful = () => {
               >
                 {f.icon}
               </motion.div>
-              <h3 className="text-xl md:text-base font-bold text-foreground mb-3 group-hover:text-primary transition-colors">{f.title}</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">{f.title}</h3>
               <p className="text-muted leading-relaxed font-medium">{f.desc}</p>
             </motion.div>
           ))}

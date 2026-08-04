@@ -1,170 +1,104 @@
 "use client";
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
+import React from "react";
+import { motion } from "framer-motion";
+import Button from "@/components/ui/Button";
+
+const plans = [
+  {
+    name: "Starter",
+    price: "Free",
+    period: "Forever",
+    desc: "For small cafes and new businesses getting started.",
+    features: ["Up to 500 orders/mo", "Basic inventory", "1 terminal", "Standard reporting"],
+    btn: "Get started",
+    href: "/demo",
+    popular: false,
+  },
+  {
+    name: "Professional",
+    price: "$49",
+    period: "per month",
+    desc: "Advanced tools for growing restaurants with multiple staff.",
+    features: ["Unlimited orders", "Advanced inventory", "3 terminals", "24/7 support", "Custom reports"],
+    btn: "Start free trial",
+    href: "/demo",
+    popular: true,
+  },
+  {
+    name: "Enterprise",
+    price: "Custom",
+    period: "Contact sales",
+    desc: "Full-scale solution for multi-location franchises.",
+    features: ["Multi-unit sync", "Dedicated manager", "Unlimited terminals", "Custom API", "On-site setup"],
+    btn: "Contact sales",
+    href: "/contact",
+    popular: false,
+  },
+];
 
 const PricingPlans = () => {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
-  const plans = [
-    {
-      name: 'Starter',
-      price: 'Free',
-      period: 'Forever',
-      desc: 'Perfect for small cafes and new businesses getting started.',
-      features: ['Up to 500 orders/mo', 'Basic Inventory', '1 Terminal', 'Standard Reporting'],
-      btn: 'Get Started',
-      popular: false,
-      color: 'secondary'
-    },
-    {
-      name: 'Professional',
-      price: '49',
-      period: 'per month',
-      desc: 'Advanced tools for growing restaurants with multiple staff.',
-      features: ['Unlimited orders', 'Advanced Inventory', '3 Terminals', '24/7 Support', 'Custom Reports'],
-      btn: 'Start Free Trial',
-      popular: true,
-      color: 'primary'
-    },
-    {
-      name: 'Enterprise',
-      price: 'Custom',
-      period: 'Contact Sales',
-      desc: 'Full-scale solution for multi-location franchises.',
-      features: ['Multi-Uni Sync', 'Dedicated Manager', 'Unlimited Terminals', 'Custom API', 'On-site Setup'],
-      btn: 'Contact Sales',
-      popular: false,
-      color: 'accent'
-    }
-  ];
-
   return (
-    <section className="py-8 md:py-10 bg-background relative overflow-hidden">
-      {/* Dynamic Background Glow based on hover */}
-      <AnimatePresence>
-        {hoveredIndex !== null && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.8 }}
-            transition={{ duration: 0.5 }}
-            className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] rounded-full blur-[150px] pointer-events-none bg-${plans[hoveredIndex].color}/10`}
-          />
-        )}
-      </AnimatePresence>
-
+    <section className="py-10 md:py-14 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-8 relative z-10">
-
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-4 md:mb-5"
+          className="text-center mb-8 md:mb-10"
         >
-          <span className="section-label">Transparent Pricing</span>
-          <h2 className="text-lg sm:text-xl md:text-base font-extrabold text-foreground tracking-tight">
-            Plans that <span className="text-primary text-glow">Scale</span> With You
+          <span className="section-label">Transparent pricing</span>
+          <h2 className="text-2xl sm:text-3xl font-bold text-foreground tracking-tight">
+            Plans that <span className="text-primary">scale</span> with you
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-4 lg:gap-4 max-w-6xl mx-auto items-stretch">
-          {plans.map((plan, i) => {
-            const isHovered = hoveredIndex === i;
-            const colorVar = `var(--${plan.color})`;
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-6xl mx-auto items-stretch">
+          {plans.map((plan, i) => (
+            <motion.div
+              key={plan.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.08 }}
+              className={`surface-card p-6 flex flex-col h-full relative card-hover ${
+                plan.popular ? "border-primary ring-1 ring-primary/20" : ""
+              }`}
+            >
+              {plan.popular && (
+                <span className="absolute top-4 right-4 px-2.5 py-1 bg-primary/10 border border-primary/25 text-primary text-[10px] font-bold uppercase tracking-wider rounded-full">
+                  Most popular
+                </span>
+              )}
 
-            return (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, scale: 0.8, y: 50 }}
-                whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.15, duration: 0.7, type: 'spring', stiffness: 100 }}
-                onMouseEnter={() => setHoveredIndex(i)}
-                onMouseLeave={() => setHoveredIndex(null)}
-                whileHover={{ y: -10, scale: 1.02 }}
-                className={`glass-card p-6 md:p-4 rounded-[28px] md:rounded-[40px] flex flex-col h-full relative overflow-hidden transition-all duration-500 backdrop-blur-2xl ${plan.popular ? 'bg-surface/60 md:scale-[1.02] lg:scale-[1.05] z-10' : 'bg-surface/30'}`}
-                style={{
-                  boxShadow: isHovered
-                    ? `0 40px 80px rgba(var(--${plan.color}-rgb), 0.2), inset 0 2px 20px rgba(var(--${plan.color}-rgb), 0.1)`
-                    : plan.popular ? '0 20px 40px rgba(0,0,0,0.3)' : '0 10px 30px rgba(0,0,0,0.1)',
-                  borderColor: isHovered ? `color-mix(in srgb, ${colorVar} 50%, transparent)` : plan.popular ? 'var(--primary)' : 'var(--surface-border)',
-                }}
-              >
-                {/* Highlight Sweep */}
-                <div className="absolute inset-0 opacity-0 transition-opacity duration-700 pointer-events-none"
-                  style={{
-                    opacity: isHovered ? 1 : 0,
-                    background: `radial-gradient(circle at top right, color-mix(in srgb, ${colorVar} 15%, transparent), transparent 70%)`
-                  }}
-                />
-
-                {plan.popular && (
-                  <div className="absolute top-0 inset-x-0 h-1.5 bg-primary animate-pulse" />
-                )}
-
-                <div className="mb-4 md:mb-4 relative z-10">
-                  <div className="flex flex-wrap items-center gap-3 md:gap-4 mb-4">
-                    <h3 className="text-lg sm:text-xl font-black uppercase tracking-[0.2em]" style={{ color: isHovered ? colorVar : 'var(--foreground)' }}>{plan.name}</h3>
-                    {plan.popular && (
-                      <motion.div
-                        initial={{ y: -20, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        transition={{ delay: 1 }}
-                        className="shrink-0"
-                      >
-                        <span className="px-3 py-1.5 md:px-4 md:py-2 bg-primary/20 border border-primary/30 text-primary text-[10px] font-black uppercase tracking-[0.2em] rounded-full shadow-[0_0_20px_rgba(var(--primary-rgb),0.3)]">Most Popular</span>
-                      </motion.div>
-                    )}
-                  </div>
-                  <div className="flex flex-wrap items-baseline gap-2">
-                    <span className="text-xl sm:text-base font-black text-foreground tracking-tighter">{plan.price}</span>
-                    <span className="text-xs sm:text-sm font-bold text-muted uppercase tracking-widest">{plan.period}</span>
-                  </div>
+              <div className="mb-4">
+                <h3 className="text-lg font-bold uppercase tracking-wider text-foreground mb-3">{plan.name}</h3>
+                <div className="flex flex-wrap items-baseline gap-2">
+                  <span className="text-3xl font-bold text-foreground tracking-tight">{plan.price}</span>
+                  <span className="text-xs font-semibold text-muted uppercase tracking-wider">{plan.period}</span>
                 </div>
+              </div>
 
-                <p className="text-muted font-medium mb-4 md:mb-4 leading-relaxed relative z-10">{plan.desc}</p>
+              <p className="text-muted text-sm mb-5 leading-relaxed">{plan.desc}</p>
 
-                <ul className="space-y-4 md:space-y-5 mb-4 md:mb-5 flex-1 relative z-10">
-                  {plan.features.map((f, j) => (
-                    <motion.li
-                      key={j}
-                      className="flex items-center gap-4 text-sm font-bold text-foreground/90 group/item"
-                    >
-                      <motion.span
-                        whileHover={{ scale: 1.2, rotate: 10 }}
-                        className="w-6 h-6 rounded-full flex items-center justify-center transition-colors shrink-0"
-                        style={{
-                          background: `color-mix(in srgb, ${colorVar} 15%, transparent)`,
-                          border: `1px solid color-mix(in srgb, ${colorVar} 30%, transparent)`,
-                          color: colorVar
-                        }}
-                      >
-                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                        </svg>
-                      </motion.span>
-                      <span>{f}</span>
-                    </motion.li>
-                  ))}
-                </ul>
+              <ul className="space-y-3 mb-6 flex-1">
+                {plan.features.map((f) => (
+                  <li key={f} className="flex items-center gap-3 text-sm font-medium text-foreground">
+                    <span className="w-5 h-5 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </span>
+                    {f}
+                  </li>
+                ))}
+              </ul>
 
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className={`w-full py-4 md:py-5 rounded-2xl font-black text-sm md:text-base shadow-xl transition-all relative z-10 overflow-hidden group`}
-                  style={{
-                    backgroundColor: plan.popular ? 'var(--primary)' : 'var(--surface)',
-                    color: plan.popular ? 'white' : 'var(--foreground)',
-                    border: plan.popular ? 'none' : '1px solid var(--surface-border)'
-                  }}
-                >
-                  {/* Button Hover Shine */}
-                  <div className="absolute top-0 -inset-full h-full w-1/2 z-10 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-20 group-hover:animate-shimmer pointer-events-none" />
-                  {plan.btn}
-                </motion.button>
-              </motion.div>
-            );
-          })}
+              <Button href={plan.href} variant={plan.popular ? "primary" : "secondary"} fullWidth>
+                {plan.btn}
+              </Button>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

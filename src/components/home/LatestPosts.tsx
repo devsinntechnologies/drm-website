@@ -118,10 +118,10 @@ const LatestPosts = () => {
   return (
     <section className="py-8 md:py-10 bg-background relative overflow-hidden">
       {/* Noise */}
-      <div className="noise-overlay opacity-5" />
+      <div className=" opacity-5" />
 
       {/* Aurora top-right */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] aurora-bg opacity-15 pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[500px] h-[500px]  opacity-15 pointer-events-none" />
 
       {/* Glow line top */}
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent shadow-[0_0_15px_rgba(var(--primary-rgb),0.5)]" />
@@ -135,7 +135,7 @@ const LatestPosts = () => {
             transition={{ duration: 0.7 }}
           >
             <span className="section-label">Our Blog</span>
-            <h2 className="text-xl md:text-base font-extrabold text-foreground tracking-tight">
+            <h2 className="text-xl md:text-2xl font-extrabold text-foreground tracking-tight">
               Latest <span className="text-primary">Insights</span>
             </h2>
           </motion.div>

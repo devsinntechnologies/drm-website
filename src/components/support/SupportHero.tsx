@@ -27,10 +27,10 @@ const SupportHero = () => {
           transition={{ duration: 0.8 }}
         >
           <span className="section-label mx-auto mb-3">Support Center</span>
-          <h1 className="text-xl sm:text-base md:text-xl font-extrabold text-foreground mb-4 md:mb-4 tracking-tight">
+          <h1 className="hero-title text-3xl sm:text-4xl md:text-5xl text-foreground mb-4 md:mb-4 tracking-tight">
             How can we <span className="text-primary">help</span> you?
           </h1>
-          <p className="text-base sm:text-lg md:text-xl text-muted max-w-2xl mx-auto mb-4 md:mb-4 leading-relaxed font-medium">
+          <p className="text-base sm:text-lg text-muted max-w-2xl mx-auto mb-4 md:mb-4 leading-relaxed font-medium">
             Our dedicated support team is available 24/7 to ensure your restaurant runs smoothly. 
             Explore our resources or connect with an expert directly.
           </p>

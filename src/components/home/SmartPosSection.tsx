@@ -56,7 +56,7 @@ const SmartPosSection: React.FC = () => {
           {/* Left Details */}
           <div>
             <span className="section-label">Billing Speed</span>
-            <h2 className="text-xl md:text-base font-extrabold text-foreground mb-4 leading-tight tracking-tight">
+            <h2 className="text-xl md:text-2xl font-extrabold text-foreground mb-4 leading-tight tracking-tight">
               Smart & Intuitive <span className="text-primary">Touch POS System</span>
             </h2>
             <p className="text-muted text-lg mb-4 font-medium">
@@ -99,7 +99,7 @@ const SmartPosSection: React.FC = () => {
             <div className="absolute inset-0 bg-primary/5 rounded-[32px] blur-xl" />
 
             {/* POS Terminal Card */}
-            <div className="relative glass-card rounded-[32px] border border-surface-border/90 bg-white p-6 shadow-2xl">
+            <div className="relative glass-card rounded-[32px] border border-surface-border/90 bg-surface p-6 shadow-2xl">
               
               {/* POS Top Header */}
               <div className="flex justify-between items-center border-b border-surface-border pb-4 mb-4">
@@ -132,14 +132,14 @@ const SmartPosSection: React.FC = () => {
                       <div className="flex items-center gap-2">
                         <button 
                           onClick={() => updateQty(item.id, -1)}
-                          className="w-6 h-6 rounded-md bg-white border border-surface-border flex items-center justify-center font-black text-xs hover:border-primary transition-colors"
+                          className="w-6 h-6 rounded-md bg-surface border border-surface-border flex items-center justify-center font-black text-xs hover:border-primary transition-colors"
                         >
                           -
                         </button>
                         <span className="text-xs font-black text-foreground w-4 text-center">{item.qty}</span>
                         <button 
                           onClick={() => updateQty(item.id, 1)}
-                          className="w-6 h-6 rounded-md bg-white border border-surface-border flex items-center justify-center font-black text-xs hover:border-primary transition-colors"
+                          className="w-6 h-6 rounded-md bg-surface border border-surface-border flex items-center justify-center font-black text-xs hover:border-primary transition-colors"
                         >
                           +
                         </button>

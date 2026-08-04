@@ -49,7 +49,7 @@ const InventorySection: React.FC = () => {
             {/* Background Glow */}
             <div className="absolute inset-0 bg-primary/5 rounded-[32px] blur-2xl pointer-events-none" />
 
-            <div className="relative glass-card rounded-[32px] border border-surface-border/90 bg-white p-6 shadow-2xl">
+            <div className="relative glass-card rounded-[32px] border border-surface-border/90 bg-surface p-6 shadow-2xl">
               {/* Header */}
               <div className="flex justify-between items-center border-b border-surface-border pb-4 mb-4">
                 <div>
@@ -64,7 +64,7 @@ const InventorySection: React.FC = () => {
                       onClick={() => setActiveTab(tab as any)}
                       className={`px-3 py-1 text-[10px] font-black uppercase tracking-wider rounded-md transition-all ${
                         activeTab === tab 
-                          ? "bg-white text-primary shadow-xs" 
+                          ? "bg-surface text-primary shadow-xs" 
                           : "text-muted hover:text-foreground"
                       }`}
                     >
@@ -174,7 +174,7 @@ const InventorySection: React.FC = () => {
           {/* Right Content */}
           <div className="order-1 lg:order-2">
             <span className="section-label">Stock & SCM</span>
-            <h2 className="text-xl md:text-base font-extrabold text-foreground mb-4 leading-tight tracking-tight">
+            <h2 className="text-xl md:text-2xl font-extrabold text-foreground mb-4 leading-tight tracking-tight">
               Real-Time <span className="text-primary">Inventory Management</span> & Smart Alerts
             </h2>
             <p className="text-muted text-lg mb-4 font-medium">

@@ -64,7 +64,7 @@ const FeaturesInventory = () => {
             className="flex-1 lg:pl-4"
           >
             <span className="section-label mb-4 md:mb-4">Inventory Control</span>
-            <h2 className="text-xl sm:text-base md:text-lg lg:text-xl font-extrabold text-foreground mb-4 leading-tight">
+            <h2 className="text-xl sm:text-2xl md:text-lg lg:text-xl font-extrabold text-foreground mb-4 leading-tight">
               Dynamic <span className="text-primary">Stock</span> <br />
               Management
             </h2>

@@ -39,9 +39,9 @@ const sections = [
 
 const PrivacyContent = () => {
   return (
-    <section className="py-6 md:py-8 bg-white text-[#08162D] relative overflow-hidden border-b border-gray-200">
+    <section className="py-6 md:py-8 bg-surface text-foreground relative overflow-hidden border-b border-surface-border">
       {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-[#0055FF]/5 blur-[160px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-primary/5 blur-[160px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
 
@@ -52,16 +52,14 @@ const PrivacyContent = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-4"
         >
-          <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-xl mb-2 border border-[#0055FF]/20 shadow-sm">
-            Security & Transparency
-          </span>
+          <span className="section-label">Security & transparency</span>
 
-          <h1 className="text-base sm:text-lg md:text-xl font-black text-[#08162D] mb-2 md:mb-3 tracking-tight">
-            Privacy <span className="text-[#0055FF]">Policy</span>
+          <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-3 tracking-tight">
+            Privacy <span className="text-primary">Policy</span>
           </h1>
 
-          <p className="text-xs sm:text-sm text-gray-600 max-w-2xl mx-auto leading-relaxed font-normal">
-            Your trust matters to us. This Privacy Policy explains how <span className="text-black font-black">Digi</span><span className="text-[#0055FF] font-black">Nizam</span> collects, uses, protects, and manages your information while delivering a secure and reliable experience.
+          <p className="text-sm sm:text-base text-muted max-w-2xl mx-auto leading-relaxed">
+            This policy explains how DigiNizam collects, uses, and protects your information while delivering a secure platform experience.
           </p>
         </motion.div>
 
@@ -74,17 +72,17 @@ const PrivacyContent = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.05 }}
-              className="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm hover:border-[#0055FF] hover:shadow-xl transition-all group"
+              className="bg-surface p-5 rounded-2xl border border-surface-border shadow-sm hover:border-primary hover:shadow-xl transition-all group"
             >
-              <div className="w-9 h-9 rounded-xl bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center mb-3 group-hover:bg-[#0055FF] group-hover:text-white transition-all">
+              <div className="w-9 h-9 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-3 group-hover:bg-primary group-hover:text-white transition-all">
                 {section.icon}
               </div>
 
-              <h3 className="text-sm font-black text-[#08162D] mb-1.5 group-hover:text-[#0055FF] transition-colors">
+              <h3 className="text-sm font-black text-foreground mb-1.5 group-hover:text-primary transition-colors">
                 {section.title}
               </h3>
 
-              <p className="text-gray-600 text-[11px] leading-relaxed font-normal">
+              <p className="text-muted text-[11px] leading-relaxed font-normal">
                 {section.content}
               </p>
             </motion.div>

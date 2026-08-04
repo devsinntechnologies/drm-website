@@ -32,8 +32,8 @@ const FeaturesSalient = () => {
               viewport={{ once: true }}
               className="text-center mb-4 md:mb-5"
             >
-              <h2 className="text-lg sm:text-xl md:text-base font-black text-foreground mb-4 md:mb-4">Salient <span className="text-primary">Advantages</span></h2>
-              <p className="text-lg text-muted max-w-2xl mx-auto font-medium">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 md:mb-4">Salient <span className="text-primary">Advantages</span></h2>
+              <p className="text-base md:text-lg text-muted max-w-2xl mx-auto font-medium">
                 The small details that make a huge difference in your daily operations.
               </p>
             </motion.div>

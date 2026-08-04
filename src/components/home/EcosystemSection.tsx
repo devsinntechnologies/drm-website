@@ -50,7 +50,7 @@ const EcosystemSection: React.FC = () => {
         {/* Header Section */}
         <div className="text-center mb-4 max-w-3xl mx-auto">
           <span className="section-label">Complete Restaurant Ecosystem</span>
-          <h2 className="text-xl md:text-base font-extrabold text-foreground mb-4 leading-tight tracking-tight">
+          <h2 className="text-xl md:text-2xl font-extrabold text-foreground mb-4 leading-tight tracking-tight">
             One Unified Operating System for <span className="text-primary">All Modules</span>
           </h2>
           <p className="text-muted text-lg font-medium">
@@ -70,7 +70,7 @@ const EcosystemSection: React.FC = () => {
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
               whileHover={{ y: -6, scale: 1.01 }}
-              className="glass-card bg-surface/50 border-surface-border p-6 rounded-2xl flex flex-col justify-between h-full hover:bg-white hover:border-primary/30 transition-all duration-300 relative group overflow-hidden"
+              className="glass-card bg-surface/50 border-surface-border p-6 rounded-2xl flex flex-col justify-between h-full hover:bg-surface hover:border-primary/30 transition-all duration-300 relative group overflow-hidden"
               style={{
                 boxShadow: hoveredIndex === index ? "0 20px 40px rgba(62, 163, 72, 0.05)" : "none",
               }}
@@ -126,7 +126,7 @@ const EcosystemSection: React.FC = () => {
 
         {/* Bottom Stat banner */}
         <div className="mt-6 text-center">
-          <div className="inline-flex items-center flex-wrap justify-center gap-4 bg-white/70 backdrop-blur-md px-8 py-4 rounded-full border border-surface-border shadow-md">
+          <div className="inline-flex items-center flex-wrap justify-center gap-4 bg-surface/70 backdrop-blur-md px-8 py-4 rounded-full border border-surface-border shadow-md">
             <span className="flex h-3.5 w-3.5 relative">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
               <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-primary"></span>

@@ -8,7 +8,7 @@ import AboutTeam from '@/components/about/AboutTeam';
 
 export default function AboutPage() {
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-surface min-h-screen">
       <AboutHero />
       <AboutMission />
       <AboutWhyUs />

@@ -2,10 +2,14 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { 
-  FiMonitor, FiBox, FiSettings, FiCreditCard, FiStar, 
-  FiTruck, FiPlayCircle, FiLayers, FiTrendingUp, FiPrinter, 
-  FiUsers, FiBriefcase 
+import Button from "@/components/ui/Button";
+import {
+  FiMonitor,
+  FiBox,
+  FiCreditCard,
+  FiTruck,
+  FiPlayCircle,
+  FiUsers,
 } from "react-icons/fi";
 
 interface FeatureItem {
@@ -14,168 +18,118 @@ interface FeatureItem {
   icon: React.ReactNode;
 }
 
-const Industries = () => {
-  const features: FeatureItem[] = [
-    {
-      title: "Point of Sale (POS)",
-      desc: "Manage billing, orders, payments, and customer experience from one smart restaurant POS system.",
-      icon: <FiMonitor />,
-    },
-    {
-      title: "Supply Chain",
-      desc: "Track inventory, vendors, stock levels, and kitchen supplies with real-time updates.",
-      icon: <FiBox />,
-    },
-    {
-      title: "Production Management",
-      desc: "Monitor kitchen workflows and improve restaurant operations with better efficiency.",
-      icon: <FiSettings />,
-    },
-    {
-      title: "Accounts & Finance",
-      desc: "Handle restaurant expenses, reports, invoices, and financial management easily.",
-      icon: <FiCreditCard />,
-    },
-    {
-      title: "Customer Loyalty",
-      desc: "Build customer relationships using rewards, loyalty programs, and CRM tools.",
-      icon: <FiStar />,
-    },
-    {
-      title: "Sales & Delivery",
-      desc: "Manage online orders, takeaway, and delivery operations from a single dashboard.",
-      icon: <FiTruck />,
-    },
-    {
-      title: "Kitchen Display System (KDS)",
-      desc: "Send live orders directly to kitchen screens to reduce paper tickets and speed up preparation.",
-      icon: <FiPlayCircle />,
-    },
-    {
-      title: "Table & Reservation Management",
-      desc: "Manage table bookings, seating plans, and customer reservations in real-time.",
-      icon: <FiLayers />,
-    },
-    {
-      title: "Barcode & Billing Scanner",
-      desc: "Scan product/barcode items for faster billing and accurate order processing.",
-      icon: <FiTrendingUp />,
-    },
-    {
-      title: "Printer Integration",
-      desc: "Automatically print receipts, kitchen orders, and invoices directly from POS system.",
-      icon: <FiPrinter />,
-    },
-    {
-      title: "Staff Management System",
-      desc: "Assign roles, track shifts, attendance, and performance of restaurant staff.",
-      icon: <FiUsers />,
-    },
-    {
-      title: "Vendor & Supplier Management",
-      desc: "Manage physical suppliers, purchase orders, and raw material deliveries efficiently.",
-      icon: <FiBriefcase />,
-    },
-  ];
+const features: FeatureItem[] = [
+  {
+    title: "Point of Sale (POS)",
+    desc: "Billing, orders, and payments in one fast restaurant POS.",
+    icon: <FiMonitor />,
+  },
+  {
+    title: "Supply Chain",
+    desc: "Live inventory, vendors, and kitchen stock updates.",
+    icon: <FiBox />,
+  },
+  {
+    title: "Accounts & Finance",
+    desc: "Expenses, invoices, and clear financial reports.",
+    icon: <FiCreditCard />,
+  },
+  {
+    title: "Sales & Delivery",
+    desc: "Takeaway, delivery, and online orders in one view.",
+    icon: <FiTruck />,
+  },
+  {
+    title: "Kitchen Display (KDS)",
+    desc: "Live kitchen tickets—faster prep, less paper.",
+    icon: <FiPlayCircle />,
+  },
+  {
+    title: "Staff Management",
+    desc: "Roles, shifts, and attendance in one place.",
+    icon: <FiUsers />,
+  },
+];
 
+const Industries = () => {
   return (
     <section className="min-h-screen bg-background text-foreground py-10 px-4 md:px-8 relative overflow-hidden">
-      {/* Background gradients */}
-      <div className="absolute top-1/4 left-0 w-80 h-80 bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/4 left-0 w-80 h-80 bg-primary/10 rounded-full blur-[120px] pointer-events-none animate-pulse-glow" />
       <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-[120px] pointer-events-none" />
 
-      {/* HERO */}
       <div className="max-w-6xl mx-auto text-center relative z-10">
         <span className="section-label">Tailored Solutions</span>
-        <h1 className="text-base md:text-lg font-black tracking-tight text-primary mt-4">
+        <h1 className="hero-title text-3xl md:text-5xl text-primary mt-4">
           Smart Restaurant ERP
         </h1>
-
-        <p className="mt-6 text-base md:text-lg text-muted max-w-3xl mx-auto leading-relaxed font-semibold">
-          Our smart restaurant ERP solution helps restaurants simplify orders,
-          manage inventory, improve customer experience, and grow business with
-          one powerful cloud platform.
+        <p className="mt-4 text-base md:text-lg text-muted max-w-2xl mx-auto leading-relaxed font-medium">
+          Simplify orders, inventory, and service from one cloud platform.
         </p>
 
-        <div className="mt-14 overflow-hidden rounded-3xl border border-surface-border shadow-2xl relative group">
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-10 overflow-hidden rounded-3xl border border-surface-border shadow-2xl relative group animate-scan"
+        >
           <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
           <img
             src="/restaurantservice.jpg"
             alt="Restaurant ERP"
             className="w-full h-[260px] md:h-[500px] object-cover transition-transform duration-700 group-hover:scale-[1.01]"
           />
-        </div>
+        </motion.div>
       </div>
 
-      {/* TITLE */}
-      <div className="max-w-7xl mx-auto mt-28 text-center relative z-10">
-        <h2 className="text-xl md:text-base font-black leading-tight text-foreground">
-          Our All-in-One
+      <div className="max-w-7xl mx-auto mt-20 text-center relative z-10">
+        <h2 className="text-2xl md:text-4xl font-bold text-foreground">
+          All-in-One <span className="text-primary">Restaurant ERP</span>
         </h2>
-        <h2 className="text-xl md:text-base font-black text-primary leading-tight">
-          Restaurant ERP Solution
-        </h2>
-        <p className="mt-5 text-muted max-w-2xl mx-auto font-semibold">
-          Powerful tools designed to streamline restaurant operations,
-          improve productivity, and deliver a better dining experience.
+        <p className="mt-3 text-muted max-w-xl mx-auto font-medium">
+          Core tools that streamline operations and improve the dining experience.
         </p>
       </div>
 
-      {/* 🚀 PREMIUM FEATURE CARDS */}
-      <div className="max-w-7xl mx-auto mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 relative z-10">
+      <div className="max-w-7xl mx-auto mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 relative z-10">
         {features.map((feature, index) => (
           <motion.div
-            key={index}
+            key={feature.title}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.05 }}
-            whileHover={{ y: -8, scale: 1.01 }}
-            className="relative group rounded-3xl p-4 bg-white/70 border border-surface-border/80 shadow-lg transition-all duration-300 backdrop-blur-md overflow-hidden"
+            transition={{ duration: 0.45, delay: index * 0.06 }}
+            whileHover={{ y: -6 }}
+            className="relative group rounded-3xl p-5 bg-surface/70 border border-surface-border/80 shadow-lg backdrop-blur-md overflow-hidden"
           >
-            {/* Glow background */}
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 bg-gradient-to-br from-primary/10 via-transparent to-transparent blur-2xl pointer-events-none" />
-
-            <div className="relative z-10 flex flex-col justify-between h-full">
-              <div>
-                {/* ICON */}
-                <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center text-base mb-4 group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                  {feature.icon}
-                </div>
-
-                {/* TITLE */}
-                <h3 className="text-xl font-black text-foreground group-hover:text-primary transition-all duration-300">
-                  {feature.title}
-                </h3>
-
-                {/* DESCRIPTION */}
-                <p className="mt-4 text-sm leading-relaxed text-muted font-medium">
-                  {feature.desc}
-                </p>
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 bg-gradient-to-br from-primary/10 via-transparent to-transparent pointer-events-none" />
+            <div className="relative z-10">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center text-base mb-4 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                {feature.icon}
               </div>
-
-              {/* underline bar */}
-              <div className="mt-6 h-[2px] w-0 group-hover:w-full bg-primary transition-all duration-500 rounded-full" />
+              <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
+                {feature.title}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted font-medium">
+                {feature.desc}
+              </p>
+              <div className="mt-5 h-[2px] w-0 group-hover:w-full bg-primary transition-all duration-500 rounded-full" />
             </div>
           </motion.div>
         ))}
       </div>
 
-      {/* CTA */}
-      <div className="max-w-5xl mx-auto mt-32 relative z-10">
-        <div className="rounded-3xl border border-primary/20 bg-primary/10 p-5 md:p-4 text-center shadow-lg">
-          <h2 className="text-xl md:text-base font-black text-foreground">
-            Transform Your Restaurant Business
+      <div className="max-w-5xl mx-auto mt-20 relative z-10">
+        <div className="rounded-3xl border border-primary/20 bg-primary/10 p-6 md:p-10 text-center shadow-lg animate-pulse-glow">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+            Transform Your Restaurant
           </h2>
-
-          <p className="mt-6 text-muted max-w-2xl mx-auto leading-relaxed font-semibold">
-            Digitize your restaurant operations with our modern ERP platform
-            and provide a seamless experience to your customers.
+          <p className="mt-3 text-muted max-w-xl mx-auto leading-relaxed font-medium">
+            Digitize operations and deliver a smoother guest experience.
           </p>
-
-          <button className="mt-5 px-8 py-4 rounded-2xl bg-primary text-white font-bold hover:scale-105 transition-all duration-300 shadow-lg glow-primary shimmer-btn">
+          <Button href="/demo" variant="primary" size="lg" className="mt-6">
             Book Free Demo
-          </button>
+          </Button>
         </div>
       </div>
     </section>
