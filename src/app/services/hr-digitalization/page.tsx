@@ -3,70 +3,38 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { FiClock, FiShield, FiSmartphone, FiAward, FiCheckCircle, FiTrendingUp, FiServer, FiArrowRight } from "react-icons/fi";
+import { FiClock, FiShield, FiSmartphone, FiAward, FiCheckCircle, FiTrendingUp, FiServer, FiArrowRight, FiUsers, FiFileText } from "react-icons/fi";
 import { motion } from "framer-motion";
+import UnifiedValueMissionVision from "@/components/common/UnifiedValueMissionVision";
 
 export default function HRDigitalizationPage() {
   return (
     <main className="min-h-screen bg-white text-[#08162D]">
       
-      {/* 1. Hero Section with Video Background (No Bluish Shade, Video: hrhero.mp4) */}
-      <section className="relative min-h-[calc(100vh-70px)] md:min-h-[calc(100vh-80px)] flex items-center justify-center overflow-hidden border-b border-gray-200 bg-[#08162D]">
-        <div className="absolute inset-0 z-0">
-          <video 
-            autoPlay 
-            loop 
-            muted 
-            playsInline 
-            className="w-full h-full object-cover"
-          >
+      {/* 1. Hero Section (Video Background) - Resized Blue Overlay Text & Compact Height */}
+      <section className="relative w-full h-[60vh] min-h-[400px] max-h-[560px] overflow-hidden bg-black hero-section border-b border-gray-200">
+        <div className="absolute inset-0 z-0 h-full w-full">
+          <video autoPlay loop muted playsInline className="h-full w-full object-cover opacity-90">
             <source src="/hrhero.mp4" type="video/mp4" />
           </video>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10 w-full py-10 text-center">
-          <motion.div 
+        <div className="absolute inset-0 z-10 flex h-full w-full items-center justify-center px-6 text-center bg-black/40">
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="max-w-3xl mx-auto"
+            className="max-w-5xl mx-auto"
           >
-            <span className="inline-block text-[11px] font-bold uppercase tracking-widest text-white bg-black/60 border border-white/20 px-3 py-1 rounded-xl mb-2.5 shadow-lg backdrop-blur-md">
-              <span className="inline-flex items-center gap-1.5 align-middle">The <span className="text-white">Digi</span><span className="text-[#0055FF]">Nizam</span> <Image src="/logo.png" alt="Logo" width={14} height={14} className="object-contain inline-block" /></span> ENTERPRISE SERVICES • DEVSINN SOLUTIONS
-            </span>
-            <h1 className="text-base sm:text-lg font-black leading-tight text-white tracking-tight drop-shadow-[0_4px_18px_rgba(0,0,0,0.95)]" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.9), 0 0px 4px rgba(0,0,0,0.8)' }}>
-              Intelligent <span className="text-[#0055FF]" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.9)' }}>HR Solutions</span>
+            <h1 className="text-6xl sm:text-8xl md:text-9xl lg:text-[6rem] font-black uppercase leading-none text-[#0055FF] tracking-wide drop-shadow-2xl">
+              HR DIGITALIZATION
             </h1>
-            <p className="text-xs md:text-sm text-gray-100 font-medium leading-relaxed mt-3 mb-4 drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
-              Automate payroll, attendance, leave management, and employee evaluations with our comprehensive Human Resource Digitalization suite.
-            </p>
-            <div className="flex flex-wrap gap-3 justify-center">
-              <Link 
-                href="/contact" 
-                className="inline-flex items-center gap-2 px-6 py-3 bg-[#0055FF] hover:bg-[#0044cc] text-white font-black text-xs uppercase tracking-widest rounded-xl transition-all shadow-xl group"
-              >
-                Start Your Project <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
           </motion.div>
         </div>
       </section>
 
-      {/* 2. Content Section below Hero */}
-      <section className="py-5 md:py-8 bg-white border-b border-gray-200 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center max-w-4xl relative z-10">
-           <h2 className="text-xl sm:text-base font-black text-[#08162D] tracking-tight">Empower your HR department</h2>
-           <p className="text-gray-600 text-xs sm:text-[13px] leading-relaxed mb-3 font-normal">
-             Reduce administrative overhead and foster a happier workplace. Our digital tools securely manage personnel records and ensure full regulatory compliance.
-           </p>
-           <div className="inline-flex items-center gap-2 text-[11px] font-bold text-[#0055FF] bg-[#0055FF]/10 border border-[#0055FF]/20 px-4 py-2 rounded-xl">
-             <FiServer size={16} /> Centralized Employee Hub
-           </div>
-        </div>
-      </section>
-
-      {/* 3. Section: DigiNizam HRIS Service (genhrisservice.jpg) */}
-      <section className="py-5 md:py-8 bg-white border-b border-gray-200 relative overflow-hidden">
+      {/* 2. GEN HRIS Services Section - Background: bg-white */}
+      <section className="py-4 md:py-6 bg-white border-b border-gray-200 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-4 items-center relative z-10">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -78,16 +46,16 @@ export default function HRDigitalizationPage() {
               HRIS PLATFORM
             </span>
             <h2 className="text-xl sm:text-base font-black text-[#08162D] tracking-tight">
-              <span className="text-black">Digi</span><span className="text-[#0055FF]">Nizam</span> <span className="text-[#0055FF]">HRIS Service</span>
+              GEN <span className="text-[#0055FF]">HRIS Services</span>
             </h2>
             <p className="text-gray-600 text-xs sm:text-[13px] leading-relaxed mb-2 font-normal">
-              <span className="text-black font-black">Digi</span><span className="text-[#0055FF] font-black">Nizam</span> has evolved an advanced HR software known as the Human Resource Information System (HRIS). This powerful device integrates important systems and methods to make sure green management of human assets, commercial enterprise workflows, and statistics.
+              DigiNizam has evolved an advanced HR software known as the Human Resource Information System (HRIS). This powerful platform integrates important systems and methods to make sure efficient management of human assets, enterprise workflows, and personnel statistics.
             </p>
-            <p className="text-gray-500 text-[11px] sm:text-xs leading-relaxed mb-3 font-normal">
-              HR software in Pakistan like <span className="text-black font-black">Digi</span><span className="text-[#0055FF] font-black">Nizam</span> is broadly followed by way of several corporations to streamline essential HR functions, serving as the imperative hub for operations across numerous organizational contexts.
+            <p className="text-gray-500 text-[11px] sm:text-xs leading-relaxed mb-4 font-normal">
+              HR software in Pakistan like DigiNizam is broadly adopted by several corporations to streamline essential HR functions, serving as the central hub for operations across numerous organizational contexts.
             </p>
-            <div className="inline-flex items-center gap-2 text-[11px] font-bold text-[#0055FF] bg-[#0055FF]/10 border border-[#0055FF]/20 px-3 py-1.5 rounded-xl">
-              <FiShield size={14} /> Secure Database Management
+            <div className="inline-flex items-center gap-2 text-[11px] font-bold text-[#0055FF] bg-[#0055FF]/10 border border-[#0055FF]/20 px-3.5 py-2 rounded-xl">
+              <FiShield size={14} /> Centralized Database &amp; Employee Directory
             </div>
           </motion.div>
 
@@ -103,14 +71,14 @@ export default function HRDigitalizationPage() {
               alt="DigiNizam HRIS Service" 
               width={420} 
               height={280}
-              className="w-auto max-h-[260px] object-contain rounded-xl shadow-lg"
+              className="w-auto max-h-[300px] object-contain rounded-xl shadow-lg"
             />
           </motion.div>
         </div>
       </section>
 
-      {/* 4. Section: Payroll (payrollhr.jpg) */}
-      <section className="py-5 md:py-8 bg-white border-b border-gray-200 relative overflow-hidden">
+      {/* 3. Payroll Section - Background: bg-gray-50 */}
+      <section className="py-4 md:py-6 bg-gray-50 border-b border-gray-200 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-4 items-center relative z-10">
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
@@ -124,7 +92,7 @@ export default function HRDigitalizationPage() {
               alt="Payroll Software" 
               width={420} 
               height={280}
-              className="w-auto max-h-[260px] object-contain rounded-xl shadow-lg"
+              className="w-auto max-h-[300px] object-contain rounded-xl shadow-lg"
             />
           </motion.div>
 
@@ -139,23 +107,23 @@ export default function HRDigitalizationPage() {
               AUTOMATED PAYROLL
             </span>
             <h2 className="text-xl sm:text-base font-black text-[#08162D] tracking-tight">
-              Streamlined <span className="text-[#0055FF]">Payroll Management</span>
+              Streamlined <span className="text-[#0055FF]">Payroll</span> Management
             </h2>
             <p className="text-gray-600 text-xs sm:text-[13px] leading-relaxed mb-2 font-normal">
               Experience the efficiency of streamlined payroll operations with our integrated payroll software in Pakistan. A single, secure platform that simplifies the payroll process for businesses operating across borders.
             </p>
-            <p className="text-gray-500 text-[11px] sm:text-xs leading-relaxed mb-3 font-normal">
-              Accurate and timely payroll management and compliance with labour regulations across different countries. Intuitive interface that simplifies payroll processing, from calculations to salary disbursements.
+            <p className="text-gray-500 text-[11px] sm:text-xs leading-relaxed mb-4 font-normal">
+              Accurate and timely payroll management and compliance with labour regulations across different regions. Intuitive interface that simplifies payroll calculations, tax deductions, and automated salary disbursements.
             </p>
-            <div className="inline-flex items-center gap-2 text-[11px] font-bold text-[#0055FF] bg-[#0055FF]/10 border border-[#0055FF]/20 px-3 py-1.5 rounded-xl">
-              <FiAward size={14} /> One-Click Disbursal
+            <div className="inline-flex items-center gap-2 text-[11px] font-bold text-[#0055FF] bg-[#0055FF]/10 border border-[#0055FF]/20 px-3.5 py-2 rounded-xl">
+              <FiAward size={14} /> One-Click Salary Disbursal &amp; Tax Compliance
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* 5. Section: Time & Attendance (timeattendencehr.png) */}
-      <section className="py-5 md:py-8 bg-white border-b border-gray-200 relative overflow-hidden">
+      {/* 4. Time & Attendance Section - Background: bg-white */}
+      <section className="py-4 md:py-6 bg-white border-b border-gray-200 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-4 items-center relative z-10">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -170,13 +138,13 @@ export default function HRDigitalizationPage() {
               Time &amp; <span className="text-[#0055FF]">Attendance</span>
             </h2>
             <p className="text-gray-600 text-xs sm:text-[13px] leading-relaxed mb-2 font-normal">
-              An HR store, processes and manages employee data, such as names, addresses, national IDs or Social Security numbers, visa or work permit information, and other dependent details.
+              Store, process, and manage employee attendance data seamlessly. Integrated with biometric machines, facial recognition, and mobile check-in to track shifts, tardiness, overtime, and leave requests.
             </p>
-            <p className="text-gray-500 text-[11px] sm:text-xs leading-relaxed mb-3 font-normal">
-              Storing employee data, managing payroll, recruitment, benefits administration, time and attendance, employee performance management, and tracking competency and training records, these are the essential HR functions that are the chain of the respective Human Information.
+            <p className="text-gray-500 text-[11px] sm:text-xs leading-relaxed mb-4 font-normal">
+              Managing payroll, recruitment, benefits administration, time and attendance, employee performance evaluations, and competency training logs under one synchronized system.
             </p>
-            <div className="inline-flex items-center gap-2 text-[11px] font-bold text-[#0055FF] bg-[#0055FF]/10 border border-[#0055FF]/20 px-3 py-1.5 rounded-xl">
-              <FiClock size={14} /> Biometric & Shift Sync
+            <div className="inline-flex items-center gap-2 text-[11px] font-bold text-[#0055FF] bg-[#0055FF]/10 border border-[#0055FF]/20 px-3.5 py-2 rounded-xl">
+              <FiClock size={14} /> Biometric &amp; Shift Synchronization
             </div>
           </motion.div>
 
@@ -192,24 +160,24 @@ export default function HRDigitalizationPage() {
               alt="Time and Attendance" 
               width={420} 
               height={280}
-              className="w-auto max-h-[260px] object-contain rounded-xl shadow-lg"
+              className="w-auto max-h-[300px] object-contain rounded-xl shadow-lg"
             />
           </motion.div>
         </div>
       </section>
 
-      {/* 6. Modernize your Workforce Section (Expanded to 6 Boxes) */}
-      <section className="py-5 md:py-8 bg-gray-50 border-b border-gray-200 relative overflow-hidden">
+      {/* 5. Project Description & Scope of Work Section - Background: bg-gray-50 */}
+      <section className="py-4 md:py-6 bg-gray-50 border-b border-gray-200 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
           <div className="text-center max-w-2xl mx-auto mb-5">
             <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-xl mb-1.5 border border-[#0055FF]/20">
-              KEY CAPABILITIES
+              SCOPE OF WORK
             </span>
             <h2 className="text-xl sm:text-base font-black text-[#08162D] tracking-tight">
-              Modernize your <span className="text-[#0055FF]">Workforce</span>
+              Project Description &amp; <span className="text-[#0055FF]">Scope of Work</span>
             </h2>
             <p className="text-gray-600 text-xs sm:text-[13px] font-normal">
-              Everything you need to attract, retain, and manage top talent efficiently with <span className="text-black font-black">Digi</span><span className="text-[#0055FF] font-black">Nizam</span>.
+              A complete digital transformation roadmap for human capital management.
             </p>
           </div>
 
@@ -219,14 +187,14 @@ export default function HRDigitalizationPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4 }}
-              className="bg-white p-4 rounded-2xl border border-gray-200 shadow-sm hover:border-[#0055FF] hover:shadow-xl transition-all group"
+              className="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm hover:border-[#0055FF] hover:shadow-xl transition-all group"
             >
               <div className="w-9 h-9 rounded-xl bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center mb-2.5 group-hover:bg-[#0055FF] group-hover:text-white transition-all">
-                <FiClock size={18} />
+                <FiUsers size={18} />
               </div>
-              <h3 className="text-sm font-black text-[#08162D] mb-1 group-hover:text-[#0055FF] transition-colors">Attendance & Roster</h3>
+              <h3 className="text-sm font-black text-[#08162D] mb-1 group-hover:text-[#0055FF] transition-colors">Employee Self-Service Portal</h3>
               <p className="text-gray-600 text-[11px] leading-relaxed font-normal">
-                Biometric integrations and shift scheduling with real-time tardiness and overtime tracking.
+                Digital portal for leave applications, payslip downloads, tax certificates, and personal profile updates.
               </p>
             </motion.div>
 
@@ -235,14 +203,14 @@ export default function HRDigitalizationPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: 0.1 }}
-              className="bg-white p-4 rounded-2xl border border-gray-200 shadow-sm hover:border-[#0055FF] hover:shadow-xl transition-all group"
+              className="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm hover:border-[#0055FF] hover:shadow-xl transition-all group"
             >
               <div className="w-9 h-9 rounded-xl bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center mb-2.5 group-hover:bg-[#0055FF] group-hover:text-white transition-all">
-                <FiAward size={18} />
+                <FiTrendingUp size={18} />
               </div>
-              <h3 className="text-sm font-black text-[#08162D] mb-1 group-hover:text-[#0055FF] transition-colors">Automated Payroll</h3>
+              <h3 className="text-sm font-black text-[#08162D] mb-1 group-hover:text-[#0055FF] transition-colors">Performance & Appraisal System</h3>
               <p className="text-gray-600 text-[11px] leading-relaxed font-normal">
-                One-click payroll generation, factoring in leaves, tax brackets, and performance bonuses automatically.
+                KPI tracking, 360-degree performance evaluations, and automated increment calculation tools.
               </p>
             </motion.div>
 
@@ -251,67 +219,41 @@ export default function HRDigitalizationPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: 0.2 }}
-              className="bg-white p-4 rounded-2xl border border-gray-200 shadow-sm hover:border-[#0055FF] hover:shadow-xl transition-all group"
+              className="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm hover:border-[#0055FF] hover:shadow-xl transition-all group"
             >
               <div className="w-9 h-9 rounded-xl bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center mb-2.5 group-hover:bg-[#0055FF] group-hover:text-white transition-all">
-                <FiShield size={18} />
-              </div>
-              <h3 className="text-sm font-black text-[#08162D] mb-1 group-hover:text-[#0055FF] transition-colors">Compliance & Privacy</h3>
-              <p className="text-gray-600 text-[11px] leading-relaxed font-normal">
-                Securely store sensitive personnel documents while meeting local labor laws and tax reporting standards.
-              </p>
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.3 }}
-              className="bg-white p-4 rounded-2xl border border-gray-200 shadow-sm hover:border-[#0055FF] hover:shadow-xl transition-all group"
-            >
-              <div className="w-9 h-9 rounded-xl bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center mb-2.5 group-hover:bg-[#0055FF] group-hover:text-white transition-all">
-                <FiTrendingUp size={18} />
-              </div>
-              <h3 className="text-sm font-black text-[#08162D] mb-1 group-hover:text-[#0055FF] transition-colors">Performance Management</h3>
-              <p className="text-gray-600 text-[11px] leading-relaxed font-normal">
-                Set KPIs, conduct 360-degree employee appraisals, and track professional growth metrics seamlessly.
-              </p>
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.4 }}
-              className="bg-white p-4 rounded-2xl border border-gray-200 shadow-sm hover:border-[#0055FF] hover:shadow-xl transition-all group"
-            >
-              <div className="w-9 h-9 rounded-xl bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center mb-2.5 group-hover:bg-[#0055FF] group-hover:text-white transition-all">
-                <FiSmartphone size={18} />
+                <FiFileText size={18} />
               </div>
               <h3 className="text-sm font-black text-[#08162D] mb-1 group-hover:text-[#0055FF] transition-colors">Recruitment & Onboarding</h3>
               <p className="text-gray-600 text-[11px] leading-relaxed font-normal">
-                Streamline candidate pipelines, automated resume screening, and paperless digital onboarding.
-              </p>
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.5 }}
-              className="bg-white p-4 rounded-2xl border border-gray-200 shadow-sm hover:border-[#0055FF] hover:shadow-xl transition-all group"
-            >
-              <div className="w-9 h-9 rounded-xl bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center mb-2.5 group-hover:bg-[#0055FF] group-hover:text-white transition-all">
-                <FiCheckCircle size={18} />
-              </div>
-              <h3 className="text-sm font-black text-[#08162D] mb-1 group-hover:text-[#0055FF] transition-colors">Employee Self-Service</h3>
-              <p className="text-gray-600 text-[11px] leading-relaxed font-normal">
-                Empower staff to apply for leaves, download payslips, and update personal information directly.
+                Job posting automation, applicant tracking, interview scheduling, and digital onboarding documentation.
               </p>
             </motion.div>
           </div>
         </div>
       </section>
+
+      {/* 6. We Convert Your Idea Into a Reality Section - Background: bg-white */}
+      <section className="py-4 md:py-6 bg-white border-b border-gray-200 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center max-w-3xl relative z-10">
+          <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-xl mb-2 border border-[#0055FF]/20">
+            DIGITAL TRANSFORMATION
+          </span>
+          <h2 className="text-xl sm:text-base font-black text-[#08162D] tracking-tight mb-2">
+            We Convert Your <span className="text-[#0055FF]">Idea Into a Reality</span>
+          </h2>
+          <p className="text-gray-600 text-xs sm:text-[13px] leading-relaxed mb-4 font-normal">
+            Reduce administrative overhead and foster a happier workplace. Our intelligent digital HR tools securely manage personnel records, streamline payroll processing, and guarantee complete labor regulatory compliance.
+          </p>
+          <div className="inline-flex items-center gap-2 text-[11px] font-bold text-[#0055FF] bg-[#0055FF]/10 border border-[#0055FF]/20 px-4 py-2 rounded-xl">
+            <FiServer size={16} /> Centralized Enterprise Employee Hub
+          </div>
+        </div>
+      </section>
+
+      {/* 7. Our Value, Our Mission, Our Vision (Unified Section) - Background: bg-gray-50 */}
+      <UnifiedValueMissionVision bgLight={true} />
+
     </main>
   );
 }

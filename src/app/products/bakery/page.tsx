@@ -1,181 +1,94 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
-import { FiClock, FiShield, FiSmartphone, FiAward, FiCheckCircle, FiTrendingUp, FiServer, FiArrowRight, FiBox, FiLayers, FiPrinter, FiTruck, FiBarChart2, FiGlobe } from "react-icons/fi";
+import { FiClock, FiShield, FiSmartphone, FiAward, FiCheckCircle, FiTrendingUp, FiServer, FiBox, FiLayers, FiPrinter, FiTruck, FiBarChart2, FiGlobe } from "react-icons/fi";
 import { motion } from "framer-motion";
+import ProductClientele from "@/components/common/ProductClientele";
+import ProductCertificates from "@/components/common/ProductCertificates";
+
+const bakeryModules = [
+  {
+    title: "Inventory Control",
+    desc: "Real-time stock tracking, expiry alerts for perishables, and automated low-stock warnings.",
+    icon: <FiBox size={20} />
+  },
+  {
+    title: "Point of Sale (POS)",
+    desc: "Lightning-fast touchscreen checkouts, barcode scanning, and custom weight entry support.",
+    icon: <FiLayers size={20} />
+  },
+  {
+    title: "Barcode & Label Printing",
+    desc: "Generate and print custom product price tags, packaging stickers, and shelf labels instantly.",
+    icon: <FiPrinter size={20} />
+  },
+  {
+    title: "Purchase & Supplier Management",
+    desc: "Manage supplier ledgers, purchase orders, ingredient deliveries, and automated reorder lists.",
+    icon: <FiTruck size={20} />
+  },
+  {
+    title: "Financial & Tax Reports",
+    desc: "Comprehensive profit/loss, daily cash registers, expense registers, and automated FBR tax reports.",
+    icon: <FiBarChart2 size={20} />
+  },
+  {
+    title: "Multi-Store & Cloud Sync",
+    desc: "Control multiple bakery branches or outlets from a single centralized real-time cloud dashboard.",
+    icon: <FiGlobe size={20} />
+  }
+];
 
 export default function BakerySolutionPage() {
   return (
     <main className="min-h-screen bg-white text-[#08162D]">
       
-      {/* 1. Hero Section (Video Background) - No Bluish Overlay/Shade */}
-      <section className="relative min-h-[calc(100vh-70px)] md:min-h-[calc(100vh-80px)] flex items-center justify-center overflow-hidden border-b border-gray-200 bg-[#08162D]">
-        {/* Background Video */}
-        <div className="absolute inset-0 z-0">
-          <video 
-            autoPlay 
-            loop 
-            muted 
-            playsInline 
-            className="w-full h-full object-cover"
-          >
+      {/* 1. Hero Section (Video Background) - Resized Blue Overlay Text & Compact Height */}
+      <section className="relative w-full h-[60vh] min-h-[400px] max-h-[560px] overflow-hidden bg-black hero-section border-b border-gray-200">
+        <div className="absolute inset-0 z-0 h-full w-full">
+          <video autoPlay loop muted playsInline className="h-full w-full object-cover opacity-90">
             <source src="/bakery.mp4" type="video/mp4" />
           </video>
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 w-full py-10 text-center">
-          <motion.div 
+        <div className="absolute inset-0 z-10 flex h-full w-full items-center justify-center px-6 text-center bg-black/40">
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="max-w-3xl mx-auto"
+            className="max-w-5xl mx-auto"
           >
-            <span className="inline-block text-[11px] font-bold uppercase tracking-widest text-white bg-black/60 border border-white/20 px-3 py-1 rounded-xl mb-3 shadow-lg backdrop-blur-md">
-              <span className="inline-flex items-center gap-1.5 align-middle">The <span className="text-white">Digi</span><span className="text-[#0055FF]">Nizam</span> <Image src="/logo.png" alt="Logo" width={14} height={14} className="object-contain inline-block" /></span> RETAIL SOLUTIONS • SWEETS &amp; BAKERY SUITE
-            </span>
-            <h1 className="text-base sm:text-lg font-black leading-tight text-white tracking-tight drop-shadow-[0_4px_18px_rgba(0,0,0,0.95)]" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.9), 0 0px 4px rgba(0,0,0,0.8)' }}>
-              Advanced <span className="text-[#0055FF]" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.9)' }}>Sweets &amp; Bakery</span> POS System
+            <h1 className="text-6xl sm:text-8xl md:text-9xl lg:text-[6rem] font-black uppercase leading-none text-[#0055FF] tracking-wide drop-shadow-2xl">
+              SWEETS &amp; BAKERY
             </h1>
-            <p className="text-xs md:text-sm text-gray-200 font-medium leading-relaxed mt-3 mb-4 drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
-              Comprehensive POS system for bakeries, sweet shops, and confectioneries. Manage orders, track inventory, and streamline operations effortlessly with absolute reliability.
-            </p>
- 
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Link 
-                href="/contact" 
-                className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#0055FF] hover:bg-[#0044cc] text-white font-black text-xs uppercase tracking-widest rounded-xl transition-all shadow-xl group"
-              >
-                Get Free Demo <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
           </motion.div>
         </div>
       </section>
 
-      {/* 2. POS Section with bakerypos.png Image Showcase & Extra Description */}
-      <section className="py-6 md:py-8 bg-white border-b border-gray-200 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-4 items-center mb-4">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-xl mb-2 border border-[#0055FF]/20">
-                POINT OF SALE & CAPABILITIES
-              </span>
-              <h2 className="text-base sm:text-lg font-black text-[#08162D] tracking-tight">
-                Designed for Modern <span className="text-[#0055FF]">Bakeries &amp; Confectioneries</span>
-              </h2>
-              <p className="text-gray-600 text-xs sm:text-sm font-normal leading-relaxed mb-2">
-                Everything you need to run bakery counters, sweet shops, and fast checkout lanes smoothly under high-pressure retail hours.
-              </p>
-              <p className="text-gray-500 text-xs sm:text-sm font-normal leading-relaxed mb-2">
-                Our specialized retail suite handles electronic scale integration for weighted sweets, custom item pricing rules, lightning-fast touch screen billing, split-payment processing, and seamless daily inventory tracking.
-              </p>
-              <p className="text-gray-500 text-xs sm:text-sm font-normal leading-relaxed">
-                Empower your cashiers with real-time stock availability, custom discount triggers, recipe cost calculations, and integrated customer loyalty programs to drive repeat business and maximize checkout speed.
-              </p>
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="flex justify-center"
-            >
-              <Image 
-                src="/bakerypos.png" 
-                alt="Designed for Modern Bakeries and Confectioneries POS System" 
-                width={420} 
-                height={280}
-                className="w-auto max-h-[280px] object-contain rounded-xl shadow-lg"
-              />
-            </motion.div>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm hover:border-[#0055FF] hover:shadow-xl transition-all group"
-            >
-              <div className="w-10 h-10 rounded-xl bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center mb-3 group-hover:bg-[#0055FF] group-hover:text-white transition-all">
-                <FiSmartphone size={20} />
-              </div>
-              <h3 className="text-base font-black text-[#08162D] mb-1.5 group-hover:text-[#0055FF] transition-colors">Touch Screen & Scale POS</h3>
-              <p className="text-gray-600 text-xs leading-relaxed font-normal">
-                Quick billing layout optimized for rush hours, barcoding, and electronic weighing scale integration.
-              </p>
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm hover:border-[#0055FF] hover:shadow-xl transition-all group"
-            >
-              <div className="w-10 h-10 rounded-xl bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center mb-3 group-hover:bg-[#0055FF] group-hover:text-white transition-all">
-                <FiShield size={20} />
-              </div>
-              <h3 className="text-base font-black text-[#08162D] mb-1.5 group-hover:text-[#0055FF] transition-colors">Recipe & Batch Management</h3>
-              <p className="text-gray-600 text-xs leading-relaxed font-normal">
-                Track ingredients, automated raw material deduction, and production batch logs efficiently.
-              </p>
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm hover:border-[#0055FF] hover:shadow-xl transition-all group"
-            >
-              <div className="w-10 h-10 rounded-xl bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center mb-3 group-hover:bg-[#0055FF] group-hover:text-white transition-all">
-                <FiAward size={20} />
-              </div>
-              <h3 className="text-base font-black text-[#08162D] mb-1.5 group-hover:text-[#0055FF] transition-colors">FBR Fiscal Integration</h3>
-              <p className="text-gray-600 text-xs leading-relaxed font-normal">
-                Automatic tax calculation and digital invoice reporting fully compliant with FBR standard regulations.
-              </p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* 3. Staff Section with bakeryinfo.jpg Image Showcase & Extra Description */}
-      <section className="py-6 md:py-8 bg-white border-b border-gray-200 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-4 items-center relative z-10">
+      {/* 2. Solution Overview Section - Background: bg-white */}
+      <section className="py-4 md:py-6 bg-white border-b border-gray-200 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-4 items-center relative z-10">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-xl mb-2 border border-[#0055FF]/20">
-              STAFF EFFICIENCY
+            <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3.5 py-1 rounded-xl mb-2.5 border border-[#0055FF]/20">
+              SOLUTION OVERVIEW
             </span>
             <h2 className="text-base sm:text-lg font-black text-[#08162D] tracking-tight">
-              Empower your <span className="text-[#0055FF]">bakery staff</span>
+              Empower your <span className="text-[#0055FF]">bakery staff</span> with SRB
             </h2>
-            <p className="text-gray-600 text-xs sm:text-sm leading-relaxed mb-2 font-normal">
+            <p className="text-gray-600 text-xs sm:text-sm leading-relaxed mt-2 mb-3 font-normal">
               High-speed receipt printing, kitchen display order routing, and real-time counter reports all in one place to maintain seamless synchronization between front-of-house counters and back-of-house production ovens.
             </p>
-            <p className="text-gray-500 text-xs sm:text-sm leading-relaxed mb-2 font-normal">
+            <p className="text-gray-500 text-xs sm:text-sm leading-relaxed mb-4 font-normal">
               Empower cashiers and bakers with intuitive workflows, holding orders, split bill handling, shift-handover management, and offline backup capabilities ensuring operations continue without disruption during heavy traffic hours.
             </p>
-            <p className="text-gray-500 text-xs sm:text-sm leading-relaxed mb-3 font-normal">
-              Role-based access permissions ensure complete cash control, preventing unauthorized discounts or cash drawer openings while giving managers instant visibility into hourly sales performance and staff productivity.
-            </p>
-            <div className="inline-flex items-center gap-2 text-xs font-bold text-[#0055FF] bg-[#0055FF]/10 border border-[#0055FF]/20 px-4 py-2 rounded-xl">
-              <FiServer size={16} /> Cloud & Local Sync Enabled
+            <div className="inline-flex items-center gap-2 text-xs font-bold text-[#0055FF] bg-[#0055FF]/10 border border-[#0055FF]/20 px-4 py-2.5 rounded-xl">
+              <FiServer size={16} /> Cloud &amp; Local Sync Enabled
             </div>
           </motion.div>
 
@@ -191,126 +104,112 @@ export default function BakerySolutionPage() {
               alt="Empower Bakery Staff and High-Speed Counter Operations" 
               width={420} 
               height={280}
-              className="w-auto max-h-[280px] object-contain rounded-xl shadow-lg"
+              className="w-auto max-h-[300px] object-contain rounded-xl shadow-lg"
             />
           </motion.div>
         </div>
       </section>
 
-      {/* 4. Our Modules Section */}
-      <section className="py-6 md:py-8 bg-gray-50 border-b border-gray-200 relative overflow-hidden">
+      {/* 3. Solution Key Features Section - Background: bg-gray-50 */}
+      <section className="py-4 md:py-6 bg-gray-50 border-b border-gray-200 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-          <div className="text-center max-w-2xl mx-auto mb-4">
-            <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-xl mb-2 border border-[#0055FF]/20">
-              CORE SYSTEM MODULES
-            </span>
-            <h2 className="text-base sm:text-lg font-black text-[#08162D] tracking-tight">
-              Explore Our Powerful <span className="text-[#0055FF]">Bakery Modules</span>
-            </h2>
-            <p className="text-gray-600 text-xs sm:text-sm font-normal">
-              Designed to handle every operational department of your sweet shop and bakery seamlessly under one roof.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center mb-5">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4 }}
-              className="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm hover:border-[#0055FF] hover:shadow-xl transition-all group"
+              transition={{ duration: 0.6 }}
             >
-              <div className="w-10 h-10 rounded-xl bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center mb-3 group-hover:bg-[#0055FF] group-hover:text-white transition-all">
-                <FiBox size={20} />
-              </div>
-              <h3 className="text-base font-black text-[#08162D] mb-1.5 group-hover:text-[#0055FF] transition-colors">Inventory Control</h3>
-              <p className="text-gray-600 text-xs leading-relaxed font-normal">
-                Real-time stock tracking, expiry alerts for perishables, and automated low-stock warnings.
+              <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3.5 py-1 rounded-xl mb-2.5 border border-[#0055FF]/20">
+                SOLUTION KEY FEATURES
+              </span>
+              <h2 className="text-base sm:text-lg font-black text-[#08162D] tracking-tight">
+                Designed for Modern <span className="text-[#0055FF]">Bakeries &amp; Confectioneries</span>
+              </h2>
+              <p className="text-gray-600 text-xs sm:text-sm font-normal leading-relaxed mt-2 mb-2.5">
+                Everything you need to run bakery counters, sweet shops, and fast checkout lanes smoothly under high-pressure retail hours.
               </p>
+              <p className="text-gray-500 text-xs sm:text-sm font-normal leading-relaxed mb-4">
+                Our specialized retail suite handles electronic scale integration for weighted sweets, custom item pricing rules, lightning-fast touch screen billing, split-payment processing, and seamless daily inventory tracking.
+              </p>
+              <ul className="space-y-2 text-xs sm:text-sm text-gray-700 font-bold">
+                <li className="flex items-center gap-3">
+                  <FiCheckCircle className="text-[#0055FF]" size={18} /> Integrated Electronic Weighing Scales
+                </li>
+                <li className="flex items-center gap-3">
+                  <FiCheckCircle className="text-[#0055FF]" size={18} /> Ingredient Recipe &amp; Perishable Stock Logs
+                </li>
+                <li className="flex items-center gap-3">
+                  <FiCheckCircle className="text-[#0055FF]" size={18} /> FBR Fiscal Integration &amp; Customer Loyalty
+                </li>
+              </ul>
             </motion.div>
 
             <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.1 }}
-              className="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm hover:border-[#0055FF] hover:shadow-xl transition-all group"
+              transition={{ duration: 0.6 }}
+              className="flex justify-center"
             >
-              <div className="w-10 h-10 rounded-xl bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center mb-3 group-hover:bg-[#0055FF] group-hover:text-white transition-all">
-                <FiLayers size={20} />
-              </div>
-              <h3 className="text-base font-black text-[#08162D] mb-1.5 group-hover:text-[#0055FF] transition-colors">Point of Sale (POS)</h3>
-              <p className="text-gray-600 text-xs leading-relaxed font-normal">
-                Lightning-fast touchscreen checkouts, barcode scanning, and custom weight entry support.
-              </p>
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.2 }}
-              className="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm hover:border-[#0055FF] hover:shadow-xl transition-all group"
-            >
-              <div className="w-10 h-10 rounded-xl bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center mb-3 group-hover:bg-[#0055FF] group-hover:text-white transition-all">
-                <FiPrinter size={20} />
-              </div>
-              <h3 className="text-base font-black text-[#08162D] mb-1.5 group-hover:text-[#0055FF] transition-colors">Barcode & Label Printing</h3>
-              <p className="text-gray-600 text-xs leading-relaxed font-normal">
-                Generate and print custom product price tags, packaging stickers, and shelf labels instantly.
-              </p>
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.3 }}
-              className="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm hover:border-[#0055FF] hover:shadow-xl transition-all group"
-            >
-              <div className="w-10 h-10 rounded-xl bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center mb-3 group-hover:bg-[#0055FF] group-hover:text-white transition-all">
-                <FiTruck size={20} />
-              </div>
-              <h3 className="text-base font-black text-[#08162D] mb-1.5 group-hover:text-[#0055FF] transition-colors">Purchase & Supplier Management</h3>
-              <p className="text-gray-600 text-xs leading-relaxed font-normal">
-                Manage supplier ledgers, purchase orders, ingredient deliveries, and automated reorder lists.
-              </p>
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.4 }}
-              className="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm hover:border-[#0055FF] hover:shadow-xl transition-all group"
-            >
-              <div className="w-10 h-10 rounded-xl bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center mb-3 group-hover:bg-[#0055FF] group-hover:text-white transition-all">
-                <FiBarChart2 size={20} />
-              </div>
-              <h3 className="text-base font-black text-[#08162D] mb-1.5 group-hover:text-[#0055FF] transition-colors">Financial & Tax Reports</h3>
-              <p className="text-gray-600 text-xs leading-relaxed font-normal">
-                Comprehensive profit/loss, daily cash registers, expense registers, and automated FBR tax reports.
-              </p>
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.5 }}
-              className="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm hover:border-[#0055FF] hover:shadow-xl transition-all group"
-            >
-              <div className="w-10 h-10 rounded-xl bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center mb-3 group-hover:bg-[#0055FF] group-hover:text-white transition-all">
-                <FiGlobe size={20} />
-              </div>
-              <h3 className="text-base font-black text-[#08162D] mb-1.5 group-hover:text-[#0055FF] transition-colors">Multi-Store & Cloud Sync</h3>
-              <p className="text-gray-600 text-xs leading-relaxed font-normal">
-                Control multiple bakery branches or outlets from a single centralized real-time cloud dashboard.
-              </p>
+              <Image 
+                src="/bakerypos.png" 
+                alt="Designed for Modern Bakeries and Confectioneries POS System" 
+                width={420} 
+                height={280}
+                className="w-auto max-h-[300px] object-contain rounded-xl shadow-lg"
+              />
             </motion.div>
           </div>
         </div>
       </section>
+
+      {/* 4. Our Modules Section - Background: bg-white */}
+      <section className="py-4 md:py-6 bg-white border-b border-gray-200 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+          <div className="text-center max-w-2xl mx-auto mb-5">
+            <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3.5 py-1 rounded-xl mb-2.5 border border-[#0055FF]/20">
+              OUR MODULES
+            </span>
+            <h2 className="text-base sm:text-lg font-black text-[#08162D] tracking-tight">
+              Explore Our Powerful <span className="text-[#0055FF]">Bakery Modules</span>
+            </h2>
+            <p className="text-gray-600 text-xs sm:text-sm font-normal mt-1">
+              Designed to handle every operational department of your sweet shop and bakery seamlessly under one roof.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {bakeryModules.map((mod, idx) => (
+              <motion.div 
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: idx * 0.08 }}
+                className="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm hover:border-[#0055FF] hover:shadow-xl transition-all group"
+              >
+                <div className="w-10 h-10 rounded-xl bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center mb-3 group-hover:bg-[#0055FF] group-hover:text-white transition-all">
+                  {mod.icon}
+                </div>
+                <h3 className="text-base font-black text-[#08162D] mb-1.5 group-hover:text-[#0055FF] transition-colors">
+                  {mod.title}
+                </h3>
+                <p className="text-gray-600 text-xs leading-relaxed font-normal">
+                  {mod.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. Our Clientele Section - Background: bg-gray-50 */}
+      <ProductClientele bgLight={true} />
+
+      {/* 6. Certificates / Memberships / Achievements Section - Background: bg-white */}
+      <ProductCertificates bgLight={false} />
+
     </main>
   );
 }

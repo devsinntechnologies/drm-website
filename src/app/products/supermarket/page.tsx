@@ -5,57 +5,37 @@ import Link from "next/link";
 import Image from "next/image";
 import { FiClock, FiShield, FiSmartphone, FiAward, FiCheckCircle, FiTrendingUp, FiServer, FiArrowRight, FiBox, FiLayers, FiPrinter, FiTruck, FiBarChart2, FiGlobe } from "react-icons/fi";
 import { motion } from "framer-motion";
+import ProductClientele from "@/components/common/ProductClientele";
+import ProductCertificates from "@/components/common/ProductCertificates";
 
 export default function SupermarketSolutionPage() {
   return (
     <main className="min-h-screen bg-white text-[#08162D]">
       
-      {/* Hero Section (Video Background) - Strictly Fits Full Viewport */}
-      <section className="relative min-h-[calc(100vh-70px)] md:min-h-[calc(100vh-80px)] flex items-center justify-center overflow-hidden border-b border-gray-200 bg-[#08162D]">
-        {/* Background Video */}
-        <div className="absolute inset-0 z-0">
-          <video 
-            autoPlay 
-            loop 
-            muted 
-            playsInline 
-            className="w-full h-full object-cover"
-          >
+      {/* Hero Section (Video Background) - Reduced Height */}
+      <section className="relative w-full h-[50vh] min-h-[380px] overflow-hidden bg-white">
+        <div className="absolute left-0 top-0 z-0 h-full w-full">
+          <video autoPlay loop muted playsInline className="h-full w-full object-cover">
             <source src="/herovediosupermarket.mp4" type="video/mp4" />
           </video>
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 w-full py-10 text-center">
-          <motion.div 
+        <div className="absolute left-0 top-0 z-10 flex h-full w-full items-center justify-center px-6 text-center">
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="max-w-3xl mx-auto"
+            className="max-w-5xl mx-auto"
           >
-            <span className="inline-block text-[11px] font-bold uppercase tracking-widest text-white bg-black/60 border border-white/20 px-3 py-1 rounded-xl mb-3 shadow-lg backdrop-blur-md">
-              <span className="inline-flex items-center gap-1.5 align-middle">The <span className="text-white">Digi</span><span className="text-[#0055FF]">Nizam</span> <Image src="/logo.png" alt="Logo" width={14} height={14} className="object-contain inline-block" /></span> RETAIL SOLUTIONS • SUPERMARKET SUITE
-            </span>
-            <h1 className="text-base sm:text-lg font-black leading-tight text-white tracking-tight drop-shadow-[0_4px_18px_rgba(0,0,0,0.95)]" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.9), 0 0px 4px rgba(0,0,0,0.8)' }}>
-              Advanced <span className="text-[#0055FF]" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.9)' }}>Supermarket</span> POS System
+            <h1 className="text-6xl sm:text-8xl md:text-9xl lg:text-[10rem] font-black uppercase leading-none text-[#0055FF] tracking-wide drop-shadow-2xl">
+              SUPERMARKET
             </h1>
-            <p className="text-xs md:text-sm text-gray-200 font-medium leading-relaxed mt-3 mb-4 drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
-              Streamline your checkout, barcode scanning, shelf management, and retail operations seamlessly with Pakistan&apos;s leading smart supermarket software, engineered for speed and absolute reliability.
-            </p>
- 
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Link 
-                href="/contact" 
-                className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#0055FF] hover:bg-[#0044cc] text-white font-black text-xs uppercase tracking-widest rounded-xl transition-all shadow-xl group"
-              >
-                Get Free Demo <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
           </motion.div>
         </div>
       </section>
 
       {/* Content Section with Staff & Image Showcase */}
-      <section className="py-6 md:py-8 bg-white border-b border-gray-200 relative overflow-hidden">
+      <section className="py-2 md:py-3 bg-white border-b border-gray-200 relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#0055FF]/5 blur-[140px] rounded-full pointer-events-none" />
         
         <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-4 items-center relative z-10">
@@ -102,7 +82,7 @@ export default function SupermarketSolutionPage() {
       </section>
 
       {/* Section 1: Core Capabilities / Our Modules with possupermarket.jpg Showcase */}
-      <section className="py-6 md:py-8 bg-white border-b border-gray-200 relative overflow-hidden">
+      <section className="py-2 md:py-3 bg-white border-b border-gray-200 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-4 items-center mb-5">
             <motion.div
@@ -196,7 +176,7 @@ export default function SupermarketSolutionPage() {
       </section>
 
       {/* Our Modules Section */}
-      <section className="py-6 md:py-8 bg-gray-50 border-b border-gray-200 relative overflow-hidden">
+      <section className="py-2 md:py-3 bg-gray-50 border-b border-gray-200 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
           <div className="text-center max-w-2xl mx-auto mb-5">
             <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-xl mb-2.5 border border-[#0055FF]/20">
@@ -309,6 +289,13 @@ export default function SupermarketSolutionPage() {
           </div>
         </div>
       </section>
+
+      {/* 5. Our Clientele Section */}
+      <ProductClientele bgLight={true} />
+
+      {/* 6. Certificates / Memberships / Achievements Section */}
+      <ProductCertificates bgLight={false} />
+
     </main>
   );
 }

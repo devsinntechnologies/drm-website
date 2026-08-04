@@ -120,28 +120,23 @@
     Fix Hero Section Scroll Issue: Adjust hero min-height & padding so it fits 
     perfectly in the viewport with the reduced navbar height without unwanted vertical scrollbars.
   */
-  main > section:first-of-type,
-  section[class*="min-h-"] {
-    min-height: calc(100dvh - 60px) !important;
-    padding-top: 1.5rem !important;
-    padding-bottom: 1.5rem !important;
-    margin-top: 0 !important;
-    box-sizing: border-box;
-  }
-
-  @media (max-width: 767px) {
-    main > section:first-of-type,
-    section[class*="min-h-"] {
-      min-height: calc(100dvh - 56px) !important;
-      padding-top: 1rem !important;
-      padding-bottom: 1rem !important;
-    }
+  /* Hero & Section Defaults */
+  section.hero-section {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    min-height: auto !important;
   }
 
   /* Global Spacing Reduction: Tighter, cleaner layout across all sections */
   section {
     padding-top: 1.5rem !important;
     padding-bottom: 1.5rem !important;
+  }
+
+  header a, header button, nav a, nav button, header a:focus, header button:focus, nav a:focus, nav button:focus, header a:active, header button:active, nav a:active, nav button:active {
+    outline: none !important;
+    border-color: transparent;
+    -webkit-tap-highlight-color: transparent;
   }
 
   @media (max-width: 767px) {
