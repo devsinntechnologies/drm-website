@@ -8,7 +8,7 @@ const easeOut = [0.16, 1, 0.3, 1] as const;
 
 export default function BoostSalesSection() {
   return (
-    <section className="py-12 md:py-16 bg-background border-b border-surface-border relative overflow-hidden">
+    <section className="py-12 md:py-16 bg-background section-soft-edge relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-[-15%] right-0 w-[520px] h-[360px] bg-primary/8 blur-[130px] rounded-full" />
       </div>

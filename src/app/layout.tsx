@@ -2,6 +2,11 @@ import React from "react";
 import type { Metadata } from "next";
 import { Poppins, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { BRAND_LOGO_SRC } from "@/components/common/Logo";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import FloatingWidgets from "@/components/FloatingWidgets";
+import StickyDemoBar from "@/components/common/StickyDemoBar";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -15,16 +20,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DigiNizam — Complete ERP & POS System",
-  description: "DigiNizam is a comprehensive cloud-based Point of Sale and ERP system. Manage orders, inventory, KDS, and more — all in one place.",
+  title: "DigiNizam — AI-Powered ERP & POS for Modern Retail",
+  description:
+    "FBR-ready POS, smart inventory, and multi-branch control for restaurants, pharmacies, and retail across Pakistan. Book a free demo.",
   icons: {
-    icon: "/logo.png", // Apni logo file ko public folder mein is naam se rakhain (e.g., public/logo.png)
+    icon: BRAND_LOGO_SRC,
+  },
+  openGraph: {
+    title: "DigiNizam — AI-Powered ERP & POS",
+    description: "Run every store from one intelligent platform. FBR-ready, cloud-synced, built for Pakistan.",
+    type: "website",
   },
 };
-
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import FloatingWidgets from "@/components/FloatingWidgets";
 
 export default function RootLayout({
   children,
@@ -40,6 +47,7 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-1">{children}</main>
         <FloatingWidgets />
+        <StickyDemoBar />
         <Footer />
       </body>
     </html>

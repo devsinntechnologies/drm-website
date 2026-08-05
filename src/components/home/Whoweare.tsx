@@ -23,7 +23,7 @@ const cards = [
 
 export const WhoWeAreSection: React.FC = () => {
   return (
-    <section className="py-12 md:py-16 bg-surface border-b border-surface-border relative overflow-hidden">
+    <section className="py-12 md:py-16 bg-surface section-soft-edge relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[640px] h-[360px] bg-primary/8 blur-[140px] rounded-full" />
       </div>

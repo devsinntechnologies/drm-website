@@ -1,304 +1,55 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { FiClock, FiShield, FiSmartphone, FiAward, FiCheckCircle, FiTrendingUp, FiServer, FiArrowRight, FiBox, FiLayers, FiPrinter, FiTruck, FiBarChart2, FiGlobe } from "react-icons/fi";
-import { motion } from "framer-motion";
-import ProductClientele from "@/components/common/ProductClientele";
-import ProductCertificates from "@/components/common/ProductCertificates";
-import ProductCTA from "@/components/common/ProductCTA";
+import { FiBox, FiLayers, FiPrinter, FiTruck, FiBarChart2, FiGlobe } from "react-icons/fi";
+import ProductPageTemplate from "@/components/common/ProductPageTemplate";
 
 export default function SupermarketSolutionPage() {
   return (
-    <main className="min-h-screen bg-surface text-foreground">
-      
-      {/* Hero Section (Video Background) - Reduced Height */}
-      <section className="relative w-full h-[50vh] min-h-[380px] overflow-hidden bg-surface">
-        <div className="absolute left-0 top-0 z-0 h-full w-full">
-          <video autoPlay loop muted playsInline className="h-full w-full object-cover">
-            <source src="/herovediosupermarket.mp4" type="video/mp4" />
-          </video>
-        </div>
-
-        <div className="absolute left-0 top-0 z-10 flex h-full w-full items-center justify-center px-6 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-5xl mx-auto"
-          >
-            <h1 className="hero-title text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase leading-none text-primary tracking-wide drop-shadow-2xl">
-              SUPERMARKET
-            </h1>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Content Section with Staff & Image Showcase */}
-      <section className="py-2 md:py-3 bg-surface border-b border-surface-border relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-primary/5 blur-[140px] rounded-full pointer-events-none" />
-        
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-4 items-center relative z-10">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <span className="inline-block text-xs font-bold uppercase tracking-widest text-primary bg-primary/10 px-3 py-1 rounded-xl mb-2.5 border border-primary/20">
-              STAFF EFFICIENCY
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-foreground tracking-tight">
-              Empower your <span className="text-primary">supermarket staff</span>
-            </h2>
-            <p className="text-muted text-xs sm:text-sm leading-relaxed mt-2 mb-3 font-normal">
-              High-speed receipt printing, seamless counter billing, and real-time sales reporting all in one place. Built on a complete POS infrastructure that supports both local operations and cloud synchronization.
-            </p>
-            <p className="text-muted text-xs sm:text-sm leading-relaxed mb-4 font-normal">
-              Empower cashiers and floor managers with ultra-fast barcode scanning, multi-terminal connectivity, offline backup support, and instantaneous checkout flows to handle rush hours effortlessly.
-            </p>
-            <div className="inline-flex items-center gap-2 text-xs font-bold text-primary bg-primary/10 border border-primary/20 px-4 py-2.5 rounded-xl">
-              <FiServer size={16} /> Cloud &amp; Local Sync Enabled
-            </div>
-          </motion.div>
-
-          <motion.div 
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="relative rounded-2xl overflow-hidden shadow-xl border border-surface-border bg-surface group"
-          >
-            <div className="absolute inset-0 bg-primary/15 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10" />
-            <Image 
-              src="/supermarket-solution.jpg" 
-              alt="Empower Supermarket Staff and High-Speed Checkout" 
-              width={600} 
-              height={400}
-              className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500"
-            />
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Section 1: Core Capabilities / Our Modules with possupermarket.jpg Showcase */}
-      <section className="py-2 md:py-3 bg-surface border-b border-surface-border relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-4 items-center mb-5">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <span className="inline-block text-xs font-bold uppercase tracking-widest text-primary bg-primary/10 px-3 py-1 rounded-xl mb-2.5 border border-primary/20">
-                OUR MODULES &amp; CAPABILITIES
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-bold text-foreground tracking-tight">
-                Designed for Modern <span className="text-primary">Retail Supermarkets</span>
-              </h2>
-              <p className="text-muted text-xs sm:text-sm font-normal leading-relaxed mt-2 mb-2.5">
-                Everything you need to run supermarkets, grocery stores, and retail marts efficiently.
-              </p>
-              <p className="text-muted text-xs sm:text-sm font-normal leading-relaxed">
-                Our comprehensive retail suite adapts to your store layout, offering robust inventory modules, flexible pricing rules, automated purchase ordering, and integrated weighing scale support.
-              </p>
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="relative rounded-2xl overflow-hidden shadow-xl border border-surface-border bg-surface group"
-            >
-              <div className="absolute inset-0 bg-primary/15 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10" />
-              <Image 
-                src="/possupermarket.jpg" 
-                alt="Designed for Modern Retail Supermarkets POS System" 
-                width={600} 
-                height={400}
-                className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500"
-              />
-            </motion.div>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="bg-surface p-6 rounded-2xl border border-surface-border shadow-sm hover:border-primary hover:shadow-xl transition-all group"
-            >
-              <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-all">
-                <FiSmartphone size={20} />
-              </div>
-              <h3 className="text-base font-black text-foreground mb-2 group-hover:text-primary transition-colors">Checkout &amp; Barcode Scanning</h3>
-              <p className="text-muted text-xs leading-relaxed font-normal">
-                Real-time tracking of items, ultra-fast counter billing with barcode scanners, and split payments.
-              </p>
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-surface p-6 rounded-2xl border border-surface-border shadow-sm hover:border-primary hover:shadow-xl transition-all group"
-            >
-              <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-all">
-                <FiShield size={20} />
-              </div>
-              <h3 className="text-base font-black text-foreground mb-2 group-hover:text-primary transition-colors">Shelf Management</h3>
-              <p className="text-muted text-xs leading-relaxed font-normal">
-                Organize your products effectively, track shelf life, and manage aisles to enhance the shopping experience.
-              </p>
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-surface p-6 rounded-2xl border border-surface-border shadow-sm hover:border-primary hover:shadow-xl transition-all group"
-            >
-              <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-all">
-                <FiAward size={20} />
-              </div>
-              <h3 className="text-base font-black text-foreground mb-2 group-hover:text-primary transition-colors">FBR Fiscal Integration</h3>
-              <p className="text-muted text-xs leading-relaxed font-normal">
-                Automatic tax calculation and real-time digital invoice reporting compliant with FBR standards.
-              </p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Modules Section */}
-      <section className="py-2 md:py-3 bg-surface border-b border-surface-border relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-          <div className="text-center max-w-2xl mx-auto mb-5">
-            <span className="inline-block text-xs font-bold uppercase tracking-widest text-primary bg-primary/10 px-3 py-1 rounded-xl mb-2.5 border border-primary/20">
-              CORE SYSTEM MODULES
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-foreground tracking-tight">
-              Explore Our Powerful <span className="text-primary">Supermarket Modules</span>
-            </h2>
-            <p className="text-muted text-xs sm:text-sm font-normal mt-2">
-              Designed to handle every operational department of your supermarket seamlessly under one roof.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4 }}
-              className="bg-surface p-6 rounded-2xl border border-surface-border shadow-sm hover:border-primary hover:shadow-xl transition-all group"
-            >
-              <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-all">
-                <FiBox size={20} />
-              </div>
-              <h3 className="text-base font-black text-foreground mb-2 group-hover:text-primary transition-colors">Inventory Control</h3>
-              <p className="text-muted text-xs leading-relaxed font-normal">
-                Real-time stock tracking, batch-wise expiry monitoring, and automated low-stock alerts.
-              </p>
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.1 }}
-              className="bg-surface p-6 rounded-2xl border border-surface-border shadow-sm hover:border-primary hover:shadow-xl transition-all group"
-            >
-              <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-all">
-                <FiLayers size={20} />
-              </div>
-              <h3 className="text-base font-black text-foreground mb-2 group-hover:text-primary transition-colors">Point of Sale (POS)</h3>
-              <p className="text-muted text-xs leading-relaxed font-normal">
-                Lightning-fast touchscreen checkouts, barcode gun support, holding bills, and flexible discounts.
-              </p>
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.2 }}
-              className="bg-surface p-6 rounded-2xl border border-surface-border shadow-sm hover:border-primary hover:shadow-xl transition-all group"
-            >
-              <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-all">
-                <FiPrinter size={20} />
-              </div>
-              <h3 className="text-base font-black text-foreground mb-2 group-hover:text-primary transition-colors">Barcode &amp; Label Printing</h3>
-              <p className="text-muted text-xs leading-relaxed font-normal">
-                Generate and print custom barcode labels, price tags, and shelf talkers instantly from the system.
-              </p>
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.3 }}
-              className="bg-surface p-6 rounded-2xl border border-surface-border shadow-sm hover:border-primary hover:shadow-xl transition-all group"
-            >
-              <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-all">
-                <FiTruck size={20} />
-              </div>
-              <h3 className="text-base font-black text-foreground mb-2 group-hover:text-primary transition-colors">Purchase &amp; Supplier Management</h3>
-              <p className="text-muted text-xs leading-relaxed font-normal">
-                Manage supplier ledgers, purchase orders, goods receiving notes, and automated reorder sheets.
-              </p>
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.4 }}
-              className="bg-surface p-6 rounded-2xl border border-surface-border shadow-sm hover:border-primary hover:shadow-xl transition-all group"
-            >
-              <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-all">
-                <FiBarChart2 size={20} />
-              </div>
-              <h3 className="text-base font-black text-foreground mb-2 group-hover:text-primary transition-colors">Financial &amp; Tax Reports</h3>
-              <p className="text-muted text-xs leading-relaxed font-normal">
-                Comprehensive profit/loss, daily cash registers, expense registers, and automated FBR tax reports.
-              </p>
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.5 }}
-              className="bg-surface p-6 rounded-2xl border border-surface-border shadow-sm hover:border-primary hover:shadow-xl transition-all group"
-            >
-              <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-all">
-                <FiGlobe size={20} />
-              </div>
-              <h3 className="text-base font-black text-foreground mb-2 group-hover:text-primary transition-colors">Multi-Store &amp; Cloud Sync</h3>
-              <p className="text-muted text-xs leading-relaxed font-normal">
-                Control multiple branches or warehouse outlets from a single centralized real-time cloud dashboard.
-              </p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. Our Clientele Section */}
-      <ProductCTA />
-
-      <ProductClientele bgLight={true} />
-
-      {/* 6. Certificates / Memberships / Achievements Section */}
-      <ProductCertificates bgLight={false} />
-
-    </main>
+    <ProductPageTemplate
+      label="Supermarket POS"
+      title={
+        <>
+          Scale your <span className="text-primary">mart & supermarket</span> operations
+        </>
+      }
+      description="High-volume checkout, barcode inventory, supplier management, and multi-lane POS for modern supermarkets."
+      heroMedia={{ type: "video", src: "/herovediosupermarket.mp4" }}
+      overview={{
+        title: (
+          <>
+            Faster lanes, <span className="text-primary">clearer inventory</span>
+          </>
+        ),
+        description:
+          "Empower cashiers with barcode billing, real-time stock, and branch-wide reporting from one platform.",
+        badge: "Multi-lane & multi-branch ready",
+        image: "/supermarket.png",
+        imageAlt: "Supermarket POS operations",
+      }}
+      features={{
+        title: "Built for high-volume retail",
+        description: "From checkout to warehouse—keep shelves stocked and queues moving.",
+        highlights: [
+          "Barcode & scale-integrated billing",
+          "Supplier purchase & GRN management",
+          "Real-time multi-branch stock sync",
+        ],
+        image: "/supermarket.png",
+        imageAlt: "Supermarket inventory and checkout",
+      }}
+      modules={[
+        { title: "Fast checkout POS", desc: "Multi-lane billing with barcode scanners and scales.", icon: <FiLayers size={20} /> },
+        { title: "Inventory management", desc: "Track SKUs, categories, and stock across locations.", icon: <FiBox size={20} /> },
+        { title: "Purchase & GRN", desc: "Supplier orders, goods receipt, and ledger tracking.", icon: <FiTruck size={20} /> },
+        { title: "Label & shelf tags", desc: "Print barcodes and price labels for new stock.", icon: <FiPrinter size={20} /> },
+        { title: "Reports & analytics", desc: "Sales, margins, and shrinkage insights in real time.", icon: <FiBarChart2 size={20} /> },
+        { title: "Multi-branch cloud", desc: "Central dashboard for every store and warehouse.", icon: <FiGlobe size={20} /> },
+      ]}
+      cta={{
+        title: "See supermarket POS in action",
+        description: "Book a free demo for your mart, supermarket, or retail chain.",
+      }}
+    />
   );
 }

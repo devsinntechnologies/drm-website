@@ -2,65 +2,40 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { FiClock, FiUsers, FiHeadphones, FiAward } from "react-icons/fi";
+import { FiClock, FiHeadphones, FiUsers, FiAward } from "react-icons/fi";
+import SectionShell from "@/components/common/SectionShell";
 
 const stats = [
-  {
-    icon: <FiHeadphones size={20} />,
-    value: "24/7",
-    label: "Expert Support",
-  },
-  {
-    icon: <FiClock size={20} />,
-    value: "< 2hrs",
-    label: "Avg. Response Time",
-  },
-  {
-    icon: <FiUsers size={20} />,
-    value: "500+",
-    label: "Businesses Served",
-  },
-  {
-    icon: <FiAward size={20} />,
-    value: "10+ Yrs",
-    label: "Industry Experience",
-  },
+  { icon: FiHeadphones, value: "24/7", label: "Support available" },
+  { icon: FiClock, value: "< 2 hrs", label: "Avg. response time" },
+  { icon: FiUsers, value: "500+", label: "Active outlets" },
+  { icon: FiAward, value: "10+ yrs", label: "Industry experience" },
 ];
 
-const ContactStats = () => {
+export default function ContactStats() {
   return (
-    <div className="py-3 md:py-4 bg-surface border-b border-surface-border relative overflow-hidden">
-      {/* Subtle glow */}
-      <div className="absolute inset-0 bg-primary/3 pointer-events-none" />
-
-      <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-          {stats.map((stat, idx) => (
+    <SectionShell tone="surface" className="!py-8 md:!py-10">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        {stats.map((stat, idx) => {
+          const Icon = stat.icon;
+          return (
             <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 16 }}
+              key={stat.label}
+              initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.1, duration: 0.5 }}
-              className="flex flex-col items-center text-center gap-1.5 p-3 rounded-2xl border border-surface-border hover:border-primary/30 hover:shadow-sm transition-all group"
+              transition={{ delay: idx * 0.06 }}
+              className="rounded-2xl border border-surface-border bg-background p-4 text-center hover:border-primary/30 transition-all"
             >
-              <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
-                {stat.icon}
+              <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center mx-auto mb-3">
+                <Icon className="w-5 h-5" />
               </div>
-              <div>
-                <div className="text-lg font-black text-foreground leading-tight">
-                  {stat.value}
-                </div>
-                <div className="text-[10px] font-semibold text-muted uppercase tracking-wider mt-0.5">
-                  {stat.label}
-                </div>
-              </div>
+              <p className="text-xl font-semibold text-foreground">{stat.value}</p>
+              <p className="text-xs text-muted mt-1">{stat.label}</p>
             </motion.div>
-          ))}
-        </div>
+          );
+        })}
       </div>
-    </div>
+    </SectionShell>
   );
-};
-
-export default ContactStats;
+}

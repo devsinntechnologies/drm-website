@@ -1,10 +1,10 @@
-import ComingSoon from "@/components/ComingSoon";
+import PartnerPageContent from "@/components/partner/PartnerPageContent";
 
 export const metadata = {
   title: "Become a Partner | DigiNizam",
-  description: "Partner with DigiNizam. Partnership opportunities coming soon.",
+  description: "Join the DigiNizam partner network. Resell ERP & POS solutions across Pakistan.",
 };
 
 export default function PartnerPage() {
-  return <ComingSoon pageName="Become a Partner" />;
+  return <PartnerPageContent />;
 }

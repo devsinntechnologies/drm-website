@@ -1,10 +1,10 @@
-import ComingSoon from "@/components/ComingSoon";
+import HiringPageContent from "@/components/hiring/HiringPageContent";
 
 export const metadata = {
   title: "We Are Hiring | DigiNizam",
-  description: "Join our team at DigiNizam. Career opportunities and job openings coming soon.",
+  description: "Join the DigiNizam team. Open roles in sales, implementation, and support.",
 };
 
 export default function HiringPage() {
-  return <ComingSoon pageName="We Are Hiring" />;
+  return <HiringPageContent />;
 }

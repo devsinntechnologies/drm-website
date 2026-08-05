@@ -69,7 +69,7 @@ export default function AwardBannerSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden px-5 py-14 sm:px-8 sm:py-20 lg:px-10 lg:py-24 xl:px-16 bg-surface border-b border-surface-border"
+      className="relative overflow-hidden px-5 py-14 sm:px-8 sm:py-20 lg:px-10 lg:py-24 xl:px-16 bg-surface section-soft-edge"
     >
       <div className="mx-auto w-full max-w-[1200px]">
         <div className="mb-10 sm:mb-14 text-center">

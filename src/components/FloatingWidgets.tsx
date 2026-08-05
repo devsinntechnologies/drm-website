@@ -3,6 +3,11 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import { FaWhatsapp } from "react-icons/fa";
+
+import { PHONE_WHATSAPP } from "@/lib/contact";
+
+const WHATSAPP_URL = `https://wa.me/${PHONE_WHATSAPP}?text=Hi%20DigiNizam%2C%20I%20want%20a%20free%20demo`;
 
 const FloatingWidgets = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -19,6 +24,26 @@ const FloatingWidgets = () => {
 
   return (
     <div className="fixed bottom-6 right-6 z-[100] flex flex-col gap-3">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8, x: 16 }}
+        animate={{ opacity: 1, scale: 1, x: 0 }}
+        transition={{ type: "spring", stiffness: 260, damping: 22, delay: 0.4 }}
+        className="relative group"
+      >
+        <a
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Chat on WhatsApp"
+          className="w-12 h-12 bg-[#25D366] text-white rounded-full shadow-lg flex items-center justify-center transition-transform duration-200 hover:scale-105 active:scale-95"
+        >
+          <FaWhatsapp className="w-6 h-6" />
+        </a>
+        <div className="absolute right-full mr-3 top-1/2 -translate-y-1/2 px-3 py-1.5 bg-surface border border-surface-border text-foreground text-[10px] font-semibold rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap uppercase tracking-wider">
+          WhatsApp us
+        </div>
+      </motion.div>
+
       <motion.div
         initial={{ opacity: 0, scale: 0.8, x: 16 }}
         animate={{ opacity: 1, scale: 1, x: 0 }}

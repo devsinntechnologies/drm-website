@@ -131,6 +131,39 @@
     min-height: auto;
   }
 
+  /* Soft section transitions — no harsh 1px borders between blocks */
+  .section-soft-edge {
+    position: relative;
+  }
+
+  .section-soft-edge::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: min(92%, 72rem);
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      color-mix(in srgb, var(--surface-border) 55%, transparent) 20%,
+      color-mix(in srgb, var(--surface-border) 55%, transparent) 80%,
+      transparent 100%
+    );
+    pointer-events: none;
+  }
+
+  .section-soft-edge--dark::after {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      color-mix(in srgb, white 14%, transparent) 25%,
+      color-mix(in srgb, white 14%, transparent) 75%,
+      transparent 100%
+    );
+  }
+
   section {
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -221,16 +254,53 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--primary);
-    padding: 6px 14px;
+    margin-bottom: 0.75rem;
+  }
+
+  .section-label::before {
+    content: "";
+    width: 6px;
+    height: 6px;
     border-radius: 9999px;
-    background: var(--primary-soft);
-    border: 1px solid color-mix(in srgb, var(--primary) 18%, transparent);
-    margin-bottom: 1rem;
+    background: var(--primary);
+    flex-shrink: 0;
+  }
+
+  .type-section-heading {
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.12;
+    font-size: clamp(1.875rem, 4.2vw, 2.875rem);
+  }
+
+  .type-page-heading {
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    font-size: clamp(2rem, 4.8vw, 3.25rem);
+  }
+
+  .type-card-title {
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+    font-size: clamp(1.0625rem, 2vw, 1.25rem);
+  }
+
+  .type-body {
+    font-size: 0.875rem;
+    line-height: 1.65;
+  }
+
+  @media (min-width: 768px) {
+    .type-body {
+      font-size: 1rem;
+    }
   }
 
   .card-hover {

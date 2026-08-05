@@ -1,218 +1,55 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
-import { FiClock, FiShield, FiSmartphone, FiAward, FiCheckCircle, FiTrendingUp, FiServer, FiBox, FiLayers, FiPrinter, FiTruck, FiBarChart2, FiGlobe } from "react-icons/fi";
-import { motion } from "framer-motion";
-import ProductClientele from "@/components/common/ProductClientele";
-import ProductCertificates from "@/components/common/ProductCertificates";
-import ProductCTA from "@/components/common/ProductCTA";
-
-const bakeryModules = [
-  {
-    title: "Inventory Control",
-    desc: "Real-time stock tracking, expiry alerts for perishables, and automated low-stock warnings.",
-    icon: <FiBox size={20} />
-  },
-  {
-    title: "Point of Sale (POS)",
-    desc: "Lightning-fast touchscreen checkouts, barcode scanning, and custom weight entry support.",
-    icon: <FiLayers size={20} />
-  },
-  {
-    title: "Barcode & Label Printing",
-    desc: "Generate and print custom product price tags, packaging stickers, and shelf labels instantly.",
-    icon: <FiPrinter size={20} />
-  },
-  {
-    title: "Purchase & Supplier Management",
-    desc: "Manage supplier ledgers, purchase orders, ingredient deliveries, and automated reorder lists.",
-    icon: <FiTruck size={20} />
-  },
-  {
-    title: "Financial & Tax Reports",
-    desc: "Comprehensive profit/loss, daily cash registers, expense registers, and automated FBR tax reports.",
-    icon: <FiBarChart2 size={20} />
-  },
-  {
-    title: "Multi-Store & Cloud Sync",
-    desc: "Control multiple bakery branches or outlets from a single centralized real-time cloud dashboard.",
-    icon: <FiGlobe size={20} />
-  }
-];
+import { FiBox, FiLayers, FiPrinter, FiTruck, FiBarChart2, FiGlobe } from "react-icons/fi";
+import ProductPageTemplate from "@/components/common/ProductPageTemplate";
 
 export default function BakerySolutionPage() {
   return (
-    <main className="min-h-screen bg-surface text-foreground">
-      
-      {/* 1. Hero Section (Video Background) - Resized Blue Overlay Text & Compact Height */}
-      <section className="relative w-full h-[60vh] min-h-[400px] max-h-[560px] overflow-hidden bg-black hero-section border-b border-surface-border">
-        <div className="absolute inset-0 z-0 h-full w-full">
-          <video autoPlay loop muted playsInline className="h-full w-full object-cover opacity-90">
-            <source src="/bakery.mp4" type="video/mp4" />
-          </video>
-        </div>
-
-        <div className="absolute inset-0 z-10 flex h-full w-full items-center justify-center px-6 text-center bg-black/40">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-5xl mx-auto"
-          >
-            <h1 className="hero-title text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase leading-none text-primary tracking-wide drop-shadow-2xl">
-              SWEETS &amp; BAKERY
-            </h1>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* 2. Solution Overview Section - Background: bg-surface */}
-      <section className="py-4 md:py-6 bg-surface border-b border-surface-border relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-4 items-center relative z-10">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <span className="inline-block text-xs font-bold uppercase tracking-widest text-primary bg-primary/10 px-3.5 py-1 rounded-xl mb-2.5 border border-primary/20">
-              SOLUTION OVERVIEW
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-foreground tracking-tight">
-              Empower your <span className="text-primary">bakery staff</span> with SRB
-            </h2>
-            <p className="text-muted text-xs sm:text-sm leading-relaxed mt-2 mb-3 font-normal">
-              High-speed receipt printing, kitchen display order routing, and real-time counter reports all in one place to maintain seamless synchronization between front-of-house counters and back-of-house production ovens.
-            </p>
-            <p className="text-muted text-xs sm:text-sm leading-relaxed mb-4 font-normal">
-              Empower cashiers and bakers with intuitive workflows, holding orders, split bill handling, shift-handover management, and offline backup capabilities ensuring operations continue without disruption during heavy traffic hours.
-            </p>
-            <div className="inline-flex items-center gap-2 text-xs font-bold text-primary bg-primary/10 border border-primary/20 px-4 py-2.5 rounded-xl">
-              <FiServer size={16} /> Cloud &amp; Local Sync Enabled
-            </div>
-          </motion.div>
-
-          <motion.div 
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="flex justify-center"
-          >
-            <Image 
-              src="/bakeryinfo.jpg" 
-              alt="Empower Bakery Staff and High-Speed Counter Operations" 
-              width={420} 
-              height={280}
-              className="w-auto max-h-[300px] object-contain rounded-xl shadow-lg"
-            />
-          </motion.div>
-        </div>
-      </section>
-
-      {/* 3. Solution Key Features Section - Background: bg-surface */}
-      <section className="py-4 md:py-6 bg-surface border-b border-surface-border relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center mb-5">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <span className="inline-block text-xs font-bold uppercase tracking-widest text-primary bg-primary/10 px-3.5 py-1 rounded-xl mb-2.5 border border-primary/20">
-                SOLUTION KEY FEATURES
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-bold text-foreground tracking-tight">
-                Designed for Modern <span className="text-primary">Bakeries &amp; Confectioneries</span>
-              </h2>
-              <p className="text-muted text-xs sm:text-sm font-normal leading-relaxed mt-2 mb-2.5">
-                Everything you need to run bakery counters, sweet shops, and fast checkout lanes smoothly under high-pressure retail hours.
-              </p>
-              <p className="text-muted text-xs sm:text-sm font-normal leading-relaxed mb-4">
-                Our specialized retail suite handles electronic scale integration for weighted sweets, custom item pricing rules, lightning-fast touch screen billing, split-payment processing, and seamless daily inventory tracking.
-              </p>
-              <ul className="space-y-2 text-xs sm:text-sm text-muted font-bold">
-                <li className="flex items-center gap-3">
-                  <FiCheckCircle className="text-primary" size={18} /> Integrated Electronic Weighing Scales
-                </li>
-                <li className="flex items-center gap-3">
-                  <FiCheckCircle className="text-primary" size={18} /> Ingredient Recipe &amp; Perishable Stock Logs
-                </li>
-                <li className="flex items-center gap-3">
-                  <FiCheckCircle className="text-primary" size={18} /> FBR Fiscal Integration &amp; Customer Loyalty
-                </li>
-              </ul>
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="flex justify-center"
-            >
-              <Image 
-                src="/bakerypos.png" 
-                alt="Designed for Modern Bakeries and Confectioneries POS System" 
-                width={420} 
-                height={280}
-                className="w-auto max-h-[300px] object-contain rounded-xl shadow-lg"
-              />
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* 4. Our Modules Section - Background: bg-surface */}
-      <section className="py-4 md:py-6 bg-surface border-b border-surface-border relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-          <div className="text-center max-w-2xl mx-auto mb-5">
-            <span className="inline-block text-xs font-bold uppercase tracking-widest text-primary bg-primary/10 px-3.5 py-1 rounded-xl mb-2.5 border border-primary/20">
-              OUR MODULES
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-foreground tracking-tight">
-              Explore Our Powerful <span className="text-primary">Bakery Modules</span>
-            </h2>
-            <p className="text-muted text-xs sm:text-sm font-normal mt-1">
-              Designed to handle every operational department of your sweet shop and bakery seamlessly under one roof.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {bakeryModules.map((mod, idx) => (
-              <motion.div 
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: idx * 0.08 }}
-                className="bg-surface p-5 rounded-2xl border border-surface-border shadow-sm hover:border-primary hover:shadow-xl transition-all group"
-              >
-                <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-3 group-hover:bg-primary group-hover:text-white transition-all">
-                  {mod.icon}
-                </div>
-                <h3 className="text-base font-black text-foreground mb-1.5 group-hover:text-primary transition-colors">
-                  {mod.title}
-                </h3>
-                <p className="text-muted text-xs leading-relaxed font-normal">
-                  {mod.desc}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 5. Our Clientele Section - Background: bg-surface */}
-      <ProductCTA />
-
-      <ProductClientele bgLight={true} />
-
-      {/* 6. Certificates / Memberships / Achievements Section - Background: bg-surface */}
-      <ProductCertificates bgLight={false} />
-
-    </main>
+    <ProductPageTemplate
+      label="Bakery POS"
+      title={
+        <>
+          POS built for <span className="text-primary">bakeries & sweet shops</span>
+        </>
+      }
+      description="Weight-based billing, expiry alerts, label printing, and FBR-ready checkout for bakeries across Pakistan."
+      heroMedia={{ type: "video", src: "/bakery.mp4" }}
+      overview={{
+        title: (
+          <>
+            Faster counters, <span className="text-primary">smarter stock</span>
+          </>
+        ),
+        description:
+          "Touchscreen billing, perishable tracking, and supplier management—one platform for every outlet.",
+        badge: "Cloud & local sync enabled",
+        image: "/bakeryshop.png",
+        imageAlt: "Bakery POS checkout",
+      }}
+      features={{
+        title: "Designed for fresh retail",
+        description: "From display counters to back-kitchen—inventory and sales stay in sync.",
+        highlights: [
+          "Expiry alerts for perishable goods",
+          "Custom weight & barcode billing",
+          "Multi-store cloud dashboard",
+        ],
+        image: "/bakeryshop.png",
+        imageAlt: "Bakery shop operations",
+      }}
+      modules={[
+        { title: "Inventory control", desc: "Real-time stock, expiry alerts, and low-stock warnings.", icon: <FiBox size={20} /> },
+        { title: "Point of sale", desc: "Fast touchscreen checkout with barcode and weight entry.", icon: <FiLayers size={20} /> },
+        { title: "Label printing", desc: "Print price tags, packaging stickers, and shelf labels.", icon: <FiPrinter size={20} /> },
+        { title: "Supplier management", desc: "Purchase orders, deliveries, and reorder lists.", icon: <FiTruck size={20} /> },
+        { title: "Financial & tax reports", desc: "P&L, cash registers, and FBR tax reporting.", icon: <FiBarChart2 size={20} /> },
+        { title: "Multi-store cloud sync", desc: "Control branches from one centralized dashboard.", icon: <FiGlobe size={20} /> },
+      ]}
+      cta={{
+        title: "See bakery POS in action",
+        description: "Book a free demo and walk through billing, inventory, and reporting for your bakery.",
+      }}
+    />
   );
 }

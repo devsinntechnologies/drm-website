@@ -69,7 +69,7 @@ export default function SmartFeaturesGridSection() {
   const ActiveIcon = features[active].icon;
 
   return (
-    <section className="py-12 md:py-16 bg-background border-b border-surface-border relative overflow-hidden">
+    <section className="py-12 md:py-16 bg-background section-soft-edge relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[720px] h-[420px] bg-primary/10 blur-[130px] rounded-full" />
         <div className="absolute inset-0 bg-grid-pattern opacity-20" />
