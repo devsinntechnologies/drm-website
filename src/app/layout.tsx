@@ -43,6 +43,21 @@ export default function RootLayout({
       lang="en"
       className={`${poppins.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-4WD5FEECW3"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-4WD5FEECW3');`,
+          }}
+        ></script>
+      </head>
       <body className="min-h-screen flex flex-col m-0 p-0 overflow-x-hidden bg-background text-foreground">
         <Navbar />
         <main className="flex-1">{children}</main>
