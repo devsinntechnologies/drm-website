@@ -1,14 +1,15 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
 import { FiCheckCircle } from "react-icons/fi";
 import Button from "@/components/ui/Button";
-import { Input, Select, Label, FieldError, FieldSuccess } from "@/components/ui/Field";
+import { Input, Select, Label, FieldError } from "@/components/ui/Field";
 import SectionShell from "@/components/common/SectionShell";
 import SectionHeader from "@/components/common/SectionHeader";
 import { PHONE_DISPLAY } from "@/lib/contact";
+import { DEMO_SUCCESS_PATH, sendEmailForm } from "@/lib/emailjs";
 
 const perks = [
   "Live POS & inventory walkthrough",
@@ -18,31 +19,55 @@ const perks = [
 ];
 
 export default function DemoForm() {
+  const router = useRouter();
   const form = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
-  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
-  const sendDemoRequest = (e: React.FormEvent) => {
+  useEffect(() => {
+    router.prefetch(DEMO_SUCCESS_PATH);
+  }, [router]);
+
+  const sendDemoRequest = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const currentForm = form.current;
+    if (!currentForm || loading) return;
+
+    const data = new FormData(currentForm);
+    const business = String(data.get("user_name") || "").trim();
+    const city = String(data.get("city") || "").trim();
+    const email = String(data.get("user_email") || "").trim();
+    const phone = String(data.get("user_phone") || "").trim();
+    const volume = String(data.get("volume") || "").trim();
+
+    if (!business || !city || !email || !phone) {
+      setErrorMsg("Please fill in business name, city, email, and phone.");
+      return;
+    }
+
+    const messageField = currentForm.elements.namedItem("message") as HTMLInputElement | null;
+    if (messageField) {
+      messageField.value = [
+        "Requested a free DigiNizam demo walkthrough.",
+        `Business: ${business}`,
+        `City: ${city}`,
+        `Email: ${email}`,
+        `Phone: ${phone}`,
+        `Daily order volume: ${volume || "not specified"}`,
+      ].join("\n");
+    }
+
     setLoading(true);
-    setStatus("idle");
     setErrorMsg("");
 
-    emailjs
-      .sendForm("service_a9bjgoa", "template_2m58y9m", form.current!, "EEOfnkaZIXRveWeQP")
-      .then(
-        () => {
-          setStatus("success");
-          setLoading(false);
-          form.current?.reset();
-        },
-        () => {
-          setStatus("error");
-          setErrorMsg("Could not schedule your demo. Please try again or contact us.");
-          setLoading(false);
-        }
-      );
+    sendEmailForm(currentForm)
+      .then(() => {
+        window.location.replace(DEMO_SUCCESS_PATH);
+      })
+      .catch(() => {
+        setErrorMsg("Could not schedule your demo. Please try again or contact us.");
+        setLoading(false);
+      });
   };
 
   return (
@@ -84,13 +109,13 @@ export default function DemoForm() {
           viewport={{ once: true }}
           className="lg:col-span-7"
         >
-          <form ref={form} onSubmit={sendDemoRequest} className="surface-card p-6 sm:p-8" noValidate>
+          <form ref={form} onSubmit={sendDemoRequest} className="surface-card p-6 sm:p-8">
             <h3 className="type-card-title text-foreground mb-1">Schedule your demo</h3>
             <p className="type-body text-muted mb-6">We&apos;ll reach out at {PHONE_DISPLAY} or your email to confirm.</p>
 
             <div className="space-y-4">
               <input type="hidden" name="subject" value="Demo Request" />
-              <input type="hidden" name="message" value="Requested a free DigiNizam demo walkthrough." />
+              <input type="hidden" name="message" defaultValue="Requested a free DigiNizam demo walkthrough." />
 
               <div>
                 <Label htmlFor="user_name">Business name</Label>
@@ -110,8 +135,8 @@ export default function DemoForm() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <Label htmlFor="phone">Phone</Label>
-                  <Input id="phone" name="phone" type="tel" placeholder={PHONE_DISPLAY} required />
+                  <Label htmlFor="user_phone">Phone</Label>
+                  <Input id="user_phone" name="user_phone" type="tel" placeholder={PHONE_DISPLAY} required />
                 </div>
                 <div>
                   <Label htmlFor="volume">Daily order volume</Label>
@@ -123,10 +148,7 @@ export default function DemoForm() {
                 </div>
               </div>
 
-              {status === "success" && (
-                <FieldSuccess>Demo request sent. Our team will contact you shortly.</FieldSuccess>
-              )}
-              {status === "error" && <FieldError>{errorMsg}</FieldError>}
+              {errorMsg ? <FieldError>{errorMsg}</FieldError> : null}
 
               <Button type="submit" variant="primary" fullWidth size="lg" disabled={loading}>
                 {loading ? "Scheduling..." : "Book free demo"}

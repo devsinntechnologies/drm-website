@@ -72,7 +72,7 @@ gtag('config', 'G-4WD5FEECW3');`,
         <Navbar />
         <main className="flex-1">{children}</main>
         <FloatingWidgets />
-        <StickyDemoBar />
+        {/* <StickyDemoBar /> */}
         <Footer />
       </body>
     </html>

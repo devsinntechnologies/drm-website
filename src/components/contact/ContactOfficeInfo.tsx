@@ -24,7 +24,7 @@ const offices = [
   {
     icon: <FiMail size={16} />,
     label: "Email",
-    value: "hello@diginizam.com",
+    value: "diginizam0@gmail.com",
   },
 ];
 
@@ -129,7 +129,7 @@ const ContactOfficeInfo = () => {
             {/* CTA */}
             <div className="mt-3 pt-3 border-t border-surface-border">
               <a
-                href="mailto:hello@diginizam.com"
+                href="mailto:diginizam0@gmail.com"
                 className="w-full flex items-center justify-center gap-2 py-2.5 bg-primary hover:bg-primary-hover text-white text-[11px] font-black uppercase tracking-widest rounded-xl transition-all shadow-md shadow-primary/20"
               >
                 <FiMail size={13} />

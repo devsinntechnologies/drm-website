@@ -2,17 +2,27 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import Button from "@/components/ui/Button";
 
+const HIDDEN_ON = ["/demo", "/thank-you"];
+
 export default function StickyDemoBar() {
+  const pathname = usePathname();
   const [visible, setVisible] = useState(false);
+  const hidden = HIDDEN_ON.includes(pathname);
 
   useEffect(() => {
+    if (hidden) {
+      setVisible(false);
+      return;
+    }
     const onScroll = () => setVisible(window.scrollY > 480);
+    onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [hidden]);
 
   return (
     <AnimatePresence>

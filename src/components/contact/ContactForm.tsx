@@ -2,7 +2,7 @@
 
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
+import { sendEmailForm } from "@/lib/emailjs";
 import Link from "next/link";
 import { FiMapPin, FiPhone, FiMail, FiSend, FiClock, FiMessageCircle } from "react-icons/fi";
 import Button from "@/components/ui/Button";
@@ -33,8 +33,8 @@ const contactChannels = [
   {
     icon: FiMail,
     title: "Email",
-    value: "hello@diginizam.com",
-    href: "mailto:hello@diginizam.com",
+    value: "diginizam0@gmail.com",
+    href: "mailto:diginizam0@gmail.com",
   },
   {
     icon: FiMessageCircle,
@@ -56,8 +56,7 @@ export default function ContactForm() {
     setStatus("idle");
     setErrorMsg("");
 
-    emailjs
-      .sendForm("service_a9bjgoa", "template_2m58y9m", form.current!, "EEOfnkaZIXRveWeQP")
+    sendEmailForm(form.current!)
       .then(
         () => {
           setStatus("success");
@@ -67,7 +66,7 @@ export default function ContactForm() {
         (error) => {
           console.error(error);
           setStatus("error");
-          setErrorMsg("Failed to send message. Please try again or email hello@diginizam.com.");
+          setErrorMsg("Failed to send message. Please try again or email diginizam0@gmail.com.");
           setLoading(false);
         }
       );

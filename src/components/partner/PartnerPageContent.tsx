@@ -2,7 +2,7 @@
 
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
+import { sendEmailForm } from "@/lib/emailjs";
 import { FiGlobe, FiTrendingUp, FiUsers, FiAward } from "react-icons/fi";
 import PageHero from "@/components/common/PageHero";
 import SectionShell from "@/components/common/SectionShell";
@@ -26,8 +26,7 @@ export default function PartnerPageContent() {
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    emailjs
-      .sendForm("service_a9bjgoa", "template_2m58y9m", form.current!, "EEOfnkaZIXRveWeQP")
+    sendEmailForm(form.current!)
       .then(() => {
         setStatus("success");
         setLoading(false);
@@ -124,7 +123,7 @@ export default function PartnerPageContent() {
               <FieldSuccess>Application received. We&apos;ll be in touch soon.</FieldSuccess>
             )}
             {status === "error" && (
-              <FieldError>Could not submit. Email hello@diginizam.com directly.</FieldError>
+              <FieldError>Could not submit. Email diginizam0@gmail.com directly.</FieldError>
             )}
             <Button type="submit" variant="primary" size="lg" fullWidth disabled={loading}>
               {loading ? "Submitting..." : "Submit application"}
