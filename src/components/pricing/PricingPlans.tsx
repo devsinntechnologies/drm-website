@@ -17,11 +17,11 @@ const plans = [
   },
   {
     name: "Professional",
-    price: "$49",
-    period: "per month",
+    price: "Quote",
+    period: "on demo",
     desc: "Advanced tools for growing restaurants with multiple staff.",
     features: ["Unlimited orders", "Advanced inventory", "3 terminals", "24/7 support", "Custom reports"],
-    btn: "Start free trial",
+    btn: "Get a quote",
     href: "/demo",
     popular: true,
   },
@@ -49,7 +49,7 @@ const PricingPlans = () => {
         >
           <span className="section-label">Transparent pricing</span>
           <h2 className="text-2xl sm:text-3xl font-bold text-foreground tracking-tight">
-            Plans that <span className="text-primary">scale</span> with you
+            Plans / Pricing
           </h2>
         </motion.div>
 

@@ -31,14 +31,11 @@ export default function HeroSection() {
             </span>
 
             <h1 className="font-semibold text-white tracking-tight mb-4 text-[clamp(2rem,4.5vw,3.25rem)] leading-[1.1]">
-              Run every store from one{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">
-                intelligent platform
-              </span>
+              POS Software for Growing Businesses in Pakistan
             </h1>
 
             <p className="text-base text-white/70 leading-relaxed mb-7">
-              FBR-ready POS and inventory for restaurants, pharmacies, and retail across Pakistan.
+              DigiNizam POS software helps you manage billing, inventory, orders and daily operations from one platform—built for restaurants and retail across Pakistan.
             </p>
 
             <div className="flex flex-wrap items-center gap-3">

@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const FeaturesInventory = () => {
   const points = [
-    { title: "Unlimited Stores", desc: "Scale your business with the #1 cloud inventory system." },
+    { title: "Unlimited Stores", desc: "Scale outlets on cloud inventory that stays in sync across locations." },
     { title: "Infinite Products", desc: "Manage thousands of items without any performance lag." },
     { title: "Variations & Batches", desc: "Track colors, sizes, and specific batches with absolute precision." },
     { title: "Auto-Adjustment", desc: "Stock levels update instantly with every sale, purchase, or return." },
@@ -14,7 +14,7 @@ const FeaturesInventory = () => {
   ];
 
   return (
-    <section className="py-8 md:py-10 bg-background relative overflow-hidden">
+    <section id="inventory" className="py-8 md:py-10 bg-background relative overflow-hidden">
       <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full pointer-events-none translate-x-1/2" />
       
       <div className="container mx-auto px-4 md:px-8 relative z-10">
@@ -65,8 +65,7 @@ const FeaturesInventory = () => {
           >
             <span className="section-label mb-4 md:mb-4">Inventory Control</span>
             <h2 className="text-xl sm:text-2xl md:text-lg lg:text-xl font-extrabold text-foreground mb-4 leading-tight">
-              Dynamic <span className="text-primary">Stock</span> <br />
-              Management
+              Stock Tracking &amp; Control
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-muted mb-4 md:mb-4 leading-relaxed max-w-xl font-medium">
               Eliminate guesswork with our advanced cloud-based inventory. 

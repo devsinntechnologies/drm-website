@@ -4,19 +4,14 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import PageHero from "@/components/common/PageHero";
-import SectionShell from "@/components/common/SectionShell";
 
 const FeaturesHeroDetailed = () => {
   return (
     <>
       <PageHero
-        label="Core technology"
-        title={
-          <>
-            Restaurant <span className="text-primary">point of sale</span> system
-          </>
-        }
-        description="A comprehensive ecosystem designed to be simple, quick, and scalable—empowering modern restaurateurs with enterprise-grade tools."
+        label="Restaurant inventory"
+        title="Restaurant Inventory Software in Pakistan"
+        description="Manage restaurant stock and inventory with DigiNizam. Improve visibility, connect stock with operations, and reduce manual inventory work."
       />
 
       <section className="pb-10 md:pb-12 bg-background border-b border-surface-border">
@@ -29,7 +24,7 @@ const FeaturesHeroDetailed = () => {
           >
             <Image
               src="/features/feature-hero-v2.png"
-              alt="Restaurant POS software dashboard"
+              alt="Restaurant inventory software in Pakistan"
               fill
               className="object-cover"
               priority

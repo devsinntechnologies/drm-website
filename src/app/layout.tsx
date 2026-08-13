@@ -6,7 +6,8 @@ import { BRAND_LOGO_SRC } from "@/components/common/Logo";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingWidgets from "@/components/FloatingWidgets";
-import StickyDemoBar from "@/components/common/StickyDemoBar";
+import JsonLd from "@/components/seo/JsonLd";
+import { SITE_URL, organizationJsonLd } from "@/lib/seo";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -20,15 +21,26 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DigiNizam — AI-Powered ERP & POS for Modern Retail",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "POS Software Pakistan | DigiNizam",
+    template: "%s",
+  },
   description:
-    "FBR-ready POS, smart inventory, and multi-branch control for restaurants, pharmacies, and retail across Pakistan. Book a free demo.",
+    "DigiNizam POS software helps businesses manage billing, inventory, orders and daily operations from one platform. Explore the solution and book a demo.",
+  robots: {
+    index: true,
+    follow: true,
+  },
   icons: {
     icon: BRAND_LOGO_SRC,
   },
   openGraph: {
-    title: "DigiNizam — AI-Powered ERP & POS",
-    description: "Run every store from one intelligent platform. FBR-ready, cloud-synced, built for Pakistan.",
+    title: "POS Software Pakistan | DigiNizam",
+    description:
+      "DigiNizam POS software helps businesses manage billing, inventory, orders and daily operations from one platform.",
+    url: SITE_URL,
+    siteName: "DigiNizam",
     type: "website",
   },
 };
@@ -72,8 +84,8 @@ gtag('config', 'G-4WD5FEECW3');`,
         <Navbar />
         <main className="flex-1">{children}</main>
         <FloatingWidgets />
-        {/* <StickyDemoBar /> */}
         <Footer />
+        <JsonLd data={organizationJsonLd} />
       </body>
     </html>
   );

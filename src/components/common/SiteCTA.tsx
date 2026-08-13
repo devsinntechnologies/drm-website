@@ -4,8 +4,8 @@ import React from "react";
 import Button from "@/components/ui/Button";
 
 export default function SiteCTA({
-  title = "Ready to get started?",
-  description = "Book a free demo and see how DigiNizam streamlines POS, inventory, and operations for your business.",
+  title = "Book a Demo",
+  description = "Book a free demo and see how DigiNizam POS software streamlines billing, inventory, and operations for your business.",
 }: {
   title?: string;
   description?: string;

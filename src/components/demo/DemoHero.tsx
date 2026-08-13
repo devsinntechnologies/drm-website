@@ -6,12 +6,8 @@ export default function DemoHero() {
   return (
     <PageHero
       label="Live demo"
-      title={
-        <>
-          See <span className="text-primary">DigiNizam</span> in action
-        </>
-      }
-      description="Walk through POS, inventory, and reporting with our team—tailored to your industry and workflow."
+      title="Book a DigiNizam Demo"
+      description="Book a DigiNizam demo to see restaurant POS, billing, inventory, orders and reporting in action. Choose the demo or contact option that fits your business."
     />
   );
 }

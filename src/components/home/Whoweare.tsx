@@ -44,10 +44,10 @@ export const WhoWeAreSection: React.FC = () => {
             className="font-semibold tracking-tight text-foreground"
             style={{ fontSize: "clamp(30px, 4.2vw, 46px)", lineHeight: 1.12 }}
           >
-            Who we are
+            Why DigiNizam
           </h2>
           <p className="text-sm md:text-base text-muted mt-3 leading-relaxed max-w-xl">
-            A team focused on practical retail software that helps businesses run cleaner every day.
+            Practical POS software for Pakistan—built to simplify billing, inventory and operations without locking you into a patchwork of tools.
           </p>
         </motion.div>
 

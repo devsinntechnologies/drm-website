@@ -29,9 +29,9 @@ export default function AllIndustriesSection() {
     <SectionShell glow>
       <SectionHeader
         align="center"
-        label="Industries we serve"
-        title="Built for every retail vertical"
-        description="One platform tailored to how restaurants, pharmacies, marts, and specialty stores actually operate."
+        label="Industries / Use Cases"
+        title="Industries and use cases"
+        description="One POS platform tailored to how restaurants, pharmacies, marts, and specialty stores actually operate."
       />
 
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-y-10 gap-x-6">

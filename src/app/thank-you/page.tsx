@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import ThankYouContent from "@/components/demo/ThankYouContent";
 
-export const metadata: Metadata = {
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = pageMetadata({
   title: "Demo booked | DigiNizam",
-  description: "Your DigiNizam demo request was received. Our team will contact you shortly to confirm the walkthrough.",
-  robots: { index: false, follow: false },
-};
+  description:
+    "Your DigiNizam demo request was received. Our team will contact you shortly to confirm the walkthrough.",
+  path: "/thank-you",
+  index: false,
+});
 
 export default function ThankYouPage() {
   return (

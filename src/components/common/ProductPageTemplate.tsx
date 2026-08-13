@@ -148,9 +148,9 @@ export default function ProductPageTemplate({
               <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-3 group-hover:bg-primary group-hover:text-white transition-all">
                 {mod.icon}
               </div>
-              <h3 className="type-card-title text-foreground mb-1.5 group-hover:text-primary transition-colors">
+              <h2 className="type-card-title text-foreground mb-1.5 group-hover:text-primary transition-colors">
                 {mod.title}
-              </h3>
+              </h2>
               <p className="type-body text-muted">{mod.desc}</p>
             </motion.div>
           ))}

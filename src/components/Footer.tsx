@@ -57,27 +57,22 @@ export default function Footer() {
           <ul className="space-y-2.5 text-sm text-muted font-medium">
             <li>
               <Link href="/products/restaurant" className={linkClass}>
-                Restaurant Solution
+                Restaurant management software
               </Link>
             </li>
             <li>
-              <Link href="/products/complaint" className={linkClass}>
-                CRM Field Force
-              </Link>
-            </li>
-            <li>
-              <Link href="/services/hr-digitalization" className={linkClass}>
-                HR Digitalization
-              </Link>
-            </li>
-            <li>
-              <Link href="/demo" className={linkClass}>
-                Get a Free Demo
+              <Link href="/features" className={linkClass}>
+                Restaurant inventory software
               </Link>
             </li>
             <li>
               <Link href="/pricing" className={linkClass}>
-                Pricing
+                POS software pricing
+              </Link>
+            </li>
+            <li>
+              <Link href="/demo" className={linkClass}>
+                Book a demo
               </Link>
             </li>
             <li>

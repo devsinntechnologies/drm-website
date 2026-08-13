@@ -5,13 +5,9 @@ import PageHero from "@/components/common/PageHero";
 export default function PricingHero() {
   return (
     <PageHero
-      label="Simple pricing"
-      title={
-        <>
-          Plans for every <span className="text-primary">scale</span>
-        </>
-      }
-      description="Choose the plan that fits your business. Transparent pricing with no hidden fees."
+      label="POS software pricing"
+      title="POS Software Pricing in Pakistan"
+      description="See DigiNizam POS software pricing, plan inclusions and options for restaurant management, billing and inventory. Book a demo for the right setup."
     />
   );
 }

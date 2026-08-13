@@ -81,8 +81,8 @@ export default function DemoForm() {
         >
           <SectionHeader
             label="Free walkthrough"
-            title="What you'll see in 30 minutes"
-            description="A tailored session with our product team—no sales pressure, no credit card required."
+            title="What You Will See"
+            description="A 30-minute session on POS, billing, kitchen tickets, inventory and reporting—no sales pressure, no credit card required."
             className="mb-0"
           />
 
@@ -110,7 +110,7 @@ export default function DemoForm() {
           className="lg:col-span-7"
         >
           <form ref={form} onSubmit={sendDemoRequest} className="surface-card p-6 sm:p-8">
-            <h3 className="type-card-title text-foreground mb-1">Schedule your demo</h3>
+            <h3 className="type-card-title text-foreground mb-1">Demo / Contact Form</h3>
             <p className="type-body text-muted mb-6">We&apos;ll reach out at {PHONE_DISPLAY} or your email to confirm.</p>
 
             <div className="space-y-4">
