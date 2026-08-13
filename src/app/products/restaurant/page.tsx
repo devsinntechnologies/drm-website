@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import RestaurantPageContent from "@/components/products/RestaurantPageContent";
+import RestaurantPageContent from "@/components/restaurant/RestaurantPageContent";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
