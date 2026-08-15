@@ -1,9 +1,5 @@
 import type { Metadata } from "next";
 import ThankYouContent from "@/components/demo/ThankYouContent";
-import ThankYouGate from "@/components/demo/ThankYouGate";
-import {
-  DEMO_SUCCESS_TOKEN_KEY,
-} from "@/lib/form-success";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
@@ -14,16 +10,15 @@ export const metadata: Metadata = pageMetadata({
   index: false,
 });
 
+/**
+ * Access is enforced in middleware via a one-time cookie set after successful demo submit.
+ * Unauthorized refresh/direct visits never render this page (no GA page_view / lead).
+ * generate_lead is NOT fired here — Demo lead is configured in GA4 for /thank-you.
+ */
 export default function ThankYouPage() {
   return (
-    <ThankYouGate
-      tokenKey={DEMO_SUCCESS_TOKEN_KEY}
-      redirectTo="/demo"
-      leadSource="demo"
-    >
-      <main className="bg-background">
-        <ThankYouContent />
-      </main>
-    </ThankYouGate>
+    <main className="bg-background">
+      <ThankYouContent />
+    </main>
   );
 }

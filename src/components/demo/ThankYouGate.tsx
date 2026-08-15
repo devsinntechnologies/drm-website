@@ -7,13 +7,14 @@ import { consumeFormSuccess, trackGenerateLead } from "@/lib/form-success";
 type ThankYouGateProps = {
   tokenKey: string;
   redirectTo: string;
-  leadSource: "demo" | "contact";
+  /** Contact only — Demo uses GA4 page-based lead, not site-code generate_lead. */
+  leadSource: "contact";
   children: ReactNode;
 };
 
 /**
- * One-time success gate: valid only immediately after a successful form submit.
- * Refresh / direct revisit clears access and redirects so generate_lead cannot re-fire.
+ * One-time success gate for Contact thank-you (client sessionStorage).
+ * Demo /thank-you is gated in middleware before analytics loads.
  */
 export default function ThankYouGate({
   tokenKey,

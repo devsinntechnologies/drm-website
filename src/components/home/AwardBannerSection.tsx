@@ -9,12 +9,19 @@ import {
   type MotionValue,
 } from "framer-motion";
 
-const HEADING = "Multi-Outlet ERP & POS for Businesses in Pakistan";
+/** Keep "ERP & POS" as one unit so spacing around & never collapses. */
+const HEADING_PARTS = [
+  "Multi-Outlet",
+  "ERP & POS",
+  "for",
+  "Businesses",
+  "in",
+  "Pakistan",
+] as const;
 
 const BODY =
   "Skip the paperwork. DigiNizam runs inventory, sales, purchases, expenses, and ledgers across Pakistan—so you can focus on growing the business.";
 
-const headingWords = HEADING.split(" ");
 const bodyWords = BODY.split(" ");
 
 const easeOut = [0.16, 1, 0.3, 1] as const;
@@ -97,7 +104,7 @@ export default function AwardBannerSection() {
             className="mt-3 max-w-[720px] mx-auto leading-tight tracking-tight text-foreground font-semibold"
             style={{ fontSize: "clamp(32px, 4.5vw, 56px)", lineHeight: 1.15 }}
           >
-            {headingWords.map((word, i) => (
+            {HEADING_PARTS.map((word, i) => (
               <span
                 key={`${word}-${i}`}
                 className="inline-flex overflow-hidden align-bottom mr-[0.22em] -my-[0.15em] py-[0.15em]"
