@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import ThankYouContent from "@/components/demo/ThankYouContent";
-
+import ThankYouGate from "@/components/demo/ThankYouGate";
+import {
+  DEMO_SUCCESS_TOKEN_KEY,
+} from "@/lib/form-success";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
@@ -13,8 +16,14 @@ export const metadata: Metadata = pageMetadata({
 
 export default function ThankYouPage() {
   return (
-    <main className="bg-background">
-      <ThankYouContent />
-    </main>
+    <ThankYouGate
+      tokenKey={DEMO_SUCCESS_TOKEN_KEY}
+      redirectTo="/demo"
+      leadSource="demo"
+    >
+      <main className="bg-background">
+        <ThankYouContent />
+      </main>
+    </ThankYouGate>
   );
 }

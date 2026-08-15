@@ -1,15 +1,21 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { sendEmailForm } from "@/lib/emailjs";
 import Link from "next/link";
 import { FiMapPin, FiPhone, FiMail, FiSend, FiClock, FiMessageCircle } from "react-icons/fi";
 import Button from "@/components/ui/Button";
-import { Input, Textarea, Select, Label, FieldError, FieldSuccess } from "@/components/ui/Field";
+import { Input, Textarea, Select, Label, FieldError } from "@/components/ui/Field";
 import SectionShell from "@/components/common/SectionShell";
 import SectionHeader from "@/components/common/SectionHeader";
 import { PHONE_DISPLAY, PHONE_TEL, PHONE_WHATSAPP } from "@/lib/contact";
+import {
+  CONTACT_SUCCESS_PATH,
+  CONTACT_SUCCESS_TOKEN_KEY,
+  markFormSuccess,
+} from "@/lib/form-success";
 
 const hours = [
   { day: "Monday – Friday", time: "9:00 AM – 6:00 PM" },
@@ -45,31 +51,35 @@ const contactChannels = [
 ];
 
 export default function ContactForm() {
+  const router = useRouter();
   const form = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
-  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
+
+  useEffect(() => {
+    router.prefetch(CONTACT_SUCCESS_PATH);
+  }, [router]);
 
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
+    if (!form.current || loading) return;
+
     setLoading(true);
     setStatus("idle");
     setErrorMsg("");
 
-    sendEmailForm(form.current!)
-      .then(
-        () => {
-          setStatus("success");
-          setLoading(false);
-          form.current?.reset();
-        },
-        (error) => {
-          console.error(error);
-          setStatus("error");
-          setErrorMsg("Failed to send message. Please try again or email diginizam0@gmail.com.");
-          setLoading(false);
-        }
-      );
+    sendEmailForm(form.current)
+      .then(() => {
+        markFormSuccess(CONTACT_SUCCESS_TOKEN_KEY);
+        window.location.replace(CONTACT_SUCCESS_PATH);
+      })
+      .catch((error) => {
+        console.error(error);
+        setStatus("error");
+        setErrorMsg("Failed to send message. Please try again or email diginizam0@gmail.com.");
+        setLoading(false);
+      });
   };
 
   return (
@@ -188,9 +198,6 @@ export default function ContactForm() {
                 />
               </div>
 
-              {status === "success" && (
-                <FieldSuccess>Thank you — your message was sent. We&apos;ll reply within two business hours.</FieldSuccess>
-              )}
               {status === "error" && <FieldError>{errorMsg}</FieldError>}
 
               <Button type="submit" variant="primary" fullWidth disabled={loading} size="lg">

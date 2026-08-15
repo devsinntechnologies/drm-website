@@ -9,7 +9,7 @@ import {
   type MotionValue,
 } from "framer-motion";
 
-const HEADING = "Best Multi-Outlet ERP & POS in Pakistan";
+const HEADING = "Multi-Outlet ERP & POS for Businesses in Pakistan";
 
 const BODY =
   "Skip the paperwork. DigiNizam runs inventory, sales, purchases, expenses, and ledgers across Pakistan—so you can focus on growing the business.";

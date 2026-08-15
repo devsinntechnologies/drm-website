@@ -7,7 +7,7 @@ export const EMAILJS_TEMPLATE_ID =
 export const EMAILJS_PUBLIC_KEY =
   process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "J7-nO8i5JHJmSDcu-";
 
-export const DEMO_SUCCESS_PATH = "/thank-you";
+export { DEMO_SUCCESS_PATH, CONTACT_SUCCESS_PATH } from "@/lib/form-success";
 
 function formToParams(form: HTMLFormElement) {
   const params: Record<string, string> = {};

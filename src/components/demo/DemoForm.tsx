@@ -9,7 +9,12 @@ import { Input, Select, Label, FieldError } from "@/components/ui/Field";
 import SectionShell from "@/components/common/SectionShell";
 import SectionHeader from "@/components/common/SectionHeader";
 import { PHONE_DISPLAY } from "@/lib/contact";
-import { DEMO_SUCCESS_PATH, sendEmailForm } from "@/lib/emailjs";
+import { sendEmailForm } from "@/lib/emailjs";
+import {
+  DEMO_SUCCESS_PATH,
+  DEMO_SUCCESS_TOKEN_KEY,
+  markFormSuccess,
+} from "@/lib/form-success";
 
 const perks = [
   "Live POS & inventory walkthrough",
@@ -62,6 +67,7 @@ export default function DemoForm() {
 
     sendEmailForm(currentForm)
       .then(() => {
+        markFormSuccess(DEMO_SUCCESS_TOKEN_KEY);
         window.location.replace(DEMO_SUCCESS_PATH);
       })
       .catch(() => {

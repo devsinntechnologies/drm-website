@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import Button from "@/components/ui/Button";
 
-const HIDDEN_ON = ["/demo", "/thank-you"];
+const HIDDEN_ON = ["/demo", "/thank-you", "/contact/thank-you"];
 
 export default function StickyDemoBar() {
   const pathname = usePathname();
