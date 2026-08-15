@@ -82,7 +82,7 @@ export default function SoftwareSolutionPage() {
               What <span className="text-primary">We Do</span>
             </h2>
             <p className="text-muted text-xs sm:text-[13px] font-normal">
-              Devsinn delivers end-to-end digital engineering services designed to accelerate growth, automate complex processes, and future-proof your business operations.
+              DigiNizam delivers end-to-end digital engineering services designed to accelerate growth, automate complex processes, and future-proof your business operations.
             </p>
           </div>
 
@@ -123,7 +123,7 @@ export default function SoftwareSolutionPage() {
               We Convert Your <span className="text-primary">Idea Into a Reality</span>
             </h2>
             <p className="text-muted text-xs sm:text-[13px] leading-relaxed mb-2 font-normal">
-              Transform legacy processes into agile, digitized workflows. Built on a complete cloud infrastructure that scales securely alongside your organization under Devsinn expert guidance.
+              Transform legacy processes into agile, digitized workflows. Built on a complete cloud infrastructure that scales securely alongside your organization under DigiNizam expert guidance.
             </p>
             <p className="text-muted text-[11px] sm:text-xs leading-relaxed mb-4 font-normal">
               Provide your team with intuitive dashboards, real-time collaboration tools, and role-based access permissions that boost daily productivity and minimize administrative friction.

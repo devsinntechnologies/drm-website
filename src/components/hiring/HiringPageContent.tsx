@@ -48,7 +48,7 @@ export default function HiringPageContent() {
             Build retail software that <span className="text-primary">matters</span>
           </>
         }
-        description="Join DigiNizam by Devsinn—help businesses across Pakistan run smarter with modern POS and ERP."
+        description="Join DigiNizam—help businesses across Pakistan run smarter with modern POS and ERP."
       />
 
       <SectionShell tone="surface">

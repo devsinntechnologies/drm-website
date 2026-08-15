@@ -27,7 +27,7 @@ const termsSections = [
   },
   {
     title: "5. Intellectual Property",
-    content: <>All content, features, and functionality of the <span className="text-black font-black">Digi</span><span className="text-primary font-black">Nizam</span> platform—developed in partnership with Devsinn—are owned by us and protected by international copyright and trademark laws.</>,
+    content: <>All content, features, and functionality of the <span className="text-black font-black">Digi</span><span className="text-primary font-black">Nizam</span> platform are owned by us and protected by international copyright and trademark laws.</>,
     icon: <FiCheckCircle size={18} />
   },
   {

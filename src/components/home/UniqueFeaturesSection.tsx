@@ -37,7 +37,7 @@ const UniqueFeaturesSection: React.FC = () => {
             Advanced Features <span className="text-primary">Not Found Elsewhere</span>
           </h2>
           <p className="text-muted text-lg font-medium">
-            Discover the proprietary AI and operational technology that sets RMS by Devsinn far apart from legacy Point of Sale applications.
+            Discover the proprietary AI and operational technology that sets DigiNizam far apart from legacy Point of Sale applications.
           </p>
         </div>
 

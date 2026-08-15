@@ -61,7 +61,7 @@ export default function PrivacyContent() {
 
       <SectionShell tone="surface">
         <p className="text-sm text-muted mb-8 max-w-3xl">
-          Last updated: August 2026. This policy applies to DigiNizam products and services operated by Devsinn.
+          Last updated: August 2026. This policy applies to DigiNizam products and services.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">

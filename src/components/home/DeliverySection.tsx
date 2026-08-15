@@ -75,7 +75,7 @@ const DeliverySection: React.FC = () => {
                   <div className="w-8 h-8 rounded-full bg-secondary text-white flex items-center justify-center shadow-lg border border-white">
                     🍔
                   </div>
-                  <span className="text-[8px] font-black bg-surface/95 px-2 py-0.5 border border-surface-border rounded-md mt-1 shadow-xs">Devsinn HQ</span>
+                  <span className="text-[8px] font-black bg-surface/95 px-2 py-0.5 border border-surface-border rounded-md mt-1 shadow-xs">DigiNizam HQ</span>
                 </div>
 
                 {/* Active Rider Pin */}

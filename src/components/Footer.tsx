@@ -2,7 +2,6 @@
 
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 import Logo from "@/components/common/Logo";
 import {
   FaFacebookF,
@@ -123,10 +122,6 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-6 mt-8 text-sm text-muted font-medium relative z-10 flex flex-col md:flex-row justify-between items-center gap-4">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[72rem] h-px bg-gradient-to-r from-transparent via-surface-border/60 to-transparent" />
         <div>&copy; {currentYear} DigiNizam. All rights reserved.</div>
-        <div className="flex items-center gap-2">
-          <span className="font-medium text-foreground">Powered by</span>
-          <Image src="/devsinnlogo0.svg" alt="Devsinn Logo" width={90} height={30} className="object-contain" priority />
-        </div>
       </div>
     </footer>
   );

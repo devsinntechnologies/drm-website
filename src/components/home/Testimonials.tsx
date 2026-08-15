@@ -22,7 +22,7 @@ export default function BusinessBannerSection() {
           {/* Background Image with Smooth Zoom */}
           <Image 
             src="/business.jpg" 
-            alt="DEVSINN Business Success" 
+            alt="DigiNizam Business Success" 
             fill 
             className="object-cover group-hover:scale-105 transition-transform duration-700"
           />

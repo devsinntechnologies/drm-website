@@ -31,7 +31,7 @@ const WhySection: React.FC = () => {
         <div className="text-center mb-4">
           <span className="section-label">Competitive Advantage</span>
           <h2 className="text-xl md:text-2xl font-extrabold text-foreground mb-4">
-            Why <span className="text-primary">RMS by Devsinn</span>?
+            Why <span className="text-primary">DigiNizam</span>?
           </h2>
           <p className="text-muted text-lg max-w-xl mx-auto">
             Compare legacy restaurant software with our unified AI-Powered Restaurant Operating System.
@@ -78,7 +78,7 @@ const WhySection: React.FC = () => {
             </div>
           </motion.div>
 
-          {/* RMS by Devsinn */}
+          {/* DigiNizam */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -99,7 +99,7 @@ const WhySection: React.FC = () => {
                     <FiCheck className="text-2.5xl font-black" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-black text-primary">RMS by Devsinn</h3>
+                    <h3 className="text-xl font-black text-primary">DigiNizam</h3>
                     <p className="text-xs text-primary/80 font-semibold tracking-wider uppercase">Next-Dig Operating System</p>
                   </div>
                 </div>

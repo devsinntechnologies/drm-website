@@ -13,7 +13,7 @@ export default function Logo({ className = "h-9 sm:h-10 w-auto", priority = fals
   return (
     <Image
       src={BRAND_LOGO_SRC}
-      alt="DigiNizam by Devsinn"
+      alt="DigiNizam"
       width={1337}
       height={307}
       priority={priority}
