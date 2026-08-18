@@ -144,6 +144,11 @@ export default function Navbar() {
                       </Link>
                     </li>
                     <li>
+                      <Link href="/products/snooker" className={menuLink}>
+                        Snooker POS Solution
+                      </Link>
+                    </li>
+                    <li>
                       <Link href="/products/books" className={menuLink}>
                         Books & Publishers Solution
                       </Link>
@@ -443,6 +448,7 @@ export default function Navbar() {
                   ["/products/restaurant", "Restaurant"],
                   ["/products/supermarket", "Supermarket"],
                   ["/products/pharmacy", "Pharmacy"],
+                  ["/products/snooker", "Snooker POS"],
                   ["/products/books", "Books"],
                   ["/products/bakery", "Bakery"],
                   ["/products/distribution", "Distribution"],

@@ -23,6 +23,7 @@ export default function AllIndustriesSection() {
     { name: "Manufacturing", icon: "/manufactoring.png", href: "/products/coming-soon" },
     { name: "Auto Parts", icon: "/AutoParts.png", href: "/products/coming-soon" },
     { name: "Book Store", icon: "/bookstore.png", href: "/products/books" },
+    { name: "Snooker POS", icon: "/snooker.svg", href: "/products/snooker" },
   ];
 
   return (
