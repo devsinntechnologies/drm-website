@@ -6,65 +6,23 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import SectionShell from "@/components/common/SectionShell";
 import SiteCTA from "@/components/common/SiteCTA";
+import {
+  formatBlogDate,
+  getActiveCategories,
+  getAllPosts,
+} from "@/lib/blog";
 
-const posts = [
-  {
-    title: "How to increase retail sales by 20% in 30 days",
-    category: "Marketing",
-    date: "Jul 24, 2026",
-    image: "/blog/blog1.jpg",
-    author: "Sarah Rahman",
-    time: "5 min read",
-  },
-  {
-    title: "The future of retail technology in 2026",
-    category: "Technology",
-    date: "Jul 15, 2026",
-    image: "/blog/blog2.jpg",
-    author: "Ahmed Malik",
-    time: "8 min read",
-  },
-  {
-    title: "10 best practices for digital inventory management",
-    category: "Inventory",
-    date: "Jun 08, 2026",
-    image: "/blog/blog3.jpg",
-    author: "Zeba Khan",
-    time: "4 min read",
-  },
-  {
-    title: "The impact of cloud POS on business scale",
-    category: "Technology",
-    date: "May 28, 2026",
-    image: "/blog/blog4.jpg",
-    author: "John Doe",
-    time: "7 min read",
-  },
-  {
-    title: "Why automated workflows are a game changer",
-    category: "Operations",
-    date: "May 15, 2026",
-    image: "/blog/blog5.jpg",
-    author: "Ayesha Sid",
-    time: "6 min read",
-  },
-  {
-    title: "Digital loyalty programs that drive repeat visits",
-    category: "Marketing",
-    date: "May 05, 2026",
-    image: "/blog/blog6.jpg",
-    author: "Omar Farooq",
-    time: "10 min read",
-  },
-];
-
-const categories = ["All", "Marketing", "Technology", "Inventory", "Operations"];
+const posts = getAllPosts();
+const categories = getActiveCategories();
 
 export default function BlogGrid() {
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedCategory, setSelectedCategory] = useState<"All" | string>("All");
 
   const filtered = useMemo(
-    () => (selectedCategory === "All" ? posts : posts.filter((p) => p.category === selectedCategory)),
+    () =>
+      selectedCategory === "All"
+        ? posts
+        : posts.filter((p) => p.category === selectedCategory),
     [selectedCategory]
   );
 
@@ -91,22 +49,23 @@ export default function BlogGrid() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filtered.map((post, idx) => (
             <motion.article
-              key={post.title}
+              key={post.slug}
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.05 }}
             >
               <Link
-                href={`/blog/${idx}`}
+                href={`/blog/${post.slug}`}
                 className="group flex flex-col h-full rounded-2xl border border-surface-border bg-background overflow-hidden hover:border-primary/30 hover:shadow-lg transition-all"
               >
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <Image
-                    src={post.image}
-                    alt={post.title}
+                    src={post.featuredImage}
+                    alt={post.imageAlt}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   <span className="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider bg-surface/95 text-primary px-2.5 py-1 rounded-lg border border-primary/20">
                     {post.category}
@@ -115,9 +74,11 @@ export default function BlogGrid() {
 
                 <div className="p-5 flex flex-col flex-1">
                   <div className="flex items-center gap-3 text-xs text-muted mb-3">
-                    <span>{post.date}</span>
+                    <time dateTime={post.publishedAt}>
+                      {formatBlogDate(post.publishedAt)}
+                    </time>
                     <span aria-hidden>·</span>
-                    <span>{post.time}</span>
+                    <span>{post.readTime}</span>
                   </div>
 
                   <h3 className="type-card-title text-foreground mb-4 group-hover:text-primary transition-colors line-clamp-2">
@@ -129,7 +90,9 @@ export default function BlogGrid() {
                       <div className="w-8 h-8 rounded-full bg-primary/10 text-primary text-xs font-bold flex items-center justify-center">
                         {post.author[0]}
                       </div>
-                      <span className="text-sm font-medium text-foreground">{post.author}</span>
+                      <span className="text-sm font-medium text-foreground">
+                        {post.author}
+                      </span>
                     </div>
                     <span className="text-primary text-sm font-semibold group-hover:translate-x-0.5 transition-transform">
                       Read →
@@ -142,7 +105,10 @@ export default function BlogGrid() {
         </div>
       </SectionShell>
 
-      <SiteCTA title="Want POS tips tailored to your business?" description="Book a free demo and see how DigiNizam fits your workflow." />
+      <SiteCTA
+        title="Want POS tips tailored to your business?"
+        description="Book a free demo and see how DigiNizam fits your workflow."
+      />
     </>
   );
 }

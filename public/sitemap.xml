@@ -14,9 +14,21 @@
   </url>
   <url>
     <loc>https://diginizam.com/blog</loc>
-    <lastmod>2026-08-10</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://diginizam.com/blog/what-is-a-restaurant-pos-system</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://diginizam.com/blog/restaurant-inventory-management-reduce-food-waste</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://diginizam.com/clientele</loc>

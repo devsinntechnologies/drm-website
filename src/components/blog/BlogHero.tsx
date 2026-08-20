@@ -5,13 +5,9 @@ import PageHero from "@/components/common/PageHero";
 export default function BlogHero() {
   return (
     <PageHero
-      label="Resources & news"
-      title={
-        <>
-          Insights for <span className="text-primary">modern retail</span>
-        </>
-      }
-      description="Industry trends, operational guides, and product updates from the DigiNizam team."
+      label="Resources & insights"
+      title="POS, Inventory & Restaurant Operations Insights"
+      description="Practical guides on restaurant POS, inventory, billing, kitchen workflows and smarter day-to-day operations from the DigiNizam team."
     />
   );
 }
