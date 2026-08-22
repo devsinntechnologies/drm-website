@@ -21,8 +21,46 @@ import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/contact";
 
 const menuHeading = "text-primary text-xs font-bold uppercase tracking-wider mb-3 border-b border-surface-border pb-2";
 const menuLink = "hover:text-primary transition-colors block text-muted";
-const serviceCard =
-  "p-3 rounded-xl border border-surface-border hover:border-primary hover:bg-primary/10 transition-all group";
+
+const industries: { href: string; label: string }[] = [
+  { href: "/products/retail", label: "Retail Store" },
+  { href: "/products/pharmacy", label: "Pharmacy" },
+  { href: "/products/restaurant", label: "Restaurant" },
+  { href: "/products/apparel", label: "Boutique" },
+  { href: "/products/salon", label: "Salon / SPA" },
+  { href: "/products/bakery", label: "Bakery POS" },
+  { href: "/products/electric", label: "Electric Store" },
+  { href: "/products/jewellery", label: "Jewellery Shop" },
+  { href: "/products/toys", label: "Toys Store" },
+  { href: "/products/cafe", label: "Food / Cafe" },
+  { href: "/products/furniture", label: "Furniture Store" },
+  { href: "/products/supermarket", label: "Supermarkets" },
+  { href: "/products/manufacturing", label: "Manufacturing" },
+  { href: "/products/automobile", label: "Auto Parts" },
+  { href: "/products/books", label: "Book Store" },
+  { href: "/products/snooker", label: "Snooker POS" },
+  { href: "/products/distribution", label: "Distribution" },
+];
+
+const moreSolutions: { href: string; label: string }[] = [
+  { href: "/products/shoes", label: "Shoes & Bags" },
+  { href: "/products/crockery", label: "Crockery & Cutlery" },
+  { href: "/products/vape", label: "Vape Shops" },
+  { href: "/products/beauty", label: "Beauty & Cosmetics" },
+  { href: "/products/rice", label: "Rice ERP" },
+  { href: "/products/flour", label: "Flour ERP" },
+  { href: "/products/sugar", label: "Sugar ERP" },
+  { href: "/products/textile", label: "Textile ERP" },
+  { href: "/products/complaint", label: "Complaint Management" },
+  { href: "/products/sales-mgmt", label: "Sales Management" },
+  { href: "/products/tracking", label: "User Tracking" },
+  { href: "/products/vps", label: "VPS & Dedicated Server" },
+  { href: "/products/fbr", label: "FBR Digital Invoicing" },
+  { href: "/products/genprice", label: "Gen Price & Financial" },
+];
+
+const mobileIndustries: [string, string][] = industries.map((i) => [i.href, i.label]);
+const mobileMoreSolutions: [string, string][] = moreSolutions.map((i) => [i.href, i.label]);
 
 function navLinkClass(active: boolean) {
   return active
@@ -33,10 +71,9 @@ function navLinkClass(active: boolean) {
 export default function Navbar() {
   const pathname = usePathname();
   const [isProductsOpen, setIsProductsOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [openMobileSection, setOpenMobileSection] = useState<"products" | "services" | "contact" | null>(null);
+  const [openMobileSection, setOpenMobileSection] = useState<"products" | "contact" | null>(null);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -49,8 +86,6 @@ export default function Navbar() {
   const isHome = pathname === "/";
   const isAbout = pathname.startsWith("/about");
   const isProducts = pathname.startsWith("/products");
-  const isServices = pathname.startsWith("/services");
-  const isClientele = pathname.startsWith("/clientele");
   const isContact =
     pathname.startsWith("/contact") ||
     pathname.startsWith("/demo") ||
@@ -116,7 +151,7 @@ export default function Navbar() {
               className={`flex items-center gap-1 py-2 font-semibold cursor-pointer ${navLinkClass(isProducts)}`}
               aria-expanded={isProductsOpen}
             >
-              Products{" "}
+              Industries{" "}
               <FiChevronDown
                 size={14}
                 className={`transition-transform duration-200 ${isProductsOpen ? "rotate-180" : ""}`}
@@ -124,197 +159,65 @@ export default function Navbar() {
             </button>
 
             {isProductsOpen && (
-              <div className="absolute top-full left-1/2 -translate-x-1/2 w-[900px] max-w-[min(900px,calc(100vw-2rem))] bg-surface border border-surface-border shadow-[var(--shadow-card)] rounded-2xl p-6 grid grid-cols-3 gap-6 mt-1 z-50 text-left animate-fade-up">
+              <div className="absolute top-full left-1/2 -translate-x-1/2 w-[900px] max-w-[min(900px,calc(100vw-2rem))] bg-surface border border-surface-border shadow-[var(--shadow-card)] rounded-2xl p-6 grid grid-cols-4 gap-6 mt-1 z-50 text-left animate-fade-up">
                 <div>
-                  <h4 className={menuHeading}>Digi Soft (Retail)</h4>
+                  <h4 className={menuHeading}>Industries</h4>
                   <ul className="space-y-2.5 text-xs font-semibold">
-                    <li>
-                      <Link href="/products/restaurant" onClick={() => setIsProductsOpen(false)} className={menuLink}>
-                        Restaurant Solution
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/products/supermarket" className={menuLink}>
-                        Supermarket Solution
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/products/pharmacy" className={menuLink}>
-                        Medical & Pharmacy Solution
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/products/snooker" className={menuLink}>
-                        Snooker POS Solution
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/products/books" className={menuLink}>
-                        Books & Publishers Solution
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/products/bakery" className={menuLink}>
-                        Sweets & Bakery Solution
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/products/distribution" className={menuLink}>
-                        Distribution Solution
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/products/automobile" className={menuLink}>
-                        Automobile Solution
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/products/apparel" className={menuLink}>
-                        Apparel & Garments Solution
-                      </Link>
-                    </li>
+                    {industries.slice(0, 6).map((item) => (
+                      <li key={item.href}>
+                        <Link href={item.href} onClick={() => setIsProductsOpen(false)} className={menuLink}>
+                          {item.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 className={`${menuHeading} opacity-0 select-none`} aria-hidden>
+                    Industries
+                  </h4>
+                  <ul className="space-y-2.5 text-xs font-semibold">
+                    {industries.slice(6, 12).map((item) => (
+                      <li key={item.href}>
+                        <Link href={item.href} onClick={() => setIsProductsOpen(false)} className={menuLink}>
+                          {item.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 className={`${menuHeading} opacity-0 select-none`} aria-hidden>
+                    Industries
+                  </h4>
+                  <ul className="space-y-2.5 text-xs font-semibold">
+                    {industries.slice(12).map((item) => (
+                      <li key={item.href}>
+                        <Link href={item.href} onClick={() => setIsProductsOpen(false)} className={menuLink}>
+                          {item.label}
+                        </Link>
+                      </li>
+                    ))}
                   </ul>
                 </div>
 
                 <div>
                   <h4 className={menuHeading}>More Solutions</h4>
-                  <ul className="space-y-2.5 text-xs font-semibold mb-5">
-                    <li>
-                      <Link href="/products/shoes" className={menuLink}>
-                        Shoes & Bags Solution
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/products/crockery" className={menuLink}>
-                        Crockery & Cutlery Solution
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/products/furniture" className={menuLink}>
-                        Furniture Solution
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/products/vape" className={menuLink}>
-                        Vape Shops
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/products/beauty" className={menuLink}>
-                        Beauty & Cosmetics
-                      </Link>
-                    </li>
-                  </ul>
-
-                  <h4 className={menuHeading}>Digi Soft (Industries)</h4>
                   <ul className="space-y-2 text-xs font-semibold">
-                    <li>
-                      <Link href="/products/rice" className={menuLink}>
-                        Rice ERP
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/products/flour" className={menuLink}>
-                        Flour ERP
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/products/sugar" className={menuLink}>
-                        Sugar ERP
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/products/textile" className={menuLink}>
-                        Textile ERP
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h4 className={menuHeading}>CRM (Field Force)</h4>
-                  <ul className="space-y-2 text-xs font-semibold mb-4">
-                    <li>
-                      <Link href="/products/complaint" className={menuLink}>
-                        Complaint Management System
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/products/sales-mgmt" className={menuLink}>
-                        Sales Management System
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/products/tracking" className={menuLink}>
-                        User Tracking Management
-                      </Link>
-                    </li>
-                  </ul>
-
-                  <h4 className={menuHeading}>Digi Cloud & Trac</h4>
-                  <ul className="space-y-2 text-xs font-semibold">
-                    <li>
-                      <Link href="/products/vps" className={menuLink}>
-                        VPS & Dedicated Server
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/products/fbr" className={menuLink}>
-                        FBR Digital Invoicing
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/products/genprice" className={menuLink}>
-                        Gen Price & Gen Financial
-                      </Link>
-                    </li>
+                    {moreSolutions.map((item) => (
+                      <li key={item.href}>
+                        <Link href={item.href} onClick={() => setIsProductsOpen(false)} className={menuLink}>
+                          {item.label}
+                        </Link>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
             )}
           </div>
-
-          <div
-            className="relative"
-            onMouseEnter={() => setIsServicesOpen(true)}
-            onMouseLeave={() => setIsServicesOpen(false)}
-          >
-            <button
-              type="button"
-              className={`flex items-center gap-1 py-2 font-semibold cursor-pointer ${navLinkClass(isServices)}`}
-              aria-expanded={isServicesOpen}
-            >
-              Services{" "}
-              <FiChevronDown
-                size={14}
-                className={`transition-transform duration-200 ${isServicesOpen ? "rotate-180" : ""}`}
-              />
-            </button>
-
-            {isServicesOpen && (
-              <div className="absolute top-full left-1/2 -translate-x-1/2 w-[650px] max-w-[min(650px,calc(100vw-2rem))] bg-surface border border-surface-border shadow-[var(--shadow-card)] rounded-2xl p-5 grid grid-cols-2 gap-3 mt-1 z-50 text-left animate-fade-up">
-                {[
-                  { href: "/services/software-solution", title: "Software Solution", desc: "Custom software for your business" },
-                  { href: "/services/hardware-support", title: "Hardware Support", desc: "Data recovery & diagnostics" },
-                  { href: "/services/mis-audit", title: "MIS Audit", desc: "Business activity analysis" },
-                  { href: "/services/training", title: "Training", desc: "Technical & helpdesk support" },
-                  { href: "/services/web-development", title: "Web Development", desc: "Ecommerce & web apps" },
-                  { href: "/services/digital-marketing", title: "Digital Marketing", desc: "SEO, SEM & social" },
-                  { href: "/services/system-support", title: "System Support", desc: "Support & maintenance" },
-                  { href: "/services/hr-digitalization", title: "HR Digitalization", desc: "Modern HR workflows" },
-                ].map((item) => (
-                  <Link key={item.href} href={item.href} className={serviceCard}>
-                    <h5 className="text-xs font-bold text-foreground group-hover:text-primary mb-1">{item.title}</h5>
-                    <p className="text-[10px] text-muted font-medium">{item.desc}</p>
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
-
-          <Link href="/clientele" className={navLinkClass(isClientele)}>
-            Clientele
-          </Link>
 
           <div
             className="relative"
@@ -436,7 +339,7 @@ export default function Navbar() {
               onClick={() => setOpenMobileSection(openMobileSection === "products" ? null : "products")}
               className={`flex items-center justify-between w-full font-semibold text-sm py-2 ${isProducts ? "text-primary" : "text-foreground hover:text-primary"}`}
             >
-              <span>Products & Solutions</span>
+              <span>Industries</span>
               <FiChevronDown
                 size={14}
                 className={`transition-transform duration-200 ${openMobileSection === "products" ? "rotate-180" : ""}`}
@@ -444,32 +347,20 @@ export default function Navbar() {
             </button>
             {openMobileSection === "products" && (
               <div className="pl-3 pt-1 pb-2 space-y-1.5">
-                {[
-                  ["/products/restaurant", "Restaurant"],
-                  ["/products/supermarket", "Supermarket"],
-                  ["/products/pharmacy", "Pharmacy"],
-                  ["/products/snooker", "Snooker POS"],
-                  ["/products/books", "Books"],
-                  ["/products/bakery", "Bakery"],
-                  ["/products/distribution", "Distribution"],
-                  ["/products/automobile", "Automobile"],
-                  ["/products/apparel", "Apparel"],
-                  ["/products/shoes", "Shoes & Bags"],
-                  ["/products/crockery", "Crockery"],
-                  ["/products/furniture", "Furniture"],
-                  ["/products/vape", "Vape Shops"],
-                  ["/products/beauty", "Beauty & Cosmetics"],
-                  ["/products/rice", "Rice ERP"],
-                  ["/products/flour", "Flour ERP"],
-                  ["/products/sugar", "Sugar ERP"],
-                  ["/products/textile", "Textile ERP"],
-                  ["/products/complaint", "Complaint Management"],
-                  ["/products/sales-mgmt", "Sales Management"],
-                  ["/products/tracking", "User Tracking"],
-                  ["/products/vps", "VPS & Dedicated"],
-                  ["/products/fbr", "FBR Digital"],
-                  ["/products/genprice", "Gen Price & Financial"],
-                ].map(([href, label]) => (
+                {mobileIndustries.map(([href, label]) => (
+                  <Link
+                    key={href}
+                    href={href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={`block text-sm py-0.5 ${pathname === href ? "text-primary font-semibold" : "text-muted hover:text-primary"}`}
+                  >
+                    {label}
+                  </Link>
+                ))}
+                <p className="pt-2 pb-1 text-[10px] font-bold uppercase tracking-wider text-muted">
+                  More Solutions
+                </p>
+                {mobileMoreSolutions.map(([href, label]) => (
                   <Link
                     key={href}
                     href={href}
@@ -482,51 +373,6 @@ export default function Navbar() {
               </div>
             )}
           </div>
-
-          <div className="border-t border-surface-border pt-1">
-            <button
-              type="button"
-              onClick={() => setOpenMobileSection(openMobileSection === "services" ? null : "services")}
-              className={`flex items-center justify-between w-full font-semibold text-sm py-2 ${isServices ? "text-primary" : "text-foreground hover:text-primary"}`}
-            >
-              <span>Services</span>
-              <FiChevronDown
-                size={14}
-                className={`transition-transform duration-200 ${openMobileSection === "services" ? "rotate-180" : ""}`}
-              />
-            </button>
-            {openMobileSection === "services" && (
-              <div className="pl-3 pt-1 pb-2 space-y-1.5">
-                {[
-                  ["/services/software-solution", "Software Solution"],
-                  ["/services/hardware-support", "Hardware Support"],
-                  ["/services/mis-audit", "MIS Audit"],
-                  ["/services/training", "Training"],
-                  ["/services/web-development", "Web Development"],
-                  ["/services/digital-marketing", "Digital Marketing"],
-                  ["/services/system-support", "System Support"],
-                  ["/services/hr-digitalization", "HR Digitalization"],
-                ].map(([href, label]) => (
-                  <Link
-                    key={href}
-                    href={href}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className={`block text-sm py-0.5 ${pathname === href ? "text-primary font-semibold" : "text-muted hover:text-primary"}`}
-                  >
-                    {label}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
-
-          <Link
-            href="/clientele"
-            onClick={() => setIsMobileMenuOpen(false)}
-            className={`block font-semibold text-sm py-2 ${isClientele ? "text-primary" : "text-foreground hover:text-primary"}`}
-          >
-            Clientele
-          </Link>
 
           <div className="border-t border-surface-border pt-1">
             <button
