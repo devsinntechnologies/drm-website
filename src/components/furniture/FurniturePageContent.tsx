@@ -26,7 +26,7 @@ const furnitureFaqs: FaqItem[] = [
   },
   {
     q: "Does DigiNizam include delivery scheduling and quotations?",
-    a: "Do not promise those modules until they are confirmed in the live Furniture Store template. They are common market requirements but not yet verified for this page.",
+    a: "Delivery scheduling and quotation management are not part of the current DigiNizam furniture workflow shown here. Ask our team if these fit your showroom's needs.",
   },
   {
     q: "Can DigiNizam manage multiple furniture showrooms?",
@@ -47,7 +47,6 @@ export default function FurniturePageContent() {
       <SectionCopy
         label="Overview"
         title="What Is Furniture Store POS Software?"
-        image="/industries/furniture/image-1.webp"
         imageAlt="DigiNizam Furniture Store POS solution"
         imageBrief="Professional furniture showroom with DigiNizam product availability / inventory UI; show sofa/table/chair context and a clean POS tablet/desktop screen."
       >
@@ -74,7 +73,6 @@ export default function FurniturePageContent() {
       <SectionCopy
         label="Stock"
         title="Showroom & Warehouse Stock Visibility"
-        image="/industries/furniture/image-2.webp"
         imageAlt="Furniture Store inventory / workflow in DigiNizam"
         imageBrief="Real DigiNizam warehouse/location stock or supplier purchase/receiving screen; emphasize availability across showroom/warehouse if supported."
       >

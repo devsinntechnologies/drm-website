@@ -20,18 +20,16 @@ export default function SectionCopy({
   imageBrief?: string;
   reverse?: boolean;
 }) {
-  const hasImage = Boolean(imageAlt && imageBrief) || Boolean(image);
-
   return (
     <SectionShell tone={reverse ? "background" : "surface"}>
       <div
-        className={`grid grid-cols-1 ${hasImage ? "lg:grid-cols-12" : ""} gap-8 lg:gap-10 items-start`}
+        className={`grid grid-cols-1 ${image ? "lg:grid-cols-12" : ""} gap-8 lg:gap-10 items-start`}
       >
-        <div className={hasImage ? "lg:col-span-6" : ""}>
+        <div className={image ? "lg:col-span-6" : ""}>
           <SectionHeader label={label} title={title} className="mb-4 md:mb-5" />
           <div className="space-y-3 type-body text-muted leading-relaxed">{children}</div>
         </div>
-        {hasImage ? (
+        {image ? (
           <div className="lg:col-span-6">
             <MediaSlot
               kind="image"

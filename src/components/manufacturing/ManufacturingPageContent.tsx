@@ -26,7 +26,7 @@ const manufacturingFaqs: FaqItem[] = [
   },
   {
     q: "Does DigiNizam include BOMs, work orders and production planning?",
-    a: "Do not advertise these functions unless the live Manufacturing template confirms them. They are expected features in manufacturing ERP searches but are not yet verified DigiNizam capabilities for this page.",
+    a: "BOMs, work orders and production planning are not part of the current DigiNizam manufacturing workflow. DigiNizam focuses on inventory, purchasing and invoicing—talk to our team if you need broader production-planning tools.",
   },
   {
     q: "Can manufacturers use DigiNizam for purchasing and invoicing?",
@@ -47,16 +47,14 @@ export default function ManufacturingPageContent() {
       <SectionCopy
         label="Overview"
         title="What Is Manufacturing Inventory Software?"
-        image="/industries/manufacturing/image-1.webp"
         imageAlt="DigiNizam Manufacturing POS solution"
         imageBrief="Warehouse/manufacturing storage area with raw materials and finished goods plus DigiNizam inventory dashboard; no production-line claims not supported."
       >
         <p>
           Manufacturing inventory software helps businesses track materials, finished goods,
-          purchasing, sales and warehouse stock in one system. DigiNizam can support inventory,
-          purchasing, invoicing and multi-location visibility for manufacturers, but a full
-          manufacturing ERP claim should only be used if production modules such as BOMs and
-          work orders are confirmed in the live product.
+          purchasing, sales and warehouse stock in one system. DigiNizam supports inventory,
+          purchasing, invoicing and multi-location visibility for manufacturers who need
+          connected operational records rather than a full production-planning ERP.
         </p>
       </SectionCopy>
 
@@ -92,7 +90,6 @@ export default function ManufacturingPageContent() {
         label="Purchasing"
         title="Purchasing & Supplier Records"
         reverse
-        image="/industries/manufacturing/image-2.webp"
         imageAlt="Manufacturing inventory / workflow in DigiNizam"
         imageBrief="Real DigiNizam purchase/receiving, multi-location inventory or low-stock screen relevant to warehouse operations."
       >

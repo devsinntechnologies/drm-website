@@ -26,7 +26,7 @@ const jewelleryFaqs: FaqItem[] = [
   },
   {
     q: "Does DigiNizam calculate gold rates, karat and making charges?",
-    a: "Do not claim those functions until they are confirmed in the live Jewellery Shop template. They are common market requirements but are not yet verified DigiNizam capabilities for this page.",
+    a: "Live gold-rate, karat and making-charge calculations are not part of the current DigiNizam jewellery workflow shown here. Ask our team about your pricing calculations during a demo.",
   },
   {
     q: "Can DigiNizam manage multiple jewellery outlets?",
@@ -47,10 +47,9 @@ export default function JewelleryPageContent() {
       <SectionCopy label="Overview" title="What Is Jewellery POS Software?">
         <p>
           Jewellery POS software helps jewellery retailers record sales, manage item inventory
-          and maintain clear billing and reporting records for high-value stock. DigiNizam can
-          support core retail operations such as invoicing, inventory visibility, payments and
-          multi-store reporting, while jewellery-specific calculations should only be published
-          when confirmed in the live product.
+          and maintain clear billing and reporting records for high-value stock. DigiNizam
+          supports core retail operations such as invoicing, inventory visibility, payments and
+          multi-store reporting for jewellery businesses.
         </p>
       </SectionCopy>
 
@@ -58,7 +57,6 @@ export default function JewelleryPageContent() {
         label="Inventory"
         title="Item-Level Inventory Visibility"
         reverse
-        image="/industries/jewellery/image-1.webp"
         imageAlt="DigiNizam Jewellery Shop POS solution"
         imageBrief="Premium jewellery counter/showcase with DigiNizam item inventory or invoice UI; elegant lighting, professional retail environment, no fake gold-rate figures."
       >
@@ -80,7 +78,6 @@ export default function JewelleryPageContent() {
         label="Labels"
         title="Barcode & Label Workflows Where Configured"
         reverse
-        image="/industries/jewellery/image-2.webp"
         imageAlt="Jewellery Shop inventory / workflow in DigiNizam"
         imageBrief="Real DigiNizam barcode/label, payment or sales-report screen relevant to jewellery retail; avoid unconfirmed karat/gold-rate UI."
       >

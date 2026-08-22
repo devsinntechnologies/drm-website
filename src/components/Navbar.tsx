@@ -42,25 +42,7 @@ const industries: { href: string; label: string }[] = [
   { href: "/products/distribution", label: "Distribution" },
 ];
 
-const moreSolutions: { href: string; label: string }[] = [
-  { href: "/products/shoes", label: "Shoes & Bags" },
-  { href: "/products/crockery", label: "Crockery & Cutlery" },
-  { href: "/products/vape", label: "Vape Shops" },
-  { href: "/products/beauty", label: "Beauty & Cosmetics" },
-  { href: "/products/rice", label: "Rice ERP" },
-  { href: "/products/flour", label: "Flour ERP" },
-  { href: "/products/sugar", label: "Sugar ERP" },
-  { href: "/products/textile", label: "Textile ERP" },
-  { href: "/products/complaint", label: "Complaint Management" },
-  { href: "/products/sales-mgmt", label: "Sales Management" },
-  { href: "/products/tracking", label: "User Tracking" },
-  { href: "/products/vps", label: "VPS & Dedicated Server" },
-  { href: "/products/fbr", label: "FBR Digital Invoicing" },
-  { href: "/products/genprice", label: "Gen Price & Financial" },
-];
-
 const mobileIndustries: [string, string][] = industries.map((i) => [i.href, i.label]);
-const mobileMoreSolutions: [string, string][] = moreSolutions.map((i) => [i.href, i.label]);
 
 function navLinkClass(active: boolean) {
   return active
@@ -159,7 +141,7 @@ export default function Navbar() {
             </button>
 
             {isProductsOpen && (
-              <div className="absolute top-full left-1/2 -translate-x-1/2 w-[900px] max-w-[min(900px,calc(100vw-2rem))] bg-surface border border-surface-border shadow-[var(--shadow-card)] rounded-2xl p-6 grid grid-cols-4 gap-6 mt-1 z-50 text-left animate-fade-up">
+              <div className="absolute top-full left-1/2 -translate-x-1/2 w-[680px] max-w-[min(680px,calc(100vw-2rem))] bg-surface border border-surface-border shadow-[var(--shadow-card)] rounded-2xl p-6 grid grid-cols-3 gap-6 mt-1 z-50 text-left animate-fade-up">
                 <div>
                   <h4 className={menuHeading}>Industries</h4>
                   <ul className="space-y-2.5 text-xs font-semibold">
@@ -194,19 +176,6 @@ export default function Navbar() {
                   </h4>
                   <ul className="space-y-2.5 text-xs font-semibold">
                     {industries.slice(12).map((item) => (
-                      <li key={item.href}>
-                        <Link href={item.href} onClick={() => setIsProductsOpen(false)} className={menuLink}>
-                          {item.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div>
-                  <h4 className={menuHeading}>More Solutions</h4>
-                  <ul className="space-y-2 text-xs font-semibold">
-                    {moreSolutions.map((item) => (
                       <li key={item.href}>
                         <Link href={item.href} onClick={() => setIsProductsOpen(false)} className={menuLink}>
                           {item.label}
@@ -348,19 +317,6 @@ export default function Navbar() {
             {openMobileSection === "products" && (
               <div className="pl-3 pt-1 pb-2 space-y-1.5">
                 {mobileIndustries.map(([href, label]) => (
-                  <Link
-                    key={href}
-                    href={href}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className={`block text-sm py-0.5 ${pathname === href ? "text-primary font-semibold" : "text-muted hover:text-primary"}`}
-                  >
-                    {label}
-                  </Link>
-                ))}
-                <p className="pt-2 pb-1 text-[10px] font-bold uppercase tracking-wider text-muted">
-                  More Solutions
-                </p>
-                {mobileMoreSolutions.map(([href, label]) => (
                   <Link
                     key={href}
                     href={href}

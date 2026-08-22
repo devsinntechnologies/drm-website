@@ -26,7 +26,7 @@ const electricFaqs: FaqItem[] = [
   },
   {
     q: "Does DigiNizam track serial numbers or warranties?",
-    a: "Do not promise serial-number or warranty tracking unless the live Electrical Store template confirms those features. They are common competitor features, but not yet confirmed for this DigiNizam page.",
+    a: "Serial-number and warranty tracking are not part of the current DigiNizam electrical store workflow. Speak with our team if this is something your store needs.",
   },
   {
     q: "Can DigiNizam manage more than one electrical store branch?",
@@ -57,7 +57,6 @@ export default function ElectricPageContent() {
         label="Inventory"
         title="SKU & Category-Based Inventory"
         reverse
-        image="/industries/electric/image-1.webp"
         imageAlt="DigiNizam Electric Store POS solution"
         imageBrief="Electrical store shelves with switches, bulbs, cables or small electronics plus DigiNizam product/SKU inventory screen; professional and realistic."
       >
@@ -71,7 +70,6 @@ export default function ElectricPageContent() {
       <SectionCopy
         label="Purchasing"
         title="Supplier Purchases & Stock Receiving"
-        image="/industries/electric/image-2.webp"
         imageAlt="Electric Store inventory / workflow in DigiNizam"
         imageBrief="Real DigiNizam purchase/stock screen showing supplier receiving, low-stock status or multi-location stock where available."
       >

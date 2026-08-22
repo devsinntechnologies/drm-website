@@ -26,7 +26,7 @@ const salonFaqs: FaqItem[] = [
   },
   {
     q: "Does DigiNizam include appointment booking and staff commissions?",
-    a: "Do not assume these features are included. Appointment booking, commissions, memberships and package management should only be shown on the page if the live salon setup confirms them.",
+    a: "Appointment booking, staff commissions, memberships and package management are not part of the core salon billing workflow shown here. Ask our team during a demo whether these fit your salon's setup.",
   },
   {
     q: "Can DigiNizam support multiple salon branches?",
@@ -47,16 +47,15 @@ export default function SalonPageContent() {
       <SectionCopy
         label="Overview"
         title="What Is Salon POS Software?"
-        image="/industries/salon/image-1.webp"
         imageAlt="DigiNizam Salon / SPA POS solution"
         imageBrief="Professional salon reception/cash desk with DigiNizam service + retail product billing screen; elegant salon environment, realistic staff/customer context."
       >
         <p>
           Salon POS software helps beauty businesses record service and product sales while
-          keeping payments, retail inventory and daily reports organized. DigiNizam can be
-          configured around salon billing and retail operations, while appointment booking,
-          commissions, memberships or package features should only be added if they are
-          confirmed in the live salon setup.
+          keeping payments, retail inventory and daily reports organized. DigiNizam focuses on
+          salon billing and retail operations — appointment booking, staff commissions,
+          memberships and package management can be reviewed with our team based on your
+          salon's setup.
         </p>
       </SectionCopy>
 
@@ -92,7 +91,6 @@ export default function SalonPageContent() {
         label="Inventory"
         title="Retail Product Inventory for Salons"
         reverse
-        image="/industries/salon/image-2.webp"
         imageAlt="Salon / SPA inventory / workflow in DigiNizam"
         imageBrief="Real DigiNizam inventory/report screen focused on salon retail products such as shampoo, skincare or cosmetics; no appointment UI unless product confirms it."
       >
