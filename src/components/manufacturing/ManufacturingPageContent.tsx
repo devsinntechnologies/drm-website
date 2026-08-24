@@ -47,6 +47,7 @@ export default function ManufacturingPageContent() {
       <SectionCopy
         label="Overview"
         title="What Is Manufacturing Inventory Software?"
+        image="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?q=80&w=1600&auto=format&fit=crop"
         imageAlt="DigiNizam Manufacturing POS solution"
         imageBrief="Warehouse/manufacturing storage area with raw materials and finished goods plus DigiNizam inventory dashboard; no production-line claims not supported."
       >
@@ -90,6 +91,7 @@ export default function ManufacturingPageContent() {
         label="Purchasing"
         title="Purchasing & Supplier Records"
         reverse
+        image="https://images.unsplash.com/photo-1717386255773-1e3037c81788?q=80&w=1600&auto=format&fit=crop"
         imageAlt="Manufacturing inventory / workflow in DigiNizam"
         imageBrief="Real DigiNizam purchase/receiving, multi-location inventory or low-stock screen relevant to warehouse operations."
       >

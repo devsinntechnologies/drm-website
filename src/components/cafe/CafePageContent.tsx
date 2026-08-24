@@ -47,6 +47,7 @@ export default function CafePageContent() {
       <SectionCopy
         label="Overview"
         title="What Is Cafe POS Software?"
+        image="https://images.unsplash.com/photo-1774296896193-48ac7d267c5e?q=80&w=1600&auto=format&fit=crop"
         imageAlt="DigiNizam Food / Cafe POS solution"
         imageBrief="Modern cafe counter with DigiNizam order-entry screen and visible order ticket context; coffee/food environment, professional not stock-photo generic."
       >
@@ -89,6 +90,7 @@ export default function CafePageContent() {
         label="Kitchen"
         title="Kitchen / Bar Ticket Workflow"
         reverse
+        image="https://images.unsplash.com/photo-1564686366307-70634d4efd8c?q=80&w=1600&auto=format&fit=crop"
         imageAlt="Food / Cafe inventory / workflow in DigiNizam"
         imageBrief="Real DigiNizam KOT/KDS or inventory/report screen showing cafe preparation or ingredient stock where available."
       >

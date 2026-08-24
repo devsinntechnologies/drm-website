@@ -47,6 +47,7 @@ export default function RetailPageContent() {
       <SectionCopy
         label="Overview"
         title="What Is Retail POS Software?"
+        image="https://images.unsplash.com/photo-1594518746417-4b9aad17489c?q=80&w=1600&auto=format&fit=crop"
         imageAlt="DigiNizam Retail Store POS solution"
         imageBrief="Professional retail counter scene with DigiNizam POS checkout UI visible on screen; cashier scanning an item, clean modern store, no fake sales numbers."
       >
@@ -87,6 +88,7 @@ export default function RetailPageContent() {
       <SectionCopy
         label="Low-stock"
         title="Low-Stock Visibility Before You Miss a Sale"
+        image="https://images.unsplash.com/photo-1601600576337-c1d8a0d1373c?q=80&w=1600&auto=format&fit=crop"
         imageAlt="Retail Store inventory / workflow in DigiNizam"
         imageBrief="Real DigiNizam inventory or stock dashboard showing product list, stock status / low-stock visibility and branch context where available."
       >

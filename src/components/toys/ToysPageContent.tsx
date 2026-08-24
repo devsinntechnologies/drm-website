@@ -57,6 +57,7 @@ export default function ToysPageContent() {
         label="Checkout"
         title="Fast Checkout for Busy Toy & Gift Stores"
         reverse
+        image="https://images.unsplash.com/photo-1774979300729-4eeeb4e8ad01?q=80&w=1600&auto=format&fit=crop"
         imageAlt="DigiNizam Toys Store POS solution"
         imageBrief="Bright but professional toy-store checkout with DigiNizam POS categories/product grid; avoid childish design, keep business-focused."
       >
@@ -85,6 +86,7 @@ export default function ToysPageContent() {
       <SectionCopy
         label="Low-stock"
         title="Low-Stock Monitoring for Popular Items"
+        image="https://images.unsplash.com/photo-1558060370-d644479cb6f7?q=80&w=1600&auto=format&fit=crop"
         imageAlt="Toys Store inventory / workflow in DigiNizam"
         imageBrief="Real DigiNizam stock or low-stock view showing multiple toy categories and, where available, branch stock or promotions."
       >

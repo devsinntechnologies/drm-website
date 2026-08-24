@@ -47,6 +47,7 @@ export default function SalonPageContent() {
       <SectionCopy
         label="Overview"
         title="What Is Salon POS Software?"
+        image="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?q=80&w=1600&auto=format&fit=crop"
         imageAlt="DigiNizam Salon / SPA POS solution"
         imageBrief="Professional salon reception/cash desk with DigiNizam service + retail product billing screen; elegant salon environment, realistic staff/customer context."
       >
@@ -91,6 +92,7 @@ export default function SalonPageContent() {
         label="Inventory"
         title="Retail Product Inventory for Salons"
         reverse
+        image="https://images.unsplash.com/photo-1776651993626-7cc836bf03aa?q=80&w=1600&auto=format&fit=crop"
         imageAlt="Salon / SPA inventory / workflow in DigiNizam"
         imageBrief="Real DigiNizam inventory/report screen focused on salon retail products such as shampoo, skincare or cosmetics; no appointment UI unless product confirms it."
       >

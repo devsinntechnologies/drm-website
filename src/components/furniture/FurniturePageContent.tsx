@@ -47,6 +47,7 @@ export default function FurniturePageContent() {
       <SectionCopy
         label="Overview"
         title="What Is Furniture Store POS Software?"
+        image="https://images.unsplash.com/photo-1687180498602-5a1046defaa4?q=80&w=1600&auto=format&fit=crop"
         imageAlt="DigiNizam Furniture Store POS solution"
         imageBrief="Professional furniture showroom with DigiNizam product availability / inventory UI; show sofa/table/chair context and a clean POS tablet/desktop screen."
       >
@@ -73,6 +74,7 @@ export default function FurniturePageContent() {
       <SectionCopy
         label="Stock"
         title="Showroom & Warehouse Stock Visibility"
+        image="https://images.unsplash.com/photo-1635468609223-4e59675ac96d?q=80&w=1600&auto=format&fit=crop"
         imageAlt="Furniture Store inventory / workflow in DigiNizam"
         imageBrief="Real DigiNizam warehouse/location stock or supplier purchase/receiving screen; emphasize availability across showroom/warehouse if supported."
       >

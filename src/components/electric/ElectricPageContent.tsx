@@ -57,6 +57,7 @@ export default function ElectricPageContent() {
         label="Inventory"
         title="SKU & Category-Based Inventory"
         reverse
+        image="https://images.unsplash.com/photo-1625276254563-f0fbbf66a5e7?q=80&w=1600&auto=format&fit=crop"
         imageAlt="DigiNizam Electric Store POS solution"
         imageBrief="Electrical store shelves with switches, bulbs, cables or small electronics plus DigiNizam product/SKU inventory screen; professional and realistic."
       >
@@ -70,6 +71,7 @@ export default function ElectricPageContent() {
       <SectionCopy
         label="Purchasing"
         title="Supplier Purchases & Stock Receiving"
+        image="https://images.unsplash.com/photo-1777479051188-0daf7b2d8baa?q=80&w=1600&auto=format&fit=crop"
         imageAlt="Electric Store inventory / workflow in DigiNizam"
         imageBrief="Real DigiNizam purchase/stock screen showing supplier receiving, low-stock status or multi-location stock where available."
       >

@@ -57,6 +57,7 @@ export default function JewelleryPageContent() {
         label="Inventory"
         title="Item-Level Inventory Visibility"
         reverse
+        image="https://images.unsplash.com/photo-1689560025810-4599bc195814?q=80&w=1600&auto=format&fit=crop"
         imageAlt="DigiNizam Jewellery Shop POS solution"
         imageBrief="Premium jewellery counter/showcase with DigiNizam item inventory or invoice UI; elegant lighting, professional retail environment, no fake gold-rate figures."
       >
@@ -78,6 +79,7 @@ export default function JewelleryPageContent() {
         label="Labels"
         title="Barcode & Label Workflows Where Configured"
         reverse
+        image="https://images.unsplash.com/photo-1777286492764-456e3530e34c?q=80&w=1600&auto=format&fit=crop"
         imageAlt="Jewellery Shop inventory / workflow in DigiNizam"
         imageBrief="Real DigiNizam barcode/label, payment or sales-report screen relevant to jewellery retail; avoid unconfirmed karat/gold-rate UI."
       >
