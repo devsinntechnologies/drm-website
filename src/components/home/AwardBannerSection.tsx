@@ -6,6 +6,7 @@ import {
   useScroll,
   useTransform,
   useInView,
+  useSpring,
   type MotionValue,
 } from "framer-motion";
 
@@ -72,6 +73,11 @@ export default function AwardBannerSection() {
     target: sectionRef,
     offset: ["start 75%", "end 55%"],
   });
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 260,
+    damping: 32,
+    mass: 0.4,
+  });
 
   return (
     <section
@@ -137,7 +143,7 @@ export default function AwardBannerSection() {
                 word={word}
                 index={i}
                 total={bodyWords.length}
-                progress={scrollYProgress}
+                progress={smoothProgress}
               />
             ))}
           </p>
