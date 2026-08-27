@@ -8,11 +8,21 @@ const DEMO_SUCCESS_COOKIE = "dn_demo_success";
 
 export function proxy(req: NextRequest) {
   const host = (req.headers.get("host") || "").toLowerCase();
+  const proto = (
+    req.headers.get("x-forwarded-proto") || req.nextUrl.protocol.replace(":", "")
+  ).toLowerCase();
 
-  if (OLD_HOSTS.includes(host)) {
+  const isOldHost = OLD_HOSTS.includes(host);
+  const isWwwHost = host === `www.${NEW_HOST}`;
+  const isInsecureApex = host === NEW_HOST && proto !== "https";
+
+  // Canonicalize every homepage/host variant (old hosts, www, and http) to
+  // https://diginizam.com so Search Console only ever sees one canonical host.
+  if (isOldHost || isWwwHost || isInsecureApex) {
     const url = req.nextUrl.clone();
     url.hostname = NEW_HOST;
     url.protocol = "https";
+    url.port = "";
     // Return an explicit 301 with Location header to ensure Search Console recognizes permanent redirect
     return new NextResponse(null, {
       status: 301,

@@ -1,8 +1,15 @@
-"use client";
-
+import type { Metadata } from "next";
 import React from "react";
 import { FiBox, FiLayers, FiPrinter, FiTruck, FiBarChart2, FiGlobe } from "react-icons/fi";
 import ProductPageTemplate from "@/components/common/ProductPageTemplate";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = pageMetadata({
+  title: "Pharmacy POS Software Pakistan | DigiNizam",
+  description:
+    "Pharmacy POS with batch & expiry tracking, salt alternatives, and FBR/HMRC-compliant billing for pharmacies and medical stores.",
+  path: "/products/pharmacy",
+});
 
 export default function PharmacySolutionPage() {
   return (

@@ -10,6 +10,17 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      // Old products hub — no dedicated page exists; send visitors to the closest
+      // equivalent (per-industry solutions overview).
+      {
+        source: "/products",
+        destination: "/industries",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 // @ts-ignore

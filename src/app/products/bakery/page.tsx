@@ -1,8 +1,15 @@
-"use client";
-
+import type { Metadata } from "next";
 import React from "react";
 import { FiBox, FiLayers, FiPrinter, FiTruck, FiBarChart2, FiGlobe } from "react-icons/fi";
 import ProductPageTemplate from "@/components/common/ProductPageTemplate";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = pageMetadata({
+  title: "Bakery POS Software Pakistan | DigiNizam",
+  description:
+    "Bakery POS software with recipe costing, production planning, and multi-branch inventory for bakeries and confectioneries.",
+  path: "/products/bakery",
+});
 
 export default function BakerySolutionPage() {
   return (

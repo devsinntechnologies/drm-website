@@ -1,8 +1,15 @@
-"use client";
-
+import type { Metadata } from "next";
 import React from "react";
 import { FiBox, FiLayers, FiPrinter, FiTruck, FiBarChart2, FiGlobe } from "react-icons/fi";
 import ProductPageTemplate from "@/components/common/ProductPageTemplate";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = pageMetadata({
+  title: "Supermarket POS Software Pakistan | DigiNizam",
+  description:
+    "High-volume supermarket POS with multi-lane checkout, barcode inventory, and supplier management for marts and supermarkets.",
+  path: "/products/supermarket",
+});
 
 export default function SupermarketSolutionPage() {
   return (

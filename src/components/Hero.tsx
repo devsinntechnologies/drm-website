@@ -14,7 +14,7 @@ export default function Hero() {
           We build intelligent, scalable, and secure digital products that drive growth and innovation.
         </p>
         <div className={styles.actions}>
-          <a href="/products" className={styles.primaryBtn}>Explore Products</a>
+          <a href="/industries" className={styles.primaryBtn}>Explore Products</a>
           <a href="/contact" className={styles.secondaryBtn}>Get In Touch</a>
         </div>
       </div>
