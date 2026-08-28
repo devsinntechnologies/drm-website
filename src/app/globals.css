@@ -348,6 +348,20 @@
     animation: float 6s ease-in-out infinite;
   }
 
+  .animate-caret-blink {
+    animation: caret-blink 1s step-end infinite;
+  }
+
+  @keyframes caret-blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
   @keyframes float {
     0%,
     100% {

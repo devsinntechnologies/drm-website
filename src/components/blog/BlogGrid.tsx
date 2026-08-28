@@ -59,7 +59,7 @@ export default function BlogGrid() {
                 href={`/blog/${post.slug}`}
                 className="group flex flex-col h-full rounded-2xl border border-surface-border bg-background overflow-hidden hover:border-primary/30 hover:shadow-lg transition-all"
               >
-                <div className="relative aspect-[16/10] overflow-hidden">
+                <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
                     src={post.featuredImage}
                     alt={post.imageAlt}

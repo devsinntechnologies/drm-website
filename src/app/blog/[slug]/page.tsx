@@ -151,7 +151,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           </div>
         </div>
 
-        <div className="relative w-full aspect-[21/9] rounded-2xl overflow-hidden mb-4 md:mb-4 shadow-lg border border-surface-border bg-surface p-1">
+        <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden mb-4 md:mb-4 shadow-lg border border-surface-border bg-surface p-1">
           <div className="relative w-full h-full rounded-xl overflow-hidden">
             <Image
               src={post.featuredImage}

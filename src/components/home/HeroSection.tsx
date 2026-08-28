@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { FiPhone } from "react-icons/fi";
 import Button from "@/components/ui/Button";
@@ -9,7 +9,57 @@ import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/contact";
 
 const easeOut = [0.16, 1, 0.3, 1] as const;
 
+const ROTATING_INDUSTRIES = ["Restaurants", "Retail Stores", "Pharmacies", "Snooker Clubs"] as const;
+const TYPE_SPEED_MS = 55;
+const DELETE_SPEED_MS = 28;
+const HOLD_FULL_MS = 1700;
+const HOLD_EMPTY_MS = 300;
+
+/** Types out, holds, then deletes each word in `words` on a loop. Respects reduced-motion and stays hydration-safe by starting from the fully-typed first word. */
+function useTypewriter(words: readonly string[]) {
+  const [wordIndex, setWordIndex] = useState(0);
+  const [text, setText] = useState<string>(words[0]);
+  const [phase, setPhase] = useState<"typing" | "holding" | "deleting" | "waiting">("holding");
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return;
+    }
+
+    const currentWord = words[wordIndex];
+    const delay =
+      phase === "holding" ? HOLD_FULL_MS : phase === "waiting" ? HOLD_EMPTY_MS : phase === "deleting" ? DELETE_SPEED_MS : TYPE_SPEED_MS;
+
+    const timer = setTimeout(() => {
+      if (phase === "typing") {
+        if (text.length < currentWord.length) {
+          setText(currentWord.slice(0, text.length + 1));
+        } else {
+          setPhase("holding");
+        }
+      } else if (phase === "holding") {
+        setPhase("deleting");
+      } else if (phase === "deleting") {
+        if (text.length > 0) {
+          setText(text.slice(0, -1));
+        } else {
+          setPhase("waiting");
+        }
+      } else {
+        setWordIndex((prev) => (prev + 1) % words.length);
+        setPhase("typing");
+      }
+    }, delay);
+
+    return () => clearTimeout(timer);
+  }, [phase, text, wordIndex, words]);
+
+  return text;
+}
+
 export default function HeroSection() {
+  const typedIndustry = useTypewriter(ROTATING_INDUSTRIES);
+
   return (
     <section className="hero-section bg-navy text-white section-soft-edge section-soft-edge--dark relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
@@ -30,9 +80,20 @@ export default function HeroSection() {
               AI-powered retail OS
             </span>
 
-            <h1 className="font-semibold text-white tracking-tight mb-4 text-[clamp(2rem,4.5vw,3.25rem)] leading-[1.1]">
+            <h1 className="font-semibold text-white tracking-tight mb-3 text-[clamp(2rem,4.5vw,3.25rem)] leading-[1.1]">
               POS Software for Growing Businesses in Pakistan
             </h1>
+
+            <p
+              className="flex items-center gap-0.5 text-sm sm:text-base font-semibold text-secondary tracking-wide mb-5"
+              aria-hidden="true"
+            >
+              Built for {typedIndustry}
+              <span className="animate-caret-blink inline-block w-[2px] h-[1em] bg-secondary ml-0.5" />
+            </p>
+            <span className="sr-only">
+              Built for restaurants, retail stores, pharmacies, and snooker clubs
+            </span>
 
             <p className="text-base text-white/70 leading-relaxed mb-7">
               DigiNizam POS software helps you manage billing, inventory, orders and daily operations from one platform—built for restaurants and retail across Pakistan.
