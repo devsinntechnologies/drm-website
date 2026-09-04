@@ -1,4 +1,4 @@
-export type BlogCategory = "Restaurant POS" | "Inventory";
+export type BlogCategory = "Restaurant POS" | "Inventory" | "POS Pricing";
 
 export type InlineLink = {
   href: string;
@@ -10,6 +10,8 @@ export type ContentBlock =
   | { type: "heading"; level: 2 | 3; text: string }
   | { type: "callout"; title: string; text: string }
   | { type: "ordered-list"; intro?: string; items: string[]; outro?: string }
+  | { type: "bullet-list"; intro?: string; items: string[]; outro?: string; links?: InlineLink[] }
+  | { type: "image"; src: string; alt: string; width: number; height: number }
   | { type: "faq-section"; heading: string; items: { question: string; answer: string }[] }
   | {
       type: "cta";
@@ -17,6 +19,8 @@ export type ContentBlock =
       body: string;
       buttonLabel: string;
       href: string;
+      secondaryButtonLabel?: string;
+      secondaryHref?: string;
     };
 
 export type BlogPost = {

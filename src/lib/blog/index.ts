@@ -1,9 +1,11 @@
 import type { BlogCategory, BlogPost, ContentBlock } from "./types";
 import { blog1 } from "./posts/what-is-a-restaurant-pos-system";
 import { blog2 } from "./posts/restaurant-inventory-management-reduce-food-waste";
+import { blog3 } from "./posts/best-pos-software-for-restaurants-in-pakistan";
+import { blog4 } from "./posts/pos-software-price-in-pakistan";
 
 /** Published posts only. Add new approved posts here. */
-export const blogPosts: BlogPost[] = [blog1, blog2];
+export const blogPosts: BlogPost[] = [blog1, blog2, blog3, blog4];
 
 export function getAllPosts(): BlogPost[] {
   return [...blogPosts].sort(
@@ -23,7 +25,7 @@ export function getPostSlugs(): string[] {
 /** Categories that have at least one published post, plus All. */
 export function getActiveCategories(): Array<"All" | BlogCategory> {
   const present = new Set(blogPosts.map((post) => post.category));
-  const ordered: BlogCategory[] = ["Restaurant POS", "Inventory"];
+  const ordered: BlogCategory[] = ["Restaurant POS", "Inventory", "POS Pricing"];
   return ["All", ...ordered.filter((category) => present.has(category))];
 }
 
@@ -45,7 +47,10 @@ function blockPlainText(block: ContentBlock): string {
     case "callout":
       return `${block.title} ${block.text}`;
     case "ordered-list":
+    case "bullet-list":
       return [block.intro, ...block.items, block.outro].filter(Boolean).join(" ");
+    case "image":
+      return block.alt;
     case "faq-section":
       return [
         block.heading,

@@ -11,10 +11,10 @@ export const blog2: BlogPost = {
     "A practical guide to restaurant inventory management, from stock counting and purchasing to FIFO/FEFO rotation, waste tracking and better reorder decisions.",
   author: "DigiNizam Team",
   publishedAt: PUBLISHED_AT,
-  modifiedAt: PUBLISHED_AT,
+  modifiedAt: "2026-09-04T10:00:00+05:00",
   readTime: "8 min read",
-  featuredImage: "/blog/restaurant-inventory-food-waste-diginizam.png",
-  imageAlt: "Restaurant manager reviewing ingredient stock and inventory levels",
+  featuredImage: "/blog/restaurant-inventory-ingredient-stock-control.webp",
+  imageAlt: "Restaurant inventory management and ingredient stock control",
   seoTitle: "How to Manage Restaurant Inventory and Reduce Food Waste",
   metaDescription:
     "Learn how to manage restaurant inventory, track stock, use FIFO, plan purchasing and reduce spoilage and food waste with practical inventory control steps.",
@@ -148,6 +148,13 @@ export const blog2: BlogPost = {
       text: "Step 3: Plan Purchasing and Receiving",
     },
     {
+      type: "image",
+      src: "/blog/restaurant-ingredient-stock-management-process.webp",
+      alt: "Restaurant ingredient stock management process",
+      width: 1600,
+      height: 900,
+    },
+    {
       type: "paragraphs",
       paragraphs: [
         "Before placing an order, review what is already available, expected demand, normal usage and the storage life of the ingredient. If previous orders repeatedly created excess stock, that pattern should influence the next purchase.",
@@ -269,6 +276,13 @@ export const blog2: BlogPost = {
       type: "heading",
       level: 2,
       text: "How DigiNizam Supports Restaurant Inventory Management",
+    },
+    {
+      type: "image",
+      src: "/blog/restaurant-low-stock-check-restocking.webp",
+      alt: "Restaurant staff checking low stock and organizing ingredient supplies",
+      width: 1600,
+      height: 900,
     },
     {
       type: "paragraphs",

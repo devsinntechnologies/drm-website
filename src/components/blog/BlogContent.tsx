@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { ContentBlock, InlineLink } from "@/lib/blog/types";
 
 function linkifyParagraph(text: string, links: InlineLink[] = []) {
@@ -71,8 +72,6 @@ export default function BlogContent({
   blocks: ContentBlock[];
   isFirstSection?: boolean;
 }) {
-  let renderedIntro = false;
-
   return (
     <div className="blog-content max-w-3xl mx-auto">
       <style
@@ -82,7 +81,8 @@ export default function BlogContent({
             .blog-content h3 { font-size: 1.15rem; line-height: 1.5rem; font-weight: 800; color: var(--primary); margin-top: 1.5rem; margin-bottom: 0.75rem; }
             .blog-content p { font-size: 0.95rem; line-height: 1.6; color: #4b5563; margin-bottom: 1rem; font-weight: normal; }
             .blog-content ol { list-style: decimal; padding-left: 1.25rem; margin: 1rem 0 1.25rem; color: #4b5563; }
-            .blog-content ol li { margin-bottom: 0.5rem; line-height: 1.6; font-size: 0.95rem; }
+            .blog-content ul { list-style: disc; padding-left: 1.25rem; margin: 1rem 0 1.25rem; color: #4b5563; }
+            .blog-content ol li, .blog-content ul li { margin-bottom: 0.5rem; line-height: 1.6; font-size: 0.95rem; }
             .blog-content .blog-callout { border-left: 3px solid var(--primary); background: rgba(0, 85, 255, 0.05); padding: 1rem 1.25rem; border-top-right-radius: 0.75rem; border-bottom-right-radius: 0.75rem; color: var(--foreground); margin: 1.5rem 0; }
             .blog-content .blog-callout-title { font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.35rem; color: var(--primary); }
             .blog-content .blog-callout-body { font-weight: 700; font-size: 0.95rem; line-height: 1.5; }
@@ -98,8 +98,7 @@ export default function BlogContent({
 
       {blocks.map((block, index) => {
         if (block.type === "paragraphs") {
-          const useIntroStyle = isFirstSection && !renderedIntro && index === 0;
-          if (useIntroStyle) renderedIntro = true;
+          const useIntroStyle = isFirstSection && index === 0;
 
           if (useIntroStyle) {
             return <IntroParagraphs key={index} paragraphs={block.paragraphs} />;
@@ -148,6 +147,32 @@ export default function BlogContent({
           );
         }
 
+        if (block.type === "bullet-list") {
+          return (
+            <div key={index}>
+              {block.intro ? <p>{linkifyParagraph(block.intro, block.links)}</p> : null}
+              <ul>{block.items.map((item) => <li key={item}>{item}</li>)}</ul>
+              {block.outro ? <p>{linkifyParagraph(block.outro, block.links)}</p> : null}
+            </div>
+          );
+        }
+
+        if (block.type === "image") {
+          return (
+            <figure key={index} className="my-7 overflow-hidden rounded-2xl border border-surface-border bg-surface shadow-md">
+              <Image
+                src={block.src}
+                alt={block.alt}
+                width={block.width}
+                height={block.height}
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 768px"
+                className="h-auto w-full object-cover"
+              />
+            </figure>
+          );
+        }
+
         if (block.type === "faq-section") {
           return (
             <section key={index} aria-labelledby={`faq-heading-${index}`}>
@@ -175,6 +200,14 @@ export default function BlogContent({
               >
                 {block.buttonLabel}
               </Link>
+              {block.secondaryButtonLabel && block.secondaryHref ? (
+                <Link
+                  href={block.secondaryHref}
+                  className="inline-flex items-center justify-center mt-2 ml-2 px-4 py-2.5 rounded-xl border border-primary text-primary text-sm font-bold hover:bg-primary/5 transition-colors"
+                >
+                  {block.secondaryButtonLabel}
+                </Link>
+              ) : null}
             </section>
           );
         }

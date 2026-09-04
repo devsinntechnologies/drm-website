@@ -11,11 +11,10 @@ export const blog1: BlogPost = {
     "A beginner-friendly guide to restaurant POS systems, from order entry and kitchen workflow to billing, payments, inventory and reporting.",
   author: "DigiNizam Team",
   publishedAt: PUBLISHED_AT,
-  modifiedAt: PUBLISHED_AT,
+  modifiedAt: "2026-09-04T10:00:00+05:00",
   readTime: "6 min read",
-  featuredImage: "/blog/restaurant-pos-system-guide-diginizam.png",
-  imageAlt:
-    "Restaurant staff using a POS system to manage an order and kitchen workflow",
+  featuredImage: "/blog/restaurant-pos-system-orders-kitchen-billing.webp",
+  imageAlt: "Restaurant POS system managing orders kitchen and billing",
   seoTitle: "What Is a Restaurant POS System and How Does It Work?",
   metaDescription:
     "Learn what a restaurant POS system is and how it handles orders, kitchen workflow, billing, payments, inventory and daily restaurant operations.",
@@ -112,6 +111,13 @@ export const blog1: BlogPost = {
       text: "Customer Order → POS Entry → Kitchen / KOT / KDS → Preparation → Billing → Payment",
     },
     {
+      type: "image",
+      src: "/blog/restaurant-order-kitchen-pos-workflow.webp",
+      alt: "Restaurant order and kitchen workflow using a POS system",
+      width: 1600,
+      height: 900,
+    },
+    {
       type: "heading",
       level: 2,
       text: "How Do Restaurants Receive and Process Orders?",
@@ -177,6 +183,13 @@ export const blog1: BlogPost = {
       paragraphs: [
         "POS systems can also provide operational reports based on the information recorded through the system. Useful reporting may include sales activity, order information, top-selling items and other operational indicators, depending on the software.",
       ],
+    },
+    {
+      type: "image",
+      src: "/blog/restaurant-sales-inventory-reporting-operations.webp",
+      alt: "Restaurant manager reviewing sales inventory and reporting operations",
+      width: 1600,
+      height: 900,
     },
     {
       type: "heading",
