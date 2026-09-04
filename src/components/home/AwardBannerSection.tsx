@@ -39,7 +39,7 @@ function ScrollWord({
   progress: MotionValue<number>;
 }) {
   const start = index / total;
-  const end = (index + 0.95) / total;
+  const end = (index + 0.88) / total;
 
   const opacity = useTransform(progress, [start, end], [0.32, 1]);
   const y = useTransform(progress, [start, end], [12, 0]);
@@ -71,10 +71,10 @@ export default function AwardBannerSection() {
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ["start 80%", "end 60%"],
+    offset: ["start 80%", "end 64%"],
   });
   const smoothProgress = useSpring(scrollYProgress, {
-    stiffness: 300,
+    stiffness: 325,
     damping: 34,
     mass: 0.35,
   });
