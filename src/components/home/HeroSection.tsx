@@ -120,8 +120,8 @@ export default function HeroSection() {
             className="w-full lg:max-w-none"
           >
             <ProductScreen
-              src="/originalheroimage.png"
-              alt="DigiNizam POS terminal, scanner, and receipt printer"
+              src="/hero section image .png"
+              alt="DigiNizam POS terminal with dashboard, scanner, cash drawer, and receipt printer"
               variant="showcase"
               priority
             />

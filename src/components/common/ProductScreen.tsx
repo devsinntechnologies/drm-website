@@ -65,7 +65,7 @@ export default function ProductScreen({
           src={src}
           alt={alt}
           width={1200}
-          height={900}
+          height={1200}
           className={`w-full h-auto ${fitClass} drop-shadow-[0_20px_48px_rgba(0,0,0,0.4)]`}
           priority={priority}
           sizes="(max-width: 1024px) 100vw, 560px"

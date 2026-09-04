@@ -33,19 +33,19 @@ export default function Footer() {
             DigiNizam helps businesses run retail, inventory, and operations with one connected platform—so you can focus on growth.
           </p>
           <div className="flex items-center space-x-2.5">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className={socialClass} aria-label="Facebook">
+            <a href="https://www.facebook.com/diginizamofficial" target="_blank" rel="noopener noreferrer" className={socialClass} aria-label="DigiNizam on Facebook">
               <FaFacebookF size={15} />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className={socialClass} aria-label="Instagram">
+            <a href="https://www.instagram.com/digi_nizam/" target="_blank" rel="noopener noreferrer" className={socialClass} aria-label="DigiNizam on Instagram">
               <FaInstagram size={15} />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className={socialClass} aria-label="Twitter">
+            <a href="https://x.com/rmsdevsinn" target="_blank" rel="noopener noreferrer" className={socialClass} aria-label="DigiNizam on X">
               <FaTwitter size={15} />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className={socialClass} aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/company/122894014/admin?lipi=urn%3Ali%3Apage%3Aorganization_admin_admin_dashboard_index%3B3b72f57f-4608-454d-b0e9-074d15de6593" target="_blank" rel="noopener noreferrer" className={socialClass} aria-label="DigiNizam on LinkedIn">
               <FaLinkedinIn size={15} />
             </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className={socialClass} aria-label="YouTube">
+            <a href="https://www.youtube.com/@DigiNizam" target="_blank" rel="noopener noreferrer" className={socialClass} aria-label="DigiNizam on YouTube">
               <FaYoutube size={15} />
             </a>
           </div>

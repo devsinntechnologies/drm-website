@@ -39,11 +39,11 @@ function ScrollWord({
   progress: MotionValue<number>;
 }) {
   const start = index / total;
-  const end = (index + 1.2) / total;
+  const end = (index + 0.95) / total;
 
-  const opacity = useTransform(progress, [start, end], [0.18, 1]);
-  const y = useTransform(progress, [start, end], [18, 0]);
-  const blur = useTransform(progress, [start, end], [4, 0]);
+  const opacity = useTransform(progress, [start, end], [0.32, 1]);
+  const y = useTransform(progress, [start, end], [12, 0]);
+  const blur = useTransform(progress, [start, end], [2.25, 0]);
   const filter = useTransform(blur, (v) => `blur(${v}px)`);
 
   return (
@@ -71,12 +71,12 @@ export default function AwardBannerSection() {
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ["start 75%", "end 55%"],
+    offset: ["start 80%", "end 60%"],
   });
   const smoothProgress = useSpring(scrollYProgress, {
-    stiffness: 260,
-    damping: 32,
-    mass: 0.4,
+    stiffness: 300,
+    damping: 34,
+    mass: 0.35,
   });
 
   return (
@@ -104,7 +104,7 @@ export default function AwardBannerSection() {
             variants={{
               hidden: {},
               visible: {
-                transition: { staggerChildren: 0.045, delayChildren: 0.08 },
+                transition: { staggerChildren: 0.04, delayChildren: 0.06 },
               },
             }}
             className="mt-3 max-w-[720px] mx-auto leading-tight tracking-tight text-foreground font-semibold"
@@ -122,7 +122,7 @@ export default function AwardBannerSection() {
                     visible: {
                       opacity: 1,
                       y: "0%",
-                      transition: { duration: 0.65, ease: easeOut },
+                      transition: { duration: 0.52, ease: easeOut },
                     },
                   }}
                 >
