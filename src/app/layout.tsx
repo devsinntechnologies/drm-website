@@ -2,7 +2,6 @@ import React from "react";
 import type { Metadata } from "next";
 import { Poppins, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { BRAND_LOGO_SRC } from "@/components/common/Logo";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingWidgets from "@/components/FloatingWidgets";
@@ -33,7 +32,12 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: BRAND_LOGO_SRC,
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/favicon-48.png", type: "image/png", sizes: "48x48" },
+      { url: "/dn-mark.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
   },
   openGraph: {
     title: "POS Software Pakistan | DigiNizam",
@@ -42,6 +46,18 @@ export const metadata: Metadata = {
     url: SITE_URL,
     siteName: "DigiNizam",
     type: "website",
+    images: [
+      {
+        url: "/og-logo.png",
+        width: 1200,
+        height: 1200,
+        alt: "DigiNizam",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    images: ["/og-logo.png"],
   },
 };
 

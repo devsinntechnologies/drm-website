@@ -95,7 +95,9 @@ export function blogPostingJsonLd(post: BlogPost, siteUrl: string) {
       url: siteUrl,
       logo: {
         "@type": "ImageObject",
-        url: `${siteUrl}/diginizam-logo.svg`,
+        url: `${siteUrl}/dn-mark.png`,
+        width: 512,
+        height: 512,
       },
     },
     mainEntityOfPage: {
