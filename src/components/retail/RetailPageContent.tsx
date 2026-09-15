@@ -13,12 +13,16 @@ import { faqJsonLd, type FaqItem } from "@/lib/seo";
 
 const retailFaqs: FaqItem[] = [
   {
-    q: "What is retail POS software?",
-    a: "Retail POS software records store sales and connects them with operational information such as inventory, billing and reporting so owners can manage checkout and stock from a more organized system.",
+    q: "Which software is best for a retail shop?",
+    a: "The best software for a retail shop depends on billing speed, inventory accuracy, clear reporting, multi-store support and how well it fits your day-to-day workflow. DigiNizam retail POS connects checkout, stock, purchases and reports so shops can evaluate those requirements in one system instead of juggling separate tools.",
   },
   {
-    q: "How does retail POS software help with inventory?",
-    a: "A connected retail POS updates stock records as sales, purchases or returns are recorded, giving teams better visibility into what is available and what may need reordering.",
+    q: "What is the best POS software for retail stores?",
+    a: "Strong retail POS software connects the checkout counter with inventory, sales reports and branch visibility so every sale updates stock and performance data. DigiNizam is built for that connected workflow—billing, inventory, stock alerts and multi-store reporting in one platform for retail stores in Pakistan.",
+  },
+  {
+    q: "What is the best inventory management software for retail stores?",
+    a: "The best retail inventory software links stock with sales, purchases and reporting so available quantities stay closer to real store activity. DigiNizam updates inventory as transactions are recorded, supports low-stock visibility and helps teams review stock, purchases and performance from the same system.",
   },
   {
     q: "Can DigiNizam retail POS work without internet?",
@@ -27,10 +31,6 @@ const retailFaqs: FaqItem[] = [
   {
     q: "Can DigiNizam manage more than one retail branch?",
     a: "Yes, DigiNizam supports multi-store setups with connected stock, sales and reporting across locations. Exact terminals, outlets and modules depend on the selected plan.",
-  },
-  {
-    q: "Does DigiNizam provide low-stock monitoring?",
-    a: "DigiNizam includes low-stock monitoring so teams can identify products that may need restocking before inventory runs out.",
   },
 ];
 
@@ -41,7 +41,7 @@ export default function RetailPageContent() {
       <PageHero
         label="Retail Store"
         title="Retail POS Software in Pakistan for Smarter Store Management"
-        description="Manage billing, inventory, sales, stock alerts and branch activity from one connected retail platform—built for day-to-day store operations in Pakistan."
+        description="Manage billing, inventory, sales, stock alerts and multi-store activity from one connected retail platform built for day-to-day store operations in Pakistan."
       />
 
       <SectionCopy
@@ -77,7 +77,7 @@ export default function RetailPageContent() {
         </p>
       </SectionCopy>
 
-      <SectionCopy label="Inventory" title="Inventory That Moves With Store Activity" reverse>
+      <SectionCopy label="Inventory" title="Retail Inventory Software That Moves With Store Activity" reverse>
         <p>
           Track stock with sales, purchases and returns so inventory visibility stays closer to
           what is actually happening in the store. Teams can review available stock without

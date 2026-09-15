@@ -13,7 +13,7 @@ import { faqJsonLd, pageMetadata, type FaqItem } from "@/lib/seo";
 const pricingFaqs: FaqItem[] = [
   {
     q: "How much does a POS system cost in Pakistan?",
-    a: "A POS system in Pakistan usually combines software, terminals, printers and setup. Hardware and the number of outlets change the total more than a single advertised figure. DigiNizam POS software pricing is quoted for your restaurants, billing counters and inventory needs on a demo—we do not publish a one-size market price that would mix hardware bundles with software-only plans.",
+    a: "A POS system in Pakistan usually combines software, terminals, printers and setup. Hardware and the number of outlets change the total more than a single advertised figure. DigiNizam POS software pricing is quoted for your retail stores, restaurants, billing counters and inventory needs on a demo—we do not publish a one-size market price that would mix hardware bundles with software-only plans.",
   },
   {
     q: "How much does POS software cost?",
@@ -24,7 +24,7 @@ const pricingFaqs: FaqItem[] = [
 export const metadata: Metadata = pageMetadata({
   title: "POS Software Price in Pakistan | DigiNizam Pricing",
   description:
-    "See DigiNizam POS software pricing, plan inclusions and options for restaurant management, billing and inventory. Book a demo for the right setup.",
+    "See DigiNizam POS software pricing, plan inclusions and options for retail stores, restaurants and growing multi-location businesses.",
   path: "/pricing",
 });
 
@@ -46,14 +46,14 @@ export default function PricingPage() {
         intro="Related pages:"
         links={[
           { href: "/", label: "POS software Pakistan" },
+          { href: "/products/retail", label: "retail POS software" },
           { href: "/products/restaurant", label: "restaurant management software" },
-          { href: "/features", label: "restaurant inventory software" },
           { href: "/demo", label: "book a demo" },
         ]}
       />
       <SiteCTA
         title="Book a Demo"
-        description="Get a confirmed quote for restaurant POS, billing and inventory—not a placeholder price."
+        description="Get a confirmed quote for POS, billing and inventory for retail stores, restaurants and multi-location businesses—not a placeholder price."
       />
     </main>
   );

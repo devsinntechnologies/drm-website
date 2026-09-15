@@ -7,7 +7,7 @@ export default function DemoHero() {
     <PageHero
       label="Live demo"
       title="Book a DigiNizam Demo"
-      description="Book a DigiNizam demo to see restaurant POS, billing, inventory, orders and reporting in action. Choose the demo or contact option that fits your business."
+      description="Book a DigiNizam demo to see POS, billing, inventory, stock and reporting in action for your business."
     />
   );
 }

@@ -9,7 +9,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "Book a DigiNizam Demo | POS Software Pakistan",
   description:
-    "Book a DigiNizam demo to see restaurant POS, billing, inventory, orders and reporting in action. Choose the demo/contact option that fits your business.",
+    "Book a DigiNizam demo to see POS, billing, inventory, stock and reporting in action for your business.",
   path: "/demo",
 });
 
@@ -23,14 +23,14 @@ export default function DemoPage() {
         intro="Learn more first:"
         links={[
           { href: "/", label: "POS software Pakistan" },
+          { href: "/products/retail", label: "retail POS software" },
           { href: "/products/restaurant", label: "restaurant management software" },
-          { href: "/features", label: "restaurant inventory software" },
           { href: "/pricing", label: "POS software pricing" },
         ]}
       />
       <SiteCTA
         title="Questions before booking?"
-        description="Talk to our team—we'll help you pick the right POS and inventory setup for your business."
+        description="Talk to our team—we'll help you pick the right POS, billing and inventory setup for your business."
       />
     </main>
   );

@@ -10,7 +10,7 @@ export default function DemoSeoSections() {
         align="center"
         label="Before you book"
         title="Who the Demo Is For"
-        description="Owners and managers who need to see restaurant POS, billing, inventory, orders and reporting on their own workflow—not a generic slideshow."
+        description="Owners and managers who need to see POS, billing, inventory, stock and reporting on their own workflow—not a generic slideshow."
       />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto">
         <article className="rounded-2xl border border-surface-border bg-background p-5">

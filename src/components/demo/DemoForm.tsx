@@ -54,7 +54,7 @@ export default function DemoForm() {
         `City: ${city}`,
         `Email: ${email}`,
         `Phone: ${phone}`,
-        `Daily order volume: ${volume || "not specified"}`,
+        `Daily sales / order volume: ${volume || "not specified"}`,
       ].join("\n");
     }
 
@@ -84,7 +84,7 @@ export default function DemoForm() {
           <SectionHeader
             label="Free walkthrough"
             title="What You Will See"
-            description="A 30-minute session on POS, billing, kitchen tickets, inventory and reporting—no sales pressure, no credit card required."
+            description="A 30-minute session on POS, billing, inventory, stock and reporting—no sales pressure, no credit card required."
             className="mb-0"
           />
 
@@ -141,11 +141,11 @@ export default function DemoForm() {
                   <Input id="user_phone" name="user_phone" type="tel" placeholder={PHONE_DISPLAY} required />
                 </div>
                 <div>
-                  <Label htmlFor="volume">Daily order volume</Label>
-                  <Select id="volume" name="volume" defaultValue="0 - 50 orders">
-                    <option>0 - 50 orders</option>
-                    <option>50 - 200 orders</option>
-                    <option>200+ orders</option>
+                  <Label htmlFor="volume">Daily sales / order volume</Label>
+                  <Select id="volume" name="volume" defaultValue="0 - 50">
+                    <option>0 - 50</option>
+                    <option>50 - 200</option>
+                    <option>200+</option>
                   </Select>
                 </div>
               </div>

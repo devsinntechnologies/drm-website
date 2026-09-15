@@ -9,19 +9,19 @@ const sections = [
   },
   {
     title: "What Affects Cost",
-    body: "POS software price in Pakistan depends on outlets, billing counters, kitchen displays, inventory modules and whether you need on-site setup or hardware. A multi-branch restaurant costs more to configure than a single cafe.",
+    body: "POS software price in Pakistan depends on outlets, billing counters, inventory modules and whether you need on-site setup or hardware. A multi-location retail or restaurant setup costs more to configure than a single store.",
   },
   {
-    title: "Restaurant Features",
-    body: "Restaurant management software pricing should reflect POS, KOT, orders and FBR-ready billing—not only a terminal count. See the restaurant page for the live workflow.",
-    href: "/products/restaurant",
-    linkLabel: "Restaurant management software",
+    title: "Retail & Restaurant Features",
+    body: "POS pricing should reflect billing, inventory, orders and reporting—not only a terminal count. See the retail and restaurant pages for the live workflow.",
+    href: "/products/retail",
+    linkLabel: "Retail POS software",
   },
   {
     title: "Inventory Features",
-    body: "Restaurant inventory software is part of the same platform. Stock tracking and branch use are described on the inventory features page; pricing for those modules is confirmed with your plan.",
+    body: "Inventory software is part of the same platform for stores and restaurants. Stock tracking and branch use are described on the inventory features page; pricing for those modules is confirmed with your plan.",
     href: "/features",
-    linkLabel: "Restaurant inventory software",
+    linkLabel: "Inventory software features",
   },
 ];
 
