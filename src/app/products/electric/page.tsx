@@ -3,9 +3,9 @@ import ElectricPageContent from "@/components/electric/ElectricPageContent";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Electrical Store POS Software Pakistan | DigiNizam",
+  title: "Electrical Store POS Software in Pakistan | DigiNizam",
   description:
-    "Manage electrical store billing, SKU inventory, supplier purchases, stock alerts, reports and multi-branch operations with DigiNizam POS software.",
+    "Electrical store POS software in Pakistan for billing, SKU inventory, supplier purchases, low-stock monitoring and multi-branch reporting. Book a free demo.",
   path: "/products/electric",
 });
 

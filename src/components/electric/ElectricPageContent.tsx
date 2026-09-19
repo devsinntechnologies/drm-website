@@ -14,23 +14,43 @@ import { faqJsonLd, type FaqItem } from "@/lib/seo";
 const electricFaqs: FaqItem[] = [
   {
     q: "What is electrical store POS software?",
-    a: "Electrical store POS software is a retail billing and inventory system designed to help shops manage product sales, stock, suppliers and reports from one platform.",
+    a: "Electrical store POS software is a retail billing and inventory system that helps electrical shops manage sales, product stock, supplier purchasing and reporting from one platform.",
   },
   {
-    q: "Can DigiNizam track many electrical products and SKUs?",
-    a: "Yes. DigiNizam inventory tools support large product catalogues, categories and stock tracking across sales, purchases and returns.",
+    q: "What is the best POS software for an electrical shop?",
+    a: "The right system depends on SKU volume, billing workflow, inventory accuracy, supplier purchasing, low-stock visibility, reporting and number of locations. Compare these requirements before choosing a POS.",
   },
   {
-    q: "Does DigiNizam support low-stock alerts?",
-    a: "Yes. DigiNizam includes low-stock monitoring to help teams identify items that may need replenishment.",
+    q: "Can electrical store POS software manage inventory?",
+    a: "Yes. DigiNizam connects product inventory with sales, purchases and returns so electrical stores can maintain clearer stock visibility.",
+  },
+  {
+    q: "Can POS software track electrical products by SKU?",
+    a: "Yes. DigiNizam's electrical-store workflow organizes products by SKU and category and tracks stock as sales, purchases and returns are recorded.",
+  },
+  {
+    q: "Does electrical store POS support low-stock monitoring?",
+    a: "Yes. DigiNizam includes low-stock monitoring to help teams identify products that may need replenishment.",
+  },
+  {
+    q: "Can electrical store POS manage multiple branches?",
+    a: "Yes. DigiNizam supports connected branch-level inventory, sales and reporting for businesses with more than one outlet or stock location.",
+  },
+  {
+    q: "Can electrical store POS manage suppliers and purchases?",
+    a: "Yes. DigiNizam connects supplier purchases and stock receiving with inventory records so teams can track what has been ordered and received.",
+  },
+  {
+    q: "Does electrical store POS support barcode billing?",
+    a: "DigiNizam's broader POS workflow supports barcode and scale-integrated billing where configured. Confirm the exact hardware and checkout setup during a demo.",
   },
   {
     q: "Does DigiNizam track serial numbers or warranties?",
-    a: "Serial-number and warranty tracking are not part of the current DigiNizam electrical store workflow. Speak with our team if this is something your store needs.",
+    a: "Serial-number and warranty tracking are not part of the current DigiNizam electrical-store workflow. Contact the team if your store requires these capabilities.",
   },
   {
-    q: "Can DigiNizam manage more than one electrical store branch?",
-    a: "Yes. DigiNizam supports multi-store visibility for connected branch stock, sales and reporting.",
+    q: "What features should electrical store POS software have?",
+    a: "Important features include fast billing, SKU and category inventory, supplier purchasing, stock receiving, low-stock monitoring, reporting and multi-location visibility.",
   },
 ];
 
@@ -40,8 +60,8 @@ export default function ElectricPageContent() {
       <JsonLd data={faqJsonLd(electricFaqs)} />
       <PageHero
         label="Electric Store"
-        title="Electrical Store POS Software in Pakistan"
-        description="Keep electrical-store billing, product stock, purchases, low-stock visibility and branch reporting connected in one DigiNizam retail workflow."
+        title="Electrical Store POS Software in Pakistan for Billing & Inventory Management"
+        description="Manage electrical-store billing, product stock, supplier purchases, low-stock visibility and branch reporting from one connected POS workflow."
       />
 
       <SectionCopy label="Overview" title="What Is Electrical Store POS Software?">
@@ -49,7 +69,9 @@ export default function ElectricPageContent() {
           Electrical store POS software combines counter billing with inventory, supplier
           purchasing and reporting for stores that manage many product categories and SKUs.
           DigiNizam can help electrical retailers connect sales with stock and purchasing while
-          keeping branch-level visibility in one system.
+          keeping branch-level visibility in one system. Electrical store POS software connects
+          counter billing with product inventory, supplier purchasing and reporting so teams can
+          manage a large SKU catalogue from one system.
         </p>
       </SectionCopy>
 
@@ -62,9 +84,8 @@ export default function ElectricPageContent() {
         imageBrief="Electrical store shelves with switches, bulbs, cables or small electronics plus DigiNizam product/SKU inventory screen; professional and realistic."
       >
         <p>
-          Organize electrical products by SKU and category and track stock as sales, purchases
-          and returns are recorded. This helps stores keep a clearer view of fast-moving and
-          low-stock items.
+          Organize electrical products by SKU and category while keeping stock records connected
+          with sales, purchases and returns.
         </p>
       </SectionCopy>
 
@@ -76,16 +97,15 @@ export default function ElectricPageContent() {
         imageBrief="Real DigiNizam purchase/stock screen showing supplier receiving, low-stock status or multi-location stock where available."
       >
         <p>
-          Connect purchasing with stock records so teams can track what has been ordered and
-          what has been received from suppliers instead of relying on separate purchase notes.
+          Connect supplier purchasing with stock receiving so teams can track ordered and
+          received products in the same workflow.
         </p>
       </SectionCopy>
 
       <SectionCopy label="Low-stock" title="Low-Stock Monitoring for High-Variety Inventory" reverse>
         <p>
-          Use low-stock monitoring to identify items that may need replenishment. Electrical
-          stores often carry many product lines, so early visibility is more useful than
-          discovering a shortage at the counter.
+          Use low-stock monitoring to identify products that may need replenishment before a
+          shortage reaches the counter.
         </p>
       </SectionCopy>
 
@@ -99,15 +119,14 @@ export default function ElectricPageContent() {
 
       <SectionCopy label="Billing" title="Fast Billing for Electrical & Electronics Retail">
         <p>
-          Use DigiNizam POS for counter sales, invoices and daily transaction records so
-          product billing stays connected with the same system used for stock and reporting.
+          Use DigiNizam POS for electrical counter sales, invoices and daily transaction records
+          while keeping billing connected with stock and reporting.
         </p>
       </SectionCopy>
 
       <SectionCopy label="Multi-location" title="Multi-Branch & Multi-Location Visibility" reverse>
         <p>
-          For retailers with more than one outlet or stock location, DigiNizam supports
-          connected branch-level inventory, sales and reports.
+          Monitor connected branch-level inventory, sales and reports from a centralized view.
         </p>
       </SectionCopy>
 
@@ -136,10 +155,9 @@ export default function ElectricPageContent() {
       <SeoRelatedLinks
         intro="Related pages:"
         links={[
-          { href: "/", label: "POS software Pakistan" },
-          { href: "/features", label: "electronics inventory software" },
-          { href: "/pricing", label: "POS software pricing in Pakistan" },
-          { href: "/demo", label: "book a DigiNizam demo" },
+          { href: "/pricing", label: "POS software pricing" },
+          { href: "/demo", label: "Book an electrical store POS demo" },
+          { href: "/products/retail", label: "Retail POS software" },
         ]}
       />
 
