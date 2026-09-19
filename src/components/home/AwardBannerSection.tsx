@@ -9,6 +9,7 @@ import {
   useSpring,
   type MotionValue,
 } from "framer-motion";
+import { PHONE_INTERNATIONAL, PHONE_TEL } from "@/lib/contact";
 
 /** Keep "ERP & POS" as one unit so spacing around & never collapses. */
 const HEADING_PARTS = [
@@ -39,11 +40,11 @@ function ScrollWord({
   progress: MotionValue<number>;
 }) {
   const start = index / total;
-  const end = (index + 0.88) / total;
+  const end = (index + 0.65) / total;
 
-  const opacity = useTransform(progress, [start, end], [0.32, 1]);
-  const y = useTransform(progress, [start, end], [12, 0]);
-  const blur = useTransform(progress, [start, end], [2.25, 0]);
+  const opacity = useTransform(progress, [start, end], [0.38, 1]);
+  const y = useTransform(progress, [start, end], [10, 0]);
+  const blur = useTransform(progress, [start, end], [1.75, 0]);
   const filter = useTransform(blur, (v) => `blur(${v}px)`);
 
   return (
@@ -71,12 +72,12 @@ export default function AwardBannerSection() {
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ["start 80%", "end 64%"],
+    offset: ["start 78%", "end 50%"],
   });
   const smoothProgress = useSpring(scrollYProgress, {
-    stiffness: 325,
-    damping: 34,
-    mass: 0.35,
+    stiffness: 420,
+    damping: 32,
+    mass: 0.28,
   });
 
   return (
@@ -104,7 +105,7 @@ export default function AwardBannerSection() {
             variants={{
               hidden: {},
               visible: {
-                transition: { staggerChildren: 0.04, delayChildren: 0.06 },
+                transition: { staggerChildren: 0.028, delayChildren: 0.04 },
               },
             }}
             className="mt-3 max-w-[720px] mx-auto leading-tight tracking-tight text-foreground font-semibold"
@@ -122,7 +123,7 @@ export default function AwardBannerSection() {
                     visible: {
                       opacity: 1,
                       y: "0%",
-                      transition: { duration: 0.52, ease: easeOut },
+                      transition: { duration: 0.38, ease: easeOut },
                     },
                   }}
                 >
@@ -147,6 +148,23 @@ export default function AwardBannerSection() {
               />
             ))}
           </p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 8 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.6 }}
+            transition={{ duration: 0.4, delay: 0.12, ease: easeOut }}
+            className="mt-8 sm:mt-10"
+          >
+            <a
+              href={`tel:${PHONE_TEL}`}
+              className="inline-flex items-center gap-2 text-base sm:text-lg font-semibold text-primary hover:text-primary/90 transition-colors tracking-wide"
+              aria-label={`Call DigiNizam at ${PHONE_INTERNATIONAL}`}
+            >
+              <span className="inline-block h-2 w-2 rounded-full bg-primary animate-pulse" aria-hidden />
+              {PHONE_INTERNATIONAL}
+            </a>
+          </motion.p>
         </div>
       </div>
     </section>
