@@ -26,7 +26,7 @@ const furnitureFaqs: FaqItem[] = [
   },
   {
     q: "Does DigiNizam include delivery scheduling and quotations?",
-    a: "Delivery scheduling and quotation management are not part of the current DigiNizam furniture workflow shown here. Ask our team if these fit your showroom's needs.",
+    a: "Do not promise those modules until they are confirmed in the live Furniture Store template. They are common market requirements but not yet verified for this page.",
   },
   {
     q: "Can DigiNizam manage multiple furniture showrooms?",
@@ -40,7 +40,7 @@ export default function FurniturePageContent() {
       <JsonLd data={faqJsonLd(furnitureFaqs)} />
       <PageHero
         label="Furniture Store"
-        title="Furniture Store POS Software in Pakistan"
+        title="Furniture Store POS Software in Pakistan for Billing & Inventory Management"
         description="Connect furniture-store billing, stock, supplier purchasing, warehouse visibility and branch reporting in one DigiNizam retail workflow."
       />
 
@@ -134,10 +134,9 @@ export default function FurniturePageContent() {
       <SeoRelatedLinks
         intro="Related pages:"
         links={[
-          { href: "/", label: "POS software Pakistan" },
-          { href: "/features", label: "furniture inventory software" },
-          { href: "/pricing", label: "POS software pricing in Pakistan" },
-          { href: "/demo", label: "book a DigiNizam demo" },
+          { href: "/pricing", label: "POS software pricing" },
+          { href: "/demo", label: "Book a furniture store POS demo" },
+          { href: "/products/retail", label: "Retail POS software" },
         ]}
       />
 

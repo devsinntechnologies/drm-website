@@ -3,9 +3,9 @@ import AutomobilePageContent from "@/components/automobile/AutomobilePageContent
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Automobile & Auto Parts POS Software Pakistan | DigiNizam",
+  title: "Automobile & Auto Parts POS Software in Pakistan | DigiNizam",
   description:
-    "POS and inventory software for auto parts stores and dealership workshops, with supplier ledgers, barcode billing, and multi-branch stock sync.",
+    "Auto parts POS software in Pakistan for billing, spare parts inventory, barcode checkout, supplier purchases and multi-branch stock sync. Book a free demo.",
   path: "/products/automobile",
 });
 

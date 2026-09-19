@@ -5,7 +5,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "Furniture Store POS Software Pakistan | DigiNizam",
   description:
-    "Manage furniture-store billing, showroom and warehouse stock, supplier purchases, invoices, reports and multi-branch visibility with DigiNizam POS.",
+    "Manage furniture-store billing, showroom and warehouse stock, supplier purchases, invoices, reports and multi-branch visibility with DigiNizam POS. Book a free demo.",
   path: "/products/furniture",
 });
 

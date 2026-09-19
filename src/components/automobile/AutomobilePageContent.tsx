@@ -7,6 +7,45 @@ import { motion } from "framer-motion";
 import ProductClientele from "@/components/common/ProductClientele";
 import ProductCertificates from "@/components/common/ProductCertificates";
 import ProductCTA from "@/components/common/ProductCTA";
+import SeoFaq from "@/components/seo/SeoFaq";
+import SeoRelatedLinks from "@/components/seo/SeoRelatedLinks";
+import JsonLd from "@/components/seo/JsonLd";
+import { faqJsonLd, type FaqItem } from "@/lib/seo";
+
+const autoFaqs: FaqItem[] = [
+  {
+    q: "What is auto parts POS software?",
+    a: "Auto parts POS software records spare parts sales and connects them with inventory, supplier purchasing, barcode billing and reporting so auto parts stores can manage daily operations from one system.",
+  },
+  {
+    q: "What is the best POS software for an auto parts store?",
+    a: "The right system depends on parts catalogue size, billing workflow, inventory accuracy, supplier management, barcode support, reporting and number of locations. Compare these requirements before choosing a POS.",
+  },
+  {
+    q: "Can auto parts POS software manage inventory?",
+    a: "Yes. DigiNizam tracks spare parts stock and connects inventory records with sales and purchases so teams can maintain clearer stock visibility.",
+  },
+  {
+    q: "Does DigiNizam support barcode billing for auto parts?",
+    a: "DigiNizam supports barcode and label workflows where configured, including part labels, shelf tags and counter checkout scanning.",
+  },
+  {
+    q: "Can auto parts POS manage suppliers and purchases?",
+    a: "Yes. DigiNizam includes purchase and supplier management workflows that connect ordering and receiving with inventory records.",
+  },
+  {
+    q: "Can DigiNizam manage multiple auto parts branches?",
+    a: "Yes. DigiNizam supports multi-store control with connected branch-level stock, sales and reporting across outlets.",
+  },
+  {
+    q: "Does auto parts POS include tax and financial reports?",
+    a: "DigiNizam includes financial and tax reporting tools, including FBR-ready reports where configured for your setup.",
+  },
+  {
+    q: "What features should auto parts POS software have?",
+    a: "Important features include fast counter billing, spare parts inventory, barcode labels, supplier purchases, reports and multi-branch visibility.",
+  },
+];
 
 const autoModules = [
   {
@@ -44,6 +83,7 @@ const autoModules = [
 export default function AutomobilePageContent() {
   return (
     <main className="min-h-screen bg-surface text-foreground">
+      <JsonLd data={faqJsonLd(autoFaqs)} />
 
       {/* 1. Hero Section (Video Background) - Resized Blue Overlay Text & Compact Height */}
       <section className="relative w-full h-[60vh] min-h-[400px] max-h-[560px] overflow-hidden bg-black hero-section border-b border-surface-border">
@@ -60,9 +100,12 @@ export default function AutomobilePageContent() {
             transition={{ duration: 0.6 }}
             className="max-w-5xl mx-auto"
           >
-            <h1 className="hero-title text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase leading-none text-primary tracking-wide drop-shadow-2xl">
-              AUTOMOBILE
+            <h1 className="hero-title text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-primary tracking-wide drop-shadow-2xl max-w-4xl mx-auto">
+              Auto Parts POS Software in Pakistan for Billing &amp; Inventory Management
             </h1>
+            <p className="mt-4 text-sm sm:text-base text-white/90 max-w-2xl mx-auto leading-relaxed drop-shadow-lg">
+              Connect auto parts billing, spare parts inventory, barcode checkout, supplier purchases and branch reporting in one retail POS workflow.
+            </p>
           </motion.div>
         </div>
       </section>
@@ -88,7 +131,7 @@ export default function AutomobilePageContent() {
               High-speed counter billing, service technician assignment tracking, and real-time inventory reports all in one platform to eliminate parts misplacement and billing bottlenecks.
             </p>
             <p className="text-muted text-xs sm:text-sm leading-relaxed mb-4 font-normal">
-              Empower counter clerks, mechanics, and floor managers with intuitive touchscreen workflows, holding customer estimates, split payment processing, and offline backup redundancy.
+              Empower counter clerks, mechanics, and floor managers with intuitive touchscreen workflows, holding customer estimates, split payment processing, and offline backup redundancy. Auto parts POS software connects billing with spare parts inventory, supplier purchasing and reporting so teams can manage high-volume parts retail from one system.
             </p>
             <div className="inline-flex items-center gap-2 text-xs font-bold text-primary bg-primary/10 border border-primary/20 px-4 py-2.5 rounded-xl">
               <FiServer size={16} /> Cloud &amp; Local Sync Enabled
@@ -206,6 +249,22 @@ export default function AutomobilePageContent() {
           </div>
         </div>
       </section>
+
+      <SeoRelatedLinks
+        intro="Related pages:"
+        links={[
+          { href: "/pricing", label: "POS software pricing" },
+          { href: "/demo", label: "Book an auto parts POS demo" },
+          { href: "/products/retail", label: "Retail POS software" },
+        ]}
+      />
+
+      <SeoFaq
+        label="Auto Parts POS"
+        title="Auto parts store software questions"
+        description="Direct answers for common auto parts and spare parts store software questions."
+        items={autoFaqs}
+      />
 
       {/* 5. Our Clientele Section - Background: bg-surface */}
       <ProductCTA />

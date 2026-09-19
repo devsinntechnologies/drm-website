@@ -7,6 +7,45 @@ import { motion } from "framer-motion";
 import ProductClientele from "@/components/common/ProductClientele";
 import ProductCertificates from "@/components/common/ProductCertificates";
 import ProductCTA from "@/components/common/ProductCTA";
+import SeoFaq from "@/components/seo/SeoFaq";
+import SeoRelatedLinks from "@/components/seo/SeoRelatedLinks";
+import JsonLd from "@/components/seo/JsonLd";
+import { faqJsonLd, type FaqItem } from "@/lib/seo";
+
+const bookFaqs: FaqItem[] = [
+  {
+    q: "What is book store POS software?",
+    a: "Book store POS software records sales and connects them with catalogue inventory, publisher purchasing, barcode billing and reporting so bookshops can manage daily operations from one system.",
+  },
+  {
+    q: "What is the best POS software for a bookshop?",
+    a: "The right system depends on catalogue size, billing workflow, inventory accuracy, publisher purchasing, ISBN or barcode support, reporting and number of locations. Compare these requirements before choosing a POS.",
+  },
+  {
+    q: "Can book store POS software manage inventory?",
+    a: "Yes. DigiNizam connects book inventory with sales, purchases and returns so teams can maintain clearer stock visibility across titles and categories.",
+  },
+  {
+    q: "Does DigiNizam support ISBN barcode billing?",
+    a: "DigiNizam supports ISBN barcode and label workflows where configured in the bookshop setup. Confirm the exact hardware and checkout setup during a demo.",
+  },
+  {
+    q: "Can book store POS manage publishers and purchases?",
+    a: "Yes. DigiNizam includes purchase and publisher management workflows that connect ordering and goods receipt with inventory records.",
+  },
+  {
+    q: "Does DigiNizam support low-stock monitoring for bookstores?",
+    a: "DigiNizam includes low-stock monitoring to help teams identify titles that may need replenishment.",
+  },
+  {
+    q: "Can DigiNizam manage multiple bookshop branches?",
+    a: "Yes. DigiNizam supports connected branch-level stock, sales and reporting across multiple outlets.",
+  },
+  {
+    q: "What features should book store POS software have?",
+    a: "Important features include fast billing, catalogue inventory, ISBN barcode checkout, publisher purchases, reports and multi-branch visibility.",
+  },
+];
 import { FiClock as IconClock, FiShield as IconShield, FiSmartphone as IconSmartphone, FiAward as IconAward, FiCheckCircle as IconCheckCircle, FiServer as IconServer, FiBox as IconBox, FiLayers as IconLayers, FiPrinter as IconPrinter, FiTruck as IconTruck, FiBarChart2 as IconBarChart2, FiGlobe as IconGlobe } from "react-icons/fi";
 
 const bookModules = [
@@ -45,6 +84,7 @@ const bookModules = [
 export default function BooksPageContent() {
   return (
     <main className="min-h-screen bg-surface text-foreground">
+      <JsonLd data={faqJsonLd(bookFaqs)} />
 
       {/* 1. Hero Section (Video Background) - Resized Blue Overlay Text & Compact Height */}
       <section className="relative w-full h-[60vh] min-h-[400px] max-h-[560px] overflow-hidden bg-black hero-section border-b border-surface-border">
@@ -61,9 +101,12 @@ export default function BooksPageContent() {
             transition={{ duration: 0.6 }}
             className="max-w-5xl mx-auto"
           >
-            <h1 className="hero-title text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase leading-none text-primary tracking-wide drop-shadow-2xl">
-              BOOKS &amp; PUBLISHERS
+            <h1 className="hero-title text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-primary tracking-wide drop-shadow-2xl max-w-4xl mx-auto">
+              Book Store POS Software in Pakistan for Billing &amp; Inventory Management
             </h1>
+            <p className="mt-4 text-sm sm:text-base text-white/90 max-w-2xl mx-auto leading-relaxed drop-shadow-lg">
+              Connect bookshop billing, catalogue inventory, ISBN barcode checkout, publisher purchases and branch reporting in one retail POS workflow.
+            </p>
           </motion.div>
         </div>
       </section>
@@ -89,7 +132,7 @@ export default function BooksPageContent() {
               High-speed receipt printing, seamless counter billing, and real-time sales reporting all in one place. Built on a complete POS infrastructure that supports both local operations and cloud synchronization.
             </p>
             <p className="text-muted text-xs sm:text-sm leading-relaxed mb-4 font-normal">
-              Empower booksellers and inventory managers with lightning-fast ISBN barcode scanning, multi-terminal connectivity, offline backup support, and instantaneous checkout flows to handle rush hours effortlessly.
+              Empower booksellers and inventory managers with lightning-fast ISBN barcode scanning, multi-terminal connectivity, offline backup support, and instantaneous checkout flows to handle rush hours effortlessly. Book store POS software connects billing with catalogue inventory, publisher purchasing and reporting so teams can manage daily bookshop sales from one system.
             </p>
             <div className="inline-flex items-center gap-2 text-xs font-bold text-primary bg-primary/10 border border-primary/20 px-4 py-2.5 rounded-xl">
               <IconServer size={16} /> Cloud &amp; Local Sync Enabled
@@ -207,6 +250,22 @@ export default function BooksPageContent() {
           </div>
         </div>
       </section>
+
+      <SeoRelatedLinks
+        intro="Related pages:"
+        links={[
+          { href: "/pricing", label: "POS software pricing" },
+          { href: "/demo", label: "Book a book store POS demo" },
+          { href: "/products/retail", label: "Retail POS software" },
+        ]}
+      />
+
+      <SeoFaq
+        label="Book Store POS"
+        title="Bookshop software questions"
+        description="Direct answers for common book store and publisher retail software questions."
+        items={bookFaqs}
+      />
 
       {/* 5. Our Clientele Section - Background: bg-surface */}
       <ProductCTA />
