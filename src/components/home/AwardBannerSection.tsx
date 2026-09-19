@@ -9,7 +9,6 @@ import {
   useSpring,
   type MotionValue,
 } from "framer-motion";
-import { PHONE_INTERNATIONAL, PHONE_TEL } from "@/lib/contact";
 
 /** Keep "ERP & POS" as one unit so spacing around & never collapses. */
 const HEADING_PARTS = [
@@ -148,23 +147,6 @@ export default function AwardBannerSection() {
               />
             ))}
           </p>
-
-          <motion.p
-            initial={{ opacity: 0, y: 8 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.6 }}
-            transition={{ duration: 0.4, delay: 0.12, ease: easeOut }}
-            className="mt-8 sm:mt-10"
-          >
-            <a
-              href={`tel:${PHONE_TEL}`}
-              className="inline-flex items-center gap-2 text-base sm:text-lg font-semibold text-primary hover:text-primary/90 transition-colors tracking-wide"
-              aria-label={`Call DigiNizam at ${PHONE_INTERNATIONAL}`}
-            >
-              <span className="inline-block h-2 w-2 rounded-full bg-primary animate-pulse" aria-hidden />
-              {PHONE_INTERNATIONAL}
-            </a>
-          </motion.p>
         </div>
       </div>
     </section>
