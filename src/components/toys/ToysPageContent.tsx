@@ -14,23 +14,35 @@ import { faqJsonLd, type FaqItem } from "@/lib/seo";
 const toysFaqs: FaqItem[] = [
   {
     q: "What is toy store POS software?",
-    a: "Toy store POS software records sales and connects them with inventory, purchasing, discounts and reporting so toy retailers can manage daily store operations more efficiently.",
+    a: "Toy store POS software records sales and connects them with inventory, purchasing, discounts and reporting so toy retailers can manage daily store operations from one system.",
+  },
+  {
+    q: "What is the best POS software for a toy shop?",
+    a: "The right system depends on catalogue size, billing workflow, inventory accuracy, purchasing, seasonal promotions, low-stock visibility, reporting and number of locations. Compare these requirements before choosing a POS.",
   },
   {
     q: "Can DigiNizam handle a large toy catalogue?",
     a: "Yes. DigiNizam inventory tools can organize many products and categories while keeping stock connected with sales and purchases.",
   },
   {
-    q: "Does DigiNizam support low-stock alerts for toy stores?",
-    a: "Yes. DigiNizam includes low-stock monitoring to help teams identify products that may need restocking.",
+    q: "Can toy store POS software manage inventory?",
+    a: "Yes. DigiNizam connects toy-store sales, purchases and returns with inventory records so teams can see what is available and what may need replenishment.",
   },
   {
-    q: "Can a toy store run discounts through DigiNizam?",
+    q: "Does DigiNizam support low-stock monitoring for toy stores?",
+    a: "Yes. DigiNizam includes low-stock monitoring to help teams identify popular products that may need restocking.",
+  },
+  {
+    q: "Can a toy store run seasonal discounts through DigiNizam?",
     a: "DigiNizam supports offers and discounts in the retail workflow. The exact promotion rules available should match the live store configuration.",
   },
   {
     q: "Can DigiNizam manage multiple toy-store branches?",
-    a: "Yes. Multi-store control can connect stock, sales and reporting across multiple outlets.",
+    a: "Yes. DigiNizam supports connected branch-level stock, sales and reporting across multiple outlets.",
+  },
+  {
+    q: "What features should toy store POS software have?",
+    a: "Important features include fast billing, product and category inventory, purchasing, discounts, low-stock monitoring, reporting and multi-store visibility.",
   },
 ];
 
@@ -40,8 +52,8 @@ export default function ToysPageContent() {
       <JsonLd data={faqJsonLd(toysFaqs)} />
       <PageHero
         label="Toys Store"
-        title="Toy Store POS Software in Pakistan"
-        description="Keep toy-store billing, inventory, seasonal offers, stock alerts and branch reporting connected in one DigiNizam retail system."
+        title="Toy Store POS Software in Pakistan for Billing & Inventory Management"
+        description="Connect toy-store billing, product inventory, seasonal discounts, low-stock visibility and branch reporting in one retail POS workflow."
       />
 
       <SectionCopy label="Overview" title="What Is Toy Store POS Software?">
@@ -49,7 +61,9 @@ export default function ToysPageContent() {
           Toy store POS software combines fast retail billing with inventory, discounts,
           purchasing and reports for shops that often manage many categories and seasonal stock
           peaks. DigiNizam helps toy retailers connect checkout with stock and branch-level
-          reporting instead of maintaining separate manual records.
+          reporting instead of maintaining separate manual records. Toy store POS software
+          connects billing with product inventory, purchasing, discounts and reporting so toy
+          retailers can manage seasonal stock and daily sales from one system.
         </p>
       </SectionCopy>
 
@@ -62,24 +76,22 @@ export default function ToysPageContent() {
         imageBrief="Bright but professional toy-store checkout with DigiNizam POS categories/product grid; avoid childish design, keep business-focused."
       >
         <p>
-          Use the POS to record counter sales quickly and keep each transaction connected to
-          inventory and reporting—especially useful during weekends, holidays and seasonal rush
-          periods.
+          Process toy-store counter sales through one POS workflow while keeping transactions
+          connected with inventory and reporting.
         </p>
       </SectionCopy>
 
       <SectionCopy label="Catalogue" title="Inventory Across Many Toy Categories">
         <p>
-          Organize toys and gift items by product and category, then track stock as sales,
-          purchases and returns are recorded. This makes it easier to see what is available and
-          what is moving.
+          Organize toys and gift items by product and category while keeping stock connected
+          with sales, purchases and returns.
         </p>
       </SectionCopy>
 
       <SectionCopy label="Promotions" title="Discounts & Promotions for Seasonal Sales" reverse>
         <p>
-          Use supported offers and discounts to run seasonal or promotional pricing without
-          maintaining separate manual discount lists at the counter.
+          Use supported offers and discounts for seasonal or promotional pricing without
+          maintaining separate manual discount lists.
         </p>
       </SectionCopy>
 
@@ -91,8 +103,8 @@ export default function ToysPageContent() {
         imageBrief="Real DigiNizam stock or low-stock view showing multiple toy categories and, where available, branch stock or promotions."
       >
         <p>
-          Use low-stock monitoring to identify popular products that may need replenishment
-          before they run out during high-demand periods.
+          Use low-stock monitoring to identify popular items that may need replenishment before
+          high-demand periods.
         </p>
       </SectionCopy>
 
@@ -118,8 +130,7 @@ export default function ToysPageContent() {
 
       <SectionCopy label="Multi-store" title="Multi-Store Toy Retail Management">
         <p>
-          For toy retailers with more than one branch, DigiNizam supports connected stock, sales
-          and reporting across locations.
+          Monitor connected branch-level stock, sales and reporting from a centralized view.
         </p>
       </SectionCopy>
 
@@ -144,10 +155,9 @@ export default function ToysPageContent() {
       <SeoRelatedLinks
         intro="Related pages:"
         links={[
-          { href: "/", label: "POS software Pakistan" },
-          { href: "/features", label: "toy store inventory software" },
-          { href: "/pricing", label: "POS software pricing in Pakistan" },
-          { href: "/demo", label: "book a DigiNizam demo" },
+          { href: "/pricing", label: "POS software pricing" },
+          { href: "/demo", label: "Book a toy store POS demo" },
+          { href: "/products/retail", label: "Retail POS software" },
         ]}
       />
 

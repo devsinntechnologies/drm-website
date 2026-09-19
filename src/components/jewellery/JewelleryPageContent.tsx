@@ -14,7 +14,11 @@ import { faqJsonLd, type FaqItem } from "@/lib/seo";
 const jewelleryFaqs: FaqItem[] = [
   {
     q: "What is jewellery POS software?",
-    a: "Jewellery POS software is a store-management system used to record sales, maintain item inventory and organize payments and reports for jewellery retail operations.",
+    a: "Jewellery POS software is a retail management system used to record jewellery sales, maintain item inventory and organize payments and reporting.",
+  },
+  {
+    q: "What is the best POS software for a jewellery shop?",
+    a: "The right system depends on inventory requirements, billing workflow, payment handling, reporting, branch needs and any jewellery-specific calculations or tracking your store requires. Compare those requirements before choosing a POS.",
   },
   {
     q: "Can DigiNizam manage jewellery inventory?",
@@ -22,15 +26,23 @@ const jewelleryFaqs: FaqItem[] = [
   },
   {
     q: "Does DigiNizam support barcode labels for jewellery?",
-    a: "Barcode and label workflows can be used where they are configured in the jewellery setup. The final page should only show the exact label functionality available in the product.",
-  },
-  {
-    q: "Does DigiNizam calculate gold rates, karat and making charges?",
-    a: "Live gold-rate, karat and making-charge calculations are not part of the current DigiNizam jewellery workflow shown here. Ask our team about your pricing calculations during a demo.",
+    a: "Barcode and label workflows can be used where they are configured in the jewellery setup. The final label fields should match the live product configuration.",
   },
   {
     q: "Can DigiNizam manage multiple jewellery outlets?",
-    a: "Yes. DigiNizam supports multi-store setups with connected branch stock, sales and reporting.",
+    a: "Yes. DigiNizam supports connected branch-level stock, sales and reporting for jewellery businesses with multiple outlets.",
+  },
+  {
+    q: "Can jewellery POS software manage payments and discounts?",
+    a: "DigiNizam supports payment methods and discounts within its sales workflow, while keeping daily transactions available for review and reporting.",
+  },
+  {
+    q: "Does DigiNizam calculate gold rates, karat and making charges?",
+    a: "Live gold-rate, karat and making-charge calculations are not part of the current DigiNizam jewellery workflow shown on this page. Discuss your required pricing calculations during a demo.",
+  },
+  {
+    q: "What features should jewellery POS software have?",
+    a: "Important requirements can include billing, item inventory, payments, labels, reporting and multi-branch visibility. Gold-rate, purity, weight and making-charge workflows should be checked separately if your store requires them.",
   },
 ];
 
@@ -40,8 +52,8 @@ export default function JewelleryPageContent() {
       <JsonLd data={faqJsonLd(jewelleryFaqs)} />
       <PageHero
         label="Jewellery Shop"
-        title="Jewellery POS Software in Pakistan for Store Operations"
-        description="Connect jewellery-store billing, product inventory, labels, payments and branch reporting in one DigiNizam retail workflow."
+        title="Jewellery POS Software in Pakistan for Billing & Inventory Management"
+        description="Connect jewellery-store billing, product inventory, labels, payments and branch reporting in one retail POS workflow."
       />
 
       <SectionCopy label="Overview" title="What Is Jewellery POS Software?">
@@ -49,7 +61,9 @@ export default function JewelleryPageContent() {
           Jewellery POS software helps jewellery retailers record sales, manage item inventory
           and maintain clear billing and reporting records for high-value stock. DigiNizam
           supports core retail operations such as invoicing, inventory visibility, payments and
-          multi-store reporting for jewellery businesses.
+          multi-store reporting for jewellery businesses. Jewellery POS software helps retailers
+          organize sales, inventory, payments and reporting for high-value stock. DigiNizam
+          connects these core retail workflows in one system.
         </p>
       </SectionCopy>
 
@@ -62,16 +76,15 @@ export default function JewelleryPageContent() {
         imageBrief="Premium jewellery counter/showcase with DigiNizam item inventory or invoice UI; elegant lighting, professional retail environment, no fake gold-rate figures."
       >
         <p>
-          Maintain product records and stock visibility so teams can see what is available
-          across the store or multiple locations. Accurate inventory is especially important
-          when individual products carry high value.
+          Maintain item records and stock visibility so teams can see what is available across
+          the store or multiple locations.
         </p>
       </SectionCopy>
 
       <SectionCopy label="Billing" title="Organized Billing for Jewellery Sales">
         <p>
-          Use DigiNizam POS and invoicing to record jewellery-store sales in a consistent
-          digital workflow instead of relying on handwritten bills and separate daily registers.
+          Use DigiNizam POS and invoicing to record jewellery sales consistently while keeping
+          transactions connected with inventory and payment records.
         </p>
       </SectionCopy>
 
@@ -84,9 +97,8 @@ export default function JewelleryPageContent() {
         imageBrief="Real DigiNizam barcode/label, payment or sales-report screen relevant to jewellery retail; avoid unconfirmed karat/gold-rate UI."
       >
         <p>
-          Use barcode and label functionality where the jewellery template supports it to
-          simplify item lookup, tagging and billing. The exact fields printed on labels should
-          match the live product configuration.
+          Use barcode and label functionality where configured in the jewellery setup to support
+          item lookup, tagging and billing.
         </p>
       </SectionCopy>
 
@@ -99,8 +111,7 @@ export default function JewelleryPageContent() {
 
       <SectionCopy label="Multi-branch" title="Multi-Branch Jewellery Visibility" reverse>
         <p>
-          For jewellery businesses with more than one outlet, DigiNizam supports connected
-          branch-level stock, sales and reports.
+          Monitor connected branch-level inventory, sales and reports from a centralized view.
         </p>
       </SectionCopy>
 
@@ -137,10 +148,9 @@ export default function JewelleryPageContent() {
       <SeoRelatedLinks
         intro="Related pages:"
         links={[
-          { href: "/", label: "POS software Pakistan" },
-          { href: "/features", label: "jewellery inventory software" },
-          { href: "/pricing", label: "POS software pricing in Pakistan" },
-          { href: "/demo", label: "book a DigiNizam demo" },
+          { href: "/pricing", label: "POS software pricing" },
+          { href: "/demo", label: "Book a jewellery POS demo" },
+          { href: "/products/retail", label: "Retail POS software" },
         ]}
       />
 

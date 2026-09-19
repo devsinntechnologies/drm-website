@@ -5,7 +5,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "Toy Store POS Software in Pakistan | DigiNizam",
   description:
-    "Manage toy-store billing, stock, low-stock alerts, discounts, reports and multiple outlets with DigiNizam POS software for retail businesses in Pakistan.",
+    "Toy store POS software in Pakistan for billing, product inventory, seasonal discounts, low-stock monitoring and multi-store reporting. Book a free demo.",
   path: "/products/toys",
 });
 

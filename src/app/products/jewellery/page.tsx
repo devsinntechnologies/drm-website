@@ -5,7 +5,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "Jewellery POS Software in Pakistan | DigiNizam",
   description:
-    "Manage jewellery billing, item inventory, barcode labels, payments, reports and multi-branch visibility with DigiNizam POS software in Pakistan.",
+    "Jewellery POS software in Pakistan for billing, item inventory, labels, payments, discounts and multi-branch reporting. Book a free demo.",
   path: "/products/jewellery",
 });
 
