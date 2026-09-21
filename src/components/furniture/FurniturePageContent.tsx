@@ -32,6 +32,18 @@ const furnitureFaqs: FaqItem[] = [
     q: "Can DigiNizam manage multiple furniture showrooms?",
     a: "Yes. Multi-store control can connect branch-level stock, sales and reporting.",
   },
+  {
+    q: "Can furniture POS software monitor low-stock items?",
+    a: "Yes. DigiNizam provides inventory and low-stock visibility to help teams identify products or categories that may need replenishment.",
+  },
+  {
+    q: "Can DigiNizam manage multiple furniture showrooms?",
+    a: "Yes. DigiNizam supports connected branch-level inventory, sales and reporting for businesses operating multiple showrooms or stock locations.",
+  },
+  {
+    q: "What features should furniture POS software have?",
+    a: "Important features include showroom billing, inventory visibility, supplier purchasing, warehouse stock, low-stock monitoring, reporting and multi-branch control.",
+  },
 ];
 
 export default function FurniturePageContent() {

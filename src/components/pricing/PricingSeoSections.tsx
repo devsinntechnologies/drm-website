@@ -9,17 +9,17 @@ const sections = [
   },
   {
     title: "What Affects Cost",
-    body: "POS software price in Pakistan depends on outlets, billing counters, inventory modules and whether you need on-site setup or hardware. A multi-location retail or restaurant setup costs more to configure than a single store.",
+    body: "POS software pricing depends on the number of outlets, billing counters, inventory requirements, business modules, terminals and whether you need on-site setup or hardware. Multi-location businesses may require additional configuration based on their workflow.",
   },
   {
-    title: "Retail & Restaurant Features",
-    body: "POS pricing should reflect billing, inventory, orders and reporting—not only a terminal count. See the retail and restaurant pages for the live workflow.",
+    title: "Business Features",
+    body: "DigiNizam supports different business workflows across retail, restaurants, pharmacies and other supported industries. Your plan can be configured around the modules and operations your business actually needs.",
     href: "/products/retail",
     linkLabel: "Retail POS software",
   },
   {
-    title: "Inventory Features",
-    body: "Inventory software is part of the same platform for stores and restaurants. Stock tracking and branch use are described on the inventory features page; pricing for those modules is confirmed with your plan.",
+    title: "Inventory & Operations",
+    body: "Inventory tools help businesses track stock, purchases and sales while keeping operational records connected across supported outlets and locations.",
     href: "/features",
     linkLabel: "Inventory software features",
   },

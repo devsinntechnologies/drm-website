@@ -84,7 +84,7 @@ export default function DemoForm() {
           <SectionHeader
             label="Free walkthrough"
             title="What You Will See"
-            description="A 30-minute session on POS, billing, inventory, stock and reporting—no sales pressure, no credit card required."
+            description="A 30-minute session covering POS, billing, inventory, reporting and your business workflow."
             className="mb-0"
           />
 

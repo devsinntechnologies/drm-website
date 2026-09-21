@@ -10,13 +10,13 @@ export default function DemoSeoSections() {
         align="center"
         label="Before you book"
         title="Who the Demo Is For"
-        description="Owners and managers who need to see POS, billing, inventory, stock and reporting on their own workflow—not a generic slideshow."
+        description="Business owners and managers who want to see DigiNizam configured around their actual billing, inventory, reporting and operational workflow—not a generic slideshow."
       />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto">
         <article className="rounded-2xl border border-surface-border bg-background p-5">
           <h2 className="type-card-title text-foreground mb-2">What Happens Next</h2>
           <p className="type-body text-muted leading-relaxed">
-            Submit the form. We confirm by phone or email, then run a live walkthrough of POS, stock and reports. A successful booking is recorded only after the request is sent—not when the page loads.
+            Submit the form. We confirm by phone or email, then run a live walkthrough of POS, inventory and reports based on your business workflow. A successful booking is recorded only after the request is sent—not when the page loads.
           </p>
         </article>
         <article className="rounded-2xl border border-surface-border bg-background p-5">
