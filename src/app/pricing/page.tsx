@@ -13,18 +13,18 @@ import { faqJsonLd, pageMetadata, type FaqItem } from "@/lib/seo";
 const pricingFaqs: FaqItem[] = [
   {
     q: "How much does a POS system cost in Pakistan?",
-    a: "A POS system in Pakistan usually combines software, terminals, printers and setup. Hardware and the number of outlets change the total more than a single advertised figure. DigiNizam POS software pricing is quoted for your retail stores, restaurants, billing counters and inventory needs on a demo—we do not publish a one-size market price that would mix hardware bundles with software-only plans.",
+    a: "A POS system in Pakistan can include software, terminals, printers, setup and other hardware depending on the business. DigiNizam pricing is configured according to your outlets, counters, inventory requirements and selected modules rather than using one price for every business.",
   },
   {
     q: "How much does POS software cost?",
-    a: "POS software cost is the subscription or licence for billing, inventory and reporting. It is separate from printers, cash drawers and on-site setup. DigiNizam shares confirmed plan inclusions and a price for your setup during a demo so you can compare software cost clearly against general market POS packages that bundle hardware.",
+    a: "POS software cost depends on the subscription or plan, number of outlets, billing terminals, inventory requirements and additional modules. DigiNizam confirms the appropriate setup and pricing based on your business requirements.",
   },
 ];
 
 export const metadata: Metadata = pageMetadata({
-  title: "POS Software Price in Pakistan | DigiNizam Pricing",
+  title: "POS Software Pricing in Pakistan | DigiNizam",
   description:
-    "See DigiNizam POS software pricing, plan inclusions and options for retail stores, restaurants and growing multi-location businesses.",
+    "Explore DigiNizam POS software pricing for retail stores, restaurants, pharmacies and multi-location businesses. Compare plans, features and setup options.",
   path: "/pricing",
 });
 
@@ -53,7 +53,7 @@ export default function PricingPage() {
       />
       <SiteCTA
         title="Book a Demo"
-        description="Get a confirmed quote for POS, billing and inventory for retail stores, restaurants and multi-location businesses—not a placeholder price."
+        description="Get a confirmed quote for your POS, billing, inventory and business management requirements."
       />
     </main>
   );
