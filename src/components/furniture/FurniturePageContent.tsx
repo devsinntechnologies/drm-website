@@ -30,19 +30,19 @@ const furnitureFaqs: FaqItem[] = [
   },
   {
     q: "Can DigiNizam manage multiple furniture showrooms?",
-    a: "Yes. Multi-store control can connect branch-level stock, sales and reporting.",
+    a: "Yes. DigiNizam supports connected branch-level inventory, sales and reporting for businesses operating multiple showrooms or stock locations.",
   },
   {
     q: "Can furniture POS software monitor low-stock items?",
     a: "Yes. DigiNizam provides inventory and low-stock visibility to help teams identify products or categories that may need replenishment.",
   },
   {
-    q: "Can DigiNizam manage multiple furniture showrooms?",
-    a: "Yes. DigiNizam supports connected branch-level inventory, sales and reporting for businesses operating multiple showrooms or stock locations.",
-  },
-  {
     q: "What features should furniture POS software have?",
     a: "Important features include showroom billing, inventory visibility, supplier purchasing, warehouse stock, low-stock monitoring, reporting and multi-branch control.",
+  },
+  {
+    q: "What should furniture store POS software manage?",
+    a: "Furniture store POS software should help manage billing, sales, product and inventory records, and reporting. DigiNizam brings these core retail operations together in one POS system.",
   },
 ];
 
@@ -68,6 +68,30 @@ export default function FurniturePageContent() {
           and reporting for showrooms that may hold stock across display areas, warehouses or
           multiple branches. DigiNizam can help furniture retailers keep billing and stock
           records connected instead of maintaining separate spreadsheets.
+        </p>
+      </SectionCopy>
+
+      <SectionCopy
+        label="Store software"
+        title="Furniture Store POS Software for Billing & Inventory Management"
+        reverse
+      >
+        <p>
+          DigiNizam helps furniture stores manage billing, sales, inventory, and day-to-day store
+          operations through a POS system. Furniture businesses can keep product records organized,
+          monitor stock, review sales activity, and manage multiple store operations from a
+          centralized system.
+        </p>
+        <p>
+          Review{" "}
+          <Link href="/pricing" className="text-primary font-semibold hover:underline">
+            POS software pricing
+          </Link>{" "}
+          or{" "}
+          <Link href="/demo" className="text-primary font-semibold hover:underline">
+            book a POS demo
+          </Link>{" "}
+          for your showroom workflow.
         </p>
       </SectionCopy>
 
