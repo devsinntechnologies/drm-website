@@ -21,7 +21,9 @@ const sections = [
   },
   {
     title: "Multi-Location / Branch Use",
-    body: "Where you run more than one outlet, DigiNizam supports per-store stock with sync across branches so transfers and counts stay in one system.",
+    body: "Where you run more than one outlet, DigiNizam supports per-store stock with sync across branches so transfers and counts stay in one system. Retail shops, toy stores and furniture showrooms can use the same inventory tools alongside industry-specific POS workflows.",
+    href: "/products/retail",
+    linkLabel: "Retail POS software",
   },
 ];
 
@@ -39,11 +41,26 @@ export default function InventorySeoSections() {
           <article key={section.title} className="rounded-2xl border border-surface-border bg-background p-5">
             <h2 className="type-card-title text-foreground mb-2">{section.title}</h2>
             <p className="type-body text-muted leading-relaxed">{section.body}</p>
+            {"href" in section && section.href ? (
+              <p className="mt-3 text-sm">
+                <Link href={section.href} className="text-primary font-semibold hover:underline">
+                  {section.linkLabel}
+                </Link>
+              </p>
+            ) : null}
           </article>
         ))}
       </div>
       <p className="text-sm text-muted text-center mt-8">
         See{" "}
+        <Link href="/products/toys" className="text-primary font-semibold hover:underline">
+          toy store POS software
+        </Link>
+        ,{" "}
+        <Link href="/products/furniture" className="text-primary font-semibold hover:underline">
+          furniture store POS software
+        </Link>
+        ,{" "}
         <Link href="/pricing" className="text-primary font-semibold hover:underline">
           POS software price in Pakistan
         </Link>{" "}

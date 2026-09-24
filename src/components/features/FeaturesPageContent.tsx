@@ -29,6 +29,9 @@ export default function FeaturesPageContent() {
       <SeoRelatedLinks
         intro="Continue with:"
         links={[
+          { href: "/products/retail", label: "retail POS software" },
+          { href: "/products/toys", label: "toy store POS software" },
+          { href: "/products/furniture", label: "furniture store POS software" },
           { href: "/products/restaurant", label: "restaurant management software" },
           { href: "/pricing", label: "POS software pricing" },
           { href: "/demo", label: "book a demo" },

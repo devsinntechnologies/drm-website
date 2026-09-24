@@ -32,6 +32,10 @@ const retailFaqs: FaqItem[] = [
     q: "Can DigiNizam manage more than one retail branch?",
     a: "Yes, DigiNizam supports multi-store setups with connected stock, sales and reporting across locations. Exact terminals, outlets and modules depend on the selected plan.",
   },
+  {
+    q: "What is retail shop management software?",
+    a: "Retail shop management software helps stores manage billing, sales, inventory, and reporting in one system. DigiNizam combines these retail operations in a POS platform designed for day-to-day store management.",
+  },
 ];
 
 export default function RetailPageContent() {
@@ -56,6 +60,11 @@ export default function RetailPageContent() {
           retailers can process transactions, track stock, review performance and manage daily
           operations from one system. DigiNizam brings billing, inventory visibility, reporting
           and multi-store control together for growing retail businesses in Pakistan.
+        </p>
+        <p>
+          As retail software, DigiNizam brings billing, sales, inventory, and reporting together
+          for everyday shop operations. Its retail POS workflow helps businesses keep sales and
+          stock information organized in one system.
         </p>
       </SectionCopy>
 
@@ -112,6 +121,26 @@ export default function RetailPageContent() {
           Review sales, stock movement and outlet performance in reports designed for
           day-to-day decisions. Owners can use these reports to understand what is selling,
           where stock is moving and which areas need attention.
+        </p>
+      </SectionCopy>
+
+      <SectionCopy label="Shop management" title="Retail Shop Management Software in Pakistan" reverse>
+        <p>
+          DigiNizam helps retail shops manage everyday billing, sales, inventory, and business
+          operations from one POS system. Retail shop owners can use DigiNizam to keep sales
+          records organized, monitor stock, review reports, and manage day-to-day store activity
+          from a centralized system.
+        </p>
+        <p>
+          See{" "}
+          <Link href="/pricing" className="text-primary font-semibold hover:underline">
+            POS software pricing
+          </Link>{" "}
+          for plan options or{" "}
+          <Link href="/demo" className="text-primary font-semibold hover:underline">
+            Book a POS demo
+          </Link>{" "}
+          to review the live retail workflow.
         </p>
       </SectionCopy>
 

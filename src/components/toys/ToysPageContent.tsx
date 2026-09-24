@@ -17,6 +17,10 @@ const toysFaqs: FaqItem[] = [
     a: "Toy store POS software records sales and connects them with inventory, purchasing, discounts and reporting so toy retailers can manage daily store operations from one system.",
   },
   {
+    q: "What is a toy store POS system?",
+    a: "A toy store POS system is software that helps toy shops manage billing, sales, inventory, and reporting in one place. DigiNizam is designed to support these everyday retail operations.",
+  },
+  {
     q: "What is the best POS software for a toy shop?",
     a: "The right system depends on catalogue size, billing workflow, inventory accuracy, purchasing, seasonal promotions, low-stock visibility, reporting and number of locations. Compare these requirements before choosing a POS.",
   },
@@ -25,8 +29,8 @@ const toysFaqs: FaqItem[] = [
     a: "Yes. DigiNizam inventory tools can organize many products and categories while keeping stock connected with sales and purchases.",
   },
   {
-    q: "Can toy store POS software manage inventory?",
-    a: "Yes. DigiNizam connects toy-store sales, purchases and returns with inventory records so teams can see what is available and what may need replenishment.",
+    q: "Can toy store software manage inventory?",
+    a: "Yes. DigiNizam supports retail inventory management so toy stores can maintain product records, monitor stock, and review inventory-related information alongside sales activity.",
   },
   {
     q: "Does DigiNizam support low-stock monitoring for toy stores?",
@@ -64,6 +68,30 @@ export default function ToysPageContent() {
           reporting instead of maintaining separate manual records. Toy store POS software
           connects billing with product inventory, purchasing, discounts and reporting so toy
           retailers can manage seasonal stock and daily sales from one system.
+        </p>
+      </SectionCopy>
+
+      <SectionCopy
+        label="POS"
+        title="Toy Store POS Software for Billing, Inventory & Store Management"
+        reverse
+      >
+        <p>
+          DigiNizam provides POS software for toy stores to manage billing, sales, inventory, and
+          everyday store operations. A toy store POS system can help staff process sales
+          efficiently, keep product records organized, monitor stock levels, and review sales
+          reports from one system.
+        </p>
+        <p>
+          Compare{" "}
+          <Link href="/pricing" className="text-primary font-semibold hover:underline">
+            POS software pricing
+          </Link>{" "}
+          or{" "}
+          <Link href="/demo" className="text-primary font-semibold hover:underline">
+            book a POS demo
+          </Link>{" "}
+          for your toy store setup.
         </p>
       </SectionCopy>
 

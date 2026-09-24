@@ -19,6 +19,10 @@ const pricingFaqs: FaqItem[] = [
     q: "How much does POS software cost?",
     a: "POS software cost depends on the subscription or plan, number of outlets, billing terminals, inventory requirements and additional modules. DigiNizam confirms the appropriate setup and pricing based on your business requirements.",
   },
+  {
+    q: "How much does POS software cost in Pakistan?",
+    a: "POS software pricing in Pakistan varies by business requirements, including outlets, billing counters, modules, and operational needs. DigiNizam provides pricing based on the setup and requirements of your business.",
+  },
 ];
 
 export const metadata: Metadata = pageMetadata({

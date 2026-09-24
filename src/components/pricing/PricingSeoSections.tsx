@@ -4,6 +4,12 @@ import SectionHeader from "@/components/common/SectionHeader";
 
 const sections = [
   {
+    title: "POS Software Pricing in Pakistan",
+    body: "The cost of POS software in Pakistan depends on factors such as the number of outlets or billing counters, required modules, inventory needs, and the business workflow you need to manage. DigiNizam can be configured around your business requirements, so the appropriate setup and pricing can be discussed based on your needs.",
+    href: "/demo",
+    linkLabel: "Book a POS demo",
+  },
+  {
     title: "What Is Included",
     body: "Plans cover POS billing, inventory tools, terminals as listed, and reporting. Exact inclusions for your outlets are confirmed on a demo—we do not publish unverified or competitor prices.",
   },
