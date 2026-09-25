@@ -3,9 +3,23 @@ import { blog1 } from "./posts/what-is-a-restaurant-pos-system";
 import { blog2 } from "./posts/restaurant-inventory-management-reduce-food-waste";
 import { blog3 } from "./posts/best-pos-software-for-restaurants-in-pakistan";
 import { blog4 } from "./posts/pos-software-price-in-pakistan";
+import { retailBlog1 } from "./posts/what-is-retail-pos-software";
+import { retailBlog2 } from "./posts/retail-inventory-management-software";
+import { retailBlog3 } from "./posts/manual-billing-vs-retail-pos-software";
+import { retailBlog4 } from "./posts/how-to-choose-best-retail-pos-software-pakistan";
+import type { FaqItem } from "@/lib/seo";
 
 /** Published posts only. Add new approved posts here. */
-export const blogPosts: BlogPost[] = [blog1, blog2, blog3, blog4];
+export const blogPosts: BlogPost[] = [
+  blog1,
+  blog2,
+  blog3,
+  blog4,
+  retailBlog1,
+  retailBlog2,
+  retailBlog3,
+  retailBlog4,
+];
 
 export function getAllPosts(): BlogPost[] {
   return [...blogPosts].sort(
@@ -25,7 +39,7 @@ export function getPostSlugs(): string[] {
 /** Categories that have at least one published post, plus All. */
 export function getActiveCategories(): Array<"All" | BlogCategory> {
   const present = new Set(blogPosts.map((post) => post.category));
-  const ordered: BlogCategory[] = ["Restaurant POS", "Inventory", "POS Pricing"];
+  const ordered: BlogCategory[] = ["Retail POS", "Restaurant POS", "Inventory", "POS Pricing"];
   return ["All", ...ordered.filter((category) => present.has(category))];
 }
 
@@ -72,6 +86,18 @@ export function estimateReadTime(content: ContentBlock[]): string {
     .filter(Boolean).length;
   const minutes = Math.max(1, Math.round(words / 200));
   return `${minutes} min read`;
+}
+
+export function getPostFaqItems(post: BlogPost): FaqItem[] {
+  const items: FaqItem[] = [];
+  for (const block of post.content) {
+    if (block.type === "faq-section") {
+      for (const item of block.items) {
+        items.push({ q: item.question, a: item.answer });
+      }
+    }
+  }
+  return items;
 }
 
 export function blogPostingJsonLd(post: BlogPost, siteUrl: string) {

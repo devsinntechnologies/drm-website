@@ -10,9 +10,10 @@ import {
   blogPostingJsonLd,
   formatBlogDate,
   getPostBySlug,
+  getPostFaqItems,
   getPostSlugs,
 } from "@/lib/blog";
-import { SITE_URL } from "@/lib/seo";
+import { faqJsonLd, SITE_URL } from "@/lib/seo";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -63,10 +64,13 @@ export default async function BlogPostPage({ params }: PageProps) {
   const post = getPostBySlug(slug);
   if (!post) notFound();
 
+  const faqItems = getPostFaqItems(post);
+
   return (
     <main className="min-h-screen bg-surface text-foreground py-4 md:py-6 relative overflow-hidden">
       <JsonLd data={blogPostingJsonLd(post, SITE_URL)} />
       <JsonLd data={blogBreadcrumbJsonLd(post, SITE_URL)} />
+      {faqItems.length > 0 ? <JsonLd data={faqJsonLd(faqItems)} /> : null}
 
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-primary/5 blur-[160px] rounded-full pointer-events-none" />
 

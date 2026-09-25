@@ -1,4 +1,4 @@
-export type BlogCategory = "Restaurant POS" | "Inventory" | "POS Pricing";
+export type BlogCategory = "Restaurant POS" | "Inventory" | "POS Pricing" | "Retail POS";
 
 export type InlineLink = {
   href: string;
