@@ -12,8 +12,8 @@ export const retailBlog4: BlogPost = {
   publishedAt: PUBLISHED_AT,
   modifiedAt: PUBLISHED_AT,
   readTime: "9 min read",
-  featuredImage: "/blog/best-pos-software-restaurants-pakistan.webp",
-  imageAlt: "Retail business evaluating POS software options in Pakistan",
+  featuredImage: "/blog/retail-store-pos-evaluation-pakistan.webp",
+  imageAlt: "Retail store interior for evaluating POS software in Pakistan",
   seoTitle: "How to Choose the Best Retail POS Software in Pakistan",
   metaDescription:
     "Use this practical checklist to choose retail POS software in Pakistan. Compare billing, inventory, reports, offline support, branches, purchasing, pricing and support.",
@@ -109,6 +109,13 @@ export const retailBlog4: BlogPost = {
         "Use realistic products and ask the vendor to demonstrate billing, stock movement, purchase entry, reporting and multi-store activity if relevant. Use the same checklist for each vendor.",
       ],
       links: [{ href: "/demo", label: "book a DigiNizam demo" }],
+    },
+    {
+      type: "image",
+      src: "/blog/retail-billing-counter-workflow.webp",
+      alt: "Retail checkout and POS billing workflow during software evaluation",
+      width: 1600,
+      height: 900,
     },
     { type: "heading", level: 2, text: "Retail POS Buying Checklist" },
     {

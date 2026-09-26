@@ -12,8 +12,8 @@ export const retailBlog2: BlogPost = {
   publishedAt: PUBLISHED_AT,
   modifiedAt: PUBLISHED_AT,
   readTime: "7 min read",
-  featuredImage: "/blog/restaurant-inventory-ingredient-stock-control.webp",
-  imageAlt: "Retail inventory management and stock control workflow",
+  featuredImage: "/blog/retail-inventory-stock-management.webp",
+  imageAlt: "Retail store inventory and stock management on shelves",
   seoTitle: "How Retail Inventory Management Software Helps Reduce Stock Problems",
   metaDescription:
     "Learn how retail inventory management software connects sales, purchases and stock records to reduce stock confusion, missed replenishment and manual errors.",
@@ -64,6 +64,13 @@ export const retailBlog2: BlogPost = {
         "Returns/adjustments",
         "Inventory reports",
       ],
+    },
+    {
+      type: "image",
+      src: "/blog/retail-pos-software-store-checkout.webp",
+      alt: "Retail POS sale connected to inventory stock records",
+      width: 1600,
+      height: 900,
     },
     { type: "heading", level: 2, text: "How Does POS Update Stock After a Sale?" },
     {

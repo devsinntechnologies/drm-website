@@ -12,8 +12,8 @@ export const retailBlog3: BlogPost = {
   publishedAt: PUBLISHED_AT,
   modifiedAt: PUBLISHED_AT,
   readTime: "7 min read",
-  featuredImage: "/blog/factors-affect-pos-software-pricing-v2.webp",
-  imageAlt: "Retail store comparing manual billing with POS software workflow",
+  featuredImage: "/blog/retail-billing-counter-workflow.webp",
+  imageAlt: "Retail billing counter and digital POS checkout workflow",
   seoTitle: "Manual Billing vs Retail POS Software: What Retail Stores Should Consider",
   metaDescription:
     "Compare manual billing with retail POS software across speed, stock control, reporting, purchasing and multi-store visibility before choosing a retail billing workflow.",
@@ -61,6 +61,13 @@ export const retailBlog3: BlogPost = {
         "Reports",
         "Purchasing/supplier workflows where supported",
       ],
+    },
+    {
+      type: "image",
+      src: "/blog/retail-store-pos-evaluation-pakistan.webp",
+      alt: "Retail shop evaluating billing workflow and store operations",
+      width: 1600,
+      height: 900,
     },
     { type: "heading", level: 2, text: "Manual Billing vs POS: A Practical Comparison" },
     {
