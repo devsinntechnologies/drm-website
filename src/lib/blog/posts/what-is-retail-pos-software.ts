@@ -18,8 +18,8 @@ export const retailBlog1: BlogPost = {
   publishedAt: PUBLISHED_AT,
   modifiedAt: PUBLISHED_AT,
   readTime: "8 min read",
-  featuredImage: "/blog/common-pos-hardware-pakistan-v2.webp",
-  imageAlt: "Retail POS checkout with billing and inventory workflow",
+  featuredImage: "/blog/retail-pos-software-store-checkout.webp",
+  imageAlt: "Retail store checkout counter with POS billing workflow",
   seoTitle: "What Is Retail POS Software and How Does It Help Store Owners?",
   metaDescription:
     "Learn what retail POS software does, how it connects billing with inventory and reports, and why it helps retail store owners manage daily operations.",
@@ -87,6 +87,13 @@ export const retailBlog1: BlogPost = {
         "Low-stock monitoring",
         "Reports",
       ],
+    },
+    {
+      type: "image",
+      src: "/blog/retail-inventory-stock-management.webp",
+      alt: "Retail inventory and stock visibility connected to store sales",
+      width: 1600,
+      height: 900,
     },
     { type: "heading", level: 2, text: "Can Retail POS Work Without Internet?" },
     {
