@@ -40,6 +40,18 @@ export default function DemoSeoSections() {
             .
           </p>
         </article>
+        <article className="rounded-2xl border border-surface-border bg-background p-5 md:col-span-2">
+          <h2 className="type-card-title text-foreground mb-2">What happens in a POS software demo?</h2>
+          <p className="type-body text-muted leading-relaxed">
+            The team walks through relevant POS, billing, inventory, reporting and operational workflows and discusses the setup required for your business. This is a practical review of the configuration you actually need, not a generic feature dump.
+          </p>
+        </article>
+        <article className="rounded-2xl border border-surface-border bg-background p-5 md:col-span-2">
+          <h2 className="type-card-title text-foreground mb-2">What should I prepare for a POS demo?</h2>
+          <p className="type-body text-muted leading-relaxed">
+            Bring your key business workflow details: outlets or counters, the products or menu items you sell, your current stock needs, and the reporting or operational questions you want answered. This helps the team tailor the walkthrough to your actual setup.
+          </p>
+        </article>
       </div>
     </SectionShell>
   );

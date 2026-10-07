@@ -12,23 +12,27 @@ import { faqJsonLd, pageMetadata, type FaqItem } from "@/lib/seo";
 
 const pricingFaqs: FaqItem[] = [
   {
-    q: "How much does a POS system cost in Pakistan?",
-    a: "A POS system in Pakistan can include software, terminals, printers, setup and other hardware depending on the business. DigiNizam pricing is configured according to your outlets, counters, inventory requirements and selected modules rather than using one price for every business.",
-  },
-  {
     q: "How much does POS software cost?",
-    a: "POS software cost depends on the subscription or plan, number of outlets, billing terminals, inventory requirements and additional modules. DigiNizam confirms the appropriate setup and pricing based on your business requirements.",
+    a: "POS software pricing depends on the plan, features, users or terminals, locations and setup requirements. DigiNizam confirms the appropriate configuration and quote for the business.",
   },
   {
-    q: "How much does POS software cost in Pakistan?",
-    a: "POS software pricing in Pakistan varies by business requirements, including outlets, billing counters, modules, and operational needs. DigiNizam provides pricing based on the setup and requirements of your business.",
+    q: "What affects POS software pricing?",
+    a: "The number of outlets, billing counters, inventory requirements, business modules, setup complexity and support needs all influence the final price. DigiNizam matches the setup to the workflow your business requires.",
+  },
+  {
+    q: "Is POS hardware included in software pricing?",
+    a: "Hardware should be confirmed separately from software unless a plan explicitly states otherwise. The final hardware scope depends on the selected setup and business operations.",
+  },
+  {
+    q: "How do I get a DigiNizam quote?",
+    a: "Book a demo so the team can review your outlets, billing counters, inventory and required modules, then confirm the configuration and pricing that fits your business.",
   },
 ];
 
 export const metadata: Metadata = pageMetadata({
-  title: "POS Software Pricing in Pakistan | DigiNizam",
+  title: "POS Software Pricing & Plans | DigiNizam",
   description:
-    "Explore DigiNizam POS software pricing for retail stores, restaurants, pharmacies and multi-location businesses. Compare plans, features and setup options.",
+    "Explore DigiNizam POS software plans and the factors that affect pricing, including business size, outlets, terminals, modules, inventory needs and setup requirements.",
   path: "/pricing",
 });
 
@@ -49,10 +53,10 @@ export default function PricingPage() {
       <SeoRelatedLinks
         intro="Related pages:"
         links={[
-          { href: "/", label: "POS software Pakistan" },
+          { href: "/", label: "POS software" },
           { href: "/products/retail", label: "retail POS software" },
-          { href: "/products/restaurant", label: "restaurant management software" },
-          { href: "/demo", label: "book a demo" },
+          { href: "/products/restaurant", label: "restaurant POS software" },
+          { href: "/demo", label: "get a POS software demo" },
         ]}
       />
       <SiteCTA

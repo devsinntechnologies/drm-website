@@ -12,8 +12,8 @@ export default function AboutHero() {
     <>
       <PageHero
         label="About DigiNizam"
-        title="Built for businesses that want to operate smarter"
-        description="DigiNizam delivers ERP, POS, and digital tools that help teams run retail and operations with clarity—guided strategy, tailored setup, and reliable support."
+        title="About DigiNizam — POS & Business Management Software"
+        description="DigiNizam builds practical software for businesses that need connected billing, inventory, reporting and operational workflows, supported by tailored setup and 24/7 support."
         align="left"
       >
         <Button href="/contact" variant="primary" size="md" className="mt-6">

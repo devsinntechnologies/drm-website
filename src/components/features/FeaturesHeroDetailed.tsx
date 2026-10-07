@@ -9,9 +9,9 @@ const FeaturesHeroDetailed = () => {
   return (
     <>
       <PageHero
-        label="Restaurant inventory"
-        title="Restaurant Inventory Software in Pakistan"
-        description="Manage restaurant stock and inventory with DigiNizam. Improve visibility, connect stock with operations, and reduce manual inventory work."
+        label="Features"
+        title="POS & Inventory Management Software Features"
+        description="Explore the tools DigiNizam provides for billing, inventory, reporting and day-to-day business operations, with workflows configured to your business."
       />
 
       <section className="pb-10 md:pb-12 bg-background border-b border-surface-border">

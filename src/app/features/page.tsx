@@ -3,9 +3,9 @@ import FeaturesPageContent from "@/components/features/FeaturesPageContent";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Restaurant Inventory Software Pakistan | DigiNizam",
+  title: "POS & Inventory Management Software Features | DigiNizam",
   description:
-    "Manage restaurant stock and inventory with DigiNizam. Improve inventory visibility, connect stock with operations and reduce manual inventory work.",
+    "Explore DigiNizam POS and inventory management features for billing, stock, reporting, offline-ready operations and multi-location workflows.",
   path: "/features",
 });
 

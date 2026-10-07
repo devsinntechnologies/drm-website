@@ -81,7 +81,7 @@ export default function HeroSection() {
             </span>
 
             <h1 className="font-semibold text-white tracking-tight mb-3 text-[clamp(2rem,4.5vw,3.25rem)] leading-[1.1]">
-              POS Software for Growing Businesses in Pakistan
+              POS Software for Retail, Restaurants &amp; Growing Businesses
             </h1>
 
             <p
@@ -96,7 +96,7 @@ export default function HeroSection() {
             </span>
 
             <p className="text-base text-white/70 leading-relaxed mb-7">
-              DigiNizam POS software helps you manage billing, inventory, orders and daily operations from one platform—built for restaurants and retail across Pakistan.
+              Manage billing, inventory, sales and daily operations from one connected POS platform. Explore DigiNizam by feature, industry, pricing or live demo.
             </p>
 
             <div className="flex flex-wrap items-center gap-3">

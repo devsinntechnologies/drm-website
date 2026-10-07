@@ -7,9 +7,9 @@ import SiteCTA from "@/components/common/SiteCTA";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Book a DigiNizam POS Demo | POS Software Pakistan",
+  title: "Book a POS Software Demo | DigiNizam",
   description:
-    "Book a free DigiNizam demo to explore POS billing, inventory, reporting and multi-location workflows for your business.",
+    "Book a DigiNizam POS software demo to see billing, inventory, reporting and daily workflows configured around your business.",
   path: "/demo",
 });
 
@@ -22,11 +22,11 @@ export default function DemoPage() {
       <SeoRelatedLinks
         intro="Learn more first:"
         links={[
-          { href: "/", label: "POS software Pakistan" },
+          { href: "/", label: "POS software" },
           { href: "/products/retail", label: "retail POS software" },
-          { href: "/features", label: "inventory management software" },
+          { href: "/features", label: "POS software features" },
           { href: "/pricing", label: "POS software pricing" },
-          { href: "/industries", label: "business-specific solutions" },
+          { href: "/industries", label: "industry-specific POS solutions" },
         ]}
       />
       <SiteCTA
