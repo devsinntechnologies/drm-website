@@ -31,8 +31,8 @@ export default function AllIndustriesSection() {
       <SectionHeader
         align="center"
         label="Industries / Use Cases"
-        title="Industries and use cases"
-        description="One POS platform tailored to how restaurants, pharmacies, marts, and specialty stores actually operate."
+        title="Built for Different Industries"
+        description="Explore DigiNizam solutions for retail, restaurants, pharmacies, snooker clubs and other supported business workflows."
       />
 
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-y-10 gap-x-6">

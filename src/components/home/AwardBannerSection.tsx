@@ -10,18 +10,9 @@ import {
   type MotionValue,
 } from "framer-motion";
 
-/** Keep "ERP & POS" as one unit so spacing around & never collapses. */
-const HEADING_PARTS = [
-  "Multi-Outlet",
-  "ERP & POS",
-  "for",
-  "Businesses",
-  "in",
-  "Pakistan",
-] as const;
+const HEADING_PARTS = ["Multi-Outlet", "POS &", "Business", "Management"] as const;
 
-const BODY =
-  "Skip the paperwork. DigiNizam runs inventory, sales, purchases, expenses, and ledgers across Pakistan—so you can focus on growing the business.";
+const BODY = "Connect inventory, sales, purchases and operational records across the locations included in your setup.";
 
 const bodyWords = BODY.split(" ");
 
@@ -59,6 +50,7 @@ function ScrollWord({
       ) : (
         <span className="text-foreground">{word}</span>
       )}
+      {" "}
     </motion.span>
   );
 }
@@ -94,7 +86,7 @@ export default function AwardBannerSection() {
             className="inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.14em] text-primary mb-3"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-            Industry recognition
+            Multi-Store Control
           </motion.div>
 
           <motion.h2
@@ -126,7 +118,7 @@ export default function AwardBannerSection() {
                     },
                   }}
                 >
-                  {word}
+                  {word}{" "}
                 </motion.span>
               </span>
             ))}

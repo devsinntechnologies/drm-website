@@ -24,7 +24,7 @@ export const metadata: Metadata = pageMetadata({
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background">
       <HeroSection />
       <HomeCapabilitiesSection />
       <section className="py-10 md:py-14 bg-background border-b border-surface-border">
@@ -38,25 +38,25 @@ export default function HomePage() {
             <article className="rounded-2xl border border-surface-border bg-surface p-5">
               <h3 className="text-lg font-bold text-foreground mb-2">What is POS software?</h3>
               <p className="text-muted text-sm leading-relaxed">
-                POS software helps businesses record sales and manage related operational information such as inventory, reporting and checkout from a connected system.
+                POS software records sales and connects checkout with related business information such as product records, inventory and reports. DigiNizam brings these workflows together in a configured platform so teams can manage daily work from connected records.
               </p>
             </article>
             <article className="rounded-2xl border border-surface-border bg-surface p-5">
               <h3 className="text-lg font-bold text-foreground mb-2">What does a POS system do?</h3>
               <p className="text-muted text-sm leading-relaxed">
-                A POS system brings billing, sales, inventory and reporting into one workflow so teams can process transactions while keeping stock and operational records aligned.
+                A POS system helps a business create bills, record sales and organize information used in day-to-day operations. Depending on the selected configuration, it can connect these activities with stock, purchasing, reports and other supported workflows.
               </p>
             </article>
             <article className="rounded-2xl border border-surface-border bg-surface p-5 md:col-span-2">
               <h3 className="text-lg font-bold text-foreground mb-2">Who uses POS software?</h3>
               <p className="text-muted text-sm leading-relaxed">
-                Retail stores, restaurants, specialty businesses and multi-location operators use POS software to manage transactions, stock movement, daily sales and reporting from one place.
+                POS software is used by owners, managers and staff handling sales and operational records. DigiNizam offers configurations for retail stores, restaurants, pharmacies, snooker clubs and other supported businesses. The right setup depends on the workflow and modules each team needs.
               </p>
             </article>
             <article className="rounded-2xl border border-surface-border bg-surface p-5 md:col-span-2">
               <h3 className="text-lg font-bold text-foreground mb-2">How does POS software improve daily operations?</h3>
               <p className="text-muted text-sm leading-relaxed">
-                By connecting billing, stock, sales and reporting, POS software reduces manual follow-up and gives teams a clearer picture of daily activity across checkout, inventory and performance.
+                POS software can reduce separate record keeping by connecting billing, sales, stock and reports. DigiNizam brings supported workflows together so teams can review operational information in one configured platform. The benefit depends on accurate records, suitable configuration and how staff use the system.
               </p>
             </article>
           </div>
@@ -75,12 +75,13 @@ export default function HomePage() {
         intro="See how DigiNizam fits your operation:"
         links={[
           { href: "/products/restaurant", label: "restaurant POS software" },
+          { href: "/industries", label: "industry solutions" },
           { href: "/features", label: "POS & inventory management features" },
-          { href: "/pricing", label: "POS software pricing & plans" },
+          { href: "/pricing", label: "Discuss POS software pricing" },
           { href: "/demo", label: "book a POS software demo" },
         ]}
       />
-      <ReadyToGetStartedSection />
-    </main>
+      <ReadyToGetStartedSection description="See billing, inventory and reporting in a walkthrough based on your business requirements." />
+    </div>
   );
 }

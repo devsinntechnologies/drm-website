@@ -6,8 +6,8 @@ export default function PricingHero() {
   return (
     <PageHero
       label="POS software pricing"
-      title="POS Software Pricing & Plans"
-      description="Choose a POS setup around your business workflow. Pricing depends on the outlets, counters, modules and operational requirements included in your setup."
+      title="POS Software Pricing"
+      description="Book a DigiNizam demo first. If you want to proceed, discuss your requirements with our team and agree on pricing for your business."
     />
   );
 }

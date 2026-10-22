@@ -4,23 +4,23 @@ import SectionHeader from "@/components/common/SectionHeader";
 
 const blocks = [
   {
-    title: "POS & Billing",
-    body: "DigiNizam POS software in Pakistan handles counter billing, invoices and daily sales from one screen—online or offline.",
+    "title": "POS & Billing",
+    "body": "Manage counter billing, invoices and sales records in a connected workflow. Review the checkout process and supported devices during your demo."
   },
   {
-    title: "Inventory Management",
-    body: "Track stock with sales and purchases so restaurant and retail teams see what is on hand without extra spreadsheets.",
-    href: "/features",
-    linkLabel: "Restaurant inventory software",
+    "title": "Inventory Management",
+    "body": "Keep stock records connected with supported sales and purchasing activity so teams can review available stock and movements.",
+    "href": "/features",
+    "linkLabel": "POS and inventory management features"
   },
   {
-    title: "Order Management",
-    body: "Take dine-in, takeaway and counter orders in one flow and send them through to kitchen and billing.",
+    "title": "Orders & Operations",
+    "body": "Use the workflows relevant to your business. For restaurants, review how orders, kitchen tickets and billing fit together in the selected setup."
   },
   {
-    title: "Reports & Analytics",
-    body: "See sales, stock and outlet performance in reports built for day-to-day decisions—not just month-end files.",
-  },
+    "title": "Reports & Analytics",
+    "body": "Review sales, stock and outlet information to support daily operational decisions. Available reports depend on the modules included in your setup."
+  }
 ];
 
 export default function HomeCapabilitiesSection() {
@@ -29,8 +29,8 @@ export default function HomeCapabilitiesSection() {
       <SectionHeader
         align="center"
         label="Platform"
-        title="POS software that runs the day-to-day"
-        description="Billing, stock, orders and reporting stay on one platform so growing businesses in Pakistan can operate from a single system."
+        title="Platform Overview"
+        description="DigiNizam connects billing, inventory, sales and operational records in one POS platform. Choose the setup and modules that match your business."
       />
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-5xl mx-auto">
         {blocks.map((block) => (

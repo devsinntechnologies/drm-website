@@ -1,0 +1,309 @@
+{
+  "source": "Reviewed workbook tabs 03/04/05, with the owner pricing correction of 22 October 2026. Expectations were derived from the specification, not the implementation.",
+  "pages": {
+    "/": {
+      "title": "POS Software for Retail, Restaurants & Growing Businesses | DigiNizam",
+      "description": "POS software for billing, inventory, sales and daily operations across retail, restaurants and other growing businesses. Explore features, industries, pricing and book a demo.",
+      "h1": "POS Software for Retail, Restaurants & Growing Businesses",
+      "hero": "Manage billing, inventory, sales and daily operations from one connected POS platform. Explore DigiNizam by feature, industry, pricing or live demo.",
+      "requiredSections": [
+        {
+          "heading": "Multi-Outlet POS & Business Management",
+          "body": "Connect inventory, sales, purchases and operational records across the locations included in your setup."
+        },
+        {
+          "heading": "Connected Operations for Growing Businesses",
+          "body": "Connect inventory, sales, purchases and operational records across the locations included in your setup."
+        }
+      ]
+    },
+    "/features": {
+      "title": "POS & Inventory Management Software Features | DigiNizam",
+      "description": "Explore DigiNizam POS and inventory management features for billing, stock, reporting, offline-ready operations and multi-location workflows.",
+      "h1": "POS & Inventory Management Software Features",
+      "hero": "Explore the tools DigiNizam provides for billing, inventory, reporting and day-to-day business operations, with workflows configured to your business."
+    },
+    "/about": {
+      "title": "About DigiNizam | POS & Business Management Software",
+      "description": "Learn about DigiNizam, the software platform helping businesses manage POS, inventory and daily operations with tailored workflows and ongoing support.",
+      "h1": "About DigiNizam — POS & Business Management Software",
+      "hero": "DigiNizam builds practical software for businesses that need connected billing, inventory, reporting and operational workflows, supported by tailored setup and 24/7 support."
+    },
+    "/pricing": {
+      "title": "POS Software Pricing | DigiNizam",
+      "description": "Book a DigiNizam demo first. If you choose to proceed, discuss your requirements with our team and agree on pricing for your business.",
+      "h1": "POS Software Pricing",
+      "hero": "Book a DigiNizam demo first. If you want to proceed, discuss your requirements with our team and agree on pricing for your business."
+    },
+    "/demo": {
+      "title": "Book a POS Software Demo | DigiNizam",
+      "description": "Book a DigiNizam POS software demo to see billing, inventory, reporting and daily workflows configured around your business.",
+      "h1": "Book a DigiNizam POS Software Demo",
+      "hero": "See DigiNizam in a live walkthrough of billing, inventory, reporting and the workflows relevant to your business."
+    }
+  },
+  "questions": [
+    {
+      "id": 1,
+      "path": "/",
+      "question": "What is POS software?",
+      "heading": "What is POS software?",
+      "answer": "POS software records sales and connects checkout with related business information such as product records, inventory and reports. DigiNizam brings these workflows together in a configured platform so teams can manage daily work from connected records."
+    },
+    {
+      "id": 2,
+      "path": "/",
+      "question": "What does a POS system do?",
+      "heading": "What does a POS system do?",
+      "answer": "A POS system helps a business create bills, record sales and organize information used in day-to-day operations. Depending on the selected configuration, it can connect these activities with stock, purchasing, reports and other supported workflows."
+    },
+    {
+      "id": 3,
+      "path": "/",
+      "question": "Who uses POS software?",
+      "heading": "Who uses POS software?",
+      "answer": "POS software is used by owners, managers and staff handling sales and operational records. DigiNizam offers configurations for retail stores, restaurants, pharmacies, snooker clubs and other supported businesses. The right setup depends on the workflow and modules each team needs."
+    },
+    {
+      "id": 4,
+      "path": "/features",
+      "question": "Can POS software manage inventory?",
+      "heading": "Can POS software manage inventory?",
+      "answer": "Yes. DigiNizam connects supported sales and purchasing activity with inventory records so teams can review stock and movements. The exact item controls, stock locations and inventory workflows should be confirmed for the selected configuration."
+    },
+    {
+      "id": 5,
+      "path": "/features",
+      "question": "Can POS software work without internet?",
+      "heading": "Can POS software work without internet?",
+      "answer": "DigiNizam supports offline-ready workflows in supported setups. Confirm which actions work without internet on your chosen devices, what is stored locally and how synchronization works when connectivity returns. Do not assume every module or cloud function is available offline."
+    },
+    {
+      "id": 6,
+      "path": "/features",
+      "question": "Can POS software manage multiple stores?",
+      "heading": "Can POS software manage multiple stores?",
+      "answer": "DigiNizam supports multi-store workflows where enabled in the selected setup. Review branch-level stock, sales, reporting and staff access during the demo, and confirm the number of outlets, terminals and synchronization requirements before rollout."
+    },
+    {
+      "id": 7,
+      "path": "/features",
+      "question": "What reports should a business track in POS software?",
+      "heading": "What reports should a business track in POS software?",
+      "answer": "Useful POS reports include sales summaries, stock movement, product activity and outlet performance. The right reports depend on your business. During a DigiNizam demo, ask to see the specific reports and filters you need rather than assuming every report is included."
+    },
+    {
+      "id": 13,
+      "path": "/features",
+      "question": "What is inventory management software?",
+      "heading": "What is inventory management software?",
+      "answer": "Inventory management software organizes stock records and helps teams track quantities and movements. In a connected setup, it links supported purchases, sales and returns with stock information so staff can review what is available and how inventory has changed."
+    },
+    {
+      "id": 14,
+      "path": "/features",
+      "question": "How does inventory software reduce stock problems?",
+      "heading": "How does inventory software reduce stock problems?",
+      "answer": "Inventory software helps teams spot problems by making stock quantities and movements easier to review. Connecting supported sales, purchases and returns with inventory reduces separate record keeping. Accurate receiving, stock counts and staff processes are still important; software does not eliminate stock errors by itself."
+    },
+    {
+      "id": 15,
+      "path": "/pricing",
+      "question": "How much does POS software cost?",
+      "heading": "How much does POS software cost?",
+      "answer": "DigiNizam does not currently have fixed published pricing. Book a demo first. If you want to proceed, discuss your business requirements with the team and agree on pricing."
+    },
+    {
+      "id": 16,
+      "path": "/pricing",
+      "question": "What affects POS software pricing?",
+      "heading": "What affects POS software pricing?",
+      "answer": "Your outlets, billing counters, selected modules, inventory workflows, hardware needs and setup requirements shape the pricing discussion. DigiNizam reviews these requirements with you after the demo if you choose to proceed."
+    },
+    {
+      "id": 17,
+      "path": "/pricing",
+      "question": "Is POS hardware included in software pricing?",
+      "heading": "Is POS hardware included in software pricing?",
+      "answer": "Hardware is not assumed to be included in software pricing. Confirm your specific quote for terminals, receipt printers, scanners and any other devices, along with setup and support. Use the written agreement to establish what is included."
+    },
+    {
+      "id": 18,
+      "path": "/pricing",
+      "question": "How do I get a DigiNizam quote?",
+      "heading": "How do I get a DigiNizam quote?",
+      "answer": "Book a Demo to Discuss Pricing. Start with a DigiNizam walkthrough. If you want to proceed, share your business type, outlets, counters and required workflows, then discuss and agree on pricing with the team."
+    },
+    {
+      "id": 19,
+      "path": "/demo",
+      "question": "What happens in a POS software demo?",
+      "heading": "What happens in a POS software demo?",
+      "answer": "A DigiNizam demo reviews relevant billing, inventory, reporting and operational workflows. You can discuss your business process, required modules and hardware considerations. If you want to proceed after the demo, discuss your requirements and agree on pricing with the team."
+    },
+    {
+      "id": 20,
+      "path": "/demo",
+      "question": "Who should book a POS demo?",
+      "heading": "Who the Demo Is For",
+      "answer": "Business owners and managers evaluating POS, inventory or business-management software for their daily operations."
+    },
+    {
+      "id": 21,
+      "path": "/demo",
+      "question": "What should I prepare for a POS demo?",
+      "heading": "What should I prepare for a POS demo?",
+      "answer": "Prepare your business type, number of outlets and counters, current billing and stock process, and the questions you want answered. Mention existing hardware, required reports and any offline needs so the walkthrough can focus on your operation."
+    },
+    {
+      "id": 22,
+      "path": "/about",
+      "question": "Who is DigiNizam?",
+      "heading": "Who is DigiNizam?",
+      "answer": "DigiNizam provides POS, inventory and business-management software designed to connect billing, stock, reporting and daily operational workflows. Available modules and the final configuration depend on the needs of the business."
+    },
+    {
+      "id": 23,
+      "path": "/about",
+      "question": "Does DigiNizam provide 24/7 support?",
+      "heading": "Does DigiNizam provide 24/7 support?",
+      "answer": "Yes. DigiNizam provides 24/7 support as part of its service commitment. Discuss the support channels, onboarding arrangements and any setup-specific requirements with the team when reviewing your solution."
+    },
+    {
+      "id": 24,
+      "path": "/about",
+      "question": "Does DigiNizam serve customers globally?",
+      "heading": "Does DigiNizam serve customers globally?",
+      "answer": "Yes. DigiNizam serves customers globally through its English-language offering. Available workflows and setup requirements should be confirmed for each business. Global service availability does not imply local offices, universal tax compliance or support for every regional integration."
+    },
+    {
+      "id": 25,
+      "path": "/about",
+      "question": "What industries does DigiNizam support?",
+      "heading": "What industries does DigiNizam support?",
+      "answer": "DigiNizam offers industry-specific configurations for retail, restaurants, pharmacies, snooker clubs and other supported businesses. Review the relevant product page and demo to confirm the modules and workflows available for your industry."
+    },
+    {
+      "id": 26,
+      "path": "/features",
+      "question": "What is multi-store POS software?",
+      "heading": "What is multi-store POS software?",
+      "answer": "Multi-store POS software connects operational information across more than one location. DigiNizam supports configured branch workflows for stock, sales and reporting where enabled. Confirm outlet access, synchronization and the modules included in your selected setup."
+    },
+    {
+      "id": 27,
+      "path": "/features",
+      "question": "What is offline POS software?",
+      "heading": "What is offline POS software?",
+      "answer": "Offline POS software supports selected sales or operational tasks without an active internet connection. DigiNizam offers offline-ready workflows in supported setups. Confirm the actions and devices supported, and how synchronization is handled when internet access returns."
+    },
+    {
+      "id": 28,
+      "path": "/",
+      "question": "How does POS software improve daily operations?",
+      "heading": "How does POS software improve daily operations?",
+      "answer": "POS software can reduce separate record keeping by connecting billing, sales, stock and reports. DigiNizam brings supported workflows together so teams can review operational information in one configured platform. The benefit depends on accurate records, suitable configuration and how staff use the system."
+    },
+    {
+      "id": 30,
+      "path": "/features",
+      "question": "Can POS software manage purchases and suppliers?",
+      "heading": "Can POS software manage purchases and suppliers?",
+      "answer": "DigiNizam supports purchase-management workflows and supplier records in supported configurations. Review how purchases, receiving and inventory are connected in your selected setup. Confirm the available supplier functions; do not assume an automated supplier portal, ordering integration or auto-reorder feature is included."
+    }
+  ],
+  "links": [
+    {
+      "source": "/",
+      "target": "/features"
+    },
+    {
+      "source": "/",
+      "target": "/industries"
+    },
+    {
+      "source": "/",
+      "target": "/products/retail"
+    },
+    {
+      "source": "/",
+      "target": "/products/restaurant"
+    },
+    {
+      "source": "/",
+      "target": "/products/pharmacy"
+    },
+    {
+      "source": "/",
+      "target": "/products/snooker"
+    },
+    {
+      "source": "/",
+      "target": "/pricing"
+    },
+    {
+      "source": "/",
+      "target": "/demo"
+    },
+    {
+      "source": "/features",
+      "target": "/"
+    },
+    {
+      "source": "/features",
+      "target": "/pricing"
+    },
+    {
+      "source": "/features",
+      "target": "/demo"
+    },
+    {
+      "source": "/features",
+      "target": "/products/retail"
+    },
+    {
+      "source": "/features",
+      "target": "/products/restaurant"
+    },
+    {
+      "source": "/about",
+      "target": "/"
+    },
+    {
+      "source": "/about",
+      "target": "/features"
+    },
+    {
+      "source": "/about",
+      "target": "/industries"
+    },
+    {
+      "source": "/about",
+      "target": "/demo"
+    },
+    {
+      "source": "/pricing",
+      "target": "/features"
+    },
+    {
+      "source": "/pricing",
+      "target": "/industries"
+    },
+    {
+      "source": "/pricing",
+      "target": "/demo"
+    },
+    {
+      "source": "/demo",
+      "target": "/pricing"
+    },
+    {
+      "source": "/demo",
+      "target": "/features"
+    },
+    {
+      "source": "/demo",
+      "target": "/industries"
+    }
+  ]
+}

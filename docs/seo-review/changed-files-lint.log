@@ -1,0 +1,6 @@
+
+C:\Users\Possible\OneDrive\Documents\digiNizam\drm-website\src\app\layout.tsx
+  75:9  warning  Prefer `GoogleTagManager` component from `@next/third-parties/google` when using the inline script for Google Tag Manager. See: https://nextjs.org/docs/messages/next-script-for-ga  @next/next/next-script-for-ga
+
+✖ 1 problem (0 errors, 1 warning)
+

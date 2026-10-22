@@ -9,7 +9,7 @@ const easeOut = [0.16, 1, 0.3, 1] as const;
 const cards = [
   {
     title: "Why choose us",
-    desc: "Cost-efficient, fast delivery, and practical systems built for real business operations.",
+    desc: "We focus on practical workflows and the features a business needs for daily operations. Review the working product to confirm its fit for your team.",
   },
   {
     title: "Our mission",
@@ -47,7 +47,7 @@ export const WhoWeAreSection: React.FC = () => {
             Why DigiNizam
           </h2>
           <p className="text-sm md:text-base text-muted mt-3 leading-relaxed max-w-xl">
-            Practical POS software for Pakistan—built to simplify billing, inventory and operations without locking you into a patchwork of tools.
+            Bring daily work into connected processes, with tailored setup and 24/7 support. Review the actual product workflow before choosing your configuration.
           </p>
         </motion.div>
 

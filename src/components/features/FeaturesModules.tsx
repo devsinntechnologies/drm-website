@@ -4,13 +4,23 @@ import { motion } from 'framer-motion';
 
 const FeaturesModules = () => {
   const modules = [
-    { t: "Purchase Management", c: "bg-blue-500/10 text-blue-500" },
-    { t: "Stock Adjustments", c: "bg-emerald-500/10 text-emerald-500" },
-    { t: "Vendor Portal", c: "bg-purple-500/10 text-purple-500" },
-    { t: "Multi-Unit Sync", c: "bg-orange-500/10 text-orange-500" },
-    { t: "Waste Tracking", c: "bg-rose-500/10 text-rose-500" },
-    { t: "Auto-Reorder", c: "bg-cyan-500/10 text-cyan-500" },
-  ];
+  {
+    "t": "Purchases",
+    "c": "bg-blue-500/10 text-blue-500"
+  },
+  {
+    "t": "Receiving",
+    "c": "bg-emerald-500/10 text-emerald-500"
+  },
+  {
+    "t": "Supplier Records",
+    "c": "bg-purple-500/10 text-purple-500"
+  },
+  {
+    "t": "Inventory",
+    "c": "bg-orange-500/10 text-orange-500"
+  }
+];
 
   return (
     <section className="py-6 md:py-8 bg-background relative overflow-hidden">
@@ -21,8 +31,9 @@ const FeaturesModules = () => {
           viewport={{ once: true }}
           className="text-center mb-4 md:mb-4"
         >
-          <span className="section-label">All Access</span>
-          <h3 className="text-base md:text-lg font-extrabold text-foreground mt-3">Extended <span className="text-primary">Modules</span></h3>
+          <span className="section-label">Selected configuration</span>
+          <h2 className="text-base md:text-lg font-extrabold text-foreground mt-3">Purchase Management</h2>
+          <p className="text-sm text-muted max-w-2xl mx-auto mt-3">Keep supported purchase and supplier records connected with inventory work. Confirm which receiving, supplier and purchasing functions are available in your selected setup.</p>
         </motion.div>
 
         <div className="flex flex-wrap justify-center gap-3">

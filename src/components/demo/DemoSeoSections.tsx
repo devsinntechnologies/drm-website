@@ -10,13 +10,13 @@ export default function DemoSeoSections() {
         align="center"
         label="Before you book"
         title="Who the Demo Is For"
-        description="Business owners and managers who want to see DigiNizam configured around their actual billing, inventory, reporting and operational workflow—not a generic slideshow."
+        description="Business owners and managers evaluating POS, inventory or business-management software for their daily operations."
       />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto">
         <article className="rounded-2xl border border-surface-border bg-background p-5">
           <h2 className="type-card-title text-foreground mb-2">What Happens Next</h2>
           <p className="type-body text-muted leading-relaxed">
-            Submit the form. We confirm by phone or email, then run a live walkthrough of POS, inventory and reports based on your business workflow. A successful booking is recorded only after the request is sent—not when the page loads.
+            Submit your details so the team can contact you to arrange a walkthrough and discuss your requirements.
           </p>
         </article>
         <article className="rounded-2xl border border-surface-border bg-background p-5">
@@ -43,13 +43,13 @@ export default function DemoSeoSections() {
         <article className="rounded-2xl border border-surface-border bg-background p-5 md:col-span-2">
           <h2 className="type-card-title text-foreground mb-2">What happens in a POS software demo?</h2>
           <p className="type-body text-muted leading-relaxed">
-            The team walks through relevant POS, billing, inventory, reporting and operational workflows and discusses the setup required for your business. This is a practical review of the configuration you actually need, not a generic feature dump.
+            A DigiNizam demo reviews relevant billing, inventory, reporting and operational workflows. You can discuss your business process, required modules and hardware considerations. If you want to proceed after the demo, discuss your requirements and agree on pricing with the team.
           </p>
         </article>
         <article className="rounded-2xl border border-surface-border bg-background p-5 md:col-span-2">
           <h2 className="type-card-title text-foreground mb-2">What should I prepare for a POS demo?</h2>
           <p className="type-body text-muted leading-relaxed">
-            Bring your key business workflow details: outlets or counters, the products or menu items you sell, your current stock needs, and the reporting or operational questions you want answered. This helps the team tailor the walkthrough to your actual setup.
+            Prepare your business type, number of outlets and counters, current billing and stock process, and the questions you want answered. Mention existing hardware, required reports and any offline needs so the walkthrough can focus on your operation.
           </p>
         </article>
       </div>

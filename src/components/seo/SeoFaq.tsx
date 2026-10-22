@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useId, useState } from "react";
 import { FiMinus, FiPlus } from "react-icons/fi";
 import SectionShell from "@/components/common/SectionShell";
 import SectionHeader from "@/components/common/SectionHeader";
@@ -18,6 +18,7 @@ export default function SeoFaq({
   description?: string;
 }) {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
+  const faqId = useId();
 
   return (
     <SectionShell tone="background">
@@ -27,23 +28,28 @@ export default function SeoFaq({
           const open = openIdx === idx;
           return (
             <div key={item.q}>
-              <button
-                type="button"
-                onClick={() => setOpenIdx(open ? null : idx)}
-                className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
-                aria-expanded={open}
-              >
-                <h3 className="text-sm font-semibold text-foreground">{item.q}</h3>
-                {open ? (
-                  <FiMinus className="shrink-0 text-primary" />
-                ) : (
-                  <FiPlus className="shrink-0 text-muted" />
-                )}
-              </button>
+              <h3>
+                <button
+                  id={`${faqId}-question-${idx}`}
+                  type="button"
+                  onClick={() => setOpenIdx(open ? null : idx)}
+                  className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
+                  aria-expanded={open}
+                  aria-controls={`${faqId}-answer-${idx}`}
+                >
+                  <span className="text-sm font-semibold text-foreground">{item.q}</span>
+                  {open ? (
+                    <FiMinus className="shrink-0 text-primary" />
+                  ) : (
+                    <FiPlus className="shrink-0 text-muted" />
+                  )}
+                </button>
+              </h3>
               <p
-                className={`px-5 text-sm text-muted leading-relaxed ${
-                  open ? "pb-4" : "sr-only"
-                }`}
+                id={`${faqId}-answer-${idx}`}
+                aria-labelledby={`${faqId}-question-${idx}`}
+                hidden={!open}
+                className="px-5 pb-4 text-sm text-muted leading-relaxed"
               >
                 {item.a}
               </p>

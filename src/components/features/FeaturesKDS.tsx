@@ -5,19 +5,30 @@ import { motion } from 'framer-motion';
 
 const FeaturesKDS = () => {
   const tabs = [
-    { title: "Kitchen Display Terminal", active: true },
-    { title: "DRM TableTab", active: false },
-    { title: "DRM Insights", active: false },
-    { title: "DRM Rider App", active: false },
-  ];
+  {
+    "title": "Kitchen Tickets",
+    "active": true
+  },
+  {
+    "title": "Restaurant Orders",
+    "active": false
+  },
+  {
+    "title": "Billing",
+    "active": false
+  },
+  {
+    "title": "Inventory",
+    "active": false
+  }
+];
 
   const points = [
-    "Real-time Order Synchronization",
-    "Enhanced Kitchen Communication",
-    "Optimized Food Prep Focus",
-    "Automated Inventory Deductions",
-    "Accurate Timing & Delivery Tracking"
-  ];
+  "Review the order workflow",
+  "Discuss kitchen tickets",
+  "Connect orders and billing",
+  "Confirm the selected setup"
+];
 
   return (
     <section className="py-8 md:py-10 bg-background relative overflow-hidden border-t border-surface-border">
@@ -73,8 +84,7 @@ const FeaturesKDS = () => {
               Modern <span className="text-primary">KDS</span> Terminals
             </h2>
             <p className="text-lg text-muted leading-relaxed font-medium">
-              The kitchen display terminal is the beating heart of your kitchen operation, 
-              connecting front-of-house to back-of-house with millisecond precision.
+              Use the workflows relevant to your business. For restaurants, review how orders, kitchen tickets and billing fit together in the selected setup.
             </p>
           </motion.div>
 

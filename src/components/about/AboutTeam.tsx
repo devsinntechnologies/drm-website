@@ -6,30 +6,10 @@ import { motion } from "framer-motion";
 
 export default function AboutTechStack() {
   const capabilities = [
-    {
-      icon: <FiLayout size={20} />,
-      title: "Frontend & UI/UX",
-      desc: "Crafting responsive, high-performance interfaces using React, Next.js, Tailwind CSS, and precise grid layouts.",
-      tags: ["React.js", "Next.js", "Tailwind CSS", "TypeScript"]
-    },
-    {
-      icon: <FiServer size={20} />,
-      title: "Backend Engineering",
-      desc: "Building robust, scalable server-side architectures and APIs using Node.js, Express, and NestJS frameworks.",
-      tags: ["Node.js", "Express", "NestJS", "REST APIs"]
-    },
-    {
-      icon: <FiDatabase size={20} />,
-      title: "Database Management",
-      desc: "Optimizing secure data storage and advanced querying with both relational and non-relational database systems.",
-      tags: ["MongoDB", "MySQL", "Firebase", "PostgreSQL"]
-    },
-    {
-      icon: <FiCode size={20} />,
-      title: "Enterprise Solutions",
-      desc: "Developing custom ERP, POS systems, and automated workflows designed specifically for modern business enterprises.",
-      tags: ["ERP Systems", "POS Solutions", "Automation", "Full Stack"]
-    },
+    { icon: <FiLayout size={20} />, title: "Billing", desc: "Keep product records, billing and sales information connected.", tags: ["POS", "Billing"] },
+    { icon: <FiServer size={20} />, title: "Stock", desc: "Track stock and inventory movements alongside supported sales, purchases and returns.", tags: ["Inventory", "Stock Records"] },
+    { icon: <FiDatabase size={20} />, title: "Reporting", desc: "Use available reports to review sales, stock movement, product activity and outlet performance.", tags: ["Sales", "Reports"] },
+    { icon: <FiCode size={20} />, title: "Configuration", desc: "Discuss your workflow, review a relevant demonstration and confirm the required configuration before implementation.", tags: ["Workflow", "Setup"] },
   ];
 
   return (
@@ -44,10 +24,10 @@ export default function AboutTechStack() {
         <div className="text-center max-w-2xl mx-auto mb-6">
           <span className="section-label">Our capabilities</span>
           <h2 className="text-2xl sm:text-3xl font-bold mb-3 tracking-tight text-foreground">
-            Powered by a modern <span className="text-primary">technology stack</span>
+            Our Approach to Product Development
           </h2>
           <p className="text-sm md:text-base text-muted leading-relaxed">
-            Cutting-edge frameworks and tools to build fast, secure, and fully scalable digital solutions.
+            We focus on practical workflows and the features a business needs for daily operations. Review the working product to confirm its fit for your team.
           </p>
         </div>
 

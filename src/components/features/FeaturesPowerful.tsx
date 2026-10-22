@@ -4,40 +4,22 @@ import { motion } from 'framer-motion';
 
 const features = [
   {
-    title: "Table Side Ordering",
-    desc: "Empower your waitstaff with mobile terminals to take orders directly at the table.",
-    icon: "📱",
-    color: "from-blue-500/20 to-cyan-500/20"
+    "title": "Retail Billing",
+    "desc": "Explore retail billing and inventory.",
+    "icon": "📦",
+    "color": "from-blue-500/20 to-cyan-500/20"
   },
   {
-    title: "Kitchen Display (KDS)",
-    desc: "Paperless kitchen communication for peak efficiency and error-free cooking.",
-    icon: "🍳",
-    color: "from-orange-500/20 to-red-500/20"
+    "title": "Restaurant Workflows",
+    "desc": "Use the workflows relevant to your business. For restaurants, review how orders, kitchen tickets and billing fit together in the selected setup.",
+    "icon": "🍳",
+    "color": "from-orange-500/20 to-red-500/20"
   },
   {
-    title: "Customer Loyalty",
-    desc: "Build lasting relationships with integrated loyalty programs and rewards.",
-    icon: "🎁",
-    color: "from-purple-500/20 to-pink-500/20"
-  },
-  {
-    title: "Online Ordering",
-    desc: "Direct website and mobile app ordering without high commission fees.",
-    icon: "🌐",
-    color: "from-emerald-500/20 to-teal-500/20"
-  },
-  {
-    title: "Inventory Control",
-    desc: "Real-time stock tracking with automated alerts and supplier management.",
-    icon: "📦",
-    color: "from-amber-500/20 to-yellow-500/20"
-  },
-  {
-    title: "Deep Analytics",
-    desc: "Visual reports on sales, staff performance, and customer trends.",
-    icon: "📊",
-    color: "from-indigo-500/20 to-violet-500/20"
+    "title": "Other Industries",
+    "desc": "Explore DigiNizam solutions for retail, restaurants, pharmacies, snooker clubs and other supported business workflows.",
+    "icon": "🌐",
+    "color": "from-emerald-500/20 to-teal-500/20"
   }
 ];
 
@@ -54,8 +36,7 @@ const FeaturesPowerful = () => {
         >
           <span className="section-label">All-in-One POS</span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 leading-tight">
-            <span className="text-primary">Powerful Features</span> <br />
-            For Modern Restaurants
+            Industry Workflows
           </h2>
           <div className="section-divider mx-auto" />
         </motion.div>

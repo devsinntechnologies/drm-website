@@ -77,7 +77,7 @@ export default function HeroSection() {
           >
             <span className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/[0.04] px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/70 mb-4">
               <span className="h-1.5 w-1.5 rounded-full bg-secondary shrink-0" />
-              AI-powered retail OS
+              POS &amp; business management
             </span>
 
             <h1 className="font-semibold text-white tracking-tight mb-3 text-[clamp(2rem,4.5vw,3.25rem)] leading-[1.1]">

@@ -8,7 +8,6 @@ import Button from "@/components/ui/Button";
 import { Input, Select, Label, FieldError } from "@/components/ui/Field";
 import SectionShell from "@/components/common/SectionShell";
 import SectionHeader from "@/components/common/SectionHeader";
-import { PHONE_DISPLAY } from "@/lib/contact";
 import { sendEmailForm } from "@/lib/emailjs";
 import { DEMO_SUCCESS_PATH, markDemoFormSuccess } from "@/lib/form-success";
 
@@ -16,7 +15,7 @@ const perks = [
   "Live POS & inventory walkthrough",
   "Hardware compatibility review",
   "Workflow fit for your industry",
-  "Pricing & ROI discussion",
+  "Pricing discussion",
 ];
 
 export default function DemoForm() {
@@ -84,7 +83,7 @@ export default function DemoForm() {
           <SectionHeader
             label="Free walkthrough"
             title="What You Will See"
-            description="A 30-minute session covering POS, billing, inventory, reporting and your business workflow."
+            description="Review billing, inventory, reporting and the supported workflows relevant to your business. Discuss required modules and pricing with the team."
             className="mb-0"
           />
 
@@ -99,9 +98,9 @@ export default function DemoForm() {
 
           <div className="rounded-2xl border border-surface-border bg-surface p-5">
             <p className="text-sm text-muted italic leading-relaxed">
-              &ldquo;The demo showed us exactly how we could cut wastage using DigiNizam inventory.&rdquo;
+              Bring your business type, number of outlets and counters, current billing and stock process, and the questions you want to answer. Mention any hardware or offline requirements.
             </p>
-            <p className="mt-3 text-sm font-semibold text-foreground">Operations lead, multi-outlet retail</p>
+            <p className="mt-3 text-sm font-semibold text-foreground">What to Prepare</p>
           </div>
         </motion.div>
 
@@ -113,7 +112,7 @@ export default function DemoForm() {
         >
           <form ref={form} onSubmit={sendDemoRequest} className="surface-card p-6 sm:p-8">
             <h3 className="type-card-title text-foreground mb-1">Demo / Contact Form</h3>
-            <p className="type-body text-muted mb-6">We&apos;ll reach out at {PHONE_DISPLAY} or your email to confirm.</p>
+            <p className="type-body text-muted mb-6">We’ll contact you using the phone number or email address you provide.</p>
 
             <div className="space-y-4">
               <input type="hidden" name="subject" value="Demo Request" />
@@ -127,7 +126,7 @@ export default function DemoForm() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <Label htmlFor="city">City</Label>
-                  <Input id="city" name="city" type="text" placeholder="Lahore" required />
+                  <Input id="city" name="city" type="text" placeholder="Your city" required />
                 </div>
                 <div>
                   <Label htmlFor="user_email">Email</Label>
@@ -138,7 +137,7 @@ export default function DemoForm() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <Label htmlFor="user_phone">Phone</Label>
-                  <Input id="user_phone" name="user_phone" type="tel" placeholder={PHONE_DISPLAY} required />
+                  <Input id="user_phone" name="user_phone" type="tel" placeholder="Include country code" required />
                 </div>
                 <div>
                   <Label htmlFor="volume">Daily sales / order volume</Label>

@@ -4,27 +4,23 @@ import SectionHeader from "@/components/common/SectionHeader";
 
 const sections = [
   {
-    title: "Inventory Overview",
-    body: "DigiNizam restaurant inventory software in Pakistan connects stock to POS sales so kitchens and stores see what is on hand without a separate spreadsheet.",
+    "title": "POS & Billing",
+    "body": "Keep product records, billing and sales information connected. Review the available checkout and invoice workflows for your business."
   },
   {
-    title: "Stock Tracking & Control",
-    body: "Track items, batches and locations. Stock updates with sales, purchases and returns so inventory visibility stays current during service.",
+    "title": "Reports & Analytics",
+    "body": "Use available reports to review sales, stock movement, product activity and outlet performance. Ask to see the specific reports you need in the live demo."
   },
   {
-    title: "Inventory with Restaurant Operations",
-    body: "Recipes and kitchen tickets deduct ingredients when an order is billed. Inventory work sits inside restaurant operations—not as an after-the-fact count.",
+    "title": "Multi-Store Control",
+    "body": "Review branch-level stock, sales and reporting across the locations included in your setup. Confirm access rules and synchronization needs during configuration."
   },
   {
-    title: "Inventory Reports",
-    body: "Use stock and movement reports to see usage, low stock and variance. Only live product reports are shown here—no placeholder metrics.",
-  },
-  {
-    title: "Multi-Location / Branch Use",
-    body: "Where you run more than one outlet, DigiNizam supports per-store stock with sync across branches so transfers and counts stay in one system. Retail shops, toy stores and furniture showrooms can use the same inventory tools alongside industry-specific POS workflows.",
-    href: "/products/retail",
-    linkLabel: "Retail POS software",
-  },
+    "title": "Industry Workflows",
+    "body": "Explore retail billing and inventory, restaurant order and kitchen workflows, and other supported industry configurations.",
+    "href": "/products/retail",
+    "linkLabel": "Retail POS software"
+  }
 ];
 
 export default function InventorySeoSections() {
@@ -32,9 +28,9 @@ export default function InventorySeoSections() {
     <SectionShell tone="surface">
       <SectionHeader
         align="center"
-        label="Restaurant inventory"
-        title="Stock that follows the ticket"
-        description="Improve inventory visibility, connect stock with restaurant operations, and reduce manual inventory work."
+        label="POS and inventory"
+        title="Connected Business Workflows"
+        description="Explore the tools DigiNizam provides for billing, inventory, reporting and day-to-day business operations, with workflows configured to your business."
       />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto">
         {sections.map((section) => (
@@ -62,7 +58,7 @@ export default function InventorySeoSections() {
         </Link>
         ,{" "}
         <Link href="/pricing" className="text-primary font-semibold hover:underline">
-          POS software price in Pakistan
+          POS software pricing
         </Link>{" "}
         or{" "}
         <Link href="/demo" className="text-primary font-semibold hover:underline">

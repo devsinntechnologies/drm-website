@@ -14,7 +14,7 @@ export default function AboutMission() {
         <div className="text-center max-w-2xl mx-auto mb-6">
           <span className="section-label">Our purpose &amp; direction</span>
           <h2 className="text-2xl sm:text-3xl font-bold text-foreground tracking-tight">
-            Driven by innovation, <span className="text-primary">defined by excellence</span>
+            Who DigiNizam Is
           </h2>
         </div>
 
@@ -33,11 +33,11 @@ export default function AboutMission() {
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">Our Mission</h3>
               <p className="text-muted text-sm leading-relaxed mb-4">
-                Empower businesses across Pakistan and beyond with scalable, intuitive ERP, POS, and software that simplifies operations and fuels sustainable growth.
+                Help businesses simplify daily operations with practical software and connected information.
               </p>
             </div>
             <ul className="space-y-2 pt-3.5 border-t border-surface-border text-xs font-bold text-muted">
-              <li className="flex items-center gap-2"><FiCheckCircle className="text-primary" size={14} /> High-performance custom software</li>
+              <li className="flex items-center gap-2"><FiCheckCircle className="text-primary" size={14} /> Practical software</li>
               <li className="flex items-center gap-2"><FiCheckCircle className="text-primary" size={14} /> Seamless client partnership approach</li>
             </ul>
           </motion.div>
@@ -53,13 +53,13 @@ export default function AboutMission() {
               <div className="w-11 h-11 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-3.5 group-hover:bg-primary group-hover:text-white transition-all shadow-sm">
                 <FiEye size={22} />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">Our Vision</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">What We Build</h3>
               <p className="text-muted text-sm leading-relaxed mb-4">
-                Become a globally recognized software house known for cutting-edge digital transformation and setting the standard in enterprise automation.
+                We connect billing, stock, sales, reporting and operational workflows, with modules selected around the needs of each business.
               </p>
             </div>
             <ul className="space-y-2 pt-3.5 border-t border-surface-border text-xs font-bold text-muted">
-              <li className="flex items-center gap-2"><FiCheckCircle className="text-primary" size={14} /> Industry-leading technology standards</li>
+              <li className="flex items-center gap-2"><FiCheckCircle className="text-primary" size={14} /> Connected workflows</li>
               <li className="flex items-center gap-2"><FiCheckCircle className="text-primary" size={14} /> Continuous technological innovation</li>
             </ul>
           </motion.div>

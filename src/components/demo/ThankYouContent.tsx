@@ -12,11 +12,11 @@ const nextSteps = [
   {
     icon: FiPhone,
     title: "We’ll call or WhatsApp you",
-    desc: `Expect a message at ${PHONE_DISPLAY} or your number within two business hours on working days.`,
+    desc: "We’ll contact you using the phone number or email address you provide.",
   },
   {
     icon: FiClock,
-    title: "30-minute walkthrough",
+    title: "Live walkthrough",
     desc: "We’ll schedule a live POS, inventory, and reporting session tailored to your business.",
   },
 ];

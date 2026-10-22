@@ -15,23 +15,23 @@ interface PricingBenefitsProps {
 const benefits = [
   {
     icon: FiTag,
-    title: "No hidden costs",
-    desc: "What you see is what you pay. No setup fees or maintenance charges.",
+    title: "Software & Setup",
+    desc: "Confirm the software modules, terminals, support and setup services included before proceeding.",
   },
   {
     icon: FiRefreshCw,
-    title: "Cancel anytime",
-    desc: "Billed monthly. Scale up or down with no long-term lock-in.",
+    title: "Month-End Invoices",
+    desc: "DigiNizam uses month-end invoices; confirm the exact terms when agreeing on pricing.",
   },
   {
     icon: FiShield,
-    title: "Free daily backups",
-    desc: "Your data is backed up every 24 hours on secure cloud servers.",
+    title: "Hardware Requirements",
+    desc: "Confirm hardware separately from software. Ask whether terminals, receipt printers, scanners or other devices are included.",
   },
   {
     icon: FiHeadphones,
-    title: "Priority onboarding",
-    desc: "Get live with 1-on-1 support and guided data migration.",
+    title: "24/7 Support",
+    desc: "DigiNizam provides 24/7 support. Discuss onboarding, support channels and the requirements of your chosen setup with the team.",
   },
 ];
 
@@ -53,9 +53,9 @@ export default function PricingBenefits({ title, highlight, subtitle }: PricingB
         />
       ) : (
         <div className="text-center mb-10 md:mb-12">
-          <span className="section-label">Every plan includes</span>
+          <span className="section-label">Discuss your setup</span>
           <h2 className="type-section-heading text-foreground tracking-tight mt-0">
-            Built-in value, no surprises
+            What to Confirm Before Proceeding
           </h2>
         </div>
       )}

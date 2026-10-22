@@ -31,17 +31,15 @@ export default function BoostSalesSection() {
               className="font-semibold tracking-tight text-foreground mb-4"
               style={{ fontSize: "clamp(30px, 4.2vw, 46px)", lineHeight: 1.12 }}
             >
-              Boost your sales with{" "}
-              <span className="text-foreground">Digi</span>
-              <span className="text-primary">Nizam</span> POS
+              Orders &amp; Operations
             </h2>
 
             <p className="text-sm md:text-base text-muted leading-relaxed mb-4 max-w-md">
-              Faster checkout, flexible payments, and promotions that help you sell more—without slowing the counter.
+              Use the workflows relevant to your business. For restaurants, review how orders, kitchen tickets and billing fit together in the selected setup.
             </p>
 
             <p className="text-sm md:text-base text-muted leading-relaxed max-w-md">
-              Run discounts, loyalty rewards, and commission tracking from one place so every sale stays clear and profitable.
+              Manage counter billing, invoices and sales records in a connected workflow. Review the checkout process and supported devices during your demo.
             </p>
           </motion.div>
 

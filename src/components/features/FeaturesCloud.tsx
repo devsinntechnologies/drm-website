@@ -30,9 +30,9 @@ const FeaturesCloud = () => {
             </svg>
           </motion.div>
 
-          <h2 className="text-base sm:text-lg md:text-xl font-black text-foreground mb-5 md:mb-4">Seamless <span className="text-primary">Hybrid-Cloud</span> Architecture</h2>
+          <h2 className="text-base sm:text-lg md:text-xl font-black text-foreground mb-5 md:mb-4">Offline-Ready Operations &amp; Sync</h2>
           <p className="text-base sm:text-lg md:text-xl text-muted leading-relaxed font-bold mb-4 md:mb-5">
-            The power of the cloud meets the reliability of local storage. Sell anywhere, anytime, with or without an active internet connection.
+            DigiNizam supports offline-ready workflows in supported setups. Confirm which tasks work without internet, what is stored locally and how synchronization works when connectivity returns.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-4 text-left">
@@ -40,21 +40,21 @@ const FeaturesCloud = () => {
               whileHover={{ x: 5 }}
               className="p-4 md:p-6 rounded-2xl bg-surface/50 border border-surface-border/50"
             >
-              <h4 className="text-lg font-extrabold text-foreground mb-2 flex items-center gap-2">
+              <h3 className="text-lg font-extrabold text-foreground mb-2 flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                Auto-Sync Technology
-              </h4>
-              <p className="text-sm text-muted font-bold">Data syncs automatically as soon as a connection is available—no manual work required.</p>
+                Synchronization
+              </h3>
+              <p className="text-sm text-muted font-bold">Confirm how synchronization works when connectivity returns.</p>
             </motion.div>
             <motion.div 
               whileHover={{ x: 5 }}
               className="p-4 md:p-6 rounded-2xl bg-surface/50 border border-surface-border/50"
             >
-              <h4 className="text-lg font-extrabold text-foreground mb-2 flex items-center gap-2">
+              <h3 className="text-lg font-extrabold text-foreground mb-2 flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                Zero Downtime
-              </h4>
-              <p className="text-sm text-muted font-bold">Offline mode keeps your front-of-house running even if your internet provider fails.</p>
+                Supported Offline Tasks
+              </h3>
+              <p className="text-sm text-muted font-bold">Confirm which tasks work without internet and what is stored locally in your selected setup.</p>
             </motion.div>
           </div>
         </motion.div>

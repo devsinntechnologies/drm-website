@@ -63,21 +63,16 @@ export function faqJsonLd(items: FaqItem[]) {
 export const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
+  "@id": `${SITE_URL}/#software`,
   name: "DigiNizam",
   applicationCategory: "BusinessApplication",
-  operatingSystem: "Web, Android, Windows",
   url: SITE_URL,
   description:
-    "POS software in Pakistan for billing, inventory, orders and daily operations.",
+    "POS software for billing, inventory, sales and daily operations across retail, restaurants and other growing businesses.",
   image: `${SITE_URL}/dn-mark.png`,
-  logo: `${SITE_URL}/dn-mark.png`,
-  offers: {
-    "@type": "Offer",
-    url: `${SITE_URL}/pricing`,
-    availability: "https://schema.org/InStock",
-  },
   publisher: {
     "@type": "Organization",
+    "@id": `${SITE_URL}/#organization`,
     name: "DigiNizam",
     url: SITE_URL,
     logo: {

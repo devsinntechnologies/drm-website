@@ -5,6 +5,8 @@ import AboutMission from '@/components/about/AboutMission';
 import AboutValues from '@/components/about/AboutValues';
 import AboutWhyUs from '@/components/about/AboutWhyUs';
 import AboutTeam from '@/components/about/AboutTeam';
+import SeoRelatedLinks from '@/components/seo/SeoRelatedLinks';
+import SiteCTA from '@/components/common/SiteCTA';
 import { pageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = pageMetadata({
@@ -29,25 +31,25 @@ export default function AboutPage() {
             <article className="rounded-2xl border border-surface-border bg-surface p-5">
               <h3 className="text-lg font-bold text-foreground mb-2">Who is DigiNizam?</h3>
               <p className="text-muted text-sm leading-relaxed">
-                DigiNizam provides POS, inventory and business-management software designed to help businesses manage day-to-day operations from connected workflows.
+                DigiNizam provides POS, inventory and business-management software designed to connect billing, stock, reporting and daily operational workflows. Available modules and the final configuration depend on the needs of the business.
               </p>
             </article>
             <article className="rounded-2xl border border-surface-border bg-surface p-5">
-              <h3 className="text-lg font-bold text-foreground mb-2">Does DigiNizam provide support?</h3>
+              <h3 className="text-lg font-bold text-foreground mb-2">Does DigiNizam provide 24/7 support?</h3>
               <p className="text-muted text-sm leading-relaxed">
-                DigiNizam provides 24/7 support as part of its service commitment, helping teams keep operations moving with ongoing assistance and guided setup.
+                Yes. DigiNizam provides 24/7 support as part of its service commitment. Discuss the support channels, onboarding arrangements and any setup-specific requirements with the team when reviewing your solution.
               </p>
             </article>
             <article className="rounded-2xl border border-surface-border bg-surface p-5">
               <h3 className="text-lg font-bold text-foreground mb-2">Does DigiNizam serve customers globally?</h3>
               <p className="text-muted text-sm leading-relaxed">
-                DigiNizam is positioned to serve customers globally, with product and support workflows designed for international business use without creating unsupported office-specific claims.
+                Yes. DigiNizam serves customers globally through its English-language offering. Available workflows and setup requirements should be confirmed for each business. Global service availability does not imply local offices, universal tax compliance or support for every regional integration.
               </p>
             </article>
             <article className="rounded-2xl border border-surface-border bg-surface p-5">
               <h3 className="text-lg font-bold text-foreground mb-2">What industries does DigiNizam support?</h3>
               <p className="text-muted text-sm leading-relaxed">
-                DigiNizam provides industry-specific workflows for areas such as retail, restaurants, pharmacies and specialty stores, with setup depending on the business workflow.
+                DigiNizam offers industry-specific configurations for retail, restaurants, pharmacies, snooker clubs and other supported businesses. Review the relevant product page and demo to confirm the modules and workflows available for your industry.
               </p>
             </article>
           </div>
@@ -57,6 +59,20 @@ export default function AboutPage() {
       <AboutWhyUs />
       <AboutValues />
       <AboutTeam />
+      <SeoRelatedLinks
+        intro="Explore DigiNizam:"
+        links={[
+          { href: "/", label: "DigiNizam POS software" },
+          { href: "/features", label: "POS and inventory capabilities" },
+          { href: "/industries", label: "industries we serve" },
+          { href: "/products/retail", label: "retail POS software" },
+          { href: "/products/restaurant", label: "restaurant POS software" },
+          { href: "/products/pharmacy", label: "pharmacy POS software" },
+          { href: "/products/snooker", label: "snooker POS software" },
+          { href: "/demo", label: "talk to the DigiNizam team" },
+        ]}
+      />
+      <SiteCTA title="Talk to DigiNizam" description="Book a demo to discuss your business workflow, required modules and next steps." />
     </div>
   );
 }

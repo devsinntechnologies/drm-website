@@ -17,51 +17,15 @@ import { AnimatePresence, motion } from "framer-motion";
 const easeOut = [0.16, 1, 0.3, 1] as const;
 
 const features = [
-  {
-    icon: FiCloud,
-    title: "Online / Offline",
-    desc: "Cloud or one-time POS—sell and stay productive even when the network drops.",
-  },
-  {
-    icon: FiGrid,
-    title: "Multi-Store Control",
-    desc: "Run every branch from one dashboard. Stock, sales, and reports stay in sync.",
-  },
-  {
-    icon: FiBox,
-    title: "Inventory Management",
-    desc: "Track stock from supplier to shelf with clear, real-time visibility.",
-  },
-  {
-    icon: FiFileText,
-    title: "Unlimited Invoicing",
-    desc: "Create branded invoices in seconds and send them to customers or suppliers.",
-  },
-  {
-    icon: FiZap,
-    title: "Fast Sales Processing",
-    desc: "Speed through checkout so lines move faster and customers leave happy.",
-  },
-  {
-    icon: FiAlertTriangle,
-    title: "Stock-out Alerts",
-    desc: "Get low-stock warnings early—restock before you lose a sale.",
-  },
-  {
-    icon: FiCreditCard,
-    title: "Multi-Payment Options",
-    desc: "Accept cards and more payment methods so customers can pay their way.",
-  },
-  {
-    icon: FiBarChart2,
-    title: "Detailed Reports",
-    desc: "See income and performance insights that help you decide what to do next.",
-  },
-  {
-    icon: FiPercent,
-    title: "Offers and Discounts",
-    desc: "Run promotions and loyalty offers across one store or many locations.",
-  },
+  { icon: FiCloud, title: "Offline-Ready Operations & Sync", desc: "DigiNizam supports offline-ready workflows in supported setups. Confirm which tasks work without internet, what is stored locally and how synchronization works when connectivity returns." },
+  { icon: FiGrid, title: "Multi-Store Control", desc: "Review branch-level stock, sales and reporting across the locations included in your setup. Confirm access rules and synchronization needs during configuration." },
+  { icon: FiBox, title: "Inventory Management", desc: "Keep stock records connected with supported sales and purchasing activity so teams can review available stock and movements." },
+  { icon: FiFileText, title: "POS & Billing", desc: "Manage counter billing, invoices and sales records in a connected workflow. Review the checkout process and supported devices during your demo." },
+  { icon: FiZap, title: "Orders & Operations", desc: "Use the workflows relevant to your business. For restaurants, review how orders, kitchen tickets and billing fit together in the selected setup." },
+  { icon: FiBarChart2, title: "Reports & Analytics", desc: "Review sales, stock and outlet information to support daily operational decisions. Available reports depend on the modules included in your setup." },
+  { icon: FiCreditCard, title: "Purchase Management", desc: "Keep supported purchase and supplier records connected with inventory work. Confirm which receiving, supplier and purchasing functions are available in your selected setup." },
+  { icon: FiAlertTriangle, title: "Staff & Access", desc: "Use supported staff roles and permissions to control access to relevant workflows. Confirm the permissions available for each role before rollout." },
+  { icon: FiPercent, title: "Support & Reliability", desc: "DigiNizam provides 24/7 support. Discuss onboarding, support channels and the requirements of your chosen setup with the team." }
 ];
 
 export default function SmartFeaturesGridSection() {
@@ -91,7 +55,7 @@ export default function SmartFeaturesGridSection() {
             className="font-semibold tracking-tight text-foreground"
             style={{ fontSize: "clamp(30px, 4.2vw, 46px)", lineHeight: 1.12 }}
           >
-            Everything you need to run retail
+            Industry Workflows
           </h2>
           <p className="text-sm md:text-base text-muted mt-3 leading-relaxed max-w-xl">
             Pick a capability to explore how DigiNizam keeps sales, stock, and stores moving.
@@ -172,7 +136,7 @@ export default function SmartFeaturesGridSection() {
             transition={{ duration: 0.55, ease: easeOut, delay: 0.08 }}
             className="lg:col-span-7 relative min-h-[320px] sm:min-h-[380px]"
           >
-            <div className="absolute inset-0 rounded-3xl border border-surface-border bg-surface overflow-hidden">
+            <div className="relative h-full rounded-3xl border border-surface-border bg-surface overflow-hidden">
               <div className="absolute inset-0 bg-grid-pattern opacity-30" />
               <div className="absolute -top-20 -right-16 w-72 h-72 bg-primary/10 blur-[90px] rounded-full" />
               <div className="absolute -bottom-24 -left-10 w-64 h-64 bg-secondary/10 blur-[90px] rounded-full" />
@@ -187,7 +151,7 @@ export default function SmartFeaturesGridSection() {
                   </span>
                   <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-muted">
                     <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
-                    Live system
+                    Configured workflows
                   </span>
                 </div>
 

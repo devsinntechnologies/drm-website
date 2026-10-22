@@ -22,7 +22,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "POS Software Pakistan | DigiNizam",
+    default: "POS Software for Retail, Restaurants & Growing Businesses | DigiNizam",
     template: "%s",
   },
   description:
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
   },
   openGraph: {
-    title: "POS Software Pakistan | DigiNizam",
+    title: "POS Software for Retail, Restaurants & Growing Businesses | DigiNizam",
     description:
       "DigiNizam POS software helps businesses manage billing, inventory, orders and daily operations from one platform.",
     url: SITE_URL,

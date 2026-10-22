@@ -19,12 +19,10 @@ const FeaturesChef = () => {
           >
             <span className="section-label mb-4 md:mb-4">Staff Management</span>
             <h2 className="text-xl sm:text-2xl md:text-lg lg:text-xl font-extrabold text-foreground mb-4 leading-tight">
-              Chef <span className="text-primary">Performance</span> <br />
-              Monitoring
+              Staff &amp; Access
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-muted mb-4 md:mb-4 leading-relaxed max-w-xl font-medium">
-              Track cook times and efficiency per station. Keep your kitchen running 
-              at peak performance with data-driven insights on staff productivity.
+              Use supported staff roles and permissions to control access to relevant workflows. Confirm the permissions available for each role before rollout.
             </p>
 
             <motion.div 
@@ -34,13 +32,12 @@ const FeaturesChef = () => {
               transition={{ delay: 0.4 }}
               className="p-5 md:p-4 rounded-[28px] md:rounded-[40px] glass-card border border-primary/20 bg-primary/5"
             >
-              <h4 className="text-xl md:text-2xl font-bold text-primary mb-3 md:mb-4 flex items-center gap-3">
+              <h3 className="text-xl md:text-2xl font-bold text-primary mb-3 md:mb-4 flex items-center gap-3">
                  <span className="w-2 h-2 rounded-full bg-primary animate-ping" />
-                 Real-time Efficiency
-              </h4>
+                 Role-Based Access
+              </h3>
               <p className="text-muted leading-relaxed font-bold">
-                Monitor how long each kitchen station takes to prepare orders. Identify 
-                bottlenecks and reward high-performing staff instantly.
+                Confirm the permissions available for each role before rollout.
               </p>
             </motion.div>
           </motion.div>

@@ -1,0 +1,92 @@
+
+> drm-website@0.1.0 build
+> next build
+
+npm.cmd : ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+At line:2 char:1
++ npm.cmd run build 2>&1 | Tee-Object -FilePath docs/seo-review/build.l ...
++ ~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (⚠ Warning: Next...not be correct.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+ We detected multiple lockfiles and selected the directory of C:\Users\Possible\package-lock.json as the root 
+directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if 
+it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * C:\Users\Possible\OneDrive\Documents\digiNizam\drm-website\pnpm-lock.yaml
+
+▲ Next.js 16.2.3 (Turbopack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 83s
+  Running TypeScript ...
+  Finished TypeScript in 42s ...
+  Collecting page data using 3 workers ...
+  Generating static pages using 3 workers (0/52) ...
+  Generating static pages using 3 workers (13/52) 
+  Generating static pages using 3 workers (26/52) 
+  Generating static pages using 3 workers (39/52) 
+✓ Generating static pages using 3 workers (52/52) in 10.6s
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /about
+├ ○ /apple-icon.png
+├ ○ /blog
+├ ● /blog/[slug]
+│ ├ /blog/what-is-a-restaurant-pos-system
+│ ├ /blog/restaurant-inventory-management-reduce-food-waste
+│ ├ /blog/best-pos-software-for-restaurants-in-pakistan
+│ └ [+5 more paths]
+├ ○ /clientele
+├ ○ /contact
+├ ƒ /contact/[...slug]
+├ ○ /contact/thank-you
+├ ○ /demo
+├ ○ /features
+├ ○ /hiring
+├ ○ /icon0.svg
+├ ○ /icon1.png
+├ ○ /industries
+├ ○ /manifest.json
+├ ○ /partner
+├ ○ /pricing
+├ ○ /privacy
+├ ƒ /products/[...slug]
+├ ○ /products/apparel
+├ ○ /products/automobile
+├ ○ /products/bakery
+├ ○ /products/books
+├ ○ /products/cafe
+├ ○ /products/distribution
+├ ○ /products/electric
+├ ○ /products/furniture
+├ ○ /products/jewellery
+├ ○ /products/manufacturing
+├ ○ /products/pharmacy
+├ ○ /products/restaurant
+├ ○ /products/retail
+├ ○ /products/salon
+├ ○ /products/snooker
+├ ○ /products/supermarket
+├ ○ /products/toys
+├ ○ /robots.txt
+├ ƒ /services/[...slug]
+├ ○ /services/hr-digitalization
+├ ○ /services/software-solution
+├ ○ /services/web-development
+├ ○ /support
+├ ○ /terms
+└ ○ /thank-you
+
+
+ƒ Proxy (Middleware)
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+

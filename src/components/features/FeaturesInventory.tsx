@@ -5,13 +5,23 @@ import { motion } from 'framer-motion';
 
 const FeaturesInventory = () => {
   const points = [
-    { title: "Unlimited Stores", desc: "Scale outlets on cloud inventory that stays in sync across locations." },
-    { title: "Infinite Products", desc: "Manage thousands of items without any performance lag." },
-    { title: "Variations & Batches", desc: "Track colors, sizes, and specific batches with absolute precision." },
-    { title: "Auto-Adjustment", desc: "Stock levels update instantly with every sale, purchase, or return." },
-    { title: "Bulk Management", desc: "Import and export your entire product list in seconds using templates." },
-    { title: "Multi-Location Sync", desc: "Independent inventory control for each store, synced in real-time." }
-  ];
+  {
+    "title": "Stock Records",
+    "desc": "Track stock and inventory movements alongside supported sales, purchases and returns."
+  },
+  {
+    "title": "Item Controls",
+    "desc": "Confirm the item, variant and stock controls included in your configuration."
+  },
+  {
+    "title": "Stock Locations",
+    "desc": "Review branch-level stock, sales and reporting across the locations included in your setup."
+  },
+  {
+    "title": "Configuration",
+    "desc": "Confirm access rules and synchronization needs during configuration."
+  }
+];
 
   return (
     <section id="inventory" className="py-8 md:py-10 bg-background relative overflow-hidden">
@@ -51,7 +61,7 @@ const FeaturesInventory = () => {
               transition={{ delay: 0.8, type: "spring" }}
               className="absolute top-4 right-4 md:top-10 md:right-10 tag-pill bg-emerald-500/20 text-emerald-500 border-emerald-500/40"
             >
-              Real-time Sync
+              Inventory Management
             </motion.div>
           </motion.div>
 
@@ -65,11 +75,10 @@ const FeaturesInventory = () => {
           >
             <span className="section-label mb-4 md:mb-4">Inventory Control</span>
             <h2 className="text-xl sm:text-2xl md:text-lg lg:text-xl font-extrabold text-foreground mb-4 leading-tight">
-              Stock Tracking &amp; Control
+              Inventory Management
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-muted mb-4 md:mb-4 leading-relaxed max-w-xl font-medium">
-              Eliminate guesswork with our advanced cloud-based inventory. 
-              Gain absolute clarity on every item, location, and transaction.
+              Track stock and inventory movements alongside supported sales, purchases and returns. Confirm the item, variant and stock controls included in your configuration.
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 md:gap-x-10 gap-y-5 md:gap-y-6">
@@ -87,9 +96,9 @@ const FeaturesInventory = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-base font-extrabold text-foreground mb-1 group-hover:text-primary transition-colors">
+                    <h3 className="text-base font-extrabold text-foreground mb-1 group-hover:text-primary transition-colors">
                       {point.title}
-                    </h4>
+                    </h3>
                     <p className="text-sm text-muted leading-relaxed font-medium">{point.desc}</p>
                   </div>
                 </motion.div>

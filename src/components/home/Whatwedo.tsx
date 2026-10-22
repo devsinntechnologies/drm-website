@@ -21,7 +21,7 @@ const services = [
   },
   {
     title: "Inventory digitalization",
-    desc: "Real-time stock, orders, and sales—full supply-chain visibility.",
+    desc: "Keep stock records connected with supported sales and purchasing activity so teams can review available stock and movements.",
   },
 ];
 

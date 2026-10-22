@@ -40,10 +40,10 @@ export default function BusinessBannerSection() {
               className="font-semibold tracking-tight text-white mb-3"
               style={{ fontSize: "clamp(30px, 4.2vw, 46px)", lineHeight: 1.12 }}
             >
-              Empowering businesses across Pakistan
+              Connected Operations for Growing Businesses
             </h2>
             <p className="text-sm md:text-base text-white/75 leading-relaxed">
-              Experience seamless inventory tracking, lightning-fast POS checkout, and multi-branch management designed to scale your enterprise effortlessly.
+              Connect inventory, sales, purchases and operational records across the locations included in your setup.
             </p>
           </div>
         </motion.div>

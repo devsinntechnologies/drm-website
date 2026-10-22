@@ -19,19 +19,17 @@ const FeaturesRecipe = () => {
           >
             <span className="section-label mb-4 md:mb-4">Kitchen Control</span>
             <h2 className="text-xl sm:text-2xl md:text-lg lg:text-xl font-extrabold text-foreground mb-4 leading-tight">
-              Precise <span className="text-primary">Recipe</span> <br />
-              Management
+              Industry Workflows
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-muted mb-4 md:mb-4 leading-relaxed max-w-xl font-medium">
-              Maintain consistent taste and margins. Our system tracks raw ingredients 
-              and calculates food cost for every dish you serve.
+              Explore retail billing and inventory, restaurant order and kitchen workflows, and other supported industry configurations.
             </p>
 
             <div className="space-y-4 md:space-y-5">
               {[
-                { t: "Ingredient Deduction", d: "Raw materials are automatically deducted from stock upon order fulfillment." },
-                { t: "Menu Costing", d: "Real-time calculation of food costs based on ingredient price fluctuations." },
-                { t: "Consistency Control", d: "Digital recipe cards ensure your chefs cook the perfect dish every single time." }
+                { t: "Retail Billing", d: "Explore retail billing and inventory." },
+                { t: "Restaurant Orders", d: "Use the workflows relevant to your business. For restaurants, review how orders, kitchen tickets and billing fit together in the selected setup." },
+                { t: "Selected Configuration", d: "Review the features your team needs and confirm the modules, devices and setup required." }
               ].map((item, i) => (
                 <motion.div 
                   key={i} 
@@ -46,7 +44,7 @@ const FeaturesRecipe = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-base md:text-lg font-bold text-foreground mb-1">{item.t}</h4>
+                    <h3 className="text-base md:text-lg font-bold text-foreground mb-1">{item.t}</h3>
                     <p className="text-sm text-muted leading-relaxed font-medium">{item.d}</p>
                   </div>
                 </motion.div>

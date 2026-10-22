@@ -7,11 +7,11 @@ import { motion } from "framer-motion";
 
 export default function AboutWhyUs() {
   const points = [
-    "Industry-leading ERP & POS system specifically tailored for Pakistani businesses.",
-    "24/7 dedicated customer support to ensure seamless everyday operations.",
-    "Highly scalable architecture allowing you to grow from one branch to hundreds.",
-    "Integrated modules connecting HR, Sales, Inventory, and Accounting.",
-  ];
+  "DigiNizam provides 24/7 support.",
+  "DigiNizam serves customers globally through its English-language offering.",
+  "Discuss your workflow, review a relevant demonstration and confirm the required configuration before implementation.",
+  "DigiNizam supports configurations for retail, restaurants, pharmacies, snooker clubs and other business workflows. Explore the relevant solution and confirm the modules you need."
+];
 
   return (
     <section className="bg-surface text-foreground py-10 md:py-14 border-b border-surface-border relative overflow-hidden">
@@ -27,10 +27,10 @@ export default function AboutWhyUs() {
         >
           <span className="section-label">The DigiNizam advantage</span>
           <h2 className="text-2xl sm:text-3xl font-bold mb-3 tracking-tight text-foreground">
-            Why choose us as your technology partner?
+            Support &amp; Reliability
           </h2>
           <p className="text-sm md:text-base text-muted leading-relaxed mb-5">
-            We don&apos;t just provide software—we provide a complete ecosystem to optimize every facet of your enterprise, backed by deep understanding of local market dynamics.
+            DigiNizam provides 24/7 support. Discuss onboarding, support channels and the requirements of your chosen setup with the team.
           </p>
           
           <ul className="space-y-2.5">
@@ -59,7 +59,7 @@ export default function AboutWhyUs() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[var(--foreground)]/60 via-transparent to-transparent flex items-end p-5">
               <span className="text-white text-[11px] font-bold uppercase tracking-widest bg-primary px-2.5 py-1 rounded-lg shadow-sm">
-                Proven Track Record
+                Tailored Setup
               </span>
             </div>
           </div>

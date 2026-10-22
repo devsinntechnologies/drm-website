@@ -24,7 +24,7 @@ const FeaturesHeroDetailed = () => {
           >
             <Image
               src="/features/feature-hero-v2.png"
-              alt="Restaurant inventory software in Pakistan"
+              alt="DigiNizam POS and inventory management workflow"
               fill
               className="object-cover"
               priority

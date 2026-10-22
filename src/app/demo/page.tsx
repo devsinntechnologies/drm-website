@@ -15,7 +15,7 @@ export const metadata: Metadata = pageMetadata({
 
 export default function DemoPage() {
   return (
-    <main className="bg-background">
+    <div className="bg-background">
       <DemoHero />
       <DemoForm />
       <DemoSeoSections />
@@ -25,7 +25,7 @@ export default function DemoPage() {
           { href: "/", label: "POS software" },
           { href: "/products/retail", label: "retail POS software" },
           { href: "/features", label: "POS software features" },
-          { href: "/pricing", label: "POS software pricing" },
+          { href: "/pricing", label: "Discuss POS software pricing" },
           { href: "/industries", label: "industry-specific POS solutions" },
         ]}
       />
@@ -33,6 +33,6 @@ export default function DemoPage() {
         title="See DigiNizam configured for your business"
         description="Walk through billing, inventory, reporting and the modules that match your business workflow with our team."
       />
-    </main>
+    </div>
   );
 }

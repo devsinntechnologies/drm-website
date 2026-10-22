@@ -6,9 +6,11 @@ import Button from "@/components/ui/Button";
 export default function SiteCTA({
   title = "Book a Demo",
   description = "Book a free demo and see how DigiNizam POS software streamlines billing, inventory, and operations for your business.",
+  primaryCtaLabel = "Get free demo",
 }: {
   title?: string;
   description?: string;
+  primaryCtaLabel?: string;
 }) {
   return (
     <section className="py-12 md:py-16 bg-navy text-white relative overflow-hidden">
@@ -23,7 +25,7 @@ export default function SiteCTA({
         <p className="type-body text-white/70 max-w-xl mx-auto mb-7">{description}</p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
           <Button href="/demo" variant="primary" size="lg">
-            Get free demo
+            {primaryCtaLabel}
           </Button>
           <Button
             href="/contact"

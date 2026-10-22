@@ -61,7 +61,7 @@ export default function Footer() {
             </li>
             <li>
               <Link href="/features" className={linkClass}>
-                Restaurant inventory software
+                POS and inventory management features
               </Link>
             </li>
             <li>

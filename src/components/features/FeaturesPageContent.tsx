@@ -15,7 +15,7 @@ import SiteCTA from "@/components/common/SiteCTA";
 
 export default function FeaturesPageContent() {
   return (
-    <main className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background">
       <FeaturesHeroDetailed />
       <section className="py-10 md:py-14 bg-surface border-b border-surface-border">
         <div className="max-w-5xl mx-auto px-6 lg:px-12">
@@ -28,50 +28,54 @@ export default function FeaturesPageContent() {
             <article className="rounded-2xl border border-surface-border bg-background p-5">
               <h3 className="text-lg font-bold text-foreground mb-2">Can POS software manage inventory?</h3>
               <p className="text-muted text-sm leading-relaxed">
-                Yes, DigiNizam connects supported sales and purchasing activity with inventory records so teams can monitor stock and movements more clearly across day-to-day operations.
+                Yes. DigiNizam connects supported sales and purchasing activity with inventory records so teams can review stock and movements. The exact item controls, stock locations and inventory workflows should be confirmed for the selected configuration.
               </p>
             </article>
             <article className="rounded-2xl border border-surface-border bg-background p-5">
               <h3 className="text-lg font-bold text-foreground mb-2">Can POS software work without internet?</h3>
               <p className="text-muted text-sm leading-relaxed">
-                DigiNizam supports offline-ready operations for supported workflows, with synchronization when connectivity returns. The exact offline scope should be confirmed for the selected setup.
+                DigiNizam supports offline-ready workflows in supported setups. Confirm which actions work without internet on your chosen devices, what is stored locally and how synchronization works when connectivity returns. Do not assume every module or cloud function is available offline.
               </p>
             </article>
             <article className="rounded-2xl border border-surface-border bg-background p-5">
               <h3 className="text-lg font-bold text-foreground mb-2">Can POS software manage multiple stores?</h3>
               <p className="text-muted text-sm leading-relaxed">
-                DigiNizam supports connected multi-store and branch workflows where enabled, with branch-level stock, sales and reporting configured around the business setup.
+                DigiNizam supports multi-store workflows where enabled in the selected setup. Review branch-level stock, sales, reporting and staff access during the demo, and confirm the number of outlets, terminals and synchronization requirements before rollout.
               </p>
             </article>
             <article className="rounded-2xl border border-surface-border bg-background p-5">
               <h3 className="text-lg font-bold text-foreground mb-2">What is inventory management software?</h3>
               <p className="text-muted text-sm leading-relaxed">
-                Inventory management software helps businesses track stock, purchases, movements and reporting so teams can reduce stock problems and stay closer to real operational activity.
+                Inventory management software organizes stock records and helps teams track quantities and movements. In a connected setup, it links supported purchases, sales and returns with stock information so staff can review what is available and how inventory has changed.
               </p>
             </article>
             <article className="rounded-2xl border border-surface-border bg-background p-5">
               <h3 className="text-lg font-bold text-foreground mb-2">What reports should a business track in POS software?</h3>
               <p className="text-muted text-sm leading-relaxed">
-                Typical reports include sales totals, stock movement, product-level activity and branch performance so teams can review what is selling, what is moving slowly and where operations need attention.
+                Useful POS reports include sales summaries, stock movement, product activity and outlet performance. The right reports depend on your business. During a DigiNizam demo, ask to see the specific reports and filters you need rather than assuming every report is included.
               </p>
             </article>
             <article className="rounded-2xl border border-surface-border bg-background p-5">
               <h3 className="text-lg font-bold text-foreground mb-2">How does inventory software reduce stock problems?</h3>
               <p className="text-muted text-sm leading-relaxed">
-                Better visibility into receiving, sales and inventory movement helps teams catch low-stock risks, reduce over-ordering and keep stock records closer to actual store activity.
+                Inventory software helps teams spot problems by making stock quantities and movements easier to review. Connecting supported sales, purchases and returns with inventory reduces separate record keeping. Accurate receiving, stock counts and staff processes are still important; software does not eliminate stock errors by itself.
               </p>
             </article>
             <article className="rounded-2xl border border-surface-border bg-background p-5">
               <h3 className="text-lg font-bold text-foreground mb-2">What is multi-store POS software?</h3>
               <p className="text-muted text-sm leading-relaxed">
-                Multi-store POS software gives a business a connected view of branch performance, stock movement and daily sales so each outlet can operate while leadership keeps a single operational picture.
+                Multi-store POS software connects operational information across more than one location. DigiNizam supports configured branch workflows for stock, sales and reporting where enabled. Confirm outlet access, synchronization and the modules included in your selected setup.
               </p>
             </article>
             <article className="rounded-2xl border border-surface-border bg-background p-5">
               <h3 className="text-lg font-bold text-foreground mb-2">Can POS software manage purchases and suppliers?</h3>
               <p className="text-muted text-sm leading-relaxed">
-                DigiNizam supports purchase tracking and supplier-linked inventory activity so teams can review what was bought, how stock changed, and how purchasing decisions affected the business workflow.
+                DigiNizam supports purchase-management workflows and supplier records in supported configurations. Review how purchases, receiving and inventory are connected in your selected setup. Confirm the available supplier functions; do not assume an automated supplier portal, ordering integration or auto-reorder feature is included.
               </p>
+            </article>
+            <article className="rounded-2xl border border-surface-border bg-background p-5">
+              <h3 className="text-lg font-bold text-foreground mb-2">What is offline POS software?</h3>
+              <p className="text-muted text-sm leading-relaxed">Offline POS software supports selected sales or operational tasks without an active internet connection. DigiNizam offers offline-ready workflows in supported setups. Confirm the actions and devices supported, and how synchronization is handled when internet access returns.</p>
             </article>
           </div>
         </div>
@@ -94,13 +98,13 @@ export default function FeaturesPageContent() {
           { href: "/products/restaurant", label: "restaurant management software" },
           { href: "/pricing", label: "POS software pricing" },
           { href: "/demo", label: "book a demo" },
-          { href: "/", label: "POS software Pakistan" },
+          { href: "/", label: "DigiNizam POS software" },
         ]}
       />
       <SiteCTA
         title="Book a Demo"
-        description="See restaurant inventory software connected to POS, kitchen tickets and reporting."
+        description="Review the features your team needs and confirm the modules, devices and setup required."
       />
-    </main>
+    </div>
   );
 }

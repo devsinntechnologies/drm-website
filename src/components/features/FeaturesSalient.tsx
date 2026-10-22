@@ -4,13 +4,37 @@ import { motion } from 'framer-motion';
 
 const FeaturesSalient = () => {
   const points = [
-    { t: "Multi-Language Support", d: "Interface available in 5+ global languages for diverse staff.", i: "🌍" },
-    { t: "Table Layout", d: "Visual table management with split-billing and floor plans.", i: "🪑" },
-    { t: "Role-Based Access", d: "Secure permissions for waiters, cashiers, and managers.", i: "🔒" },
-    { t: "Offline Sync", d: "Keep selling even when your internet connection goes down.", i: "📴" },
-    { t: "Kitchen Routing", d: "Sort items automatically by kitchen category and station.", i: "🚚" },
-    { t: "Tax Integration", d: "Automated FBR/tax calculation as per local regulations.", i: "⚖️" },
-  ];
+  {
+    "t": "English Interface",
+    "d": "DigiNizam serves customers globally through its English-language offering.",
+    "i": "🌍"
+  },
+  {
+    "t": "POS & Billing",
+    "d": "Keep product records, billing and sales information connected. Review the available checkout and invoice workflows for your business.",
+    "i": "🧾"
+  },
+  {
+    "t": "Role-Based Access",
+    "d": "Use supported staff roles and permissions to control access to relevant workflows. Confirm the permissions available for each role before rollout.",
+    "i": "🔒"
+  },
+  {
+    "t": "Offline-Ready Operations",
+    "d": "DigiNizam supports offline-ready workflows in supported setups. Confirm which tasks work without internet, what is stored locally and how synchronization works when connectivity returns.",
+    "i": "📴"
+  },
+  {
+    "t": "24/7 Support",
+    "d": "DigiNizam provides 24/7 support.",
+    "i": "💬"
+  },
+  {
+    "t": "Reports & Analytics",
+    "d": "Use available reports to review sales, stock movement, product activity and outlet performance. Ask to see the specific reports you need in the live demo.",
+    "i": "📊"
+  }
+];
 
   return (
     <section className="py-8 md:py-10 bg-surface/10 relative overflow-hidden">
@@ -51,7 +75,7 @@ const FeaturesSalient = () => {
                 >
                   <span className="text-lg group-hover:scale-125 transition-transform">{p.i}</span>
                   <div>
-                    <h4 className="font-extrabold text-foreground mb-1 group-hover:text-primary transition-colors">{p.t}</h4>
+                    <h3 className="font-extrabold text-foreground mb-1 group-hover:text-primary transition-colors">{p.t}</h3>
                     <p className="text-sm text-muted leading-relaxed font-bold">{p.d}</p>
                   </div>
                 </motion.div>

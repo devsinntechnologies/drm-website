@@ -4,31 +4,29 @@ import SectionHeader from "@/components/common/SectionHeader";
 
 const sections = [
   {
-    title: "POS Software Pricing in Pakistan",
-    body: "The cost of POS software in Pakistan depends on factors such as the number of outlets or billing counters, required modules, inventory needs, and the business workflow you need to manage. DigiNizam can be configured around your business requirements, so the appropriate setup and pricing can be discussed based on your needs.",
-    href: "/demo",
-    linkLabel: "Book a POS demo",
+    "title": "What Is Included",
+    "body": "Confirm the software modules, terminals, support and setup services included in your agreement before proceeding.",
+    "href": "/features",
+    "linkLabel": "POS and inventory features"
   },
   {
-    title: "What Is Included",
-    body: "Plans cover POS billing, inventory tools, terminals as listed, and reporting. Exact inclusions for your outlets are confirmed on a demo—we do not publish unverified or competitor prices.",
+    "title": "What Affects POS Software Cost",
+    "body": "The required modules, locations, terminals, inventory workflows and setup needs affect the configuration and quote."
   },
   {
-    title: "What Affects Cost",
-    body: "POS software pricing depends on the number of outlets, billing counters, inventory requirements, business modules, terminals and whether you need on-site setup or hardware. Multi-location businesses may require additional configuration based on their workflow.",
+    "title": "Software vs Hardware",
+    "body": "Confirm hardware separately from software. Ask whether terminals, receipt printers, scanners or other devices are included in your specific quote."
   },
   {
-    title: "Business Features",
-    body: "DigiNizam supports different business workflows across retail, restaurants, pharmacies and other supported industries. Your plan can be configured around the modules and operations your business actually needs.",
-    href: "/products/retail",
-    linkLabel: "Retail POS software",
+    "title": "Multi-Location Considerations",
+    "body": "For more than one outlet, review branch access, stock locations, reporting and synchronization requirements with the team."
   },
   {
-    title: "Inventory & Operations",
-    body: "Inventory tools help businesses track stock, purchases and sales while keeping operational records connected across supported outlets and locations.",
-    href: "/features",
-    linkLabel: "Inventory software features",
-  },
+    "title": "How Pricing Is Confirmed",
+    "body": "Book a demo first. If you want to proceed, discuss your requirements and agree on pricing. DigiNizam uses month-end invoices; confirm the exact terms in your agreement.",
+    "href": "/demo",
+    "linkLabel": "Book a Demo to Discuss Pricing"
+  }
 ];
 
 export default function PricingSeoSections() {
@@ -37,8 +35,8 @@ export default function PricingSeoSections() {
       <SectionHeader
         align="center"
         label="How pricing works"
-        title="Clear software pricing, quoted for your setup"
-        description="Use the plans as a starting point. Confirmed DigiNizam POS software pricing is shared when we see your outlets, terminals and modules."
+        title="Discuss Pricing After Your Demo"
+        description="DigiNizam does not currently have fixed published pricing. Start with a demo, then discuss your requirements and agree on pricing if you want to proceed."
       />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto">
         {sections.map((section) => (

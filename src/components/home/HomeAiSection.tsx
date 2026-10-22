@@ -6,45 +6,25 @@ import { FiTrendingUp, FiBox, FiBarChart2, FiZap } from "react-icons/fi";
 import SectionShell from "@/components/common/SectionShell";
 import SectionHeader from "@/components/common/SectionHeader";
 
-const aiFeatures = [
-  {
-    icon: FiTrendingUp,
-    title: "Sales forecasting",
-    desc: "Predict demand from history and seasonality so you stock and staff smarter.",
-  },
-  {
-    icon: FiBox,
-    title: "Smart reorder alerts",
-    desc: "Get low-stock warnings before shelves go empty—across one store or many.",
-  },
-  {
-    icon: FiBarChart2,
-    title: "Profit insights",
-    desc: "See margins, bestsellers, and leaks in dashboards built for decision-makers.",
-  },
-  {
-    icon: FiZap,
-    title: "Faster checkout",
-    desc: "Speed through billing with offline-ready POS that keeps queues moving.",
-  },
+const operationFeatures = [
+  { icon: FiTrendingUp, title: "Sales Records", desc: "Review sales, stock and outlet information to support daily operational decisions." },
+  { icon: FiBox, title: "Inventory Management", desc: "Keep stock records connected with supported sales and purchasing activity so teams can review available stock and movements." },
+  { icon: FiBarChart2, title: "Reports & Analytics", desc: "Available reports depend on the modules included in your setup." },
+  { icon: FiZap, title: "24/7 Support", desc: "Bring daily work into connected processes, with tailored setup and 24/7 support." },
 ];
 
 export default function HomeAiSection() {
   return (
     <SectionShell tone="navy" glow className="!border-white/10">
       <SectionHeader
-        label="Intelligent operations"
-        title={
-          <>
-            AI built into every <span className="text-secondary">workflow</span>
-          </>
-        }
-        description="From forecasting to checkout—DigiNizam helps teams act on data, not guesswork."
+        label="Connected operations"
+        title="Multi-Store Control"
+        description="Discuss your branches, stock locations and reporting needs so DigiNizam can be configured around the way your business operates."
         className="[&_h2]:text-white [&_p]:text-white/65"
       />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        {aiFeatures.map((feature, idx) => {
+        {operationFeatures.map((feature, idx) => {
           const Icon = feature.icon;
           return (
             <motion.div

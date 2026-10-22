@@ -6,10 +6,10 @@ import SectionShell from "@/components/common/SectionShell";
 import SectionHeader from "@/components/common/SectionHeader";
 
 const items = [
-  { icon: FiCheckCircle, title: "FBR fiscal integration", desc: "Digital invoicing and tax reporting built in." },
-  { icon: FiShield, title: "SRB · PRA · KPRA", desc: "Regional tax authority sync for compliant retail." },
-  { icon: FiCreditCard, title: "JazzCash & EasyPaisa", desc: "Accept wallet and card payments at checkout." },
-  { icon: FiGlobe, title: "Multi-branch cloud", desc: "One dashboard for every outlet and warehouse." },
+  { icon: FiCheckCircle, title: "24/7 Support", desc: "DigiNizam provides 24/7 support." },
+  { icon: FiShield, title: "Tailored Setup", desc: "Discuss onboarding, support channels and the requirements of your chosen setup with the team." },
+  { icon: FiCreditCard, title: "Month-End Invoices", desc: "DigiNizam uses month-end invoices; confirm the exact terms in your quote." },
+  { icon: FiGlobe, title: "English-Language Offering", desc: "DigiNizam serves customers globally through its English-language offering." },
 ];
 
 export default function ComplianceStripSection() {
@@ -17,9 +17,9 @@ export default function ComplianceStripSection() {
     <SectionShell tone="surface" glow>
       <SectionHeader
         align="center"
-        label="Compliance & integrations"
-        title="Built for Pakistan's retail ecosystem"
-        description="Tax-ready POS, local payments, and cloud sync—without duct-taping tools together."
+        label="Support"
+        title="Support & Reliability"
+        description="DigiNizam provides 24/7 support. Discuss onboarding, support channels and the requirements of your chosen setup with the team."
       />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">

@@ -14,7 +14,7 @@ export default function AboutValues() {
     {
       icon: <FiZap size={20} />,
       title: "Continuous Innovation",
-      description: "Constantly upgrading our tech stack and solutions to stay ahead of industry trends and deliver future-proof systems.",
+      description: "We focus on practical workflows and the features a business needs for daily operations. Review the working product to confirm its fit for your team.",
     },
     {
       icon: <FiHeart size={20} />,
