@@ -51,7 +51,7 @@ export default function ProductPageTemplate({
   cta,
 }: ProductPageProps) {
   return (
-    <main className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground">
       <PageHero label={label} title={title} description={description} />
 
       {heroMedia ? (
@@ -163,6 +163,6 @@ export default function ProductPageTemplate({
       />
       <ProductClientele bgLight={true} />
       <ProductCertificates bgLight={false} />
-    </main>
+    </div>
   );
 }

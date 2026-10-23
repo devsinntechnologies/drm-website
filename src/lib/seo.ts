@@ -7,11 +7,13 @@ export function pageMetadata({
   description,
   path,
   index = true,
+  follow = index,
 }: {
   title: string;
   description: string;
   path: string;
   index?: boolean;
+  follow?: boolean;
 }): Metadata {
   const url = `${SITE_URL}${path === "/" ? "" : path}`;
   return {
@@ -37,9 +39,7 @@ export function pageMetadata({
       card: "summary",
       images: ["/og-logo.png"],
     },
-    robots: index
-      ? { index: true, follow: true }
-      : { index: false, follow: false },
+    robots: { index, follow },
   };
 }
 

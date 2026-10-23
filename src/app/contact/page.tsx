@@ -8,15 +8,15 @@ import SiteCTA from "@/components/common/SiteCTA";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Contact DigiNizam | POS Software Pakistan",
+  title: "Contact DigiNizam | POS & Business Management Software",
   description:
-    "Contact DigiNizam about restaurant POS, billing, inventory and implementation. Book a demo or send a message—we reply on working days.",
+    "Contact DigiNizam about POS, billing, inventory and implementation for your business. Book a demo or send our team a message.",
   path: "/contact",
 });
 
 export default function ContactPage() {
   return (
-    <main className="bg-background">
+    <div className="bg-background">
       <ContactHero />
       <ContactStats />
       <ContactForm />
@@ -24,8 +24,8 @@ export default function ContactPage() {
       <ContactFAQ />
       <SiteCTA
         title="Prefer a live walkthrough?"
-        description="Book a free demo and see DigiNizam configured for your business—in under 30 minutes."
+        description="Book a free demo to review your workflow, then discuss your requirements and agree on pricing if you choose to proceed."
       />
-    </main>
+    </div>
   );
 }

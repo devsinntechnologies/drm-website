@@ -67,7 +67,7 @@ const FLOW = [
 
 export default function SnookerPageContent() {
   return (
-    <main className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background">
       <PageHero
         label="Snooker POS"
         title={
@@ -162,6 +162,6 @@ export default function SnookerPageContent() {
         title="Run your club on DigiNizam Snooker POS"
         description="Assign the Snooker POS industry template, configure Single/Double/Century rates, and start sessions from the live table floor."
       />
-    </main>
+    </div>
   );
 }

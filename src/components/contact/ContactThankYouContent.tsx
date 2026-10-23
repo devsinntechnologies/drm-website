@@ -1,7 +1,6 @@
 import { FiCheckCircle, FiMail, FiPhone, FiClock } from "react-icons/fi";
 import Button from "@/components/ui/Button";
 import SectionShell from "@/components/common/SectionShell";
-import { PHONE_DISPLAY } from "@/lib/contact";
 
 const nextSteps = [
   {
@@ -12,7 +11,7 @@ const nextSteps = [
   {
     icon: FiPhone,
     title: "We’ll follow up",
-    desc: `Expect a call, WhatsApp, or email at ${PHONE_DISPLAY} within two business hours on working days.`,
+    desc: "Our team will use the contact details you provided to discuss your enquiry.",
   },
   {
     icon: FiClock,
@@ -33,7 +32,7 @@ export default function ContactThankYouContent() {
           Thank you — we&apos;ll be in touch
         </h1>
         <p className="type-body text-muted mt-4 leading-relaxed max-w-lg mx-auto">
-          Your message was sent successfully. Our team will get back to you shortly.
+          Your message was sent successfully. Our team will reply using the details you provided.
         </p>
 
         <ul className="mt-10 space-y-3 text-left">

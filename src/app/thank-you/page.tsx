@@ -5,7 +5,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "Demo booked | DigiNizam",
   description:
-    "Your DigiNizam demo request was received. Our team will contact you shortly to confirm the walkthrough.",
+    "Your DigiNizam demo request was received. Our team will contact you using the details you provided to confirm the walkthrough.",
   path: "/thank-you",
   index: false,
 });
@@ -17,8 +17,8 @@ export const metadata: Metadata = pageMetadata({
  */
 export default function ThankYouPage() {
   return (
-    <main className="bg-background">
+    <div className="bg-background">
       <ThankYouContent />
-    </main>
+    </div>
   );
 }

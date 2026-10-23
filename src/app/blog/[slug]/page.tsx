@@ -28,9 +28,7 @@ export async function generateMetadata({
 }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const post = getPostBySlug(slug);
-  if (!post) {
-    return { title: "Blog | DigiNizam", robots: { index: false, follow: false } };
-  }
+  if (!post) notFound();
 
   const url = `${SITE_URL}${post.canonicalPath}`;
   const imageUrl = `${SITE_URL}${post.featuredImage}`;
@@ -67,7 +65,7 @@ export default async function BlogPostPage({ params }: PageProps) {
   const faqItems = getPostFaqItems(post);
 
   return (
-    <main className="min-h-screen bg-surface text-foreground py-4 md:py-6 relative overflow-hidden">
+    <div className="min-h-screen bg-surface text-foreground py-4 md:py-6 relative overflow-hidden">
       <JsonLd data={blogPostingJsonLd(post, SITE_URL)} />
       <JsonLd data={blogBreadcrumbJsonLd(post, SITE_URL)} />
       {faqItems.length > 0 ? <JsonLd data={faqJsonLd(faqItems)} /> : null}
@@ -170,6 +168,6 @@ export default async function BlogPostPage({ params }: PageProps) {
 
         <BlogContent blocks={post.content} />
       </article>
-    </main>
+    </div>
   );
 }

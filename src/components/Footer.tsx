@@ -42,7 +42,7 @@ export default function Footer() {
             <a href="https://x.com/rmsdevsinn" target="_blank" rel="noopener noreferrer" className={socialClass} aria-label="DigiNizam on X">
               <FaTwitter size={15} />
             </a>
-            <a href="https://www.linkedin.com/company/122894014/admin?lipi=urn%3Ali%3Apage%3Aorganization_admin_admin_dashboard_index%3B3b72f57f-4608-454d-b0e9-074d15de6593" target="_blank" rel="noopener noreferrer" className={socialClass} aria-label="DigiNizam on LinkedIn">
+            <a href="https://www.linkedin.com/company/diginizam-devsinn/" target="_blank" rel="noopener noreferrer" className={socialClass} aria-label="DigiNizam on LinkedIn">
               <FaLinkedinIn size={15} />
             </a>
             <a href="https://www.youtube.com/@DigiNizam" target="_blank" rel="noopener noreferrer" className={socialClass} aria-label="DigiNizam on YouTube">

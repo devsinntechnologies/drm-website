@@ -11,7 +11,7 @@ export default function ContactHero() {
           Let&apos;s talk about your <span className="text-primary">business</span>
         </>
       }
-      description="Questions about POS, ERP, or implementation? Our team responds within two business hours on working days."
+      description="Questions about POS, inventory, or implementation? Tell our team about your business and the setup you need."
     />
   );
 }

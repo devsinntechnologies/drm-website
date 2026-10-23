@@ -37,9 +37,9 @@ export default function ThankYouGate({
 
   if (!allowed) {
     return (
-      <main className="min-h-[50vh] bg-background flex items-center justify-center">
+      <div className="min-h-[50vh] bg-background flex items-center justify-center">
         <p className="text-sm text-muted">Redirecting…</p>
-      </main>
+      </div>
     );
   }
 

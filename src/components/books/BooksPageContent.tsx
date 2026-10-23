@@ -71,7 +71,7 @@ const bookModules = [
   },
   {
     title: "Financial & Tax Reports",
-    desc: "Comprehensive profit/loss, daily cash registers, expense registers, and automated FBR tax reports.",
+    desc: "Review the sales, inventory and operating reports available in your selected setup.",
     icon: <IconBarChart2 size={20} />
   },
   {
@@ -83,7 +83,7 @@ const bookModules = [
 
 export default function BooksPageContent() {
   return (
-    <main className="min-h-screen bg-surface text-foreground">
+    <div className="min-h-screen bg-surface text-foreground">
       <JsonLd data={faqJsonLd(bookFaqs)} />
 
       {/* 1. Hero Section (Video Background) - Resized Blue Overlay Text & Compact Height */}
@@ -187,7 +187,7 @@ export default function BooksPageContent() {
                   <IconCheckCircle className="text-primary" size={18} /> Author, Genre &amp; Academic Cataloging
                 </li>
                 <li className="flex items-center gap-3">
-                  <IconCheckCircle className="text-primary" size={18} /> Automatic Tax Calculation &amp; FBR Reporting
+                  <IconCheckCircle className="text-primary" size={18} /> Review billing &amp; reporting requirements
                 </li>
               </ul>
             </motion.div>
@@ -275,6 +275,6 @@ export default function BooksPageContent() {
       {/* 6. Certificates / Memberships / Achievements Section - Background: bg-surface */}
       <ProductCertificates bgLight={false} />
 
-    </main>
+    </div>
   );
 }

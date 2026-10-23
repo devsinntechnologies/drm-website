@@ -54,7 +54,7 @@ const productSuiteCards = [
 
 export default function WebDevelopmentContent() {
   return (
-    <main className="min-h-screen bg-surface text-foreground font-sans">
+    <div className="min-h-screen bg-surface text-foreground font-sans">
 
       {/* 1. Hero Section (Video Background) - Resized Blue Overlay Text & Compact Height */}
       <section className="relative w-full h-[60vh] min-h-[400px] max-h-[560px] overflow-hidden bg-black hero-section border-b border-surface-border">
@@ -174,6 +174,6 @@ export default function WebDevelopmentContent() {
         vision="Become the go-to web development partner for businesses that refuse to compromise on speed or quality."
       />
 
-    </main>
+    </div>
   );
 }

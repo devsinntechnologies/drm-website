@@ -2,14 +2,14 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { FiClock, FiHeadphones, FiUsers, FiAward } from "react-icons/fi";
+import { FiGlobe, FiHeadphones, FiMessageCircle, FiFileText } from "react-icons/fi";
 import SectionShell from "@/components/common/SectionShell";
 
 const stats = [
   { icon: FiHeadphones, value: "24/7", label: "Support available" },
-  { icon: FiClock, value: "< 2 hrs", label: "Avg. response time" },
-  { icon: FiUsers, value: "500+", label: "Active outlets" },
-  { icon: FiAward, value: "10+ yrs", label: "Industry experience" },
+  { icon: FiGlobe, value: "Global", label: "Customer scope" },
+  { icon: FiMessageCircle, value: "English", label: "Current offering" },
+  { icon: FiFileText, value: "Month-end", label: "Invoice billing" },
 ];
 
 export default function ContactStats() {

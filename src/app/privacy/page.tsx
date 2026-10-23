@@ -10,8 +10,8 @@ export const metadata: Metadata = pageMetadata({
 
 export default function PrivacyPage() {
   return (
-    <main className="bg-background">
+    <div className="bg-background">
       <PrivacyContent />
-    </main>
+    </div>
   );
 }

@@ -1,35 +1,36 @@
 "use client";
 
 import React from "react";
-import { FiCheckCircle, FiShield, FiAward, FiServer } from "react-icons/fi";
+import { FiGlobe, FiMessageCircle, FiFileText, FiHeadphones } from "react-icons/fi";
 import { motion } from "framer-motion";
 import SectionShell from "@/components/common/SectionShell";
 import SectionHeader from "@/components/common/SectionHeader";
 
-const certificateBadges = [
+// Owner-confirmed service facts; certification and integration evidence is pending.
+const serviceFacts = [
   {
-    title: "FBR digital integration",
-    subtitle: "Fully tax compliant",
-    icon: FiCheckCircle,
-    desc: "Real-time automated fiscal invoice reporting compliant with FBR standards.",
+    title: "Global customers",
+    subtitle: "Business scope",
+    icon: FiGlobe,
+    desc: "DigiNizam serves businesses globally. Discuss your industry and requirements with our team.",
   },
   {
-    title: "ISO 9001 certified",
-    subtitle: "Quality standards",
-    icon: FiAward,
-    desc: "Adheres to international quality management and software standards.",
+    title: "English-language offering",
+    subtitle: "Language",
+    icon: FiMessageCircle,
+    desc: "The current DigiNizam offering is available in English.",
   },
   {
-    title: "Enterprise cloud security",
-    subtitle: "Bank-grade encryption",
-    icon: FiShield,
-    desc: "End-to-end encryption with secure role-based access controls.",
+    title: "Month-end invoicing",
+    subtitle: "Billing",
+    icon: FiFileText,
+    desc: "Invoices are issued at month-end under the terms agreed with each customer.",
   },
   {
     title: "24/7 technical support",
-    subtitle: "Dedicated engineering",
-    icon: FiServer,
-    desc: "Round-the-clock helpdesk, backups, and continuous maintenance.",
+    subtitle: "Support availability",
+    icon: FiHeadphones,
+    desc: "DigiNizam provides 24/7 support. Contact our team for help with your setup.",
   },
 ];
 
@@ -38,17 +39,17 @@ export default function ProductCertificates({ bgLight = false }: { bgLight?: boo
     <SectionShell tone={bgLight ? "surface" : "background"}>
       <SectionHeader
         align="center"
-        label="Compliance & quality"
+        label="Working with DigiNizam"
         title={
           <>
-            Accredited for <span className="text-primary">trust & security</span>
+            Service & <span className="text-primary">support</span>
           </>
         }
-        description="Certified software engineered to satisfy strict regulatory and security frameworks."
+        description="Our offering, billing and support at a glance."
       />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        {certificateBadges.map((badge, idx) => {
+        {serviceFacts.map((badge, idx) => {
           const Icon = badge.icon;
           return (
             <motion.div

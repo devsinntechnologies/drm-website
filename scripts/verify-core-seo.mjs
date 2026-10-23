@@ -181,12 +181,12 @@ try {
   assert((await robots.text()).includes("Sitemap: https://diginizam.com/sitemap.xml"));
   const sitemap = await context.request.get(base + "/sitemap.xml");
   assert.equal(sitemap.status(), 200);
-  const xml = await sitemap.text();
+  const xml = (await sitemap.text()).replace(/\r\n/g, "\n");
   assert(!xml.includes("/thank-you"));
   for (const route of Object.keys(fixture.pages)) {
     assert(xml.includes(`<loc>https://diginizam.com${route}</loc>\n    <lastmod>2026-10-22</lastmod>`));
   }
-  result.crawlFiles = "Local robots and sitemap passed; only five meaningful content dates changed";
+  result.crawlFiles = "Local robots and sitemap passed; five core revision dates retained";
   await context.close();
 
   for (const width of [360, 430]) {

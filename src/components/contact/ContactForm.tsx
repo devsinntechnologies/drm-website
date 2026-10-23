@@ -156,7 +156,7 @@ export default function ContactForm() {
         >
           <form ref={form} onSubmit={sendEmail} className="surface-card p-6 sm:p-8" noValidate>
             <h3 className="type-card-title text-foreground mb-1">Send a message</h3>
-            <p className="type-body text-muted mb-6">Fill in the form and we&apos;ll get back to you shortly.</p>
+            <p className="type-body text-muted mb-6">Tell our team about your business and the help you need.</p>
 
             <div className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

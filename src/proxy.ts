@@ -40,10 +40,14 @@ export function proxy(req: NextRequest) {
       const demoUrl = req.nextUrl.clone();
       demoUrl.pathname = "/demo";
       demoUrl.search = "";
-      return NextResponse.redirect(demoUrl);
+      const redirect = NextResponse.redirect(demoUrl);
+      // Expose noindex even when the success gate prevents HTML rendering.
+      redirect.headers.set("X-Robots-Tag", "noindex, nofollow");
+      return redirect;
     }
 
     const res = NextResponse.next();
+    res.headers.set("X-Robots-Tag", "noindex, nofollow");
     res.cookies.set({
       name: DEMO_SUCCESS_COOKIE,
       value: "",

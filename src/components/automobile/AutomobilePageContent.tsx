@@ -39,7 +39,7 @@ const autoFaqs: FaqItem[] = [
   },
   {
     q: "Does auto parts POS include tax and financial reports?",
-    a: "DigiNizam includes financial and tax reporting tools, including FBR-ready reports where configured for your setup.",
+    a: "Review the sales, inventory and operating reports available in your selected DigiNizam configuration. Confirm local tax-reporting obligations separately.",
   },
   {
     q: "What features should auto parts POS software have?",
@@ -70,7 +70,7 @@ const autoModules = [
   },
   {
     title: "Financial & Tax Reports",
-    desc: "Comprehensive profit/loss, daily cash registers, expense registers, and automated FBR tax reports.",
+    desc: "Review the sales, inventory and operating reports available in your selected setup.",
     icon: <FiBarChart2 size={20} />
   },
   {
@@ -82,7 +82,7 @@ const autoModules = [
 
 export default function AutomobilePageContent() {
   return (
-    <main className="min-h-screen bg-surface text-foreground">
+    <div className="min-h-screen bg-surface text-foreground">
       <JsonLd data={faqJsonLd(autoFaqs)} />
 
       {/* 1. Hero Section (Video Background) - Resized Blue Overlay Text & Compact Height */}
@@ -186,7 +186,7 @@ export default function AutomobilePageContent() {
                   <FiCheckCircle className="text-primary" size={18} /> Workshop Repair Job Cards &amp; Labor Tracking
                 </li>
                 <li className="flex items-center gap-3">
-                  <FiCheckCircle className="text-primary" size={18} /> FBR Fiscal Integration &amp; Multi-Branch Sync
+                  <FiCheckCircle className="text-primary" size={18} /> Review billing &amp; branch requirements
                 </li>
               </ul>
             </motion.div>
@@ -274,6 +274,6 @@ export default function AutomobilePageContent() {
       {/* 6. Certificates / Memberships / Achievements Section - Background: bg-surface */}
       <ProductCertificates bgLight={false} />
 
-    </main>
+    </div>
   );
 }

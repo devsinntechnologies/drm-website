@@ -10,7 +10,7 @@ import Button from "@/components/ui/Button";
 
 export default function HrDigitalizationContent() {
   return (
-    <main className="min-h-screen bg-surface text-foreground">
+    <div className="min-h-screen bg-surface text-foreground">
 
       {/* 1. Hero Section (Video Background) - Resized Blue Overlay Text & Compact Height */}
       <section className="relative w-full h-[60vh] min-h-[400px] max-h-[560px] overflow-hidden bg-black hero-section border-b border-surface-border">
@@ -265,6 +265,6 @@ export default function HrDigitalizationContent() {
         vision="Become the leading HRIS platform for businesses across Pakistan modernizing their human capital management."
       />
 
-    </main>
+    </div>
   );
 }

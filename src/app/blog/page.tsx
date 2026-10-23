@@ -12,9 +12,9 @@ export const metadata: Metadata = pageMetadata({
 
 export default function BlogPage() {
   return (
-    <main className="bg-background">
+    <div className="bg-background">
       <BlogHero />
       <BlogGrid />
-    </main>
+    </div>
   );
 }

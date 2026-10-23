@@ -2,30 +2,30 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { FiZap, FiShield, FiTrendingUp, FiLifeBuoy } from "react-icons/fi";
+import { FiMonitor, FiMessageCircle, FiGlobe, FiLifeBuoy } from "react-icons/fi";
 import SectionShell from "@/components/common/SectionShell";
 import SectionHeader from "@/components/common/SectionHeader";
 
 const reasons = [
   {
-    icon: FiZap,
-    title: "Fast onboarding",
-    desc: "Guided setup so your team goes live quickly—with training included.",
+    icon: FiMonitor,
+    title: "Start with a demo",
+    desc: "Review the workflows relevant to your business before deciding how to proceed.",
   },
   {
-    icon: FiShield,
-    title: "FBR-ready & secure",
-    desc: "Compliant invoicing and enterprise-grade data protection built in.",
+    icon: FiMessageCircle,
+    title: "Discuss your requirements",
+    desc: "Confirm your selected configuration and agree on pricing after the demo.",
   },
   {
-    icon: FiTrendingUp,
-    title: "Built to scale",
-    desc: "From single outlet to multi-branch chains on one connected platform.",
+    icon: FiGlobe,
+    title: "Serving customers globally",
+    desc: "Tell our team about your industry, locations and business needs.",
   },
   {
     icon: FiLifeBuoy,
-    title: "Real human support",
-    desc: "Dedicated specialists—not bots—when operations cannot wait.",
+    title: "24/7 support",
+    desc: "Contact DigiNizam for help with your setup and day-to-day questions.",
   },
 ];
 

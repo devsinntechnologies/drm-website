@@ -39,7 +39,7 @@ export default function PartnerPageContent() {
   };
 
   return (
-    <main className="bg-background">
+    <div className="bg-background">
       <PageHero
         label="Partner program"
         title={
@@ -133,6 +133,6 @@ export default function PartnerPageContent() {
       </SectionShell>
 
       <SiteCTA title="Want to see the product first?" description="Book a demo before joining the partner program." />
-    </main>
+    </div>
   );
 }

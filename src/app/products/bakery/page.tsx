@@ -20,7 +20,7 @@ export default function BakerySolutionPage() {
           POS built for <span className="text-primary">bakeries & sweet shops</span>
         </>
       }
-      description="Weight-based billing, expiry alerts, label printing, and FBR-ready checkout for bakeries across Pakistan."
+      description="Review billing, stock and checkout requirements for your bakery. Confirm weight entry, expiry controls and label printing in your selected configuration."
       heroMedia={{ type: "video", src: "/bakery.mp4" }}
       overview={{
         title: (
@@ -50,7 +50,7 @@ export default function BakerySolutionPage() {
         { title: "Point of sale", desc: "Fast touchscreen checkout with barcode and weight entry.", icon: <FiLayers size={20} /> },
         { title: "Label printing", desc: "Print price tags, packaging stickers, and shelf labels.", icon: <FiPrinter size={20} /> },
         { title: "Supplier management", desc: "Purchase orders, deliveries, and reorder lists.", icon: <FiTruck size={20} /> },
-        { title: "Financial & tax reports", desc: "P&L, cash registers, and FBR tax reporting.", icon: <FiBarChart2 size={20} /> },
+        { title: "Business reports", desc: "Review the sales, inventory and operating reports available in your selected setup.", icon: <FiBarChart2 size={20} /> },
         { title: "Multi-store cloud sync", desc: "Control branches from one centralized dashboard.", icon: <FiGlobe size={20} /> },
       ]}
       cta={{

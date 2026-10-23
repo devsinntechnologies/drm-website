@@ -6,15 +6,15 @@ import { motion } from "framer-motion";
 import SectionShell from "@/components/common/SectionShell";
 import SectionHeader from "@/components/common/SectionHeader";
 
-const clienteleLogos = [
-  { name: "Retail Mart", logo: "/retailstore.png" },
-  { name: "Supermart Express", logo: "/supermarket.png" },
-  { name: "Fast Food Chain", logo: "/fastfood.png" },
-  { name: "Coffee House", logo: "/coffeeshop.png" },
-  { name: "Pharmacy Plus", logo: "/pharmacy.png" },
-  { name: "Book Hub", logo: "/bookstore.png" },
-  { name: "Boutique & Co", logo: "/boutique.png" },
-  { name: "Auto Spare World", logo: "/AutoParts.png" },
+const industries = [
+  { name: "Retail stores", logo: "/retailstore.png" },
+  { name: "Supermarkets", logo: "/supermarket.png" },
+  { name: "Restaurants", logo: "/fastfood.png" },
+  { name: "Cafés", logo: "/coffeeshop.png" },
+  { name: "Pharmacies", logo: "/pharmacy.png" },
+  { name: "Book stores", logo: "/bookstore.png" },
+  { name: "Apparel stores", logo: "/boutique.png" },
+  { name: "Auto parts stores", logo: "/AutoParts.png" },
 ];
 
 export default function ProductClientele({ bgLight = true }: { bgLight?: boolean }) {
@@ -22,17 +22,17 @@ export default function ProductClientele({ bgLight = true }: { bgLight?: boolean
     <SectionShell tone={bgLight ? "surface" : "background"}>
       <SectionHeader
         align="center"
-        label="Our clientele"
+        label="Industry solutions"
         title={
           <>
-            Trusted by businesses across <span className="text-primary">Pakistan</span>
+            Solutions for different <span className="text-primary">businesses</span>
           </>
         }
-        description="Retail outlets, chains, and growing brands rely on DigiNizam every day."
+        description="Explore supported industries and discuss the setup relevant to your business."
       />
 
       <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 items-center justify-center">
-        {clienteleLogos.map((client, idx) => (
+        {industries.map((client, idx) => (
           <motion.div
             key={client.name}
             initial={{ opacity: 0, scale: 0.95 }}

@@ -7,7 +7,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "Message sent | DigiNizam",
   description:
-    "Your DigiNizam contact message was received. Our team will reply shortly.",
+    "Your DigiNizam contact message was received. Our team will reply using the details you provided.",
   path: "/contact/thank-you",
   index: false,
 });
@@ -19,9 +19,9 @@ export default function ContactThankYouPage() {
       redirectTo="/contact"
       leadSource="contact"
     >
-      <main className="bg-background">
+      <div className="bg-background">
         <ContactThankYouContent />
-      </main>
+      </div>
     </ThankYouGate>
   );
 }

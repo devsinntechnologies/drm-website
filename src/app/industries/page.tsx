@@ -6,7 +6,7 @@ import { pageMetadata } from '@/lib/seo';
 export const metadata: Metadata = pageMetadata({
   title: "Industries We Serve | DigiNizam POS & ERP",
   description:
-    "DigiNizam POS and ERP solutions tailored for restaurants, retail, pharmacy, supermarkets, and more industries across Pakistan.",
+    "Explore DigiNizam POS and business management solutions for retail, restaurants, pharmacies, distribution and other supported industries worldwide.",
   path: "/industries",
 });
 

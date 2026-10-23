@@ -42,7 +42,7 @@ const FeaturesKDS = () => {
             viewport={{ once: true }}
             className="lg:col-span-3 flex flex-col gap-2"
           >
-            <span className="text-[10px] font-bold text-primary uppercase tracking-[0.2em] mb-3">DRM Ecosystem</span>
+            <span className="text-[10px] font-bold text-primary uppercase tracking-[0.2em] mb-3">DigiNizam Ecosystem</span>
             {tabs.map((tab, i) => (
               <motion.div 
                 key={i} 

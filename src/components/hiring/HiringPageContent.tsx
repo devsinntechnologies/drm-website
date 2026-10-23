@@ -34,13 +34,13 @@ const openings = [
 const perks = [
   "Competitive salary & growth path",
   "Hands-on product training",
-  "Work with 500+ retail brands",
+  "Work on retail and business management software",
   "Collaborative engineering culture",
 ];
 
 export default function HiringPageContent() {
   return (
-    <main className="bg-background">
+    <div className="bg-background">
       <PageHero
         label="Careers"
         title={
@@ -116,6 +116,6 @@ export default function HiringPageContent() {
       </SectionShell>
 
       <SiteCTA title="Ready to apply?" description="Contact us with your CV and the role you're interested in." />
-    </main>
+    </div>
   );
 }

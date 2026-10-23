@@ -5,9 +5,9 @@ import ProductPageTemplate from "@/components/common/ProductPageTemplate";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Pharmacy POS Software Pakistan | DigiNizam",
+  title: "Pharmacy POS & Inventory Software | DigiNizam",
   description:
-    "Pharmacy POS with batch & expiry tracking, salt alternatives, and FBR/HMRC-compliant billing for pharmacies and medical stores.",
+    "Explore DigiNizam POS for pharmacy billing, inventory and business reports. Book a demo to discuss your medical store's requirements and selected configuration.",
   path: "/products/pharmacy",
 });
 
@@ -20,38 +20,36 @@ export default function PharmacySolutionPage() {
           Smart POS for <span className="text-primary">pharmacies & medical stores</span>
         </>
       }
-      description="Batch tracking, salt alternatives, FBR and HMRC invoicing, and multi-branch inventory—built for Pakistan and UK pharmacy workflows."
-      heroMedia={{ type: "video", src: "/heropharmacy.mp4" }}
+      description="Explore billing, inventory and business reports for your pharmacy or medical store. Review the available workflows in your selected configuration during a demo."
       overview={{
         title: (
           <>
-            Empower pharmacists with <span className="text-primary">compliant billing</span>
+            Review your pharmacy&apos;s <span className="text-primary">daily operations</span>
           </>
         ),
         description:
-          "Fast prescription dispensing, salt lookup, NHS/EPS or paper Rx intake, and real-time stock—online or offline across branches.",
-        badge: "Cloud & local sync enabled",
-        image: "/Pospharmacy.png",
-        imageAlt: "Pharmacy POS system",
+          "Bring your billing, stock and reporting requirements to a DigiNizam demo. Confirm the available item records, inventory controls and branch setup with our team.",
+        image: "/pharmacy.png",
+        imageAlt: "Illustration of a pharmacy storefront",
       }}
       features={{
-        title: "Built for regulated retail",
-        description: "Expiry control, distributor ledgers, and reports that keep compliance clear.",
+        title: "Plan your pharmacy setup",
+        description: "Confirm the workflows and responsibilities before choosing your configuration.",
         highlights: [
-          "Batch & expiry tracking with alerts",
-          "Pakistan: DRAP schedules, CNIC, GST, JazzCash/EasyPaisa",
-          "UK: GPhC, NHS/EPS, CD schedules, VAT, prescription charge",
+          "Review billing, item records and inventory workflows",
+          "Confirm any batch, expiry or supplier requirements during the demo",
+          "No online payment integration is available",
         ],
         image: "/pharmacy.png",
-        imageAlt: "Pharmacy inventory management",
+        imageAlt: "Illustration of a pharmacy storefront",
       }}
       modules={[
-        { title: "Batch & expiry control", desc: "Track batches and prevent expired stock from reaching customers.", icon: <FiBox size={20} /> },
-        { title: "Alternative salt finder", desc: "Suggest equivalent brands by active salt during billing.", icon: <FiLayers size={20} /> },
-        { title: "Barcode scanning", desc: "Scan boxes, strips, or units with high-speed readers.", icon: <FiPrinter size={20} /> },
-        { title: "Distributor ledger", desc: "Track orders, returns, claims, and credit accounts.", icon: <FiTruck size={20} /> },
-        { title: "Financial & tax reports", desc: "P&L, daily closing, GST for Pakistan and VAT for the UK.", icon: <FiBarChart2 size={20} /> },
-        { title: "Multi-branch cloud sync", desc: "Manage branches and warehouse transfers from one dashboard.", icon: <FiGlobe size={20} /> },
+        { title: "Stock requirements", desc: "Discuss your item records and any batch or expiry controls you need. Confirm what the selected setup supports.", icon: <FiBox size={20} /> },
+        { title: "Item information", desc: "Review the item information available in your configuration during the demo.", icon: <FiLayers size={20} /> },
+        { title: "Billing workflow", desc: "Review billing and receipt requirements, including any hardware you plan to use.", icon: <FiPrinter size={20} /> },
+        { title: "Purchase workflows", desc: "Discuss supplier and receiving requirements and confirm the available functions.", icon: <FiTruck size={20} /> },
+        { title: "Business reports", desc: "Review the sales and inventory reports relevant to your pharmacy. Confirm local regulatory obligations separately.", icon: <FiBarChart2 size={20} /> },
+        { title: "Branch requirements", desc: "Discuss your locations and confirm deployment, connectivity and any synchronization requirements.", icon: <FiGlobe size={20} /> },
       ]}
       cta={{
         title: "See pharmacy POS in action",

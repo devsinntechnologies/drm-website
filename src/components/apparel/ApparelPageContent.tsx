@@ -31,7 +31,7 @@ const apparelModules = [
   },
   {
     title: "Financial & Tax Reports",
-    desc: "Comprehensive profit/loss, daily cash registers, expense registers, and automated FBR tax reports.",
+    desc: "Review the sales, inventory and operating reports available in your selected setup.",
     icon: <FiBarChart2 size={20} />
   },
   {
@@ -43,7 +43,7 @@ const apparelModules = [
 
 export default function ApparelPageContent() {
   return (
-    <main className="min-h-screen bg-surface text-foreground">
+    <div className="min-h-screen bg-surface text-foreground">
 
       {/* 1. Hero Section (Video Background) - Resized Blue Overlay Text & Compact Height */}
       <section className="relative w-full h-[60vh] min-h-[400px] max-h-[560px] overflow-hidden bg-black hero-section border-b border-surface-border">
@@ -143,7 +143,7 @@ export default function ApparelPageContent() {
                   <FiCheckCircle className="text-primary" size={18} /> Return &amp; Exchange Store Credit Handling
                 </li>
                 <li className="flex items-center gap-3">
-                  <FiCheckCircle className="text-primary" size={18} /> FBR Fiscal Integration &amp; Customer Loyalty
+                  <FiCheckCircle className="text-primary" size={18} /> Review billing &amp; reporting requirements
                 </li>
               </ul>
             </motion.div>
@@ -215,6 +215,6 @@ export default function ApparelPageContent() {
       {/* 6. Certificates / Memberships / Achievements Section - Background: bg-surface */}
       <ProductCertificates bgLight={false} />
 
-    </main>
+    </div>
   );
 }

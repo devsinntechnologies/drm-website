@@ -9,8 +9,8 @@ import { PHONE_DISPLAY } from "@/lib/contact";
 
 const faqs = [
   {
-    q: "How quickly will I receive a response?",
-    a: `We typically reply within two business hours on working days. For urgent issues, call ${PHONE_DISPLAY} or message us on WhatsApp.`,
+    q: "How can I contact support?",
+    a: `DigiNizam provides 24/7 support. Call ${PHONE_DISPLAY} or message us on WhatsApp for help with your setup.`,
   },
   {
     q: "Do you offer free demos?",
@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     q: "Which industries do you support?",
-    a: "Restaurants, supermarkets, pharmacies, bakeries, distribution, apparel, and other retail verticals across Pakistan.",
+    a: "Restaurants, supermarkets, pharmacies, bakeries, distribution, apparel, and other supported business workflows. DigiNizam serves customers globally.",
   },
   {
     q: "Can you build a custom solution?",
@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     q: "Is my information secure?",
-    a: "Form submissions are sent securely. We do not share your details with third parties. See our Privacy Policy for more.",
+    a: "See our Privacy Policy for details about how enquiry information is handled. Include only the business details needed for your enquiry.",
   },
 ];
 
