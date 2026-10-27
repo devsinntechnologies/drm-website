@@ -3,9 +3,9 @@ import DistributionPageContent from "@/components/distribution/DistributionPageC
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Distribution & Wholesale ERP Software Pakistan | DigiNizam",
+  title: "Wholesale & Distribution Inventory Software | DigiNizam",
   description:
-    "ERP and distribution management software for wholesale and warehouse operations, with order tracking, supplier ledgers, and multi-branch inventory.",
+    "Explore DigiNizam wholesale inventory software for stock, purchasing and billing. Review item records, locations and distribution requirements in a demo.",
   path: "/products/distribution",
 });
 

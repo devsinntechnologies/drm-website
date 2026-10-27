@@ -6,8 +6,8 @@ import MediaSlot from "@/components/common/MediaSlot";
 import SiteCTA from "@/components/common/SiteCTA";
 import ProductClientele from "@/components/common/ProductClientele";
 import ProductCertificates from "@/components/common/ProductCertificates";
+import IndustryContextLinks from "@/components/common/IndustryContextLinks";
 import SeoFaq from "@/components/seo/SeoFaq";
-import SeoRelatedLinks from "@/components/seo/SeoRelatedLinks";
 import JsonLd from "@/components/seo/JsonLd";
 import { faqJsonLd, type FaqItem } from "@/lib/seo";
 
@@ -26,11 +26,11 @@ const salonFaqs: FaqItem[] = [
   },
   {
     q: "Does DigiNizam include appointment booking and staff commissions?",
-    a: "Appointment booking, staff commissions, memberships and package management are not part of the core salon billing workflow shown here. Ask our team during a demo whether these fit your salon's setup.",
+    a: "Appointment booking, staff commissions, memberships and packages are not included in the core salon billing scope described here. Tell the team if your salon needs those functions so the requirements can be assessed separately before you choose a setup.",
   },
   {
     q: "Can DigiNizam support multiple salon branches?",
-    a: "Yes. DigiNizam supports multi-store setups for connected branch-level sales, stock and reporting.",
+    a: "Yes. DigiNizam supports multi-branch setups for connected branch-level sales, stock and reporting.",
   },
 ];
 
@@ -40,8 +40,8 @@ export default function SalonPageContent() {
       <JsonLd data={faqJsonLd(salonFaqs)} />
       <PageHero
         label="Salon / SPA"
-        title="Salon POS Software in Pakistan for Daily Salon Operations"
-        description="Bring salon service billing, product sales, inventory, payments and branch reporting into one connected DigiNizam POS workflow."
+        title="Salon POS Software for Service Billing & Product Sales"
+        description="Keep service billing, retail product sales and daily reports organised. Review the billable items, stock records and branch requirements for your salon setup."
       />
 
       <SectionCopy
@@ -52,11 +52,10 @@ export default function SalonPageContent() {
         imageBrief="Professional salon reception/cash desk with DigiNizam service + retail product billing screen; elegant salon environment, realistic staff/customer context."
       >
         <p>
-          Salon POS software helps beauty businesses record service and product sales while
-          keeping payments, retail inventory and daily reports organized. DigiNizam focuses on
-          salon billing and retail operations — appointment booking, staff commissions,
-          memberships and package management can be reviewed with our team based on your
-          salon's setup.
+          Salon POS software records service and retail product sales and keeps billing, product
+          stock and business reports organised. DigiNizam focuses on that commercial workflow.
+          Appointment booking, commissions, memberships and packages are separate requirements
+          from the core billing scope described here.
         </p>
       </SectionCopy>
 
@@ -66,7 +65,7 @@ export default function SalonPageContent() {
         steps={[
           "Configure salon services and retail products.",
           "Record service/product sales through the POS.",
-          "Apply supported payment methods or discounts.",
+          "Record payment details and apply supported discounts.",
           "Keep retail product stock connected with sales and purchases.",
           "Review daily sales, stock and branch reports.",
         ]}
@@ -103,10 +102,10 @@ export default function SalonPageContent() {
         </p>
       </SectionCopy>
 
-      <SectionCopy label="Payments" title="Flexible Payments, Discounts & Offers">
+      <SectionCopy label="Payments" title="Payment Records and Supported Discounts">
         <p>
-          Use supported payment options and discounts during checkout so salon teams can handle
-          everyday customer billing without maintaining separate manual discount records.
+          Record payment details and the discounts available in the selected checkout
+          configuration. DigiNizam does not provide online payment integration.
         </p>
       </SectionCopy>
 
@@ -120,15 +119,16 @@ export default function SalonPageContent() {
 
       <SectionCopy label="Multi-branch" title="Multi-Branch Visibility for Salon Groups">
         <p>
-          For salons operating more than one location, DigiNizam supports multi-store visibility
-          so owners can review branch-level sales, stock and reports from a connected setup.
+          For salons operating more than one location, DigiNizam supports multi-branch
+          visibility so owners can review branch-level sales, stock and reports from a connected
+          setup.
         </p>
       </SectionCopy>
 
       <SectionCopy label="Fit" title="Who Is DigiNizam Salon / SPA For?" reverse>
         <p>
           Beauty salons, barbershops and spas that need organized billing, product inventory,
-          payments and multi-branch reporting from one POS platform.{" "}
+          payment records and reporting from one POS platform.{" "}
           <Link href="/demo" className="text-primary font-semibold hover:underline">
             Book a demo
           </Link>{" "}
@@ -136,15 +136,13 @@ export default function SalonPageContent() {
         </p>
       </SectionCopy>
 
-      <SeoRelatedLinks
-        intro="Related pages:"
-        links={[
-          { href: "/", label: "POS software Pakistan" },
-          { href: "/features", label: "salon inventory software" },
-          { href: "/pricing", label: "POS software pricing in Pakistan" },
-          { href: "/demo", label: "book a DigiNizam demo" },
-        ]}
-      />
+      <SectionCopy label="Your setup" title="Discuss Your Business Setup">
+        <p>
+          Salons, barbershops and spas in Pakistan can review service billing and retail product
+          inventory with DigiNizam. Confirm any booking or commission requirements separately.
+        </p>
+        <IndustryContextLinks />
+      </SectionCopy>
 
       <SeoFaq
         label="Salon POS"
@@ -154,8 +152,9 @@ export default function SalonPageContent() {
       />
 
       <SiteCTA
-        title="See DigiNizam for Your Salon or Spa"
-        description="Book a free demo to review billing, product inventory, payments, reports and the exact modules available for your salon or spa workflow."
+        title="Review DigiNizam for Your Salon"
+        description="Book a demo to review service billing, retail product inventory and reports. Pricing is discussed after the demo, once requirements are understood."
+        primaryCtaLabel="Book a Demo"
       />
       <ProductClientele bgLight={true} />
       <ProductCertificates bgLight={false} />

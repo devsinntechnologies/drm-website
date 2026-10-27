@@ -2,13 +2,14 @@
 
 import React from "react";
 import Image from "next/image";
-import { FiClock, FiShield, FiSmartphone, FiAward, FiCheckCircle, FiTrendingUp, FiServer, FiBox, FiLayers, FiPrinter, FiTruck, FiBarChart2, FiGlobe } from "react-icons/fi";
+import { FiCheckCircle, FiBox, FiLayers, FiPrinter, FiTruck, FiBarChart2, FiGlobe } from "react-icons/fi";
 import { motion } from "framer-motion";
 import ProductClientele from "@/components/common/ProductClientele";
 import ProductCertificates from "@/components/common/ProductCertificates";
 import ProductCTA from "@/components/common/ProductCTA";
+import SectionCopy from "@/components/common/SectionCopy";
+import IndustryContextLinks from "@/components/common/IndustryContextLinks";
 import SeoFaq from "@/components/seo/SeoFaq";
-import SeoRelatedLinks from "@/components/seo/SeoRelatedLinks";
 import JsonLd from "@/components/seo/JsonLd";
 import { faqJsonLd, type FaqItem } from "@/lib/seo";
 
@@ -27,15 +28,15 @@ const bookFaqs: FaqItem[] = [
   },
   {
     q: "Does DigiNizam support ISBN barcode billing?",
-    a: "DigiNizam supports ISBN barcode and label workflows where configured in the bookshop setup. Confirm the exact hardware and checkout setup during a demo.",
+    a: "Yes. Scanning a book's barcode or ISBN finds the matching book in your DigiNizam catalogue for billing. Confirm your scanner and label requirements during the demo. Scanning an ISBN does not itself import book information from an external catalogue.",
   },
   {
     q: "Can book store POS manage publishers and purchases?",
-    a: "Yes. DigiNizam includes purchase and publisher management workflows that connect ordering and goods receipt with inventory records.",
+    a: "Yes. DigiNizam includes supplier and purchase records, so publisher orders and goods receipt connect with inventory records.",
   },
   {
     q: "Does DigiNizam support low-stock monitoring for bookstores?",
-    a: "DigiNizam includes low-stock monitoring to help teams identify titles that may need replenishment.",
+    a: "Yes. DigiNizam includes low-stock alerts to help teams identify titles that may need replenishment.",
   },
   {
     q: "Can DigiNizam manage multiple bookshop branches?",
@@ -43,41 +44,44 @@ const bookFaqs: FaqItem[] = [
   },
   {
     q: "What features should book store POS software have?",
-    a: "Important features include fast billing, catalogue inventory, ISBN barcode checkout, publisher purchases, reports and multi-branch visibility.",
+    a: "Compare book item records, catalogue search, sales, inventory, purchasing, barcodes and reports. Check the fields needed for titles and editions, and confirm any ISBN lookup or external database integration separately. Bookstore sales software does not imply library lending or publishing production.",
+  },
+  {
+    q: "Does DigiNizam automatically import book details from an ISBN?",
+    a: "Automatic book-data import is not included in the scope described here. A barcode or ISBN can identify a configured item, but retrieving author, publisher, cover or price information from an external database is a separate integration to confirm.",
   },
 ];
-import { FiClock as IconClock, FiShield as IconShield, FiSmartphone as IconSmartphone, FiAward as IconAward, FiCheckCircle as IconCheckCircle, FiServer as IconServer, FiBox as IconBox, FiLayers as IconLayers, FiPrinter as IconPrinter, FiTruck as IconTruck, FiBarChart2 as IconBarChart2, FiGlobe as IconGlobe } from "react-icons/fi";
 
 const bookModules = [
   {
-    title: "Inventory Control",
-    desc: "Real-time stock tracking, edition-wise monitoring, and automated low-stock alerts.",
-    icon: <IconBox size={20} />
+    title: "Inventory records",
+    desc: "Review item fields, stock movements and the locations available in the selected configuration.",
+    icon: <FiBox size={20} />
   },
   {
-    title: "Point of Sale (POS)",
-    desc: "Lightning-fast touchscreen checkouts, ISBN barcode gun support, holding bills, and flexible discounts.",
-    icon: <IconLayers size={20} />
+    title: "Billing workflow",
+    desc: "Review item lookup, sales, invoices and any supported discount or return actions.",
+    icon: <FiLayers size={20} />
   },
   {
-    title: "Barcode & Label Printing",
-    desc: "Generate and print custom ISBN barcode labels, price tags, and shelf talkers instantly from the system.",
-    icon: <IconPrinter size={20} />
+    title: "Barcode and labels",
+    desc: "Confirm barcode formats, scanner compatibility and label fields using your product examples.",
+    icon: <FiPrinter size={20} />
   },
   {
-    title: "Purchase & Publisher Management",
-    desc: "Manage publisher ledgers, purchase orders, goods receiving notes, and automated reorder sheets.",
-    icon: <IconTruck size={20} />
+    title: "Purchasing records",
+    desc: "Review supplier records, purchasing and receiving steps available in your setup.",
+    icon: <FiTruck size={20} />
   },
   {
-    title: "Financial & Tax Reports",
-    desc: "Review the sales, inventory and operating reports available in your selected setup.",
-    icon: <IconBarChart2 size={20} />
+    title: "Business reports",
+    desc: "Review the sales, stock and purchasing reports available in your selected configuration. Confirm local tax obligations separately.",
+    icon: <FiBarChart2 size={20} />
   },
   {
-    title: "Multi-Store & Cloud Sync",
-    desc: "Control multiple branches or warehouse outlets from a single centralized real-time cloud dashboard.",
-    icon: <IconGlobe size={20} />
+    title: "Locations and connectivity",
+    desc: "Confirm the locations, user access and connectivity needed for your selected setup.",
+    icon: <FiGlobe size={20} />
   }
 ];
 
@@ -102,14 +106,23 @@ export default function BooksPageContent() {
             className="max-w-5xl mx-auto"
           >
             <h1 className="hero-title text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-primary tracking-wide drop-shadow-2xl max-w-4xl mx-auto">
-              Book Store POS Software in Pakistan for Billing &amp; Inventory Management
+              Bookstore POS Software for Billing &amp; Catalogue Inventory
             </h1>
             <p className="mt-4 text-sm sm:text-base text-white/90 max-w-2xl mx-auto leading-relaxed drop-shadow-lg">
-              Connect bookshop billing, catalogue inventory, ISBN barcode checkout, publisher purchases and branch reporting in one retail POS workflow.
+              Keep bookshop sales, catalogue items and stock records connected. Review supplier purchases, barcode requirements and daily reports for your store.
             </p>
           </motion.div>
         </div>
       </section>
+
+      <SectionCopy label="Overview" title="What Is Bookstore POS Software?">
+        <p>
+          Bookstore POS software records book sales and connects them with catalogue inventory,
+          purchasing and reports. An ISBN can identify a book edition, while a barcode can
+          retrieve a matching configured item. Automatic import from an external book database
+          is a separate integration.
+        </p>
+      </SectionCopy>
 
       {/* 2. Solution Overview Section - Background: bg-surface */}
       <section className="py-4 md:py-6 bg-surface border-b border-surface-border relative overflow-hidden">
@@ -126,17 +139,14 @@ export default function BooksPageContent() {
               SOLUTION OVERVIEW
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-foreground tracking-tight">
-              Empower your <span className="text-primary">bookstore staff</span> with SRB
+              Bookshop Billing and <span className="text-primary">Catalogue Records</span>
             </h2>
             <p className="text-muted text-xs sm:text-sm leading-relaxed mt-2 mb-3 font-normal">
-              High-speed receipt printing, seamless counter billing, and real-time sales reporting all in one place. Built on a complete POS infrastructure that supports both local operations and cloud synchronization.
+              Keep book sales, catalogue items and stock records connected. Review purchasing and reports using the books and stationery your shop sells.
             </p>
             <p className="text-muted text-xs sm:text-sm leading-relaxed mb-4 font-normal">
-              Empower booksellers and inventory managers with lightning-fast ISBN barcode scanning, multi-terminal connectivity, offline backup support, and instantaneous checkout flows to handle rush hours effortlessly. Book store POS software connects billing with catalogue inventory, publisher purchasing and reporting so teams can manage daily bookshop sales from one system.
+              Bring sample ISBN and barcode labels to review item lookup and billing. Confirm the supported scanners and item fields in the selected setup.
             </p>
-            <div className="inline-flex items-center gap-2 text-xs font-bold text-primary bg-primary/10 border border-primary/20 px-4 py-2.5 rounded-xl">
-              <IconServer size={16} /> Cloud &amp; Local Sync Enabled
-            </div>
           </motion.div>
 
           <motion.div
@@ -148,7 +158,7 @@ export default function BooksPageContent() {
           >
             <Image
               src="/POSbook2.jpg"
-              alt="Empower Bookstore Staff and High-Speed Checkout"
+              alt="Customer browsing shelves in a bookshop"
               width={420}
               height={280}
               className="w-auto max-h-[300px] object-contain rounded-xl shadow-lg"
@@ -171,23 +181,23 @@ export default function BooksPageContent() {
                 SOLUTION KEY FEATURES
               </span>
               <h2 className="text-2xl sm:text-3xl font-bold text-foreground tracking-tight">
-                Designed for Modern <span className="text-primary">Bookshops &amp; Publishers</span>
+                Review Your <span className="text-primary">Bookshop Workflow</span>
               </h2>
               <p className="text-muted text-xs sm:text-sm font-normal leading-relaxed mt-2 mb-2.5">
-                Everything you need to run bookstores, publisher houses, and academic libraries efficiently.
+                Review book titles, editions and other shop items alongside purchases, sales and stock records. Keep bookselling requirements distinct from library lending or publishing production.
               </p>
               <p className="text-muted text-xs sm:text-sm font-normal leading-relaxed mb-4">
-                Our comprehensive retail suite adapts to your store layout, offering robust inventory modules, flexible pricing rules, automated purchase ordering, and integrated ISBN scanning support.
+                A stored ISBN or scanned barcode identifies a configured catalogue item. It does not automatically import author, publisher, cover or price information from an external database. Confirm any required catalogue fields or integrations separately.
               </p>
               <ul className="space-y-2 text-xs sm:text-sm text-muted font-bold">
                 <li className="flex items-center gap-3">
-                  <IconCheckCircle className="text-primary" size={18} /> Instant ISBN Lookup &amp; Barcode Billing
+                  <FiCheckCircle className="text-primary" size={18} /> Book catalogue and item records
                 </li>
                 <li className="flex items-center gap-3">
-                  <IconCheckCircle className="text-primary" size={18} /> Author, Genre &amp; Academic Cataloging
+                  <FiCheckCircle className="text-primary" size={18} /> Barcode and ISBN requirements
                 </li>
                 <li className="flex items-center gap-3">
-                  <IconCheckCircle className="text-primary" size={18} /> Review billing &amp; reporting requirements
+                  <FiCheckCircle className="text-primary" size={18} /> Purchasing and report requirements
                 </li>
               </ul>
             </motion.div>
@@ -200,10 +210,10 @@ export default function BooksPageContent() {
               className="flex justify-center"
             >
               <Image
-                src="/posbook3.jpg"
-                alt="Designed for Modern Bookshops and Publishers POS System"
-                width={420}
-                height={280}
+                src="/POSBOOK.png"
+                alt="Illustration of a bookshop counter with a POS screen, receipt printer and barcode scanner"
+                width={280}
+                height={420}
                 className="w-auto max-h-[300px] object-contain rounded-xl shadow-lg"
               />
             </motion.div>
@@ -219,11 +229,8 @@ export default function BooksPageContent() {
               OUR MODULES
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-foreground tracking-tight">
-              Explore Our Powerful <span className="text-primary">Bookshop Modules</span>
+              Bookshop <span className="text-primary">Workflows to Review</span>
             </h2>
-            <p className="text-muted text-xs sm:text-sm font-normal mt-1">
-              Designed to handle every operational department of your bookstore and publishing house seamlessly under one roof.
-            </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -251,24 +258,27 @@ export default function BooksPageContent() {
         </div>
       </section>
 
-      <SeoRelatedLinks
-        intro="Related pages:"
-        links={[
-          { href: "/pricing", label: "POS software pricing" },
-          { href: "/demo", label: "Book a book store POS demo" },
-          { href: "/products/retail", label: "Retail POS software" },
-        ]}
-      />
+      <SectionCopy label="Your setup" title="Discuss Your Business Setup" reverse>
+        <p>
+          Bookshops in Pakistan can review catalogue items, supplier purchases and billing with
+          DigiNizam. Confirm ISBN handling and hardware using sample books during the demo.
+        </p>
+        <IndustryContextLinks peer="retail" />
+      </SectionCopy>
 
       <SeoFaq
         label="Book Store POS"
         title="Bookshop software questions"
-        description="Direct answers for common book store and publisher retail software questions."
+        description="Direct answers for common book store software questions."
         items={bookFaqs}
       />
 
       {/* 5. Our Clientele Section - Background: bg-surface */}
-      <ProductCTA />
+      <ProductCTA
+        title="Review DigiNizam for Your Bookshop"
+        description="Book a demo to review bookshop billing, catalogue records, purchasing and reports. Pricing is discussed after the demo, once requirements are understood."
+        primaryCtaLabel="Book a Demo"
+      />
 
       <ProductClientele bgLight={true} />
 

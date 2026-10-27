@@ -3,9 +3,9 @@ import SnookerPageContent from "@/components/snooker/SnookerPageContent";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Snooker & Pool Club POS Software Pakistan | DigiNizam",
+  title: "Snooker Club Management & Billing Software | DigiNizam",
   description:
-    "POS software for snooker and pool clubs with per-table and per-branch pricing, session timing, and daily billing built for club operations.",
+    "Explore DigiNizam snooker club software for table sessions, game billing and receipts. Review Single, Double and timed Century workflows in a demo.",
   path: "/products/snooker",
 });
 

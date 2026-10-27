@@ -3,9 +3,9 @@ import ManufacturingPageContent from "@/components/manufacturing/ManufacturingPa
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Manufacturing Inventory Software Pakistan | DigiNizam",
+  title: "Manufacturing Inventory Software | DigiNizam",
   description:
-    "Connect manufacturing inventory, purchasing, warehouse stock, sales, invoicing and reporting with DigiNizam business software for Pakistan.",
+    "Explore DigiNizam inventory software for manufacturers managing materials, finished goods, purchasing and invoices. Review the available stock workflow in a demo.",
   path: "/products/manufacturing",
 });
 

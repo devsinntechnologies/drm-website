@@ -2,41 +2,56 @@
 
 import React from "react";
 import Image from "next/image";
-import { FiClock, FiShield, FiSmartphone, FiAward, FiCheckCircle, FiTrendingUp, FiServer, FiBox, FiLayers, FiPrinter, FiTruck, FiBarChart2, FiGlobe } from "react-icons/fi";
+import { FiCheckCircle, FiBox, FiLayers, FiPrinter, FiTruck, FiBarChart2, FiGlobe } from "react-icons/fi";
 import { motion } from "framer-motion";
 import ProductClientele from "@/components/common/ProductClientele";
 import ProductCertificates from "@/components/common/ProductCertificates";
 import ProductCTA from "@/components/common/ProductCTA";
+import SectionCopy from "@/components/common/SectionCopy";
+import IndustryContextLinks from "@/components/common/IndustryContextLinks";
+import SeoFaq from "@/components/seo/SeoFaq";
+import type { FaqItem } from "@/lib/seo";
+
+const apparelFaqs: FaqItem[] = [
+  {
+    q: "How should a clothing store organise size and colour inventory?",
+    a: "A clothing catalogue needs to distinguish the items that staff sell and count. Size, colour, style and edition of a product may require separate item records or supported variant fields. Review your actual catalogue in DigiNizam to confirm how stock, labels, sales and returns are recorded.",
+  },
+  {
+    q: "Which apparel variants, returns and barcode workflows does DigiNizam support?",
+    a: "The selected configuration determines the available item fields, barcode formats and return actions. Review a clothing sale, return and stock update using sample sizes and colours in the demo. A matrix, store-credit system or automated reorder module is not implied by this page.",
+  },
+];
 
 const apparelModules = [
   {
-    title: "Inventory Control",
-    desc: "Real-time stock tracking, size/color variant mapping, and automated low-stock alerts.",
+    title: "Inventory records",
+    desc: "Review item fields, stock movements and the locations available in the selected configuration.",
     icon: <FiBox size={20} />
   },
   {
-    title: "Point of Sale (POS)",
-    desc: "Lightning-fast touchscreen checkouts, barcode scanning, holding bills, and flexible discounts.",
+    title: "Billing workflow",
+    desc: "Review item lookup, sales, invoices and any supported discount or return actions.",
     icon: <FiLayers size={20} />
   },
   {
-    title: "Barcode & Label Printing",
-    desc: "Generate and print custom clothing price tags, barcode stickers, and hanging labels instantly.",
+    title: "Barcode and labels",
+    desc: "Confirm barcode formats, scanner compatibility and label fields using your product examples.",
     icon: <FiPrinter size={20} />
   },
   {
-    title: "Purchase & Supplier Management",
-    desc: "Manage vendor ledgers, purchase orders, apparel shipments, and automated reorder schedules.",
+    title: "Purchasing records",
+    desc: "Review supplier records, purchasing and receiving steps available in your setup.",
     icon: <FiTruck size={20} />
   },
   {
-    title: "Financial & Tax Reports",
-    desc: "Review the sales, inventory and operating reports available in your selected setup.",
+    title: "Business reports",
+    desc: "Review the sales, stock and purchasing reports available in your selected configuration. Confirm local tax obligations separately.",
     icon: <FiBarChart2 size={20} />
   },
   {
-    title: "Multi-Store & Cloud Sync",
-    desc: "Control multiple clothing store branches or retail outlets from a single centralized real-time cloud dashboard.",
+    title: "Locations and connectivity",
+    desc: "Confirm the locations, user access and connectivity needed for your selected setup.",
     icon: <FiGlobe size={20} />
   }
 ];
@@ -60,12 +75,24 @@ export default function ApparelPageContent() {
             transition={{ duration: 0.6 }}
             className="max-w-5xl mx-auto"
           >
-            <h1 className="hero-title text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase leading-none text-primary tracking-wide drop-shadow-2xl">
-              APPAREL &amp; GARMENTS
+            <h1 className="hero-title text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-primary tracking-wide drop-shadow-2xl max-w-4xl mx-auto">
+              Apparel POS Software for Clothing Stores &amp; Boutiques
             </h1>
+            <p className="mt-4 text-sm sm:text-base text-white/90 max-w-2xl mx-auto leading-relaxed drop-shadow-lg">
+              Bring clothing store billing, item records and stock activity together. Review the size, colour, barcode and purchasing requirements for your apparel setup.
+            </p>
           </motion.div>
         </div>
       </section>
+
+      <SectionCopy label="Overview" title="What Is Apparel POS Software?">
+        <p>
+          Apparel POS software records clothing sales and connects them with item inventory,
+          purchasing and reports. Size, colour and style can affect how a clothing retailer
+          organises its catalogue. Confirm the fields, item structure and checkout actions
+          available in the selected DigiNizam setup.
+        </p>
+      </SectionCopy>
 
       {/* 2. Solution Overview Section - Background: bg-surface */}
       <section className="py-4 md:py-6 bg-surface border-b border-surface-border relative overflow-hidden">
@@ -82,17 +109,14 @@ export default function ApparelPageContent() {
               SOLUTION OVERVIEW
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-foreground tracking-tight">
-              Empower your <span className="text-primary">apparel store staff</span> with SRB
+              Clothing Store Billing and <span className="text-primary">Stock Records</span>
             </h2>
             <p className="text-muted text-xs sm:text-sm leading-relaxed mt-2 mb-3 font-normal">
-              High-speed checkout lanes, cashier accountability tracking, and real-time sales reporting all in one dashboard to maintain smooth operations across busy fashion floors.
+              Keep clothing sales and item inventory organised in one retail workflow. Review the product fields, checkout actions and reports your store needs.
             </p>
             <p className="text-muted text-xs sm:text-sm leading-relaxed mb-4 font-normal">
-              Empower sales associates and cashiers with intuitive touchscreen workflows, holding pending customer bills, split payment management, and offline backup redundancy.
+              Review item entry, sales, returns and purchasing using sample clothing products. Confirm size and colour handling, bill holding and payment recording in the selected configuration.
             </p>
-            <div className="inline-flex items-center gap-2 text-xs font-bold text-primary bg-primary/10 border border-primary/20 px-4 py-2.5 rounded-xl">
-              <FiServer size={16} /> Cloud &amp; Local Sync Enabled
-            </div>
           </motion.div>
 
           <motion.div
@@ -104,7 +128,7 @@ export default function ApparelPageContent() {
           >
             <Image
               src="/apprelgarmentsstaff.jpg"
-              alt="Empower Apparel Store Staff and Counter Operations"
+              alt="Store staff wearing shirts printed with the word Staff"
               width={420}
               height={280}
               className="w-auto max-h-[300px] object-contain rounded-xl shadow-lg"
@@ -127,23 +151,23 @@ export default function ApparelPageContent() {
                 SOLUTION KEY FEATURES
               </span>
               <h2 className="text-2xl sm:text-3xl font-bold text-foreground tracking-tight">
-                Designed for Modern <span className="text-primary">Apparel Stores &amp; Garment Shops</span>
+                Review Your <span className="text-primary">Apparel Store Workflow</span>
               </h2>
               <p className="text-muted text-xs sm:text-sm font-normal leading-relaxed mt-2 mb-2.5">
-                Everything you need to manage clothing inventory, matrix sizes/colors, seasonal collections, and counter checkouts smoothly under peak retail hours.
+                Bring clothing, footwear or accessory examples to the demo. Check how item records, stock, sales and purchases fit your catalogue and store operations.
               </p>
               <p className="text-muted text-xs sm:text-sm font-normal leading-relaxed mb-4">
-                Our comprehensive apparel suite supports barcode scanner integration, multi-variant article management (size, color, design), split payment options, and lightning-fast touch screen billing.
+                Confirm whether sizes and colours use separate item records or supported variant fields. Review barcode labels, exchanges and stock updates without assuming a matrix, store-credit or automated reorder module.
               </p>
               <ul className="space-y-2 text-xs sm:text-sm text-muted font-bold">
                 <li className="flex items-center gap-3">
-                  <FiCheckCircle className="text-primary" size={18} /> Matrix Article Management (Size, Color, Variant)
+                  <FiCheckCircle className="text-primary" size={18} /> Item, size and colour requirements
                 </li>
                 <li className="flex items-center gap-3">
-                  <FiCheckCircle className="text-primary" size={18} /> Return &amp; Exchange Store Credit Handling
+                  <FiCheckCircle className="text-primary" size={18} /> Sales and return workflow review
                 </li>
                 <li className="flex items-center gap-3">
-                  <FiCheckCircle className="text-primary" size={18} /> Review billing &amp; reporting requirements
+                  <FiCheckCircle className="text-primary" size={18} /> Purchasing and report requirements
                 </li>
               </ul>
             </motion.div>
@@ -157,7 +181,7 @@ export default function ApparelPageContent() {
             >
               <Image
                 src="/posgarments.png"
-                alt="Designed for Modern Apparel Stores and Garment Shops POS System"
+                alt="Illustration of a cashier using a DigiNizam clothing product screen on a POS terminal"
                 width={420}
                 height={280}
                 className="w-auto max-h-[300px] object-contain rounded-xl shadow-lg"
@@ -175,11 +199,8 @@ export default function ApparelPageContent() {
               OUR MODULES
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-foreground tracking-tight">
-              Explore Our Powerful <span className="text-primary">Apparel Modules</span>
+              Apparel Store <span className="text-primary">Workflows to Review</span>
             </h2>
-            <p className="text-muted text-xs sm:text-sm font-normal mt-1">
-              Designed to handle every operational department of your clothing store and garment boutique under one roof.
-            </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -207,8 +228,28 @@ export default function ApparelPageContent() {
         </div>
       </section>
 
+      <SectionCopy label="Your setup" title="Discuss Your Business Setup" reverse>
+        <p>
+          Clothing stores and boutiques in Pakistan can review item records, size and colour
+          requirements, purchases and billing in a DigiNizam demo before agreeing on the
+          configuration.
+        </p>
+        <IndustryContextLinks peer="retail" />
+      </SectionCopy>
+
+      <SeoFaq
+        label="Apparel POS"
+        title="Clothing store software questions"
+        description="Direct answers for common apparel and clothing store questions."
+        items={apparelFaqs}
+      />
+
       {/* 5. Our Clientele Section - Background: bg-surface */}
-      <ProductCTA />
+      <ProductCTA
+        title="Review DigiNizam for Your Clothing Store"
+        description="Book a demo to review clothing store billing, catalogue requirements, purchases and stock. Pricing is discussed after the demo, once requirements are understood."
+        primaryCtaLabel="Book a Demo"
+      />
 
       <ProductClientele bgLight={true} />
 

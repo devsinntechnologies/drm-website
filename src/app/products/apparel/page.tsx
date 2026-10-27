@@ -3,9 +3,9 @@ import ApparelPageContent from "@/components/apparel/ApparelPageContent";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Apparel & Garments POS Software Pakistan | DigiNizam",
+  title: "Apparel & Clothing Store POS Software | DigiNizam",
   description:
-    "Explore POS software for apparel stores and garment shops. Discuss size/color inventory, barcode billing and reporting requirements in a DigiNizam demo.",
+    "Review DigiNizam apparel POS for clothing store billing, item inventory and reports. Confirm size, colour, barcode and branch requirements during a demo.",
   path: "/products/apparel",
 });
 

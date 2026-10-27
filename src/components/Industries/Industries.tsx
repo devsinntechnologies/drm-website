@@ -22,7 +22,7 @@ const industries = [
   { name: "Cafés", path: "cafe", desc: "Discuss café orders, billing and day-to-day operations." },
   { name: "Furniture stores", path: "furniture", desc: "Review the setup for furniture sales and inventory." },
   { name: "Supermarkets", path: "supermarket", desc: "Explore supermarket checkout and stock workflows." },
-  { name: "Manufacturing", path: "manufacturing", desc: "Discuss your production and business management requirements." },
+  { name: "Manufacturing", path: "manufacturing", desc: "Discuss materials, finished-goods stock, purchasing and invoicing requirements." },
   { name: "Auto parts stores", path: "automobile", desc: "Explore billing and inventory for automotive parts retail." },
   { name: "Book stores", path: "books", desc: "Review your bookshop's sales and stock requirements." },
   { name: "Snooker clubs", path: "snooker", desc: "Explore the setup for snooker club operations." },

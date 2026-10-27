@@ -3,9 +3,9 @@ import RetailPageContent from "@/components/retail/RetailPageContent";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Retail POS Software in Pakistan | DigiNizam",
+  title: "Retail POS & Inventory Software | DigiNizam",
   description:
-    "DigiNizam retail POS software in Pakistan connects billing, inventory, stock alerts, reporting and multi-store operations in one system. Book a free demo.",
+    "Explore DigiNizam retail POS for billing, inventory and store reports. Review purchasing, branch requirements and your daily workflow in a demo.",
   path: "/products/retail",
 });
 

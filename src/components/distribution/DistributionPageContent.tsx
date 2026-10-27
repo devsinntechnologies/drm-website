@@ -2,41 +2,56 @@
 
 import React from "react";
 import Image from "next/image";
-import { FiClock, FiShield, FiSmartphone, FiAward, FiCheckCircle, FiTrendingUp, FiServer, FiBox, FiLayers, FiPrinter, FiTruck, FiBarChart2, FiGlobe } from "react-icons/fi";
+import { FiCheckCircle, FiBox, FiLayers, FiPrinter, FiTruck, FiBarChart2, FiGlobe } from "react-icons/fi";
 import { motion } from "framer-motion";
 import ProductClientele from "@/components/common/ProductClientele";
 import ProductCertificates from "@/components/common/ProductCertificates";
 import ProductCTA from "@/components/common/ProductCTA";
+import SectionCopy from "@/components/common/SectionCopy";
+import IndustryContextLinks from "@/components/common/IndustryContextLinks";
+import SeoFaq from "@/components/seo/SeoFaq";
+import type { FaqItem } from "@/lib/seo";
+
+const distributionFaqs: FaqItem[] = [
+  {
+    q: "What is the difference between wholesale inventory software and distribution ERP?",
+    a: "Wholesale inventory software connects item stock with purchases, sales and invoices. A distribution ERP may cover broader finance, warehouse, delivery and field-sales processes. DigiNizam's scope here is the inventory, purchasing and billing workflow reviewed in a demo, with additional requirements assessed separately.",
+  },
+  {
+    q: "Which warehouse, purchasing and dispatch functions are included in my DigiNizam setup?",
+    a: "The agreed configuration determines the available item records, stock locations, purchases, receiving, billing and reports. Review those steps with sample documents during the demo. Route planning, fleet tracking, automated audits and third-party logistics integrations are separate requirements to confirm.",
+  },
+];
 
 const distributionModules = [
   {
-    title: "Inventory Control",
-    desc: "Real-time stock tracking across multiple warehouses, batch monitoring, and automated low-stock alerts.",
+    title: "Inventory records",
+    desc: "Review item fields, stock movements and the locations available in the selected configuration.",
     icon: <FiBox size={20} />
   },
   {
-    title: "Point of Sale (POS)",
-    desc: "Lightning-fast counter checkouts, wholesale billing support, holding orders, and custom discounts.",
+    title: "Billing workflow",
+    desc: "Review item lookup, sales, invoices and any supported discount or return actions.",
     icon: <FiLayers size={20} />
   },
   {
-    title: "Barcode & Label Printing",
-    desc: "Generate and print custom pallet tags, box labels, and barcode stickers instantly from the system.",
+    title: "Barcode and labels",
+    desc: "Confirm barcode formats, scanner compatibility and label fields using your product examples.",
     icon: <FiPrinter size={20} />
   },
   {
-    title: "Purchase & Supplier Management",
-    desc: "Manage supplier ledgers, purchase orders, goods receiving notes, and automated reorder schedules.",
+    title: "Purchasing records",
+    desc: "Review supplier records, purchasing and receiving steps available in your setup.",
     icon: <FiTruck size={20} />
   },
   {
-    title: "Financial & Tax Reports",
-    desc: "Review the sales, inventory and operating reports available in your selected setup.",
+    title: "Business reports",
+    desc: "Review the sales, stock and purchasing reports available in your selected configuration. Confirm local tax obligations separately.",
     icon: <FiBarChart2 size={20} />
   },
   {
-    title: "Multi-Store & Cloud Sync",
-    desc: "Control multiple branch warehouses and delivery depots from a single centralized real-time cloud dashboard.",
+    title: "Locations and connectivity",
+    desc: "Confirm the locations, user access and connectivity needed for your selected setup.",
     icon: <FiGlobe size={20} />
   }
 ];
@@ -60,12 +75,24 @@ export default function DistributionPageContent() {
             transition={{ duration: 0.6 }}
             className="max-w-5xl mx-auto"
           >
-            <h1 className="hero-title text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase leading-none text-primary tracking-wide drop-shadow-2xl">
-              DISTRIBUTION
+            <h1 className="hero-title text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-primary tracking-wide drop-shadow-2xl max-w-4xl mx-auto">
+              Wholesale Inventory Software for Stock, Purchasing &amp; Billing
             </h1>
+            <p className="mt-4 text-sm sm:text-base text-white/90 max-w-2xl mx-auto leading-relaxed drop-shadow-lg">
+              Keep wholesale item records, stock, purchases and billing connected. Review the locations, reports and operational requirements for your selected configuration.
+            </p>
           </motion.div>
         </div>
       </section>
+
+      <SectionCopy label="Overview" title="What Is Wholesale Inventory Software?">
+        <p>
+          Wholesale inventory software connects item stock with purchases, sales and invoices.
+          Distributors may also need warehouse picking, delivery routes or broader ERP functions.
+          DigiNizam&rsquo;s scope on this page is the inventory, purchasing and billing workflow
+          reviewed during the demo.
+        </p>
+      </SectionCopy>
 
       {/* 2. Solution Overview Section - Background: bg-surface */}
       <section className="py-4 md:py-6 bg-surface border-b border-surface-border relative overflow-hidden">
@@ -82,17 +109,14 @@ export default function DistributionPageContent() {
               SOLUTION OVERVIEW
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-foreground tracking-tight">
-              Empower your <span className="text-primary">warehouse &amp; sales team</span> with SRB
+              Wholesale Stock and <span className="text-primary">Billing Records</span>
             </h2>
             <p className="text-muted text-xs sm:text-sm leading-relaxed mt-2 mb-3 font-normal">
-              High-speed order processing, digital dispatch notes, and real-time ledger tracking to maintain absolute synchronization between field sales agents and warehouse fulfillment teams.
+              Review stock, purchases and sales together so your team can discuss one consistent set of item and transaction records.
             </p>
             <p className="text-muted text-xs sm:text-sm leading-relaxed mb-4 font-normal">
-              Empower warehouse pickers, inventory clerks, and logistics coordinators with streamlined mobile workflows, automated stock auditing, and offline redundancy support for uninterrupted operations.
+              Bring example item lists, supplier documents and wholesale invoices. Confirm the supported stock locations, billing actions and reports before agreeing on scope.
             </p>
-            <div className="inline-flex items-center gap-2 text-xs font-bold text-primary bg-primary/10 border border-primary/20 px-4 py-2.5 rounded-xl">
-              <FiServer size={16} /> Cloud &amp; Local Sync Enabled
-            </div>
           </motion.div>
 
           <motion.div
@@ -104,7 +128,7 @@ export default function DistributionPageContent() {
           >
             <Image
               src="/staffdistribution.jpg"
-              alt="Empower Warehouse and Sales Team"
+              alt="Warehouse team meeting beside stocked pallet racks"
               width={420}
               height={280}
               className="w-auto max-h-[300px] object-contain rounded-xl shadow-lg"
@@ -127,23 +151,23 @@ export default function DistributionPageContent() {
                 SOLUTION KEY FEATURES
               </span>
               <h2 className="text-2xl sm:text-3xl font-bold text-foreground tracking-tight">
-                Designed for Modern <span className="text-primary">Distribution Networks</span>
+                Review Your <span className="text-primary">Wholesale Inventory Workflow</span>
               </h2>
               <p className="text-muted text-xs sm:text-sm font-normal leading-relaxed mt-2 mb-2.5">
-                Everything you need to manage wholesale orders, inventory batches, warehouse fulfillment lanes, and large-scale distribution seamlessly under high-volume pressures.
+                Review how item records, purchasing and billing fit your wholesale business. Confirm warehouse, dispatch and location requirements for the selected configuration.
               </p>
               <p className="text-muted text-xs sm:text-sm font-normal leading-relaxed mb-4">
-                Our comprehensive distribution suite provides multi-tier pricing structures, bulk discounts, route accounting integrations, and instantaneous stock visibility across multiple regional hubs.
+                Delivery routes, fleet manifests, field-sales apps, automated audits, replenishment automation and third-party accounting integrations require separate confirmation. They are not included as capabilities in the inventory and billing scope described here.
               </p>
               <ul className="space-y-2 text-xs sm:text-sm text-muted font-bold">
                 <li className="flex items-center gap-3">
-                  <FiCheckCircle className="text-primary" size={18} /> Wholesale Tiered Pricing &amp; Bulk Discount Rules
+                  <FiCheckCircle className="text-primary" size={18} /> Item and location requirements
                 </li>
                 <li className="flex items-center gap-3">
-                  <FiCheckCircle className="text-primary" size={18} /> Delivery Route &amp; Driver Fleet Manifest Tracking
+                  <FiCheckCircle className="text-primary" size={18} /> Purchasing and billing review
                 </li>
                 <li className="flex items-center gap-3">
-                  <FiCheckCircle className="text-primary" size={18} /> Review billing &amp; depot requirements
+                  <FiCheckCircle className="text-primary" size={18} /> Warehouse and dispatch requirements
                 </li>
               </ul>
             </motion.div>
@@ -157,7 +181,7 @@ export default function DistributionPageContent() {
             >
               <Image
                 src="/POSDistribution.png"
-                alt="Designed for Modern Distribution Networks POS System"
+                alt="Illustration of a DigiNizam POS screen, receipt printer and scanner in a warehouse"
                 width={420}
                 height={280}
                 className="w-auto max-h-[300px] object-contain rounded-xl shadow-lg"
@@ -175,11 +199,8 @@ export default function DistributionPageContent() {
               OUR MODULES
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-foreground tracking-tight">
-              Explore Our Powerful <span className="text-primary">Distribution Modules</span>
+              Wholesale <span className="text-primary">Workflows to Review</span>
             </h2>
-            <p className="text-muted text-xs sm:text-sm font-normal mt-1">
-              Designed to handle every operational department of your distribution and wholesale business seamlessly under one roof.
-            </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -207,8 +228,28 @@ export default function DistributionPageContent() {
         </div>
       </section>
 
+      <SectionCopy label="Your setup" title="Discuss Your Wholesale Setup" reverse>
+        <p>
+          Wholesalers and distributors in Pakistan can review stock, purchasing and billing with
+          DigiNizam. Confirm dispatch, warehouse and delivery requirements separately before
+          agreeing on scope.
+        </p>
+        <IndustryContextLinks featuresLabel="stock and purchasing features" />
+      </SectionCopy>
+
+      <SeoFaq
+        label="Wholesale inventory"
+        title="Wholesale and distribution questions"
+        description="Direct answers for common wholesale inventory questions."
+        items={distributionFaqs}
+      />
+
       {/* 5. Our Clientele Section - Background: bg-surface */}
-      <ProductCTA />
+      <ProductCTA
+        title="Review DigiNizam for Your Wholesale Business"
+        description="Book a demo to review stock records, purchasing, billing and location requirements. Pricing is discussed after the demo, once requirements are understood."
+        primaryCtaLabel="Book a Demo"
+      />
 
       <ProductClientele bgLight={true} />
 

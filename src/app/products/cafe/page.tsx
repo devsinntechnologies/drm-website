@@ -3,9 +3,9 @@ import CafePageContent from "@/components/cafe/CafePageContent";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Cafe POS Software in Pakistan | DigiNizam",
+  title: "Cafe & Coffee Shop POS Software | DigiNizam",
   description:
-    "Manage cafe billing, orders, KOT/KDS, inventory, offline-ready sales and reporting with DigiNizam cafe POS software in Pakistan.",
+    "Review DigiNizam cafe POS for coffee shop orders, billing, preparation tickets and reports. Confirm stock, connectivity and outlet requirements in a demo.",
   path: "/products/cafe",
 });
 

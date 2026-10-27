@@ -6,8 +6,8 @@ import MediaSlot from "@/components/common/MediaSlot";
 import SiteCTA from "@/components/common/SiteCTA";
 import ProductClientele from "@/components/common/ProductClientele";
 import ProductCertificates from "@/components/common/ProductCertificates";
+import IndustryContextLinks from "@/components/common/IndustryContextLinks";
 import SeoFaq from "@/components/seo/SeoFaq";
-import SeoRelatedLinks from "@/components/seo/SeoRelatedLinks";
 import JsonLd from "@/components/seo/JsonLd";
 import { faqJsonLd, type FaqItem } from "@/lib/seo";
 
@@ -26,7 +26,7 @@ const toysFaqs: FaqItem[] = [
   },
   {
     q: "Can DigiNizam handle a large toy catalogue?",
-    a: "Yes. DigiNizam inventory tools can organize many products and categories while keeping stock connected with sales and purchases.",
+    a: "Review your actual toy catalogue and category structure in a demo. Confirm item limits, import requirements, supported fields and performance for the selected setup before rollout.",
   },
   {
     q: "Can toy store software manage inventory?",
@@ -34,11 +34,11 @@ const toysFaqs: FaqItem[] = [
   },
   {
     q: "Does DigiNizam support low-stock monitoring for toy stores?",
-    a: "Yes. DigiNizam includes low-stock monitoring to help teams identify popular products that may need restocking.",
+    a: "Yes. DigiNizam includes low-stock alerts to help teams identify popular products that may need restocking.",
   },
   {
     q: "Can a toy store run seasonal discounts through DigiNizam?",
-    a: "DigiNizam supports offers and discounts in the retail workflow. The exact promotion rules available should match the live store configuration.",
+    a: "Review the discount options available in the selected DigiNizam setup using your seasonal offer examples. Confirm the promotion rules you need before rollout.",
   },
   {
     q: "Can DigiNizam manage multiple toy-store branches?",
@@ -56,42 +56,16 @@ export default function ToysPageContent() {
       <JsonLd data={faqJsonLd(toysFaqs)} />
       <PageHero
         label="Toys Store"
-        title="Toy Store POS Software in Pakistan for Billing & Inventory Management"
-        description="Connect toy-store billing, product inventory, seasonal discounts, low-stock visibility and branch reporting in one retail POS workflow."
+        title="Toy Store POS Software for Billing & Inventory"
+        description="Connect toy and gift sales with product records and stock visibility. Review purchasing, supported discounts and reports for everyday store decisions."
       />
 
       <SectionCopy label="Overview" title="What Is Toy Store POS Software?">
         <p>
-          Toy store POS software combines fast retail billing with inventory, discounts,
-          purchasing and reports for shops that often manage many categories and seasonal stock
-          peaks. DigiNizam helps toy retailers connect checkout with stock and branch-level
-          reporting instead of maintaining separate manual records. Toy store POS software
-          connects billing with product inventory, purchasing, discounts and reporting so toy
-          retailers can manage seasonal stock and daily sales from one system.
-        </p>
-      </SectionCopy>
-
-      <SectionCopy
-        label="POS"
-        title="Toy Store POS Software for Billing, Inventory & Store Management"
-        reverse
-      >
-        <p>
-          DigiNizam provides POS software for toy stores to manage billing, sales, inventory, and
-          everyday store operations. A toy store POS system can help staff process sales
-          efficiently, keep product records organized, monitor stock levels, and review sales
-          reports from one system.
-        </p>
-        <p>
-          Compare{" "}
-          <Link href="/pricing" className="text-primary font-semibold hover:underline">
-            POS software pricing
-          </Link>{" "}
-          or{" "}
-          <Link href="/demo" className="text-primary font-semibold hover:underline">
-            book a POS demo
-          </Link>{" "}
-          for your toy store setup.
+          Toy store POS software records checkout sales and links them with product inventory,
+          purchasing and reports. Toy retailers can use these records to review stock by item or
+          category and plan for seasonal demand without relying on separate sales and stock
+          lists.
         </p>
       </SectionCopy>
 
@@ -118,8 +92,8 @@ export default function ToysPageContent() {
 
       <SectionCopy label="Promotions" title="Discounts & Promotions for Seasonal Sales" reverse>
         <p>
-          Use supported offers and discounts for seasonal or promotional pricing without
-          maintaining separate manual discount lists.
+          Review the supported discounts for seasonal or promotional pricing using your offer
+          examples, instead of maintaining separate manual discount lists.
         </p>
       </SectionCopy>
 
@@ -131,7 +105,7 @@ export default function ToysPageContent() {
         imageBrief="Real DigiNizam stock or low-stock view showing multiple toy categories and, where available, branch stock or promotions."
       >
         <p>
-          Use low-stock monitoring to identify popular items that may need replenishment before
+          Use low-stock alerts to identify popular items that may need replenishment before
           high-demand periods.
         </p>
       </SectionCopy>
@@ -180,14 +154,13 @@ export default function ToysPageContent() {
         </p>
       </SectionCopy>
 
-      <SeoRelatedLinks
-        intro="Related pages:"
-        links={[
-          { href: "/pricing", label: "POS software pricing" },
-          { href: "/demo", label: "Book a toy store POS demo" },
-          { href: "/products/retail", label: "Retail POS software" },
-        ]}
-      />
+      <SectionCopy label="Your setup" title="Discuss Your Business Setup" reverse>
+        <p>
+          Toy and gift stores in Pakistan can review their product catalogue, purchasing and
+          seasonal sales requirements in a DigiNizam demo before agreeing on the setup and price.
+        </p>
+        <IndustryContextLinks peer="retail" />
+      </SectionCopy>
 
       <SeoFaq
         label="Toy Store POS"
@@ -197,8 +170,9 @@ export default function ToysPageContent() {
       />
 
       <SiteCTA
-        title="See DigiNizam for Your Toy Store"
-        description="Book a free demo to review billing, product inventory, seasonal discounts, low-stock monitoring and multi-store reporting for your toy or gift business."
+        title="Review DigiNizam for Your Toy Store"
+        description="Book a demo to review your toy catalogue, sales, stock and seasonal discount requirements. Pricing is discussed after the demo, once requirements are understood."
+        primaryCtaLabel="Book a Demo"
       />
       <ProductClientele bgLight={true} />
       <ProductCertificates bgLight={false} />

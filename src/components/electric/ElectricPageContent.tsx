@@ -6,8 +6,8 @@ import MediaSlot from "@/components/common/MediaSlot";
 import SiteCTA from "@/components/common/SiteCTA";
 import ProductClientele from "@/components/common/ProductClientele";
 import ProductCertificates from "@/components/common/ProductCertificates";
+import IndustryContextLinks from "@/components/common/IndustryContextLinks";
 import SeoFaq from "@/components/seo/SeoFaq";
-import SeoRelatedLinks from "@/components/seo/SeoRelatedLinks";
 import JsonLd from "@/components/seo/JsonLd";
 import { faqJsonLd, type FaqItem } from "@/lib/seo";
 
@@ -30,7 +30,7 @@ const electricFaqs: FaqItem[] = [
   },
   {
     q: "Does electrical store POS support low-stock monitoring?",
-    a: "Yes. DigiNizam includes low-stock monitoring to help teams identify products that may need replenishment.",
+    a: "Yes. DigiNizam includes low-stock alerts to help teams identify products that may need replenishment.",
   },
   {
     q: "Can electrical store POS manage multiple branches?",
@@ -42,7 +42,7 @@ const electricFaqs: FaqItem[] = [
   },
   {
     q: "Does electrical store POS support barcode billing?",
-    a: "DigiNizam's broader POS workflow supports barcode and scale-integrated billing where configured. Confirm the exact hardware and checkout setup during a demo.",
+    a: "Yes. DigiNizam supports barcode billing. Check your item barcodes and scanner with sample electrical products during the demo. Unit conversions, weighing scales and other specialist hardware need separate confirmation.",
   },
   {
     q: "Does DigiNizam track serial numbers or warranties?",
@@ -50,7 +50,7 @@ const electricFaqs: FaqItem[] = [
   },
   {
     q: "What features should electrical store POS software have?",
-    a: "Important features include fast billing, SKU and category inventory, supplier purchasing, stock receiving, low-stock monitoring, reporting and multi-location visibility.",
+    a: "Review counter billing, item or SKU records, purchasing, receiving, low-stock visibility, reports and locations. Electrical supplies can use different sale units, so confirm unit handling, cable-length requirements and hardware before selecting a setup.",
   },
 ];
 
@@ -60,18 +60,16 @@ export default function ElectricPageContent() {
       <JsonLd data={faqJsonLd(electricFaqs)} />
       <PageHero
         label="Electric Store"
-        title="Electrical Store POS Software in Pakistan for Billing & Inventory Management"
-        description="Manage electrical-store billing, product stock, supplier purchases, low-stock visibility and branch reporting from one connected POS workflow."
+        title="Electrical Store POS Software for Billing & Inventory"
+        description="Organise electrical product records, counter bills and stock activity in one workflow. Review purchasing, item units and reporting for your shop."
       />
 
       <SectionCopy label="Overview" title="What Is Electrical Store POS Software?">
         <p>
-          Electrical store POS software combines counter billing with inventory, supplier
-          purchasing and reporting for stores that manage many product categories and SKUs.
-          DigiNizam can help electrical retailers connect sales with stock and purchasing while
-          keeping branch-level visibility in one system. Electrical store POS software connects
-          counter billing with product inventory, supplier purchasing and reporting so teams can
-          manage a large SKU catalogue from one system.
+          Electrical store POS software connects counter billing with product records, inventory
+          and purchasing. It helps electrical supply shops organise sales and stock by item or
+          SKU. Specialist functions such as cable-length conversion, serial numbers and
+          warranties need a separate capability check.
         </p>
       </SectionCopy>
 
@@ -104,7 +102,7 @@ export default function ElectricPageContent() {
 
       <SectionCopy label="Low-stock" title="Low-Stock Monitoring for High-Variety Inventory" reverse>
         <p>
-          Use low-stock monitoring to identify products that may need replenishment before a
+          Use low-stock alerts to identify products that may need replenishment before a
           shortage reaches the counter.
         </p>
       </SectionCopy>
@@ -117,7 +115,7 @@ export default function ElectricPageContent() {
         className="max-w-5xl mx-auto"
       />
 
-      <SectionCopy label="Billing" title="Fast Billing for Electrical & Electronics Retail">
+      <SectionCopy label="Billing" title="Counter Billing for Electrical Supply Shops">
         <p>
           Use DigiNizam POS for electrical counter sales, invoices and daily transaction records
           while keeping billing connected with stock and reporting.
@@ -143,34 +141,36 @@ export default function ElectricPageContent() {
 
       <SectionCopy label="Fit" title="Who Is DigiNizam Electric Store For?" reverse>
         <p>
-          Electrical supply shops, electronics stores and hardware-style retailers that need
-          organized billing, large-SKU inventory, purchasing and reporting.{" "}
+          Electrical supply shops and retailers that need organised item records, counter
+          billing, purchasing and stock reports. Confirm product units, hardware and any
+          specialist tracking requirements during a{" "}
           <Link href="/demo" className="text-primary font-semibold hover:underline">
-            Book a demo
-          </Link>{" "}
-          to confirm the exact workflow for your store.
+            demo
+          </Link>
+          .
         </p>
       </SectionCopy>
 
-      <SeoRelatedLinks
-        intro="Related pages:"
-        links={[
-          { href: "/pricing", label: "POS software pricing" },
-          { href: "/demo", label: "Book an electrical store POS demo" },
-          { href: "/products/retail", label: "Retail POS software" },
-        ]}
-      />
+      <SectionCopy label="Your setup" title="Discuss Your Business Setup">
+        <p>
+          Electrical supply shops in Pakistan can review item categories, sale units and
+          purchasing requirements during a DigiNizam demo. Confirm the supported configuration
+          before rollout.
+        </p>
+        <IndustryContextLinks peer="retail" />
+      </SectionCopy>
 
       <SeoFaq
         label="Electric Store POS"
         title="Electrical store software questions"
-        description="Direct answers for common electrical and electronics store software questions."
+        description="Direct answers for common electrical store software questions."
         items={electricFaqs}
       />
 
       <SiteCTA
-        title="See DigiNizam for Your Electrical Store"
-        description="Book a free demo to review billing, inventory, supplier purchasing, stock alerts and the exact workflow available for your electrical or electronics retail business."
+        title="Review DigiNizam for Your Electrical Store"
+        description="Book a demo to review counter billing, product units, purchasing and stock records. Pricing is discussed after the demo, once requirements are understood."
+        primaryCtaLabel="Book a Demo"
       />
       <ProductClientele bgLight={true} />
       <ProductCertificates bgLight={false} />

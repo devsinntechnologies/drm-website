@@ -6,8 +6,8 @@ import MediaSlot from "@/components/common/MediaSlot";
 import SiteCTA from "@/components/common/SiteCTA";
 import ProductClientele from "@/components/common/ProductClientele";
 import ProductCertificates from "@/components/common/ProductCertificates";
+import IndustryContextLinks from "@/components/common/IndustryContextLinks";
 import SeoFaq from "@/components/seo/SeoFaq";
-import SeoRelatedLinks from "@/components/seo/SeoRelatedLinks";
 import JsonLd from "@/components/seo/JsonLd";
 import { faqJsonLd, type FaqItem } from "@/lib/seo";
 
@@ -26,7 +26,7 @@ const jewelleryFaqs: FaqItem[] = [
   },
   {
     q: "Does DigiNizam support barcode labels for jewellery?",
-    a: "Barcode and label workflows can be used where they are configured in the jewellery setup. The final label fields should match the live product configuration.",
+    a: "Yes. DigiNizam supports barcode billing for jewellery items. Confirm the label fields and printer for your item tags during the demo.",
   },
   {
     q: "Can DigiNizam manage multiple jewellery outlets?",
@@ -34,7 +34,7 @@ const jewelleryFaqs: FaqItem[] = [
   },
   {
     q: "Can jewellery POS software manage payments and discounts?",
-    a: "DigiNizam supports payment methods and discounts within its sales workflow, while keeping daily transactions available for review and reporting.",
+    a: "DigiNizam can record sale payment details and the discounts supported by the selected checkout configuration. This is distinct from payment processing. DigiNizam does not provide online payment integration.",
   },
   {
     q: "Does DigiNizam calculate gold rates, karat and making charges?",
@@ -42,7 +42,7 @@ const jewelleryFaqs: FaqItem[] = [
   },
   {
     q: "What features should jewellery POS software have?",
-    a: "Important requirements can include billing, item inventory, payments, labels, reporting and multi-branch visibility. Gold-rate, purity, weight and making-charge workflows should be checked separately if your store requires them.",
+    a: "Compare billing, item records, stock visibility, labels and reports. Confirm the exact jewellery item fields and any weight, purity, gold-rate, repair or making-charge requirements separately. Those specialist functions are not implied by ordinary retail inventory.",
   },
 ];
 
@@ -52,18 +52,16 @@ export default function JewelleryPageContent() {
       <JsonLd data={faqJsonLd(jewelleryFaqs)} />
       <PageHero
         label="Jewellery Shop"
-        title="Jewellery POS Software in Pakistan for Billing & Inventory Management"
-        description="Connect jewellery-store billing, product inventory, labels, payments and branch reporting in one retail POS workflow."
+        title="Jewellery POS Software for Billing & Item Inventory"
+        description="Keep jewellery item records, sales and stock information organised. Review billing, labels and branch requirements for your selected retail configuration."
       />
 
       <SectionCopy label="Overview" title="What Is Jewellery POS Software?">
         <p>
-          Jewellery POS software helps jewellery retailers record sales, manage item inventory
-          and maintain clear billing and reporting records for high-value stock. DigiNizam
-          supports core retail operations such as invoicing, inventory visibility, payments and
-          multi-store reporting for jewellery businesses. Jewellery POS software helps retailers
-          organize sales, inventory, payments and reporting for high-value stock. DigiNizam
-          connects these core retail workflows in one system.
+          Jewellery POS software records item sales, inventory and business reports for a
+          jewellery retailer. DigiNizam focuses on the retail billing and stock workflow
+          described here. Gold pricing, purity calculations, repairs and appraisals require
+          separate specialist capability.
         </p>
       </SectionCopy>
 
@@ -90,22 +88,23 @@ export default function JewelleryPageContent() {
 
       <SectionCopy
         label="Labels"
-        title="Barcode & Label Workflows Where Configured"
+        title="Barcode Billing & Item Labels"
         reverse
         image="https://images.unsplash.com/photo-1777286492764-456e3530e34c?q=80&w=1600&auto=format&fit=crop"
         imageAlt="Jewellery Shop inventory / workflow in DigiNizam"
         imageBrief="Real DigiNizam barcode/label, payment or sales-report screen relevant to jewellery retail; avoid unconfirmed karat/gold-rate UI."
       >
         <p>
-          Use barcode and label functionality where configured in the jewellery setup to support
-          item lookup, tagging and billing.
+          Use barcode lookup to find and bill jewellery items. Confirm the label fields and
+          printer for your item tags during the demo.
         </p>
       </SectionCopy>
 
-      <SectionCopy label="Payments" title="Payments, Discounts & Sales Records">
+      <SectionCopy label="Payments" title="Payment Records, Discounts and Sales">
         <p>
-          Keep supported payment methods, discounts and daily transactions in the same system so
-          store activity is easier to review and reconcile.
+          Record the payment details and supported discounts for a sale, and review them with
+          the daily transactions. Payment recording does not mean DigiNizam processes online
+          payments.
         </p>
       </SectionCopy>
 
@@ -128,7 +127,7 @@ export default function JewelleryPageContent() {
         steps={[
           "Create jewellery product/item records.",
           "Add stock and labels where supported.",
-          "Record customer sales and payments through the POS.",
+          "Record customer sales and payment details through the POS.",
           "Keep inventory connected with sales and purchases.",
           "Review store and branch reports.",
         ]}
@@ -145,14 +144,14 @@ export default function JewelleryPageContent() {
         </p>
       </SectionCopy>
 
-      <SeoRelatedLinks
-        intro="Related pages:"
-        links={[
-          { href: "/pricing", label: "POS software pricing" },
-          { href: "/demo", label: "Book a jewellery POS demo" },
-          { href: "/products/retail", label: "Retail POS software" },
-        ]}
-      />
+      <SectionCopy label="Your setup" title="Discuss Your Business Setup">
+        <p>
+          Jewellery retailers in Pakistan can review billing, item records and labels with
+          DigiNizam. Discuss gold-rate, weight or making-charge requirements separately before
+          choosing a setup.
+        </p>
+        <IndustryContextLinks peer="retail" />
+      </SectionCopy>
 
       <SeoFaq
         label="Jewellery POS"
@@ -163,7 +162,8 @@ export default function JewelleryPageContent() {
 
       <SiteCTA
         title="Review DigiNizam for Your Jewellery Store"
-        description="Book a free demo to confirm the billing, inventory, labels, payments and branch-management workflow available for your jewellery business."
+        description="Book a demo to review item records, billing, labels and your specialist requirements. Pricing is discussed after the demo, once requirements are understood."
+        primaryCtaLabel="Book a Demo"
       />
       <ProductClientele bgLight={true} />
       <ProductCertificates bgLight={false} />

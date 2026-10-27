@@ -3,9 +3,9 @@ import SalonPageContent from "@/components/salon/SalonPageContent";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Salon POS Software in Pakistan | DigiNizam",
+  title: "Salon POS & Billing Software | DigiNizam",
   description:
-    "Manage salon billing, retail product inventory, payments, discounts, reports and multi-branch visibility with DigiNizam POS software in Pakistan.",
+    "Explore DigiNizam salon POS for service billing, product sales and stock reports. Review your salon checkout requirements and available configuration in a demo.",
   path: "/products/salon",
 });
 

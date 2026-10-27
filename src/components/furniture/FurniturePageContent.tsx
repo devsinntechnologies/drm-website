@@ -6,8 +6,8 @@ import MediaSlot from "@/components/common/MediaSlot";
 import SiteCTA from "@/components/common/SiteCTA";
 import ProductClientele from "@/components/common/ProductClientele";
 import ProductCertificates from "@/components/common/ProductCertificates";
+import IndustryContextLinks from "@/components/common/IndustryContextLinks";
 import SeoFaq from "@/components/seo/SeoFaq";
-import SeoRelatedLinks from "@/components/seo/SeoRelatedLinks";
 import JsonLd from "@/components/seo/JsonLd";
 import { faqJsonLd, type FaqItem } from "@/lib/seo";
 
@@ -18,15 +18,15 @@ const furnitureFaqs: FaqItem[] = [
   },
   {
     q: "Can DigiNizam track showroom and warehouse stock?",
-    a: "DigiNizam supports multi-location inventory and branch visibility. The final stock-location structure should match the live furniture setup.",
+    a: "Yes. DigiNizam supports multi-location inventory, so showroom and warehouse stock can be tracked separately. The location structure is set up to match your business.",
   },
   {
     q: "Can DigiNizam manage furniture suppliers and purchases?",
-    a: "Yes. DigiNizam inventory tools include purchase-management and supplier-related workflows that can connect receiving with stock.",
+    a: "Yes. DigiNizam includes supplier and purchase records that connect receiving with stock.",
   },
   {
     q: "Does DigiNizam include delivery scheduling and quotations?",
-    a: "Do not promise those modules until they are confirmed in the live Furniture Store template. They are common market requirements but not yet verified for this page.",
+    a: "Delivery scheduling, quotations, deposits and custom orders are separate from the billing and stock workflow described here. Discuss these requirements during the demo and confirm which functions are included in the agreed scope before purchase.",
   },
   {
     q: "Can DigiNizam manage multiple furniture showrooms?",
@@ -34,7 +34,7 @@ const furnitureFaqs: FaqItem[] = [
   },
   {
     q: "Can furniture POS software monitor low-stock items?",
-    a: "Yes. DigiNizam provides inventory and low-stock visibility to help teams identify products or categories that may need replenishment.",
+    a: "Yes. DigiNizam provides low-stock alerts to help teams identify products or categories that may need replenishment.",
   },
   {
     q: "What features should furniture POS software have?",
@@ -52,8 +52,8 @@ export default function FurniturePageContent() {
       <JsonLd data={faqJsonLd(furnitureFaqs)} />
       <PageHero
         label="Furniture Store"
-        title="Furniture Store POS Software in Pakistan for Billing & Inventory Management"
-        description="Connect furniture-store billing, stock, supplier purchasing, warehouse visibility and branch reporting in one DigiNizam retail workflow."
+        title="Furniture Store POS Software for Billing & Stock Visibility"
+        description="Keep showroom sales, furniture item records and stock locations connected. Review purchasing, invoices and reports for the locations in your selected setup."
       />
 
       <SectionCopy
@@ -64,34 +64,10 @@ export default function FurniturePageContent() {
         imageBrief="Professional furniture showroom with DigiNizam product availability / inventory UI; show sofa/table/chair context and a clean POS tablet/desktop screen."
       >
         <p>
-          Furniture store POS software combines sales and invoicing with inventory, purchasing
-          and reporting for showrooms that may hold stock across display areas, warehouses or
-          multiple branches. DigiNizam can help furniture retailers keep billing and stock
-          records connected instead of maintaining separate spreadsheets.
-        </p>
-      </SectionCopy>
-
-      <SectionCopy
-        label="Store software"
-        title="Furniture Store POS Software for Billing & Inventory Management"
-        reverse
-      >
-        <p>
-          DigiNizam helps furniture stores manage billing, sales, inventory, and day-to-day store
-          operations through a POS system. Furniture businesses can keep product records organized,
-          monitor stock, review sales activity, and manage multiple store operations from a
-          centralized system.
-        </p>
-        <p>
-          Review{" "}
-          <Link href="/pricing" className="text-primary font-semibold hover:underline">
-            POS software pricing
-          </Link>{" "}
-          or{" "}
-          <Link href="/demo" className="text-primary font-semibold hover:underline">
-            book a POS demo
-          </Link>{" "}
-          for your showroom workflow.
+          Furniture store POS software connects showroom sales and invoices with item inventory,
+          purchasing and reports. Stock records can distinguish configured locations such as
+          showrooms and warehouses. Delivery scheduling, deposits and
+          custom-order management are separate requirements to verify.
         </p>
       </SectionCopy>
 
@@ -103,7 +79,7 @@ export default function FurniturePageContent() {
           "Receive supplier purchases into inventory.",
           "Record showroom sales and invoices.",
           "Review product availability and low-stock items.",
-          "Monitor sales and stock across branches or warehouses where enabled.",
+          "Monitor sales and stock across branches or warehouses.",
         ]}
       />
 
@@ -115,8 +91,8 @@ export default function FurniturePageContent() {
         imageBrief="Real DigiNizam warehouse/location stock or supplier purchase/receiving screen; emphasize availability across showroom/warehouse if supported."
       >
         <p>
-          Track furniture products across available locations so teams can see what is on hand
-          without relying on separate showroom and warehouse spreadsheets.
+          Track furniture products across showroom and warehouse locations so teams can see what
+          is on hand without relying on separate showroom and warehouse spreadsheets.
         </p>
       </SectionCopy>
 
@@ -144,8 +120,8 @@ export default function FurniturePageContent() {
 
       <SectionCopy label="Availability" title="Low-Stock & Product Availability Monitoring" reverse>
         <p>
-          Use inventory and low-stock visibility to identify items or categories that may need
-          replenishment before a salesperson promises stock that is no longer available.
+          Use inventory visibility and low-stock alerts to identify items or categories that may need replenishment before a salesperson promises
+          stock that is no longer available.
         </p>
       </SectionCopy>
 
@@ -167,14 +143,13 @@ export default function FurniturePageContent() {
         </p>
       </SectionCopy>
 
-      <SeoRelatedLinks
-        intro="Related pages:"
-        links={[
-          { href: "/pricing", label: "POS software pricing" },
-          { href: "/demo", label: "Book a furniture store POS demo" },
-          { href: "/products/retail", label: "Retail POS software" },
-        ]}
-      />
+      <SectionCopy label="Your setup" title="Discuss Your Business Setup">
+        <p>
+          Furniture showrooms in Pakistan can review stock locations, supplier records and
+          invoicing with DigiNizam. Confirm any delivery or quotation requirements separately.
+        </p>
+        <IndustryContextLinks peer="retail" />
+      </SectionCopy>
 
       <SeoFaq
         label="Furniture Store POS"
@@ -184,8 +159,9 @@ export default function FurniturePageContent() {
       />
 
       <SiteCTA
-        title="See DigiNizam for Your Furniture Store"
-        description="Book a free demo to review showroom billing, inventory, supplier purchasing, warehouse or branch visibility and the exact modules available for your furniture workflow."
+        title="Review DigiNizam for Your Furniture Showroom"
+        description="Book a demo to review showroom sales, inventory locations, purchases and reports. Pricing is discussed after the demo, once requirements are understood."
+        primaryCtaLabel="Book a Demo"
       />
       <ProductClientele bgLight={true} />
       <ProductCertificates bgLight={false} />

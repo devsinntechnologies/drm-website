@@ -37,7 +37,13 @@ export type ProductPageProps = {
     imageAlt: string;
   };
   modules: ProductModule[];
-  cta?: { title: string; description: string };
+  modulesTitle?: string;
+  modulesDescription?: string;
+  /** Short section rendered directly beneath the hero, e.g. a definition. */
+  intro?: React.ReactNode;
+  /** Section rendered after the modules, before the closing CTA. */
+  afterModules?: React.ReactNode;
+  cta?: { title: string; description: string; primaryCtaLabel?: string };
 };
 
 export default function ProductPageTemplate({
@@ -48,11 +54,17 @@ export default function ProductPageTemplate({
   overview,
   features,
   modules,
+  modulesTitle = "Everything you need in one suite",
+  modulesDescription,
+  intro,
+  afterModules,
   cta,
 }: ProductPageProps) {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <PageHero label={label} title={title} description={description} />
+
+      {intro}
 
       {heroMedia ? (
         <section className="pb-12 md:pb-16 bg-background border-b border-surface-border">
@@ -132,8 +144,8 @@ export default function ProductPageTemplate({
         <SectionHeader
           align="center"
           label="Modules"
-          title="Everything you need in one suite"
-          description="Purpose-built tools for front-of-house and back-office teams."
+          title={modulesTitle}
+          description={modulesDescription}
         />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {modules.map((mod, idx) => (
@@ -148,18 +160,21 @@ export default function ProductPageTemplate({
               <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-3 group-hover:bg-primary group-hover:text-white transition-all">
                 {mod.icon}
               </div>
-              <h2 className="type-card-title text-foreground mb-1.5 group-hover:text-primary transition-colors">
+              <h3 className="type-card-title text-foreground mb-1.5 group-hover:text-primary transition-colors">
                 {mod.title}
-              </h2>
+              </h3>
               <p className="type-body text-muted">{mod.desc}</p>
             </motion.div>
           ))}
         </div>
       </SectionShell>
 
+      {afterModules}
+
       <SiteCTA
         title={cta?.title ?? "See DigiNizam in action"}
         description={cta?.description ?? "Book a free demo tailored to your business."}
+        primaryCtaLabel={cta?.primaryCtaLabel}
       />
       <ProductClientele bgLight={true} />
       <ProductCertificates bgLight={false} />

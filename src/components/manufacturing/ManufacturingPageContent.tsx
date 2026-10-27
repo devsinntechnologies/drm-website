@@ -6,8 +6,8 @@ import MediaSlot from "@/components/common/MediaSlot";
 import SiteCTA from "@/components/common/SiteCTA";
 import ProductClientele from "@/components/common/ProductClientele";
 import ProductCertificates from "@/components/common/ProductCertificates";
+import IndustryContextLinks from "@/components/common/IndustryContextLinks";
 import SeoFaq from "@/components/seo/SeoFaq";
-import SeoRelatedLinks from "@/components/seo/SeoRelatedLinks";
 import JsonLd from "@/components/seo/JsonLd";
 import { faqJsonLd, type FaqItem } from "@/lib/seo";
 
@@ -18,11 +18,11 @@ const manufacturingFaqs: FaqItem[] = [
   },
   {
     q: "Can DigiNizam track raw materials and finished goods?",
-    a: "DigiNizam inventory tools can be configured to track products, batches/variations where applicable and stock across locations. Exact manufacturing item structure should match the live setup.",
+    a: "DigiNizam inventory records can be configured for materials and finished products across the agreed locations. Confirm item fields and stock movements in the selected setup. This does not imply automatic material consumption, work-in-progress tracking or production planning.",
   },
   {
     q: "Can DigiNizam manage multiple warehouses?",
-    a: "DigiNizam supports multi-location and multi-store inventory visibility for businesses that operate more than one stock location.",
+    a: "Yes. DigiNizam supports multi-location inventory visibility for businesses that operate more than one warehouse or stock location.",
   },
   {
     q: "Does DigiNizam include BOMs, work orders and production planning?",
@@ -40,8 +40,8 @@ export default function ManufacturingPageContent() {
       <JsonLd data={faqJsonLd(manufacturingFaqs)} />
       <PageHero
         label="Manufacturing"
-        title="Manufacturing Inventory & Operations Software in Pakistan"
-        description="Bring raw-material and finished-goods inventory, purchasing, sales, invoices and multi-location reporting into one connected DigiNizam workflow."
+        title="Manufacturing Inventory Software for Materials & Finished Goods"
+        description="Keep material and finished-goods stock records connected with purchases and invoices. Review locations and reports for the inventory workflow your business needs."
       />
 
       <SectionCopy
@@ -52,10 +52,10 @@ export default function ManufacturingPageContent() {
         imageBrief="Warehouse/manufacturing storage area with raw materials and finished goods plus DigiNizam inventory dashboard; no production-line claims not supported."
       >
         <p>
-          Manufacturing inventory software helps businesses track materials, finished goods,
-          purchasing, sales and warehouse stock in one system. DigiNizam supports inventory,
-          purchasing, invoicing and multi-location visibility for manufacturers who need
-          connected operational records rather than a full production-planning ERP.
+          Inventory software for manufacturers records materials, finished goods, purchasing and
+          stock movements. DigiNizam focuses on inventory, purchasing and invoicing in the setup
+          described here. Bills of materials, work orders, MRP and production scheduling are
+          outside this scope.
         </p>
       </SectionCopy>
 
@@ -96,8 +96,8 @@ export default function ManufacturingPageContent() {
         imageBrief="Real DigiNizam purchase/receiving, multi-location inventory or low-stock screen relevant to warehouse operations."
       >
         <p>
-          Connect purchase activity with inventory so received materials can move into stock
-          records and supplier-related transactions stay easier to review.
+          Connect purchase activity with inventory so received materials move into stock
+          records and supplier transactions stay easier to review.
         </p>
       </SectionCopy>
 
@@ -110,7 +110,7 @@ export default function ManufacturingPageContent() {
 
       <SectionCopy label="Reorder" title="Low-Stock & Reorder Visibility" reverse>
         <p>
-          Use low-stock monitoring to flag materials or finished goods that may need purchasing
+          Use low-stock alerts to flag materials or finished goods that may need purchasing
           attention before they become an operational shortage.
         </p>
       </SectionCopy>
@@ -124,36 +124,35 @@ export default function ManufacturingPageContent() {
 
       <SectionCopy label="Fit" title="Who Is DigiNizam Manufacturing For?" reverse>
         <p>
-          Small and growing manufacturers that primarily need connected inventory, purchasing,
-          invoicing and multi-location visibility, rather than an unverified full
-          production-planning ERP.{" "}
+          Manufacturers that need connected inventory, purchasing and invoicing records can
+          review the available configuration in a{" "}
           <Link href="/demo" className="text-primary font-semibold hover:underline">
-            Book a demo
-          </Link>{" "}
-          to confirm the exact modules for your operation.
+            demo
+          </Link>
+          . Assess production-planning needs separately from this inventory workflow.
         </p>
       </SectionCopy>
 
-      <SeoRelatedLinks
-        intro="Related pages:"
-        links={[
-          { href: "/", label: "POS software Pakistan" },
-          { href: "/features", label: "manufacturing inventory software" },
-          { href: "/pricing", label: "POS software pricing in Pakistan" },
-          { href: "/demo", label: "book a DigiNizam demo" },
-        ]}
-      />
+      <SectionCopy label="Your setup" title="Discuss Your Inventory Setup">
+        <p>
+          Manufacturers in Pakistan can review material records, warehouse stock, purchases and
+          invoices with DigiNizam. Production-planning requirements need a separate solution
+          assessment.
+        </p>
+        <IndustryContextLinks featuresLabel="inventory and purchasing features" />
+      </SectionCopy>
 
       <SeoFaq
         label="Manufacturing"
         title="Manufacturing inventory software questions"
-        description="Direct answers for common manufacturing inventory and operations software questions."
+        description="Direct answers for common manufacturing inventory questions."
         items={manufacturingFaqs}
       />
 
       <SiteCTA
-        title="Review DigiNizam for Your Manufacturing Operation"
-        description="Book a free demo to review inventory, purchasing, warehouses, invoicing and the exact modules currently available for your manufacturing workflow."
+        title="Review DigiNizam for Your Inventory Workflow"
+        description="Book a demo to review material records, stock locations, purchasing and invoicing. Pricing is discussed after the demo, once requirements are understood."
+        primaryCtaLabel="Book a Demo"
       />
       <ProductClientele bgLight={true} />
       <ProductCertificates bgLight={false} />

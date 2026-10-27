@@ -3,9 +3,9 @@ import BooksPageContent from "@/components/books/BooksPageContent";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Book Store POS Software in Pakistan | DigiNizam",
+  title: "Bookstore POS & Inventory Software | DigiNizam",
   description:
-    "Book store POS software in Pakistan for billing, catalogue inventory, ISBN barcode checkout, publisher purchases and multi-branch reporting. Book a free demo.",
+    "Explore DigiNizam bookstore POS for billing, book inventory and purchasing. Review catalogue records, barcode requirements and store reports in a demo.",
   path: "/products/books",
 });
 

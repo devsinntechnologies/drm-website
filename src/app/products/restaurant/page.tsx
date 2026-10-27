@@ -3,9 +3,9 @@ import RestaurantPageContent from "@/components/restaurant/RestaurantPageContent
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Restaurant Management Software Pakistan | DigiNizam",
+  title: "Restaurant POS & Management Software | DigiNizam",
   description:
-    "Manage restaurant POS, billing, orders, kitchen workflow, inventory and reporting with DigiNizam restaurant management software built for daily operations.",
+    "Explore DigiNizam restaurant POS for orders, billing, kitchen workflow and reports. Review inventory, connectivity and outlet requirements in a demo.",
   path: "/products/restaurant",
 });
 

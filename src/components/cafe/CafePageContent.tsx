@@ -6,8 +6,8 @@ import MediaSlot from "@/components/common/MediaSlot";
 import SiteCTA from "@/components/common/SiteCTA";
 import ProductClientele from "@/components/common/ProductClientele";
 import ProductCertificates from "@/components/common/ProductCertificates";
+import IndustryContextLinks from "@/components/common/IndustryContextLinks";
 import SeoFaq from "@/components/seo/SeoFaq";
-import SeoRelatedLinks from "@/components/seo/SeoRelatedLinks";
 import JsonLd from "@/components/seo/JsonLd";
 import { faqJsonLd, type FaqItem } from "@/lib/seo";
 
@@ -18,15 +18,15 @@ const cafeFaqs: FaqItem[] = [
   },
   {
     q: "Does DigiNizam support KOT or KDS for cafes?",
-    a: "Yes. DigiNizam's restaurant workflow includes KOT/KDS functionality that can be used for cafe preparation flow where enabled.",
+    a: "Yes. DigiNizam's restaurant workflow sends cafe orders from the counter to the kitchen or bar as preparation tickets. Review the devices and order routing for your cafe during the demo.",
   },
   {
     q: "Can cafe inventory update from sales?",
-    a: "Yes. Where recipes or linked stock are configured, billed items can deduct ingredients or inventory from the connected stock records.",
+    a: "Where the selected setup links billed items with stock, recorded sales can update the connected inventory. Review the mapping and stock movements using your menu examples. Do not assume recipe costing or automatic ingredient deduction without checking the live configuration.",
   },
   {
     q: "Can DigiNizam cafe POS work offline?",
-    a: "Selected ordering and billing operations can continue offline and synchronize later. Confirm the exact offline steps for your cafe configuration.",
+    a: "Yes. Ordering and billing can continue without internet, and records synchronize to the web as soon as the connection returns. Confirm which actions need a live connection for your cafe setup.",
   },
   {
     q: "Can DigiNizam manage multiple cafe outlets?",
@@ -40,8 +40,8 @@ export default function CafePageContent() {
       <JsonLd data={faqJsonLd(cafeFaqs)} />
       <PageHero
         label="Food / Cafe"
-        title="Cafe POS Software in Pakistan for Fast Counter Operations"
-        description="Connect cafe billing, orders, kitchen or bar tickets, inventory and reports in one workflow built for fast-moving food and beverage counters."
+        title="Cafe POS Software for Orders, Billing & Stock"
+        description="Connect cafe counter orders with preparation information and billing. Review stock, reports and connectivity for your coffee shop configuration."
       />
 
       <SectionCopy
@@ -52,10 +52,10 @@ export default function CafePageContent() {
         imageBrief="Modern cafe counter with DigiNizam order-entry screen and visible order ticket context; coffee/food environment, professional not stock-photo generic."
       >
         <p>
-          Cafe POS software connects quick counter billing with order flow, kitchen or bar
-          tickets, inventory and reporting. DigiNizam&rsquo;s restaurant workflow can be adapted
-          for cafes that need fast service, clear order routing and stock visibility without
-          using separate systems for the counter and back of house.
+          Cafe POS software records food and drink orders, connects them with billing and shares
+          preparation information where configured. DigiNizam can use its restaurant workflow for
+          cafe counter operations. Confirm ticket routing, linked stock and connectivity for the
+          selected setup.
         </p>
       </SectionCopy>
 
@@ -66,7 +66,7 @@ export default function CafePageContent() {
           "Create the cafe menu and link inventory where required.",
           "Take dine-in, takeaway or counter orders.",
           "Send confirmed items to KOT/KDS where enabled.",
-          "Complete billing and payment on the same order.",
+          "Complete billing and record payment on the same order.",
           "Review sales and stock movement by outlet.",
         ]}
       />
@@ -95,25 +95,25 @@ export default function CafePageContent() {
         imageBrief="Real DigiNizam KOT/KDS or inventory/report screen showing cafe preparation or ingredient stock where available."
       >
         <p>
-          Use DigiNizam&rsquo;s KOT/KDS workflow to send confirmed food or beverage orders into
-          the preparation flow so the counter and kitchen/bar team work from the same order
-          information.
+          Confirmed food or beverage orders go from the counter to the kitchen or bar as
+          preparation tickets, so the counter and kitchen/bar team work from the same order
+          information. Confirm ticket routing and devices for your cafe during the demo.
         </p>
       </SectionCopy>
 
       <SectionCopy label="Inventory" title="Ingredient & Stock Visibility">
         <p>
-          Where recipes and linked inventory are configured, billed items can deduct ingredients
-          or stock so cafe inventory stays connected with daily sales instead of being updated
-          only after service.
+          Where the selected setup links billed items with stock, recorded sales can update the
+          connected inventory. Review the mapping and stock movements using your menu examples
+          rather than assuming recipe costing or automatic ingredient deduction.
         </p>
       </SectionCopy>
 
       <SectionCopy label="Connectivity" title="Offline-Ready Cafe Operations" reverse>
         <p>
-          Selected ordering and billing work can continue when internet connectivity drops, with
-          locally stored records synchronized when the connection returns. Confirm exactly which
-          steps are available offline for the cafe setup.
+          Ordering and billing can continue when internet connectivity drops, and records
+          synchronize to the web as soon as the connection returns. Confirm which actions still
+          need a live connection for your cafe setup.
         </p>
       </SectionCopy>
 
@@ -135,15 +135,13 @@ export default function CafePageContent() {
         </p>
       </SectionCopy>
 
-      <SeoRelatedLinks
-        intro="Related pages:"
-        links={[
-          { href: "/", label: "POS software Pakistan" },
-          { href: "/features", label: "cafe inventory software" },
-          { href: "/pricing", label: "POS software pricing in Pakistan" },
-          { href: "/demo", label: "book a DigiNizam demo" },
-        ]}
-      />
+      <SectionCopy label="Your setup" title="Discuss Your Business Setup">
+        <p>
+          Cafes and coffee shops in Pakistan can review counter orders, preparation tickets and
+          stock with DigiNizam. Confirm the available devices and offline steps before rollout.
+        </p>
+        <IndustryContextLinks featuresLabel="order and stock features" peer="restaurant" />
+      </SectionCopy>
 
       <SeoFaq
         label="Cafe POS"
@@ -153,8 +151,9 @@ export default function CafePageContent() {
       />
 
       <SiteCTA
-        title="See DigiNizam Cafe POS in Action"
-        description="Book a free demo to walk through counter billing, KOT/KDS, inventory, offline-ready operations and reporting for your cafe or coffee-shop workflow."
+        title="Review DigiNizam for Your Cafe"
+        description="Book a demo to review counter orders, preparation flow, billing and stock. Pricing is discussed after the demo, once requirements are understood."
+        primaryCtaLabel="Book a Demo"
       />
       <ProductClientele bgLight={true} />
       <ProductCertificates bgLight={false} />

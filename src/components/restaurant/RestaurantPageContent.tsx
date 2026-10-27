@@ -8,20 +8,21 @@ import SiteCTA from "@/components/common/SiteCTA";
 import ProductClientele from "@/components/common/ProductClientele";
 import ProductCertificates from "@/components/common/ProductCertificates";
 import SeoFaq from "@/components/seo/SeoFaq";
-import SeoRelatedLinks from "@/components/seo/SeoRelatedLinks";
 import JsonLd from "@/components/seo/JsonLd";
 import { faqJsonLd, type FaqItem } from "@/lib/seo";
 
 const restaurantFaqs: FaqItem[] = [
   {
     q: "What is the best software for restaurant management?",
-    a: "The best restaurant management software depends on the restaurant’s workflow. A strong system should make daily POS and billing work easier, connect order and kitchen operations, support inventory control, provide useful reports, and remain simple for staff to use. Compare solutions based on the features your restaurant actually needs, ease of use, support, reliability and total cost. Evaluate DigiNizam against those same points using its live POS billing, kitchen tickets, order flow, inventory control from sales, and operational reports.",
+    a: "The right restaurant software depends on order taking, kitchen coordination, billing, stock, reports and staff workflow. Review the required devices, offline steps, support and total agreed cost. Compare DigiNizam against those requirements in a live demo rather than assuming every restaurant function is included.",
   },
   {
     q: "What is the best restaurant POS software in Pakistan?",
-    a: "There is no single restaurant POS that is best for every business in Pakistan. Restaurant owners should compare systems by billing and order workflow, kitchen coordination, inventory needs, reporting, ease of staff training, support, pricing and the ability to keep operations reliable when connectivity is weak. The right choice is the system that matches the restaurant’s size, workflow and operational priorities. DigiNizam restaurant POS supports counter billing, kitchen tickets, inventory deduction from sales, sales reports, and continued billing when the internet drops—confirm the fit against your workflow in a demo.",
+    a: "There is no single best restaurant POS for every business in Pakistan. Compare order and billing flow, kitchen setup, inventory needs, connectivity, reporting and support. Review the available DigiNizam configuration in a demo and agree on requirements before discussing pricing.",
   },
 ];
+
+const linkClass = "text-primary font-semibold hover:underline";
 
 function SectionCopy({
   label,
@@ -63,8 +64,8 @@ export default function RestaurantPageContent() {
       <JsonLd data={faqJsonLd(restaurantFaqs)} />
       <PageHero
         label="Restaurant management"
-        title="Restaurant Management Software in Pakistan"
-        description="Manage restaurant POS, billing, orders, kitchen workflow, inventory and reporting with DigiNizam restaurant management software built for daily operations."
+        title="Restaurant POS Software for Orders, Billing & Daily Operations"
+        description="Keep restaurant orders, kitchen information and billing connected. Review stock, reports and the devices and connectivity needed for your restaurant setup."
       />
 
       <section className="pb-12 md:pb-16 bg-background border-b border-surface-border">
@@ -77,6 +78,15 @@ export default function RestaurantPageContent() {
         </div>
       </section>
 
+      <SectionCopy label="Overview" title="What Is Restaurant POS Software?" reverse>
+        <p>
+          Restaurant POS software records customer orders, connects them with billing and shares
+          preparation details with the kitchen where configured. DigiNizam brings order flow,
+          kitchen tickets, stock and sales reports into the restaurant workflow available in the
+          selected setup.
+        </p>
+      </SectionCopy>
+
       <SectionCopy
         label="POS"
         title="Restaurant POS & Billing"
@@ -84,28 +94,16 @@ export default function RestaurantPageContent() {
         imageAlt="Restaurant staff using DigiNizam POS billing"
       >
         <p>
-          DigiNizam restaurant POS software handles counter billing, receipts and daily sales from
-          one screen. Staff add items, apply the order to the bill, and take payment as part of the
-          same ticket.
-        </p>
-        <p>
-          See{" "}
-          <Link href="/" className="text-primary font-semibold hover:underline">
-            POS software Pakistan
-          </Link>{" "}
-          for the broader platform, or{" "}
-          <Link href="/pricing" className="text-primary font-semibold hover:underline">
-            POS software pricing in Pakistan
-          </Link>{" "}
-          for how plans are quoted.
+          Use the restaurant POS to add items, keep the order connected with the bill and record
+          the sale. Payment recording does not provide online payment integration.
         </p>
       </SectionCopy>
 
       <SectionCopy label="Kitchen" title="Kitchen Order Ticket (KOT)" reverse>
         <p>
-          After an order is confirmed on the POS, DigiNizam sends the ticket into the kitchen
-          order flow. Kitchen staff see the items on a kitchen display (KDS) so they can prepare
-          from the same order the cashier is billing—without a separate paper process.
+          When an order is confirmed on the POS, DigiNizam sends the ticket from the counter to
+          the kitchen, so kitchen staff prepare from the same order the cashier is billing.
+          Review the kitchen screen setup for your restaurant during the demo.
         </p>
       </SectionCopy>
 
@@ -123,21 +121,26 @@ export default function RestaurantPageContent() {
           payment.
         </p>
         <p>
-          In DigiNizam, that flow is: select the table or order on the POS, add items, send the
-          ticket to the kitchen display, and keep the same order on the bill for updates and
-          payment. Other steps (such as QR ordering or automatic kitchen printing) are only part
-          of a deployment if they are enabled for that restaurant.
+          Select the table or order, add items and send the preparation details through the
+          configured kitchen workflow. Review the enabled devices and ticket routing during a
+          demo. QR ordering, delivery integrations and automatic kitchen printing are not included
+          as capabilities on this page.
         </p>
       </SectionCopy>
 
       <SectionCopy label="Stock" title="Inventory & Stock" reverse>
         <p>
-          When items are billed, DigiNizam can deduct linked ingredients or stock so inventory
-          stays tied to restaurant operations instead of a separate spreadsheet.{" "}
-          <Link href="/features" className="text-primary font-semibold hover:underline">
-            Restaurant inventory software
+          Where billed items are linked with stock in the selected setup, recorded sales can
+          update the connected inventory. Review the item-to-stock mapping and stock movements
+          using your menu examples; do not assume recipe costing or automatic ingredient
+          deduction without checking the live configuration.
+        </p>
+        <p>
+          Review the{" "}
+          <Link href="/features" className={linkClass}>
+            order, billing and inventory features
           </Link>{" "}
-          covers stock tracking, branch use and inventory reports in more detail.
+          and confirm the functions available for your selected setup.
         </p>
       </SectionCopy>
 
@@ -150,9 +153,9 @@ export default function RestaurantPageContent() {
           actions still require internet.
         </p>
         <p>
-          DigiNizam POS can continue taking orders and billing when the internet drops. Those
-          records are stored locally and sync when the connection returns. Not every POS action is
-          offline—confirm with our team which steps still need internet in your setup.
+          DigiNizam POS can keep taking orders and billing when the internet drops. Records are
+          stored locally and sync to the web as soon as the connection returns. Confirm with our
+          team which actions still need a live connection in your setup.
         </p>
       </SectionCopy>
 
@@ -165,37 +168,54 @@ export default function RestaurantPageContent() {
           help them control revenue, stock, service quality and day-to-day operations.
         </p>
         <p>
-          DigiNizam currently reports on sales, order activity, top-selling items and inventory
-          movement by outlet. Other metrics are only part of your workspace if they appear in your
-          live reports.
+          Review the sales, order and inventory reports available in your selected DigiNizam
+          setup. Other metrics are only part of your workspace if they appear in your live
+          reports.
         </p>
       </SectionCopy>
 
       <SectionCopy label="Fit" title="Who It Is For">
         <p>
-          DigiNizam restaurant management software is for cafes, quick service, dining rooms and
-          multi-outlet restaurants in Pakistan that need POS, kitchen tickets, stock and reporting
-          in one system.{" "}
-          <Link href="/demo" className="text-primary font-semibold hover:underline">
+          Restaurants and food-service outlets that need connected order, billing, stock and
+          reporting records can review DigiNizam in a demo. Confirm the kitchen workflow, number
+          of locations and connectivity needed for the selected configuration.{" "}
+          <Link href="/demo" className={linkClass}>
             Book a demo
           </Link>{" "}
           to see the live workflow, or{" "}
-          <Link href="/contact" className="text-primary font-semibold hover:underline">
+          <Link href="/contact" className={linkClass}>
             contact the team
           </Link>{" "}
           if you already know your outlet count.
         </p>
       </SectionCopy>
 
-      <SeoRelatedLinks
-        intro="Related pages:"
-        links={[
-          { href: "/", label: "POS software Pakistan" },
-          { href: "/features", label: "restaurant inventory software" },
-          { href: "/pricing", label: "POS software price in Pakistan" },
-          { href: "/demo", label: "book a DigiNizam demo" },
-        ]}
-      />
+      <SectionCopy label="Your setup" title="Discuss Your Restaurant Setup" reverse>
+        <p>
+          Restaurants in Pakistan can review order taking, kitchen coordination, billing and
+          connectivity with DigiNizam. Compare the available workflow with your outlet
+          requirements before agreeing on pricing.
+        </p>
+        <p>
+          Read the{" "}
+          <Link href="/blog/what-is-a-restaurant-pos-system" className={linkClass}>
+            restaurant POS guide
+          </Link>{" "}
+          for an overview of orders, kitchen flow and billing. For local buying considerations,
+          read the guide to{" "}
+          <Link href="/blog/best-pos-software-for-restaurants-in-pakistan" className={linkClass}>
+            restaurant POS selection in Pakistan
+          </Link>
+          .
+        </p>
+        <p>
+          See{" "}
+          <Link href="/pricing" className={linkClass}>
+            how DigiNizam pricing is agreed
+          </Link>{" "}
+          after the demo and requirements discussion.
+        </p>
+      </SectionCopy>
 
       <SeoFaq
         label="Restaurant POS"
@@ -205,8 +225,9 @@ export default function RestaurantPageContent() {
       />
 
       <SiteCTA
-        title="Book a Demo"
-        description="Walk through restaurant POS, billing, KOT, inventory and reporting with our team."
+        title="Review DigiNizam for Your Restaurant"
+        description="Book a demo to review orders, kitchen workflow, billing, stock and reports. Pricing is discussed after the demo, once requirements are understood."
+        primaryCtaLabel="Book a Demo"
       />
       <ProductClientele bgLight={true} />
       <ProductCertificates bgLight={false} />
