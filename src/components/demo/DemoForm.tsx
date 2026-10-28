@@ -110,7 +110,7 @@ export default function DemoForm() {
           viewport={{ once: true }}
           className="lg:col-span-7"
         >
-          <form ref={form} onSubmit={sendDemoRequest} className="surface-card p-6 sm:p-8">
+          <form ref={form} onSubmit={sendDemoRequest} data-no-tilt className="surface-card p-6 sm:p-8">
             <h3 className="type-card-title text-foreground mb-1">Demo / Contact Form</h3>
             <p className="type-body text-muted mb-6">We’ll contact you using the phone number or email address you provide.</p>
 

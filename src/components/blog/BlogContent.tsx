@@ -177,7 +177,7 @@ export default function BlogContent({
           return (
             <section key={index} aria-labelledby={`faq-heading-${index}`}>
               <h2 id={`faq-heading-${index}`}>{block.heading}</h2>
-              <div className="blog-faq">
+              <div data-no-tilt className="blog-faq">
                 {block.items.map((item) => (
                   <div key={item.question} className="blog-faq-item">
                     <div className="blog-faq-q">{item.question}</div>

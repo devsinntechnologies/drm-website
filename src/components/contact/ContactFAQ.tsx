@@ -42,7 +42,7 @@ export default function ContactFAQ() {
         description="Quick answers before you reach out."
       />
 
-      <div className="max-w-3xl mx-auto space-y-3">
+      <div data-no-tilt className="max-w-3xl mx-auto space-y-3">
         {faqs.map((faq, idx) => {
           const isOpen = openIdx === idx;
           return (

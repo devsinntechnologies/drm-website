@@ -23,7 +23,7 @@ export default function SeoFaq({
   return (
     <SectionShell tone="background">
       <SectionHeader align="center" label={label} title={title} description={description} />
-      <div className="max-w-3xl mx-auto divide-y divide-surface-border rounded-2xl border border-surface-border bg-surface">
+      <div data-no-tilt className="max-w-3xl mx-auto divide-y divide-surface-border rounded-2xl border border-surface-border bg-surface">
         {items.map((item, idx) => {
           const open = openIdx === idx;
           return (

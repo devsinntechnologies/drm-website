@@ -7,16 +7,20 @@ import { useEffect } from "react";
  * the pointer (rounded + bordered element with a heading, card-sized) and tilts it
  * with the standalone `rotate`/`scale` properties, so it never fights the
  * framer-motion `transform` used for entrance animations.
- * Opt in with `data-tilt`, opt out with `data-no-tilt`. Mouse-only; skipped for
+ * Opt in with `data-tilt`; `data-no-tilt` keeps an element and everything inside
+ * it flat (used on FAQ sections and forms). Mouse-only; skipped for
  * reduced motion.
  */
 
 const MAX_TILT_DEG = 8;
-// Media, forms and accordions (e.g. FAQ lists) are never tilted.
-const EXCLUDED = "video, iframe, form, input, textarea, select, [aria-controls]";
+// Media, form fields and accordions (e.g. FAQ lists) are never tilted.
+const EXCLUDED = "video, iframe, form, input, textarea, select, [aria-controls], [aria-expanded]";
 
 function isCard(el: HTMLElement): boolean {
-  if (el.hasAttribute("data-no-tilt")) return false;
+  // Forms, anything inside a form, and anything marked data-no-tilt (FAQ sections,
+  // contact/demo forms) always stay flat — even when styled as a card.
+  if (el.tagName === "FORM" || el.closest("form, [data-no-tilt]")) return false;
+  if (el.querySelector(EXCLUDED)) return false;
   if (el.hasAttribute("data-tilt") || el.classList.contains("surface-card") || el.classList.contains("glass-card")) {
     return true;
   }
@@ -24,7 +28,7 @@ function isCard(el: HTMLElement): boolean {
   if (!/\brounded-(xl|2xl|3xl)\b/.test(cls) || !/\bborder\b/.test(cls)) return false;
   const headings = el.querySelectorAll("h2, h3, h4").length;
   // More than three headings means a container of items, not a single card.
-  if (headings === 0 || headings > 3 || el.querySelector(EXCLUDED)) return false;
+  if (headings === 0 || headings > 3) return false;
   const { width, height } = el.getBoundingClientRect();
   return width >= 140 && width <= 960 && height >= 80 && height <= 760;
 }

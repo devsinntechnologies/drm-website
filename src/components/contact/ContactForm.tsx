@@ -154,7 +154,7 @@ export default function ContactForm() {
           viewport={{ once: true }}
           className="lg:col-span-7"
         >
-          <form ref={form} onSubmit={sendEmail} className="surface-card p-6 sm:p-8" noValidate>
+          <form ref={form} onSubmit={sendEmail} data-no-tilt className="surface-card p-6 sm:p-8" noValidate>
             <h3 className="type-card-title text-foreground mb-1">Send a message</h3>
             <p className="type-body text-muted mb-6">Tell our team about your business and the help you need.</p>
 
