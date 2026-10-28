@@ -80,7 +80,7 @@ export default function HeroSection() {
               POS &amp; business management
             </span>
 
-            <h1 className="font-semibold text-white tracking-tight mb-3 text-[clamp(2rem,4.5vw,3.25rem)] leading-[1.1]">
+            <h1 className="text-white mb-3 text-[clamp(2.1rem,4.8vw,3.6rem)] leading-[1.08]">
               POS Software for Retail, Restaurants &amp; Growing Businesses
             </h1>
 

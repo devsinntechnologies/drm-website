@@ -19,7 +19,7 @@
   --secondary-foreground: #08162D;
 
   --accent: var(--secondary);
-  --muted: color-mix(in srgb, #000000 55%, transparent);
+  --muted: #5F6F8D;
 
   --radius-btn: 0.75rem;
   --radius-card: 1rem;
@@ -106,11 +106,18 @@
     scroll-behavior: smooth;
   }
 
-  h1,
+  h1 {
+    font-weight: 400;
+    letter-spacing: -0.035em;
+    line-height: 1.08;
+    margin-top: 0;
+    margin-bottom: 0.35rem;
+  }
+
   h2 {
     font-weight: 600;
-    letter-spacing: -0.02em;
-    line-height: 1.2;
+    letter-spacing: -0.025em;
+    line-height: 1.1;
     margin-top: 0;
     margin-bottom: 0.35rem;
   }
@@ -273,15 +280,15 @@
 
   .type-section-heading {
     font-weight: 600;
-    letter-spacing: -0.02em;
-    line-height: 1.12;
+    letter-spacing: -0.025em;
+    line-height: 1.1;
     font-size: clamp(1.875rem, 4.2vw, 2.875rem);
   }
 
   .type-page-heading {
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    line-height: 1.1;
+    font-weight: 400;
+    letter-spacing: -0.035em;
+    line-height: 1.08;
     font-size: clamp(2rem, 4.8vw, 3.25rem);
   }
 
@@ -332,9 +339,9 @@
   }
 
   .hero-title {
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    line-height: 1.05;
+    font-weight: 400;
+    letter-spacing: -0.035em;
+    line-height: 1.08;
   }
 
   .section-divider {
@@ -469,4 +476,24 @@
     background: var(--primary);
     box-shadow: 0 0 10px color-mix(in srgb, var(--primary) 35%, transparent);
   }
+}
+
+/*
+ * Site-wide heading typography (Poppins, matched to the ShowSkill headline style).
+ * Unlayered on purpose so it wins over per-component weight/tracking utilities.
+ * Uppercase label headings (e.g. footer column titles) keep their own styling.
+ */
+h1:not(.uppercase) {
+  font-weight: 400;
+  letter-spacing: -0.035em;
+}
+
+h2:not(.uppercase) {
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+h3:not(.uppercase) {
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }

@@ -105,7 +105,7 @@ export default function AutomobilePageContent() {
             transition={{ duration: 0.6 }}
             className="max-w-5xl mx-auto"
           >
-            <h1 className="hero-title text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-primary tracking-wide drop-shadow-2xl max-w-4xl mx-auto">
+            <h1 className="hero-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white drop-shadow-2xl max-w-4xl mx-auto">
               Auto Parts POS Software for Billing &amp; Inventory
             </h1>
             <p className="mt-4 text-sm sm:text-base text-white/90 max-w-2xl mx-auto leading-relaxed drop-shadow-lg">

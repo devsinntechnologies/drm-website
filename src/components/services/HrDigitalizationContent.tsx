@@ -27,8 +27,8 @@ export default function HrDigitalizationContent() {
             transition={{ duration: 0.6 }}
             className="max-w-5xl mx-auto"
           >
-            <h1 className="hero-title text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase leading-none text-primary tracking-wide drop-shadow-2xl">
-              HR DIGITALIZATION
+            <h1 className="hero-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white drop-shadow-2xl">
+              HR Digitalization
             </h1>
           </motion.div>
         </div>
