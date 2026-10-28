@@ -1,12 +1,13 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useSyncExternalStore } from "react";
 import {
   motion,
-  useScroll,
-  useTransform,
   useInView,
+  useMotionValue,
+  useScroll,
   useSpring,
+  useTransform,
   type MotionValue,
 } from "framer-motion";
 
@@ -18,6 +19,20 @@ const bodyWords = BODY.split(" ");
 
 const easeOut = [0.16, 1, 0.3, 1] as const;
 
+const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
+
+function subscribeReducedMotion(onChange: () => void) {
+  const query = window.matchMedia(REDUCED_MOTION_QUERY);
+  query.addEventListener("change", onChange);
+  return () => query.removeEventListener("change", onChange);
+}
+
+function getReducedMotion() {
+  return window.matchMedia(REDUCED_MOTION_QUERY).matches;
+}
+
+// Scroll-linked "auto-write" reveal: unreached words are hidden; each word
+// un-blurs and rises into place as it scrolls past ~70% of the viewport.
 function ScrollWord({
   word,
   index,
@@ -30,11 +45,11 @@ function ScrollWord({
   progress: MotionValue<number>;
 }) {
   const start = index / total;
-  const end = (index + 0.65) / total;
+  const end = Math.min(1, (index + 1.6) / total);
 
-  const opacity = useTransform(progress, [start, end], [0.38, 1]);
-  const y = useTransform(progress, [start, end], [10, 0]);
-  const blur = useTransform(progress, [start, end], [1.75, 0]);
+  const opacity = useTransform(progress, [start, end], [0, 1]);
+  const y = useTransform(progress, [start, end], [8, 0]);
+  const blur = useTransform(progress, [start, end], [10, 0]);
   const filter = useTransform(blur, (v) => `blur(${v}px)`);
 
   return (
@@ -56,14 +71,18 @@ function ScrollWord({
 }
 
 export default function AwardBannerSection() {
-  const sectionRef = useRef<HTMLElement>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
+  const bodyRef = useRef<HTMLParagraphElement>(null);
+  // Server snapshot is `false`, so hydration matches; the real preference applies right after.
+  const reduceMotion = useSyncExternalStore(subscribeReducedMotion, getReducedMotion, () => false);
+  const fullyShown = useMotionValue(1);
 
   const headingInView = useInView(headingRef, { once: true, amount: 0.5 });
 
+  // 0 when the paragraph top reaches 75% of the viewport; 1 when its bottom reaches 65%.
   const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start 78%", "end 50%"],
+    target: bodyRef,
+    offset: ["start 75%", "end 65%"],
   });
   const smoothProgress = useSpring(scrollYProgress, {
     stiffness: 420,
@@ -73,7 +92,6 @@ export default function AwardBannerSection() {
 
   return (
     <section
-      ref={sectionRef}
       className="relative overflow-hidden px-5 py-14 sm:px-8 sm:py-20 lg:px-10 lg:py-24 xl:px-16 bg-surface section-soft-edge"
     >
       <div className="mx-auto w-full max-w-[1200px]">
@@ -127,6 +145,7 @@ export default function AwardBannerSection() {
 
         <div className="max-w-[920px] mx-auto text-center">
           <p
+            ref={bodyRef}
             className="font-semibold text-[1.5rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[2.85rem] leading-[1.28] tracking-tight flex flex-wrap justify-center"
           >
             {bodyWords.map((word, i) => (
@@ -135,7 +154,7 @@ export default function AwardBannerSection() {
                 word={word}
                 index={i}
                 total={bodyWords.length}
-                progress={smoothProgress}
+                progress={reduceMotion ? fullyShown : smoothProgress}
               />
             ))}
           </p>

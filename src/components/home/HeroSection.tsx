@@ -120,10 +120,11 @@ export default function HeroSection() {
             className="w-full lg:max-w-none"
           >
             <ProductScreen
-              src="/hero section image .png"
+              src="/hero-pos-terminal.webp"
               alt="DigiNizam POS terminal with dashboard, scanner, cash drawer, and receipt printer"
               variant="showcase"
               priority
+              unoptimized
             />
           </motion.div>
         </div>

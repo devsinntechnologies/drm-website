@@ -10,6 +10,8 @@ export type ProductScreenProps = {
   title?: string;
   className?: string;
   priority?: boolean;
+  /** Serve a pre-optimized file as-is (keeps UI text in product shots crisp). */
+  unoptimized?: boolean;
   fit?: "cover" | "contain";
   /**
    * showcase — product / POS hardware, clean stage (hero)
@@ -24,6 +26,7 @@ export default function ProductScreen({
   title = "DigiNizam POS",
   className = "",
   priority = false,
+  unoptimized = false,
   fit = "contain",
   variant = "showcase",
 }: ProductScreenProps) {
@@ -68,6 +71,7 @@ export default function ProductScreen({
           height={1200}
           className={`w-full h-auto ${fitClass} drop-shadow-[0_20px_48px_rgba(0,0,0,0.4)]`}
           priority={priority}
+          unoptimized={unoptimized}
           sizes="(max-width: 1024px) 100vw, 560px"
         />
       </div>
