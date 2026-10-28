@@ -497,3 +497,42 @@ h3:not(.uppercase) {
   font-weight: 600;
   letter-spacing: -0.01em;
 }
+
+/* 3D card tilt (driven by components/common/CardTilt.tsx). Uses standalone
+   rotate/scale so it composes with framer-motion's inline transform. */
+.tilt-card {
+  transition-property: rotate, scale, translate, transform, box-shadow, border-color, background-color, color;
+  transition-duration: 0.18s, 0.35s, 0.35s, 0.35s, 0.35s, 0.25s, 0.25s, 0.25s;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.tilt-card:not(.is-tilting) {
+  transition-duration: 0.6s, 0.6s, 0.35s, 0.35s, 0.35s, 0.25s, 0.25s, 0.25s;
+}
+
+.tilt-card.is-tilting {
+  box-shadow: 0 28px 48px -26px rgba(8, 22, 45, 0.45), 0 10px 20px -16px rgba(0, 85, 255, 0.35);
+}
+
+.tilt-card--relative {
+  position: relative;
+}
+
+.tilt-card:not(.tilt-card--no-glare)::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  background: radial-gradient(
+    420px circle at var(--tilt-x, 50%) var(--tilt-y, 50%),
+    rgba(255, 255, 255, 0.16),
+    transparent 45%
+  );
+}
+
+.tilt-card.is-tilting:not(.tilt-card--no-glare)::after {
+  opacity: 1;
+}

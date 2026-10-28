@@ -5,6 +5,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingWidgets from "@/components/FloatingWidgets";
+import CardTilt from "@/components/common/CardTilt";
 import JsonLd from "@/components/seo/JsonLd";
 import { SITE_URL, organizationJsonLd } from "@/lib/seo";
 
@@ -100,6 +101,7 @@ gtag('config', 'G-4WD5FEECW3');`,
         <Navbar />
         <main className="flex-1">{children}</main>
         <FloatingWidgets />
+        <CardTilt />
         <Footer />
         <JsonLd data={organizationJsonLd} />
       </body>
