@@ -12,7 +12,8 @@ import { useEffect } from "react";
  */
 
 const MAX_TILT_DEG = 8;
-const EXCLUDED = "video, iframe, form, input, textarea, select";
+// Media, forms and accordions (e.g. FAQ lists) are never tilted.
+const EXCLUDED = "video, iframe, form, input, textarea, select, [aria-controls]";
 
 function isCard(el: HTMLElement): boolean {
   if (el.hasAttribute("data-no-tilt")) return false;
@@ -21,7 +22,9 @@ function isCard(el: HTMLElement): boolean {
   }
   const cls = typeof el.className === "string" ? el.className : "";
   if (!/\brounded-(xl|2xl|3xl)\b/.test(cls) || !/\bborder\b/.test(cls)) return false;
-  if (!el.querySelector("h2, h3, h4") || el.querySelector(EXCLUDED)) return false;
+  const headings = el.querySelectorAll("h2, h3, h4").length;
+  // More than three headings means a container of items, not a single card.
+  if (headings === 0 || headings > 3 || el.querySelector(EXCLUDED)) return false;
   const { width, height } = el.getBoundingClientRect();
   return width >= 140 && width <= 960 && height >= 80 && height <= 760;
 }
