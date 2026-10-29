@@ -19,6 +19,9 @@ type PageProps = {
   params: Promise<{ slug: string }>;
 };
 
+// Unknown slugs get the shared server-rendered 404 instead of an on-demand render.
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return getPostSlugs().map((slug) => ({ slug }));
 }

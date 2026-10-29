@@ -5,6 +5,15 @@ import { pageMetadata } from "@/lib/seo";
 
 type ServiceProps = { params: Promise<{ slug: string[] }> };
 
+// Intentionally unfinished services linked from the footer. Any other path returns a real 404.
+const PLACEHOLDER_SERVICES = ["digital-marketing", "system-support", "training"];
+
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return PLACEHOLDER_SERVICES.map((service) => ({ slug: [service] }));
+}
+
 function serviceName(slug: string[]) {
   return slug.map((s) => s.replace(/-/g, " ")).join(" ").replace(/\b\w/g, (c) => c.toUpperCase());
 }

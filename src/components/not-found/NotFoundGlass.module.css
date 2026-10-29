@@ -1,0 +1,240 @@
+/* Frosted-glass 404. All styling is scoped to this module. */
+
+.stage {
+  --nf-ink: #08162d;
+  --nf-body: #3f4f6d;
+  --nf-blue: #0055ff;
+  --nf-blue-deep: #0041c4;
+  --nf-cyan: #00b4ff;
+  --nf-ease: cubic-bezier(0.16, 1, 0.3, 1);
+
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100svh - 80px);
+  padding: clamp(3rem, 8vw, 6rem) 1rem;
+  background:
+    radial-gradient(120% 80% at 50% 0%, #ffffff 0%, rgba(255, 255, 255, 0) 60%),
+    linear-gradient(180deg, #f3f8ff 0%, #e6f0ff 55%, #eef7ff 100%);
+}
+
+/* Decorative light shapes behind the glass */
+.lights {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.light {
+  position: absolute;
+  border-radius: 9999px;
+  opacity: 0.55;
+  will-change: transform;
+}
+
+.lightBlue {
+  width: clamp(180px, 34vw, 340px);
+  height: clamp(180px, 34vw, 340px);
+  top: 50%;
+  left: 50%;
+  margin: calc(clamp(180px, 34vw, 340px) / -2) 0 0 calc(clamp(180px, 34vw, 340px) / -1.1);
+  background: radial-gradient(closest-side, rgba(0, 85, 255, 0.5), rgba(0, 85, 255, 0));
+  animation: drift-blue 4.6s var(--nf-ease) both;
+}
+
+.lightCyan {
+  width: clamp(150px, 28vw, 280px);
+  height: clamp(150px, 28vw, 280px);
+  top: 50%;
+  left: 50%;
+  margin: calc(clamp(150px, 28vw, 280px) / -1.6) 0 0 calc(clamp(150px, 28vw, 280px) / -6);
+  background: radial-gradient(closest-side, rgba(0, 180, 255, 0.5), rgba(0, 180, 255, 0));
+  animation: drift-cyan 4.6s var(--nf-ease) both;
+}
+
+.lightSoft {
+  width: clamp(120px, 20vw, 200px);
+  height: clamp(120px, 20vw, 200px);
+  top: 50%;
+  left: 50%;
+  margin: 0 0 0 calc(clamp(120px, 20vw, 200px) / -2);
+  background: radial-gradient(closest-side, rgba(90, 160, 255, 0.45), rgba(90, 160, 255, 0));
+  opacity: 0.45;
+  animation: drift-soft 4.6s var(--nf-ease) both;
+}
+
+@keyframes drift-blue {
+  from {
+    transform: translate3d(-40px, 30px, 0) scale(0.9);
+  }
+  to {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes drift-cyan {
+  from {
+    transform: translate3d(50px, -30px, 0) scale(0.92);
+  }
+  to {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes drift-soft {
+  from {
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* The glass panel */
+.panel {
+  position: relative;
+  width: 100%;
+  max-width: 36rem;
+  padding: clamp(2rem, 6vw, 3.5rem) clamp(1.25rem, 5vw, 3rem);
+  text-align: center;
+  border-radius: 1.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.46));
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.9) inset,
+    0 0 0 1px rgba(0, 85, 255, 0.08),
+    0 30px 60px -30px rgba(8, 22, 45, 0.28),
+    0 12px 24px -18px rgba(0, 85, 255, 0.25);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  backdrop-filter: blur(18px) saturate(140%);
+  animation: rise 0.8s var(--nf-ease) 0.05s both;
+}
+
+/* Readable fallback when backdrop-filter is unavailable */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .panel {
+    background: rgba(255, 255, 255, 0.94);
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.code {
+  margin: 0 0 0.75rem;
+  font-size: clamp(4.75rem, 18vw, 8.5rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: var(--nf-blue);
+  background: linear-gradient(135deg, var(--nf-blue-deep) 0%, var(--nf-blue) 45%, #2b8cf0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 12px 22px rgba(0, 85, 255, 0.18));
+}
+
+.title {
+  margin: 0;
+  color: var(--nf-ink);
+  font-size: clamp(1.6rem, 4.5vw, 2.25rem);
+  line-height: 1.15;
+}
+
+.description {
+  margin: 1rem auto 0;
+  max-width: 28rem;
+  color: var(--nf-body);
+  font-size: clamp(0.95rem, 2.4vw, 1.05rem);
+  line-height: 1.65;
+}
+
+.actions {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0 1.5rem;
+  border-radius: 0.875rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    transform 0.2s var(--nf-ease),
+    box-shadow 0.2s var(--nf-ease),
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.action:hover {
+  transform: translateY(-1px);
+}
+
+.action:focus-visible {
+  outline: 3px solid var(--nf-blue);
+  outline-offset: 3px;
+  box-shadow: none;
+}
+
+.primary {
+  color: #ffffff;
+  background: var(--nf-blue);
+  box-shadow: 0 10px 22px -12px rgba(0, 85, 255, 0.7);
+}
+
+.primary:hover {
+  background: var(--nf-blue-deep);
+  box-shadow: 0 14px 26px -12px rgba(0, 85, 255, 0.75);
+}
+
+.secondary {
+  color: var(--nf-blue-deep);
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 85, 255, 0.28);
+}
+
+.secondary:hover {
+  background: #ffffff;
+  border-color: rgba(0, 85, 255, 0.5);
+}
+
+@media (max-width: 420px) {
+  .action {
+    flex: 1 1 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .light,
+  .panel {
+    animation: none;
+  }
+
+  .action {
+    transition: none;
+  }
+
+  .action:hover {
+    transform: none;
+  }
+}
