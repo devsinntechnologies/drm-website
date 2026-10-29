@@ -292,7 +292,8 @@ try {
   assert.equal(sends, 2, "One failed request plus one successful retry");
   assert.equal(thankYouRequests, 1);
   assert(!(await formContext.cookies()).some((c) => c.name === "dn_demo_success"));
-  assert(await formPage.getByRole("heading", { level: 1, name: "Thank you — we'll be in touch" }).isVisible());
+  // The page shell can fire `load` just before the streamed content is revealed.
+  await formPage.getByRole("heading", { level: 1, name: "Thank you — we'll be in touch" }).waitFor({ state: "visible" });
   await formPage.reload();
   await formPage.waitForURL(base + "/demo");
   result.forms = { delivery: "Mocked only; no real email sent", requiredFields: "pass", invalidEmail: "pass", internationalInputs: "US, UAE, Pakistan, UK accepted", failureKeepsForm: "pass", retryRoutesAfterSuccess: "pass", successCookieConsumed: "pass", directAndRepeatedThankYouAccess: "redirects to /demo", analytics: "GA4/Clarity scripts blocked; property-side event configuration and real delivery pending" };

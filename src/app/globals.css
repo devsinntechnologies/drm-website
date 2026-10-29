@@ -460,6 +460,30 @@
     }
   }
 
+  /* Above-the-fold entrance: CSS-only and never transparent, so the hero paints (and counts as LCP) before JS loads. */
+  .hero-rise {
+    animation: hero-rise 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .hero-rise--delay {
+    animation-delay: 0.1s;
+  }
+
+  @keyframes hero-rise {
+    from {
+      transform: translateY(20px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-rise {
+      animation: none;
+    }
+  }
+
   .nav-active {
     color: var(--primary);
     position: relative;

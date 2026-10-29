@@ -71,6 +71,7 @@ export default function ProductScreen({
           height={1200}
           className={`w-full h-auto ${fitClass} drop-shadow-[0_20px_48px_rgba(0,0,0,0.4)]`}
           priority={priority}
+          fetchPriority={priority ? "high" : undefined}
           unoptimized={unoptimized}
           sizes="(max-width: 1024px) 100vw, 560px"
         />

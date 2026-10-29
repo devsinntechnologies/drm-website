@@ -1,13 +1,10 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
 import { FiPhone } from "react-icons/fi";
 import Button from "@/components/ui/Button";
 import ProductScreen from "@/components/common/ProductScreen";
 import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/contact";
-
-const easeOut = [0.16, 1, 0.3, 1] as const;
 
 const ROTATING_INDUSTRIES = ["Restaurants", "Retail Stores", "Pharmacies", "Snooker Clubs"] as const;
 const TYPE_SPEED_MS = 55;
@@ -69,12 +66,7 @@ export default function HeroSection() {
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 w-full py-14 md:py-20 lg:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, ease: easeOut }}
-            className="max-w-lg"
-          >
+          <div className="hero-rise max-w-lg">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/[0.04] px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/70 mb-4">
               <span className="h-1.5 w-1.5 rounded-full bg-secondary shrink-0" />
               POS &amp; business management
@@ -111,14 +103,9 @@ export default function HeroSection() {
                 {PHONE_DISPLAY}
               </a>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, delay: 0.1, ease: easeOut }}
-            className="w-full lg:max-w-none"
-          >
+          <div className="hero-rise hero-rise--delay w-full lg:max-w-none">
             <ProductScreen
               src="/hero-pos-terminal.webp"
               alt="DigiNizam POS terminal with dashboard, scanner, cash drawer, and receipt printer"
@@ -126,7 +113,7 @@ export default function HeroSection() {
               priority
               unoptimized
             />
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
