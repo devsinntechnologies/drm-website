@@ -1,4 +1,4 @@
-export type BlogCategory = "Restaurant POS" | "Inventory" | "POS Pricing" | "Retail POS";
+export type BlogCategory = "Restaurant POS" | "Inventory" | "POS Pricing" | "Retail POS" | "Snooker Club Software";
 
 export type InlineLink = {
   href: string;
@@ -12,7 +12,7 @@ export type ContentBlock =
   | { type: "link-list"; items: InlineLink[] }
   | { type: "table"; label: string; columns: string[]; rows: string[][] }
   | { type: "callout"; title: string; text: string }
-  | { type: "ordered-list"; intro?: string; items: string[]; outro?: string }
+  | { type: "ordered-list"; intro?: string; items: string[]; outro?: string; links?: InlineLink[] }
   | { type: "bullet-list"; intro?: string; items: string[]; outro?: string; links?: InlineLink[] }
   | { type: "image"; src: string; alt: string; width: number; height: number }
   | {
@@ -43,6 +43,7 @@ export type BlogPost = {
   publishedAt: string; // ISO 8601 with timezone
   modifiedAt: string;
   readTime: string;
+  /** Site path (/blog/…) or an absolute URL on an allowed image host. */
   featuredImage: string;
   imageAlt: string;
   seoTitle: string;

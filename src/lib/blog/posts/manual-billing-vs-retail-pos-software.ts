@@ -16,8 +16,8 @@ export const retailBlog3: BlogPost = {
   publishedAt: PUBLISHED_AT,
   modifiedAt: MODIFIED_AT,
   readTime: "4 min read",
-  featuredImage: "/blog/retail-billing-counter-workflow.webp",
-  imageAlt: "Retail billing counter and digital POS checkout workflow",
+  featuredImage: "/blog/retail-checkout-counter-billing.webp",
+  imageAlt: "Shop assistant completing a sale with a customer at a retail checkout counter",
   seoTitle: "Manual Billing vs Retail POS Software: When to Switch",
   metaDescription:
     "Compare manual billing and retail POS workflows for checkout, stock and reporting. Use a practical trial to decide whether your store should switch.",

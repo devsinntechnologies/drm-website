@@ -19,7 +19,7 @@ export const retailBlog4: BlogPost = {
   publishedAt: PUBLISHED_AT,
   modifiedAt: MODIFIED_AT,
   readTime: "5 min read",
-  featuredImage: "/blog/retail-store-pos-evaluation-pakistan.webp",
+  featuredImage: "/blog/retail-clothing-store-interior.webp",
   imageAlt: "Retail clothing store interior with shelves, racks and a display table",
   seoTitle: "How to Choose Retail POS Software for Your Store",
   metaDescription:

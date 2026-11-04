@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import PageHero from "@/components/common/PageHero";
 import SectionShell from "@/components/common/SectionShell";
@@ -24,6 +25,8 @@ import {
   FiSettings,
   FiAward,
 } from "react-icons/fi";
+
+const linkClass = "text-primary font-semibold hover:underline";
 
 const CORE_MODULES = [
   { n: 1, title: "Dashboard", desc: "Real-time overview of tables, active sessions, sales, expenses, profit, cash, credit, staff activity, and key KPIs.", icon: <FiMonitor /> },
@@ -183,6 +186,21 @@ export default function SnookerPageContent() {
           Snooker clubs and pool halls in Pakistan can review table-session billing and receipts
           with DigiNizam. Confirm game types, timing rules and the club configuration before
           rollout.
+        </p>
+        <p>
+          New to club software? Read{" "}
+          <Link href="/blog/what-is-snooker-club-management-software" className={linkClass}>
+            what snooker club management software is
+          </Link>
+          , how to{" "}
+          <Link href="/blog/snooker-table-session-management" className={linkClass}>
+            manage table sessions, timing and bookings
+          </Link>{" "}
+          and how clubs{" "}
+          <Link href="/blog/snooker-club-sales-expense-tracking" className={linkClass}>
+            track sales, revenue and expenses
+          </Link>
+          .
         </p>
         <IndustryContextLinks featuresLabel="DigiNizam platform features" />
       </SectionCopy>

@@ -19,7 +19,7 @@ export const blog3: BlogPost = {
   publishedAt: PUBLISHED_AT,
   modifiedAt: MODIFIED_AT,
   readTime: "4 min read",
-  featuredImage: "/blog/best-pos-software-restaurants-pakistan.webp",
+  featuredImage: "/blog/restaurant-pos-front-counter-staff.webp",
   imageAlt: "Restaurant staff using a POS terminal at the front counter",
   seoTitle: "How to Choose Restaurant POS Software: A Checklist",
   metaDescription:

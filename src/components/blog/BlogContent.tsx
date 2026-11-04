@@ -213,14 +213,16 @@ export default function BlogContent({
           return (
             <div key={index}>
               {block.intro
-                ? block.intro.split("\n\n").map((para, i) => <p key={`intro-${i}`}>{para}</p>)
+                ? block.intro
+                    .split("\n\n")
+                    .map((para, i) => <p key={`intro-${i}`}>{linkifyParagraph(para, block.links)}</p>)
                 : null}
               <ol>
                 {block.items.map((item) => (
-                  <li key={item}>{item}</li>
+                  <li key={item}>{linkifyParagraph(item, block.links)}</li>
                 ))}
               </ol>
-              {block.outro ? <p>{block.outro}</p> : null}
+              {block.outro ? <p>{linkifyParagraph(block.outro, block.links)}</p> : null}
             </div>
           );
         }
@@ -229,7 +231,7 @@ export default function BlogContent({
           return (
             <div key={index}>
               {block.intro ? <p>{linkifyParagraph(block.intro, block.links)}</p> : null}
-              <ul>{block.items.map((item) => <li key={item}>{item}</li>)}</ul>
+              <ul>{block.items.map((item) => <li key={item}>{linkifyParagraph(item, block.links)}</li>)}</ul>
               {block.outro ? <p>{linkifyParagraph(block.outro, block.links)}</p> : null}
             </div>
           );

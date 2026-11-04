@@ -16,8 +16,8 @@ export const blog2: BlogPost = {
   publishedAt: PUBLISHED_AT,
   modifiedAt: MODIFIED_AT,
   readTime: "4 min read",
-  featuredImage: "/blog/restaurant-inventory-ingredient-stock-control.webp",
-  imageAlt: "Restaurant inventory management and ingredient stock control",
+  featuredImage: "/blog/restaurant-ingredient-stock-check.webp",
+  imageAlt: "Restaurant manager checking ingredient stock on a clipboard in a kitchen storeroom",
   seoTitle: "Restaurant Inventory Management: Reduce Food Waste",
   metaDescription:
     "Build a restaurant stock routine for receiving, counts, purchasing and waste logs. Learn how to investigate ingredient differences without guessing.",

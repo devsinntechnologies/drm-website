@@ -7,6 +7,7 @@ import BlogContent from "@/components/blog/BlogContent";
 import JsonLd from "@/components/seo/JsonLd";
 import {
   blogBreadcrumbJsonLd,
+  blogImageUrl,
   blogPostingJsonLd,
   formatBlogDate,
   getPostBySlug,
@@ -34,7 +35,7 @@ export async function generateMetadata({
   if (!post) notFound();
 
   const url = `${SITE_URL}${post.canonicalPath}`;
-  const imageUrl = `${SITE_URL}${post.featuredImage}`;
+  const imageUrl = blogImageUrl(post, SITE_URL);
 
   return {
     title: post.seoTitle,

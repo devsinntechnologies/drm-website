@@ -59,11 +59,12 @@ export default function BlogGrid() {
                 href={`/blog/${post.slug}`}
                 className="group flex flex-col h-full rounded-2xl border border-surface-border bg-background overflow-hidden hover:border-primary/30 hover:shadow-lg transition-all"
               >
-                <div className="relative aspect-[4/3] overflow-hidden">
+                <div className="relative aspect-video overflow-hidden">
                   <Image
                     src={post.featuredImage}
                     alt={post.imageAlt}
                     fill
+                    loading={idx < 3 ? "eager" : "lazy"}
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />

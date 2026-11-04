@@ -16,8 +16,8 @@ export const retailBlog2: BlogPost = {
   publishedAt: PUBLISHED_AT,
   modifiedAt: MODIFIED_AT,
   readTime: "4 min read",
-  featuredImage: "/blog/retail-inventory-stock-management.webp",
-  imageAlt: "Retail store inventory and stock management on shelves",
+  featuredImage: "/blog/retail-inventory-shelf-stock.webp",
+  imageAlt: "Retail store shelves stocked with bottled drinks and packaged goods",
   seoTitle: "Retail Inventory Management Software: Reduce Stock Errors",
   metaDescription:
     "Learn how receiving, sales, returns and stock counts fit together. Use a worked retail example to investigate mismatches before changing stock balances.",

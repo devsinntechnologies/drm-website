@@ -19,7 +19,7 @@ export const blog4: BlogPost = {
   publishedAt: PUBLISHED_AT,
   modifiedAt: MODIFIED_AT,
   readTime: "4 min read",
-  featuredImage: "/blog/pos-software-pricing-pakistan-v2.webp",
+  featuredImage: "/blog/pos-software-hardware-quote-review.webp",
   imageAlt: "Store owner reviewing POS software, hardware, location and support options at a counter",
   seoTitle: "POS Software Pricing: How to Compare Quotes",
   metaDescription:

@@ -7,6 +7,9 @@ import { retailBlog1 } from "./posts/what-is-retail-pos-software";
 import { retailBlog2 } from "./posts/retail-inventory-management-software";
 import { retailBlog3 } from "./posts/manual-billing-vs-retail-pos-software";
 import { retailBlog4 } from "./posts/how-to-choose-retail-pos-software";
+import { snookerBlog1 } from "./posts/what-is-snooker-club-management-software";
+import { snookerBlog2 } from "./posts/snooker-table-session-management";
+import { snookerBlog3 } from "./posts/snooker-club-sales-expense-tracking";
 import type { FaqItem } from "@/lib/seo";
 
 /** Published posts only. Add new approved posts here. */
@@ -19,6 +22,9 @@ export const blogPosts: BlogPost[] = [
   retailBlog2,
   retailBlog3,
   retailBlog4,
+  snookerBlog1,
+  snookerBlog2,
+  snookerBlog3,
 ];
 
 export function getAllPosts(): BlogPost[] {
@@ -39,7 +45,7 @@ export function getPostSlugs(): string[] {
 /** Categories that have at least one published post, plus All. */
 export function getActiveCategories(): Array<"All" | BlogCategory> {
   const present = new Set(blogPosts.map((post) => post.category));
-  const ordered: BlogCategory[] = ["Retail POS", "Restaurant POS", "Inventory", "POS Pricing"];
+  const ordered: BlogCategory[] = ["Retail POS", "Restaurant POS", "Snooker Club Software", "Inventory", "POS Pricing"];
   return ["All", ...ordered.filter((category) => present.has(category))];
 }
 
@@ -105,6 +111,11 @@ export function getPostFaqItems(post: BlogPost): FaqItem[] {
   return items;
 }
 
+/** Absolute URL for a post's featured image (site path or remote image URL). */
+export function blogImageUrl(post: BlogPost, siteUrl: string): string {
+  return /^https?:\/\//.test(post.featuredImage) ? post.featuredImage : `${siteUrl}${post.featuredImage}`;
+}
+
 export function blogPostingJsonLd(post: BlogPost, siteUrl: string) {
   const url = `${siteUrl}${post.canonicalPath}`;
   return {
@@ -112,7 +123,7 @@ export function blogPostingJsonLd(post: BlogPost, siteUrl: string) {
     "@type": "BlogPosting",
     headline: post.title,
     description: post.metaDescription,
-    image: [`${siteUrl}${post.featuredImage}`],
+    image: [blogImageUrl(post, siteUrl)],
     datePublished: post.publishedAt,
     dateModified: post.modifiedAt,
     author: {

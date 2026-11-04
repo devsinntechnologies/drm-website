@@ -16,8 +16,8 @@ export const retailBlog1: BlogPost = {
   publishedAt: PUBLISHED_AT,
   modifiedAt: MODIFIED_AT,
   readTime: "4 min read",
-  featuredImage: "/blog/retail-pos-software-store-checkout.webp",
-  imageAlt: "Retail store checkout counter with POS billing workflow",
+  featuredImage: "/blog/retail-store-checkout-pos-counter.webp",
+  imageAlt: "Retail store counter with a tablet POS, receipt printer and products on display",
   seoTitle: "What Is Retail POS Software? Checkout, Stock and Reports",
   metaDescription:
     "Learn what retail POS software does, how a store sale connects with stock records, and what to test before choosing a system for your shop.",

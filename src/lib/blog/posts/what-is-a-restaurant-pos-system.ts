@@ -16,8 +16,8 @@ export const blog1: BlogPost = {
   publishedAt: PUBLISHED_AT,
   modifiedAt: MODIFIED_AT,
   readTime: "4 min read",
-  featuredImage: "/blog/restaurant-pos-system-orders-kitchen-billing.webp",
-  imageAlt: "Restaurant POS system managing orders kitchen and billing",
+  featuredImage: "/blog/restaurant-pos-counter-billing.webp",
+  imageAlt: "Restaurant cashier entering an order on a POS terminal at the counter while kitchen staff cook behind",
   seoTitle: "What Is a Restaurant POS System? How It Works",
   metaDescription:
     "Learn what a restaurant POS system does, how an order moves from the table to the kitchen and bill, and what to check before choosing a setup.",
