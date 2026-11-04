@@ -118,11 +118,11 @@ export default function SupermarketPageContent() {
         afterModules={
           <SectionCopy label="Your setup" title="Discuss Your Business Setup" reverse>
             <p>
-              Supermarkets and grocery stores in Pakistan can review billing, item records and
+              Supermarkets and grocery stores can review billing, item records and
               purchasing with DigiNizam. Confirm hardware and local requirements for the selected
               setup.
             </p>
-            <IndustryContextLinks peer="retail" />
+            <IndustryContextLinks peer="retail" guides={["retail-pos", "retail-inventory"]} />
           </SectionCopy>
         }
         cta={{

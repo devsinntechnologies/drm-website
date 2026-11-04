@@ -183,7 +183,7 @@ export default function SnookerPageContent() {
 
       <SectionCopy label="Your setup" title="Discuss Your Club Setup" reverse>
         <p>
-          Snooker clubs and pool halls in Pakistan can review table-session billing and receipts
+          Snooker clubs and pool halls can review table-session billing and receipts
           with DigiNizam. Confirm game types, timing rules and the club configuration before
           rollout.
         </p>

@@ -60,7 +60,7 @@ export default function FurniturePageContent() {
         label="Overview"
         title="What Is Furniture Store POS Software?"
         image="https://images.unsplash.com/photo-1687180498602-5a1046defaa4?q=80&w=1600&auto=format&fit=crop"
-        imageAlt="DigiNizam Furniture Store POS solution"
+        imageAlt="Furniture showroom with a grey sectional sofa"
         imageBrief="Professional furniture showroom with DigiNizam product availability / inventory UI; show sofa/table/chair context and a clean POS tablet/desktop screen."
       >
         <p>
@@ -87,7 +87,7 @@ export default function FurniturePageContent() {
         label="Stock"
         title="Showroom & Warehouse Stock Visibility"
         image="https://images.unsplash.com/photo-1635468609223-4e59675ac96d?q=80&w=1600&auto=format&fit=crop"
-        imageAlt="Furniture Store inventory / workflow in DigiNizam"
+        imageAlt="Warehouse aisle with stocked shelving"
         imageBrief="Real DigiNizam warehouse/location stock or supplier purchase/receiving screen; emphasize availability across showroom/warehouse if supported."
       >
         <p>
@@ -145,10 +145,10 @@ export default function FurniturePageContent() {
 
       <SectionCopy label="Your setup" title="Discuss Your Business Setup">
         <p>
-          Furniture showrooms in Pakistan can review stock locations, supplier records and
+          Furniture showrooms can review stock locations, supplier records and
           invoicing with DigiNizam. Confirm any delivery or quotation requirements separately.
         </p>
-        <IndustryContextLinks peer="retail" />
+        <IndustryContextLinks peer="retail" guides={["manual-vs-pos"]} />
       </SectionCopy>
 
       <SeoFaq

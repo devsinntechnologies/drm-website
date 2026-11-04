@@ -65,13 +65,33 @@ export default function Footer() {
               </Link>
             </li>
             <li>
+              <Link href="/industries" className={linkClass}>
+                Industry solutions
+              </Link>
+            </li>
+            <li>
               <Link href="/pricing" className={linkClass}>
                 POS software pricing
               </Link>
             </li>
             <li>
+              <Link href="/blog" className={linkClass}>
+                POS and inventory guides
+              </Link>
+            </li>
+            <li>
               <Link href="/demo" className={linkClass}>
                 Book a demo
+              </Link>
+            </li>
+            <li>
+              <Link href="/partner" className={linkClass}>
+                Become a partner
+              </Link>
+            </li>
+            <li>
+              <Link href="/hiring" className={linkClass}>
+                Careers
               </Link>
             </li>
             <li>
@@ -93,6 +113,11 @@ export default function Footer() {
             <li>
               <Link href="/services/web-development" className={linkClass}>
                 Web Development
+              </Link>
+            </li>
+            <li>
+              <Link href="/services/hr-digitalization" className={linkClass}>
+                HR Digitalization
               </Link>
             </li>
             <li>

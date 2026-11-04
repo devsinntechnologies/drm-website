@@ -31,7 +31,7 @@ export default function AboutPage() {
             <article className="rounded-2xl border border-surface-border bg-surface p-5">
               <h3 className="text-lg font-bold text-foreground mb-2">Who is DigiNizam?</h3>
               <p className="text-muted text-sm leading-relaxed">
-                DigiNizam provides POS, inventory and business-management software designed to connect billing, stock, reporting and daily operational workflows. Available modules and the final configuration depend on the needs of the business.
+                DigiNizam provides POS, inventory and business-management software designed to connect billing, stock, reporting and daily operational workflows. The team is based in Lahore, Pakistan, and serves businesses globally. Available modules and the final configuration depend on the needs of the business.
               </p>
             </article>
             <article className="rounded-2xl border border-surface-border bg-surface p-5">

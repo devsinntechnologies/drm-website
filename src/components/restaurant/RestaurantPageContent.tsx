@@ -192,7 +192,7 @@ export default function RestaurantPageContent() {
 
       <SectionCopy label="Your setup" title="Discuss Your Restaurant Setup" reverse>
         <p>
-          Restaurants in Pakistan can review order taking, kitchen coordination, billing and
+          Restaurants can review order taking, kitchen coordination, billing and
           connectivity with DigiNizam. Compare the available workflow with your outlet
           requirements before agreeing on pricing.
         </p>
@@ -206,7 +206,15 @@ export default function RestaurantPageContent() {
           <Link href="/blog/how-to-choose-restaurant-pos-software" className={linkClass}>
             choosing restaurant POS software
           </Link>
-          .
+          . For stock routines, see the guide to{" "}
+          <Link href="/blog/restaurant-inventory-management-reduce-food-waste" className={linkClass}>
+            restaurant inventory management and food waste
+          </Link>
+          , and use the{" "}
+          <Link href="/blog/pos-software-pricing-guide" className={linkClass}>
+            POS software pricing guide
+          </Link>{" "}
+          to compare quotes.
         </p>
         <p>
           See{" "}

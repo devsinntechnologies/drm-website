@@ -260,11 +260,11 @@ export default function AutomobilePageContent() {
 
       <SectionCopy label="Your setup" title="Discuss Your Business Setup" reverse>
         <p>
-          Auto parts retailers in Pakistan can review spare parts records, counter billing and
+          Auto parts retailers can review spare parts records, counter billing and
           supplier purchases with DigiNizam. Confirm specialist fitment or workshop needs
           separately.
         </p>
-        <IndustryContextLinks peer="retail" />
+        <IndustryContextLinks peer="retail" guides={["retail-inventory"]} />
       </SectionCopy>
 
       <SeoFaq

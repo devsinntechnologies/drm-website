@@ -18,7 +18,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "POS Software for Retail, Restaurants & Growing Businesses | DigiNizam",
   description:
-    "POS software for billing, inventory, sales and daily operations across retail, restaurants and other growing businesses. Explore features, industries, pricing and book a demo.",
+    "DigiNizam POS software connects billing, inventory, sales and reports for retail stores, restaurants and other growing businesses worldwide. Book a demo.",
   path: "/",
 });
 
@@ -35,6 +35,12 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <article className="rounded-2xl border border-surface-border bg-surface p-5 md:col-span-2">
+              <h3 className="text-lg font-bold text-foreground mb-2">What is DigiNizam?</h3>
+              <p className="text-muted text-sm leading-relaxed">
+                DigiNizam is POS and business management software that connects billing, inventory, purchasing and reports in one configured platform. It offers industry configurations for retail stores, restaurants, pharmacies, snooker clubs and other businesses, serves customers globally through an English-language offering and provides 24/7 support. The team is based in Lahore, Pakistan, and pricing is agreed after a demo and requirements review.
+              </p>
+            </article>
             <article className="rounded-2xl border border-surface-border bg-surface p-5">
               <h3 className="text-lg font-bold text-foreground mb-2">What is POS software?</h3>
               <p className="text-muted text-sm leading-relaxed">

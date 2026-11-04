@@ -48,7 +48,7 @@ export default function SalonPageContent() {
         label="Overview"
         title="What Is Salon POS Software?"
         image="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?q=80&w=1600&auto=format&fit=crop"
-        imageAlt="DigiNizam Salon / SPA POS solution"
+        imageAlt="Salon interior with styling chairs and round mirrors"
         imageBrief="Professional salon reception/cash desk with DigiNizam service + retail product billing screen; elegant salon environment, realistic staff/customer context."
       >
         <p>
@@ -92,7 +92,7 @@ export default function SalonPageContent() {
         title="Retail Product Inventory for Salons"
         reverse
         image="https://images.unsplash.com/photo-1776651993626-7cc836bf03aa?q=80&w=1600&auto=format&fit=crop"
-        imageAlt="Salon / SPA inventory / workflow in DigiNizam"
+        imageAlt="Rows of cosmetic product jars on salon shelves"
         imageBrief="Real DigiNizam inventory/report screen focused on salon retail products such as shampoo, skincare or cosmetics; no appointment UI unless product confirms it."
       >
         <p>
@@ -138,7 +138,7 @@ export default function SalonPageContent() {
 
       <SectionCopy label="Your setup" title="Discuss Your Business Setup">
         <p>
-          Salons, barbershops and spas in Pakistan can review service billing and retail product
+          Salons, barbershops and spas can review service billing and retail product
           inventory with DigiNizam. Confirm any booking or commission requirements separately.
         </p>
         <IndustryContextLinks />

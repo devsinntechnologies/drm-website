@@ -53,7 +53,7 @@ export default function HrDigitalizationContent() {
               DigiNizam has evolved an advanced HR software known as the Human Resource Information System (HRIS). This powerful platform integrates important systems and methods to make sure efficient management of human assets, enterprise workflows, and personnel statistics.
             </p>
             <p className="text-muted text-[11px] sm:text-xs leading-relaxed mb-4 font-normal">
-              HR software in Pakistan like DigiNizam is broadly adopted by several corporations to streamline essential HR functions, serving as the central hub for operations across numerous organizational contexts.
+              HR software in Pakistan such as DigiNizam HRIS is designed to bring essential HR functions into one central place. Discuss the HR modules and workflows your organization needs with the team.
             </p>
             <div className="inline-flex items-center gap-2 text-[11px] font-bold text-primary bg-primary/10 border border-primary/20 px-3.5 py-2 rounded-xl">
               <FiShield size={14} /> Centralized Database &amp; Employee Directory
@@ -244,7 +244,7 @@ export default function HrDigitalizationContent() {
             We Convert Your <span className="text-primary">Idea Into a Reality</span>
           </h2>
           <p className="text-muted text-xs sm:text-[13px] leading-relaxed mb-4 font-normal">
-            Reduce administrative overhead and foster a happier workplace. Our intelligent digital HR tools securely manage personnel records, streamline payroll processing, and guarantee complete labor regulatory compliance.
+            Reduce administrative overhead and foster a happier workplace. Our intelligent digital HR tools securely manage personnel records, streamline payroll processing, and support the records your team uses to meet its labour obligations.
           </p>
           <div className="inline-flex items-center gap-2 text-[11px] font-bold text-primary bg-primary/10 border border-primary/20 px-4 py-2 rounded-xl mb-5">
             <FiServer size={16} /> Centralized Enterprise Employee Hub

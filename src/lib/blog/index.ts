@@ -133,6 +133,7 @@ export function blogPostingJsonLd(post: BlogPost, siteUrl: string) {
     },
     publisher: {
       "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
       name: "DigiNizam",
       url: siteUrl,
       logo: {
@@ -142,6 +143,9 @@ export function blogPostingJsonLd(post: BlogPost, siteUrl: string) {
         height: 512,
       },
     },
+    inLanguage: "en",
+    isPartOf: { "@id": `${siteUrl}/#website` },
+    about: { "@id": `${siteUrl}/#software` },
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": url,

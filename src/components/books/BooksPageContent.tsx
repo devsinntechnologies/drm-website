@@ -260,10 +260,10 @@ export default function BooksPageContent() {
 
       <SectionCopy label="Your setup" title="Discuss Your Business Setup" reverse>
         <p>
-          Bookshops in Pakistan can review catalogue items, supplier purchases and billing with
+          Bookshops can review catalogue items, supplier purchases and billing with
           DigiNizam. Confirm ISBN handling and hardware using sample books during the demo.
         </p>
-        <IndustryContextLinks peer="retail" />
+        <IndustryContextLinks peer="retail" guides={["retail-inventory"]} />
       </SectionCopy>
 
       <SeoFaq

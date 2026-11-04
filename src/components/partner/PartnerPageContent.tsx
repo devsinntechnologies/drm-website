@@ -15,7 +15,7 @@ const benefits = [
   { icon: FiGlobe, title: "Territory support", desc: "Co-branded materials and local market guidance for your region." },
   { icon: FiTrendingUp, title: "Recurring revenue", desc: "Earn on implementations, subscriptions, and add-on services." },
   { icon: FiUsers, title: "Dedicated channel team", desc: "Pre-sales help, demo support, and partner onboarding." },
-  { icon: FiAward, title: "Certified partner program", desc: "Training and certification so you sell with confidence." },
+  { icon: FiAward, title: "Product demos", desc: "Review the DigiNizam platform in a demo before you present it to your clients." },
 ];
 
 export default function PartnerPageContent() {
@@ -47,7 +47,7 @@ export default function PartnerPageContent() {
             Grow with <span className="text-primary">DigiNizam</span>
           </>
         }
-        description="Resellers, integrators, and consultants—join our partner network and deliver ERP & POS across Pakistan."
+        description="Resellers, integrators, and consultants—join our partner network and offer DigiNizam POS and business management software in the markets you serve."
       />
 
       <SectionShell tone="surface">
@@ -86,7 +86,7 @@ export default function PartnerPageContent() {
             <SectionHeader
               label="Apply now"
               title="Become a partner"
-              description="Tell us about your company and the markets you serve. Our channel team will respond within two business days."
+              description="Tell us about your company and the markets you serve. Our team will review your application and contact you using the details you provide."
               className="mb-0"
             />
           </div>

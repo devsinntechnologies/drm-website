@@ -126,8 +126,9 @@ export default function ContactForm() {
           <div className="rounded-2xl border border-surface-border bg-surface p-5">
             <div className="flex items-center gap-2 mb-4">
               <FiClock className="w-4 h-4 text-primary" />
-              <h3 className="type-card-title text-foreground">Business hours</h3>
+              <h3 className="type-card-title text-foreground">Office hours (Pakistan time)</h3>
             </div>
+            <p className="text-xs text-muted mb-3">Lahore office hours. DigiNizam support is available 24/7.</p>
             <ul className="space-y-2">
               {hours.map((row) => (
                 <li key={row.day} className="flex items-center justify-between text-sm">
