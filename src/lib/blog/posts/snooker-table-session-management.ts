@@ -188,7 +188,7 @@ export const snookerBlog2: BlogPost = {
         "Control: discounts with mandatory reasons and approval limits, user roles and module-level permissions, and notifications for issues such as large discounts or maintenance.",
       ],
       outro:
-        "Online table booking with deposits is planned and not currently available, so reservations are recorded by staff. Confirm your game types, pause behaviour, minimum duration and rounding rules during a demo.",
+        "Reservations and bookings are recorded by club staff. Online customer self-booking with deposits is not currently available; it can be built as a custom feature for an additional charge. Confirm your game types, pause behaviour, minimum duration and rounding rules during a demo.",
       links: [{ href: "/products/snooker", label: "snooker club software" }],
     },
     {

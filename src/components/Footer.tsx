@@ -84,11 +84,7 @@ export default function Footer() {
                 Book a demo
               </Link>
             </li>
-            <li>
-              <Link href="/partner" className={linkClass}>
-                Become a partner
-              </Link>
-            </li>
+            {/* /partner hidden from the footer until the page is officially ready (owner, 4 Nov 2026). Page stays live. */}
             <li>
               <Link href="/hiring" className={linkClass}>
                 Careers
@@ -115,11 +111,7 @@ export default function Footer() {
                 Web Development
               </Link>
             </li>
-            <li>
-              <Link href="/services/hr-digitalization" className={linkClass}>
-                HR Digitalization
-              </Link>
-            </li>
+            {/* /services/hr-digitalization hidden from the footer until officially ready (owner, 4 Nov 2026). Page stays live. */}
             <li>
               <Link href="/services/digital-marketing" className={linkClass}>
                 Digital Marketing

@@ -17,7 +17,7 @@ import { AnimatePresence, motion } from "framer-motion";
 const easeOut = [0.16, 1, 0.3, 1] as const;
 
 const features = [
-  { icon: FiCloud, title: "Offline-Ready Operations & Sync", desc: "DigiNizam supports offline-ready workflows in supported setups. Confirm which tasks work without internet, what is stored locally and how synchronization works when connectivity returns." },
+  { icon: FiCloud, title: "Offline-Ready Operations & Sync", desc: "All modules in the DigiNizam app keep working without internet, and data syncs automatically with the server when the connection returns. Offline working applies to the app, not the web portal." },
   { icon: FiGrid, title: "Multi-Store Control", desc: "Review branch-level stock, sales and reporting across the locations included in your setup. Confirm access rules and synchronization needs during configuration." },
   { icon: FiBox, title: "Inventory Management", desc: "Keep stock records connected with supported sales and purchasing activity so teams can review available stock and movements." },
   { icon: FiFileText, title: "POS & Billing", desc: "Manage counter billing, invoices and sales records in a connected workflow. Review the checkout process and supported devices during your demo." },

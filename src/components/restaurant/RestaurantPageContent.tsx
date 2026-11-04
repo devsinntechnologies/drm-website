@@ -14,11 +14,15 @@ import { faqJsonLd, type FaqItem } from "@/lib/seo";
 const restaurantFaqs: FaqItem[] = [
   {
     q: "What is the best software for restaurant management?",
-    a: "The right restaurant software depends on order taking, kitchen coordination, billing, stock, reports and staff workflow. Review the required devices, offline steps, support and total agreed cost. Compare DigiNizam against those requirements in a live demo rather than assuming every restaurant function is included.",
+    a: "The right restaurant software depends on order taking, kitchen coordination, billing, stock, reports and staff workflow. Review the required devices, offline working, support and total agreed cost. Compare DigiNizam against those requirements in a live demo rather than assuming every restaurant function is included.",
   },
   {
     q: "What is the difference between restaurant POS and restaurant management software?",
-    a: "A restaurant POS records orders, bills and payments at the counter or table. Restaurant management software covers the wider operation around those sales, such as kitchen coordination, inventory and reporting. DigiNizam connects restaurant order taking, kitchen order tickets (KOT), billing, linked stock and sales reports in one configured workflow. Confirm which functions are included in your setup during a demo.",
+    a: "A restaurant POS records orders, bills and payments at the counter or table. Restaurant management software covers the wider operation around those sales, such as kitchen coordination, inventory and reporting. DigiNizam connects restaurant order taking, kitchen order tickets (KOT), billing, linked stock, expense tracking and sales reports in one configured workflow. Confirm which functions are included in your setup during a demo.",
+  },
+  {
+    q: "How can a restaurant track daily sales and expenses?",
+    a: "Record every order and bill in the POS so the day's sales are captured as they happen, and enter costs such as ingredient purchases, utilities and salaries as expenses on the same day. The DigiNizam restaurant module includes expense tracking alongside order billing and sales reports, so owners can review money coming in and going out without a separate register.",
   },
   {
     q: "How does restaurant POS software work?",
@@ -161,13 +165,14 @@ export default function RestaurantPageContent() {
           actions still require internet.
         </p>
         <p>
-          DigiNizam POS can keep taking orders and billing when the internet drops. Records are
-          stored locally and sync to the web as soon as the connection returns. Confirm with our
-          team which actions still need a live connection in your setup.
+          The DigiNizam app works offline across all modules, so orders, kitchen tickets, billing
+          and other restaurant work continue when the internet drops. Records are saved in the app
+          and sync automatically with the server as soon as the connection returns. Offline
+          working applies to the app, not the web portal.
         </p>
       </SectionCopy>
 
-      <SectionCopy label="Reporting" title="Reports & Analytics" reverse>
+      <SectionCopy label="Reporting" title="Reports, Analytics & Expense Tracking" reverse>
         <p>
           Restaurant KPIs are measurable indicators used to understand operational performance.
           Common examples include sales, order volume, average order value, top-selling items,
@@ -179,6 +184,11 @@ export default function RestaurantPageContent() {
           Review the sales, order and inventory reports available in your selected DigiNizam
           setup. Other metrics are only part of your workspace if they appear in your live
           reports.
+        </p>
+        <p>
+          The DigiNizam restaurant module also includes expense tracking. Record day-to-day costs
+          such as ingredient purchases, utilities, rent and salaries in the same system that
+          records your orders and bills, instead of keeping a separate expense register.
         </p>
       </SectionCopy>
 

@@ -32,7 +32,7 @@ const FeaturesCloud = () => {
 
           <h2 className="text-base sm:text-lg md:text-xl font-black text-foreground mb-5 md:mb-4">Offline-Ready Operations &amp; Sync</h2>
           <p className="text-base sm:text-lg md:text-xl text-muted leading-relaxed font-bold mb-4 md:mb-5">
-            DigiNizam supports offline-ready workflows in supported setups. Confirm which tasks work without internet, what is stored locally and how synchronization works when connectivity returns.
+            The DigiNizam app works offline across all modules, so business operations do not stop when the internet connection drops. Offline working applies to the app, not the web portal.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-4 text-left">
@@ -44,7 +44,7 @@ const FeaturesCloud = () => {
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                 Synchronization
               </h3>
-              <p className="text-sm text-muted font-bold">Confirm how synchronization works when connectivity returns.</p>
+              <p className="text-sm text-muted font-bold">Records created offline sync automatically with the server once the connection is restored.</p>
             </motion.div>
             <motion.div 
               whileHover={{ x: 5 }}
@@ -52,9 +52,9 @@ const FeaturesCloud = () => {
             >
               <h3 className="text-lg font-extrabold text-foreground mb-2 flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                Supported Offline Tasks
+                All Modules Offline
               </h3>
-              <p className="text-sm text-muted font-bold">Confirm which tasks work without internet and what is stored locally in your selected setup.</p>
+              <p className="text-sm text-muted font-bold">Every module in the DigiNizam app keeps working without internet, so billing and daily work continue.</p>
             </motion.div>
           </div>
         </motion.div>

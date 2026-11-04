@@ -167,7 +167,7 @@ export const snookerBlog1: BlogPost = {
         "Control: a dashboard, reports by table, staff and branch, user roles and module-level permissions, and multi-branch management.",
       ],
       outro:
-        "Tournaments, memberships, loyalty and online table booking are planned, not currently available. DigiNizam serves customers globally in English with 24/7 support, and there is no online payment integration. Review the wider DigiNizam features and how pricing is agreed.",
+        "Tournaments, memberships and loyalty are planned, not currently available. Table reservations are recorded by club staff; online customer self-booking is not available but can be built as a custom feature for an additional charge. DigiNizam serves customers globally in English with 24/7 support, and there is no online payment integration. Review the wider DigiNizam features and how pricing is agreed.",
       links: [
         { href: "/products/snooker", label: "snooker club software" },
         { href: "/features", label: "DigiNizam features" },
@@ -209,7 +209,7 @@ export const snookerBlog1: BlogPost = {
         {
           question: "Does snooker club software include online table booking?",
           answer:
-            "It depends on the provider. DigiNizam records reservations in table management, while online booking is planned rather than available now. Ask every vendor to demonstrate booking before you rely on it.",
+            "It depends on the provider. In DigiNizam, club staff record reservations and bookings in table management. Online customer self-booking is not available as a standard feature, but DigiNizam can build it as a custom feature for an additional charge. Ask every vendor to demonstrate booking before you rely on it.",
         },
       ],
     },

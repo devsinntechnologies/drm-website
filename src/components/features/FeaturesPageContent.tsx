@@ -34,7 +34,7 @@ export default function FeaturesPageContent() {
             <article className="rounded-2xl border border-surface-border bg-background p-5">
               <h3 className="text-lg font-bold text-foreground mb-2">Can POS software work without internet?</h3>
               <p className="text-muted text-sm leading-relaxed">
-                DigiNizam supports offline-ready workflows in supported setups. Confirm which actions work without internet on your chosen devices, what is stored locally and how synchronization works when connectivity returns. Do not assume every module or cloud function is available offline.
+                Yes. The DigiNizam app works offline across all modules, so billing and daily operations continue when the internet connection drops. Records are saved in the app and sync automatically with the server once the connection returns. Offline working applies to the DigiNizam app, not the web portal.
               </p>
             </article>
             <article className="rounded-2xl border border-surface-border bg-background p-5">
@@ -75,7 +75,7 @@ export default function FeaturesPageContent() {
             </article>
             <article className="rounded-2xl border border-surface-border bg-background p-5">
               <h3 className="text-lg font-bold text-foreground mb-2">What is offline POS software?</h3>
-              <p className="text-muted text-sm leading-relaxed">Offline POS software supports selected sales or operational tasks without an active internet connection. DigiNizam offers offline-ready workflows in supported setups. Confirm the actions and devices supported, and how synchronization is handled when internet access returns.</p>
+              <p className="text-muted text-sm leading-relaxed">Offline POS software keeps sales and daily operations running without an active internet connection and syncs the records later. In DigiNizam, all modules in the app keep working offline, and data syncs automatically with the server when internet access returns.</p>
             </article>
           </div>
         </div>

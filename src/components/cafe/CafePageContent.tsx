@@ -26,7 +26,7 @@ const cafeFaqs: FaqItem[] = [
   },
   {
     q: "Can DigiNizam cafe POS work offline?",
-    a: "Yes. Ordering and billing can continue without internet, and records synchronize to the web as soon as the connection returns. Confirm which actions need a live connection for your cafe setup.",
+    a: "Yes. All modules in the DigiNizam app, including ordering and billing, keep working without internet, and records sync automatically with the server as soon as the connection returns. Offline working applies to the app, not the web portal.",
   },
   {
     q: "Can DigiNizam manage multiple cafe outlets?",
@@ -111,9 +111,9 @@ export default function CafePageContent() {
 
       <SectionCopy label="Connectivity" title="Offline-Ready Cafe Operations" reverse>
         <p>
-          Ordering and billing can continue when internet connectivity drops, and records
-          synchronize to the web as soon as the connection returns. Confirm which actions still
-          need a live connection for your cafe setup.
+          All modules in the DigiNizam app keep working when internet connectivity drops, so
+          ordering and billing continue. Records sync automatically with the server as soon as
+          the connection returns. Offline working applies to the app, not the web portal.
         </p>
       </SectionCopy>
 
@@ -138,7 +138,7 @@ export default function CafePageContent() {
       <SectionCopy label="Your setup" title="Discuss Your Business Setup">
         <p>
           Cafes and coffee shops can review counter orders, preparation tickets and
-          stock with DigiNizam. Confirm the available devices and offline steps before rollout.
+          stock with DigiNizam. Confirm the devices for your outlet before rollout.
         </p>
         <IndustryContextLinks featuresLabel="order and stock features" peer="restaurant" guides={["restaurant-pos", "restaurant-inventory"]} />
       </SectionCopy>

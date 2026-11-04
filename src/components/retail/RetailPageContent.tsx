@@ -26,7 +26,7 @@ const retailFaqs: FaqItem[] = [
   },
   {
     q: "Can DigiNizam retail POS work without internet?",
-    a: "Yes. DigiNizam retail POS can keep billing when the internet connection drops. Records are stored locally and synchronize to the web as soon as the connection returns.",
+    a: "Yes. All modules in the DigiNizam app, including retail billing and stock, keep working when the internet connection drops. Records are saved in the app and sync automatically with the server once the connection returns. Offline working applies to the app, not the web portal.",
   },
   {
     q: "Can DigiNizam manage more than one retail branch?",

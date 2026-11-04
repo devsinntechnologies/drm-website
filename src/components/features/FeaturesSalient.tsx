@@ -21,7 +21,7 @@ const FeaturesSalient = () => {
   },
   {
     "t": "Offline-Ready Operations",
-    "d": "DigiNizam supports offline-ready workflows in supported setups. Confirm which tasks work without internet, what is stored locally and how synchronization works when connectivity returns.",
+    "d": "All modules in the DigiNizam app keep working without internet, and data syncs automatically with the server when the connection returns.",
     "i": "📴"
   },
   {
