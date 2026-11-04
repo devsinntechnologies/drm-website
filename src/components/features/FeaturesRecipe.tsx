@@ -19,7 +19,7 @@ const FeaturesRecipe = () => {
           >
             <span className="section-label mb-4 md:mb-4">Kitchen Control</span>
             <h2 className="text-xl sm:text-2xl md:text-lg lg:text-xl font-extrabold text-foreground mb-4 leading-tight">
-              Industry Workflows
+              Retail Billing and Restaurant Order Workflows
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-muted mb-4 md:mb-4 leading-relaxed max-w-xl font-medium">
               Explore retail billing and inventory, restaurant order and kitchen workflows, and other supported industry configurations.

@@ -10,7 +10,8 @@ import SiteCTA from "@/components/common/SiteCTA";
 import SectionCopy from "@/components/common/SectionCopy";
 import IndustryContextLinks from "@/components/common/IndustryContextLinks";
 import SeoFaq from "@/components/seo/SeoFaq";
-import type { FaqItem } from "@/lib/seo";
+import JsonLd from "@/components/seo/JsonLd";
+import { faqJsonLd, type FaqItem } from "@/lib/seo";
 import {
   FiMonitor,
   FiGrid,
@@ -62,6 +63,14 @@ const FUTURE_MODULES = [
 
 const snookerFaqs: FaqItem[] = [
   {
+    q: "What software do snooker clubs use?",
+    a: "Snooker clubs usually need club software built around table sessions rather than a generic retail POS. DigiNizam's snooker club software covers live table status, flat-rate Single Game and Double Game billing, a timed Century session with start, pause, resume and stop, receipts, customer credit (udhar), expenses and daily opening and closing. Tournaments, memberships, loyalty and online booking are planned, not current features.",
+  },
+  {
+    q: "How can a snooker club track daily sales and expenses?",
+    a: "Record every table session and sale in the system, log expenses such as rent, salaries and electricity by category, and reconcile expected against actual cash when closing the day. DigiNizam includes expense management, daily opening and closing with cash variance and manager approval, and reports for sales, profit, expenses and credit.",
+  },
+  {
     q: "How does snooker club software calculate table-session charges?",
     a: "A snooker club can bill a game at a configured fixed rate or calculate a timed session from its duration and rate. DigiNizam shows Single Game, Double Game and timed Century workflows. Review the table rates, pause behaviour, minimum duration and rounding supported by your club setup.",
   },
@@ -92,6 +101,7 @@ export default function SnookerPageContent() {
         description="Move from table selection to game type, session, bill and receipt. Review Single Game, Double Game and timed Century billing for your club configuration."
       />
 
+      <JsonLd data={faqJsonLd(snookerFaqs)} />
       <SectionCopy label="Overview" title="What Is Snooker Club Management Software?">
         <p>
           Snooker club software connects table selection, game sessions and billing.

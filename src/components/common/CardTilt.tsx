@@ -12,7 +12,8 @@ import { useEffect } from "react";
  * reduced motion.
  */
 
-const MAX_TILT_DEG = 8;
+const MAX_TILT_DEG = 6;
+const HOVER_SCALE = "1.015";
 // Media, form fields and accordions (e.g. FAQ lists) are never tilted.
 const EXCLUDED = "video, iframe, form, input, textarea, select, [aria-controls], [aria-expanded]";
 
@@ -81,16 +82,24 @@ export default function CardTilt() {
       if (!active) return;
 
       const r = active.getBoundingClientRect();
+      // Perspective lives on the parent grid. Centre its vanishing point on the
+      // active card; otherwise cards far from the middle of a tall grid (e.g. the
+      // 21 snooker modules) skew and twist instead of tilting evenly.
+      const parent = active.parentElement;
+      if (parent) {
+        const p = parent.getBoundingClientRect();
+        parent.style.perspectiveOrigin = `${(r.left - p.left + r.width / 2).toFixed(0)}px ${(r.top - p.top + r.height / 2).toFixed(0)}px`;
+      }
       const px = Math.min(Math.max((last.clientX - r.left) / r.width, 0), 1);
       const py = Math.min(Math.max((last.clientY - r.top) / r.height, 0), 1);
       // Tilt toward the pointer: rotateX from vertical offset, rotateY from horizontal.
-      // Wider cards tilt less so their edges don't swing too far.
-      const max = MAX_TILT_DEG * Math.min(1, 420 / r.width);
+      // Larger cards tilt less so their edges don't swing too far.
+      const max = MAX_TILT_DEG * Math.min(1, 420 / r.width, 320 / r.height);
       const rx = -(py - 0.5) * 2 * max;
       const ry = (px - 0.5) * 2 * max;
       const angle = Math.hypot(rx, ry);
       active.style.rotate = angle < 0.01 ? "" : `${rx / angle} ${ry / angle} 0 ${angle.toFixed(2)}deg`;
-      active.style.scale = "1.02";
+      active.style.scale = HOVER_SCALE;
       active.style.setProperty("--tilt-x", `${(px * 100).toFixed(1)}%`);
       active.style.setProperty("--tilt-y", `${(py * 100).toFixed(1)}%`);
       active.classList.add("is-tilting");

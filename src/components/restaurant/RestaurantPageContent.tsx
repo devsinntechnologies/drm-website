@@ -17,6 +17,14 @@ const restaurantFaqs: FaqItem[] = [
     a: "The right restaurant software depends on order taking, kitchen coordination, billing, stock, reports and staff workflow. Review the required devices, offline steps, support and total agreed cost. Compare DigiNizam against those requirements in a live demo rather than assuming every restaurant function is included.",
   },
   {
+    q: "What is the difference between restaurant POS and restaurant management software?",
+    a: "A restaurant POS records orders, bills and payments at the counter or table. Restaurant management software covers the wider operation around those sales, such as kitchen coordination, inventory and reporting. DigiNizam connects restaurant order taking, kitchen order tickets (KOT), billing, linked stock and sales reports in one configured workflow. Confirm which functions are included in your setup during a demo.",
+  },
+  {
+    q: "How does restaurant POS software work?",
+    a: "Staff select the table or order and add items on the POS. When the order is confirmed, the items are sent to the kitchen as a kitchen order ticket, and the same order stays connected to the bill until the sale is recorded. Where billed items are linked with stock, recorded sales can update the connected inventory, and the sales appear in reports.",
+  },
+  {
     q: "What is the best restaurant POS software in Pakistan?",
     a: "There is no single best restaurant POS for every business in Pakistan. Compare order and billing flow, kitchen setup, inventory needs, connectivity, reporting and support. Review the available DigiNizam configuration in a demo and agree on requirements before discussing pricing.",
   },
