@@ -92,6 +92,28 @@ export default function BlogContent({
             .blog-content .blog-faq-a { font-size: 0.95rem; line-height: 1.6; color: #4b5563; margin: 0; }
             .blog-content .blog-cta { margin-top: 2rem; padding: 1.25rem 1.35rem; border-radius: 1rem; border: 1px solid color-mix(in srgb, var(--primary) 25%, var(--surface-border)); background: color-mix(in srgb, var(--primary) 6%, var(--surface)); }
             .blog-content .blog-cta h2 { margin-top: 0; }
+            .blog-content [id] { scroll-margin-top: 84px; }
+            .blog-content h3.blog-faq-q { margin: 0 0 0.4rem; line-height: 1.4; }
+            .blog-content .blog-jump { margin: 1.25rem 0 1.75rem; padding: 1rem 1.15rem; border: 1px solid var(--surface-border); border-radius: 0.875rem; background: var(--surface); }
+            .blog-content .blog-jump-title { font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--foreground); margin-bottom: 0.5rem; }
+            .blog-content .blog-jump ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.35rem; }
+            .blog-content .blog-jump li { margin: 0; font-size: 0.95rem; }
+            .blog-content .blog-jump a { color: var(--primary); font-weight: 600; text-underline-offset: 2px; }
+            .blog-content .blog-jump a:hover { text-decoration: underline; }
+            .blog-content .blog-table-wrap { margin: 1.25rem 0 1.5rem; overflow-x: auto; border: 1px solid var(--surface-border); border-radius: 0.875rem; background: var(--surface); }
+            .blog-content table { width: 100%; border-collapse: collapse; font-size: 0.95rem; line-height: 1.55; }
+            .blog-content th, .blog-content td { padding: 0.75rem 1rem; text-align: left; vertical-align: top; border-bottom: 1px solid var(--surface-border); }
+            .blog-content tr:last-child th, .blog-content tr:last-child td { border-bottom: 0; }
+            .blog-content thead th { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--foreground); background: color-mix(in srgb, var(--primary) 6%, var(--surface)); }
+            .blog-content tbody th { font-weight: 700; color: var(--foreground); width: 38%; }
+            .blog-content tbody td { color: #4b5563; }
+            @media (max-width: 480px) {
+              .blog-content thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+              .blog-content tbody tr { display: block; padding: 0.75rem 1rem; border-bottom: 1px solid var(--surface-border); }
+              .blog-content tbody tr:last-child { border-bottom: 0; }
+              .blog-content tbody th, .blog-content tbody td { display: block; width: auto; padding: 0; border: 0; }
+              .blog-content tbody th { margin-bottom: 0.25rem; }
+            }
           `,
         }}
       />
@@ -117,9 +139,65 @@ export default function BlogContent({
 
         if (block.type === "heading") {
           if (block.level === 2) {
-            return <h2 key={index}>{block.text}</h2>;
+            return <h2 key={index} id={block.id}>{block.text}</h2>;
           }
-          return <h3 key={index}>{block.text}</h3>;
+          return <h3 key={index} id={block.id}>{block.text}</h3>;
+        }
+
+        if (block.type === "jump-links") {
+          return (
+            <nav key={index} className="blog-jump" aria-label={block.title}>
+              <div className="blog-jump-title">{block.title}</div>
+              <ul>
+                {block.items.map((item) => (
+                  <li key={item.href}>
+                    <a href={item.href}>{item.label}</a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          );
+        }
+
+        if (block.type === "link-list") {
+          return (
+            <ul key={index}>
+              {block.items.map((item) => (
+                <li key={item.href}>
+                  <a href={item.href} className="text-primary font-semibold underline-offset-2 hover:underline">
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          );
+        }
+
+        if (block.type === "table") {
+          return (
+            <div key={index} className="blog-table-wrap" role="region" aria-label={block.label} tabIndex={0}>
+              <table>
+                <caption className="sr-only">{block.label}</caption>
+                <thead>
+                  <tr>
+                    {block.columns.map((column) => (
+                      <th key={column} scope="col">{column}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {block.rows.map(([rowHeader, ...cells]) => (
+                    <tr key={rowHeader}>
+                      <th scope="row">{rowHeader}</th>
+                      {cells.map((cell, cIndex) => (
+                        <td key={cIndex}>{cell}</td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          );
         }
 
         if (block.type === "callout") {
@@ -175,12 +253,16 @@ export default function BlogContent({
 
         if (block.type === "faq-section") {
           return (
-            <section key={index} aria-labelledby={`faq-heading-${index}`}>
-              <h2 id={`faq-heading-${index}`}>{block.heading}</h2>
+            <section key={index} aria-labelledby={block.id ?? `faq-heading-${index}`}>
+              <h2 id={block.id ?? `faq-heading-${index}`}>{block.heading}</h2>
               <div data-no-tilt className="blog-faq">
                 {block.items.map((item) => (
                   <div key={item.question} className="blog-faq-item">
-                    <div className="blog-faq-q">{item.question}</div>
+                    {block.questionHeadings ? (
+                      <h3 className="blog-faq-q">{item.question}</h3>
+                    ) : (
+                      <div className="blog-faq-q">{item.question}</div>
+                    )}
                     <p className="blog-faq-a">{item.answer}</p>
                   </div>
                 ))}
@@ -193,7 +275,7 @@ export default function BlogContent({
           return (
             <section key={index} className="blog-cta">
               <h2>{block.title}</h2>
-              <p>{block.body}</p>
+              <p>{linkifyParagraph(block.body, block.links)}</p>
               <Link
                 href={block.href}
                 className="inline-flex items-center justify-center mt-2 px-4 py-2.5 rounded-xl bg-primary text-primary-foreground text-sm font-bold hover:opacity-90 transition-opacity"

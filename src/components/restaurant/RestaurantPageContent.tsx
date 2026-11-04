@@ -201,10 +201,10 @@ export default function RestaurantPageContent() {
           <Link href="/blog/what-is-a-restaurant-pos-system" className={linkClass}>
             restaurant POS guide
           </Link>{" "}
-          for an overview of orders, kitchen flow and billing. For local buying considerations,
+          for an overview of orders, kitchen flow and billing. For buying considerations,
           read the guide to{" "}
-          <Link href="/blog/best-pos-software-for-restaurants-in-pakistan" className={linkClass}>
-            restaurant POS selection in Pakistan
+          <Link href="/blog/how-to-choose-restaurant-pos-software" className={linkClass}>
+            choosing restaurant POS software
           </Link>
           .
         </p>

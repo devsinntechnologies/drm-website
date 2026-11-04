@@ -1,12 +1,12 @@
 import type { BlogCategory, BlogPost, ContentBlock } from "./types";
 import { blog1 } from "./posts/what-is-a-restaurant-pos-system";
 import { blog2 } from "./posts/restaurant-inventory-management-reduce-food-waste";
-import { blog3 } from "./posts/best-pos-software-for-restaurants-in-pakistan";
-import { blog4 } from "./posts/pos-software-price-in-pakistan";
+import { blog3 } from "./posts/how-to-choose-restaurant-pos-software";
+import { blog4 } from "./posts/pos-software-pricing-guide";
 import { retailBlog1 } from "./posts/what-is-retail-pos-software";
 import { retailBlog2 } from "./posts/retail-inventory-management-software";
 import { retailBlog3 } from "./posts/manual-billing-vs-retail-pos-software";
-import { retailBlog4 } from "./posts/how-to-choose-best-retail-pos-software-pakistan";
+import { retailBlog4 } from "./posts/how-to-choose-retail-pos-software";
 import type { FaqItem } from "@/lib/seo";
 
 /** Published posts only. Add new approved posts here. */
@@ -65,6 +65,11 @@ function blockPlainText(block: ContentBlock): string {
       return [block.intro, ...block.items, block.outro].filter(Boolean).join(" ");
     case "image":
       return block.alt;
+    case "table":
+      return [...block.columns, ...block.rows.flat()].join(" ");
+    case "jump-links":
+    case "link-list":
+      return block.items.map((item) => item.label).join(" ");
     case "faq-section":
       return [
         block.heading,

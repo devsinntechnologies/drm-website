@@ -4,9 +4,9 @@ import BlogGrid from "@/components/blog/BlogGrid";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Restaurant POS & Inventory Insights | DigiNizam",
+  title: "POS and Inventory Guides for Retail and Restaurants | DigiNizam",
   description:
-    "Practical guides on restaurant POS, inventory, billing, kitchen workflows and smarter day-to-day operations from the DigiNizam team.",
+    "Explore practical guides to retail and restaurant POS, inventory, billing and software selection. Learn what to check before choosing a setup.",
   path: "/blog",
 });
 

@@ -7,16 +7,27 @@ export type InlineLink = {
 
 export type ContentBlock =
   | { type: "paragraphs"; paragraphs: string[]; links?: InlineLink[] }
-  | { type: "heading"; level: 2 | 3; text: string }
+  | { type: "heading"; level: 2 | 3; text: string; id?: string }
+  | { type: "jump-links"; title: string; items: InlineLink[] }
+  | { type: "link-list"; items: InlineLink[] }
+  | { type: "table"; label: string; columns: string[]; rows: string[][] }
   | { type: "callout"; title: string; text: string }
   | { type: "ordered-list"; intro?: string; items: string[]; outro?: string }
   | { type: "bullet-list"; intro?: string; items: string[]; outro?: string; links?: InlineLink[] }
   | { type: "image"; src: string; alt: string; width: number; height: number }
-  | { type: "faq-section"; heading: string; items: { question: string; answer: string }[] }
+  | {
+      type: "faq-section";
+      heading: string;
+      items: { question: string; answer: string }[];
+      id?: string;
+      /** Render each question as an H3 instead of a styled div. */
+      questionHeadings?: boolean;
+    }
   | {
       type: "cta";
       title: string;
       body: string;
+      links?: InlineLink[];
       buttonLabel: string;
       href: string;
       secondaryButtonLabel?: string;

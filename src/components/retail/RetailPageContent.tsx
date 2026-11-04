@@ -138,10 +138,10 @@ export default function RetailPageContent() {
           <Link href="/blog/retail-inventory-management-software" className={linkClass}>
             guide to retail stock problems
           </Link>{" "}
-          explains why sales, purchases and stock records need to stay connected. For local
-          buying considerations, read about{" "}
-          <Link href="/blog/how-to-choose-best-retail-pos-software-pakistan" className={linkClass}>
-            choosing retail POS software in Pakistan
+          explains why sales, purchases and stock records need to stay connected. For buying
+          considerations, read about{" "}
+          <Link href="/blog/how-to-choose-retail-pos-software" className={linkClass}>
+            choosing retail POS software
           </Link>
           .
         </p>

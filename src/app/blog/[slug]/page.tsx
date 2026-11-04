@@ -152,6 +152,12 @@ export default async function BlogPostPage({ params }: PageProps) {
               >
                 {formatBlogDate(post.publishedAt)}
               </time>
+              {formatBlogDate(post.modifiedAt) !== formatBlogDate(post.publishedAt) ? (
+                <div className="text-[10px] uppercase font-bold text-muted">
+                  Updated{" "}
+                  <time dateTime={post.modifiedAt}>{formatBlogDate(post.modifiedAt)}</time>
+                </div>
+              ) : null}
             </div>
           </div>
         </div>
