@@ -32,7 +32,10 @@ function getReducedMotion() {
 }
 
 // Scroll-linked "auto-write" reveal: unreached words are hidden; each word
-// un-blurs and rises into place as it scrolls past ~70% of the viewport.
+// un-blurs and rises into place. Word windows overlap so the line sweeps in
+// quickly and is fully readable before the paragraph reaches mid-screen.
+const WORD_WINDOW = 0.28;
+
 function ScrollWord({
   word,
   index,
@@ -44,12 +47,12 @@ function ScrollWord({
   total: number;
   progress: MotionValue<number>;
 }) {
-  const start = index / total;
-  const end = Math.min(1, (index + 1.6) / total);
+  const start = (index / Math.max(1, total - 1)) * (1 - WORD_WINDOW);
+  const end = start + WORD_WINDOW;
 
   const opacity = useTransform(progress, [start, end], [0, 1]);
-  const y = useTransform(progress, [start, end], [8, 0]);
-  const blur = useTransform(progress, [start, end], [10, 0]);
+  const y = useTransform(progress, [start, end], [6, 0]);
+  const blur = useTransform(progress, [start, end], [6, 0]);
   const filter = useTransform(blur, (v) => `blur(${v}px)`);
 
   return (
@@ -79,15 +82,16 @@ export default function AwardBannerSection() {
 
   const headingInView = useInView(headingRef, { once: true, amount: 0.5 });
 
-  // 0 when the paragraph top reaches 75% of the viewport; 1 when its bottom reaches 65%.
+  // 0 when the paragraph top enters at 95% of the viewport; 1 when that top reaches 65%,
+  // so the whole sentence is shown while it is still in the lower third of the screen.
   const { scrollYProgress } = useScroll({
     target: bodyRef,
-    offset: ["start 75%", "end 65%"],
+    offset: ["start 95%", "start 65%"],
   });
   const smoothProgress = useSpring(scrollYProgress, {
-    stiffness: 420,
-    damping: 32,
-    mass: 0.28,
+    stiffness: 520,
+    damping: 38,
+    mass: 0.22,
   });
 
   return (
