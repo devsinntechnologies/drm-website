@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { FiMapPin, FiClock, FiBriefcase } from "react-icons/fi";
 import PageHero from "@/components/common/PageHero";
@@ -109,9 +108,9 @@ export default function HiringPageContent() {
         </div>
         <p className="mt-8 text-center text-sm text-muted">
           Send your resume to{" "}
-          <Link href="mailto:careers@diginizam.com" className="text-primary font-semibold hover:underline">
-            careers@diginizam.com
-          </Link>
+          <a href="mailto:diginizam0@gmail.com" className="text-primary font-semibold hover:underline">
+            diginizam0@gmail.com
+          </a>
         </p>
       </SectionShell>
 
