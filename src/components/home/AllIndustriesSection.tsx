@@ -45,8 +45,9 @@ export default function AllIndustriesSection() {
             <div className="w-28 h-28 relative mb-4 flex items-center justify-center">
               <Image
                 src={item.icon}
-                alt={item.name}
+                alt=""
                 fill
+                sizes="112px"
                 className="object-contain transition-transform duration-300 group-hover:scale-110"
               />
             </div>

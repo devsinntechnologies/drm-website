@@ -114,7 +114,7 @@ export default function HeroSection() {
               width={1123}
               height={918}
               quality={90}
-              sizes="(max-width: 1024px) calc(100vw - 48px), 560px"
+              sizes="(max-width: 1023px) calc(100vw - 48px), 560px"
             />
           </div>
         </div>
