@@ -90,8 +90,8 @@ export default function PrivacyContent() {
           <h2 className="type-card-title text-foreground mb-2">Contact us</h2>
           <p className="type-body text-muted">
             Questions about this policy? Email{" "}
-            <a href="mailto:privacy@diginizam.com" className="text-primary font-semibold hover:underline">
-              privacy@diginizam.com
+            <a href="mailto:diginizam0@gmail.com" className="text-primary font-semibold hover:underline">
+              diginizam0@gmail.com
             </a>{" "}
             or reach out through our contact page.
           </p>

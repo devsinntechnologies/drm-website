@@ -111,7 +111,10 @@ export default function HeroSection() {
               alt="DigiNizam POS terminal with dashboard, scanner, cash drawer, and receipt printer"
               variant="showcase"
               priority
-              unoptimized
+              width={1123}
+              height={918}
+              quality={90}
+              sizes="(max-width: 1024px) calc(100vw - 48px), 560px"
             />
           </div>
         </div>

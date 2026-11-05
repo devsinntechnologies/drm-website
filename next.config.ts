@@ -1,7 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Inline the (small, Tailwind) stylesheet into the HTML so it is not a
+  // render-blocking request (PageSpeed: ~640 ms on mobile). Production-only.
+  experimental: {
+    inlineCss: true,
+  },
   images: {
+    // 75 is the default; 90 keeps on-screen UI text sharp in product shots (hero).
+    qualities: [75, 90],
     remotePatterns: [
       {
         protocol: "https",
@@ -38,9 +45,7 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  allowedDevOrigins: ["127.0.0.1", "localhost"],
 };
-
-// @ts-ignore
-nextConfig.allowedDevOrigins = ['127.0.0.1', 'localhost'];
 
 export default nextConfig;
