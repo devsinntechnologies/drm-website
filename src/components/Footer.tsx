@@ -29,7 +29,7 @@ export default function Footer() {
           <Link href="/" className="inline-block mb-4">
             <Logo className="h-9 w-auto" />
           </Link>
-          <p className="text-sm text-muted leading-relaxed mb-5 max-w-sm">
+          <p className="text-sm text-foreground/75 leading-relaxed mb-5 max-w-sm">
             DigiNizam helps businesses run retail, inventory, and operations with one connected platform—so you can focus on growth.
           </p>
           <div className="flex items-center space-x-2.5">
@@ -53,7 +53,7 @@ export default function Footer() {
 
         <div>
           <h3 className="text-foreground text-sm font-semibold uppercase tracking-wider mb-4">Quick Links</h3>
-          <ul className="space-y-2.5 text-sm text-muted font-medium">
+          <ul className="space-y-2.5 text-sm text-foreground/75 font-medium">
             <li>
               <Link href="/products/restaurant" className={linkClass}>
                 Restaurant management software
@@ -104,7 +104,7 @@ export default function Footer() {
 
         <div>
           <h3 className="text-foreground text-sm font-semibold uppercase tracking-wider mb-4">Services</h3>
-          <ul className="space-y-2.5 text-sm text-muted font-medium">
+          <ul className="space-y-2.5 text-sm text-foreground/75 font-medium">
             <li>
               <Link href="/services/software-solution" className={linkClass}>
                 Software Solution
@@ -129,7 +129,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-6 mt-8 text-sm text-muted font-medium relative z-10 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-6 mt-8 text-sm text-foreground/75 font-medium relative z-10 flex flex-col md:flex-row justify-between items-center gap-4">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[72rem] h-px bg-gradient-to-r from-transparent via-surface-border/60 to-transparent" />
         <div>&copy; {currentYear} DigiNizam. All rights reserved.</div>
       </div>

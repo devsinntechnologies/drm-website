@@ -278,6 +278,15 @@
     flex-shrink: 0;
   }
 
+  /* Primary blue is ~3.2:1 on navy (fails WCAG AA for 12px text); secondary is ~7.7:1. */
+  .bg-navy .section-label {
+    color: var(--secondary);
+  }
+
+  .bg-navy .section-label::before {
+    background: var(--secondary);
+  }
+
   .type-section-heading {
     font-weight: 600;
     letter-spacing: -0.025em;

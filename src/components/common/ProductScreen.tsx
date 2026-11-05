@@ -18,6 +18,12 @@ export type ProductScreenProps = {
    * browser — app window frame for dashboard screenshots
    */
   variant?: "showcase" | "browser";
+  /** Intrinsic size of the source file (showcase variant). */
+  width?: number;
+  height?: number;
+  /** Must be listed in images.qualities in next.config.ts. */
+  quality?: number;
+  sizes?: string;
 };
 
 export default function ProductScreen({
@@ -29,6 +35,10 @@ export default function ProductScreen({
   unoptimized = false,
   fit = "contain",
   variant = "showcase",
+  width = 1200,
+  height = 1200,
+  quality,
+  sizes = "(max-width: 1024px) 100vw, 560px",
 }: ProductScreenProps) {
   const fitClass = fit === "cover" ? "object-cover object-top" : "object-contain object-center";
 
@@ -50,7 +60,8 @@ export default function ProductScreen({
               alt={alt}
               fill
               className={fitClass}
-              priority={priority}
+              loading={priority ? "eager" : undefined}
+              fetchPriority={priority ? "high" : undefined}
               sizes="(max-width: 1024px) 100vw, 520px"
             />
           </div>
@@ -67,13 +78,14 @@ export default function ProductScreen({
         <Image
           src={src}
           alt={alt}
-          width={1200}
-          height={1200}
+          width={width}
+          height={height}
           className={`w-full h-auto ${fitClass} drop-shadow-[0_20px_48px_rgba(0,0,0,0.4)]`}
-          priority={priority}
+          loading={priority ? "eager" : undefined}
           fetchPriority={priority ? "high" : undefined}
           unoptimized={unoptimized}
-          sizes="(max-width: 1024px) 100vw, 560px"
+          quality={quality}
+          sizes={sizes}
         />
       </div>
     </div>
