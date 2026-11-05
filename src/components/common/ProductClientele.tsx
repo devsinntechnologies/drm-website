@@ -42,7 +42,7 @@ export default function ProductClientele({ bgLight = true }: { bgLight?: boolean
             className="bg-surface border border-surface-border rounded-xl p-3 flex flex-col items-center justify-center text-center shadow-sm hover:border-primary hover:shadow-md transition-all group h-20"
           >
             <div className="relative w-8 h-8 mb-1.5 grayscale group-hover:grayscale-0 transition-all">
-              <Image src={client.logo} alt={client.name} fill className="object-contain" />
+              <Image src={client.logo} alt="" fill sizes="32px" className="object-contain" />
             </div>
             <span className="text-[10px] font-semibold text-muted group-hover:text-primary transition-colors truncate w-full">
               {client.name}

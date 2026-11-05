@@ -56,6 +56,7 @@ export default function BoostSalesSection() {
                   src="/salesolution'.jpg"
                   alt="DigiNizam POS sales solution"
                   fill
+                  sizes="(max-width: 1023px) 50vw, 360px"
                   className="object-cover"
                 />
               </div>
@@ -64,6 +65,7 @@ export default function BoostSalesSection() {
                   src="/receipt.jpg"
                   alt="Receipt printing"
                   fill
+                  sizes="(max-width: 1023px) 50vw, 360px"
                   className="object-cover"
                 />
               </div>
@@ -73,6 +75,7 @@ export default function BoostSalesSection() {
                 src="/cashier.jpg"
                 alt="Cashier using DigiNizam POS"
                 fill
+                sizes="(max-width: 1023px) 50vw, 360px"
                 className="object-cover"
               />
             </div>

@@ -19,7 +19,8 @@
   --secondary-foreground: #08162D;
 
   --accent: var(--secondary);
-  --muted: #5F6F8D;
+  /* #586785: ≥4.5:1 (WCAG AA) on white and over the light-blue section glows (#5F6F8D was ~4.4:1 there). */
+  --muted: #586785;
 
   --radius-btn: 0.75rem;
   --radius-card: 1rem;

@@ -67,6 +67,7 @@ export const WhatWeDoSection: React.FC = () => {
               src="/whatwedo.jpg"
               alt="DigiNizam services and support"
               fill
+              sizes="(max-width: 1023px) 100vw, 500px"
               className="object-cover"
             />
           </motion.div>
