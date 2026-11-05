@@ -70,7 +70,7 @@ export default function JewelleryPageContent() {
         title="Item-Level Inventory Visibility"
         reverse
         image="https://images.unsplash.com/photo-1689560025810-4599bc195814?q=80&w=1600&auto=format&fit=crop"
-        imageAlt="DigiNizam Jewellery Shop POS solution"
+        imageAlt="Necklaces displayed on stands in a jewellery shop window"
         imageBrief="Premium jewellery counter/showcase with DigiNizam item inventory or invoice UI; elegant lighting, professional retail environment, no fake gold-rate figures."
       >
         <p>
@@ -91,7 +91,7 @@ export default function JewelleryPageContent() {
         title="Barcode Billing & Item Labels"
         reverse
         image="https://images.unsplash.com/photo-1777286492764-456e3530e34c?q=80&w=1600&auto=format&fit=crop"
-        imageAlt="Jewellery Shop inventory / workflow in DigiNizam"
+        imageAlt="Rings and pendants displayed in a jewellery case"
         imageBrief="Real DigiNizam barcode/label, payment or sales-report screen relevant to jewellery retail; avoid unconfirmed karat/gold-rate UI."
       >
         <p>
@@ -146,11 +146,11 @@ export default function JewelleryPageContent() {
 
       <SectionCopy label="Your setup" title="Discuss Your Business Setup">
         <p>
-          Jewellery retailers in Pakistan can review billing, item records and labels with
+          Jewellery retailers can review billing, item records and labels with
           DigiNizam. Discuss gold-rate, weight or making-charge requirements separately before
           choosing a setup.
         </p>
-        <IndustryContextLinks peer="retail" />
+        <IndustryContextLinks peer="retail" guides={["retail-choose"]} />
       </SectionCopy>
 
       <SeoFaq

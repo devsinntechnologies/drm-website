@@ -230,7 +230,7 @@ export default function DistributionPageContent() {
 
       <SectionCopy label="Your setup" title="Discuss Your Wholesale Setup" reverse>
         <p>
-          Wholesalers and distributors in Pakistan can review stock, purchasing and billing with
+          Wholesalers and distributors can review stock, purchasing and billing with
           DigiNizam. Confirm dispatch, warehouse and delivery requirements separately before
           agreeing on scope.
         </p>

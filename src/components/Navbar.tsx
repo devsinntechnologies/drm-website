@@ -14,6 +14,9 @@ import {
   FiBriefcase,
   FiShield,
   FiBookOpen,
+  FiLayers,
+  FiCode,
+  FiUserCheck,
 } from "react-icons/fi";
 import Button from "@/components/ui/Button";
 import Logo from "@/components/common/Logo";
@@ -44,6 +47,13 @@ const industries: { href: string; label: string }[] = [
 
 const mobileIndustries: [string, string][] = industries.map((i) => [i.href, i.label]);
 
+// Live service pages only; unfinished placeholder services are not listed in the header.
+const services = [
+  { href: "/services/software-solution", label: "Software Solution", desc: "Custom business software", icon: FiLayers },
+  { href: "/services/web-development", label: "Web Development", desc: "Websites and web applications", icon: FiCode },
+  { href: "/services/hr-digitalization", label: "HR Digitalization", desc: "HRIS, payroll and attendance", icon: FiUserCheck },
+];
+
 function navLinkClass(active: boolean) {
   return active
     ? "nav-active font-semibold transition-colors"
@@ -53,9 +63,10 @@ function navLinkClass(active: boolean) {
 export default function Navbar() {
   const pathname = usePathname();
   const [isProductsOpen, setIsProductsOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [openMobileSection, setOpenMobileSection] = useState<"products" | "contact" | null>(null);
+  const [openMobileSection, setOpenMobileSection] = useState<"products" | "services" | "contact" | null>(null);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -68,6 +79,7 @@ export default function Navbar() {
   const isHome = pathname === "/";
   const isAbout = pathname.startsWith("/about");
   const isProducts = pathname.startsWith("/products");
+  const isServices = pathname.startsWith("/services");
   const isContact =
     pathname.startsWith("/contact") ||
     pathname.startsWith("/demo") ||
@@ -184,6 +196,54 @@ export default function Navbar() {
                     ))}
                   </ul>
                 </div>
+              </div>
+            )}
+          </div>
+
+          <div
+            className="relative"
+            onMouseEnter={() => setIsServicesOpen(true)}
+            onMouseLeave={() => setIsServicesOpen(false)}
+          >
+            <button
+              type="button"
+              className={`flex items-center gap-1 py-2 font-semibold cursor-pointer ${navLinkClass(isServices)}`}
+              aria-expanded={isServicesOpen}
+              onClick={() => setIsServicesOpen(true)}
+            >
+              Services{" "}
+              <FiChevronDown
+                size={14}
+                className={`transition-transform duration-200 ${isServicesOpen ? "rotate-180" : ""}`}
+              />
+            </button>
+
+            {isServicesOpen && (
+              <div className="absolute top-full left-1/2 -translate-x-1/2 w-72 bg-surface border border-surface-border shadow-[var(--shadow-card)] rounded-2xl p-2 mt-1 z-50 text-left animate-fade-up">
+                <ul className="space-y-0.5">
+                  {services.map((item) => {
+                    const Icon = item.icon;
+                    return (
+                      <li key={item.href}>
+                        <Link
+                          href={item.href}
+                          onClick={() => setIsServicesOpen(false)}
+                          className="flex items-start gap-3 px-3 py-2.5 rounded-xl hover:bg-primary/5 transition-colors group"
+                        >
+                          <span className="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                            <Icon size={15} />
+                          </span>
+                          <span>
+                            <span className="block text-sm font-semibold text-foreground group-hover:text-primary transition-colors">
+                              {item.label}
+                            </span>
+                            <span className="block text-[11px] text-muted mt-0.5">{item.desc}</span>
+                          </span>
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
               </div>
             )}
           </div>
@@ -324,6 +384,35 @@ export default function Navbar() {
                     className={`block text-sm py-0.5 ${pathname === href ? "text-primary font-semibold" : "text-muted hover:text-primary"}`}
                   >
                     {label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <div className="border-t border-surface-border pt-1">
+            <button
+              type="button"
+              onClick={() => setOpenMobileSection(openMobileSection === "services" ? null : "services")}
+              className={`flex items-center justify-between w-full font-semibold text-sm py-2 ${isServices ? "text-primary" : "text-foreground hover:text-primary"}`}
+              aria-expanded={openMobileSection === "services"}
+            >
+              <span>Services</span>
+              <FiChevronDown
+                size={14}
+                className={`transition-transform duration-200 ${openMobileSection === "services" ? "rotate-180" : ""}`}
+              />
+            </button>
+            {openMobileSection === "services" && (
+              <div className="pl-3 pt-1 pb-2 space-y-1.5">
+                {services.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={`block text-sm py-0.5 ${pathname === item.href ? "text-primary font-semibold" : "text-muted hover:text-primary"}`}
+                  >
+                    {item.label}
                   </Link>
                 ))}
               </div>

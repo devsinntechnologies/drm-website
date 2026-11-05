@@ -82,9 +82,9 @@ export default function BlogGrid() {
                     <span>{post.readTime}</span>
                   </div>
 
-                  <h3 className="type-card-title text-foreground mb-4 group-hover:text-primary transition-colors line-clamp-2">
+                  <h2 className="type-card-title text-foreground mb-4 group-hover:text-primary transition-colors line-clamp-2">
                     {post.title}
-                  </h3>
+                  </h2>
 
                   <div className="mt-auto pt-4 border-t border-surface-border flex items-center justify-between">
                     <div className="flex items-center gap-2">

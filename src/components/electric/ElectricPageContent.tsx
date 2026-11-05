@@ -78,7 +78,7 @@ export default function ElectricPageContent() {
         title="SKU & Category-Based Inventory"
         reverse
         image="https://images.unsplash.com/photo-1625276254563-f0fbbf66a5e7?q=80&w=1600&auto=format&fit=crop"
-        imageAlt="DigiNizam Electric Store POS solution"
+        imageAlt="Bundles of coloured electrical wires"
         imageBrief="Electrical store shelves with switches, bulbs, cables or small electronics plus DigiNizam product/SKU inventory screen; professional and realistic."
       >
         <p>
@@ -91,7 +91,7 @@ export default function ElectricPageContent() {
         label="Purchasing"
         title="Supplier Purchases & Stock Receiving"
         image="https://images.unsplash.com/photo-1777479051188-0daf7b2d8baa?q=80&w=1600&auto=format&fit=crop"
-        imageAlt="Electric Store inventory / workflow in DigiNizam"
+        imageAlt="Industrial building interior with concrete pillars"
         imageBrief="Real DigiNizam purchase/stock screen showing supplier receiving, low-stock status or multi-location stock where available."
       >
         <p>
@@ -153,11 +153,11 @@ export default function ElectricPageContent() {
 
       <SectionCopy label="Your setup" title="Discuss Your Business Setup">
         <p>
-          Electrical supply shops in Pakistan can review item categories, sale units and
+          Electrical supply shops can review item categories, sale units and
           purchasing requirements during a DigiNizam demo. Confirm the supported configuration
           before rollout.
         </p>
-        <IndustryContextLinks peer="retail" />
+        <IndustryContextLinks peer="retail" guides={["retail-inventory"]} />
       </SectionCopy>
 
       <SeoFaq

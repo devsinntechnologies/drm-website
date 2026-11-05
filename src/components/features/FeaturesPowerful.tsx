@@ -36,7 +36,7 @@ const FeaturesPowerful = () => {
         >
           <span className="section-label">All-in-One POS</span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 leading-tight">
-            Industry Workflows
+            One Platform for Retail, Restaurants and More
           </h2>
           <div className="section-divider mx-auto" />
         </motion.div>

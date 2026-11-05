@@ -230,11 +230,11 @@ export default function ApparelPageContent() {
 
       <SectionCopy label="Your setup" title="Discuss Your Business Setup" reverse>
         <p>
-          Clothing stores and boutiques in Pakistan can review item records, size and colour
+          Clothing stores and boutiques can review item records, size and colour
           requirements, purchases and billing in a DigiNizam demo before agreeing on the
           configuration.
         </p>
-        <IndustryContextLinks peer="retail" />
+        <IndustryContextLinks peer="retail" guides={["retail-choose"]} />
       </SectionCopy>
 
       <SeoFaq

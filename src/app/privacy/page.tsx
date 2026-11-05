@@ -4,7 +4,8 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
   title: "Privacy Policy | DigiNizam",
-  description: "Learn how DigiNizam collects, uses, and protects your business data.",
+  description:
+    "Read the DigiNizam privacy policy to learn what information we collect through this website and our software, how it is used and how to contact us.",
   path: "/privacy",
 });
 

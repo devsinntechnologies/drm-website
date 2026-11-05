@@ -10,7 +10,8 @@ import SiteCTA from "@/components/common/SiteCTA";
 import SectionCopy from "@/components/common/SectionCopy";
 import IndustryContextLinks from "@/components/common/IndustryContextLinks";
 import SeoFaq from "@/components/seo/SeoFaq";
-import type { FaqItem } from "@/lib/seo";
+import JsonLd from "@/components/seo/JsonLd";
+import { faqJsonLd, type FaqItem } from "@/lib/seo";
 import {
   FiMonitor,
   FiGrid,
@@ -30,7 +31,7 @@ const linkClass = "text-primary font-semibold hover:underline";
 
 const CORE_MODULES = [
   { n: 1, title: "Dashboard", desc: "Real-time overview of tables, active sessions, sales, expenses, profit, cash, credit, staff activity, and key KPIs.", icon: <FiMonitor /> },
-  { n: 2, title: "Table Management", desc: "Manage snooker/pool tables, table type, availability, reservations, maintenance, live status, and table-specific pricing.", icon: <FiGrid /> },
+  { n: 2, title: "Table Management", desc: "Manage snooker/pool tables, table type, availability, staff-recorded reservations and bookings, maintenance, live status, and table-specific pricing.", icon: <FiGrid /> },
   { n: 3, title: "Single Game Billing", desc: "Flat-rate billing for a standard Single Game, with configurable pricing.", icon: <FiCreditCard /> },
   { n: 4, title: "Double Game Billing", desc: "Separate configurable flat-rate billing for Double Game sessions.", icon: <FiCreditCard /> },
   { n: 5, title: "Century Timer", desc: "Time-based billing with Start, Pause, Resume, Stop, per-minute pricing, minimum duration, and rounding rules.", icon: <FiClock /> },
@@ -52,22 +53,30 @@ const CORE_MODULES = [
   { n: 21, title: "SaaS Administration", desc: "Platform Super Admin for onboarding clubs, tenant status, support access, usage, and platform configuration.", icon: <FiSettings /> },
 ];
 
-const FUTURE_MODULES = [
+const FUTURE_MODULES: { n: number; title: string; desc: string; badge?: string }[] = [
   { n: 22, title: "Club subscription administration", desc: "Planned administration functionality. The current commercial process remains a demo, requirements discussion and agreed pricing. Online payment integration is unavailable." },
   { n: 23, title: "Tournament Management", desc: "Create tournaments/leagues, register players, generate brackets, schedule tables, record scores, standings, and prize pools." },
   { n: 24, title: "Membership System", desc: "Paid membership tiers with special pricing, validity periods, member benefits, QR membership cards, and renewals." },
   { n: 25, title: "Loyalty Programme", desc: "Customer reward points, redemption rules, loyalty levels, expiry policies, and loyalty reporting." },
-  { n: 26, title: "Online table booking", desc: "Planned booking functionality. Online reservations and deposits are outside the current club billing scope. Online payment integration is unavailable." },
+  { n: 26, title: "Online customer self-booking", badge: "Custom option", desc: "Not currently available. Club staff manage table reservations and bookings in Table Management. If your club needs customers to book online, DigiNizam can build it as a custom feature for an additional charge. Online payment integration is unavailable." },
 ];
 
 const snookerFaqs: FaqItem[] = [
+  {
+    q: "What software do snooker clubs use?",
+    a: "Snooker clubs usually need club software built around table sessions rather than a generic retail POS. DigiNizam's snooker club software covers live table status, flat-rate Single Game and Double Game billing, a timed Century session with start, pause, resume and stop, receipts, customer credit (udhar), expenses, daily opening and closing, and staff-managed table reservations. Tournaments, memberships and loyalty are planned, not current features. Online customer self-booking is not available but can be built as a paid custom feature.",
+  },
+  {
+    q: "How can a snooker club track daily sales and expenses?",
+    a: "Record every table session and sale in the system, log expenses such as rent, salaries and electricity by category, and reconcile expected against actual cash when closing the day. DigiNizam includes expense management, daily opening and closing with cash variance and manager approval, and reports for sales, profit, expenses and credit.",
+  },
   {
     q: "How does snooker club software calculate table-session charges?",
     a: "A snooker club can bill a game at a configured fixed rate or calculate a timed session from its duration and rate. DigiNizam shows Single Game, Double Game and timed Century workflows. Review the table rates, pause behaviour, minimum duration and rounding supported by your club setup.",
   },
   {
     q: "Which DigiNizam snooker modules are available now and which are planned?",
-    a: "The core workflow shown here covers table selection, game type, session, bill and receipt. Review the available management functions in the demo. Subscription administration, tournaments, memberships, loyalty and online table booking are roadmap items, not currently offered as delivered features on this page.",
+    a: "The core workflow shown here covers table selection, game type, session, bill and receipt. Review the available management functions in the demo. Subscription administration, tournaments, memberships and loyalty are roadmap items, not currently offered as delivered features. Table reservations are managed by club staff; online customer self-booking is not available but can be developed as a custom feature for an additional charge.",
   },
 ];
 
@@ -92,6 +101,7 @@ export default function SnookerPageContent() {
         description="Move from table selection to game type, session, bill and receipt. Review Single Game, Double Game and timed Century billing for your club configuration."
       />
 
+      <JsonLd data={faqJsonLd(snookerFaqs)} />
       <SectionCopy label="Overview" title="What Is Snooker Club Management Software?">
         <p>
           Snooker club software connects table selection, game sessions and billing.
@@ -164,15 +174,15 @@ export default function SnookerPageContent() {
         <SectionHeader
           align="center"
           label="Roadmap"
-          title="Planned Modules"
-          description="These modules are planned and are not available to enable now. Future availability and scope have not been confirmed."
+          title="Planned Modules and Custom Options"
+          description="These modules are not available to enable now. Planned items have no confirmed release date or scope; custom options can be developed on request for an additional charge."
         />
         <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
           {FUTURE_MODULES.map((module) => (
             <article key={module.title} className="rounded-2xl border border-surface-border bg-surface p-5">
               <div className="mb-2 flex items-center gap-2 text-primary">
                 <FiAward />
-                <p className="text-[11px] font-bold uppercase tracking-wider">Planned</p>
+                <p className="text-[11px] font-bold uppercase tracking-wider">{module.badge ?? "Planned"}</p>
               </div>
               <h3 className="font-semibold text-foreground">{module.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted">{module.desc}</p>
@@ -183,7 +193,7 @@ export default function SnookerPageContent() {
 
       <SectionCopy label="Your setup" title="Discuss Your Club Setup" reverse>
         <p>
-          Snooker clubs and pool halls in Pakistan can review table-session billing and receipts
+          Snooker clubs and pool halls can review table-session billing and receipts
           with DigiNizam. Confirm game types, timing rules and the club configuration before
           rollout.
         </p>

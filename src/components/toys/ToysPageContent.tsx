@@ -74,7 +74,7 @@ export default function ToysPageContent() {
         title="Fast Checkout for Busy Toy & Gift Stores"
         reverse
         image="https://images.unsplash.com/photo-1774979300729-4eeeb4e8ad01?q=80&w=1600&auto=format&fit=crop"
-        imageAlt="DigiNizam Toys Store POS solution"
+        imageAlt="Plush toys displayed on a store shelf"
         imageBrief="Bright but professional toy-store checkout with DigiNizam POS categories/product grid; avoid childish design, keep business-focused."
       >
         <p>
@@ -101,7 +101,7 @@ export default function ToysPageContent() {
         label="Low-stock"
         title="Low-Stock Monitoring for Popular Items"
         image="https://images.unsplash.com/photo-1558060370-d644479cb6f7?q=80&w=1600&auto=format&fit=crop"
-        imageAlt="Toys Store inventory / workflow in DigiNizam"
+        imageAlt="Assorted toy robots and toy cars on display"
         imageBrief="Real DigiNizam stock or low-stock view showing multiple toy categories and, where available, branch stock or promotions."
       >
         <p>
@@ -156,10 +156,10 @@ export default function ToysPageContent() {
 
       <SectionCopy label="Your setup" title="Discuss Your Business Setup" reverse>
         <p>
-          Toy and gift stores in Pakistan can review their product catalogue, purchasing and
+          Toy and gift stores can review their product catalogue, purchasing and
           seasonal sales requirements in a DigiNizam demo before agreeing on the setup and price.
         </p>
-        <IndustryContextLinks peer="retail" />
+        <IndustryContextLinks peer="retail" guides={["retail-pos"]} />
       </SectionCopy>
 
       <SeoFaq

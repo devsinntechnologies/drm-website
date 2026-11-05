@@ -72,7 +72,7 @@ export default function PharmacySolutionPage() {
         <>
           <SectionCopy label="Your setup" title="Discuss Your Business Setup" reverse>
             <p>
-              Pharmacies and medical stores in Pakistan can discuss their billing and stock
+              Pharmacies and medical stores can discuss their billing and stock
               requirements with DigiNizam. Confirm professional and regulatory obligations
               separately for your operation.
             </p>

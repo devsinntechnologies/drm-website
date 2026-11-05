@@ -75,11 +75,11 @@ export default function BakerySolutionPage() {
         <>
           <SectionCopy label="Your setup" title="Discuss Your Business Setup" reverse>
             <p>
-              Bakeries and sweet shops in Pakistan can review counter billing, stock and
+              Bakeries and sweet shops can review counter billing, stock and
               purchasing with DigiNizam. Confirm weight, expiry and label requirements using your
               product examples.
             </p>
-            <IndustryContextLinks peer="restaurant" />
+            <IndustryContextLinks peer="restaurant" guides={["restaurant-inventory"]} />
           </SectionCopy>
           <SeoFaq
             label="Bakery POS"

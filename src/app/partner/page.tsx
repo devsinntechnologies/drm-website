@@ -3,8 +3,9 @@ import PartnerPageContent from "@/components/partner/PartnerPageContent";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Become a Partner | DigiNizam",
-  description: "Join the DigiNizam partner network. Resell ERP & POS solutions across Pakistan.",
+  title: "Become a DigiNizam Partner | Reseller & Consultant Program",
+  description:
+    "Resellers, integrators and consultants can apply to offer DigiNizam POS and business management software in the markets they serve. Tell us about your company.",
   path: "/partner",
 });
 
