@@ -1,17 +1,14 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
 import {
-  FiMonitor,
   FiZap,
   FiCode,
   FiSmartphone,
   FiSearch,
   FiShield,
   FiLayers,
-  FiCpu,
   FiCheckCircle,
   FiArrowRight
 } from "react-icons/fi";
@@ -22,32 +19,32 @@ import Button from "@/components/ui/Button";
 const productSuiteCards = [
   {
     title: "Custom Web Applications",
-    desc: "Tailor-made web solutions designed to scale smoothly with your growing business operations and high traffic.",
+    desc: "Business websites, portals and web applications built around your workflows and ready to grow with your business.",
     icon: <FiCode size={20} />
   },
   {
-    title: "Responsive Mobile-First UI/UX",
-    desc: "Flawless rendering and seamless experiences across smartphones, tablets, and large desktop viewports.",
+    title: "Responsive, Mobile-First Design",
+    desc: "Layouts designed for smartphones first, then tablets and desktops, so every visitor gets a usable experience.",
     icon: <FiSmartphone size={20} />
   },
   {
-    title: "Lightning-Fast Speed",
-    desc: "Optimized codebases and modern architecture ensuring sub-second loading times and peak performance.",
+    title: "Performance-Focused Builds",
+    desc: "Optimized code, images and hosting choices that help pages load quickly and support good Core Web Vitals.",
     icon: <FiZap size={20} />
   },
   {
-    title: "SEO & Search Ranking Ready",
-    desc: "Built following strict search engine optimization guidelines to push your website to the top of Google results.",
+    title: "SEO-Ready Structure",
+    desc: "Clean page structure, metadata, sitemaps and technical SEO foundations so search engines can crawl and understand your site. No one can guarantee rankings.",
     icon: <FiSearch size={20} />
   },
   {
-    title: "Enterprise-Grade Security",
-    desc: "Advanced data encryption, secure authentication pipelines, and robust defense mechanisms against threats.",
+    title: "Secure Development Practices",
+    desc: "HTTPS, protected sign-in and regularly updated dependencies built in from the start of the project.",
     icon: <FiShield size={20} />
   },
   {
-    title: "Seamless API Integrations",
-    desc: "Connect your web platform effortlessly with third-party software, payment gateways, and CRM systems.",
+    title: "API Integrations",
+    desc: "Connect your website or web app with the CRM, business software and third-party services you already use, where they provide an API.",
     icon: <FiLayers size={20} />
   }
 ];
@@ -72,7 +69,7 @@ export default function WebDevelopmentContent() {
             className="max-w-5xl mx-auto"
           >
             <h1 className="hero-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white drop-shadow-2xl">
-              Web Development
+              Web Development Services
             </h1>
           </motion.div>
         </div>
@@ -83,13 +80,13 @@ export default function WebDevelopmentContent() {
         <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
           <div className="text-center max-w-2xl mx-auto mb-5">
             <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-primary bg-primary/10 px-3 py-1 rounded-xl mb-1.5 border border-primary/20">
-              SUITE COMPOSITION
+              WHAT WE BUILD
             </span>
             <h2 className="text-base sm:text-lg font-black text-foreground tracking-tight">
-              Product Suite <span className="text-primary">Composition</span>
+              Web Development <span className="text-primary">Services</span>
             </h2>
             <p className="text-muted text-xs sm:text-sm font-normal">
-              Cutting-edge web engineering tools and frameworks tailored to give your enterprise a distinct competitive edge.
+              From business websites to custom web applications, DigiNizam builds fast, responsive and search-friendly web projects for businesses worldwide.
             </p>
           </div>
 
@@ -124,23 +121,23 @@ export default function WebDevelopmentContent() {
             transition={{ duration: 0.6 }}
           >
             <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-primary bg-primary/10 px-3 py-1 rounded-xl mb-2 border border-primary/20">
-              NEXT-GEN DEVELOPMENT
+              HOW WE WORK
             </span>
             <h2 className="text-base sm:text-lg font-black text-foreground tracking-tight">
-              We Convert Your <span className="text-primary">Idea Into a Reality</span>
+              From Brief to <span className="text-primary">Launch</span>
             </h2>
             <p className="text-muted text-xs sm:text-sm leading-relaxed mb-3 font-normal">
-              Our web engineering methodology combines striking design layouts with rock-solid backend infrastructure. We transform your concepts into high-speed digital products that captivate visitors and drive conversions.
+              Every project starts with your goals, audience and required features. DigiNizam then designs, builds and tests the site or application before it goes live, and stays available after launch.
             </p>
             <ul className="space-y-2 mb-5">
               <li className="flex items-center gap-2 font-bold text-xs text-foreground">
-                <FiCheckCircle className="text-primary w-4 h-4 flex-shrink-0" /> Custom Web Architecture tailored to your unique workflows
+                <FiCheckCircle className="text-primary w-4 h-4 flex-shrink-0" /> Structure and features planned around your business goals
               </li>
               <li className="flex items-center gap-2 font-bold text-xs text-foreground">
-                <FiCheckCircle className="text-primary w-4 h-4 flex-shrink-0" /> Rigorous automated testing before production deployment
+                <FiCheckCircle className="text-primary w-4 h-4 flex-shrink-0" /> Testing across devices and browsers before launch
               </li>
               <li className="flex items-center gap-2 font-bold text-xs text-foreground">
-                <FiCheckCircle className="text-primary w-4 h-4 flex-shrink-0" /> Continuous 24/7 post-launch optimization &amp; maintenance
+                <FiCheckCircle className="text-primary w-4 h-4 flex-shrink-0" /> Post-launch support backed by DigiNizam&apos;s 24/7 support
               </li>
             </ul>
             <Button href="/contact" variant="primary" size="md">
@@ -157,7 +154,7 @@ export default function WebDevelopmentContent() {
           >
             <Image
               src="/webdev.png"
-              alt="Web Development Showcase"
+              alt="Person using a laptop showing a DigiNizam business dashboard with sales, orders and stock alerts"
               width={420}
               height={280}
               className="w-auto max-h-[300px] object-contain rounded-xl shadow-lg"
@@ -169,9 +166,9 @@ export default function WebDevelopmentContent() {
       {/* 4. Our Value, Our Mission, Our Vision (Unified Section) - Background: bg-surface */}
       <UnifiedValueMissionVision
         bgLight={false}
-        value="Clean code, rigorous testing, and transparent delivery timelines on every web engagement."
+        value="Clean code, careful testing and clear communication on every web project."
         mission="Build fast, secure, and scalable web applications that turn your ideas into high-performing digital products."
-        vision="Become the go-to web development partner for businesses that refuse to compromise on speed or quality."
+        vision="Be a go-to web development partner for businesses worldwide that care about speed, quality and usability."
       />
 
     </div>
