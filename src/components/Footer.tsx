@@ -85,16 +85,6 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/partner" className={linkClass}>
-                Become a partner
-              </Link>
-            </li>
-            <li>
-              <Link href="/hiring" className={linkClass}>
-                Careers
-              </Link>
-            </li>
-            <li>
               <Link href="/privacy" className={linkClass}>
                 Privacy Policy
               </Link>

@@ -10,8 +10,6 @@ import {
   FiX,
   FiMail,
   FiPlayCircle,
-  FiUsers,
-  FiBriefcase,
   FiShield,
   FiBookOpen,
   FiLayers,
@@ -83,8 +81,6 @@ export default function Navbar() {
   const isContact =
     pathname.startsWith("/contact") ||
     pathname.startsWith("/demo") ||
-    pathname.startsWith("/partner") ||
-    pathname.startsWith("/hiring") ||
     pathname.startsWith("/privacy") ||
     pathname.startsWith("/blog");
 
@@ -271,8 +267,6 @@ export default function Navbar() {
                   {[
                     { href: "/contact", label: "Contact Us", desc: "Talk to our team", icon: FiMail },
                     { href: "/demo", label: "Get a Free Demo", desc: "Live product walkthrough", icon: FiPlayCircle },
-                    { href: "/partner", label: "Become a Partner", desc: "Join our channel network", icon: FiUsers },
-                    { href: "/hiring", label: "We are hiring", desc: "Open roles at DigiNizam", icon: FiBriefcase },
                     { href: "/privacy", label: "Privacy Policy", desc: "How we protect your data", icon: FiShield },
                     { href: "/blog", label: "Blog", desc: "Insights & product updates", icon: FiBookOpen },
                   ].map((item) => {
@@ -436,8 +430,6 @@ export default function Navbar() {
                 {[
                   ["/contact", "Contact Us"],
                   ["/demo", "Get a Free Demo"],
-                  ["/partner", "Become a Partner"],
-                  ["/hiring", "We are hiring"],
                   ["/privacy", "Privacy Policy"],
                   ["/blog", "Blog"],
                 ].map(([href, label]) => (
